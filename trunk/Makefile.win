@@ -1,0 +1,81 @@
+# Project: TSUEngine
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe -D__DEBUG__
+CC   = gcc.exe -D__DEBUG__
+WINDRES = windres.exe
+RES  = object/main_private.res
+OBJ  = object/main.o object/CBaseEngine.o object/CBaseEntity.o object/datatypes.o object/globals.o object/CEntMgr.o object/CParamMgr.o object/GLFT_Font.o object/exceptions.o object/CInputMgr.o object/utils.o object/CGuiPanel.o object/CGuiMgr.o object/WhiteBox.o object/vec2d.o object/vec3d.o object/Piskvorka.o $(RES)
+LINKOBJ  = object/main.o object/CBaseEngine.o object/CBaseEntity.o object/datatypes.o object/globals.o object/CEntMgr.o object/CParamMgr.o object/GLFT_Font.o object/exceptions.o object/CInputMgr.o object/utils.o object/CGuiPanel.o object/CGuiMgr.o object/WhiteBox.o object/vec2d.o object/vec3d.o object/Piskvorka.o $(RES)
+LIBS =  -L"./libs" -mwindows -luuid -lopengl32 -lglu32 -ldinput8 -ldxguid libs/freetype.a  -g3 -msse2 
+INCS =  -I"e:/Dev-Cpp/include"  -I"./libs" 
+CXXINCS =  -I"e:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"e:/Dev-Cpp/include/c++/3.4.2/backward"  -I"e:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"e:/Dev-Cpp/include/c++/3.4.2"  -I"e:/Dev-Cpp/include"  -I"./libs" 
+BIN  = release/TSUEngine.exe
+CXXFLAGS = $(CXXINCS)   -fexpensive-optimizations -O3 -g3 -msse2
+CFLAGS = $(INCS)    -fexpensive-optimizations -O3 -g3 -msse2
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before release/TSUEngine.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "release\TSUEngine.exe" $(LIBS)
+
+object/main.o: main.cpp
+	$(CPP) -c main.cpp -o object/main.o $(CXXFLAGS)
+
+object/CBaseEngine.o: CBaseEngine.cpp
+	$(CPP) -c CBaseEngine.cpp -o object/CBaseEngine.o $(CXXFLAGS)
+
+object/CBaseEntity.o: CBaseEntity.cpp
+	$(CPP) -c CBaseEntity.cpp -o object/CBaseEntity.o $(CXXFLAGS)
+
+object/datatypes.o: datatypes.cpp
+	$(CPP) -c datatypes.cpp -o object/datatypes.o $(CXXFLAGS)
+
+object/globals.o: globals.cpp
+	$(CPP) -c globals.cpp -o object/globals.o $(CXXFLAGS)
+
+object/CEntMgr.o: CEntMgr.cpp
+	$(CPP) -c CEntMgr.cpp -o object/CEntMgr.o $(CXXFLAGS)
+
+object/CParamMgr.o: CParamMgr.cpp
+	$(CPP) -c CParamMgr.cpp -o object/CParamMgr.o $(CXXFLAGS)
+
+object/GLFT_Font.o: libs/GLFT_Font.cpp
+	$(CPP) -c libs/GLFT_Font.cpp -o object/GLFT_Font.o $(CXXFLAGS)
+
+object/exceptions.o: exceptions.cpp
+	$(CPP) -c exceptions.cpp -o object/exceptions.o $(CXXFLAGS)
+
+object/CInputMgr.o: CInputMgr.cpp
+	$(CPP) -c CInputMgr.cpp -o object/CInputMgr.o $(CXXFLAGS)
+
+object/utils.o: utils.cpp
+	$(CPP) -c utils.cpp -o object/utils.o $(CXXFLAGS)
+
+object/CGuiPanel.o: CGuiPanel.cpp
+	$(CPP) -c CGuiPanel.cpp -o object/CGuiPanel.o $(CXXFLAGS)
+
+object/CGuiMgr.o: CGuiMgr.cpp
+	$(CPP) -c CGuiMgr.cpp -o object/CGuiMgr.o $(CXXFLAGS)
+
+object/WhiteBox.o: WhiteBox.cpp
+	$(CPP) -c WhiteBox.cpp -o object/WhiteBox.o $(CXXFLAGS)
+
+object/vec2d.o: vec2d.cpp
+	$(CPP) -c vec2d.cpp -o object/vec2d.o $(CXXFLAGS)
+
+object/vec3d.o: vec3d.cpp
+	$(CPP) -c vec3d.cpp -o object/vec3d.o $(CXXFLAGS)
+
+object/Piskvorka.o: Piskvorka.cpp
+	$(CPP) -c Piskvorka.cpp -o object/Piskvorka.o $(CXXFLAGS)
+
+object/main_private.res: main_private.rc 
+	$(WINDRES) -i main_private.rc --input-format=rc -o object/main_private.res -O coff 

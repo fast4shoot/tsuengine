@@ -1,0 +1,1066 @@
+# depslib dependency file v1.0
+1267912263 source:e:\fast4shoot\programming\tsuengine.1001\cbaseengine.cpp
+	<cmath>
+	<windows.h>
+	<gl/gl.h>
+	<gl/glu.h>
+	"CBaseEngine.h"
+	"CBaseEntity.h"
+	"exceptions.h"
+	"macros.h"
+	"CInputMgr.h"
+	"GLFT_Font.hpp"
+	"utils.h"
+	"const.h"
+	"WhiteBox.h"
+
+1261825432 e:\fast4shoot\programming\tsuengine.1001\cbaseengine.h
+	<string>
+	<gl/gl.h>
+	<ctime>
+	"globals.h"
+	"const.h"
+	"datatypes.h"
+	"CBaseEntity.h"
+	"CEntMgr.h"
+	"CInputMgr.h"
+	"CGuiMgr.h"
+	"GLFT_Font.hpp"
+
+1249670978 e:\fast4shoot\programming\tsuengine.1001\globals.h
+	<windows.h>
+	"CBaseEngine.h"
+	"datatypes.h"
+
+1262211324 e:\fast4shoot\programming\tsuengine.1001\datatypes.h
+	<string>
+	"vec2d.h"
+	"vec3d.h"
+
+1262218360 e:\fast4shoot\programming\tsuengine.1001\vec2d.h
+
+1262211304 e:\fast4shoot\programming\tsuengine.1001\vec3d.h
+
+1265718355 e:\fast4shoot\programming\tsuengine.1001\const.h
+
+1247441358 e:\fast4shoot\programming\tsuengine.1001\cbaseentity.h
+	<string>
+	"datatypes.h"
+	"CParamMgr.h"
+
+1247856590 e:\fast4shoot\programming\tsuengine.1001\cparammgr.h
+	<vector>
+	"datatypes.h"
+
+1247856620 e:\fast4shoot\programming\tsuengine.1001\centmgr.h
+	"CBaseEntity.h"
+	"datatypes.h"
+	"const.h"
+
+1265099644 e:\fast4shoot\programming\tsuengine.1001\cinputmgr.h
+	<dinput.h>
+	"datatypes.h"
+
+1262214870 e:\fast4shoot\programming\tsuengine.1001\cguimgr.h
+	"CGuiPanel.h"
+
+1262859288 e:\fast4shoot\programming\tsuengine.1001\cguipanel.h
+	<vector>
+	"datatypes.h"
+
+1247691840 e:\fast4shoot\programming\tsuengine.1001\libs\glft_font.hpp
+	<GL/gl.h>
+	<ft2build.h>
+	<string>
+	<vector>
+	<stdexcept>
+	<cstdarg>
+	<sstream>
+
+1143207328 e:\fast4shoot\programming\tsuengine.1001\libs\ft2build.h
+	<freetype/config/ftheader.h>
+
+1221196208 e:\fast4shoot\programming\tsuengine.1001\libs\freetype\config\ftheader.h
+
+1249666256 e:\fast4shoot\programming\tsuengine.1001\exceptions.h
+	<string>
+	<stdexcept>
+
+1262217156 e:\fast4shoot\programming\tsuengine.1001\macros.h
+	<windows.h>
+	<cstddef>
+
+1259068106 e:\fast4shoot\programming\tsuengine.1001\utils.h
+	<math.h>
+
+1263301100 e:\fast4shoot\programming\tsuengine.1001\whitebox.h
+	"CGuiPanel.h"
+
+1247777102 source:e:\fast4shoot\programming\tsuengine.1001\cbaseentity.cpp
+	<vector>
+	"CBaseEntity.h"
+	"CBaseEngine.h"
+	"globals.h"
+	"macros.h"
+	"CParamMgr.h"
+
+1247445632 source:e:\fast4shoot\programming\tsuengine.1001\centmgr.cpp
+	"CEntMgr.h"
+	"CBaseEntity.h"
+	"const.h"
+
+1267916593 source:e:\fast4shoot\programming\tsuengine.1001\cguimgr.cpp
+	"CGuiMgr.h"
+	"CGuiPanel.h"
+	"TestPanel.h"
+	"const.h"
+	"macros.h"
+	"globals.h"
+
+1263466068 source:e:\fast4shoot\programming\tsuengine.1001\cguipanel.cpp
+	"CGuiPanel.h"
+	"macros.h"
+	<gl/gl.h>
+
+1265116284 source:e:\fast4shoot\programming\tsuengine.1001\cinputmgr.cpp
+	"CInputMgr.h"
+	"macros.h"
+	"const.h"
+	"globals.h"
+	"exceptions.h"
+	"datatypes.h"
+	"CBaseEngine.h"
+
+1247441382 source:e:\fast4shoot\programming\tsuengine.1001\cparammgr.cpp
+	<vector>
+	<cstdlib>
+	"CParamMgr.h"
+	"datatypes.h"
+	"exceptions.h"
+
+1263301814 source:e:\fast4shoot\programming\tsuengine.1001\whitebox.cpp
+	<gl/gl.h>
+	<cmath>
+	"WhiteBox.h"
+	"macros.h"
+	"globals.h"
+
+1262211352 source:e:\fast4shoot\programming\tsuengine.1001\datatypes.cpp
+	"datatypes.h"
+	<cmath>
+	<cstdlib>
+	<windows.h>
+
+1249666256 source:e:\fast4shoot\programming\tsuengine.1001\exceptions.cpp
+	<exception>
+	"exceptions.h"
+
+1249670978 source:e:\fast4shoot\programming\tsuengine.1001\globals.cpp
+	"globals.h"
+	<windows.h>
+	"CBaseEngine.h"
+	"datatypes.h"
+
+1259230360 source:e:\fast4shoot\programming\tsuengine.1001\main.cpp
+	<windows.h>
+	<gl/gl.h>
+	<iostream>
+	<cmath>
+	<string>
+	<exception>
+	"const.h"
+	"datatypes.h"
+	"globals.h"
+	"CBaseEngine.h"
+	"CBaseEntity.h"
+	"macros.h"
+	"exceptions.h"
+
+1249672516 source:e:\fast4shoot\programming\tsuengine.1001\utils.cpp
+	"utils.h"
+
+1267915399 source:e:\fast4shoot\programming\tsuengine.1001\vec2d.cpp
+	"vec2d.h"
+	<cmath>
+	"macros.h"
+	<cstdio>
+
+1262217236 source:e:\fast4shoot\programming\tsuengine.1001\vec3d.cpp
+	"vec3d.h"
+	<cmath>
+	"macros.h"
+
+1258626208 source:e:\fast4shoot\programming\tsuengine.1001\libs\glft_font.cpp
+	"GLFT_Font.hpp"
+	<cstring>
+	<string>
+	<windows.h>
+	<cstdlib>
+	"../macros.h"
+
+1263301150 e:\fast4shoot\programming\tsuengine.1001\piskvorka.h
+	"WhiteBox.h"
+
+1263301292 source:e:\fast4shoot\programming\tsuengine.1001\piskvorka.cpp
+	"Piskvorka.h"
+
+1262861350 source:h:\tsuengine.1000\cbaseengine.cpp
+	<cmath>
+	<windows.h>
+	<gl/gl.h>
+	<gl/glu.h>
+	"CBaseEngine.h"
+	"CBaseEntity.h"
+	"exceptions.h"
+	"macros.h"
+	"CInputMgr.h"
+	"GLFT_Font.hpp"
+	"utils.h"
+	"const.h"
+	"WhiteBox.h"
+
+1261825432 h:\tsuengine.1000\cbaseengine.h
+	<string>
+	<gl/gl.h>
+	<ctime>
+	"globals.h"
+	"const.h"
+	"datatypes.h"
+	"CBaseEntity.h"
+	"CEntMgr.h"
+	"CInputMgr.h"
+	"CGuiMgr.h"
+	"GLFT_Font.hpp"
+
+1249670978 h:\tsuengine.1000\globals.h
+	<windows.h>
+	"CBaseEngine.h"
+	"datatypes.h"
+
+1262211324 h:\tsuengine.1000\datatypes.h
+	<string>
+	"vec2d.h"
+	"vec3d.h"
+
+1262218360 h:\tsuengine.1000\vec2d.h
+
+1262211304 h:\tsuengine.1000\vec3d.h
+
+1265097810 h:\tsuengine.1000\const.h
+
+1247441358 h:\tsuengine.1000\cbaseentity.h
+	<string>
+	"datatypes.h"
+	"CParamMgr.h"
+
+1247856590 h:\tsuengine.1000\cparammgr.h
+	<vector>
+	"datatypes.h"
+
+1247856620 h:\tsuengine.1000\centmgr.h
+	"CBaseEntity.h"
+	"datatypes.h"
+	"const.h"
+
+1265098346 h:\tsuengine.1000\cinputmgr.h
+	<dinput.h>
+	"datatypes.h"
+
+1262214870 h:\tsuengine.1000\cguimgr.h
+	"CGuiPanel.h"
+
+1265097810 h:\tsuengine.1000\cguipanel.h
+	<vector>
+	"datatypes.h"
+
+1247691840 h:\tsuengine.1000\libs\glft_font.hpp
+	<GL/gl.h>
+	<ft2build.h>
+	<string>
+	<vector>
+	<stdexcept>
+	<cstdarg>
+	<sstream>
+
+1143207328 h:\tsuengine.1000\libs\ft2build.h
+	<freetype/config/ftheader.h>
+
+1221196208 h:\tsuengine.1000\libs\freetype\config\ftheader.h
+
+1249666256 h:\tsuengine.1000\exceptions.h
+	<string>
+	<stdexcept>
+
+1262217156 h:\tsuengine.1000\macros.h
+	<windows.h>
+	<cstddef>
+
+1259068106 h:\tsuengine.1000\utils.h
+	<math.h>
+
+1263301100 h:\tsuengine.1000\whitebox.h
+	"CGuiPanel.h"
+
+1247777102 source:h:\tsuengine.1000\cbaseentity.cpp
+	<vector>
+	"CBaseEntity.h"
+	"CBaseEngine.h"
+	"globals.h"
+	"macros.h"
+	"CParamMgr.h"
+
+1247445632 source:h:\tsuengine.1000\centmgr.cpp
+	"CEntMgr.h"
+	"CBaseEntity.h"
+	"const.h"
+
+1265098200 source:h:\tsuengine.1000\cguimgr.cpp
+	"CGuiMgr.h"
+	"CGuiPanel.h"
+	"WhiteBox.h"
+	"const.h"
+	"macros.h"
+	"globals.h"
+	"Piskvorka.h"
+
+1263301150 h:\tsuengine.1000\piskvorka.h
+	"WhiteBox.h"
+
+1265098224 source:h:\tsuengine.1000\cguipanel.cpp
+	"CGuiPanel.h"
+	"macros.h"
+	<gl/gl.h>
+
+1265097810 source:h:\tsuengine.1000\cinputmgr.cpp
+	"CInputMgr.h"
+	"macros.h"
+	"const.h"
+	"globals.h"
+	"exceptions.h"
+	"datatypes.h"
+	"CBaseEngine.h"
+
+1247441382 source:h:\tsuengine.1000\cparammgr.cpp
+	<vector>
+	<cstdlib>
+	"CParamMgr.h"
+	"datatypes.h"
+	"exceptions.h"
+
+1263301292 source:h:\tsuengine.1000\piskvorka.cpp
+	"Piskvorka.h"
+
+1263301814 source:h:\tsuengine.1000\whitebox.cpp
+	<gl/gl.h>
+	<cmath>
+	"WhiteBox.h"
+	"macros.h"
+	"globals.h"
+
+1262211352 source:h:\tsuengine.1000\datatypes.cpp
+	"datatypes.h"
+	<cmath>
+	<cstdlib>
+	<windows.h>
+
+1249666256 source:h:\tsuengine.1000\exceptions.cpp
+	<exception>
+	"exceptions.h"
+
+1249670978 source:h:\tsuengine.1000\globals.cpp
+	"globals.h"
+	<windows.h>
+	"CBaseEngine.h"
+	"datatypes.h"
+
+1258626208 source:h:\tsuengine.1000\libs\glft_font.cpp
+	"GLFT_Font.hpp"
+	<cstring>
+	<string>
+	<windows.h>
+	<cstdlib>
+	"../macros.h"
+
+1259230360 source:h:\tsuengine.1000\main.cpp
+	<windows.h>
+	<gl/gl.h>
+	<iostream>
+	<cmath>
+	<string>
+	<exception>
+	"const.h"
+	"datatypes.h"
+	"globals.h"
+	"CBaseEngine.h"
+	"CBaseEntity.h"
+	"macros.h"
+	"exceptions.h"
+
+1249672516 source:h:\tsuengine.1000\utils.cpp
+	"utils.h"
+
+1262217488 source:h:\tsuengine.1000\vec2d.cpp
+	"vec2d.h"
+	<cmath>
+	"macros.h"
+
+1262217236 source:h:\tsuengine.1000\vec3d.cpp
+	"vec3d.h"
+	<cmath>
+	"macros.h"
+
+1265098456 source:c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\cbaseengine.cpp
+	<cmath>
+	<windows.h>
+	<gl/gl.h>
+	<gl/glu.h>
+	"CBaseEngine.h"
+	"CBaseEntity.h"
+	"exceptions.h"
+	"macros.h"
+	"CInputMgr.h"
+	"GLFT_Font.hpp"
+	"utils.h"
+	"const.h"
+	"WhiteBox.h"
+
+1261825432 c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\cbaseengine.h
+	<string>
+	<gl/gl.h>
+	<ctime>
+	"globals.h"
+	"const.h"
+	"datatypes.h"
+	"CBaseEntity.h"
+	"CEntMgr.h"
+	"CInputMgr.h"
+	"CGuiMgr.h"
+	"GLFT_Font.hpp"
+
+1249670978 c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\globals.h
+	<windows.h>
+	"CBaseEngine.h"
+	"datatypes.h"
+
+1262211324 c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\datatypes.h
+	<string>
+	"vec2d.h"
+	"vec3d.h"
+
+1262218360 c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\vec2d.h
+
+1262211304 c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\vec3d.h
+
+1265097810 c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\const.h
+
+1247441358 c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\cbaseentity.h
+	<string>
+	"datatypes.h"
+	"CParamMgr.h"
+
+1247856590 c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\cparammgr.h
+	<vector>
+	"datatypes.h"
+
+1247856620 c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\centmgr.h
+	"CBaseEntity.h"
+	"datatypes.h"
+	"const.h"
+
+1265099644 c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\cinputmgr.h
+	<dinput.h>
+	"datatypes.h"
+
+1262214870 c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\cguimgr.h
+	"CGuiPanel.h"
+
+1265099644 c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\cguipanel.h
+	<vector>
+	"datatypes.h"
+
+1247691840 c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\libs\glft_font.hpp
+	<GL/gl.h>
+	<ft2build.h>
+	<string>
+	<vector>
+	<stdexcept>
+	<cstdarg>
+	<sstream>
+
+1143207328 c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\libs\ft2build.h
+	<freetype/config/ftheader.h>
+
+1221196208 c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\libs\freetype\config\ftheader.h
+
+1249666256 c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\exceptions.h
+	<string>
+	<stdexcept>
+
+1262217156 c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\macros.h
+	<windows.h>
+	<cstddef>
+
+1259068106 c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\utils.h
+	<math.h>
+
+1263301100 c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\whitebox.h
+	"CGuiPanel.h"
+
+1247777102 source:c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\cbaseentity.cpp
+	<vector>
+	"CBaseEntity.h"
+	"CBaseEngine.h"
+	"globals.h"
+	"macros.h"
+	"CParamMgr.h"
+
+1247445632 source:c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\centmgr.cpp
+	"CEntMgr.h"
+	"CBaseEntity.h"
+	"const.h"
+
+1265098200 source:c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\cguimgr.cpp
+	"CGuiMgr.h"
+	"CGuiPanel.h"
+	"WhiteBox.h"
+	"const.h"
+	"macros.h"
+	"globals.h"
+	"Piskvorka.h"
+
+1263301150 c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\piskvorka.h
+	"WhiteBox.h"
+
+1263894282 source:c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\cguipanel.cpp
+	"CGuiPanel.h"
+	"macros.h"
+	<gl/gl.h>
+
+1265097810 source:c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\cinputmgr.cpp
+	"CInputMgr.h"
+	"macros.h"
+	"const.h"
+	"globals.h"
+	"exceptions.h"
+	"datatypes.h"
+	"CBaseEngine.h"
+
+1247441382 source:c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\cparammgr.cpp
+	<vector>
+	<cstdlib>
+	"CParamMgr.h"
+	"datatypes.h"
+	"exceptions.h"
+
+1262211352 source:c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\datatypes.cpp
+	"datatypes.h"
+	<cmath>
+	<cstdlib>
+	<windows.h>
+
+1249666256 source:c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\exceptions.cpp
+	<exception>
+	"exceptions.h"
+
+1249670978 source:c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\globals.cpp
+	"globals.h"
+	<windows.h>
+	"CBaseEngine.h"
+	"datatypes.h"
+
+1258626208 source:c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\libs\glft_font.cpp
+	"GLFT_Font.hpp"
+	<cstring>
+	<string>
+	<windows.h>
+	<cstdlib>
+	"../macros.h"
+
+1259230360 source:c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\main.cpp
+	<windows.h>
+	<gl/gl.h>
+	<iostream>
+	<cmath>
+	<string>
+	<exception>
+	"const.h"
+	"datatypes.h"
+	"globals.h"
+	"CBaseEngine.h"
+	"CBaseEntity.h"
+	"macros.h"
+	"exceptions.h"
+
+1249672516 source:c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\utils.cpp
+	"utils.h"
+
+1262217488 source:c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\vec2d.cpp
+	"vec2d.h"
+	<cmath>
+	"macros.h"
+
+1262217236 source:c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\vec3d.cpp
+	"vec3d.h"
+	<cmath>
+	"macros.h"
+
+1265098456 source:c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\cbaseengine.cpp
+	<cmath>
+	<windows.h>
+	<gl/gl.h>
+	<gl/glu.h>
+	"CBaseEngine.h"
+	"CBaseEntity.h"
+	"exceptions.h"
+	"macros.h"
+	"CInputMgr.h"
+	"GLFT_Font.hpp"
+	"utils.h"
+	"const.h"
+	"WhiteBox.h"
+
+1261825432 c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\cbaseengine.h
+	<string>
+	<gl/gl.h>
+	<ctime>
+	"globals.h"
+	"const.h"
+	"datatypes.h"
+	"CBaseEntity.h"
+	"CEntMgr.h"
+	"CInputMgr.h"
+	"CGuiMgr.h"
+	"GLFT_Font.hpp"
+
+1249670978 c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\globals.h
+	<windows.h>
+	"CBaseEngine.h"
+	"datatypes.h"
+
+1262211324 c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\datatypes.h
+	<string>
+	"vec2d.h"
+	"vec3d.h"
+
+1262218360 c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\vec2d.h
+
+1262211304 c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\vec3d.h
+
+1265097810 c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\const.h
+
+1247441358 c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\cbaseentity.h
+	<string>
+	"datatypes.h"
+	"CParamMgr.h"
+
+1247856590 c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\cparammgr.h
+	<vector>
+	"datatypes.h"
+
+1247856620 c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\centmgr.h
+	"CBaseEntity.h"
+	"datatypes.h"
+	"const.h"
+
+1265099644 c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\cinputmgr.h
+	<dinput.h>
+	"datatypes.h"
+
+1262214870 c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\cguimgr.h
+	"CGuiPanel.h"
+
+1265116282 c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\cguipanel.h
+	<vector>
+	"datatypes.h"
+
+1247691840 c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\libs\glft_font.hpp
+	<GL/gl.h>
+	<ft2build.h>
+	<string>
+	<vector>
+	<stdexcept>
+	<cstdarg>
+	<sstream>
+
+1143207328 c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\libs\ft2build.h
+	<freetype/config/ftheader.h>
+
+1221196208 c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\libs\freetype\config\ftheader.h
+
+1249666256 c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\exceptions.h
+	<string>
+	<stdexcept>
+
+1262217156 c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\macros.h
+	<windows.h>
+	<cstddef>
+
+1259068106 c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\utils.h
+	<math.h>
+
+1263301100 c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\whitebox.h
+	"CGuiPanel.h"
+
+1247777102 source:c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\cbaseentity.cpp
+	<vector>
+	"CBaseEntity.h"
+	"CBaseEngine.h"
+	"globals.h"
+	"macros.h"
+	"CParamMgr.h"
+
+1247445632 source:c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\centmgr.cpp
+	"CEntMgr.h"
+	"CBaseEntity.h"
+	"const.h"
+
+1265117308 source:c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\cguimgr.cpp
+	"CGuiMgr.h"
+	"CGuiPanel.h"
+	"const.h"
+	"macros.h"
+	"globals.h"
+
+1263301150 c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\piskvorka.h
+	"WhiteBox.h"
+
+1247441382 source:c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\cparammgr.cpp
+	<vector>
+	<cstdlib>
+	"CParamMgr.h"
+	"datatypes.h"
+	"exceptions.h"
+
+1262211352 source:c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\datatypes.cpp
+	"datatypes.h"
+	<cmath>
+	<cstdlib>
+	<windows.h>
+
+1249666256 source:c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\exceptions.cpp
+	<exception>
+	"exceptions.h"
+
+1249670978 source:c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\globals.cpp
+	"globals.h"
+	<windows.h>
+	"CBaseEngine.h"
+	"datatypes.h"
+
+1258626208 source:c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\libs\glft_font.cpp
+	"GLFT_Font.hpp"
+	<cstring>
+	<string>
+	<windows.h>
+	<cstdlib>
+	"../macros.h"
+
+1259230360 source:c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\main.cpp
+	<windows.h>
+	<gl/gl.h>
+	<iostream>
+	<cmath>
+	<string>
+	<exception>
+	"const.h"
+	"datatypes.h"
+	"globals.h"
+	"CBaseEngine.h"
+	"CBaseEntity.h"
+	"macros.h"
+	"exceptions.h"
+
+1249672516 source:c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\utils.cpp
+	"utils.h"
+
+1262217488 source:c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\vec2d.cpp
+	"vec2d.h"
+	<cmath>
+	"macros.h"
+
+1262217236 source:c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\vec3d.cpp
+	"vec3d.h"
+	<cmath>
+	"macros.h"
+
+1265116282 source:c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\cguipanel.cpp
+	"CGuiPanel.h"
+	"macros.h"
+	<gl/gl.h>
+
+1265116283 source:c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\cinputmgr.cpp
+	"CInputMgr.h"
+	"macros.h"
+	"const.h"
+	"globals.h"
+	"exceptions.h"
+	"datatypes.h"
+	"CBaseEngine.h"
+
+1265117308 source:c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\gui\cbutton.c
+
+1265116282 c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\gui\cguipanel.h
+	<vector>
+	"datatypes.h"
+
+1265117604 source:c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\gui\cbutton.cpp
+
+1265116282 source:c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\gui\cguipanel.cpp
+	"CGuiPanel.h"
+	"macros.h"
+	<gl/gl.h>
+
+1268215877 source:d:\programming\tsuengine.1000\cbaseengine.cpp
+	<cmath>
+	<windows.h>
+	<gl/gl.h>
+	<gl/glu.h>
+	"CBaseEngine.h"
+	"CBaseEntity.h"
+	"exceptions.h"
+	"macros.h"
+	"CInputMgr.h"
+	"GLFT_Font.hpp"
+	"utils.h"
+	"const.h"
+	"WhiteBox.h"
+
+1268294336 d:\programming\tsuengine.1000\cbaseengine.h
+	<string>
+	<gl/gl.h>
+	<ctime>
+	"globals.h"
+	"const.h"
+	"datatypes.h"
+	"CBaseEntity.h"
+	"CEntMgr.h"
+	"CInputMgr.h"
+	"CGuiMgr.h"
+	"GLFT_Font.hpp"
+
+1249670978 d:\programming\tsuengine.1000\globals.h
+	<windows.h>
+	"CBaseEngine.h"
+	"datatypes.h"
+
+1268389274 d:\programming\tsuengine.1000\datatypes.h
+	<string>
+	"vec2d.h"
+	"vec3d.h"
+
+1262218360 d:\programming\tsuengine.1000\vec2d.h
+
+1262211304 d:\programming\tsuengine.1000\vec3d.h
+
+1265718355 d:\programming\tsuengine.1000\const.h
+
+1247441358 d:\programming\tsuengine.1000\cbaseentity.h
+	<string>
+	"datatypes.h"
+	"CParamMgr.h"
+
+1247856590 d:\programming\tsuengine.1000\cparammgr.h
+	<vector>
+	"datatypes.h"
+
+1247856620 d:\programming\tsuengine.1000\centmgr.h
+	"CBaseEntity.h"
+	"datatypes.h"
+	"const.h"
+
+1267985587 d:\programming\tsuengine.1000\cinputmgr.h
+	<dinput.h>
+	"datatypes.h"
+
+1262214870 d:\programming\tsuengine.1000\cguimgr.h
+	"CGuiPanel.h"
+
+1263897108 d:\programming\tsuengine.1000\cguipanel.h
+	<vector>
+	"datatypes.h"
+
+1268337520 d:\programming\tsuengine.1000\libs\glft_font.hpp
+	<GL/gl.h>
+	<ft2build.h>
+	<string>
+	<vector>
+	<stdexcept>
+	<cstdarg>
+	<sstream>
+
+1143207328 d:\programming\tsuengine.1000\libs\ft2build.h
+	<freetype/config/ftheader.h>
+
+1221196208 d:\programming\tsuengine.1000\libs\freetype\config\ftheader.h
+
+1249666256 d:\programming\tsuengine.1000\exceptions.h
+	<string>
+	<stdexcept>
+
+1262217156 d:\programming\tsuengine.1000\macros.h
+	<windows.h>
+	<cstddef>
+
+1268332197 d:\programming\tsuengine.1000\utils.h
+	<cmath>
+
+1263301100 d:\programming\tsuengine.1000\whitebox.h
+	"CGuiPanel.h"
+
+1247777102 source:d:\programming\tsuengine.1000\cbaseentity.cpp
+	<vector>
+	"CBaseEntity.h"
+	"CBaseEngine.h"
+	"globals.h"
+	"macros.h"
+	"CParamMgr.h"
+
+1247445632 source:d:\programming\tsuengine.1000\centmgr.cpp
+	"CEntMgr.h"
+	"CBaseEntity.h"
+	"const.h"
+
+1247441382 source:d:\programming\tsuengine.1000\cparammgr.cpp
+	<vector>
+	<cstdlib>
+	"CParamMgr.h"
+	"datatypes.h"
+	"exceptions.h"
+
+1262211352 source:d:\programming\tsuengine.1000\datatypes.cpp
+	"datatypes.h"
+	<cmath>
+	<cstdlib>
+	<windows.h>
+
+1249666256 source:d:\programming\tsuengine.1000\exceptions.cpp
+	<exception>
+	"exceptions.h"
+
+1249670978 source:d:\programming\tsuengine.1000\globals.cpp
+	"globals.h"
+	<windows.h>
+	"CBaseEngine.h"
+	"datatypes.h"
+
+1258626208 source:d:\programming\tsuengine.1000\libs\glft_font.cpp
+	"GLFT_Font.hpp"
+	<cstring>
+	<string>
+	<windows.h>
+	<cstdlib>
+	"../macros.h"
+
+1259230360 source:d:\programming\tsuengine.1000\main.cpp
+	<windows.h>
+	<gl/gl.h>
+	<iostream>
+	<cmath>
+	<string>
+	<exception>
+	"const.h"
+	"datatypes.h"
+	"globals.h"
+	"CBaseEngine.h"
+	"CBaseEntity.h"
+	"macros.h"
+	"exceptions.h"
+
+1249672516 source:d:\programming\tsuengine.1000\utils.cpp
+	"utils.h"
+
+1267915399 source:d:\programming\tsuengine.1000\vec2d.cpp
+	"vec2d.h"
+	<cmath>
+	"macros.h"
+	<cstdio>
+
+1262217236 source:d:\programming\tsuengine.1000\vec3d.cpp
+	"vec3d.h"
+	<cmath>
+	"macros.h"
+
+1268332196 d:\programming\tsuengine.1000\gui\cguipanel.h
+	<vector>
+	"datatypes.h"
+	"GLFT_Font.hpp"
+
+1268147673 source:d:\programming\tsuengine.1000\cguimgr.cpp
+	"CGuiMgr.h"
+	"CGuiPanel.h"
+	"TestPanel.h"
+	"const.h"
+	"macros.h"
+	"globals.h"
+
+1268306665 source:d:\programming\tsuengine.1000\cinputmgr.cpp
+	"CInputMgr.h"
+	"macros.h"
+	"const.h"
+	"globals.h"
+	"exceptions.h"
+	"datatypes.h"
+	"CBaseEngine.h"
+
+1268332196 source:d:\programming\tsuengine.1000\gui\cguipanel.cpp
+	"CGuiPanel.h"
+	"macros.h"
+	<gl/gl.h>
+	"CActionListener.h"
+
+1268136922 d:\programming\tsuengine.1000\gui\testpanel.h
+	"CGuiPanel.h"
+
+1268744547 source:d:\programming\tsuengine.1000\gui\testpanel.cpp
+	"TestPanel.h"
+	<gl/gl.h>
+	"macros.h"
+	"globals.h"
+	"CLabel.h"
+
+1267917901 e:\fast4shoot\programming\tsuengine.1001\gui\cguipanel.h
+	<vector>
+	"datatypes.h"
+	"GLFT_Font.hpp"
+
+1267093036 e:\fast4shoot\programming\tsuengine.1001\gui\testpanel.h
+	"CGuiPanel.h"
+
+1267916593 source:e:\fast4shoot\programming\tsuengine.1001\gui\cguipanel.cpp
+	"CGuiPanel.h"
+	"macros.h"
+	<gl/gl.h>
+
+1267915480 source:e:\fast4shoot\programming\tsuengine.1001\gui\testpanel.cpp
+	"TestPanel.h"
+	<gl/gl.h>
+	"macros.h"
+
+1268136548 source:d:\programming\tsuengine.1000\gui\cabstractbutton.cpp
+
+1268302821 d:\programming\tsuengine.1000\gui\cactionlistener.h
+
+1268302821 source:d:\programming\tsuengine.1000\gui\cactionlistener.cpp
+	"CActionListener.h"
+
+1268744614 source:d:\programming\tsuengine.1000\gui\clabel.cpp
+	"CLabel.h"
+	<string>
+	"vec2d.h"
+	"CGuiPanel.h"
+	"GLFT_Font.hpp"
+
+1268744005 d:\programming\tsuengine.1000\gui\clabel.h
+	<string>
+	"vec2d.h"
+	"CGuiPanel.h"
+	"GLFT_Font.hpp"
+
+1268744117 source:d:\programming\tsuengine.1000\utils\stringutils.cpp
+	"stringUtils.h"
+
+1268744094 d:\programming\tsuengine.1000\utils\stringutils.h
+	<cstring>
+	<string>
+	<cstdarg>
+
