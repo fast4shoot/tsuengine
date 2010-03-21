@@ -1064,3 +1064,170 @@
 	<string>
 	<cstdarg>
 
+1269179966 source:e:\fast4shoot\programming\tsuengine\src\cbaseengine.cpp
+	<cmath>
+	<windows.h>
+	<gl/gl.h>
+	<gl/glu.h>
+	"CBaseEngine.h"
+	"CBaseEntity.h"
+	"exceptions.h"
+	"macros.h"
+	"CInputMgr.h"
+	"GLFT_Font.hpp"
+	"utils.h"
+	"const.h"
+	"WhiteBox.h"
+
+1269179966 e:\fast4shoot\programming\tsuengine\src\cbaseengine.h
+	<string>
+	<gl/gl.h>
+	<ctime>
+	"globals.h"
+	"const.h"
+	"datatypes.h"
+	"CBaseEntity.h"
+	"CEntMgr.h"
+	"CInputMgr.h"
+	"CGuiMgr.h"
+	"GLFT_Font.hpp"
+
+1269179966 e:\fast4shoot\programming\tsuengine\src\globals.h
+	<windows.h>
+	"CBaseEngine.h"
+	"datatypes.h"
+
+1269179966 e:\fast4shoot\programming\tsuengine\src\datatypes.h
+	<string>
+	"vec2d.h"
+	"vec3d.h"
+
+1269179966 e:\fast4shoot\programming\tsuengine\src\vec2d.h
+
+1269179966 e:\fast4shoot\programming\tsuengine\src\vec3d.h
+
+1269179966 e:\fast4shoot\programming\tsuengine\src\const.h
+
+1269179966 e:\fast4shoot\programming\tsuengine\src\cbaseentity.h
+	<string>
+	"datatypes.h"
+	"CParamMgr.h"
+
+1269179966 e:\fast4shoot\programming\tsuengine\src\cparammgr.h
+	<vector>
+	"datatypes.h"
+
+1269179966 e:\fast4shoot\programming\tsuengine\src\centmgr.h
+	"CBaseEntity.h"
+	"datatypes.h"
+	"const.h"
+
+1269179966 e:\fast4shoot\programming\tsuengine\src\cinputmgr.h
+	<dinput.h>
+	"datatypes.h"
+
+1269179966 e:\fast4shoot\programming\tsuengine\src\cguimgr.h
+	"CGuiPanel.h"
+
+1269179965 e:\fast4shoot\programming\tsuengine\src\gui\cguipanel.h
+	<vector>
+	"datatypes.h"
+	"GLFT_Font.hpp"
+
+1269179966 e:\fast4shoot\programming\tsuengine\src\libs\glft_font.hpp
+	<GL/gl.h>
+	<ft2build.h>
+	<string>
+	<vector>
+	<stdexcept>
+	<cstdarg>
+	<sstream>
+
+1269179966 e:\fast4shoot\programming\tsuengine\src\libs\ft2build.h
+	<freetype/config/ftheader.h>
+
+1269179966 e:\fast4shoot\programming\tsuengine\src\libs\freetype\config\ftheader.h
+
+1269179966 e:\fast4shoot\programming\tsuengine\src\exceptions.h
+	<string>
+	<stdexcept>
+
+1269179966 e:\fast4shoot\programming\tsuengine\src\macros.h
+	<windows.h>
+	<cstddef>
+
+1269179966 e:\fast4shoot\programming\tsuengine\src\utils.h
+	<cmath>
+
+1269179966 e:\fast4shoot\programming\tsuengine\src\whitebox.h
+	"CGuiPanel.h"
+
+1269179966 source:e:\fast4shoot\programming\tsuengine\src\cbaseentity.cpp
+	<vector>
+	"CBaseEntity.h"
+	"CBaseEngine.h"
+	"globals.h"
+	"macros.h"
+	"CParamMgr.h"
+
+1269179966 source:e:\fast4shoot\programming\tsuengine\src\centmgr.cpp
+	"CEntMgr.h"
+	"CBaseEntity.h"
+	"const.h"
+
+1269179966 source:e:\fast4shoot\programming\tsuengine\src\cguimgr.cpp
+	"CGuiMgr.h"
+	"CGuiPanel.h"
+	"TestPanel.h"
+	"const.h"
+	"macros.h"
+	"globals.h"
+
+1269179965 e:\fast4shoot\programming\tsuengine\src\gui\testpanel.h
+	"CGuiPanel.h"
+
+1269179966 source:e:\fast4shoot\programming\tsuengine\src\cinputmgr.cpp
+	"CInputMgr.h"
+	"macros.h"
+	"const.h"
+	"globals.h"
+	"exceptions.h"
+	"datatypes.h"
+	"CBaseEngine.h"
+
+1269179966 source:e:\fast4shoot\programming\tsuengine\src\cparammgr.cpp
+	<vector>
+	<cstdlib>
+	"CParamMgr.h"
+	"datatypes.h"
+	"exceptions.h"
+
+1269179966 source:e:\fast4shoot\programming\tsuengine\src\datatypes.cpp
+	"datatypes.h"
+	<cmath>
+	<cstdlib>
+	<windows.h>
+
+1269179966 source:e:\fast4shoot\programming\tsuengine\src\exceptions.cpp
+	<exception>
+	"exceptions.h"
+
+1269179966 source:e:\fast4shoot\programming\tsuengine\src\globals.cpp
+	"globals.h"
+	<windows.h>
+	"CBaseEngine.h"
+	"datatypes.h"
+
+1269179965 source:e:\fast4shoot\programming\tsuengine\src\gui\cabstractbutton.cpp
+
+1269179965 source:e:\fast4shoot\programming\tsuengine\src\gui\cactionlistener.cpp
+	"CActionListener.h"
+
+1269179965 e:\fast4shoot\programming\tsuengine\src\gui\cactionlistener.h
+
+1269179965 source:e:\fast4shoot\programming\tsuengine\src\gui\cguipanel.cpp
+	"CGuiPanel.h"
+	"macros.h"
+	<gl/gl.h>
+	"CActionListener.h"
+

@@ -25,7 +25,7 @@ void CLabel::init(){
 
 void CLabel::draw(){
   glEnable(GL_TEXTURE_2D);
-  glColor4f(fgColor);
+  //glColor4f(fgColor);
   _font->drawText(0,0,_text);
   glDisable(GL_TEXTURE_2D);
 }
