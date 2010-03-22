@@ -1,0 +1,10 @@
+#summary Engine class summary.
+
+= Introduction =
+
+This page describes the basic function of main engine classes.
+
+
+= Details =
+
+_CBaseEngine_ - main engine class, contains instances of most other classes
