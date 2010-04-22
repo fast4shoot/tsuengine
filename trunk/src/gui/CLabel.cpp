@@ -19,7 +19,7 @@ CGuiPanel(position,size)
 
 void CLabel::init(){
   _text="";
-  _height=16;
+  _height=50;
   _font=new GLFT_Font("arial.TTF",_height);
 }
 

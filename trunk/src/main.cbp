@@ -7,8 +7,8 @@
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="default">
-				<Option output="release\TSUEngine" prefix_auto="1" extension_auto="1" />
-				<Option object_output="object" />
+				<Option output="..\release\TSUEngine" prefix_auto="1" extension_auto="1" />
+				<Option object_output="..\object" />
 				<Option type="0" />
 				<Option compiler="gcc" />
 			</Target>

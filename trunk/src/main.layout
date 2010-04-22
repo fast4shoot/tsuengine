@@ -7,8 +7,8 @@
 	<File name="CBaseEngine.h" open="0" top="0" tabpos="5">
 		<Cursor position="690" topLine="21" />
 	</File>
-	<File name="CGuiMgr.cpp" open="1" top="0" tabpos="8">
-		<Cursor position="279" topLine="2" />
+	<File name="CGuiMgr.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="279" topLine="6" />
 	</File>
 	<File name="CGuiPanel.h" open="0" top="0" tabpos="7">
 		<Cursor position="1897" topLine="34" />
@@ -25,7 +25,7 @@
 	<File name="datatypes.cpp" open="0" top="0" tabpos="6">
 		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="datatypes.h" open="1" top="0" tabpos="5">
+	<File name="datatypes.h" open="0" top="0" tabpos="5">
 		<Cursor position="127" topLine="0" />
 	</File>
 	<File name="gui\CAbstractButton.cpp" open="0" top="0" tabpos="9">
@@ -40,20 +40,20 @@
 	<File name="gui\CActionListener.h" open="0" top="0" tabpos="4">
 		<Cursor position="323" topLine="0" />
 	</File>
-	<File name="gui\CGuiPanel.cpp" open="1" top="0" tabpos="1">
+	<File name="gui\CGuiPanel.cpp" open="0" top="0" tabpos="1">
 		<Cursor position="1261" topLine="48" />
 	</File>
-	<File name="gui\CGuiPanel.h" open="1" top="0" tabpos="2">
+	<File name="gui\CGuiPanel.h" open="0" top="0" tabpos="2">
 		<Cursor position="4867" topLine="9" />
 	</File>
 	<File name="gui\CLabel.cpp" open="1" top="1" tabpos="3">
-		<Cursor position="529" topLine="15" />
+		<Cursor position="407" topLine="15" />
 	</File>
-	<File name="gui\CLabel.h" open="1" top="0" tabpos="4">
+	<File name="gui\CLabel.h" open="0" top="0" tabpos="4">
 		<Cursor position="372" topLine="0" />
 	</File>
-	<File name="gui\TestPanel.cpp" open="1" top="0" tabpos="7">
-		<Cursor position="105" topLine="0" />
+	<File name="gui\TestPanel.cpp" open="1" top="0" tabpos="2">
+		<Cursor position="105" topLine="3" />
 	</File>
 	<File name="gui\TestPanel.h" open="0" top="0" tabpos="5">
 		<Cursor position="250" topLine="0" />
@@ -61,7 +61,7 @@
 	<File name="libs\GLFT_Font.cpp" open="0" top="0" tabpos="8">
 		<Cursor position="11782" topLine="301" />
 	</File>
-	<File name="libs\GLFT_Font.hpp" open="1" top="0" tabpos="6">
+	<File name="libs\GLFT_Font.hpp" open="0" top="0" tabpos="6">
 		<Cursor position="3158" topLine="94" />
 	</File>
 	<File name="utils.cpp" open="0" top="0" tabpos="10">
