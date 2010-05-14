@@ -90,6 +90,7 @@ public:
 
     unsigned int calcStringWidth(const std::string& str) const;
     unsigned int getHeight() const;
+    std::string getName() const;
 
 private:
     // leave copy constructor and operator= undefined to make noncopyable
@@ -101,6 +102,7 @@ private:
 public:
     unsigned int texID_;
 private:
+    std::string filename;
     unsigned int listBase_;
     std::vector<unsigned char> widths_;
     unsigned char height_;

@@ -4,8 +4,14 @@
 	<File name="CBaseEngine.cpp" open="0" top="0" tabpos="4">
 		<Cursor position="2576" topLine="120" />
 	</File>
-	<File name="CBaseEngine.h" open="0" top="0" tabpos="5">
-		<Cursor position="690" topLine="21" />
+	<File name="CBaseEngine.h" open="1" top="0" tabpos="6">
+		<Cursor position="690" topLine="0" />
+	</File>
+	<File name="CFontMgr.cpp" open="1" top="0" tabpos="4">
+		<Cursor position="2" topLine="0" />
+	</File>
+	<File name="CFontMgr.h" open="1" top="0" tabpos="5">
+		<Cursor position="138" topLine="0" />
 	</File>
 	<File name="CGuiMgr.cpp" open="1" top="0" tabpos="1">
 		<Cursor position="279" topLine="6" />
@@ -46,23 +52,23 @@
 	<File name="gui\CGuiPanel.h" open="0" top="0" tabpos="2">
 		<Cursor position="4867" topLine="9" />
 	</File>
-	<File name="gui\CLabel.cpp" open="1" top="1" tabpos="3">
-		<Cursor position="407" topLine="15" />
+	<File name="gui\CLabel.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="407" topLine="0" />
 	</File>
 	<File name="gui\CLabel.h" open="0" top="0" tabpos="4">
 		<Cursor position="372" topLine="0" />
 	</File>
 	<File name="gui\TestPanel.cpp" open="1" top="0" tabpos="2">
-		<Cursor position="105" topLine="3" />
+		<Cursor position="105" topLine="0" />
 	</File>
 	<File name="gui\TestPanel.h" open="0" top="0" tabpos="5">
 		<Cursor position="250" topLine="0" />
 	</File>
-	<File name="libs\GLFT_Font.cpp" open="0" top="0" tabpos="8">
-		<Cursor position="11782" topLine="301" />
+	<File name="libs\GLFT_Font.cpp" open="1" top="0" tabpos="8">
+		<Cursor position="5608" topLine="166" />
 	</File>
-	<File name="libs\GLFT_Font.hpp" open="0" top="0" tabpos="6">
-		<Cursor position="3158" topLine="94" />
+	<File name="libs\GLFT_Font.hpp" open="1" top="1" tabpos="7">
+		<Cursor position="3403" topLine="48" />
 	</File>
 	<File name="utils.cpp" open="0" top="0" tabpos="10">
 		<Cursor position="0" topLine="0" />

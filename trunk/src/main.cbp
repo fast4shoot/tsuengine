@@ -40,6 +40,8 @@
 		<Unit filename="CBaseEntity.h" />
 		<Unit filename="CEntMgr.cpp" />
 		<Unit filename="CEntMgr.h" />
+		<Unit filename="CFontMgr.cpp" />
+		<Unit filename="CFontMgr.h" />
 		<Unit filename="CGuiMgr.cpp" />
 		<Unit filename="CGuiMgr.h" />
 		<Unit filename="CGuiPanel.h" />
