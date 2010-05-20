@@ -14,7 +14,7 @@
 		<Cursor position="138" topLine="0" />
 	</File>
 	<File name="CGuiMgr.cpp" open="1" top="0" tabpos="1">
-		<Cursor position="279" topLine="6" />
+		<Cursor position="279" topLine="0" />
 	</File>
 	<File name="CGuiPanel.h" open="0" top="0" tabpos="7">
 		<Cursor position="1897" topLine="34" />
@@ -22,8 +22,8 @@
 	<File name="CInputMgr.cpp" open="0" top="0" tabpos="12">
 		<Cursor position="5051" topLine="161" />
 	</File>
-	<File name="CInputMgr.h" open="0" top="0" tabpos="1">
-		<Cursor position="805" topLine="22" />
+	<File name="CInputMgr.h" open="1" top="0" tabpos="9">
+		<Cursor position="80" topLine="0" />
 	</File>
 	<File name="const.h" open="0" top="0" tabpos="4">
 		<Cursor position="36" topLine="0" />
@@ -67,7 +67,7 @@
 	<File name="libs\GLFT_Font.cpp" open="1" top="0" tabpos="8">
 		<Cursor position="5608" topLine="166" />
 	</File>
-	<File name="libs\GLFT_Font.hpp" open="1" top="1" tabpos="7">
+	<File name="libs\GLFT_Font.hpp" open="1" top="0" tabpos="7">
 		<Cursor position="3403" topLine="48" />
 	</File>
 	<File name="utils.cpp" open="0" top="0" tabpos="10">
