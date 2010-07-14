@@ -3,6 +3,7 @@
 #include "vec2d.h"
 #include "CGuiPanel.h"
 #include "GLFT_Font.hpp"
+#include "macros.h"
 
 CLabel::CLabel(const vec2d& position, const vec2d& size):
 CGuiPanel(position,size)
@@ -18,20 +19,23 @@ CGuiPanel(position,size)
 }
 
 void CLabel::init(){
+  MSGBOX("CLabel::init()");
   _text="";
-  _height=50;
-  _font=new GLFT_Font("arial.TTF",_height);
+  _height=1;
+  _font=new FTGLPixmapFont("Arial.ttf");
+  MSGBOX("font vytvoren");
+	_font->FaceSize(_height);
+	MSGBOX("nastavena velikost");
 }
 
 void CLabel::draw(){
+  MSGBOX("CLabel::draw()");
   glEnable(GL_TEXTURE_2D);
   //glColor4f(fgColor);
-  _font->drawText(0,0,_text);
+  _font->Render(_text.c_str());
   glDisable(GL_TEXTURE_2D);
 }
 
 void CLabel::updateFont(){
-  _font->release();
-  _font->open("arial.TTF",_height);
 }
 

@@ -5,6 +5,7 @@
 #include "vec2d.h"
 #include "CGuiPanel.h"
 #include "GLFT_Font.hpp"
+#include "FTGL/ftgl.h"
 
 class CLabel: public CGuiPanel{
   public:
@@ -21,7 +22,7 @@ class CLabel: public CGuiPanel{
   protected:
     std::string     _text;
     int             _height;
-    GLFT_Font*      _font;
+    FTGLPixmapFont* _font;
     void            init();
 
 };

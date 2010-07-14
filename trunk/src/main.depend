@@ -1301,7 +1301,7 @@
 	"datatypes.h"
 	"GLFT_Font.hpp"
 
-1268341120 d:\programming\tsuengine\src\libs\glft_font.hpp
+1271930324 d:\programming\tsuengine\src\libs\glft_font.hpp
 	<GL/gl.h>
 	<ft2build.h>
 	<string>
@@ -1399,11 +1399,12 @@
 	"globals.h"
 	"CLabel.h"
 
-1268747605 d:\programming\tsuengine\src\gui\clabel.h
+1277209068 d:\programming\tsuengine\src\gui\clabel.h
 	<string>
 	"vec2d.h"
 	"CGuiPanel.h"
 	"GLFT_Font.hpp"
+	"FTGL/ftgl.h"
 
 1258629808 source:d:\programming\tsuengine\src\libs\glft_font.cpp
 	"GLFT_Font.hpp"
@@ -1680,4 +1681,101 @@
 	"vec3d.h"
 	<cmath>
 	"macros.h"
+
+1276444187 source:d:\programming\tsuengine\src\gui\clabel.cpp
+	"CLabel.h"
+	<string>
+	"vec2d.h"
+	"CGuiPanel.h"
+	"GLFT_Font.hpp"
+	"macros.h"
+
+1271928054 source:d:\programming\tsuengine\src\cfontmgr.cpp
+
+1212672920 d:\programming\tsuengine\src\libs\ftgl\ftgl.h
+	<ft2build.h>
+	<FTGL/FTPoint.h>
+	<FTGL/FTBBox.h>
+	<FTGL/FTBuffer.h>
+	<FTGL/FTGlyph.h>
+	<FTGL/FTBitmapGlyph.h>
+	<FTGL/FTBufferGlyph.h>
+	<FTGL/FTExtrdGlyph.h>
+	<FTGL/FTOutlineGlyph.h>
+	<FTGL/FTPixmapGlyph.h>
+	<FTGL/FTPolyGlyph.h>
+	<FTGL/FTTextureGlyph.h>
+	<FTGL/FTFont.h>
+	<FTGL/FTGLBitmapFont.h>
+	<FTGL/FTBufferFont.h>
+	<FTGL/FTGLExtrdFont.h>
+	<FTGL/FTGLOutlineFont.h>
+	<FTGL/FTGLPixmapFont.h>
+	<FTGL/FTGLPolygonFont.h>
+	<FTGL/FTGLTextureFont.h>
+	<FTGL/FTLayout.h>
+	<FTGL/FTSimpleLayout.h>
+
+1213011300 d:\programming\tsuengine\src\libs\ftgl\ftpoint.h
+	<FTGL/ftgl.h>
+
+1210503100 d:\programming\tsuengine\src\libs\ftgl\ftbbox.h
+	<FTGL/ftgl.h>
+
+1213010374 d:\programming\tsuengine\src\libs\ftgl\ftbuffer.h
+	<FTGL/ftgl.h>
+
+1213006098 d:\programming\tsuengine\src\libs\ftgl\ftglyph.h
+	<FTGL/ftgl.h>
+
+1210347256 d:\programming\tsuengine\src\libs\ftgl\ftbitmapglyph.h
+	<FTGL/ftgl.h>
+
+1213276992 d:\programming\tsuengine\src\libs\ftgl\ftbufferglyph.h
+	<FTGL/ftgl.h>
+
+1210347248 d:\programming\tsuengine\src\libs\ftgl\ftextrdglyph.h
+	<FTGL/ftgl.h>
+
+1210347420 d:\programming\tsuengine\src\libs\ftgl\ftoutlineglyph.h
+	<FTGL/ftgl.h>
+
+1209999112 d:\programming\tsuengine\src\libs\ftgl\ftpixmapglyph.h
+	<FTGL/ftgl.h>
+
+1210503102 d:\programming\tsuengine\src\libs\ftgl\ftpolyglyph.h
+	<FTGL/ftgl.h>
+
+1209999112 d:\programming\tsuengine\src\libs\ftgl\fttextureglyph.h
+	<FTGL/ftgl.h>
+
+1213002796 d:\programming\tsuengine\src\libs\ftgl\ftfont.h
+	<FTGL/ftgl.h>
+
+1209927968 d:\programming\tsuengine\src\libs\ftgl\ftglbitmapfont.h
+	<FTGL/ftgl.h>
+
+1211211074 d:\programming\tsuengine\src\libs\ftgl\ftbufferfont.h
+	<FTGL/ftgl.h>
+
+1209927976 d:\programming\tsuengine\src\libs\ftgl\ftglextrdfont.h
+	<FTGL/ftgl.h>
+
+1209927982 d:\programming\tsuengine\src\libs\ftgl\ftgloutlinefont.h
+	<FTGL/ftgl.h>
+
+1209927986 d:\programming\tsuengine\src\libs\ftgl\ftglpixmapfont.h
+	<FTGL/ftgl.h>
+
+1209927990 d:\programming\tsuengine\src\libs\ftgl\ftglpolygonfont.h
+	<FTGL/ftgl.h>
+
+1209927994 d:\programming\tsuengine\src\libs\ftgl\ftgltexturefont.h
+	<FTGL/ftgl.h>
+
+1210530212 d:\programming\tsuengine\src\libs\ftgl\ftlayout.h
+	<FTGL/ftgl.h>
+
+1210530212 d:\programming\tsuengine\src\libs\ftgl\ftsimplelayout.h
+	<FTGL/ftgl.h>
 

@@ -26,6 +26,7 @@
 			<Add directory="." />
 		</Compiler>
 		<Linker>
+			<Add option="libs/libftgl.a" />
 			<Add option="libs/freetype.a" />
 			<Add library="uuid" />
 			<Add library="opengl32" />
