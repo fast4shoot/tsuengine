@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="default" />
+	<File name="CBaseEngine.cpp" open="1" top="0" tabpos="2">
+		<Cursor position="2962" topLine="81" />
+	</File>
+	<File name="CBaseEngine.h" open="1" top="0" tabpos="7">
+		<Cursor position="1682" topLine="35" />
+	</File>
+	<File name="CFontMgr.cpp" open="1" top="0" tabpos="5">
+		<Cursor position="338" topLine="3" />
+	</File>
+	<File name="CFontMgr.h" open="1" top="0" tabpos="6">
+		<Cursor position="313" topLine="0" />
+	</File>
+	<File name="CGuiMgr.cpp" open="1" top="0" tabpos="10">
+		<Cursor position="302" topLine="0" />
+	</File>
+	<File name="CInputMgr.cpp" open="1" top="1" tabpos="13">
+		<Cursor position="3260" topLine="96" />
+	</File>
+	<File name="CInputMgr.h" open="1" top="0" tabpos="14">
+		<Cursor position="1935" topLine="22" />
+	</File>
+	<File name="CParamMgr.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="0" topLine="25" />
+	</File>
+	<File name="CParamMgr.h" open="0" top="0" tabpos="0">
+		<Cursor position="99" topLine="2" />
+	</File>
+	<File name="Font.cpp" open="0" top="0" tabpos="8">
+		<Cursor position="497" topLine="0" />
+	</File>
+	<File name="Font.h" open="0" top="0" tabpos="7">
+		<Cursor position="1486" topLine="24" />
+	</File>
+	<File name="const.h" open="0" top="0" tabpos="4">
+		<Cursor position="36" topLine="0" />
+	</File>
+	<File name="datatypes.cpp" open="0" top="0" tabpos="6">
+		<Cursor position="103" topLine="0" />
+	</File>
+	<File name="datatypes.h" open="0" top="0" tabpos="6">
+		<Cursor position="134" topLine="5" />
+	</File>
+	<File name="globals.cpp" open="0" top="0" tabpos="11">
+		<Cursor position="44" topLine="0" />
+	</File>
+	<File name="globals.h" open="0" top="0" tabpos="9">
+		<Cursor position="62" topLine="0" />
+	</File>
+	<File name="gui\CAbstractButton.cpp" open="0" top="0" tabpos="9">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="gui\CAbstractButton.h" open="0" top="0" tabpos="10">
+		<Cursor position="98" topLine="0" />
+	</File>
+	<File name="gui\CActionListener.cpp" open="0" top="0" tabpos="3">
+		<Cursor position="32" topLine="0" />
+	</File>
+	<File name="gui\CActionListener.h" open="0" top="0" tabpos="4">
+		<Cursor position="442" topLine="12" />
+	</File>
+	<File name="gui\CGuiPanel.cpp" open="1" top="0" tabpos="11">
+		<Cursor position="3936" topLine="124" />
+	</File>
+	<File name="gui\CGuiPanel.h" open="1" top="0" tabpos="12">
+		<Cursor position="1097" topLine="25" />
+	</File>
+	<File name="gui\CLabel.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="490" topLine="0" />
+	</File>
+	<File name="gui\CLabel.h" open="1" top="0" tabpos="4">
+		<Cursor position="452" topLine="5" />
+	</File>
+	<File name="gui\TestPanel.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="517" topLine="0" />
+	</File>
+	<File name="gui\TestPanel.h" open="0" top="0" tabpos="5">
+		<Cursor position="250" topLine="0" />
+	</File>
+	<File name="libs\FTGL\FTBuffer.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="1167" topLine="12" />
+	</File>
+	<File name="libs\FTGL\FTFace.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="1466" topLine="24" />
+	</File>
+	<File name="libs\FTGL\FTFace.h" open="0" top="0" tabpos="0">
+		<Cursor position="559" topLine="38" />
+	</File>
+	<File name="libs\FTGL\FTFont\FTBitmapFont.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="0" topLine="83" />
+	</File>
+	<File name="libs\FTGL\FTFont\FTBitmapFontImpl.h" open="0" top="0" tabpos="0">
+		<Cursor position="1618" topLine="31" />
+	</File>
+	<File name="libs\FTGL\FTFont\FTFont.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="1300" topLine="477" />
+	</File>
+	<File name="libs\FTGL\FTFont\FTFontImpl.h" open="0" top="0" tabpos="0">
+		<Cursor position="1361" topLine="22" />
+	</File>
+	<File name="libs\FTGL\FTFont\FTPixmapFont.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="2856" topLine="90" />
+	</File>
+	<File name="libs\FTGL\FTFont\FTPixmapFontImpl.h" open="0" top="0" tabpos="0">
+		<Cursor position="458" topLine="37" />
+	</File>
+	<File name="libs\FTGL\FTGL\FTFont.h" open="0" top="0" tabpos="0">
+		<Cursor position="19784" topLine="344" />
+	</File>
+	<File name="libs\FTGL\FTGL\FTGLPixmapFont.h" open="0" top="0" tabpos="0">
+		<Cursor position="664" topLine="27" />
+	</File>
+	<File name="libs\FTGL\FTGL\FTOutlineGlyph.h" open="0" top="0" tabpos="0">
+		<Cursor position="400" topLine="27" />
+	</File>
+	<File name="libs\FTGL\FTGL\FTPixmapGlyph.h" open="0" top="0" tabpos="0">
+		<Cursor position="525" topLine="59" />
+	</File>
+	<File name="libs\FTGL\FTGL\FTPoint.h" open="0" top="0" tabpos="0">
+		<Cursor position="1986" topLine="57" />
+	</File>
+	<File name="libs\FTGL\FTGL\ftgl.h" open="0" top="0" tabpos="0">
+		<Cursor position="3419" topLine="112" />
+	</File>
+	<File name="libs\FTGL\FTGlyph\FTGlyph.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="604" topLine="89" />
+	</File>
+	<File name="libs\FTGL\FTGlyph\FTPixmapGlyph.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="604" topLine="114" />
+	</File>
+	<File name="libs\FTGL\FTGlyph\FTTextureGlyph.cpp" open="0" top="0" tabpos="6">
+		<Cursor position="4260" topLine="126" />
+	</File>
+	<File name="libs\FTGL\FTSize.cpp" open="0" top="0" tabpos="2">
+		<Cursor position="1562" topLine="42" />
+	</File>
+	<File name="libs\ft2build.h" open="0" top="0" tabpos="0">
+		<Cursor position="1326" topLine="16" />
+	</File>
+	<File name="main.cpp" open="0" top="0" tabpos="11">
+		<Cursor position="952" topLine="81" />
+	</File>
+	<File name="utils.cpp" open="0" top="0" tabpos="10">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="utils.h" open="0" top="0" tabpos="8">
+		<Cursor position="47" topLine="0" />
+	</File>
+	<File name="utils\stringUtils.cpp" open="1" top="0" tabpos="8">
+		<Cursor position="344" topLine="0" />
+	</File>
+	<File name="utils\stringUtils.h" open="1" top="0" tabpos="9">
+		<Cursor position="395" topLine="0" />
+	</File>
+	<File name="vec2d.cpp" open="0" top="0" tabpos="11">
+		<Cursor position="366" topLine="6" />
+	</File>
+	<File name="vec2d.h" open="0" top="0" tabpos="10">
+		<Cursor position="507" topLine="2" />
+	</File>
+	<File name="vec3d.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="0" topLine="62" />
+	</File>
+</CodeBlocks_layout_file>
