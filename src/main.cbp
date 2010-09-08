@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="TSUEngine" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="default">
+				<Option output="..\release\TSUEngine" prefix_auto="1" extension_auto="1" />
+				<Option object_output="..\object" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-march=pentium2" />
+			<Add option="-fexpensive-optimizations" />
+			<Add option="-Os" />
+			<Add option="-O3" />
+			<Add option="-O2" />
+			<Add option="-O1" />
+			<Add option="-O" />
+			<Add directory=".\libs" />
+			<Add directory=".\gui" />
+			<Add directory="." />
+			<Add directory="libs\FTGL" />
+		</Compiler>
+		<Linker>
+			<Add library="freetype" />
+			<Add library="uuid" />
+			<Add library="opengl32" />
+			<Add library="glu32" />
+			<Add library="dinput8" />
+			<Add library="dxguid" />
+			<Add directory=".\libs" />
+		</Linker>
+		<Unit filename="CBaseEngine.cpp" />
+		<Unit filename="CBaseEngine.h" />
+		<Unit filename="CBaseEntity.cpp" />
+		<Unit filename="CBaseEntity.h" />
+		<Unit filename="CEntMgr.cpp" />
+		<Unit filename="CEntMgr.h" />
+		<Unit filename="CFontMgr.cpp" />
+		<Unit filename="CFontMgr.h" />
+		<Unit filename="CGuiMgr.cpp" />
+		<Unit filename="CGuiMgr.h" />
+		<Unit filename="CInputMgr.cpp" />
+		<Unit filename="CInputMgr.h" />
+		<Unit filename="CParamMgr.cpp" />
+		<Unit filename="CParamMgr.h" />
+		<Unit filename="Font.cpp" />
+		<Unit filename="Font.h" />
+		<Unit filename="const.h" />
+		<Unit filename="datatypes.cpp" />
+		<Unit filename="datatypes.h" />
+		<Unit filename="exceptions.cpp" />
+		<Unit filename="exceptions.h" />
+		<Unit filename="globals.cpp" />
+		<Unit filename="globals.h" />
+		<Unit filename="gui\CAbstractButton.cpp" />
+		<Unit filename="gui\CAbstractButton.h" />
+		<Unit filename="gui\CActionListener.cpp" />
+		<Unit filename="gui\CActionListener.h" />
+		<Unit filename="gui\CGuiPanel.cpp" />
+		<Unit filename="gui\CGuiPanel.h" />
+		<Unit filename="gui\CLabel.cpp" />
+		<Unit filename="gui\CLabel.h" />
+		<Unit filename="gui\TestPanel.cpp" />
+		<Unit filename="gui\TestPanel.h" />
+		<Unit filename="libs\FTGL\FTBuffer.cpp" />
+		<Unit filename="libs\FTGL\FTCharToGlyphIndexMap.h" />
+		<Unit filename="libs\FTGL\FTCharmap.cpp" />
+		<Unit filename="libs\FTGL\FTCharmap.h" />
+		<Unit filename="libs\FTGL\FTContour.cpp" />
+		<Unit filename="libs\FTGL\FTContour.h" />
+		<Unit filename="libs\FTGL\FTFace.cpp" />
+		<Unit filename="libs\FTGL\FTFace.h" />
+		<Unit filename="libs\FTGL\FTFont\FTBitmapFont.cpp" />
+		<Unit filename="libs\FTGL\FTFont\FTBitmapFontImpl.h" />
+		<Unit filename="libs\FTGL\FTFont\FTBufferFont.cpp" />
+		<Unit filename="libs\FTGL\FTFont\FTBufferFontImpl.h" />
+		<Unit filename="libs\FTGL\FTFont\FTExtrudeFont.cpp" />
+		<Unit filename="libs\FTGL\FTFont\FTExtrudeFontImpl.h" />
+		<Unit filename="libs\FTGL\FTFont\FTFont.cpp" />
+		<Unit filename="libs\FTGL\FTFont\FTFontGlue.cpp" />
+		<Unit filename="libs\FTGL\FTFont\FTFontImpl.h" />
+		<Unit filename="libs\FTGL\FTFont\FTOutlineFont.cpp" />
+		<Unit filename="libs\FTGL\FTFont\FTOutlineFontImpl.h" />
+		<Unit filename="libs\FTGL\FTFont\FTPixmapFont.cpp" />
+		<Unit filename="libs\FTGL\FTFont\FTPixmapFontImpl.h" />
+		<Unit filename="libs\FTGL\FTFont\FTPolygonFont.cpp" />
+		<Unit filename="libs\FTGL\FTFont\FTPolygonFontImpl.h" />
+		<Unit filename="libs\FTGL\FTFont\FTTextureFont.cpp" />
+		<Unit filename="libs\FTGL\FTFont\FTTextureFontImpl.h" />
+		<Unit filename="libs\FTGL\FTGL\FTBBox.h" />
+		<Unit filename="libs\FTGL\FTGL\FTBitmapGlyph.h" />
+		<Unit filename="libs\FTGL\FTGL\FTBuffer.h" />
+		<Unit filename="libs\FTGL\FTGL\FTBufferFont.h" />
+		<Unit filename="libs\FTGL\FTGL\FTBufferGlyph.h" />
+		<Unit filename="libs\FTGL\FTGL\FTExtrdGlyph.h" />
+		<Unit filename="libs\FTGL\FTGL\FTFont.h" />
+		<Unit filename="libs\FTGL\FTGL\FTGLBitmapFont.h" />
+		<Unit filename="libs\FTGL\FTGL\FTGLExtrdFont.h" />
+		<Unit filename="libs\FTGL\FTGL\FTGLOutlineFont.h" />
+		<Unit filename="libs\FTGL\FTGL\FTGLPixmapFont.h" />
+		<Unit filename="libs\FTGL\FTGL\FTGLPolygonFont.h" />
+		<Unit filename="libs\FTGL\FTGL\FTGLTextureFont.h" />
+		<Unit filename="libs\FTGL\FTGL\FTGlyph.h" />
+		<Unit filename="libs\FTGL\FTGL\FTLayout.h" />
+		<Unit filename="libs\FTGL\FTGL\FTOutlineGlyph.h" />
+		<Unit filename="libs\FTGL\FTGL\FTPixmapGlyph.h" />
+		<Unit filename="libs\FTGL\FTGL\FTPoint.h" />
+		<Unit filename="libs\FTGL\FTGL\FTPolyGlyph.h" />
+		<Unit filename="libs\FTGL\FTGL\FTSimpleLayout.h" />
+		<Unit filename="libs\FTGL\FTGL\FTTextureGlyph.h" />
+		<Unit filename="libs\FTGL\FTGL\ftgl.h" />
+		<Unit filename="libs\FTGL\FTGlyphContainer.cpp" />
+		<Unit filename="libs\FTGL\FTGlyphContainer.h" />
+		<Unit filename="libs\FTGL\FTGlyph\FTBitmapGlyph.cpp" />
+		<Unit filename="libs\FTGL\FTGlyph\FTBitmapGlyphImpl.h" />
+		<Unit filename="libs\FTGL\FTGlyph\FTBufferGlyph.cpp" />
+		<Unit filename="libs\FTGL\FTGlyph\FTBufferGlyphImpl.h" />
+		<Unit filename="libs\FTGL\FTGlyph\FTExtrudeGlyph.cpp" />
+		<Unit filename="libs\FTGL\FTGlyph\FTExtrudeGlyphImpl.h" />
+		<Unit filename="libs\FTGL\FTGlyph\FTGlyph.cpp" />
+		<Unit filename="libs\FTGL\FTGlyph\FTGlyphGlue.cpp" />
+		<Unit filename="libs\FTGL\FTGlyph\FTGlyphImpl.h" />
+		<Unit filename="libs\FTGL\FTGlyph\FTOutlineGlyph.cpp" />
+		<Unit filename="libs\FTGL\FTGlyph\FTOutlineGlyphImpl.h" />
+		<Unit filename="libs\FTGL\FTGlyph\FTPixmapGlyph.cpp" />
+		<Unit filename="libs\FTGL\FTGlyph\FTPixmapGlyphImpl.h" />
+		<Unit filename="libs\FTGL\FTGlyph\FTPolygonGlyph.cpp" />
+		<Unit filename="libs\FTGL\FTGlyph\FTPolygonGlyphImpl.h" />
+		<Unit filename="libs\FTGL\FTGlyph\FTTextureGlyph.cpp" />
+		<Unit filename="libs\FTGL\FTGlyph\FTTextureGlyphImpl.h" />
+		<Unit filename="libs\FTGL\FTInternals.h" />
+		<Unit filename="libs\FTGL\FTLayout\FTLayout.cpp" />
+		<Unit filename="libs\FTGL\FTLayout\FTLayoutGlue.cpp" />
+		<Unit filename="libs\FTGL\FTLayout\FTLayoutImpl.h" />
+		<Unit filename="libs\FTGL\FTLayout\FTSimpleLayout.cpp" />
+		<Unit filename="libs\FTGL\FTLayout\FTSimpleLayoutImpl.h" />
+		<Unit filename="libs\FTGL\FTLibrary.cpp" />
+		<Unit filename="libs\FTGL\FTLibrary.h" />
+		<Unit filename="libs\FTGL\FTList.h" />
+		<Unit filename="libs\FTGL\FTPoint.cpp" />
+		<Unit filename="libs\FTGL\FTSize.cpp" />
+		<Unit filename="libs\FTGL\FTSize.h" />
+		<Unit filename="libs\FTGL\FTUnicode.h" />
+		<Unit filename="libs\FTGL\FTVector.h" />
+		<Unit filename="libs\FTGL\FTVectoriser.cpp" />
+		<Unit filename="libs\FTGL\FTVectoriser.h" />
+		<Unit filename="libs\ft2build.h" />
+		<Unit filename="macros.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="utils.cpp" />
+		<Unit filename="utils.h" />
+		<Unit filename="utils\stringUtils.cpp" />
+		<Unit filename="utils\stringUtils.h" />
+		<Unit filename="vec2d.cpp" />
+		<Unit filename="vec2d.h" />
+		<Unit filename="vec3d.cpp" />
+		<Unit filename="vec3d.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<AutoVersioning>
+				<Scheme minor_max="100" build_max="0" rev_max="0" rev_rand_max="10" build_times_to_increment_minor="100" />
+				<Settings autoincrement="1" date_declarations="1" do_auto_increment="1" ask_to_increment="0" language="C++" svn="0" svn_directory="" header_path="version.h" />
+				<Changes_Log show_changes_editor="0" app_title="released version %M.%m.%b of %p" changeslog_path="ChangesLog.txt" />
+				<Code header_guard="VERSION_H" namespace="AutoVersion" prefix="" />
+			</AutoVersioning>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
