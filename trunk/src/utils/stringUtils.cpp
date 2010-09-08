@@ -1,6 +1,6 @@
 #include "stringUtils.h"
 
-/*WStr swprintf(const wchar_t* format, ...){
+WStr swprintf(const wchar_t* format, ...){
  va_list args;
  va_start(args, format);
  WStr result = vswprintf(format, args);
@@ -11,7 +11,7 @@
 WStr vswprintf(const wchar_t* format, va_list args){
  const int bufferSize = 16384;
  wchar_t buffer[bufferSize];
- vswprintf(buffer, bufferSize, format, args);
+ vswprintf(buffer, /*/bufferSize,*/ format, args);
  return WStr(buffer);
 }
 
@@ -25,7 +25,7 @@ WStr swprintf(const WStr& format, ...){
 
 WStr vswprintf(const WStr& format, va_list args){
  return vswprintf(format.c_str(), args);
-}*/
+}
 
 SStr sprintf(const char* format, ...){
  va_list args;
