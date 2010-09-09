@@ -66,9 +66,9 @@ void CGuiPanel::drawChildren(){
     CGuiPanel* child=children.at(i);
     if(child->getVisible()){
       glPushMatrix();
-      glTranslatef(child(i)->getX(),child(i)->getY(),0.);
-      child(i)->draw();
-      child(i)->drawChildren();
+      glTranslatef(child->getX(),child->getY(),0.);
+      child->draw();
+      child->drawChildren();
       glPopMatrix();
     }
   }
