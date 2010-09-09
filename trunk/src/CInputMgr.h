@@ -28,7 +28,7 @@ class CInputMgr{
     const float    getX() const;
     const float    getY() const;
     const vec2d    getCursor() const;
-    const float    getCursorDelta() const;
+    const vec2d    getCursorDelta() const;
 
     DIMOUSESTATE2  MouseState[2];
     char           keyBuffer[2][256];
@@ -61,7 +61,7 @@ inline const vec2d CInputMgr::getCursor() const{
   return cursor;
 }
 
-inline const float CInputMgr::getCursorDelta() const{
+inline const vec2d CInputMgr::getCursorDelta() const{
   return cursorDelta;
 }
 
