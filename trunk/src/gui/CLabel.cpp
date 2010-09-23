@@ -22,9 +22,7 @@ CGuiPanel(position,size)
 
 void CLabel::init(){
   _text=L"";
-
   _font=engine->fonts->loadFont(L"ARIALUNI.TTF",getH());
-
 }
 
 void CLabel::draw(){

@@ -9,7 +9,7 @@
  */
 
 rgba::rgba(){
-  r=g=b=a=0.0f;             
+  r=g=b=a=0.0f;
 }
 
 rgba::rgba(float r, float g, float b, float a){
@@ -26,4 +26,7 @@ void rgba::set(float r, float g, float b, float a){
   this->a=a;
 }
 
-
+rgba rgba::operator*(float rhs){
+  rgba out(r*rhs,g*rhs,b*rhs,a*rhs);
+  return out;
+}

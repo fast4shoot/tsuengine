@@ -23,6 +23,7 @@ class rgba{
     rgba();
     rgba(float r, float g, float b, float a);
     void set(float r, float g, float b, float a);
+    rgba operator*(float rhs);
 };
 
 enum MOVETYPE{

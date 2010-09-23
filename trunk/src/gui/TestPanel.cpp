@@ -14,7 +14,7 @@ void TestPanel::onMouseDown(const vec2d& position, MouseButton button){
 }
 void TestPanel::onMouseUp(const vec2d& position, MouseButton button){
   bgColor.set(.8,.8,.8,.9);
-  addChild(new CLabel(position,vec2d(40.,20.),L"FAIL, ěščřžýáíé, 日本語"));
+  addChild(new CLabel(position,vec2d(40.,20.),L"tupani sajou, 日本語 a THE GAME"));
 }
 
 void TestPanel::onMouseOver(){
@@ -22,12 +22,6 @@ void TestPanel::onMouseOver(){
 }
 
 void TestPanel::onMouseOut(){
-  bgColor.set(.5,.5,.5,.8);
-}
-
-TestPanel::TestPanel(double x, double y, double w, double h):
-CGuiPanel(x,y,w,h)
-{
   bgColor.set(.5,.5,.5,.8);
 }
 

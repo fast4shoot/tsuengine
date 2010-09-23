@@ -10,16 +10,11 @@ CGuiPanel::~CGuiPanel(){
   }
 }
 
-CGuiPanel::CGuiPanel(double x, double y, double w, double h){
-  init();
-  position.set(x,y);
-  size.set(w,h);
-}
-
 CGuiPanel::CGuiPanel(const vec2d& position, const vec2d& size){
   init();
   this->position=position;
   this->size=size;
+
 }
 
 void CGuiPanel::init(){
@@ -28,11 +23,13 @@ void CGuiPanel::init(){
   opacity=1.;
   visible=true;
   mouseOver=false;
+  mouseDown=false;
   children.reserve(8);
   allowMouseClickPropagation=true;
   //MSGBOX("New CGuiPanel inited/created");
   fgColor.set(1.,1.,1.,1.);
   bgColor.set(0.,0.,0.,1.);
+  glossColor.set(1., 1., 1., .1);
 }
 
 
@@ -110,6 +107,11 @@ bool CGuiPanel::handleMouseClick(const vec2d& position, const MouseButton button
       }
     }
   }
+  bool wasMouseDown=mouseDown;
+  mouseDown=!up;
+  if(wasMouseDown && up){
+    onMouseClick(position,button);
+  }
   up?onMouseUp(position,button):onMouseDown(position,button);
   return allowMouseClickPropagation;
 }
@@ -118,6 +120,9 @@ void CGuiPanel::onMouseDown(const vec2d& position, const MouseButton button){
 }
 
 void CGuiPanel::onMouseUp(const vec2d& position, const MouseButton button){
+}
+
+void CGuiPanel::onMouseClick(const vec2d& position, const MouseButton button){
 }
 
 void CGuiPanel::handleMouseMove(const vec2d& newPosition, const bool mouseOver){
@@ -159,10 +164,6 @@ void CGuiPanel::onMouseOver(){
 void CGuiPanel::onMouseOut(){
 }
 
-bool CGuiPanel::getMouseOver(){
-  return mouseOver;
-}
-
 void CGuiPanel::addActionListener(CActionListener* al){
   actionListeners.push_back(al);
   al->setOriginator(this);
@@ -175,4 +176,43 @@ void CGuiPanel::drawQuad(float x, float y, float w, float h){
   glVertex2f(x+w,y+h);
   glVertex2f(x,y+h);
   glEnd();
+}
+
+void CGuiPanel::drawVerticalGradient(float x, float y, float w, float h, const rgba& colOne, const rgba& colTwo){
+  glBegin(GL_QUADS);
+  setDrawColor(colOne);
+  glVertex2f(x,y);
+  glVertex2f(x+w,y);
+  setDrawColor(colTwo);
+  glVertex2f(x+w,y+h);
+  glVertex2f(x,y+h);
+  glEnd();
+}
+
+void CGuiPanel::drawHorizontalGradient(float x, float y, float w, float h, const rgba& colOne, const rgba& colTwo){
+  glBegin(GL_QUADS);
+  setDrawColor(colOne);
+  glVertex2f(x,y+h);
+  glVertex2f(x,y);
+  setDrawColor(colTwo);
+  glVertex2f(x+w,y);
+  glVertex2f(x+w,y+h);
+  glEnd();
+}
+
+void CGuiPanel::drawFrame(float x, float y, float w, float h){
+  drawQuad(x,      y+1,    1.,   h-2.);
+  drawQuad(x+1.,   y,      w-2., 1.);
+  drawQuad(x+w-1., y+1.,   1.,   h-2);
+  drawQuad(x+1.,   y+h-1., w-2., 1.);
+}
+
+void CGuiPanel::setDrawColor(const rgba& color){
+  glColor4f(color.r,color.g,color.b,color.a);
+}
+
+void CGuiPanel::fireListeners(){
+  for(ActionListenerList::iterator it = actionListeners.begin(); it!=actionListeners.end(); ++it){
+    (*it)->actionPerformed();
+  }
 }

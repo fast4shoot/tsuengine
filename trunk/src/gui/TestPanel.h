@@ -5,7 +5,6 @@
 
 class TestPanel: public CGuiPanel{
   public:
-                  TestPanel(double x, double y, double w, double h);
                   TestPanel(const vec2d& pos, const vec2d& size);
   virtual void    draw();
   virtual void    onMouseDown(const vec2d& position, MouseButton button);

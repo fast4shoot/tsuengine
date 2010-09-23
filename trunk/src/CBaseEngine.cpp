@@ -26,14 +26,26 @@ void CBaseEngine::init(){
 
   input = new CInputMgr();
   input->init();
+  fonts=new CFontMgr();
+  systemFont=fonts->loadFont(L"ARIALUNI.TTF",14.);
+  fonts->loadFont(L"ARIALUNI.TTF",40.);
   gui = new CGuiMgr();
   gui->init();
-  fonts=new CFontMgr();
 
-  systemFont=fonts->loadFont(L"ARIALUNI.TTF",14.);
-  fonts->loadFont(L"ARIALUNI.TTF",18.);
+
+
+
+
 
 }
+
+/*int CBaseTransmission() {
+  if (car->getRadiciPaka().pushed()) {
+    car.setGear(car->getRadiciPaka().getValue());
+  }
+
+  return 5;
+}*/
 
 void CBaseEngine::destroy(){
   delete input;
@@ -92,7 +104,7 @@ void CBaseEngine::think(){
 
 
   if(input->keyPressed(DIK_ESCAPE)){
-    PostQuitMessage(0);
+    quit();
   }
 }
 
@@ -159,37 +171,7 @@ void CBaseEngine::initGuiView(){
   //glScalef(1.0,-1.0,1.0);
 }
 
-double CBaseEngine::getTime(){
-  return time;
-}
 
-double CBaseEngine::getLastTime(){
-  return lastTime;
-}
-
-double CBaseEngine::getTimeDelta(){
-  return timeDelta;
-}
-
-double CBaseEngine::getRealTime(){
-  return realTime;
-}
-
-double CBaseEngine::getLastRealTime(){
-  return lastRealTime;
-}
-
-double CBaseEngine::getRealTimeDelta(){
-  return realTimeDelta;
-}
-
-unsigned long long int CBaseEngine::getFrameCount(){
-  return frameCount;
-}
-
-double CBaseEngine::getFPS(){
-  return fps;
-}
 
 void CBaseEngine::createEntity(std::string name){}
 
