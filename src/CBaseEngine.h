@@ -58,14 +58,53 @@ class CBaseEngine{
     double          getFPS();
     void            createEntity(std::string name);
 
+
     void            think();
     void            initWorldView();
     void            initGuiView();
     void            drawScene();
 
+    void            quit();
+
     Font*           systemFont;
 
 };
+
+inline double CBaseEngine::getTime(){
+  return time;
+}
+
+inline double CBaseEngine::getLastTime(){
+  return lastTime;
+}
+
+inline double CBaseEngine::getTimeDelta(){
+  return timeDelta;
+}
+
+inline double CBaseEngine::getRealTime(){
+  return realTime;
+}
+
+inline double CBaseEngine::getLastRealTime(){
+  return lastRealTime;
+}
+
+inline double CBaseEngine::getRealTimeDelta(){
+  return realTimeDelta;
+}
+
+inline unsigned long long int CBaseEngine::getFrameCount(){
+  return frameCount;
+}
+
+inline double CBaseEngine::getFPS(){
+  return fps;
+}
+
+inline void CBaseEngine::quit(){
+  PostQuitMessage(0);
+}
 
 extern CBaseEngine* engine;
 #endif

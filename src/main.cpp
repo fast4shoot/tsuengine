@@ -57,12 +57,12 @@ int WINAPI WinMain (HINSTANCE hInstance,
   wc.hCursor = LoadCursor (NULL, IDC_ARROW);
   wc.hbrBackground = NULL;
   wc.lpszMenuName = NULL;
-  wc.lpszClassName = "TSUEWindow";
+  wc.lpszClassName = L"TSUEWindow";
   RegisterClass (&wc);
 
   // create main window
   hWnd = CreateWindow (
-    "TSUEWindow", "TSU Engine window",
+    L"TSUEWindow", L"TSU Engine window",
     WS_MINIMIZEBOX | WS_CAPTION | WS_POPUPWINDOW | WS_VISIBLE,
     0, 0, SCREENWIDTH, SCREENHEIGHT,
     NULL, NULL, hInstance, NULL);
@@ -120,10 +120,10 @@ int WINAPI WinMain (HINSTANCE hInstance,
         }
     }
   }catch(std::runtime_error e){
-    std::string result;
-    result="An exception occured: \n";
-    result+=e.what();
-    MessageBox(hWnd,result.c_str(),"Exception",MB_OK | MB_ICONEXCLAMATION);
+    std::wstring result;
+    result=L"An exception occured: \n";
+    //result+=e.what();
+    MessageBox(hWnd,result.c_str(),L"Exception",MB_OK | MB_ICONEXCLAMATION);
   }
   engine->destroy();
   delete engine;

@@ -14,15 +14,15 @@
 			</Target>
 		</Build>
 		<Compiler>
-			<Add option="-march=pentium2" />
 			<Add option="-fexpensive-optimizations" />
 			<Add option="-Os" />
 			<Add option="-O3" />
 			<Add option="-O2" />
 			<Add option="-O1" />
 			<Add option="-O" />
-			<Add directory=".\libs" />
-			<Add directory=".\gui" />
+			<Add option="-DUNICODE" />
+			<Add directory="libs" />
+			<Add directory="gui" />
 			<Add directory="." />
 			<Add directory="libs\FTGL" />
 		</Compiler>
@@ -62,10 +62,22 @@
 		<Unit filename="gui\CAbstractButton.h" />
 		<Unit filename="gui\CActionListener.cpp" />
 		<Unit filename="gui\CActionListener.h" />
+		<Unit filename="gui\CActionListenerPanel.cpp" />
+		<Unit filename="gui\CActionListenerPanel.h" />
+		<Unit filename="gui\CButton.cpp" />
+		<Unit filename="gui\CButton.h" />
+		<Unit filename="gui\CCenteredWindow.cpp" />
+		<Unit filename="gui\CCenteredWindow.h" />
+		<Unit filename="gui\CDraggable.cpp" />
+		<Unit filename="gui\CDraggable.h" />
 		<Unit filename="gui\CGuiPanel.cpp" />
 		<Unit filename="gui\CGuiPanel.h" />
 		<Unit filename="gui\CLabel.cpp" />
 		<Unit filename="gui\CLabel.h" />
+		<Unit filename="gui\CMainMenu.cpp" />
+		<Unit filename="gui\CMainMenu.h" />
+		<Unit filename="gui\CWindow.cpp" />
+		<Unit filename="gui\CWindow.h" />
 		<Unit filename="gui\TestPanel.cpp" />
 		<Unit filename="gui\TestPanel.h" />
 		<Unit filename="libs\FTGL\FTBuffer.cpp" />

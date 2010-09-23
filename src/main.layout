@@ -1,26 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="default" />
-	<File name="CBaseEngine.cpp" open="1" top="0" tabpos="2">
-		<Cursor position="2962" topLine="81" />
+	<File name="CBaseEngine.cpp" open="0" top="0" tabpos="4">
+		<Cursor position="2064" topLine="151" />
 	</File>
-	<File name="CBaseEngine.h" open="1" top="0" tabpos="7">
-		<Cursor position="1682" topLine="35" />
+	<File name="CBaseEngine.h" open="0" top="0" tabpos="3">
+		<Cursor position="2407" topLine="83" />
 	</File>
-	<File name="CFontMgr.cpp" open="1" top="0" tabpos="5">
-		<Cursor position="338" topLine="3" />
+	<File name="CFontMgr.cpp" open="0" top="0" tabpos="3">
+		<Cursor position="658" topLine="0" />
 	</File>
-	<File name="CFontMgr.h" open="1" top="0" tabpos="6">
+	<File name="CFontMgr.h" open="0" top="0" tabpos="6">
 		<Cursor position="313" topLine="0" />
 	</File>
-	<File name="CGuiMgr.cpp" open="1" top="0" tabpos="10">
-		<Cursor position="302" topLine="0" />
+	<File name="CGuiMgr.cpp" open="0" top="0" tabpos="3">
+		<Cursor position="515" topLine="7" />
 	</File>
-	<File name="CInputMgr.cpp" open="1" top="1" tabpos="13">
-		<Cursor position="3260" topLine="96" />
+	<File name="CGuiMgr.h" open="0" top="0" tabpos="2">
+		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="CInputMgr.h" open="1" top="0" tabpos="14">
-		<Cursor position="1935" topLine="22" />
+	<File name="CInputMgr.cpp" open="0" top="0" tabpos="13">
+		<Cursor position="321" topLine="0" />
+	</File>
+	<File name="CInputMgr.h" open="0" top="0" tabpos="14">
+		<Cursor position="912" topLine="15" />
 	</File>
 	<File name="CParamMgr.cpp" open="0" top="0" tabpos="0">
 		<Cursor position="0" topLine="25" />
@@ -28,20 +31,20 @@
 	<File name="CParamMgr.h" open="0" top="0" tabpos="0">
 		<Cursor position="99" topLine="2" />
 	</File>
-	<File name="Font.cpp" open="0" top="0" tabpos="8">
-		<Cursor position="497" topLine="0" />
+	<File name="Font.cpp" open="0" top="0" tabpos="2">
+		<Cursor position="479" topLine="3" />
 	</File>
-	<File name="Font.h" open="0" top="0" tabpos="7">
-		<Cursor position="1486" topLine="24" />
+	<File name="Font.h" open="0" top="0" tabpos="6">
+		<Cursor position="1513" topLine="32" />
 	</File>
 	<File name="const.h" open="0" top="0" tabpos="4">
 		<Cursor position="36" topLine="0" />
 	</File>
-	<File name="datatypes.cpp" open="0" top="0" tabpos="6">
-		<Cursor position="103" topLine="0" />
+	<File name="datatypes.cpp" open="0" top="0" tabpos="4">
+		<Cursor position="379" topLine="0" />
 	</File>
-	<File name="datatypes.h" open="0" top="0" tabpos="6">
-		<Cursor position="134" topLine="5" />
+	<File name="datatypes.h" open="0" top="0" tabpos="3">
+		<Cursor position="390" topLine="0" />
 	</File>
 	<File name="globals.cpp" open="0" top="0" tabpos="11">
 		<Cursor position="44" topLine="0" />
@@ -49,35 +52,68 @@
 	<File name="globals.h" open="0" top="0" tabpos="9">
 		<Cursor position="62" topLine="0" />
 	</File>
-	<File name="gui\CAbstractButton.cpp" open="0" top="0" tabpos="9">
-		<Cursor position="0" topLine="0" />
+	<File name="gui\CAbstractButton.cpp" open="0" top="0" tabpos="5">
+		<Cursor position="131" topLine="0" />
 	</File>
-	<File name="gui\CAbstractButton.h" open="0" top="0" tabpos="10">
-		<Cursor position="98" topLine="0" />
+	<File name="gui\CAbstractButton.h" open="0" top="0" tabpos="7">
+		<Cursor position="445" topLine="0" />
 	</File>
 	<File name="gui\CActionListener.cpp" open="0" top="0" tabpos="3">
 		<Cursor position="32" topLine="0" />
 	</File>
-	<File name="gui\CActionListener.h" open="0" top="0" tabpos="4">
-		<Cursor position="442" topLine="12" />
+	<File name="gui\CActionListener.h" open="0" top="0" tabpos="7">
+		<Cursor position="925" topLine="26" />
 	</File>
-	<File name="gui\CGuiPanel.cpp" open="1" top="0" tabpos="11">
-		<Cursor position="3936" topLine="124" />
+	<File name="gui\CActionListenerPanel.h" open="0" top="0" tabpos="0">
+		<Cursor position="127" topLine="0" />
 	</File>
-	<File name="gui\CGuiPanel.h" open="1" top="0" tabpos="12">
-		<Cursor position="1097" topLine="25" />
+	<File name="gui\CButton.cpp" open="1" top="1" tabpos="1">
+		<Cursor position="559" topLine="8" />
 	</File>
-	<File name="gui\CLabel.cpp" open="1" top="0" tabpos="1">
-		<Cursor position="490" topLine="0" />
+	<File name="gui\CButton.h" open="1" top="0" tabpos="2">
+		<Cursor position="407" topLine="0" />
 	</File>
-	<File name="gui\CLabel.h" open="1" top="0" tabpos="4">
-		<Cursor position="452" topLine="5" />
+	<File name="gui\CCenteredWindow.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="131" topLine="0" />
 	</File>
-	<File name="gui\TestPanel.cpp" open="1" top="0" tabpos="3">
-		<Cursor position="517" topLine="0" />
+	<File name="gui\CCenteredWindow.h" open="0" top="0" tabpos="0">
+		<Cursor position="221" topLine="0" />
+	</File>
+	<File name="gui\CDraggable.cpp" open="1" top="0" tabpos="5">
+		<Cursor position="823" topLine="15" />
+	</File>
+	<File name="gui\CDraggable.h" open="0" top="0" tabpos="0">
+		<Cursor position="134" topLine="0" />
+	</File>
+	<File name="gui\CGuiPanel.cpp" open="1" top="0" tabpos="4">
+		<Cursor position="676" topLine="14" />
+	</File>
+	<File name="gui\CGuiPanel.h" open="1" top="0" tabpos="3">
+		<Cursor position="3540" topLine="77" />
+	</File>
+	<File name="gui\CLabel.cpp" open="0" top="0" tabpos="5">
+		<Cursor position="257" topLine="15" />
+	</File>
+	<File name="gui\CLabel.h" open="0" top="0" tabpos="7">
+		<Cursor position="34" topLine="0" />
+	</File>
+	<File name="gui\CMainMenu.cpp" open="0" top="0" tabpos="2">
+		<Cursor position="1361" topLine="36" />
+	</File>
+	<File name="gui\CMainMenu.h" open="0" top="0" tabpos="1">
+		<Cursor position="365" topLine="7" />
+	</File>
+	<File name="gui\CWindow.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="704" topLine="17" />
+	</File>
+	<File name="gui\CWindow.h" open="0" top="0" tabpos="0">
+		<Cursor position="395" topLine="0" />
+	</File>
+	<File name="gui\TestPanel.cpp" open="0" top="0" tabpos="6">
+		<Cursor position="772" topLine="14" />
 	</File>
 	<File name="gui\TestPanel.h" open="0" top="0" tabpos="5">
-		<Cursor position="250" topLine="0" />
+		<Cursor position="250" topLine="1" />
 	</File>
 	<File name="libs\FTGL\FTBuffer.cpp" open="0" top="0" tabpos="0">
 		<Cursor position="1167" topLine="12" />
@@ -139,8 +175,11 @@
 	<File name="libs\ft2build.h" open="0" top="0" tabpos="0">
 		<Cursor position="1326" topLine="16" />
 	</File>
-	<File name="main.cpp" open="0" top="0" tabpos="11">
-		<Cursor position="952" topLine="81" />
+	<File name="macros.h" open="0" top="0" tabpos="8">
+		<Cursor position="222" topLine="0" />
+	</File>
+	<File name="main.cpp" open="0" top="0" tabpos="10">
+		<Cursor position="3078" topLine="116" />
 	</File>
 	<File name="utils.cpp" open="0" top="0" tabpos="10">
 		<Cursor position="0" topLine="0" />
@@ -148,19 +187,19 @@
 	<File name="utils.h" open="0" top="0" tabpos="8">
 		<Cursor position="47" topLine="0" />
 	</File>
-	<File name="utils\stringUtils.cpp" open="1" top="0" tabpos="8">
+	<File name="utils\stringUtils.cpp" open="0" top="0" tabpos="8">
 		<Cursor position="344" topLine="0" />
 	</File>
-	<File name="utils\stringUtils.h" open="1" top="0" tabpos="9">
+	<File name="utils\stringUtils.h" open="0" top="0" tabpos="9">
 		<Cursor position="395" topLine="0" />
 	</File>
 	<File name="vec2d.cpp" open="0" top="0" tabpos="11">
-		<Cursor position="366" topLine="6" />
+		<Cursor position="639" topLine="41" />
 	</File>
 	<File name="vec2d.h" open="0" top="0" tabpos="10">
 		<Cursor position="507" topLine="2" />
 	</File>
-	<File name="vec3d.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="0" topLine="62" />
+	<File name="vec3d.cpp" open="0" top="0" tabpos="12">
+		<Cursor position="1140" topLine="63" />
 	</File>
 </CodeBlocks_layout_file>

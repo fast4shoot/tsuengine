@@ -1,5 +1,5 @@
 #ifndef CLABEL_H
-#define CLABEL
+#define CLABEL_H
 
 #include <string>
 #include <map>
@@ -21,8 +21,8 @@ class CLabel: public CGuiPanel{
 
 
   protected:
-    std::wstring     _text;
-    float             _height;
+    std::wstring    _text;
+    float           _height;
     Font*           _font;
     void            init();
 

@@ -7,10 +7,10 @@
 class CActionListener;
 
 class CGuiPanel{
+  typedef std::vector<CActionListener*> ActionListenerList;
+  typedef std::vector<CGuiPanel*> ChildrenList;
   public:
-    std::vector<CGuiPanel*> children;
-
-                    CGuiPanel(double x, double y, double w, double h);
+    ChildrenList    children;
                     CGuiPanel(const vec2d& pos, const vec2d& size);
                     ~CGuiPanel();
     void            init();
@@ -54,11 +54,13 @@ class CGuiPanel{
     virtual bool    handleMouseClick(const vec2d& position,const  MouseButton button,const bool up);
     virtual void    onMouseDown(const vec2d& position,const  MouseButton button);
     virtual void    onMouseUp(const vec2d& position, const MouseButton button);
+    virtual void    onMouseClick(const vec2d& position, const MouseButton button);
     virtual void    handleMouseMove(const vec2d& newPosition,const  bool mouseOver);
     virtual void    mouseMove(const vec2d& newPosition,const bool mouseOver);
     virtual void    onMouseOver();
     virtual void    onMouseOut();
     bool            getMouseOver();
+    bool            getMouseDown();
 
     void            addActionListener(CActionListener* al);
 
@@ -68,7 +70,11 @@ class CGuiPanel{
     rgba            getFgColor();
 
     //draw functions
+    void            setDrawColor(const rgba& color);
     void            drawQuad(float x, float y, float w, float h);
+    void            drawVerticalGradient(float x, float y, float w, float h, const rgba& colOne, const rgba& colTwo);
+    void            drawHorizontalGradient(float x, float y, float w, float h, const rgba& colOne, const rgba& colTwo);
+    void            drawFrame(float x, float y, float w, float h);
 
   protected:
     vec2d           position;
@@ -79,10 +85,13 @@ class CGuiPanel{
     bool            hasParent;
     int             parentIndex;
     bool            mouseOver;
+    bool            mouseDown;
     bool            allowMouseClickPropagation;
-    std::vector<CActionListener*> actionListeners;
+    ActionListenerList actionListeners;
     rgba            fgColor;
     rgba            bgColor;
+    rgba            glossColor;
+    void            fireListeners();
 };
 
 inline void CGuiPanel::setX(double x){
@@ -172,6 +181,14 @@ inline void CGuiPanel::setParentIndex(int newParentIndex){
 
 inline CGuiPanel* CGuiPanel::getParent(){
   return parent;
+}
+
+inline bool CGuiPanel::getMouseOver(){
+  return mouseOver;
+}
+
+inline bool CGuiPanel::getMouseDown(){
+  return mouseDown;
 }
 
 inline int CGuiPanel::getParentIndex(){

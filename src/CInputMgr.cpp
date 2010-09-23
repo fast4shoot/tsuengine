@@ -11,7 +11,7 @@ CInputMgr::CInputMgr(){
   DIKeyboardDevice=NULL;
   DIMouseDevice=NULL;
   cursor.set(SCREENWIDTH/2.,SCREENHEIGHT/2.);
-  fSensitivity = 1.5f;
+  fSensitivity = 1.f;
   bInverted = false;
   iCurrBuffer=0;
 }

@@ -12,7 +12,7 @@ Font* CFontMgr::getFont(const wstring& name){
   }
 }
 
-Font* CFontMgr::loadFont(const wstring& name, double size){
+Font* CFontMgr::loadFont(const wstring& name,double size){
   size=ceil(size);
   FontList::iterator it=_fonts.find(name);
   Font* font;
