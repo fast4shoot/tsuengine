@@ -21,6 +21,7 @@
 			<Add option="-O1" />
 			<Add option="-O" />
 			<Add option="-DUNICODE" />
+			<Add option="-D_UNICODE" />
 			<Add directory="libs" />
 			<Add directory="gui" />
 			<Add directory="." />
@@ -60,6 +61,8 @@
 		<Unit filename="globals.h" />
 		<Unit filename="gui\CAbstractButton.cpp" />
 		<Unit filename="gui\CAbstractButton.h" />
+		<Unit filename="gui\CAbstractToggle.cpp" />
+		<Unit filename="gui\CAbstractToggle.h" />
 		<Unit filename="gui\CActionListener.cpp" />
 		<Unit filename="gui\CActionListener.h" />
 		<Unit filename="gui\CActionListenerPanel.cpp" />
@@ -68,6 +71,8 @@
 		<Unit filename="gui\CButton.h" />
 		<Unit filename="gui\CCenteredWindow.cpp" />
 		<Unit filename="gui\CCenteredWindow.h" />
+		<Unit filename="gui\CCheckBox.cpp" />
+		<Unit filename="gui\CCheckBox.h" />
 		<Unit filename="gui\CDraggable.cpp" />
 		<Unit filename="gui\CDraggable.h" />
 		<Unit filename="gui\CGuiPanel.cpp" />

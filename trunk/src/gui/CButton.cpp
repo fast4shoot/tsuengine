@@ -11,11 +11,11 @@ CAbstractButton(pos,size)
 }
 
 void CButton::draw(){
-  float mult = active?1.3f:1.f;
-  mult*=pressed?0.75f:1.f;
+  float mult = _active?1.3f:1.f;
+  mult *= _pressed?0.75f:1.f;
 
   drawVerticalGradient(1., 1., getW()-2, getH()-2, bgTopColor*mult, bgColor*mult);
-  if(!pressed){
+  if(!_pressed){
     setDrawColor(glossColor);
     drawQuad(1., 1., getW()-2, (getH()-2)/2.);
   }

@@ -14,7 +14,6 @@ CGuiPanel::CGuiPanel(const vec2d& position, const vec2d& size){
   init();
   this->position=position;
   this->size=size;
-
 }
 
 void CGuiPanel::init(){
@@ -28,7 +27,7 @@ void CGuiPanel::init(){
   allowMouseClickPropagation=true;
   //MSGBOX("New CGuiPanel inited/created");
   fgColor.set(1.,1.,1.,1.);
-  bgColor.set(0.,0.,0.,1.);
+  bgColor.set(0.,0.,0.,.25);
   glossColor.set(1., 1., 1., .1);
 }
 
@@ -45,6 +44,7 @@ void CGuiPanel::removeChild(CGuiPanel* child){
   for (int i=0; i<size; i++){
     if(children.at(i)==child){
       removeChild(i);
+      break;
     }
   }
 }
@@ -59,8 +59,8 @@ void CGuiPanel::draw(){
 
 void CGuiPanel::drawChildren(){
   int size=children.size();
-  for (int i=0; i<size; i++){
-    CGuiPanel* child=children.at(i);
+  for (ChildrenList::iterator i = children.begin(); i != children.end(); ++i){
+    CGuiPanel* child=*i;
     if(child->getVisible()){
       glPushMatrix();
       glTranslatef(child->getX(),child->getY(),0.);

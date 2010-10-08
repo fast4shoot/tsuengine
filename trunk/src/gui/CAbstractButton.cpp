@@ -6,19 +6,19 @@ CGuiPanel(pos,size)
 
 void CAbstractButton::onMouseDown(const vec2d& position,const  MouseButton button){
   if(button==LMB)
-    pressed=true;
+    _pressed=true;
 }
 
 void CAbstractButton::onMouseUp(const vec2d& position,const  MouseButton button){
   if(button==LMB)
-    pressed=false;
+    _pressed=false;
 }
 
 void CAbstractButton::onMouseOver(){
-  active=true;
+  _active=true;
 }
 
 void CAbstractButton::onMouseOut(){
-  active=false;
-  pressed=false;
+  _active=false;
+  _pressed=false;
 }

@@ -97,26 +97,22 @@ int WINAPI WinMain (HINSTANCE hInstance,
 
     while (!bQuit)
     {
-        // check for messages
-        if (PeekMessage (&msg, NULL, 0, 0, PM_REMOVE))
-        {
-            // handle or dispatch messages
-            switch(msg.message){
+      // check for messages
+      if (PeekMessage (&msg, NULL, 0, 0, PM_REMOVE)){
+        // handle or dispatch messages
+        switch(msg.message){
+          case WM_QUIT:
+            bQuit = TRUE;
+          break;
 
-              case WM_QUIT:
-                bQuit = TRUE;
-                break;
-
-              default:
-                TranslateMessage (&msg);
-                DispatchMessage (&msg);
-            }
-        }
-        else
-        {
-            engine->think();
-            engine->drawScene();
-            //if(engine->getFPS()>800.0)Sleep(1);
+          default:
+            TranslateMessage (&msg);
+            DispatchMessage (&msg);
+          }
+        }else{
+          engine->think();
+          engine->drawScene();
+          //if(engine->getFPS()>800.0)Sleep(1);
         }
     }
   }catch(std::runtime_error e){
@@ -142,21 +138,21 @@ int WINAPI WinMain (HINSTANCE hInstance,
  *
  ********************/
 
-LRESULT CALLBACK WndProc (HWND hWnd, UINT message,
-                          WPARAM wParam, LPARAM lParam)
-{
-
-
+LRESULT CALLBACK WndProc (HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam){
   switch (message){
     case WM_ACTIVATE:
 			return 0;								// Return To The Message Loop
+
     case WM_CREATE:
       return 0;
+
     case WM_DESTROY:
       return 0;
+
     case WM_CLOSE:
       PostQuitMessage(0);
       return 0;
+
     case WM_SYSCOMMAND:
       switch (wParam){
         case SC_SCREENSAVE:
@@ -164,6 +160,12 @@ LRESULT CALLBACK WndProc (HWND hWnd, UINT message,
         case SC_KEYMENU:
           return 0;
       }
+
+    case WM_CHAR:
+      engine->input->characterInput((wchar_t)wParam);
+      return false;
+
+
     default:
         return DefWindowProc (hWnd, message, wParam, lParam);
     }
