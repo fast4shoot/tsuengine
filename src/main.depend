@@ -1231,7 +1231,7 @@
 	<gl/gl.h>
 	"CActionListener.h"
 
-1285226541 source:d:\programming\tsuengine\src\cbaseengine.cpp
+1285341569 source:d:\programming\tsuengine\src\cbaseengine.cpp
 	<cmath>
 	<windows.h>
 	<gl/gl.h>
@@ -1289,7 +1289,7 @@
 	"datatypes.h"
 	"const.h"
 
-1284019965 d:\programming\tsuengine\src\cinputmgr.h
+1286539114 d:\programming\tsuengine\src\cinputmgr.h
 	<dinput.h>
 	"datatypes.h"
 
@@ -1341,7 +1341,7 @@
 	"CBaseEntity.h"
 	"const.h"
 
-1285235345 source:d:\programming\tsuengine\src\cguimgr.cpp
+1285341723 source:d:\programming\tsuengine\src\cguimgr.cpp
 	"CGuiMgr.h"
 	"CGuiPanel.h"
 	"TestPanel.h"
@@ -1354,7 +1354,7 @@
 1284631633 d:\programming\tsuengine\src\gui\testpanel.h
 	"CGuiPanel.h"
 
-1285234710 source:d:\programming\tsuengine\src\cinputmgr.cpp
+1286539178 source:d:\programming\tsuengine\src\cinputmgr.cpp
 	"CInputMgr.h"
 	"macros.h"
 	"const.h"
@@ -1384,7 +1384,7 @@
 	"globals.h"
 	<windows.h>
 
-1284645689 source:d:\programming\tsuengine\src\gui\cabstractbutton.cpp
+1285330905 source:d:\programming\tsuengine\src\gui\cabstractbutton.cpp
 	"CAbstractButton.h"
 
 1284019786 source:d:\programming\tsuengine\src\gui\cactionlistener.cpp
@@ -1417,7 +1417,7 @@
 	<cstdlib>
 	"../macros.h"
 
-1284293185 source:d:\programming\tsuengine\src\main.cpp
+1286544418 source:d:\programming\tsuengine\src\main.cpp
 	<windows.h>
 	<gl/gl.h>
 	<iostream>
@@ -1455,7 +1455,7 @@
 	<cmath>
 	"macros.h"
 
-1285241822 source:d:\programming\tsuengine\src\gui\cguipanel.cpp
+1286349542 source:d:\programming\tsuengine\src\gui\cguipanel.cpp
 	"CGuiPanel.h"
 	"macros.h"
 	<gl/gl.h>
@@ -2715,10 +2715,10 @@
 	"FTInternals.h"
 	"FTVectoriser.h"
 
-1285231381 d:\programming\tsuengine\src\gui\cabstractbutton.h
+1285330904 d:\programming\tsuengine\src\gui\cabstractbutton.h
 	"CGuiPanel.h"
 
-1285236902 source:d:\programming\tsuengine\src\gui\cbutton.cpp
+1285330871 source:d:\programming\tsuengine\src\gui\cbutton.cpp
 	"CButton.h"
 
 1285245405 d:\programming\tsuengine\src\gui\cbutton.h
@@ -2727,9 +2727,10 @@
 
 1284702523 d:\programming\tsuengine\src\cmainmenu.h
 
-1285242126 source:d:\programming\tsuengine\src\gui\cmainmenu.cpp
+1286349257 source:d:\programming\tsuengine\src\gui\cmainmenu.cpp
 	"CMainMenu.h"
 	"CCenteredWindow.h"
+	"CCheckBox.h"
 
 1285241822 d:\programming\tsuengine\src\gui\cmainmenu.h
 	"CGuiPanel.h"
@@ -2742,7 +2743,7 @@
 	"datatypes.h"
 	"CAbstractButton.h"
 
-1285243784 source:d:\programming\tsuengine\src\gui\cdraggable.cpp
+1285309431 source:d:\programming\tsuengine\src\gui\cdraggable.cpp
 	"CDraggable.h"
 
 1285242427 d:\programming\tsuengine\src\gui\cwindow.h
@@ -2767,4 +2768,18 @@
 
 1285237946 source:d:\programming\tsuengine\src\gui\cactionlistenerpanel.cpp
 	"CActionListenerPanel.h"
+
+1286350958 source:d:\programming\tsuengine\src\gui\cabstracttoggle.cpp
+	"CAbstractToggle.h"
+
+1286349129 d:\programming\tsuengine\src\gui\cabstracttoggle.h
+	"datatypes.h"
+	"CAbstractButton.h"
+
+1286348734 source:d:\programming\tsuengine\src\gui\ccheckbox.cpp
+	"CCheckBox.h"
+	"CLabel.h"
+
+1286347767 d:\programming\tsuengine\src\gui\ccheckbox.h
+	"CAbstractToggle.h"
 

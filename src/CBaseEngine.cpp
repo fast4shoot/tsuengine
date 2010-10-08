@@ -28,7 +28,7 @@ void CBaseEngine::init(){
   input->init();
   fonts=new CFontMgr();
   systemFont=fonts->loadFont(L"ARIALUNI.TTF",14.);
-  fonts->loadFont(L"ARIALUNI.TTF",40.);
+  fonts->loadFont(L"ARIALUNI.TTF",55.);
   gui = new CGuiMgr();
   gui->init();
 

@@ -172,6 +172,12 @@ bool CInputMgr::buttonDepressed(MouseButton button){
    return !(MouseState[iCurrBuffer].rgbButtons[button] & 0x80) && (MouseState[!iCurrBuffer].rgbButtons[button] & 0x80);
 }
 
+void CInputMgr::characterInput(wchar_t character){
+  std::wstring str;
+  str=character;
+  MSGBOX(str.c_str());
+}
+
 /*
 //tuhle useless funkci napsal michal špaèek
 //UPDATE 11.3.2010: je fakt totálnì k nièemu

@@ -12,8 +12,8 @@ class CAbstractButton: public CGuiPanel{
     virtual void    onMouseOut();
 
   protected:
-    bool active;
-    bool pressed;
+    bool _active;
+    bool _pressed;
 };
 
 #endif
