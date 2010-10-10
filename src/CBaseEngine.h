@@ -10,8 +10,10 @@
 #include "CBaseEntity.h"
 #include "CEntMgr.h"
 #include "CInputMgr.h"
-#include "CGuiMgr.h"
+//#include "CGuiMgr.h"
 #include "CFontMgr.h"
+
+class CGuiMgr;
 
 class CBaseEngine{
   private:
@@ -30,6 +32,7 @@ class CBaseEngine{
     double          timeScale;
     unsigned long long int    frameCount;
     double          fps;
+    std::wstring    _log;
 
 
   public:
@@ -39,8 +42,6 @@ class CBaseEngine{
     CFontMgr*       fonts;
 
 
-                    CBaseEngine(){};
-                    //~CBaseEngine(){};
     void            init();
     void            destroy();
     void            setDrawPos(double x, double y, double z);
@@ -63,6 +64,8 @@ class CBaseEngine{
     void            initWorldView();
     void            initGuiView();
     void            drawScene();
+
+    void            log(const std::wstring& text);
 
     void            quit();
 
@@ -104,6 +107,10 @@ inline double CBaseEngine::getFPS(){
 
 inline void CBaseEngine::quit(){
   PostQuitMessage(0);
+}
+
+inline void CBaseEngine::log(const std::wstring& text){
+  _log=text;
 }
 
 extern CBaseEngine* engine;

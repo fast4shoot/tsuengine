@@ -2,6 +2,7 @@
 
 #include "CCenteredWindow.h"
 #include "CCheckBox.h"
+#include "CTextField.h"
 
 CMainMenu::CMainMenu():
   CGuiPanel(vec2d(0,0),vec2d(SCREENWIDTH,SCREENHEIGHT))
@@ -30,6 +31,7 @@ CMainMenu::CMainMenu():
 
   addChild(settings=new CCenteredWindow(vec2d(400,300), L"Nastavení"));
   settings->setVisible(false);
+  settings->addChild(new CTextField(vec2d(20, 50), vec2d(160,24), L"rofl" ));
 
   addChild(newGame=new CCenteredWindow(vec2d(500,230), L"Nová hra"));
   newGame->setVisible(false);

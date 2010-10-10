@@ -14,6 +14,7 @@
 			</Target>
 		</Build>
 		<Compiler>
+			<Add option="-march=nocona" />
 			<Add option="-fexpensive-optimizations" />
 			<Add option="-Os" />
 			<Add option="-O3" />
@@ -81,6 +82,8 @@
 		<Unit filename="gui\CLabel.h" />
 		<Unit filename="gui\CMainMenu.cpp" />
 		<Unit filename="gui\CMainMenu.h" />
+		<Unit filename="gui\CTextField.cpp" />
+		<Unit filename="gui\CTextField.h" />
 		<Unit filename="gui\CWindow.cpp" />
 		<Unit filename="gui\CWindow.h" />
 		<Unit filename="gui\TestPanel.cpp" />

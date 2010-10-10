@@ -46,11 +46,9 @@ void CInputMgr::init(){
 
   for(int i=0;i<256;i++){
     keyTimeBuffer[iCurrBuffer][i]=0.;
-  }
-
-  for(int i=0;i<256;i++){
     keyRealTimeBuffer[iCurrBuffer][i]=0.;
   }
+
 
   HANDLEMSFAILURE( DIObject->CreateDevice(GUID_SysMouse, &DIMouseDevice, NULL) )
   HANDLEMSFAILURE( DIMouseDevice->SetDataFormat(&c_dfDIMouse2) )
@@ -76,6 +74,8 @@ void CInputMgr::update(){
   //switch the buffers
   iCurrBuffer=!iCurrBuffer;
 
+  _inputString[!iCurrBuffer].clear();
+
   HANDLEMSFAILURE( DIKeyboardDevice->GetDeviceState(sizeof(keyBuffer[iCurrBuffer]), (LPVOID)&keyBuffer[iCurrBuffer]) )
 
   for(int i=0;i<256;i++){
@@ -84,9 +84,6 @@ void CInputMgr::update(){
     }else{
       keyTimeBuffer[iCurrBuffer][i]=0.;
     }
-  }
-
-  for(int i=0;i<256;i++){
     if(keyStillDown(i)){
       keyRealTimeBuffer[iCurrBuffer][i]+=engine->getRealTimeDelta();
     }else{
@@ -113,6 +110,8 @@ void CInputMgr::update(){
   cursor.y = CLIPMINMAX(cursor.y,0,SCREENHEIGHT-1);
 
   cursorDelta = cursor - cursorOld;
+
+
 
 }
 
@@ -157,30 +156,28 @@ float CInputMgr::keyRealTimedDelta(int key){
     return 0.f;
 }
 
-bool CInputMgr::buttonDown(MouseButton button){
+bool CInputMgr::buttonDown(MouseButton button) const {
   if(MouseState[iCurrBuffer].rgbButtons[button] & 0x80){
     return true;
   }
   return false;
 }
 
-bool CInputMgr::buttonPressed(MouseButton button){
+bool CInputMgr::buttonPressed(MouseButton button) const {
    return (MouseState[iCurrBuffer].rgbButtons[button] & 0x80) && !(MouseState[!iCurrBuffer].rgbButtons[button] & 0x80);
 }
 
-bool CInputMgr::buttonDepressed(MouseButton button){
+bool CInputMgr::buttonDepressed(MouseButton button) const {
    return !(MouseState[iCurrBuffer].rgbButtons[button] & 0x80) && (MouseState[!iCurrBuffer].rgbButtons[button] & 0x80);
 }
 
 void CInputMgr::characterInput(wchar_t character){
-  std::wstring str;
-  str=character;
-  MSGBOX(str.c_str());
+  _inputString[!iCurrBuffer]+=character;
 }
 
 /*
-//tuhle useless funkci napsal michal špaèek
-//UPDATE 11.3.2010: je fakt totálnì k nièemu
+//tuhle useless funkci napsal michal Å¡paÃ¨ek
+//UPDATE 11.3.2010: je fakt totÃ¡lnÃ¬ k niÄÃ¨emu
  bool CInputMgr::mouseParanoid() {
      if (a->theyreAfterMe() == true) {
          return true;
@@ -188,5 +185,15 @@ void CInputMgr::characterInput(wchar_t character){
          return null;
      }
  }*/
+
+std::wstring CInputMgr::getString(){
+  std::wstring rofl;
+  rofl+=L"getString(): ";
+  rofl+=_inputString[iCurrBuffer];
+  //engine->log(rofl);
+  return _inputString[iCurrBuffer];
+}
+
+
 
 

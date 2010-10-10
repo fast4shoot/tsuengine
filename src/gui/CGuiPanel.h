@@ -3,6 +3,9 @@
 
 #include <vector>
 #include "datatypes.h"
+#include "CGuiMgr.h"
+#include "CBaseEngine.h"
+
 
 class CActionListener;
 
@@ -37,6 +40,7 @@ class CGuiPanel{
 
     void            setVisible(bool vis);
     bool            getVisible();
+    bool            isVisible();
     void            setOpacity(float opacity);
     float           getOpacity();
     void            setParent(CGuiPanel* newParent);
@@ -61,6 +65,10 @@ class CGuiPanel{
     virtual void    onMouseOut();
     bool            getMouseOver();
     bool            getMouseDown();
+
+    //keyboard function
+    virtual void    onKeyboard(const std::wstring& string){};
+    void            requestKeyboardFocus();
 
     void            addActionListener(CActionListener* al);
 
@@ -193,6 +201,10 @@ inline bool CGuiPanel::getMouseDown(){
 
 inline int CGuiPanel::getParentIndex(){
   return parentIndex;
+}
+
+inline void CGuiPanel::requestKeyboardFocus(){
+  engine->gui->setKeyboardReceiver(this);
 }
 
 inline void CGuiPanel::setBgColor(rgba newBg){

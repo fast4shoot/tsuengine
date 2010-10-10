@@ -1,6 +1,7 @@
 #include "CGuiPanel.h"
 #include "macros.h"
 #include <gl/gl.h>
+#include <typeinfo>
 #include "CActionListener.h"
 
 CGuiPanel::~CGuiPanel(){
@@ -31,7 +32,13 @@ void CGuiPanel::init(){
   glossColor.set(1., 1., 1., .1);
 }
 
-
+bool CGuiPanel::isVisible(){
+  if(parent){
+    return getVisible() && parent->isVisible();
+  }else{
+    return getVisible();
+  }
+}
 
 void CGuiPanel::addChild(CGuiPanel* newChild){
   newChild->setParent(this);
@@ -96,10 +103,12 @@ std::string CGuiPanel::toString(){
 }
 
 bool CGuiPanel::handleMouseClick(const vec2d& position, const MouseButton button, const bool up){
+  bool childrenHasKeyboard=false;
   for(int i=children.size()-1;i>=0;i--){
     vec2d positionInChild = position-(children.at(i)->getPosition());
     CGuiPanel* child=children.at(i);
-    if( child->getVisible() && children.at(i)->isPointInside( positionInChild ) ){
+    if( child->getVisible() && child->isPointInside( positionInChild ) ){
+      childrenHasKeyboard=true;
       if(children.at(i)->handleMouseClick(positionInChild, button, up)){
         break;
       }else{
@@ -113,6 +122,14 @@ bool CGuiPanel::handleMouseClick(const vec2d& position, const MouseButton button
     onMouseClick(position,button);
   }
   up?onMouseUp(position,button):onMouseDown(position,button);
+  if(!up && !childrenHasKeyboard){
+    std::string buff(typeid(this).name());
+    std::wstring wBuff(buff.length(), L' '); // Make room for characters
+    std::copy(buff.begin(), buff.end(), wBuff.begin());
+
+    engine->log(wBuff);
+    requestKeyboardFocus();
+  }
   return allowMouseClickPropagation;
 }
 
