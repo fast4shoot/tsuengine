@@ -4,7 +4,7 @@
 #define DIRECTINPUT_VERSION 0x0800
 #include <dinput.h>
 #include "datatypes.h"
-
+#include "macros.h"
 class CInputMgr{
   public:
                     CInputMgr();
@@ -20,9 +20,11 @@ class CInputMgr{
     float           keyRealTimed(int key);
     float           keyRealTimedDelta(int key);
 
-    bool            buttonDown(MouseButton button);
-    bool            buttonPressed(MouseButton button);
-    bool            buttonDepressed(MouseButton button);
+    std::wstring    getString();
+
+    bool            buttonDown(MouseButton button) const;
+    bool            buttonPressed(MouseButton button) const;
+    bool            buttonDepressed(MouseButton button) const;
 
     const float     getX() const;
     const float     getY() const;
@@ -48,6 +50,7 @@ class CInputMgr{
     vec2d           cursorDelta;
     int             iAxes,              //number of axes (NEW)
                     iButtons;           //number of buttons (NEW)
+    std::wstring    _inputString[2];
 };
 
 inline const float CInputMgr::getX() const{

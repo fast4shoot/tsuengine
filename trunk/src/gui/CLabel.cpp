@@ -26,6 +26,7 @@ void CLabel::init(){
 }
 
 void CLabel::draw(){
+  setDrawColor(fgColor);
   _font->render(getH(),_text,fgColor);
 }
 

@@ -48,9 +48,9 @@ void CBaseEngine::init(){
 }*/
 
 void CBaseEngine::destroy(){
-  delete input;
   delete gui;
   delete fonts;
+  delete input;
 }
 
 void CBaseEngine::setDrawPos(double x, double y, double z){
@@ -138,6 +138,10 @@ void CBaseEngine::drawScene(){
 
   glColor3f(1.0f, 1.0f, 1.0f);
   systemFont->render(14.,swprintf(L"realTime: %.1lf | FPS: %.1lf | Frame: %llu",getRealTime(),fps,getFrameCount()));
+  glPushMatrix();
+  glTranslatef(0.,16., 0.);
+  systemFont->render(14.,_log);
+  glPopMatrix();
 
   glPushMatrix();
   glTranslatef(input->getX(),input-> getY(),0.0f);
