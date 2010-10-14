@@ -31,7 +31,7 @@ CMainMenu::CMainMenu():
 
   addChild(settings=new CCenteredWindow(vec2d(400,300), L"Nastavení"));
   settings->setVisible(false);
-  settings->addChild(new CTextField(vec2d(20, 50), vec2d(160,24), L"rofl" ));
+  settings->addChild(new CTextField(vec2d(20, 50), vec2d(160,24)));
 
   addChild(newGame=new CCenteredWindow(vec2d(500,230), L"Nová hra"));
   newGame->setVisible(false);

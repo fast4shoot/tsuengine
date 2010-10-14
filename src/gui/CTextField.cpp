@@ -3,7 +3,7 @@
 CTextField::CTextField(const vec2d& position, const vec2d& size, const std::wstring& text):
   CGuiPanel(position,size),
   _string(text),
-  _label(new CLabel(vec2d(2., 2.), vec2d(getW()-4., getH()-4.), text))
+  _label(new CLabel(vec2d(2., 2.), vec2d(0., getH()-4.), text))
 {
   addChild(_label);
 }
@@ -11,7 +11,6 @@ CTextField::CTextField(const vec2d& position, const vec2d& size, const std::wstr
 void CTextField::onKeyboard(const std::wstring& string){
   _string+=string;
   _label->setText(_string);
-  MSGBOX(L"onKeyboard()");
 }
 
 void CTextField::draw(){

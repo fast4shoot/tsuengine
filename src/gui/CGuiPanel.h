@@ -69,6 +69,7 @@ class CGuiPanel{
     //keyboard function
     virtual void    onKeyboard(const std::wstring& string){};
     void            requestKeyboardFocus();
+    bool            getAllowKeyboardInput();
 
     void            addActionListener(CActionListener* al);
 
@@ -95,6 +96,7 @@ class CGuiPanel{
     bool            mouseOver;
     bool            mouseDown;
     bool            allowMouseClickPropagation;
+    bool            allowKeyboardInput;
     ActionListenerList actionListeners;
     rgba            fgColor;
     rgba            bgColor;
@@ -205,6 +207,10 @@ inline int CGuiPanel::getParentIndex(){
 
 inline void CGuiPanel::requestKeyboardFocus(){
   engine->gui->setKeyboardReceiver(this);
+}
+
+inline bool CGuiPanel::getAllowKeyboardInput(){
+  return allowKeyboardInput;
 }
 
 inline void CGuiPanel::setBgColor(rgba newBg){
