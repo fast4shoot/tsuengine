@@ -104,12 +104,12 @@ std::string CGuiPanel::toString(){
 
 bool CGuiPanel::handleMouseClick(const vec2d& position, const MouseButton button, const bool up){
   bool childrenHasKeyboard=false;
-  for(int i=children.size()-1;i>=0;i--){
-    vec2d positionInChild = position-(children.at(i)->getPosition());
-    CGuiPanel* child=children.at(i);
+  for(ChildrenList::reverse_iterator it = children.rbegin(); it != children.rend(); ++it){
+    CGuiPanel* child=*it;
+    vec2d positionInChild = position-(child->getPosition());
     if( child->getVisible() && child->isPointInside( positionInChild ) ){
       childrenHasKeyboard=true;
-      if(children.at(i)->handleMouseClick(positionInChild, button, up)){
+      if(child->handleMouseClick(positionInChild, button, up)){
         break;
       }else{
         return false;
@@ -146,8 +146,8 @@ void CGuiPanel::handleMouseMove(const vec2d& newPosition, const bool mouseOver){
   vec2d positionInChild;
   bool itemFound=false;
 
-  for(int i=children.size()-1;i>=0;i--){
-    CGuiPanel* child=children.at(i);
+  for(ChildrenList::reverse_iterator it = children.rbegin(); it != children.rend(); ++it){
+    CGuiPanel* child=*it;
     positionInChild = newPosition-(child->getPosition());
     if(!itemFound && child->getVisible() && child->isPointInside( positionInChild )){
       child->handleMouseMove( positionInChild, true);

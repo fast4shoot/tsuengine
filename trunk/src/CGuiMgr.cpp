@@ -37,10 +37,8 @@ void CGuiMgr::update(){
   if(_keyboardReceiver && _keyboardReceiver->isVisible()){
     std::wstring input = engine->input->getString();
     if(!input.empty()){
-      //engine->log(L"not empty");
       _keyboardReceiver->onKeyboard(input);
     }else{
-      //engine->log(L"empty");
     }
   }
 }

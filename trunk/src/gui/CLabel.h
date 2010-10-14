@@ -11,8 +11,7 @@
 
 class CLabel: public CGuiPanel{
   public:
-                    CLabel(const vec2d& position, const vec2d& size);
-                    CLabel(const vec2d& position, const vec2d& size, const std::wstring& text);
+                    CLabel(const vec2d& position, const vec2d& size, const std::wstring& text=L"");
     void            setText(const std::wstring& text);
     std::wstring    getText();
 
