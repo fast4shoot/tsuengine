@@ -1231,7 +1231,7 @@
 	<gl/gl.h>
 	"CActionListener.h"
 
-1285341569 source:d:\programming\tsuengine\src\cbaseengine.cpp
+1287139054 source:d:\programming\tsuengine\src\cbaseengine.cpp
 	<cmath>
 	<windows.h>
 	<gl/gl.h>
@@ -1247,7 +1247,7 @@
 	"WhiteBox.h"
 	"utils/stringUtils.h"
 
-1285226556 d:\programming\tsuengine\src\cbaseengine.h
+1287139054 d:\programming\tsuengine\src\cbaseengine.h
 	<string>
 	<gl/gl.h>
 	<ctime>
@@ -1257,7 +1257,6 @@
 	"CBaseEntity.h"
 	"CEntMgr.h"
 	"CInputMgr.h"
-	"CGuiMgr.h"
 	"CFontMgr.h"
 
 1284019797 d:\programming\tsuengine\src\globals.h
@@ -1289,16 +1288,19 @@
 	"datatypes.h"
 	"const.h"
 
-1286539114 d:\programming\tsuengine\src\cinputmgr.h
+1287139054 d:\programming\tsuengine\src\cinputmgr.h
 	<dinput.h>
 	"datatypes.h"
+	"macros.h"
 
-1284019796 d:\programming\tsuengine\src\cguimgr.h
-	"CGuiPanel.h"
+1287139054 d:\programming\tsuengine\src\cguimgr.h
+	"macros.h"
 
-1285246084 d:\programming\tsuengine\src\gui\cguipanel.h
+1287139054 d:\programming\tsuengine\src\gui\cguipanel.h
 	<vector>
 	"datatypes.h"
+	"CGuiMgr.h"
+	"CBaseEngine.h"
 
 1271930324 d:\programming\tsuengine\src\libs\glft_font.hpp
 	<GL/gl.h>
@@ -1341,7 +1343,7 @@
 	"CBaseEntity.h"
 	"const.h"
 
-1285341723 source:d:\programming\tsuengine\src\cguimgr.cpp
+1287139054 source:d:\programming\tsuengine\src\cguimgr.cpp
 	"CGuiMgr.h"
 	"CGuiPanel.h"
 	"TestPanel.h"
@@ -1354,7 +1356,7 @@
 1284631633 d:\programming\tsuengine\src\gui\testpanel.h
 	"CGuiPanel.h"
 
-1286539178 source:d:\programming\tsuengine\src\cinputmgr.cpp
+1287139054 source:d:\programming\tsuengine\src\cinputmgr.cpp
 	"CInputMgr.h"
 	"macros.h"
 	"const.h"
@@ -1401,7 +1403,7 @@
 	"globals.h"
 	"CLabel.h"
 
-1285236234 d:\programming\tsuengine\src\gui\clabel.h
+1287139054 d:\programming\tsuengine\src\gui\clabel.h
 	<string>
 	<map>
 	"vec2d.h"
@@ -1455,10 +1457,11 @@
 	<cmath>
 	"macros.h"
 
-1286349542 source:d:\programming\tsuengine\src\gui\cguipanel.cpp
+1287139054 source:d:\programming\tsuengine\src\gui\cguipanel.cpp
 	"CGuiPanel.h"
 	"macros.h"
 	<gl/gl.h>
+	<typeinfo>
 	"CActionListener.h"
 
 1286577003 source:d:\fast4shoot\programming\tsuengine\src\cbaseengine.cpp
@@ -1695,7 +1698,7 @@
 	<cmath>
 	"macros.h"
 
-1284625182 source:d:\programming\tsuengine\src\gui\clabel.cpp
+1287139054 source:d:\programming\tsuengine\src\gui\clabel.cpp
 	"CLabel.h"
 	<string>
 	"vec2d.h"
@@ -2735,10 +2738,11 @@
 
 1284702523 d:\programming\tsuengine\src\cmainmenu.h
 
-1286349257 source:d:\programming\tsuengine\src\gui\cmainmenu.cpp
+1287139054 source:d:\programming\tsuengine\src\gui\cmainmenu.cpp
 	"CMainMenu.h"
 	"CCenteredWindow.h"
 	"CCheckBox.h"
+	"CTextField.h"
 
 1285241822 d:\programming\tsuengine\src\gui\cmainmenu.h
 	"CGuiPanel.h"
@@ -2862,6 +2866,10 @@
 	"CTextField.h"
 
 1286573874 d:\fast4shoot\programming\tsuengine\src\gui\ctextfield.h
+	"CGuiPanel.h"
+	"CLabel.h"
+
+1287142993 d:\programming\tsuengine\src\gui\ctextfield.h
 	"CGuiPanel.h"
 	"CLabel.h"
 
