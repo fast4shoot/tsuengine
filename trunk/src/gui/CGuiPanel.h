@@ -24,29 +24,29 @@ class CGuiPanel{
     void            setY(double y);
     void            setPosition(double x, double y);
     void            setPosition(vec2d& newPosition);
-    double          getX();
-    double          getY();
-    vec2d           getPosition();
+    double          getX() const;
+    double          getY() const;
+    vec2d           getPosition() const;
 
 
     void            setW(double w);
     void            setH(double h);
     void            setSize(double w, double h);
     void            setSize(vec2d& newSize);
-    double          getW();
-    double          getH();
-    vec2d           getSize();
+    double          getW() const;
+    double          getH() const;
+    vec2d           getSize() const;
     virtual bool    isPointInside(const vec2d& point);
 
     void            setVisible(bool vis);
-    bool            getVisible();
-    bool            isVisible();
+    bool            getVisible() const;
+    bool            isVisible() const;
     void            setOpacity(float opacity);
-    float           getOpacity();
+    float           getOpacity() const;
     void            setParent(CGuiPanel* newParent);
-    CGuiPanel*      getParent();
+    CGuiPanel*      getParent() const;
     void            setParentIndex(int newParentIndex);
-    int             getParentIndex();
+    int             getParentIndex() const;
     void            addChild(CGuiPanel* newChild);
     void            removeChild(CGuiPanel* child);
     void            removeChild(int childIndex);
@@ -63,20 +63,20 @@ class CGuiPanel{
     virtual void    mouseMove(const vec2d& newPosition,const bool mouseOver);
     virtual void    onMouseOver();
     virtual void    onMouseOut();
-    bool            getMouseOver();
-    bool            getMouseDown();
+    bool            getMouseOver() const;
+    bool            getMouseDown() const;
 
     //keyboard function
     virtual void    onKeyboard(const std::wstring& string){};
     void            requestKeyboardFocus();
-    bool            getAllowKeyboardInput();
+    bool            getAllowKeyboardInput() const;
 
     void            addActionListener(CActionListener* al);
 
     void            setBgColor(rgba newBg);
-    rgba            getBgColor();
+    rgba            getBgColor() const;
     void            setFgColor(rgba newFg);
-    rgba            getFgColor();
+    rgba            getFgColor() const;
 
     //draw functions
     void            setDrawColor(const rgba& color);
@@ -120,15 +120,15 @@ inline void CGuiPanel::setPosition(vec2d& newPosition){
   position=newPosition;
 }
 
-inline vec2d CGuiPanel::getPosition(){
+inline vec2d CGuiPanel::getPosition() const{
   return position;
 }
 
-inline double CGuiPanel::getX(){
+inline double CGuiPanel::getX() const{
   return position.x;
 }
 
-inline double CGuiPanel::getY(){
+inline double CGuiPanel::getY() const{
   return position.y;
 }
 
@@ -148,15 +148,15 @@ inline void CGuiPanel::setSize(vec2d& newSize){
   size=newSize;
 }
 
-inline double CGuiPanel::getW(){
+inline double CGuiPanel::getW() const{
   return size.x;
 }
 
-inline double CGuiPanel::getH(){
+inline double CGuiPanel::getH() const{
   return size.y;
 }
 
-inline vec2d CGuiPanel::getSize(){
+inline vec2d CGuiPanel::getSize() const{
   return size;
 }
 
@@ -168,7 +168,7 @@ inline void CGuiPanel::setVisible(bool vis){
   visible=vis;
 }
 
-inline bool CGuiPanel::getVisible(){
+inline bool CGuiPanel::getVisible() const{
   return visible;
 }
 
@@ -176,7 +176,7 @@ inline void CGuiPanel::setOpacity(float opacity){
   this->opacity=opacity;
 }
 
-inline float CGuiPanel::getOpacity(){
+inline float CGuiPanel::getOpacity() const{
   return opacity;
 }
 
@@ -189,19 +189,19 @@ inline void CGuiPanel::setParentIndex(int newParentIndex){
   parentIndex=newParentIndex;
 }
 
-inline CGuiPanel* CGuiPanel::getParent(){
+inline CGuiPanel* CGuiPanel::getParent() const{
   return parent;
 }
 
-inline bool CGuiPanel::getMouseOver(){
+inline bool CGuiPanel::getMouseOver() const{
   return mouseOver;
 }
 
-inline bool CGuiPanel::getMouseDown(){
+inline bool CGuiPanel::getMouseDown() const{
   return mouseDown;
 }
 
-inline int CGuiPanel::getParentIndex(){
+inline int CGuiPanel::getParentIndex() const{
   return parentIndex;
 }
 
@@ -209,7 +209,7 @@ inline void CGuiPanel::requestKeyboardFocus(){
   engine->gui->setKeyboardReceiver(this);
 }
 
-inline bool CGuiPanel::getAllowKeyboardInput(){
+inline bool CGuiPanel::getAllowKeyboardInput() const{
   return allowKeyboardInput;
 }
 
@@ -217,7 +217,7 @@ inline void CGuiPanel::setBgColor(rgba newBg){
   bgColor=newBg;
 }
 
-inline rgba CGuiPanel::getBgColor(){
+inline rgba CGuiPanel::getBgColor() const{
   return bgColor;
 }
 
@@ -225,7 +225,7 @@ inline void CGuiPanel::setFgColor(rgba newFg){
   fgColor=newFg;
 }
 
-inline rgba CGuiPanel::getFgColor(){
+inline rgba CGuiPanel::getFgColor() const{
   return fgColor;
 }
 

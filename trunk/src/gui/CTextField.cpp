@@ -16,8 +16,8 @@ void CTextField::onKeyboard(const std::wstring& string){
 */
 
 void CTextField::onKeyboard(const std::wstring& string){
-  std::wstring temp(string);
-  for(std::wstring::iterator it=temp.begin(); it!=temp.end(); ++it){
+
+  for(std::wstring::const_iterator it=string.begin(); it!=string.end(); ++it){
     switch(*it){
       case 0x0A: //linefeed
       case 0x1B: //escape
