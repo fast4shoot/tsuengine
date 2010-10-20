@@ -32,7 +32,7 @@ void CGuiPanel::init(){
   glossColor.set(1., 1., 1., .1);
 }
 
-bool CGuiPanel::isVisible(){
+bool CGuiPanel::isVisible()  const{
   if(parent){
     return getVisible() && parent->isVisible();
   }else{

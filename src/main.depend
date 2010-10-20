@@ -1480,7 +1480,7 @@
 	"WhiteBox.h"
 	"utils/stringUtils.h"
 
-1286576780 d:\fast4shoot\programming\tsuengine\src\cbaseengine.h
+1287161375 d:\fast4shoot\programming\tsuengine\src\cbaseengine.h
 	<string>
 	<gl/gl.h>
 	<ctime>
@@ -1501,9 +1501,11 @@
 	"vec2d.h"
 	"vec3d.h"
 
-1269183566 d:\fast4shoot\programming\tsuengine\src\vec2d.h
+1287166487 d:\fast4shoot\programming\tsuengine\src\vec2d.h
+	<cmath>
 
-1269183566 d:\fast4shoot\programming\tsuengine\src\vec3d.h
+1287166098 d:\fast4shoot\programming\tsuengine\src\vec3d.h
+	<cmath>
 
 1269183566 d:\fast4shoot\programming\tsuengine\src\const.h
 
@@ -1529,7 +1531,7 @@
 1286575903 d:\fast4shoot\programming\tsuengine\src\cguimgr.h
 	"macros.h"
 
-1287086260 d:\fast4shoot\programming\tsuengine\src\gui\cguipanel.h
+1287161443 d:\fast4shoot\programming\tsuengine\src\gui\cguipanel.h
 	<vector>
 	"datatypes.h"
 	"CGuiMgr.h"
@@ -1629,7 +1631,7 @@
 	"CActionListenerPanel.h"
 	"macros.h"
 
-1287086183 source:d:\fast4shoot\programming\tsuengine\src\gui\cguipanel.cpp
+1287161467 source:d:\fast4shoot\programming\tsuengine\src\gui\cguipanel.cpp
 	"CGuiPanel.h"
 	"macros.h"
 	<gl/gl.h>
@@ -1687,15 +1689,13 @@
 	<cstdarg>
 	<cstdio>
 
-1285258296 source:d:\fast4shoot\programming\tsuengine\src\vec2d.cpp
+1287166557 source:d:\fast4shoot\programming\tsuengine\src\vec2d.cpp
 	"vec2d.h"
-	<cmath>
 	"macros.h"
 	<cstdio>
 
-1285258296 source:d:\fast4shoot\programming\tsuengine\src\vec3d.cpp
+1287165749 source:d:\fast4shoot\programming\tsuengine\src\vec3d.cpp
 	"vec3d.h"
-	<cmath>
 	"macros.h"
 
 1287139054 source:d:\programming\tsuengine\src\gui\clabel.cpp
@@ -2862,7 +2862,7 @@
 	"CCheckBox.h"
 	"CTextField.h"
 
-1287085520 source:d:\fast4shoot\programming\tsuengine\src\gui\ctextfield.cpp
+1287160733 source:d:\fast4shoot\programming\tsuengine\src\gui\ctextfield.cpp
 	"CTextField.h"
 
 1286573874 d:\fast4shoot\programming\tsuengine\src\gui\ctextfield.h

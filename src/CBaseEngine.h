@@ -49,14 +49,14 @@ class CBaseEngine{
     void            setDrawColor(float r, float g, float b, float a);
     void            setDrawColor(rgba col);
     void            drawModel(int wmId);
-    double          getTime();
-    double          getLastTime();
-    double          getTimeDelta();
-    double          getRealTime();
-    double          getLastRealTime();
-    double          getRealTimeDelta();
-    unsigned long long int getFrameCount();
-    double          getFPS();
+    double          getTime() const;
+    double          getLastTime() const;
+    double          getTimeDelta() const;
+    double          getRealTime() const;
+    double          getLastRealTime() const;
+    double          getRealTimeDelta() const;
+    unsigned long long int getFrameCount() const;
+    double          getFPS() const;
     void            createEntity(std::string name);
 
 
@@ -73,35 +73,35 @@ class CBaseEngine{
 
 };
 
-inline double CBaseEngine::getTime(){
+inline double CBaseEngine::getTime() const{
   return time;
 }
 
-inline double CBaseEngine::getLastTime(){
+inline double CBaseEngine::getLastTime() const{
   return lastTime;
 }
 
-inline double CBaseEngine::getTimeDelta(){
+inline double CBaseEngine::getTimeDelta() const{
   return timeDelta;
 }
 
-inline double CBaseEngine::getRealTime(){
+inline double CBaseEngine::getRealTime() const{
   return realTime;
 }
 
-inline double CBaseEngine::getLastRealTime(){
+inline double CBaseEngine::getLastRealTime() const{
   return lastRealTime;
 }
 
-inline double CBaseEngine::getRealTimeDelta(){
+inline double CBaseEngine::getRealTimeDelta() const{
   return realTimeDelta;
 }
 
-inline unsigned long long int CBaseEngine::getFrameCount(){
+inline unsigned long long int CBaseEngine::getFrameCount() const{
   return frameCount;
 }
 
-inline double CBaseEngine::getFPS(){
+inline double CBaseEngine::getFPS() const{
   return fps;
 }
 
