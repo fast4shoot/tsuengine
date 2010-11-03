@@ -82,6 +82,8 @@
 		<Unit filename="gui\CLabel.h" />
 		<Unit filename="gui\CMainMenu.cpp" />
 		<Unit filename="gui\CMainMenu.h" />
+		<Unit filename="gui\CText.cpp" />
+		<Unit filename="gui\CText.h" />
 		<Unit filename="gui\CTextField.cpp" />
 		<Unit filename="gui\CTextField.h" />
 		<Unit filename="gui\CWindow.cpp" />
@@ -181,6 +183,8 @@
 		<Unit filename="vec2d.h" />
 		<Unit filename="vec3d.cpp" />
 		<Unit filename="vec3d.h" />
+		<Unit filename="vecBase.h" />
+		<Unit filename="vecOpBase.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

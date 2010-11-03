@@ -15,8 +15,8 @@ typedef map<wstring, Font*> FontList;
 
 class CFontMgr{
   public:
-    Font* getFont(const wstring& name);
-    Font* loadFont(const wstring& name, const double size);
+    Font* getFont(const wstring& name, const double size);
+    FTGLTextureFont* loadFont(const wstring& name, const double size);
   private:
     FTGLTextureFont* createFTGLFont(const wstring& name);
     FontList _fonts;

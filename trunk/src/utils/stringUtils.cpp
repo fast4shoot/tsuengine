@@ -1,56 +1,56 @@
 #include "stringUtils.h"
 
-WStr swprintf(const wchar_t* format, ...){
+WStr swformat(const wchar_t* format, ...){
  va_list args;
  va_start(args, format);
- WStr result = vswprintf(format, args);
+ WStr result = vswformat(format, args);
  va_end(args);
  return result;
 }
 
-WStr vswprintf(const wchar_t* format, va_list args){
+WStr vswformat(const wchar_t* format, va_list args){
  const int bufferSize = 16384;
  wchar_t buffer[bufferSize];
  vswprintf(buffer, /*/bufferSize,*/ format, args);
  return WStr(buffer);
 }
 
-WStr swprintf(const WStr& format, ...){
+WStr swformat(const WStr& format, ...){
  va_list args;
  va_start(args, format);
- WStr result = vswprintf(format, args);
+ WStr result = vswformat(format, args);
  va_end(args);
  return result;
 }
 
-WStr vswprintf(const WStr& format, va_list args){
- return vswprintf(format.c_str(), args);
+WStr vswformat(const WStr& format, va_list args){
+ return vswformat(format.c_str(), args);
 }
 
-SStr sprintf(const char* format, ...){
+SStr sformat(const char* format, ...){
  va_list args;
  va_start(args, format);
- SStr result = vsprintf(format, args);
+ SStr result = vsformat(format, args);
  va_end(args);
  return result;
 }
 
-SStr vsprintf(const char* format, va_list args){
+SStr vsformat(const char* format, va_list args){
  const int bufferSize = 16384;
  char buffer[bufferSize];
  vsnprintf(buffer, bufferSize, format, args);
  return SStr(buffer);
 }
 
-SStr sprintf(const SStr& format, ...){
+SStr sformat(const SStr& format, ...){
  va_list args;
  va_start(args, format);
- SStr result = vsprintf(format, args);
+ SStr result = vsformat(format, args);
  va_end(args);
  return result;
 }
 
-SStr vsprintf(const SStr& format, va_list args){
- return vsprintf(format.c_str(), args);
+SStr vsformat(const SStr& format, va_list args){
+ return vsformat(format.c_str(), args);
 }
 

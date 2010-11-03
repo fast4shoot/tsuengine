@@ -8,17 +8,12 @@
 
 
 
-CLabel::CLabel(const vec2d& position, const vec2d& size, const std::wstring& text):
+CLabel::CLabel(const vec2d& position, const vec2d& size, const std::wstring& text, ALIGN align):
 CGuiPanel(position,size),
 _text(text)
 {
   allowKeyboardInput=false;
-  _font=engine->fonts->loadFont(L"ARIALUNI.TTF",getH());
-}
-
-void CLabel::init(){
-  _text=L"";
-
+  _font=engine->fonts->getFont(L"ARIALUNI.TTF",getH());
 }
 
 void CLabel::draw(){
