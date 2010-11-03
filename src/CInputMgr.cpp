@@ -110,9 +110,6 @@ void CInputMgr::update(){
   cursor.y = CLIPMINMAX(cursor.y,0,SCREENHEIGHT-1);
 
   cursorDelta = cursor - cursorOld;
-
-
-
 }
 
 bool CInputMgr::keyDown(int key){
@@ -187,10 +184,10 @@ void CInputMgr::characterInput(wchar_t character){
  }*/
 
 std::wstring CInputMgr::getString(){
-  std::wstring rofl;
+  /*std::wstring rofl;
   rofl+=L"getString(): ";
   rofl+=_inputString[iCurrBuffer];
-  //engine->log(rofl);
+  //engine->log(rofl);*/
   return _inputString[iCurrBuffer];
 }
 

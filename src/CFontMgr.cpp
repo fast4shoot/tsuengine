@@ -1,34 +1,30 @@
 #include <cmath>
-
+#include "utils/stringUtils.h"
 #include "CFontMgr.h"
 #include "Font.h"
 #include "macros.h"
-Font* CFontMgr::getFont(const wstring& name){
-  FontList::iterator it=_fonts.find(name);
+
+Font* CFontMgr::getFont(const wstring& name, const double size){
+  int sizeGroup=ceil(size/10.);
+  wstring nameFinal=swformat(L"%s%d",name.c_str(),sizeGroup);
+
+  FontList::iterator it=_fonts.find(nameFinal);
   if(it!=_fonts.end()){
-    return it->second;
+    if(size > (it->second->_size)){
+      delete it->second->_font;
+      it->second->_font=loadFont(name,size);
+    }else{
+      return it->second;
+    }
   }else{
-    return (_fonts[name]=new Font(this, name));
+    return (_fonts[nameFinal]=new Font(loadFont(name,size), name, size));
   }
 }
 
-Font* CFontMgr::loadFont(const wstring& name,double size){
-  size=ceil(size);
-  FontList::iterator it=_fonts.find(name);
-  Font* font;
-  if(it!=_fonts.end()){
-    font=it->second;
-  }else{
-    font=_fonts[name]=new Font(this, name);
-  }
-
-  if(font->_size==-1){
-    font->_font=createFTGLFont(name);
-    font->setSize(size);
-  }else if(font->_size<size){
-    font->setSize(size);
-  }
-
+FTGLTextureFont* CFontMgr::loadFont(const wstring& name,double size){
+  FTGLTextureFont* font;
+  font=createFTGLFont(name);
+  font->FaceSize((int)ceil(size));
   return font;
 }
 

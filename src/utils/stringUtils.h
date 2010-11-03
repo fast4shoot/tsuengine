@@ -5,19 +5,17 @@
 #include <cstdarg>
 #include <cstdio>
 
-using namespace std;
-
 typedef std::string SStr;
 typedef std::wstring WStr;
 
-WStr swprintf(const wchar_t* format, ...);
-WStr vswprintf(const wchar_t* format, va_list args);
-WStr swprintf(const WStr& format, ...);
-WStr vswprintf(const WStr& format, va_list args);
+WStr swformat(const wchar_t* format, ...);
+WStr vswformat(const wchar_t* format, va_list args);
+WStr swformat(const WStr& format, ...);
+WStr vswformat(const WStr& format, va_list args);
 
-SStr sprintf(const char* format, ...);
-SStr vsprintf(const char* format, va_list args);
-SStr sprintf(const SStr& format, ...);
-SStr vsprintf(const SStr& format, va_list args);
+SStr sformat(const char* format, ...);
+SStr vsformat(const char* format, va_list args);
+SStr sformat(const SStr& format, ...);
+SStr vsformat(const SStr& format, va_list args);
 
 #endif

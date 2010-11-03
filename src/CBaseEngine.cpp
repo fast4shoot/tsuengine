@@ -11,7 +11,6 @@
 #include "utils.h"
 #include "const.h"
 #include "Font.h"
-#include "WhiteBox.h"
 #include "utils/stringUtils.h"
 
 CBaseEngine* engine;
@@ -27,16 +26,12 @@ void CBaseEngine::init(){
   input = new CInputMgr();
   input->init();
   fonts=new CFontMgr();
-  systemFont=fonts->loadFont(L"ARIALUNI.TTF",14.);
-  fonts->loadFont(L"ARIALUNI.TTF",55.);
+  systemFont=fonts->getFont(L"ARIALUNI.TTF",14.);
+  fonts->getFont(L"ARIALUNI.TTF",55.);
   gui = new CGuiMgr();
   gui->init();
 
-
-
-
-
-
+  vec2d* randomvector=new vec2d();
 }
 
 /*int CBaseTransmission() {
@@ -137,7 +132,7 @@ void CBaseEngine::drawScene(){
   gui->drawElements();
 
   glColor3f(1.0f, 1.0f, 1.0f);
-  systemFont->render(14.,swprintf(L"realTime: %.1lf | FPS: %.1lf | Frame: %llu",getRealTime(),fps,getFrameCount()));
+  systemFont->render(14.,swformat(L"realTime: %.1lf | FPS: %.1lf | Frame: %llu",getRealTime(),fps,getFrameCount()));
   glPushMatrix();
   glTranslatef(0.,16., 0.);
   systemFont->render(14.,_log);

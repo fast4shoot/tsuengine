@@ -11,19 +11,24 @@
 
 class CLabel: public CGuiPanel{
   public:
-                    CLabel(const vec2d& position, const vec2d& size, const std::wstring& text=L"");
+    enum ALIGN{
+      ALIGN_LEFT=0,
+      ALIGN_CENTER,
+      ALIGN_RIGHT
+    };
+
+                    CLabel(const vec2d& position, const vec2d& size, const std::wstring& text=L"", ALIGN align=ALIGN_LEFT);
     void            setText(const std::wstring& text);
     std::wstring    getText();
 
     virtual void    draw();
     virtual void    updateFont();
 
-
   protected:
     std::wstring    _text;
     float           _height;
     Font*           _font;
-    void            init();
+    ALIGN           _align;
 
 };
 

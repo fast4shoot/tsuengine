@@ -41,6 +41,7 @@ CMainMenu::CMainMenu():
   addChild(new CCheckBox(vec2d(20,190), vec2d(160,16), L"Další test"));
   addChild(new CCheckBox(vec2d(20,210), vec2d(160,16), L"Jinej test"));
   addChild(new CCheckBox(vec2d(20,230), vec2d(160,16), L"Úplně jinej test"));
+  addChild(new CCheckBox(vec2d(20,250), vec2d(160,16), L"A ještě něco"));
 }
 
 void CMainMenu::draw(){

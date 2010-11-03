@@ -10,10 +10,8 @@
 #include "CBaseEntity.h"
 #include "CEntMgr.h"
 #include "CInputMgr.h"
-//#include "CGuiMgr.h"
+#include "CGuiMgr.h"
 #include "CFontMgr.h"
-
-class CGuiMgr;
 
 class CBaseEngine{
   private:

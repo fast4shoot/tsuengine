@@ -23,7 +23,7 @@ class CGuiPanel{
     void            setX(double x);
     void            setY(double y);
     void            setPosition(double x, double y);
-    void            setPosition(vec2d& newPosition);
+    void            setPosition(const vec2d& newPosition);
     double          getX() const;
     double          getY() const;
     vec2d           getPosition() const;
@@ -32,7 +32,7 @@ class CGuiPanel{
     void            setW(double w);
     void            setH(double h);
     void            setSize(double w, double h);
-    void            setSize(vec2d& newSize);
+    void            setSize(const vec2d& newSize);
     double          getW() const;
     double          getH() const;
     vec2d           getSize() const;
@@ -116,7 +116,7 @@ inline void CGuiPanel::setPosition(double x, double y){
   position.set(x,y);
 }
 
-inline void CGuiPanel::setPosition(vec2d& newPosition){
+inline void CGuiPanel::setPosition(const vec2d& newPosition){
   position=newPosition;
 }
 
@@ -144,7 +144,7 @@ inline void CGuiPanel::setSize(double w, double h){
   size.set(w,h);
 }
 
-inline void CGuiPanel::setSize(vec2d& newSize){
+inline void CGuiPanel::setSize(const vec2d& newSize){
   size=newSize;
 }
 
