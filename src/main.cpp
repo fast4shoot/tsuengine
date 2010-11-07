@@ -64,7 +64,7 @@ int WINAPI WinMain (HINSTANCE hInstance,
   hWnd = CreateWindow (
     L"TSUEWindow", L"TSU Engine window",
     WS_MINIMIZEBOX | WS_CAPTION | WS_POPUPWINDOW | WS_VISIBLE,
-    0, 0, SCREENWIDTH, SCREENHEIGHT,
+    0, 0, SCREENWIDTH+6, SCREENHEIGHT+27,
     NULL, NULL, hInstance, NULL);
 
   appWindow=hWnd;

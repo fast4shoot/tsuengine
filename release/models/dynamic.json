@@ -1,0 +1,46 @@
+{
+  "type": "dynamic",
+  "joints:" [
+    {
+      "name": "base",
+      "position": { "x": 0, "y": 0, "z": 0 }
+    }
+  ],
+  "vertices": [
+    { 
+      "position": { "x": 10, "y": -10, "z": 0 },
+      "texCoord": { "u": 0, "v": 0 },
+      "joint": 0
+    },
+    { 
+      "position": { "x": 10, "y": 10, "z": 0 },
+      "texCoord": { "u": 1, "v": 0 },
+      "joint": 0
+    },
+    { 
+      "position": { "x": -10, "y": 10, "z": 0 },
+      "texCoord": { "u": 1, "v": 1 },
+      "joint": 0 
+    },
+    { 
+      "position": { "x": -10, "y": -10, "z": 0},
+      "texCoord": { "u": 0, "v": 1 },
+      "joint": 0 
+    }
+  ],
+  "planes": [
+    { "x": 0, "y": 0, "z": 1, "d": 0 }
+  ],
+  "triangles": [
+    {
+      "plane": 0,
+      "material": "test.png",
+      "vertices": [0,1,2]
+    },
+    {
+      "plane": 0,
+      "material": "test.png",
+      "vertices": [2,3,0]
+    }
+  ]
+}

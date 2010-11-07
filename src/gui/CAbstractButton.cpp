@@ -2,7 +2,10 @@
 
 CAbstractButton::CAbstractButton(const vec2d& pos, const vec2d& size):
 CGuiPanel(pos,size)
-{}
+{
+  _pressed=false;
+  _active=false;
+}
 
 void CAbstractButton::onMouseDown(const vec2d& position,const  MouseButton button){
   if(button==LMB)

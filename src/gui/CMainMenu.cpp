@@ -22,7 +22,7 @@ CMainMenu::CMainMenu():
   temp->addActionListener(new CActionListener(this,1));
   addChild(temp);
 
-  temp=new CButton(vec2d(20,135),vec2d(160,30),L"NaŠWESĚYXstavení");
+  temp=new CButton(vec2d(20,135),vec2d(160,30),L"Nastavení");
   temp->addActionListener(new CActionListener(this,2));
   addChild(temp);
 

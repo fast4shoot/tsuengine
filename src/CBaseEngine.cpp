@@ -30,8 +30,6 @@ void CBaseEngine::init(){
   fonts->getFont(L"ARIALUNI.TTF",55.);
   gui = new CGuiMgr();
   gui->init();
-
-  vec2d* randomvector=new vec2d();
 }
 
 /*int CBaseTransmission() {
@@ -120,8 +118,32 @@ void CBaseEngine::drawScene(){
   initWorldView();
 
   gluLookAt(0,0,10,100,0,0,0,0,1);
-  glTranslatef(50.,0.,0.);
 
+  glTranslatef(50.,0.,0.);
+  glRotatef(getTime()*90,0,0,1);
+  glColor4f(1.,1.,1.,1.);
+
+  glBegin(GL_QUADS);
+    glNormal3i(0,0,1);
+    glVertex3f(0.,-10.,0.);
+    glVertex3f(-20.,-10.,0.);
+    glVertex3f(-20.,10.,0.);
+    glVertex3f(0.,10.,0.);
+
+    glNormal3i(-1,0,0);
+    glVertex3f(0.,-10.,0.);
+    glVertex3f(0.,-10.,10.);
+    glVertex3f(0.,10.,10.);
+    glVertex3f(0.,10.,0.);
+
+    glNormal3i(0,-1,0);
+    glVertex3f(0.,-10.,0.);
+    glVertex3f(0.,-10.,10.);
+    glVertex3f(-20.,-10.,10.);
+    glVertex3f(-20.,-10.,0.);
+  glEnd();
+  glDisable(GL_LIGHT0);
+  glDisable(GL_LIGHTING);
 
   /*
    * GUI drawing

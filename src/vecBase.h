@@ -1,6 +1,7 @@
 #ifndef VECBASE_H
 #define VECBASE_H
 
+#include <cmath>
 #include "macros.h"
 
 template<class T, int N, class Derived>
@@ -22,6 +23,8 @@ class vecBase
     const Derived operator-(const Derived& rhs) const;
     const Derived operator*(const T& rhs) const;
     const Derived operator/(const T& rhs) const;
+
+    Derived floored() const;
   protected:
     T data[N];
   private:
@@ -103,6 +106,15 @@ inline const Derived vecBase<T,N,Derived>::operator*(const T& rhs) const{
 template<class T, int N, class Derived>
 inline const Derived vecBase<T,N,Derived>::operator/(const T& rhs) const{
   return (Derived(dynamic_cast<const Derived&>(*this)) /= rhs);
+}
+
+template<class T, int N, class Derived>
+inline Derived vecBase<T,N,Derived>::floored() const{
+  Derived ret;
+  for(int i=0;i<N;i++){
+    ret.data[i]=floor(data[i]);
+  }
+  return ret;
 }
 
 #endif // VECBASE_H

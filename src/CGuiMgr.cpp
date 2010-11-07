@@ -43,7 +43,6 @@ void CGuiMgr::update(){
 }
 
 void CGuiMgr::drawElements(){
-  MSGBOX(L"DRAW");
   glDisable(GL_TEXTURE_2D);
   _basePanel->draw();
   _basePanel->drawChildren();

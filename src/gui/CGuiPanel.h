@@ -43,9 +43,9 @@ class CGuiPanel{
     bool            isVisible() const;
     void            setOpacity(float opacity);
     float           getOpacity() const;
-    void            setParent(CGuiPanel* newParent);
+
     CGuiPanel*      getParent() const;
-    void            setParentIndex(int newParentIndex);
+
     int             getParentIndex() const;
     void            addChild(CGuiPanel* newChild);
     void            removeChild(CGuiPanel* child);
@@ -70,9 +70,7 @@ class CGuiPanel{
     virtual void    onKeyboard(const std::wstring& string){};
     void            requestKeyboardFocus();
     bool            getAllowKeyboardInput() const;
-
     void            addActionListener(CActionListener* al);
-
     void            setBgColor(rgba newBg);
     rgba            getBgColor() const;
     void            setFgColor(rgba newFg);
@@ -86,6 +84,10 @@ class CGuiPanel{
     void            drawFrame(float x, float y, float w, float h);
 
   protected:
+    void            setParent(CGuiPanel* newParent);
+    void            setParentIndex(int newParentIndex);
+    void            fireListeners();
+
     vec2d           position;
     vec2d           size;
     bool            visible;
@@ -101,7 +103,7 @@ class CGuiPanel{
     rgba            fgColor;
     rgba            bgColor;
     rgba            glossColor;
-    void            fireListeners();
+
 };
 
 inline void CGuiPanel::setX(double x){
