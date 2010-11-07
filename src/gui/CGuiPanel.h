@@ -15,7 +15,7 @@ class CGuiPanel{
   public:
     ChildrenList    children;
                     CGuiPanel(const vec2d& pos, const vec2d& size);
-                    ~CGuiPanel();
+             ~CGuiPanel();
     void            init();
     virtual void    draw();
     virtual void    drawChildren();
@@ -56,13 +56,13 @@ class CGuiPanel{
 
     //mouse functions
     virtual bool    handleMouseClick(const vec2d& position,const  MouseButton button,const bool up);
-    virtual void    onMouseDown(const vec2d& position,const  MouseButton button);
-    virtual void    onMouseUp(const vec2d& position, const MouseButton button);
-    virtual void    onMouseClick(const vec2d& position, const MouseButton button);
+    virtual void    onMouseDown(const vec2d& position,const  MouseButton button){};
+    virtual void    onMouseUp(const vec2d& position, const MouseButton button){};
+    virtual void    onMouseClick(const vec2d& position, const MouseButton button){};
     virtual void    handleMouseMove(const vec2d& newPosition,const  bool mouseOver);
-    virtual void    mouseMove(const vec2d& newPosition,const bool mouseOver);
-    virtual void    onMouseOver();
-    virtual void    onMouseOut();
+    virtual void    mouseMove(const vec2d& newPosition,const bool mouseOver){};
+    virtual void    onMouseOver(){};
+    virtual void    onMouseOut(){};
     bool            getMouseOver() const;
     bool            getMouseDown() const;
 
@@ -78,7 +78,7 @@ class CGuiPanel{
     void            setFgColor(rgba newFg);
     rgba            getFgColor() const;
 
-    //draw functions
+    //draw functionsng
     void            setDrawColor(const rgba& color);
     void            drawQuad(float x, float y, float w, float h);
     void            drawVerticalGradient(float x, float y, float w, float h, const rgba& colOne, const rgba& colTwo);

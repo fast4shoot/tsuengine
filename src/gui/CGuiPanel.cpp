@@ -5,9 +5,8 @@
 #include "CActionListener.h"
 
 CGuiPanel::~CGuiPanel(){
-  int size=children.size();
-  for (int i=0; i<size; i++){
-    removeChild(i);
+  for (ChildrenList::iterator it = children.begin(); it != children.end(); ++it){
+     delete *it;
   }
 }
 
@@ -65,7 +64,6 @@ void CGuiPanel::draw(){
 }
 
 void CGuiPanel::drawChildren(){
-  int size=children.size();
   for (ChildrenList::iterator i = children.begin(); i != children.end(); ++i){
     CGuiPanel* child=*i;
     if(child->getVisible()){
@@ -133,15 +131,6 @@ bool CGuiPanel::handleMouseClick(const vec2d& position, const MouseButton button
   return allowMouseClickPropagation;
 }
 
-void CGuiPanel::onMouseDown(const vec2d& position, const MouseButton button){
-}
-
-void CGuiPanel::onMouseUp(const vec2d& position, const MouseButton button){
-}
-
-void CGuiPanel::onMouseClick(const vec2d& position, const MouseButton button){
-}
-
 void CGuiPanel::handleMouseMove(const vec2d& newPosition, const bool mouseOver){
   vec2d positionInChild;
   bool itemFound=false;
@@ -170,15 +159,6 @@ void CGuiPanel::handleMouseMove(const vec2d& newPosition, const bool mouseOver){
   if(newPosition.x!=0. && newPosition.y!=0.){
     mouseMove(newPosition,mouseOver);
   }
-}
-
-void CGuiPanel::mouseMove(const vec2d& positionDelta,const bool mouseOver){
-}
-
-void CGuiPanel::onMouseOver(){
-}
-
-void CGuiPanel::onMouseOut(){
 }
 
 void CGuiPanel::addActionListener(CActionListener* al){

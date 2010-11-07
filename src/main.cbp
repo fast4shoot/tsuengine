@@ -74,6 +74,8 @@
 		<Unit filename="gui\CCenteredWindow.h" />
 		<Unit filename="gui\CCheckBox.cpp" />
 		<Unit filename="gui\CCheckBox.h" />
+		<Unit filename="gui\CConsole.cpp" />
+		<Unit filename="gui\CConsole.h" />
 		<Unit filename="gui\CDraggable.cpp" />
 		<Unit filename="gui\CDraggable.h" />
 		<Unit filename="gui\CGuiPanel.cpp" />
@@ -88,8 +90,6 @@
 		<Unit filename="gui\CTextField.h" />
 		<Unit filename="gui\CWindow.cpp" />
 		<Unit filename="gui\CWindow.h" />
-		<Unit filename="gui\TestPanel.cpp" />
-		<Unit filename="gui\TestPanel.h" />
 		<Unit filename="libs\FTGL\FTBuffer.cpp" />
 		<Unit filename="libs\FTGL\FTCharToGlyphIndexMap.h" />
 		<Unit filename="libs\FTGL\FTCharmap.cpp" />

@@ -1,11 +1,9 @@
 #include "CGuiMgr.h"
 #include "CGuiPanel.h"
-#include "TestPanel.h"
 #include "CMainMenu.h"
 #include "const.h"
 #include "macros.h"
 #include "CBaseEngine.h"
-
 #include "CCenteredWindow.h"
 
 CGuiMgr::CGuiMgr(){}
@@ -15,6 +13,7 @@ void CGuiMgr::init(){
 
   //basePanel->addChild(new TestPanel(vec2d(170., 50.), vec2d(SCREENWIDTH-180, 330.)));
   _basePanel->addChild(new CMainMenu());
+
   //basePanel->addChild(new CCenteredWindow(vec2d(300, 250), L"Okno"));
   /*
   basePanel->addChild(new CButton(vec2d(10.,50.), vec2d(150.,30.), std::wstring(L"Button 1!")));
@@ -44,6 +43,7 @@ void CGuiMgr::update(){
 }
 
 void CGuiMgr::drawElements(){
+  MSGBOX(L"DRAW");
   glDisable(GL_TEXTURE_2D);
   _basePanel->draw();
   _basePanel->drawChildren();
