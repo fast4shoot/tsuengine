@@ -15,7 +15,7 @@ class CGuiPanel{
   public:
     ChildrenList    children;
                     CGuiPanel(const vec2d& pos, const vec2d& size);
-             ~CGuiPanel();
+    virtual         ~CGuiPanel();
     void            init();
     virtual void    draw();
     virtual void    drawChildren();

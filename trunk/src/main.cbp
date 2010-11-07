@@ -53,6 +53,8 @@
 		<Unit filename="CParamMgr.h" />
 		<Unit filename="Font.cpp" />
 		<Unit filename="Font.h" />
+		<Unit filename="FontBase.cpp" />
+		<Unit filename="FontBase.h" />
 		<Unit filename="const.h" />
 		<Unit filename="datatypes.cpp" />
 		<Unit filename="datatypes.h" />

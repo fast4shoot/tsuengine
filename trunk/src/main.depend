@@ -1462,7 +1462,7 @@
 	<typeinfo>
 	"CActionListener.h"
 
-1289150672 source:d:\fast4shoot\programming\tsuengine\src\cbaseengine.cpp
+1289168988 source:d:\fast4shoot\programming\tsuengine\src\cbaseengine.cpp
 	<cmath>
 	<windows.h>
 	<gl/gl.h>
@@ -1530,7 +1530,7 @@
 1286572303 d:\fast4shoot\programming\tsuengine\src\cguimgr.h
 	"macros.h"
 
-1289148841 d:\fast4shoot\programming\tsuengine\src\gui\cguipanel.h
+1289165818 d:\fast4shoot\programming\tsuengine\src\gui\cguipanel.h
 	<vector>
 	"datatypes.h"
 	"CGuiMgr.h"
@@ -1660,7 +1660,7 @@
 	<cstdlib>
 	"../macros.h"
 
-1286563720 source:d:\fast4shoot\programming\tsuengine\src\main.cpp
+1289151752 source:d:\fast4shoot\programming\tsuengine\src\main.cpp
 	<windows.h>
 	<gl/gl.h>
 	<iostream>
@@ -1891,7 +1891,7 @@
 	"Font.h"
 	"macros.h"
 
-1289143005 source:d:\fast4shoot\programming\tsuengine\src\gui\clabel.cpp
+1289169299 source:d:\fast4shoot\programming\tsuengine\src\gui\clabel.cpp
 	"CLabel.h"
 	<string>
 	"vec2d.h"
@@ -2294,18 +2294,19 @@
 	"FTInternals.h"
 	"FTVectoriser.h"
 
-1289143005 source:d:\fast4shoot\programming\tsuengine\src\font.cpp
+1289169220 source:d:\fast4shoot\programming\tsuengine\src\font.cpp
 	"Font.h"
 	<cmath>
 	"CFontMgr.h"
 	"macros.h"
 
-1289143005 d:\fast4shoot\programming\tsuengine\src\font.h
+1289169184 d:\fast4shoot\programming\tsuengine\src\font.h
 	<string>
 	<gl/gl.h>
 	"vec2d.h"
 	"datatypes.h"
 	"FTGL/FTGL/ftgl.h"
+	"FontBase.h"
 
 1289143005 d:\fast4shoot\programming\tsuengine\src\cfontmgr.h
 	<map>
@@ -2824,7 +2825,7 @@
 1286563719 d:\fast4shoot\programming\tsuengine\src\gui\cabstractbutton.h
 	"CGuiPanel.h"
 
-1285254696 d:\fast4shoot\programming\tsuengine\src\gui\cbutton.h
+1289169208 d:\fast4shoot\programming\tsuengine\src\gui\cbutton.h
 	"CAbstractButton.h"
 	"CLabel.h"
 
@@ -2924,6 +2925,14 @@
 1289143005 source:d:\fast4shoot\programming\tsuengine\src\gui\ctext.cpp
 	"CText.h"
 
-1289143005 d:\fast4shoot\programming\tsuengine\src\gui\ctext.h
+1289166115 d:\fast4shoot\programming\tsuengine\src\gui\ctext.h
 	"CGuiPanel.h"
+
+1289169257 d:\fast4shoot\programming\tsuengine\src\fontbase.h
+	<string>
+	"datatypes.h"
+
+1289169276 source:d:\fast4shoot\programming\tsuengine\src\fontbase.cpp
+	"FontBase.h"
+	<gl/gl.h>
 
