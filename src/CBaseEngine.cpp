@@ -154,10 +154,10 @@ void CBaseEngine::drawScene(){
   gui->drawElements();
 
   glColor3f(1.0f, 1.0f, 1.0f);
-  systemFont->render(14.,swformat(L"realTime: %.1lf | FPS: %.1lf | Frame: %llu",getRealTime(),fps,getFrameCount()));
+  systemFont->render(swformat(L"realTime: %.1lf | FPS: %.1lf | Frame: %llu",getRealTime(),fps,getFrameCount()),14.);
   glPushMatrix();
   glTranslatef(0.,16., 0.);
-  systemFont->render(14.,_log);
+  systemFont->render(_log,14.);
   glPopMatrix();
 
   glPushMatrix();

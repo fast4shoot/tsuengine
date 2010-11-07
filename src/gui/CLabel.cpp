@@ -18,7 +18,7 @@ _text(text)
 
 void CLabel::draw(){
   setDrawColor(fgColor);
-  _font->render(getH(),_text,fgColor);
+  _font->render(_text,getH());
 }
 
 void CLabel::updateFont(){
