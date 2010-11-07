@@ -3,6 +3,7 @@
 #include "CCenteredWindow.h"
 #include "CCheckBox.h"
 #include "CTextField.h"
+#include "CConsole.h"
 
 CMainMenu::CMainMenu():
   CGuiPanel(vec2d(0,0),vec2d(SCREENWIDTH,SCREENHEIGHT))
@@ -21,7 +22,7 @@ CMainMenu::CMainMenu():
   temp->addActionListener(new CActionListener(this,1));
   addChild(temp);
 
-  temp=new CButton(vec2d(20,135),vec2d(160,30),L"Nastavení");
+  temp=new CButton(vec2d(20,135),vec2d(160,30),L"NaŠWESĚYXstavení");
   temp->addActionListener(new CActionListener(this,2));
   addChild(temp);
 
@@ -42,6 +43,8 @@ CMainMenu::CMainMenu():
   addChild(new CCheckBox(vec2d(20,210), vec2d(160,16), L"Jinej test"));
   addChild(new CCheckBox(vec2d(20,230), vec2d(160,16), L"Úplně jinej test"));
   addChild(new CCheckBox(vec2d(20,250), vec2d(160,16), L"A ještě něco"));
+
+  addChild(new CConsole());
 }
 
 void CMainMenu::draw(){

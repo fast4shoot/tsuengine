@@ -1299,7 +1299,7 @@
 1287135454 d:\programming\tsuengine\src\cguimgr.h
 	"macros.h"
 
-1288368899 d:\programming\tsuengine\src\gui\cguipanel.h
+1289138904 d:\programming\tsuengine\src\gui\cguipanel.h
 	<vector>
 	"datatypes.h"
 	"CGuiMgr.h"
@@ -1346,10 +1346,9 @@
 	"CBaseEntity.h"
 	"const.h"
 
-1287135454 source:d:\programming\tsuengine\src\cguimgr.cpp
+1289138528 source:d:\programming\tsuengine\src\cguimgr.cpp
 	"CGuiMgr.h"
 	"CGuiPanel.h"
-	"TestPanel.h"
 	"CMainMenu.h"
 	"const.h"
 	"macros.h"
@@ -1456,7 +1455,7 @@
 
 1288458210 source:d:\programming\tsuengine\src\vec3d.cpp
 
-1287740144 source:d:\programming\tsuengine\src\gui\cguipanel.cpp
+1289138016 source:d:\programming\tsuengine\src\gui\cguipanel.cpp
 	"CGuiPanel.h"
 	"macros.h"
 	<gl/gl.h>
@@ -1697,7 +1696,7 @@
 	"vec3d.h"
 	"macros.h"
 
-1288785061 source:d:\programming\tsuengine\src\gui\clabel.cpp
+1288785629 source:d:\programming\tsuengine\src\gui\clabel.cpp
 	"CLabel.h"
 	<string>
 	"vec2d.h"
@@ -2738,11 +2737,12 @@
 
 1284702523 d:\programming\tsuengine\src\cmainmenu.h
 
-1288424958 source:d:\programming\tsuengine\src\gui\cmainmenu.cpp
+1288947827 source:d:\programming\tsuengine\src\gui\cmainmenu.cpp
 	"CMainMenu.h"
 	"CCenteredWindow.h"
 	"CCheckBox.h"
 	"CTextField.h"
+	"CConsole.h"
 
 1285238222 d:\programming\tsuengine\src\gui\cmainmenu.h
 	"CGuiPanel.h"
@@ -2889,9 +2889,21 @@
 1288426388 source:d:\programming\tsuengine\src\vecopbase.cpp
 	"vecOpBase.h"
 
-1288601927 source:d:\programming\tsuengine\src\gui\ctext.cpp
+1289138784 source:d:\programming\tsuengine\src\gui\ctext.cpp
 	"CText.h"
 
-1288601927 d:\programming\tsuengine\src\gui\ctext.h
+1289138784 d:\programming\tsuengine\src\gui\ctext.h
 	"CGuiPanel.h"
+
+1288894973 source:d:\programming\tsuengine\src\cconsole.cpp
+	"CConsole.h"
+
+1288868027 d:\programming\tsuengine\src\cconsole.h
+	"CWindow.h"
+
+1288894973 source:d:\programming\tsuengine\src\gui\cconsole.cpp
+	"CConsole.h"
+
+1288868027 d:\programming\tsuengine\src\gui\cconsole.h
+	"CWindow.h"
 
