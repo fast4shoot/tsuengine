@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="default" />
-	<File name="CBaseEngine.cpp" open="0" top="0" tabpos="8">
-		<Cursor position="2554" topLine="97" />
+	<File name="CBaseEngine.cpp" open="1" top="0" tabpos="9">
+		<Cursor position="713" topLine="62" />
 	</File>
 	<File name="CBaseEngine.h" open="0" top="0" tabpos="5">
 		<Cursor position="286" topLine="0" />
@@ -13,8 +13,8 @@
 	<File name="CFontMgr.h" open="0" top="0" tabpos="2">
 		<Cursor position="299" topLine="0" />
 	</File>
-	<File name="CGuiMgr.cpp" open="1" top="1" tabpos="0">
-		<Cursor position="1614" topLine="33" />
+	<File name="CGuiMgr.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="1378" topLine="13" />
 	</File>
 	<File name="CGuiMgr.h" open="0" top="0" tabpos="3">
 		<Cursor position="422" topLine="0" />
@@ -52,8 +52,8 @@
 	<File name="globals.h" open="0" top="0" tabpos="9">
 		<Cursor position="62" topLine="0" />
 	</File>
-	<File name="gui\CAbstractButton.cpp" open="0" top="0" tabpos="5">
-		<Cursor position="131" topLine="0" />
+	<File name="gui\CAbstractButton.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="163" topLine="0" />
 	</File>
 	<File name="gui\CAbstractButton.h" open="0" top="0" tabpos="6">
 		<Cursor position="445" topLine="0" />
@@ -73,7 +73,7 @@
 	<File name="gui\CActionListenerPanel.h" open="0" top="0" tabpos="0">
 		<Cursor position="127" topLine="0" />
 	</File>
-	<File name="gui\CButton.cpp" open="0" top="0" tabpos="1">
+	<File name="gui\CButton.cpp" open="1" top="0" tabpos="4">
 		<Cursor position="134" topLine="0" />
 	</File>
 	<File name="gui\CButton.h" open="0" top="0" tabpos="2">
@@ -97,11 +97,11 @@
 	<File name="gui\CDraggable.h" open="0" top="0" tabpos="0">
 		<Cursor position="134" topLine="0" />
 	</File>
-	<File name="gui\CGuiPanel.cpp" open="0" top="0" tabpos="3">
-		<Cursor position="1216" topLine="37" />
+	<File name="gui\CGuiPanel.cpp" open="1" top="0" tabpos="7">
+		<Cursor position="523" topLine="0" />
 	</File>
-	<File name="gui\CGuiPanel.h" open="0" top="0" tabpos="7">
-		<Cursor position="5369" topLine="172" />
+	<File name="gui\CGuiPanel.h" open="1" top="0" tabpos="8">
+		<Cursor position="2706" topLine="48" />
 	</File>
 	<File name="gui\CLabel.cpp" open="0" top="0" tabpos="9">
 		<Cursor position="372" topLine="0" />
@@ -109,8 +109,8 @@
 	<File name="gui\CLabel.h" open="0" top="0" tabpos="3">
 		<Cursor position="408" topLine="13" />
 	</File>
-	<File name="gui\CMainMenu.cpp" open="0" top="0" tabpos="3">
-		<Cursor position="654" topLine="23" />
+	<File name="gui\CMainMenu.cpp" open="1" top="0" tabpos="2">
+		<Cursor position="645" topLine="20" />
 	</File>
 	<File name="gui\CMainMenu.h" open="0" top="0" tabpos="1">
 		<Cursor position="365" topLine="0" />
@@ -205,8 +205,8 @@
 	<File name="macros.h" open="0" top="0" tabpos="8">
 		<Cursor position="222" topLine="0" />
 	</File>
-	<File name="main.cpp" open="0" top="0" tabpos="1">
-		<Cursor position="3933" topLine="117" />
+	<File name="main.cpp" open="1" top="1" tabpos="10">
+		<Cursor position="1567" topLine="57" />
 	</File>
 	<File name="utils.cpp" open="0" top="0" tabpos="10">
 		<Cursor position="0" topLine="0" />
@@ -232,10 +232,10 @@
 	<File name="vec3d.h" open="0" top="0" tabpos="3">
 		<Cursor position="505" topLine="25" />
 	</File>
-	<File name="vecBase.h" open="0" top="0" tabpos="4">
-		<Cursor position="701" topLine="58" />
+	<File name="vecBase.h" open="1" top="0" tabpos="5">
+		<Cursor position="707" topLine="8" />
 	</File>
-	<File name="vecOpBase.h" open="0" top="0" tabpos="0">
-		<Cursor position="1442" topLine="0" />
+	<File name="vecOpBase.h" open="1" top="0" tabpos="6">
+		<Cursor position="896" topLine="24" />
 	</File>
 </CodeBlocks_layout_file>
