@@ -111,7 +111,7 @@ void CBaseEngine::drawScene(){
   frameCount++;
 
   glClearColor (0.0f, 0.0f, 0.0f, 0.0f);
-  glClear (GL_COLOR_BUFFER_BIT);
+  glClear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 
   //world drawing settings
@@ -124,18 +124,21 @@ void CBaseEngine::drawScene(){
   glColor4f(1.,1.,1.,1.);
 
   glBegin(GL_QUADS);
+    glColor3f(0.,0.,1.);
     glNormal3i(0,0,1);
     glVertex3f(0.,-10.,0.);
     glVertex3f(-20.,-10.,0.);
     glVertex3f(-20.,10.,0.);
     glVertex3f(0.,10.,0.);
 
+    glColor3f(1.,.5,1.);
     glNormal3i(-1,0,0);
     glVertex3f(0.,-10.,0.);
     glVertex3f(0.,-10.,10.);
     glVertex3f(0.,10.,10.);
     glVertex3f(0.,10.,0.);
 
+    glColor3f(1.,1.,0.);
     glNormal3i(0,-1,0);
     glVertex3f(0.,-10.,0.);
     glVertex3f(0.,-10.,10.);
@@ -180,9 +183,11 @@ void CBaseEngine::initWorldView(){
   gluPerspective(65.0f,(GLfloat)SCREENWIDTH/(GLfloat)SCREENHEIGHT,0.1f,1000000.0f);
   glMatrixMode(GL_MODELVIEW);
   glLoadIdentity();
+  glEnable(GL_DEPTH_TEST);
 }
 
 void CBaseEngine::initGuiView(){
+  glDisable(GL_DEPTH_TEST);
   glMatrixMode(GL_PROJECTION);
   glLoadIdentity();
   gluOrtho2D (0, SCREENWIDTH, SCREENHEIGHT, 0);
