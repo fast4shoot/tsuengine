@@ -22,7 +22,6 @@ class CLabel: public CGuiPanel{
     std::wstring    getText();
 
     virtual void    draw();
-    virtual void    updateFont();
 
   protected:
     std::wstring    _text;

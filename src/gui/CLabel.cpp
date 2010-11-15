@@ -21,6 +21,3 @@ void CLabel::draw(){
   _font->render(_text,getH());
 }
 
-void CLabel::updateFont(){
-}
-

@@ -1,1237 +1,5 @@
 # depslib dependency file v1.0
-1267912263 source:e:\fast4shoot\programming\tsuengine.1001\cbaseengine.cpp
-	<cmath>
-	<windows.h>
-	<gl/gl.h>
-	<gl/glu.h>
-	"CBaseEngine.h"
-	"CBaseEntity.h"
-	"exceptions.h"
-	"macros.h"
-	"CInputMgr.h"
-	"GLFT_Font.hpp"
-	"utils.h"
-	"const.h"
-	"WhiteBox.h"
-
-1261825432 e:\fast4shoot\programming\tsuengine.1001\cbaseengine.h
-	<string>
-	<gl/gl.h>
-	<ctime>
-	"globals.h"
-	"const.h"
-	"datatypes.h"
-	"CBaseEntity.h"
-	"CEntMgr.h"
-	"CInputMgr.h"
-	"CGuiMgr.h"
-	"GLFT_Font.hpp"
-
-1249670978 e:\fast4shoot\programming\tsuengine.1001\globals.h
-	<windows.h>
-	"CBaseEngine.h"
-	"datatypes.h"
-
-1262211324 e:\fast4shoot\programming\tsuengine.1001\datatypes.h
-	<string>
-	"vec2d.h"
-	"vec3d.h"
-
-1262218360 e:\fast4shoot\programming\tsuengine.1001\vec2d.h
-
-1262211304 e:\fast4shoot\programming\tsuengine.1001\vec3d.h
-
-1265718355 e:\fast4shoot\programming\tsuengine.1001\const.h
-
-1247441358 e:\fast4shoot\programming\tsuengine.1001\cbaseentity.h
-	<string>
-	"datatypes.h"
-	"CParamMgr.h"
-
-1247856590 e:\fast4shoot\programming\tsuengine.1001\cparammgr.h
-	<vector>
-	"datatypes.h"
-
-1247856620 e:\fast4shoot\programming\tsuengine.1001\centmgr.h
-	"CBaseEntity.h"
-	"datatypes.h"
-	"const.h"
-
-1265099644 e:\fast4shoot\programming\tsuengine.1001\cinputmgr.h
-	<dinput.h>
-	"datatypes.h"
-
-1262214870 e:\fast4shoot\programming\tsuengine.1001\cguimgr.h
-	"CGuiPanel.h"
-
-1262859288 e:\fast4shoot\programming\tsuengine.1001\cguipanel.h
-	<vector>
-	"datatypes.h"
-
-1247691840 e:\fast4shoot\programming\tsuengine.1001\libs\glft_font.hpp
-	<GL/gl.h>
-	<ft2build.h>
-	<string>
-	<vector>
-	<stdexcept>
-	<cstdarg>
-	<sstream>
-
-1143207328 e:\fast4shoot\programming\tsuengine.1001\libs\ft2build.h
-	<freetype/config/ftheader.h>
-
-1221196208 e:\fast4shoot\programming\tsuengine.1001\libs\freetype\config\ftheader.h
-
-1249666256 e:\fast4shoot\programming\tsuengine.1001\exceptions.h
-	<string>
-	<stdexcept>
-
-1262217156 e:\fast4shoot\programming\tsuengine.1001\macros.h
-	<windows.h>
-	<cstddef>
-
-1259068106 e:\fast4shoot\programming\tsuengine.1001\utils.h
-	<math.h>
-
-1263301100 e:\fast4shoot\programming\tsuengine.1001\whitebox.h
-	"CGuiPanel.h"
-
-1247777102 source:e:\fast4shoot\programming\tsuengine.1001\cbaseentity.cpp
-	<vector>
-	"CBaseEntity.h"
-	"CBaseEngine.h"
-	"globals.h"
-	"macros.h"
-	"CParamMgr.h"
-
-1247445632 source:e:\fast4shoot\programming\tsuengine.1001\centmgr.cpp
-	"CEntMgr.h"
-	"CBaseEntity.h"
-	"const.h"
-
-1267916593 source:e:\fast4shoot\programming\tsuengine.1001\cguimgr.cpp
-	"CGuiMgr.h"
-	"CGuiPanel.h"
-	"TestPanel.h"
-	"const.h"
-	"macros.h"
-	"globals.h"
-
-1263466068 source:e:\fast4shoot\programming\tsuengine.1001\cguipanel.cpp
-	"CGuiPanel.h"
-	"macros.h"
-	<gl/gl.h>
-
-1265116284 source:e:\fast4shoot\programming\tsuengine.1001\cinputmgr.cpp
-	"CInputMgr.h"
-	"macros.h"
-	"const.h"
-	"globals.h"
-	"exceptions.h"
-	"datatypes.h"
-	"CBaseEngine.h"
-
-1247441382 source:e:\fast4shoot\programming\tsuengine.1001\cparammgr.cpp
-	<vector>
-	<cstdlib>
-	"CParamMgr.h"
-	"datatypes.h"
-	"exceptions.h"
-
-1263301814 source:e:\fast4shoot\programming\tsuengine.1001\whitebox.cpp
-	<gl/gl.h>
-	<cmath>
-	"WhiteBox.h"
-	"macros.h"
-	"globals.h"
-
-1262211352 source:e:\fast4shoot\programming\tsuengine.1001\datatypes.cpp
-	"datatypes.h"
-	<cmath>
-	<cstdlib>
-	<windows.h>
-
-1249666256 source:e:\fast4shoot\programming\tsuengine.1001\exceptions.cpp
-	<exception>
-	"exceptions.h"
-
-1249670978 source:e:\fast4shoot\programming\tsuengine.1001\globals.cpp
-	"globals.h"
-	<windows.h>
-	"CBaseEngine.h"
-	"datatypes.h"
-
-1259230360 source:e:\fast4shoot\programming\tsuengine.1001\main.cpp
-	<windows.h>
-	<gl/gl.h>
-	<iostream>
-	<cmath>
-	<string>
-	<exception>
-	"const.h"
-	"datatypes.h"
-	"globals.h"
-	"CBaseEngine.h"
-	"CBaseEntity.h"
-	"macros.h"
-	"exceptions.h"
-
-1249672516 source:e:\fast4shoot\programming\tsuengine.1001\utils.cpp
-	"utils.h"
-
-1267915399 source:e:\fast4shoot\programming\tsuengine.1001\vec2d.cpp
-	"vec2d.h"
-	<cmath>
-	"macros.h"
-	<cstdio>
-
-1262217236 source:e:\fast4shoot\programming\tsuengine.1001\vec3d.cpp
-	"vec3d.h"
-	<cmath>
-	"macros.h"
-
-1258626208 source:e:\fast4shoot\programming\tsuengine.1001\libs\glft_font.cpp
-	"GLFT_Font.hpp"
-	<cstring>
-	<string>
-	<windows.h>
-	<cstdlib>
-	"../macros.h"
-
-1263301150 e:\fast4shoot\programming\tsuengine.1001\piskvorka.h
-	"WhiteBox.h"
-
-1263301292 source:e:\fast4shoot\programming\tsuengine.1001\piskvorka.cpp
-	"Piskvorka.h"
-
-1262861350 source:h:\tsuengine.1000\cbaseengine.cpp
-	<cmath>
-	<windows.h>
-	<gl/gl.h>
-	<gl/glu.h>
-	"CBaseEngine.h"
-	"CBaseEntity.h"
-	"exceptions.h"
-	"macros.h"
-	"CInputMgr.h"
-	"GLFT_Font.hpp"
-	"utils.h"
-	"const.h"
-	"WhiteBox.h"
-
-1261825432 h:\tsuengine.1000\cbaseengine.h
-	<string>
-	<gl/gl.h>
-	<ctime>
-	"globals.h"
-	"const.h"
-	"datatypes.h"
-	"CBaseEntity.h"
-	"CEntMgr.h"
-	"CInputMgr.h"
-	"CGuiMgr.h"
-	"GLFT_Font.hpp"
-
-1249670978 h:\tsuengine.1000\globals.h
-	<windows.h>
-	"CBaseEngine.h"
-	"datatypes.h"
-
-1262211324 h:\tsuengine.1000\datatypes.h
-	<string>
-	"vec2d.h"
-	"vec3d.h"
-
-1262218360 h:\tsuengine.1000\vec2d.h
-
-1262211304 h:\tsuengine.1000\vec3d.h
-
-1265097810 h:\tsuengine.1000\const.h
-
-1247441358 h:\tsuengine.1000\cbaseentity.h
-	<string>
-	"datatypes.h"
-	"CParamMgr.h"
-
-1247856590 h:\tsuengine.1000\cparammgr.h
-	<vector>
-	"datatypes.h"
-
-1247856620 h:\tsuengine.1000\centmgr.h
-	"CBaseEntity.h"
-	"datatypes.h"
-	"const.h"
-
-1265098346 h:\tsuengine.1000\cinputmgr.h
-	<dinput.h>
-	"datatypes.h"
-
-1262214870 h:\tsuengine.1000\cguimgr.h
-	"CGuiPanel.h"
-
-1265097810 h:\tsuengine.1000\cguipanel.h
-	<vector>
-	"datatypes.h"
-
-1247691840 h:\tsuengine.1000\libs\glft_font.hpp
-	<GL/gl.h>
-	<ft2build.h>
-	<string>
-	<vector>
-	<stdexcept>
-	<cstdarg>
-	<sstream>
-
-1143207328 h:\tsuengine.1000\libs\ft2build.h
-	<freetype/config/ftheader.h>
-
-1221196208 h:\tsuengine.1000\libs\freetype\config\ftheader.h
-
-1249666256 h:\tsuengine.1000\exceptions.h
-	<string>
-	<stdexcept>
-
-1262217156 h:\tsuengine.1000\macros.h
-	<windows.h>
-	<cstddef>
-
-1259068106 h:\tsuengine.1000\utils.h
-	<math.h>
-
-1263301100 h:\tsuengine.1000\whitebox.h
-	"CGuiPanel.h"
-
-1247777102 source:h:\tsuengine.1000\cbaseentity.cpp
-	<vector>
-	"CBaseEntity.h"
-	"CBaseEngine.h"
-	"globals.h"
-	"macros.h"
-	"CParamMgr.h"
-
-1247445632 source:h:\tsuengine.1000\centmgr.cpp
-	"CEntMgr.h"
-	"CBaseEntity.h"
-	"const.h"
-
-1265098200 source:h:\tsuengine.1000\cguimgr.cpp
-	"CGuiMgr.h"
-	"CGuiPanel.h"
-	"WhiteBox.h"
-	"const.h"
-	"macros.h"
-	"globals.h"
-	"Piskvorka.h"
-
-1263301150 h:\tsuengine.1000\piskvorka.h
-	"WhiteBox.h"
-
-1265098224 source:h:\tsuengine.1000\cguipanel.cpp
-	"CGuiPanel.h"
-	"macros.h"
-	<gl/gl.h>
-
-1265097810 source:h:\tsuengine.1000\cinputmgr.cpp
-	"CInputMgr.h"
-	"macros.h"
-	"const.h"
-	"globals.h"
-	"exceptions.h"
-	"datatypes.h"
-	"CBaseEngine.h"
-
-1247441382 source:h:\tsuengine.1000\cparammgr.cpp
-	<vector>
-	<cstdlib>
-	"CParamMgr.h"
-	"datatypes.h"
-	"exceptions.h"
-
-1263301292 source:h:\tsuengine.1000\piskvorka.cpp
-	"Piskvorka.h"
-
-1263301814 source:h:\tsuengine.1000\whitebox.cpp
-	<gl/gl.h>
-	<cmath>
-	"WhiteBox.h"
-	"macros.h"
-	"globals.h"
-
-1262211352 source:h:\tsuengine.1000\datatypes.cpp
-	"datatypes.h"
-	<cmath>
-	<cstdlib>
-	<windows.h>
-
-1249666256 source:h:\tsuengine.1000\exceptions.cpp
-	<exception>
-	"exceptions.h"
-
-1249670978 source:h:\tsuengine.1000\globals.cpp
-	"globals.h"
-	<windows.h>
-	"CBaseEngine.h"
-	"datatypes.h"
-
-1258626208 source:h:\tsuengine.1000\libs\glft_font.cpp
-	"GLFT_Font.hpp"
-	<cstring>
-	<string>
-	<windows.h>
-	<cstdlib>
-	"../macros.h"
-
-1259230360 source:h:\tsuengine.1000\main.cpp
-	<windows.h>
-	<gl/gl.h>
-	<iostream>
-	<cmath>
-	<string>
-	<exception>
-	"const.h"
-	"datatypes.h"
-	"globals.h"
-	"CBaseEngine.h"
-	"CBaseEntity.h"
-	"macros.h"
-	"exceptions.h"
-
-1249672516 source:h:\tsuengine.1000\utils.cpp
-	"utils.h"
-
-1262217488 source:h:\tsuengine.1000\vec2d.cpp
-	"vec2d.h"
-	<cmath>
-	"macros.h"
-
-1262217236 source:h:\tsuengine.1000\vec3d.cpp
-	"vec3d.h"
-	<cmath>
-	"macros.h"
-
-1265098456 source:c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\cbaseengine.cpp
-	<cmath>
-	<windows.h>
-	<gl/gl.h>
-	<gl/glu.h>
-	"CBaseEngine.h"
-	"CBaseEntity.h"
-	"exceptions.h"
-	"macros.h"
-	"CInputMgr.h"
-	"GLFT_Font.hpp"
-	"utils.h"
-	"const.h"
-	"WhiteBox.h"
-
-1261825432 c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\cbaseengine.h
-	<string>
-	<gl/gl.h>
-	<ctime>
-	"globals.h"
-	"const.h"
-	"datatypes.h"
-	"CBaseEntity.h"
-	"CEntMgr.h"
-	"CInputMgr.h"
-	"CGuiMgr.h"
-	"GLFT_Font.hpp"
-
-1249670978 c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\globals.h
-	<windows.h>
-	"CBaseEngine.h"
-	"datatypes.h"
-
-1262211324 c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\datatypes.h
-	<string>
-	"vec2d.h"
-	"vec3d.h"
-
-1262218360 c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\vec2d.h
-
-1262211304 c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\vec3d.h
-
-1265097810 c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\const.h
-
-1247441358 c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\cbaseentity.h
-	<string>
-	"datatypes.h"
-	"CParamMgr.h"
-
-1247856590 c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\cparammgr.h
-	<vector>
-	"datatypes.h"
-
-1247856620 c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\centmgr.h
-	"CBaseEntity.h"
-	"datatypes.h"
-	"const.h"
-
-1265099644 c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\cinputmgr.h
-	<dinput.h>
-	"datatypes.h"
-
-1262214870 c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\cguimgr.h
-	"CGuiPanel.h"
-
-1265099644 c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\cguipanel.h
-	<vector>
-	"datatypes.h"
-
-1247691840 c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\libs\glft_font.hpp
-	<GL/gl.h>
-	<ft2build.h>
-	<string>
-	<vector>
-	<stdexcept>
-	<cstdarg>
-	<sstream>
-
-1143207328 c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\libs\ft2build.h
-	<freetype/config/ftheader.h>
-
-1221196208 c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\libs\freetype\config\ftheader.h
-
-1249666256 c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\exceptions.h
-	<string>
-	<stdexcept>
-
-1262217156 c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\macros.h
-	<windows.h>
-	<cstddef>
-
-1259068106 c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\utils.h
-	<math.h>
-
-1263301100 c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\whitebox.h
-	"CGuiPanel.h"
-
-1247777102 source:c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\cbaseentity.cpp
-	<vector>
-	"CBaseEntity.h"
-	"CBaseEngine.h"
-	"globals.h"
-	"macros.h"
-	"CParamMgr.h"
-
-1247445632 source:c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\centmgr.cpp
-	"CEntMgr.h"
-	"CBaseEntity.h"
-	"const.h"
-
-1265098200 source:c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\cguimgr.cpp
-	"CGuiMgr.h"
-	"CGuiPanel.h"
-	"WhiteBox.h"
-	"const.h"
-	"macros.h"
-	"globals.h"
-	"Piskvorka.h"
-
-1263301150 c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\piskvorka.h
-	"WhiteBox.h"
-
-1263894282 source:c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\cguipanel.cpp
-	"CGuiPanel.h"
-	"macros.h"
-	<gl/gl.h>
-
-1265097810 source:c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\cinputmgr.cpp
-	"CInputMgr.h"
-	"macros.h"
-	"const.h"
-	"globals.h"
-	"exceptions.h"
-	"datatypes.h"
-	"CBaseEngine.h"
-
-1247441382 source:c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\cparammgr.cpp
-	<vector>
-	<cstdlib>
-	"CParamMgr.h"
-	"datatypes.h"
-	"exceptions.h"
-
-1262211352 source:c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\datatypes.cpp
-	"datatypes.h"
-	<cmath>
-	<cstdlib>
-	<windows.h>
-
-1249666256 source:c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\exceptions.cpp
-	<exception>
-	"exceptions.h"
-
-1249670978 source:c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\globals.cpp
-	"globals.h"
-	<windows.h>
-	"CBaseEngine.h"
-	"datatypes.h"
-
-1258626208 source:c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\libs\glft_font.cpp
-	"GLFT_Font.hpp"
-	<cstring>
-	<string>
-	<windows.h>
-	<cstdlib>
-	"../macros.h"
-
-1259230360 source:c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\main.cpp
-	<windows.h>
-	<gl/gl.h>
-	<iostream>
-	<cmath>
-	<string>
-	<exception>
-	"const.h"
-	"datatypes.h"
-	"globals.h"
-	"CBaseEngine.h"
-	"CBaseEntity.h"
-	"macros.h"
-	"exceptions.h"
-
-1249672516 source:c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\utils.cpp
-	"utils.h"
-
-1262217488 source:c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\vec2d.cpp
-	"vec2d.h"
-	<cmath>
-	"macros.h"
-
-1262217236 source:c:\documents and settings\student\dokumenty\tøídy\v3.a\tsuengine.1000\vec3d.cpp
-	"vec3d.h"
-	<cmath>
-	"macros.h"
-
-1265098456 source:c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\cbaseengine.cpp
-	<cmath>
-	<windows.h>
-	<gl/gl.h>
-	<gl/glu.h>
-	"CBaseEngine.h"
-	"CBaseEntity.h"
-	"exceptions.h"
-	"macros.h"
-	"CInputMgr.h"
-	"GLFT_Font.hpp"
-	"utils.h"
-	"const.h"
-	"WhiteBox.h"
-
-1261825432 c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\cbaseengine.h
-	<string>
-	<gl/gl.h>
-	<ctime>
-	"globals.h"
-	"const.h"
-	"datatypes.h"
-	"CBaseEntity.h"
-	"CEntMgr.h"
-	"CInputMgr.h"
-	"CGuiMgr.h"
-	"GLFT_Font.hpp"
-
-1249670978 c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\globals.h
-	<windows.h>
-	"CBaseEngine.h"
-	"datatypes.h"
-
-1262211324 c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\datatypes.h
-	<string>
-	"vec2d.h"
-	"vec3d.h"
-
-1262218360 c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\vec2d.h
-
-1262211304 c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\vec3d.h
-
-1265097810 c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\const.h
-
-1247441358 c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\cbaseentity.h
-	<string>
-	"datatypes.h"
-	"CParamMgr.h"
-
-1247856590 c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\cparammgr.h
-	<vector>
-	"datatypes.h"
-
-1247856620 c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\centmgr.h
-	"CBaseEntity.h"
-	"datatypes.h"
-	"const.h"
-
-1265099644 c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\cinputmgr.h
-	<dinput.h>
-	"datatypes.h"
-
-1262214870 c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\cguimgr.h
-	"CGuiPanel.h"
-
-1265116282 c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\cguipanel.h
-	<vector>
-	"datatypes.h"
-
-1247691840 c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\libs\glft_font.hpp
-	<GL/gl.h>
-	<ft2build.h>
-	<string>
-	<vector>
-	<stdexcept>
-	<cstdarg>
-	<sstream>
-
-1143207328 c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\libs\ft2build.h
-	<freetype/config/ftheader.h>
-
-1221196208 c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\libs\freetype\config\ftheader.h
-
-1249666256 c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\exceptions.h
-	<string>
-	<stdexcept>
-
-1262217156 c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\macros.h
-	<windows.h>
-	<cstddef>
-
-1259068106 c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\utils.h
-	<math.h>
-
-1263301100 c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\whitebox.h
-	"CGuiPanel.h"
-
-1247777102 source:c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\cbaseentity.cpp
-	<vector>
-	"CBaseEntity.h"
-	"CBaseEngine.h"
-	"globals.h"
-	"macros.h"
-	"CParamMgr.h"
-
-1247445632 source:c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\centmgr.cpp
-	"CEntMgr.h"
-	"CBaseEntity.h"
-	"const.h"
-
-1265117308 source:c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\cguimgr.cpp
-	"CGuiMgr.h"
-	"CGuiPanel.h"
-	"const.h"
-	"macros.h"
-	"globals.h"
-
-1263301150 c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\piskvorka.h
-	"WhiteBox.h"
-
-1247441382 source:c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\cparammgr.cpp
-	<vector>
-	<cstdlib>
-	"CParamMgr.h"
-	"datatypes.h"
-	"exceptions.h"
-
-1262211352 source:c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\datatypes.cpp
-	"datatypes.h"
-	<cmath>
-	<cstdlib>
-	<windows.h>
-
-1249666256 source:c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\exceptions.cpp
-	<exception>
-	"exceptions.h"
-
-1249670978 source:c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\globals.cpp
-	"globals.h"
-	<windows.h>
-	"CBaseEngine.h"
-	"datatypes.h"
-
-1258626208 source:c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\libs\glft_font.cpp
-	"GLFT_Font.hpp"
-	<cstring>
-	<string>
-	<windows.h>
-	<cstdlib>
-	"../macros.h"
-
-1259230360 source:c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\main.cpp
-	<windows.h>
-	<gl/gl.h>
-	<iostream>
-	<cmath>
-	<string>
-	<exception>
-	"const.h"
-	"datatypes.h"
-	"globals.h"
-	"CBaseEngine.h"
-	"CBaseEntity.h"
-	"macros.h"
-	"exceptions.h"
-
-1249672516 source:c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\utils.cpp
-	"utils.h"
-
-1262217488 source:c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\vec2d.cpp
-	"vec2d.h"
-	<cmath>
-	"macros.h"
-
-1262217236 source:c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\vec3d.cpp
-	"vec3d.h"
-	<cmath>
-	"macros.h"
-
-1265116282 source:c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\cguipanel.cpp
-	"CGuiPanel.h"
-	"macros.h"
-	<gl/gl.h>
-
-1265116283 source:c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\cinputmgr.cpp
-	"CInputMgr.h"
-	"macros.h"
-	"const.h"
-	"globals.h"
-	"exceptions.h"
-	"datatypes.h"
-	"CBaseEngine.h"
-
-1265117308 source:c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\gui\cbutton.c
-
-1265116282 c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\gui\cguipanel.h
-	<vector>
-	"datatypes.h"
-
-1265117604 source:c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\gui\cbutton.cpp
-
-1265116282 source:c:\documents and settings\student\dokumenty\tridy\v3i\tsuengine.1000\gui\cguipanel.cpp
-	"CGuiPanel.h"
-	"macros.h"
-	<gl/gl.h>
-
-1268215877 source:d:\programming\tsuengine.1000\cbaseengine.cpp
-	<cmath>
-	<windows.h>
-	<gl/gl.h>
-	<gl/glu.h>
-	"CBaseEngine.h"
-	"CBaseEntity.h"
-	"exceptions.h"
-	"macros.h"
-	"CInputMgr.h"
-	"GLFT_Font.hpp"
-	"utils.h"
-	"const.h"
-	"WhiteBox.h"
-
-1268294336 d:\programming\tsuengine.1000\cbaseengine.h
-	<string>
-	<gl/gl.h>
-	<ctime>
-	"globals.h"
-	"const.h"
-	"datatypes.h"
-	"CBaseEntity.h"
-	"CEntMgr.h"
-	"CInputMgr.h"
-	"CGuiMgr.h"
-	"GLFT_Font.hpp"
-
-1249670978 d:\programming\tsuengine.1000\globals.h
-	<windows.h>
-	"CBaseEngine.h"
-	"datatypes.h"
-
-1268389274 d:\programming\tsuengine.1000\datatypes.h
-	<string>
-	"vec2d.h"
-	"vec3d.h"
-
-1262218360 d:\programming\tsuengine.1000\vec2d.h
-
-1262211304 d:\programming\tsuengine.1000\vec3d.h
-
-1265718355 d:\programming\tsuengine.1000\const.h
-
-1247441358 d:\programming\tsuengine.1000\cbaseentity.h
-	<string>
-	"datatypes.h"
-	"CParamMgr.h"
-
-1247856590 d:\programming\tsuengine.1000\cparammgr.h
-	<vector>
-	"datatypes.h"
-
-1247856620 d:\programming\tsuengine.1000\centmgr.h
-	"CBaseEntity.h"
-	"datatypes.h"
-	"const.h"
-
-1267985587 d:\programming\tsuengine.1000\cinputmgr.h
-	<dinput.h>
-	"datatypes.h"
-
-1262214870 d:\programming\tsuengine.1000\cguimgr.h
-	"CGuiPanel.h"
-
-1263897108 d:\programming\tsuengine.1000\cguipanel.h
-	<vector>
-	"datatypes.h"
-
-1268337520 d:\programming\tsuengine.1000\libs\glft_font.hpp
-	<GL/gl.h>
-	<ft2build.h>
-	<string>
-	<vector>
-	<stdexcept>
-	<cstdarg>
-	<sstream>
-
-1143207328 d:\programming\tsuengine.1000\libs\ft2build.h
-	<freetype/config/ftheader.h>
-
-1221196208 d:\programming\tsuengine.1000\libs\freetype\config\ftheader.h
-
-1249666256 d:\programming\tsuengine.1000\exceptions.h
-	<string>
-	<stdexcept>
-
-1262217156 d:\programming\tsuengine.1000\macros.h
-	<windows.h>
-	<cstddef>
-
-1268332197 d:\programming\tsuengine.1000\utils.h
-	<cmath>
-
-1263301100 d:\programming\tsuengine.1000\whitebox.h
-	"CGuiPanel.h"
-
-1247777102 source:d:\programming\tsuengine.1000\cbaseentity.cpp
-	<vector>
-	"CBaseEntity.h"
-	"CBaseEngine.h"
-	"globals.h"
-	"macros.h"
-	"CParamMgr.h"
-
-1247445632 source:d:\programming\tsuengine.1000\centmgr.cpp
-	"CEntMgr.h"
-	"CBaseEntity.h"
-	"const.h"
-
-1247441382 source:d:\programming\tsuengine.1000\cparammgr.cpp
-	<vector>
-	<cstdlib>
-	"CParamMgr.h"
-	"datatypes.h"
-	"exceptions.h"
-
-1262211352 source:d:\programming\tsuengine.1000\datatypes.cpp
-	"datatypes.h"
-	<cmath>
-	<cstdlib>
-	<windows.h>
-
-1249666256 source:d:\programming\tsuengine.1000\exceptions.cpp
-	<exception>
-	"exceptions.h"
-
-1249670978 source:d:\programming\tsuengine.1000\globals.cpp
-	"globals.h"
-	<windows.h>
-	"CBaseEngine.h"
-	"datatypes.h"
-
-1258626208 source:d:\programming\tsuengine.1000\libs\glft_font.cpp
-	"GLFT_Font.hpp"
-	<cstring>
-	<string>
-	<windows.h>
-	<cstdlib>
-	"../macros.h"
-
-1259230360 source:d:\programming\tsuengine.1000\main.cpp
-	<windows.h>
-	<gl/gl.h>
-	<iostream>
-	<cmath>
-	<string>
-	<exception>
-	"const.h"
-	"datatypes.h"
-	"globals.h"
-	"CBaseEngine.h"
-	"CBaseEntity.h"
-	"macros.h"
-	"exceptions.h"
-
-1249672516 source:d:\programming\tsuengine.1000\utils.cpp
-	"utils.h"
-
-1267915399 source:d:\programming\tsuengine.1000\vec2d.cpp
-	"vec2d.h"
-	<cmath>
-	"macros.h"
-	<cstdio>
-
-1262217236 source:d:\programming\tsuengine.1000\vec3d.cpp
-	"vec3d.h"
-	<cmath>
-	"macros.h"
-
-1268332196 d:\programming\tsuengine.1000\gui\cguipanel.h
-	<vector>
-	"datatypes.h"
-	"GLFT_Font.hpp"
-
-1268147673 source:d:\programming\tsuengine.1000\cguimgr.cpp
-	"CGuiMgr.h"
-	"CGuiPanel.h"
-	"TestPanel.h"
-	"const.h"
-	"macros.h"
-	"globals.h"
-
-1268306665 source:d:\programming\tsuengine.1000\cinputmgr.cpp
-	"CInputMgr.h"
-	"macros.h"
-	"const.h"
-	"globals.h"
-	"exceptions.h"
-	"datatypes.h"
-	"CBaseEngine.h"
-
-1268332196 source:d:\programming\tsuengine.1000\gui\cguipanel.cpp
-	"CGuiPanel.h"
-	"macros.h"
-	<gl/gl.h>
-	"CActionListener.h"
-
-1268136922 d:\programming\tsuengine.1000\gui\testpanel.h
-	"CGuiPanel.h"
-
-1268744547 source:d:\programming\tsuengine.1000\gui\testpanel.cpp
-	"TestPanel.h"
-	<gl/gl.h>
-	"macros.h"
-	"globals.h"
-	"CLabel.h"
-
-1267917901 e:\fast4shoot\programming\tsuengine.1001\gui\cguipanel.h
-	<vector>
-	"datatypes.h"
-	"GLFT_Font.hpp"
-
-1267093036 e:\fast4shoot\programming\tsuengine.1001\gui\testpanel.h
-	"CGuiPanel.h"
-
-1267916593 source:e:\fast4shoot\programming\tsuengine.1001\gui\cguipanel.cpp
-	"CGuiPanel.h"
-	"macros.h"
-	<gl/gl.h>
-
-1267915480 source:e:\fast4shoot\programming\tsuengine.1001\gui\testpanel.cpp
-	"TestPanel.h"
-	<gl/gl.h>
-	"macros.h"
-
-1268136548 source:d:\programming\tsuengine.1000\gui\cabstractbutton.cpp
-
-1268302821 d:\programming\tsuengine.1000\gui\cactionlistener.h
-
-1268302821 source:d:\programming\tsuengine.1000\gui\cactionlistener.cpp
-	"CActionListener.h"
-
-1268744614 source:d:\programming\tsuengine.1000\gui\clabel.cpp
-	"CLabel.h"
-	<string>
-	"vec2d.h"
-	"CGuiPanel.h"
-	"GLFT_Font.hpp"
-
-1268744005 d:\programming\tsuengine.1000\gui\clabel.h
-	<string>
-	"vec2d.h"
-	"CGuiPanel.h"
-	"GLFT_Font.hpp"
-
-1268744117 source:d:\programming\tsuengine.1000\utils\stringutils.cpp
-	"stringUtils.h"
-
-1268744094 d:\programming\tsuengine.1000\utils\stringutils.h
-	<cstring>
-	<string>
-	<cstdarg>
-
-1269179966 source:e:\fast4shoot\programming\tsuengine\src\cbaseengine.cpp
-	<cmath>
-	<windows.h>
-	<gl/gl.h>
-	<gl/glu.h>
-	"CBaseEngine.h"
-	"CBaseEntity.h"
-	"exceptions.h"
-	"macros.h"
-	"CInputMgr.h"
-	"GLFT_Font.hpp"
-	"utils.h"
-	"const.h"
-	"WhiteBox.h"
-
-1269179966 e:\fast4shoot\programming\tsuengine\src\cbaseengine.h
-	<string>
-	<gl/gl.h>
-	<ctime>
-	"globals.h"
-	"const.h"
-	"datatypes.h"
-	"CBaseEntity.h"
-	"CEntMgr.h"
-	"CInputMgr.h"
-	"CGuiMgr.h"
-	"GLFT_Font.hpp"
-
-1269179966 e:\fast4shoot\programming\tsuengine\src\globals.h
-	<windows.h>
-	"CBaseEngine.h"
-	"datatypes.h"
-
-1269179966 e:\fast4shoot\programming\tsuengine\src\datatypes.h
-	<string>
-	"vec2d.h"
-	"vec3d.h"
-
-1269179966 e:\fast4shoot\programming\tsuengine\src\vec2d.h
-
-1269179966 e:\fast4shoot\programming\tsuengine\src\vec3d.h
-
-1269179966 e:\fast4shoot\programming\tsuengine\src\const.h
-
-1269179966 e:\fast4shoot\programming\tsuengine\src\cbaseentity.h
-	<string>
-	"datatypes.h"
-	"CParamMgr.h"
-
-1269179966 e:\fast4shoot\programming\tsuengine\src\cparammgr.h
-	<vector>
-	"datatypes.h"
-
-1269179966 e:\fast4shoot\programming\tsuengine\src\centmgr.h
-	"CBaseEntity.h"
-	"datatypes.h"
-	"const.h"
-
-1269179966 e:\fast4shoot\programming\tsuengine\src\cinputmgr.h
-	<dinput.h>
-	"datatypes.h"
-
-1269179966 e:\fast4shoot\programming\tsuengine\src\cguimgr.h
-	"CGuiPanel.h"
-
-1269179965 e:\fast4shoot\programming\tsuengine\src\gui\cguipanel.h
-	<vector>
-	"datatypes.h"
-	"GLFT_Font.hpp"
-
-1269179966 e:\fast4shoot\programming\tsuengine\src\libs\glft_font.hpp
-	<GL/gl.h>
-	<ft2build.h>
-	<string>
-	<vector>
-	<stdexcept>
-	<cstdarg>
-	<sstream>
-
-1269179966 e:\fast4shoot\programming\tsuengine\src\libs\ft2build.h
-	<freetype/config/ftheader.h>
-
-1269179966 e:\fast4shoot\programming\tsuengine\src\libs\freetype\config\ftheader.h
-
-1269179966 e:\fast4shoot\programming\tsuengine\src\exceptions.h
-	<string>
-	<stdexcept>
-
-1269179966 e:\fast4shoot\programming\tsuengine\src\macros.h
-	<windows.h>
-	<cstddef>
-
-1269179966 e:\fast4shoot\programming\tsuengine\src\utils.h
-	<cmath>
-
-1269179966 e:\fast4shoot\programming\tsuengine\src\whitebox.h
-	"CGuiPanel.h"
-
-1269179966 source:e:\fast4shoot\programming\tsuengine\src\cbaseentity.cpp
-	<vector>
-	"CBaseEntity.h"
-	"CBaseEngine.h"
-	"globals.h"
-	"macros.h"
-	"CParamMgr.h"
-
-1269179966 source:e:\fast4shoot\programming\tsuengine\src\centmgr.cpp
-	"CEntMgr.h"
-	"CBaseEntity.h"
-	"const.h"
-
-1269179966 source:e:\fast4shoot\programming\tsuengine\src\cguimgr.cpp
-	"CGuiMgr.h"
-	"CGuiPanel.h"
-	"TestPanel.h"
-	"const.h"
-	"macros.h"
-	"globals.h"
-
-1269179965 e:\fast4shoot\programming\tsuengine\src\gui\testpanel.h
-	"CGuiPanel.h"
-
-1269179966 source:e:\fast4shoot\programming\tsuengine\src\cinputmgr.cpp
-	"CInputMgr.h"
-	"macros.h"
-	"const.h"
-	"globals.h"
-	"exceptions.h"
-	"datatypes.h"
-	"CBaseEngine.h"
-
-1269179966 source:e:\fast4shoot\programming\tsuengine\src\cparammgr.cpp
-	<vector>
-	<cstdlib>
-	"CParamMgr.h"
-	"datatypes.h"
-	"exceptions.h"
-
-1269179966 source:e:\fast4shoot\programming\tsuengine\src\datatypes.cpp
-	"datatypes.h"
-	<cmath>
-	<cstdlib>
-	<windows.h>
-
-1269179966 source:e:\fast4shoot\programming\tsuengine\src\exceptions.cpp
-	<exception>
-	"exceptions.h"
-
-1269179966 source:e:\fast4shoot\programming\tsuengine\src\globals.cpp
-	"globals.h"
-	<windows.h>
-	"CBaseEngine.h"
-	"datatypes.h"
-
-1269179965 source:e:\fast4shoot\programming\tsuengine\src\gui\cabstractbutton.cpp
-
-1269179965 source:e:\fast4shoot\programming\tsuengine\src\gui\cactionlistener.cpp
-	"CActionListener.h"
-
-1269179965 e:\fast4shoot\programming\tsuengine\src\gui\cactionlistener.h
-
-1269179965 source:e:\fast4shoot\programming\tsuengine\src\gui\cguipanel.cpp
-	"CGuiPanel.h"
-	"macros.h"
-	<gl/gl.h>
-	"CActionListener.h"
-
-1288785033 source:d:\programming\tsuengine\src\cbaseengine.cpp
+1289811105 source:d:\programming\tsuengine\src\cbaseengine.cpp
 	<cmath>
 	<windows.h>
 	<gl/gl.h>
@@ -1246,7 +14,7 @@
 	"Font.h"
 	"utils/stringUtils.h"
 
-1288383650 d:\programming\tsuengine\src\cbaseengine.h
+1289206263 d:\programming\tsuengine\src\cbaseengine.h
 	<string>
 	<gl/gl.h>
 	<ctime>
@@ -1259,81 +27,182 @@
 	"CGuiMgr.h"
 	"CFontMgr.h"
 
-1284016197 d:\programming\tsuengine\src\globals.h
+1289206264 d:\programming\tsuengine\src\globals.h
 	<windows.h>
 	"datatypes.h"
 
-1284639573 d:\programming\tsuengine\src\datatypes.h
+1289206264 d:\programming\tsuengine\src\datatypes.h
 	<string>
 	"vec2d.h"
 	"vec3d.h"
 
-1288453807 d:\programming\tsuengine\src\vec2d.h
+1289206263 d:\programming\tsuengine\src\vec2d.h
 	<cmath>
 	"vecOpBase.h"
 
-1288458391 d:\programming\tsuengine\src\vec3d.h
+1289206264 d:\programming\tsuengine\src\vecopbase.h
+	<cmath>
+	"vecBase.h"
+
+1289206263 d:\programming\tsuengine\src\vecbase.h
+	<cmath>
+	"macros.h"
+
+1289206264 d:\programming\tsuengine\src\macros.h
+	<windows.h>
+	<cstddef>
+
+1289206264 d:\programming\tsuengine\src\vec3d.h
 	"vecOpBase.h"
 
-1284016197 d:\programming\tsuengine\src\const.h
+1289206264 d:\programming\tsuengine\src\const.h
 
-1284016196 d:\programming\tsuengine\src\cbaseentity.h
+1289206263 d:\programming\tsuengine\src\cbaseentity.h
 	<string>
 	"datatypes.h"
 	"CParamMgr.h"
 
-1284016197 d:\programming\tsuengine\src\cparammgr.h
+1289206264 d:\programming\tsuengine\src\cparammgr.h
 	<vector>
 	"datatypes.h"
 
-1284016196 d:\programming\tsuengine\src\centmgr.h
+1289206264 d:\programming\tsuengine\src\centmgr.h
 	"CBaseEntity.h"
 	"datatypes.h"
 	"const.h"
 
-1287135454 d:\programming\tsuengine\src\cinputmgr.h
+1289206263 d:\programming\tsuengine\src\cinputmgr.h
 	<dinput.h>
 	"datatypes.h"
 	"macros.h"
 
-1287135454 d:\programming\tsuengine\src\cguimgr.h
+1289206263 d:\programming\tsuengine\src\cguimgr.h
 	"macros.h"
 
-1289138904 d:\programming\tsuengine\src\gui\cguipanel.h
-	<vector>
-	"datatypes.h"
-	"CGuiMgr.h"
-	"CBaseEngine.h"
-
-1271930324 d:\programming\tsuengine\src\libs\glft_font.hpp
-	<GL/gl.h>
-	<ft2build.h>
+1289206264 d:\programming\tsuengine\src\cfontmgr.h
+	<map>
 	<string>
-	<vector>
-	<stdexcept>
-	<cstdarg>
-	<sstream>
+	"FTGL/FTGL/ftgl.h"
 
-1284016196 d:\programming\tsuengine\src\libs\ft2build.h
+1289206259 d:\programming\tsuengine\src\libs\ftgl\ftgl\ftgl.h
+	<ft2build.h>
+	<FTGL/FTPoint.h>
+	<FTGL/FTBBox.h>
+	<FTGL/FTBuffer.h>
+	<FTGL/FTGlyph.h>
+	<FTGL/FTBitmapGlyph.h>
+	<FTGL/FTBufferGlyph.h>
+	<FTGL/FTExtrdGlyph.h>
+	<FTGL/FTOutlineGlyph.h>
+	<FTGL/FTPixmapGlyph.h>
+	<FTGL/FTPolyGlyph.h>
+	<FTGL/FTTextureGlyph.h>
+	<FTGL/FTFont.h>
+	<FTGL/FTGLBitmapFont.h>
+	<FTGL/FTBufferFont.h>
+	<FTGL/FTGLExtrdFont.h>
+	<FTGL/FTGLOutlineFont.h>
+	<FTGL/FTGLPixmapFont.h>
+	<FTGL/FTGLPolygonFont.h>
+	<FTGL/FTGLTextureFont.h>
+	<FTGL/FTLayout.h>
+	<FTGL/FTSimpleLayout.h>
+
+1289206262 d:\programming\tsuengine\src\libs\ft2build.h
 	<freetype/config/ftheader.h>
 
-1284016190 d:\programming\tsuengine\src\libs\freetype\config\ftheader.h
+1289206255 d:\programming\tsuengine\src\libs\freetype\config\ftheader.h
 
-1284016197 d:\programming\tsuengine\src\exceptions.h
+1289206259 d:\programming\tsuengine\src\libs\ftgl\ftgl\ftpoint.h
+	<FTGL/ftgl.h>
+
+1289206259 d:\programming\tsuengine\src\libs\ftgl\ftgl\ftbbox.h
+	<FTGL/ftgl.h>
+
+1289206259 d:\programming\tsuengine\src\libs\ftgl\ftgl\ftbuffer.h
+	<FTGL/ftgl.h>
+
+1289206259 d:\programming\tsuengine\src\libs\ftgl\ftgl\ftglyph.h
+	<FTGL/ftgl.h>
+
+1289206259 d:\programming\tsuengine\src\libs\ftgl\ftgl\ftbitmapglyph.h
+	<FTGL/ftgl.h>
+
+1289206259 d:\programming\tsuengine\src\libs\ftgl\ftgl\ftbufferglyph.h
+	<FTGL/ftgl.h>
+
+1289206259 d:\programming\tsuengine\src\libs\ftgl\ftgl\ftextrdglyph.h
+	<FTGL/ftgl.h>
+
+1289206259 d:\programming\tsuengine\src\libs\ftgl\ftgl\ftoutlineglyph.h
+	<FTGL/ftgl.h>
+
+1289206259 d:\programming\tsuengine\src\libs\ftgl\ftgl\ftpixmapglyph.h
+	<FTGL/ftgl.h>
+
+1289206259 d:\programming\tsuengine\src\libs\ftgl\ftgl\ftpolyglyph.h
+	<FTGL/ftgl.h>
+
+1289206259 d:\programming\tsuengine\src\libs\ftgl\ftgl\fttextureglyph.h
+	<FTGL/ftgl.h>
+
+1289206259 d:\programming\tsuengine\src\libs\ftgl\ftgl\ftfont.h
+	<FTGL/ftgl.h>
+
+1289206259 d:\programming\tsuengine\src\libs\ftgl\ftgl\ftglbitmapfont.h
+	<FTGL/ftgl.h>
+
+1289206259 d:\programming\tsuengine\src\libs\ftgl\ftgl\ftbufferfont.h
+	<FTGL/ftgl.h>
+
+1289206259 d:\programming\tsuengine\src\libs\ftgl\ftgl\ftglextrdfont.h
+	<FTGL/ftgl.h>
+
+1289206259 d:\programming\tsuengine\src\libs\ftgl\ftgl\ftgloutlinefont.h
+	<FTGL/ftgl.h>
+
+1289206259 d:\programming\tsuengine\src\libs\ftgl\ftgl\ftglpixmapfont.h
+	<FTGL/ftgl.h>
+
+1289206259 d:\programming\tsuengine\src\libs\ftgl\ftgl\ftglpolygonfont.h
+	<FTGL/ftgl.h>
+
+1289206259 d:\programming\tsuengine\src\libs\ftgl\ftgl\ftgltexturefont.h
+	<FTGL/ftgl.h>
+
+1289206259 d:\programming\tsuengine\src\libs\ftgl\ftgl\ftlayout.h
+	<FTGL/ftgl.h>
+
+1289206259 d:\programming\tsuengine\src\libs\ftgl\ftgl\ftsimplelayout.h
+	<FTGL/ftgl.h>
+
+1289206264 d:\programming\tsuengine\src\exceptions.h
 	<string>
 	<stdexcept>
 
-1284202300 d:\programming\tsuengine\src\macros.h
-	<windows.h>
-	<cstddef>
-
-1284016196 d:\programming\tsuengine\src\utils.h
+1289206263 d:\programming\tsuengine\src\utils.h
 	<cmath>
 
-1284019796 d:\programming\tsuengine\src\whitebox.h
-	"CGuiPanel.h"
+1289812184 d:\programming\tsuengine\src\font.h
+	<string>
+	<gl/gl.h>
+	"vec2d.h"
+	"datatypes.h"
+	"FTGL/FTGL/ftgl.h"
+	"FontBase.h"
 
-1284016197 source:d:\programming\tsuengine\src\cbaseentity.cpp
+1289567943 d:\programming\tsuengine\src\fontbase.h
+	<string>
+	<gl/gl.h>
+	"datatypes.h"
+
+1289206263 d:\programming\tsuengine\src\utils\stringutils.h
+	<cstring>
+	<string>
+	<cstdarg>
+	<cstdio>
+
+1289206264 source:d:\programming\tsuengine\src\cbaseentity.cpp
 	<vector>
 	"CBaseEntity.h"
 	"CBaseEngine.h"
@@ -1341,12 +210,19 @@
 	"macros.h"
 	"CParamMgr.h"
 
-1284016196 source:d:\programming\tsuengine\src\centmgr.cpp
+1289206263 source:d:\programming\tsuengine\src\centmgr.cpp
 	"CEntMgr.h"
 	"CBaseEntity.h"
 	"const.h"
 
-1289138528 source:d:\programming\tsuengine\src\cguimgr.cpp
+1289206263 source:d:\programming\tsuengine\src\cfontmgr.cpp
+	<cmath>
+	"utils/stringUtils.h"
+	"CFontMgr.h"
+	"Font.h"
+	"macros.h"
+
+1289206263 source:d:\programming\tsuengine\src\cguimgr.cpp
 	"CGuiMgr.h"
 	"CGuiPanel.h"
 	"CMainMenu.h"
@@ -1355,57 +231,33 @@
 	"CBaseEngine.h"
 	"CCenteredWindow.h"
 
-1284628033 d:\programming\tsuengine\src\gui\testpanel.h
-	"CGuiPanel.h"
-
-1288383650 source:d:\programming\tsuengine\src\cinputmgr.cpp
-	"CInputMgr.h"
-	"macros.h"
-	"const.h"
-	"globals.h"
-	"exceptions.h"
+1289206244 d:\programming\tsuengine\src\gui\cguipanel.h
+	<vector>
 	"datatypes.h"
+	"CGuiMgr.h"
 	"CBaseEngine.h"
 
-1284016196 source:d:\programming\tsuengine\src\cparammgr.cpp
-	<vector>
-	<cstdlib>
-	"CParamMgr.h"
-	"datatypes.h"
-	"exceptions.h"
-
-1284639553 source:d:\programming\tsuengine\src\datatypes.cpp
-	"datatypes.h"
-	<cmath>
-	<cstdlib>
-	<windows.h>
-
-1284016196 source:d:\programming\tsuengine\src\exceptions.cpp
-	<exception>
-	"exceptions.h"
-
-1284016196 source:d:\programming\tsuengine\src\globals.cpp
-	"globals.h"
-	<windows.h>
-
-1285327305 source:d:\programming\tsuengine\src\gui\cabstractbutton.cpp
-	"CAbstractButton.h"
-
-1284016186 source:d:\programming\tsuengine\src\gui\cactionlistener.cpp
+1289206244 d:\programming\tsuengine\src\gui\cmainmenu.h
+	"CGuiPanel.h"
 	"CActionListener.h"
+	"CButton.h"
+	"CDraggable.h"
+	"macros.h"
 
-1285235672 d:\programming\tsuengine\src\gui\cactionlistener.h
+1289206244 d:\programming\tsuengine\src\gui\cactionlistener.h
 	"CActionListenerPanel.h"
 	"macros.h"
 
-1284627984 source:d:\programming\tsuengine\src\gui\testpanel.cpp
-	"TestPanel.h"
-	<gl/gl.h>
-	"macros.h"
-	"globals.h"
+1289206244 d:\programming\tsuengine\src\gui\cactionlistenerpanel.h
+
+1289206244 d:\programming\tsuengine\src\gui\cbutton.h
+	"CAbstractButton.h"
 	"CLabel.h"
 
-1288186330 d:\programming\tsuengine\src\gui\clabel.h
+1289206244 d:\programming\tsuengine\src\gui\cabstractbutton.h
+	"CGuiPanel.h"
+
+1289471481 d:\programming\tsuengine\src\gui\clabel.h
 	<string>
 	<map>
 	"vec2d.h"
@@ -1413,288 +265,106 @@
 	"CBaseEngine.h"
 	"Font.h"
 
-1258629808 source:d:\programming\tsuengine\src\libs\glft_font.cpp
-	"GLFT_Font.hpp"
-	<cstring>
-	<string>
-	<windows.h>
-	<cstdlib>
-	"../macros.h"
-
-1286540818 source:d:\programming\tsuengine\src\main.cpp
-	<windows.h>
-	<gl/gl.h>
-	<iostream>
-	<cmath>
-	<string>
-	<exception>
-	"const.h"
+1289206244 d:\programming\tsuengine\src\gui\cdraggable.h
 	"datatypes.h"
-	"globals.h"
-	"CBaseEngine.h"
-	"CBaseEntity.h"
-	"macros.h"
-	"exceptions.h"
+	"CAbstractButton.h"
 
-1284016196 source:d:\programming\tsuengine\src\utils.cpp
-	"utils.h"
+1289206244 d:\programming\tsuengine\src\gui\ccenteredwindow.h
+	"datatypes.h"
+	"CWindow.h"
 
-1288785168 source:d:\programming\tsuengine\src\utils\stringutils.cpp
-	"stringUtils.h"
-
-1288785015 d:\programming\tsuengine\src\utils\stringutils.h
-	<cstring>
-	<string>
-	<cstdarg>
-	<cstdio>
-
-1288426387 source:d:\programming\tsuengine\src\vec2d.cpp
-	"vec2d.h"
-	"macros.h"
-	<cstdio>
-
-1288458210 source:d:\programming\tsuengine\src\vec3d.cpp
-
-1289138016 source:d:\programming\tsuengine\src\gui\cguipanel.cpp
+1289206244 d:\programming\tsuengine\src\gui\cwindow.h
 	"CGuiPanel.h"
-	"macros.h"
-	<gl/gl.h>
-	<typeinfo>
 	"CActionListener.h"
 
-1289168988 source:d:\fast4shoot\programming\tsuengine\src\cbaseengine.cpp
-	<cmath>
-	<windows.h>
-	<gl/gl.h>
-	<gl/glu.h>
-	"CBaseEngine.h"
-	"CBaseEntity.h"
+1289206264 source:d:\programming\tsuengine\src\cinputmgr.cpp
+	"CInputMgr.h"
+	"macros.h"
+	"const.h"
+	"globals.h"
 	"exceptions.h"
-	"macros.h"
-	"CInputMgr.h"
-	"utils.h"
-	"const.h"
+	"datatypes.h"
+	"CBaseEngine.h"
+
+1289206263 source:d:\programming\tsuengine\src\cparammgr.cpp
+	<vector>
+	<cstdlib>
+	"CParamMgr.h"
+	"datatypes.h"
+	"exceptions.h"
+
+1289206263 source:d:\programming\tsuengine\src\font.cpp
 	"Font.h"
-	"utils/stringUtils.h"
-
-1289143005 d:\fast4shoot\programming\tsuengine\src\cbaseengine.h
-	<string>
-	<gl/gl.h>
-	<ctime>
-	"globals.h"
-	"const.h"
-	"datatypes.h"
-	"CBaseEntity.h"
-	"CEntMgr.h"
-	"CInputMgr.h"
-	"CGuiMgr.h"
+	<cmath>
 	"CFontMgr.h"
-
-1282042990 d:\fast4shoot\programming\tsuengine\src\globals.h
-	<windows.h>
-	"datatypes.h"
-
-1285254696 d:\fast4shoot\programming\tsuengine\src\datatypes.h
-	<string>
-	"vec2d.h"
-	"vec3d.h"
-
-1289143005 d:\fast4shoot\programming\tsuengine\src\vec2d.h
-	<cmath>
-	"vecOpBase.h"
-
-1289143005 d:\fast4shoot\programming\tsuengine\src\vec3d.h
-	"vecOpBase.h"
-
-1269179966 d:\fast4shoot\programming\tsuengine\src\const.h
-
-1269179966 d:\fast4shoot\programming\tsuengine\src\cbaseentity.h
-	<string>
-	"datatypes.h"
-	"CParamMgr.h"
-
-1269179966 d:\fast4shoot\programming\tsuengine\src\cparammgr.h
-	<vector>
-	"datatypes.h"
-
-1269179966 d:\fast4shoot\programming\tsuengine\src\centmgr.h
-	"CBaseEntity.h"
-	"datatypes.h"
-	"const.h"
-
-1286574511 d:\fast4shoot\programming\tsuengine\src\cinputmgr.h
-	<dinput.h>
-	"datatypes.h"
 	"macros.h"
 
-1286572303 d:\fast4shoot\programming\tsuengine\src\cguimgr.h
-	"macros.h"
+1289567943 source:d:\programming\tsuengine\src\fontbase.cpp
+	"FontBase.h"
 
-1289165818 d:\fast4shoot\programming\tsuengine\src\gui\cguipanel.h
-	<vector>
+1289210284 source:d:\programming\tsuengine\src\fontwrapped.cpp
+	"FontWrapped.h"
+
+1289566194 d:\programming\tsuengine\src\fontwrapped.h
+	"CBaseEngine.h"
+	"FontBase.h"
+	"Font.h"
+
+1289206263 source:d:\programming\tsuengine\src\datatypes.cpp
 	"datatypes.h"
-	"CGuiMgr.h"
-	"CBaseEngine.h"
-
-1273856250 d:\fast4shoot\programming\tsuengine\src\libs\glft_font.hpp
-	<GL/gl.h>
-	<ft2build.h>
-	<string>
-	<vector>
-	<stdexcept>
-	<cstdarg>
-	<sstream>
-
-1237034726 d:\fast4shoot\programming\tsuengine\src\libs\ft2build.h
-	<freetype/config/ftheader.h>
-
-1237034726 d:\fast4shoot\programming\tsuengine\src\libs\freetype\config\ftheader.h
-
-1269179966 d:\fast4shoot\programming\tsuengine\src\exceptions.h
-	<string>
-	<stdexcept>
-
-1285254696 d:\fast4shoot\programming\tsuengine\src\macros.h
-	<windows.h>
-	<cstddef>
-
-1269179966 d:\fast4shoot\programming\tsuengine\src\utils.h
 	<cmath>
+	<cstdlib>
+	<windows.h>
 
-1269183566 d:\fast4shoot\programming\tsuengine\src\whitebox.h
-	"CGuiPanel.h"
+1289206263 source:d:\programming\tsuengine\src\exceptions.cpp
+	<exception>
+	"exceptions.h"
 
-1269179966 source:d:\fast4shoot\programming\tsuengine\src\cbaseentity.cpp
-	<vector>
-	"CBaseEntity.h"
-	"CBaseEngine.h"
+1289206263 source:d:\programming\tsuengine\src\globals.cpp
 	"globals.h"
-	"macros.h"
-	"CParamMgr.h"
+	<windows.h>
 
-1269179966 source:d:\fast4shoot\programming\tsuengine\src\centmgr.cpp
-	"CEntMgr.h"
-	"CBaseEntity.h"
-	"const.h"
+1289206244 source:d:\programming\tsuengine\src\gui\cabstractbutton.cpp
+	"CAbstractButton.h"
 
-1289143105 source:d:\fast4shoot\programming\tsuengine\src\cguimgr.cpp
-	"CGuiMgr.h"
-	"CGuiPanel.h"
-	"CMainMenu.h"
-	"const.h"
-	"macros.h"
-	"CBaseEngine.h"
+1289206244 source:d:\programming\tsuengine\src\gui\cabstracttoggle.cpp
+	"CAbstractToggle.h"
+
+1289206244 d:\programming\tsuengine\src\gui\cabstracttoggle.h
+	"datatypes.h"
+	"CAbstractButton.h"
+
+1289206244 source:d:\programming\tsuengine\src\gui\cactionlistener.cpp
+	"CActionListener.h"
+
+1289206244 source:d:\programming\tsuengine\src\gui\cactionlistenerpanel.cpp
+	"CActionListenerPanel.h"
+
+1289206244 source:d:\programming\tsuengine\src\gui\cbutton.cpp
+	"CButton.h"
+
+1289206244 source:d:\programming\tsuengine\src\gui\ccenteredwindow.cpp
 	"CCenteredWindow.h"
-
-1285258296 d:\fast4shoot\programming\tsuengine\src\gui\testpanel.h
-	"CGuiPanel.h"
-
-1289143005 source:d:\fast4shoot\programming\tsuengine\src\cinputmgr.cpp
-	"CInputMgr.h"
-	"macros.h"
 	"const.h"
-	"globals.h"
-	"exceptions.h"
-	"datatypes.h"
-	"CBaseEngine.h"
 
-1269179966 source:d:\fast4shoot\programming\tsuengine\src\cparammgr.cpp
-	<vector>
-	<cstdlib>
-	"CParamMgr.h"
-	"datatypes.h"
-	"exceptions.h"
+1289206244 source:d:\programming\tsuengine\src\gui\ccheckbox.cpp
+	"CCheckBox.h"
+	"CLabel.h"
 
-1285254696 source:d:\fast4shoot\programming\tsuengine\src\datatypes.cpp
-	"datatypes.h"
-	<cmath>
-	<cstdlib>
-	<windows.h>
+1289206243 d:\programming\tsuengine\src\gui\ccheckbox.h
+	"CAbstractToggle.h"
 
-1269179966 source:d:\fast4shoot\programming\tsuengine\src\exceptions.cpp
-	<exception>
-	"exceptions.h"
+1289206244 source:d:\programming\tsuengine\src\gui\cdraggable.cpp
+	"CDraggable.h"
 
-1282042990 source:d:\fast4shoot\programming\tsuengine\src\globals.cpp
-	"globals.h"
-	<windows.h>
-
-1289143918 source:d:\fast4shoot\programming\tsuengine\src\gui\cabstractbutton.cpp
-	"CAbstractButton.h"
-
-1269179965 source:d:\fast4shoot\programming\tsuengine\src\gui\cactionlistener.cpp
-	"CActionListener.h"
-
-1285254696 d:\fast4shoot\programming\tsuengine\src\gui\cactionlistener.h
-	"CActionListenerPanel.h"
-	"macros.h"
-
-1289148106 source:d:\fast4shoot\programming\tsuengine\src\gui\cguipanel.cpp
+1289206244 source:d:\programming\tsuengine\src\gui\cguipanel.cpp
 	"CGuiPanel.h"
 	"macros.h"
 	<gl/gl.h>
 	<typeinfo>
 	"CActionListener.h"
 
-1285258296 source:d:\fast4shoot\programming\tsuengine\src\gui\testpanel.cpp
-	"TestPanel.h"
-	<gl/gl.h>
-	"macros.h"
-	"globals.h"
-	"CLabel.h"
-
-1289143005 d:\fast4shoot\programming\tsuengine\src\gui\clabel.h
-	<string>
-	<map>
-	"vec2d.h"
-	"CGuiPanel.h"
-	"CBaseEngine.h"
-	"Font.h"
-
-1279138274 source:d:\fast4shoot\programming\tsuengine\src\libs\glft_font.cpp
-	"GLFT_Font.hpp"
-	<cstring>
-	<string>
-	<windows.h>
-	<cstdio>
-	<cstdlib>
-	"../macros.h"
-
-1289151752 source:d:\fast4shoot\programming\tsuengine\src\main.cpp
-	<windows.h>
-	<gl/gl.h>
-	<iostream>
-	<cmath>
-	<string>
-	<exception>
-	"const.h"
-	"datatypes.h"
-	"globals.h"
-	"CBaseEngine.h"
-	"CBaseEntity.h"
-	"macros.h"
-	"exceptions.h"
-
-1269179966 source:d:\fast4shoot\programming\tsuengine\src\utils.cpp
-	"utils.h"
-
-1289143005 source:d:\fast4shoot\programming\tsuengine\src\utils\stringutils.cpp
-	"stringUtils.h"
-
-1289143005 d:\fast4shoot\programming\tsuengine\src\utils\stringutils.h
-	<cstring>
-	<string>
-	<cstdarg>
-	<cstdio>
-
-1289143005 source:d:\fast4shoot\programming\tsuengine\src\vec2d.cpp
-	"vec2d.h"
-	"macros.h"
-	<cstdio>
-
-1289143005 source:d:\fast4shoot\programming\tsuengine\src\vec3d.cpp
-
-1288785629 source:d:\programming\tsuengine\src\gui\clabel.cpp
+1289471481 source:d:\programming\tsuengine\src\gui\clabel.cpp
 	"CLabel.h"
 	<string>
 	"vec2d.h"
@@ -1703,347 +373,95 @@
 	"CBaseEngine.h"
 	<gl/gl.h>
 
-1288785015 source:d:\programming\tsuengine\src\cfontmgr.cpp
-	<cmath>
+1289469240 source:d:\programming\tsuengine\src\gui\cmainmenu.cpp
+	"CMainMenu.h"
+	"CCenteredWindow.h"
+	"CCheckBox.h"
+	"CTextField.h"
+	"CConsole.h"
+
+1289206244 d:\programming\tsuengine\src\gui\ctextfield.h
+	"CGuiPanel.h"
+	"CLabel.h"
+
+1289206244 d:\programming\tsuengine\src\gui\cconsole.h
+	"CWindow.h"
+
+1289377640 source:d:\programming\tsuengine\src\gui\ctext.cpp
+	"CText.h"
+
+1289812950 d:\programming\tsuengine\src\gui\ctext.h
+	"CGuiPanel.h"
+	"FontWrapped.h"
+	"macros.h"
 	"utils/stringUtils.h"
-	"CFontMgr.h"
-	"Font.h"
-	"macros.h"
 
-1212672920 d:\programming\tsuengine\src\libs\ftgl\ftgl.h
-	<ft2build.h>
-	<FTGL/FTPoint.h>
-	<FTGL/FTBBox.h>
-	<FTGL/FTBuffer.h>
-	<FTGL/FTGlyph.h>
-	<FTGL/FTBitmapGlyph.h>
-	<FTGL/FTBufferGlyph.h>
-	<FTGL/FTExtrdGlyph.h>
-	<FTGL/FTOutlineGlyph.h>
-	<FTGL/FTPixmapGlyph.h>
-	<FTGL/FTPolyGlyph.h>
-	<FTGL/FTTextureGlyph.h>
-	<FTGL/FTFont.h>
-	<FTGL/FTGLBitmapFont.h>
-	<FTGL/FTBufferFont.h>
-	<FTGL/FTGLExtrdFont.h>
-	<FTGL/FTGLOutlineFont.h>
-	<FTGL/FTGLPixmapFont.h>
-	<FTGL/FTGLPolygonFont.h>
-	<FTGL/FTGLTextureFont.h>
-	<FTGL/FTLayout.h>
-	<FTGL/FTSimpleLayout.h>
+1289206244 source:d:\programming\tsuengine\src\gui\ctextfield.cpp
+	"CTextField.h"
 
-1213011300 d:\programming\tsuengine\src\libs\ftgl\ftpoint.h
-	<FTGL/ftgl.h>
-
-1210503100 d:\programming\tsuengine\src\libs\ftgl\ftbbox.h
-	<FTGL/ftgl.h>
-
-1213010374 d:\programming\tsuengine\src\libs\ftgl\ftbuffer.h
-	<FTGL/ftgl.h>
-
-1213006098 d:\programming\tsuengine\src\libs\ftgl\ftglyph.h
-	<FTGL/ftgl.h>
-
-1210347256 d:\programming\tsuengine\src\libs\ftgl\ftbitmapglyph.h
-	<FTGL/ftgl.h>
-
-1213276992 d:\programming\tsuengine\src\libs\ftgl\ftbufferglyph.h
-	<FTGL/ftgl.h>
-
-1210347248 d:\programming\tsuengine\src\libs\ftgl\ftextrdglyph.h
-	<FTGL/ftgl.h>
-
-1210347420 d:\programming\tsuengine\src\libs\ftgl\ftoutlineglyph.h
-	<FTGL/ftgl.h>
-
-1209999112 d:\programming\tsuengine\src\libs\ftgl\ftpixmapglyph.h
-	<FTGL/ftgl.h>
-
-1210503102 d:\programming\tsuengine\src\libs\ftgl\ftpolyglyph.h
-	<FTGL/ftgl.h>
-
-1209999112 d:\programming\tsuengine\src\libs\ftgl\fttextureglyph.h
-	<FTGL/ftgl.h>
-
-1213002796 d:\programming\tsuengine\src\libs\ftgl\ftfont.h
-	<FTGL/ftgl.h>
-
-1209927968 d:\programming\tsuengine\src\libs\ftgl\ftglbitmapfont.h
-	<FTGL/ftgl.h>
-
-1211211074 d:\programming\tsuengine\src\libs\ftgl\ftbufferfont.h
-	<FTGL/ftgl.h>
-
-1209927976 d:\programming\tsuengine\src\libs\ftgl\ftglextrdfont.h
-	<FTGL/ftgl.h>
-
-1209927982 d:\programming\tsuengine\src\libs\ftgl\ftgloutlinefont.h
-	<FTGL/ftgl.h>
-
-1209927986 d:\programming\tsuengine\src\libs\ftgl\ftglpixmapfont.h
-	<FTGL/ftgl.h>
-
-1209927990 d:\programming\tsuengine\src\libs\ftgl\ftglpolygonfont.h
-	<FTGL/ftgl.h>
-
-1209927994 d:\programming\tsuengine\src\libs\ftgl\ftgltexturefont.h
-	<FTGL/ftgl.h>
-
-1210530212 d:\programming\tsuengine\src\libs\ftgl\ftlayout.h
-	<FTGL/ftgl.h>
-
-1210530212 d:\programming\tsuengine\src\libs\ftgl\ftsimplelayout.h
-	<FTGL/ftgl.h>
-
-1279133048 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftgl.h
-	<ft2build.h>
-	<FTGL/FTPoint.h>
-	<FTGL/FTBBox.h>
-	<FTGL/FTBuffer.h>
-	<FTGL/FTGlyph.h>
-	<FTGL/FTBitmapGlyph.h>
-	<FTGL/FTBufferGlyph.h>
-	<FTGL/FTExtrdGlyph.h>
-	<FTGL/FTOutlineGlyph.h>
-	<FTGL/FTPixmapGlyph.h>
-	<FTGL/FTPolyGlyph.h>
-	<FTGL/FTTextureGlyph.h>
-	<FTGL/FTFont.h>
-	<FTGL/FTGLBitmapFont.h>
-	<FTGL/FTBufferFont.h>
-	<FTGL/FTGLExtrdFont.h>
-	<FTGL/FTGLOutlineFont.h>
-	<FTGL/FTGLPixmapFont.h>
-	<FTGL/FTGLPolygonFont.h>
-	<FTGL/FTGLTextureFont.h>
-	<FTGL/FTLayout.h>
-	<FTGL/FTSimpleLayout.h>
-
-1279133048 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftpoint.h
-	<FTGL/ftgl.h>
-
-1279133048 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftbbox.h
-	<FTGL/ftgl.h>
-
-1279133048 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftbuffer.h
-	<FTGL/ftgl.h>
-
-1279133048 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftglyph.h
-	<FTGL/ftgl.h>
-
-1279133048 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftbitmapglyph.h
-	<FTGL/ftgl.h>
-
-1279133048 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftbufferglyph.h
-	<FTGL/ftgl.h>
-
-1279133048 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftextrdglyph.h
-	<FTGL/ftgl.h>
-
-1279133048 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftoutlineglyph.h
-	<FTGL/ftgl.h>
-
-1279133048 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftpixmapglyph.h
-	<FTGL/ftgl.h>
-
-1279133048 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftpolyglyph.h
-	<FTGL/ftgl.h>
-
-1279133048 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\fttextureglyph.h
-	<FTGL/ftgl.h>
-
-1279133048 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftfont.h
-	<FTGL/ftgl.h>
-
-1279133048 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftglbitmapfont.h
-	<FTGL/ftgl.h>
-
-1279133048 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftbufferfont.h
-	<FTGL/ftgl.h>
-
-1279133048 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftglextrdfont.h
-	<FTGL/ftgl.h>
-
-1279133048 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftgloutlinefont.h
-	<FTGL/ftgl.h>
-
-1279133048 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftglpixmapfont.h
-	<FTGL/ftgl.h>
-
-1279133048 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftglpolygonfont.h
-	<FTGL/ftgl.h>
-
-1279133048 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftgltexturefont.h
-	<FTGL/ftgl.h>
-
-1279133048 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftlayout.h
-	<FTGL/ftgl.h>
-
-1279133048 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftsimplelayout.h
-	<FTGL/ftgl.h>
-
-1289143005 source:d:\fast4shoot\programming\tsuengine\src\cfontmgr.cpp
-	<cmath>
-	"utils/stringUtils.h"
-	"CFontMgr.h"
-	"Font.h"
-	"macros.h"
-
-1289169299 source:d:\fast4shoot\programming\tsuengine\src\gui\clabel.cpp
+1289206244 source:d:\programming\tsuengine\src\gui\cwindow.cpp
+	"CWindow.h"
+	"CDraggable.h"
 	"CLabel.h"
-	<string>
-	"vec2d.h"
-	"CGuiPanel.h"
-	"macros.h"
-	"CBaseEngine.h"
-	<gl/gl.h>
+	"CButton.h"
 
-1212669320 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftgl\ftgl.h
-	<ft2build.h>
-	<FTGL/FTPoint.h>
-	<FTGL/FTBBox.h>
-	<FTGL/FTBuffer.h>
-	<FTGL/FTGlyph.h>
-	<FTGL/FTBitmapGlyph.h>
-	<FTGL/FTBufferGlyph.h>
-	<FTGL/FTExtrdGlyph.h>
-	<FTGL/FTOutlineGlyph.h>
-	<FTGL/FTPixmapGlyph.h>
-	<FTGL/FTPolyGlyph.h>
-	<FTGL/FTTextureGlyph.h>
-	<FTGL/FTFont.h>
-	<FTGL/FTGLBitmapFont.h>
-	<FTGL/FTBufferFont.h>
-	<FTGL/FTGLExtrdFont.h>
-	<FTGL/FTGLOutlineFont.h>
-	<FTGL/FTGLPixmapFont.h>
-	<FTGL/FTGLPolygonFont.h>
-	<FTGL/FTGLTextureFont.h>
-	<FTGL/FTLayout.h>
-	<FTGL/FTSimpleLayout.h>
-
-1213007700 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftgl\ftpoint.h
-	<FTGL/ftgl.h>
-
-1210499500 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftgl\ftbbox.h
-	<FTGL/ftgl.h>
-
-1213006774 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftgl\ftbuffer.h
-	<FTGL/ftgl.h>
-
-1213002498 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftgl\ftglyph.h
-	<FTGL/ftgl.h>
-
-1210343656 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftgl\ftbitmapglyph.h
-	<FTGL/ftgl.h>
-
-1213273392 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftgl\ftbufferglyph.h
-	<FTGL/ftgl.h>
-
-1210343648 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftgl\ftextrdglyph.h
-	<FTGL/ftgl.h>
-
-1210343820 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftgl\ftoutlineglyph.h
-	<FTGL/ftgl.h>
-
-1209995512 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftgl\ftpixmapglyph.h
-	<FTGL/ftgl.h>
-
-1210499502 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftgl\ftpolyglyph.h
-	<FTGL/ftgl.h>
-
-1209995512 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftgl\fttextureglyph.h
-	<FTGL/ftgl.h>
-
-1212999196 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftgl\ftfont.h
-	<FTGL/ftgl.h>
-
-1209924368 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftgl\ftglbitmapfont.h
-	<FTGL/ftgl.h>
-
-1211207474 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftgl\ftbufferfont.h
-	<FTGL/ftgl.h>
-
-1209924376 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftgl\ftglextrdfont.h
-	<FTGL/ftgl.h>
-
-1209924382 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftgl\ftgloutlinefont.h
-	<FTGL/ftgl.h>
-
-1209924386 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftgl\ftglpixmapfont.h
-	<FTGL/ftgl.h>
-
-1209924390 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftgl\ftglpolygonfont.h
-	<FTGL/ftgl.h>
-
-1209924394 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftgl\ftgltexturefont.h
-	<FTGL/ftgl.h>
-
-1210526612 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftgl\ftlayout.h
-	<FTGL/ftgl.h>
-
-1210526612 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftgl\ftsimplelayout.h
-	<FTGL/ftgl.h>
-
-1213006572 source:d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftbuffer.cpp
+1289206262 source:d:\programming\tsuengine\src\libs\ftgl\ftbuffer.cpp
 	"config.h"
 	"FTGL/ftgl.h"
 
-1211477902 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\config.h
+1289206262 d:\programming\tsuengine\src\libs\ftgl\config.h
 
-1213012302 source:d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftcharmap.cpp
+1289206262 source:d:\programming\tsuengine\src\libs\ftgl\ftcharmap.cpp
 	"config.h"
 	"FTFace.h"
 	"FTCharmap.h"
 
-1210504026 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftface.h
+1289206262 d:\programming\tsuengine\src\libs\ftgl\ftface.h
 	<ft2build.h>
 	"FTGL/ftgl.h"
 	"FTSize.h"
 
-1209579562 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftsize.h
+1289206262 d:\programming\tsuengine\src\libs\ftgl\ftsize.h
 	<ft2build.h>
 	"FTGL/ftgl.h"
 
-1210052584 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftcharmap.h
+1289206262 d:\programming\tsuengine\src\libs\ftgl\ftcharmap.h
 	<ft2build.h>
 	"FTGL/ftgl.h"
 	"FTCharToGlyphIndexMap.h"
 
-1209887286 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftchartoglyphindexmap.h
+1289206262 d:\programming\tsuengine\src\libs\ftgl\ftchartoglyphindexmap.h
 	<stdlib.h>
 	"FTGL/ftgl.h"
 
-1213012436 source:d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftcontour.cpp
+1289206262 source:d:\programming\tsuengine\src\libs\ftgl\ftcontour.cpp
 	"config.h"
 	"FTContour.h"
 	<math.h>
 
-1213012458 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftcontour.h
+1289206262 d:\programming\tsuengine\src\libs\ftgl\ftcontour.h
 	"FTGL/ftgl.h"
 	"FTVector.h"
 
-1209579562 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftvector.h
+1289206262 d:\programming\tsuengine\src\libs\ftgl\ftvector.h
 	"FTGL/ftgl.h"
 
-1279143267 source:d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftface.cpp
+1289206262 source:d:\programming\tsuengine\src\libs\ftgl\ftface.cpp
 	"config.h"
 	"FTFace.h"
 	"FTLibrary.h"
 
-1209579562 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftlibrary.h
+1289206262 d:\programming\tsuengine\src\libs\ftgl\ftlibrary.h
 	<ft2build.h>
 	"FTGL/ftgl.h"
 
-1213012312 source:d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftfont\ftbitmapfont.cpp
+1289206260 source:d:\programming\tsuengine\src\libs\ftgl\ftfont\ftbitmapfont.cpp
 	"config.h"
 	"FTGL/ftgl.h"
 	"FTInternals.h"
 	"FTBitmapFontImpl.h"
 
-1213012228 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftinternals.h
+1289206262 d:\programming\tsuengine\src\libs\ftgl\ftinternals.h
 	"FTGL/ftgl.h"
 	<stdlib.h>
 	<stdio.h>
@@ -2057,33 +475,33 @@
 	<mesa/glu.h>
 	<GL/glu.h>
 
-1213012460 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftfont\ftbitmapfontimpl.h
+1289206260 d:\programming\tsuengine\src\libs\ftgl\ftfont\ftbitmapfontimpl.h
 	"FTFontImpl.h"
 
-1213012462 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftfont\ftfontimpl.h
+1289206260 d:\programming\tsuengine\src\libs\ftgl\ftfont\ftfontimpl.h
 	"FTGL/ftgl.h"
 	"FTFace.h"
 
-1213260724 source:d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftfont\ftbufferfont.cpp
+1289206260 source:d:\programming\tsuengine\src\libs\ftgl\ftfont\ftbufferfont.cpp
 	"config.h"
 	<wchar.h>
 	"FTGL/ftgl.h"
 	"FTInternals.h"
 	"FTBufferFontImpl.h"
 
-1213012112 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftfont\ftbufferfontimpl.h
+1289206260 d:\programming\tsuengine\src\libs\ftgl\ftfont\ftbufferfontimpl.h
 	"FTFontImpl.h"
 
-1213012318 source:d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftfont\ftextrudefont.cpp
+1289206260 source:d:\programming\tsuengine\src\libs\ftgl\ftfont\ftextrudefont.cpp
 	"config.h"
 	"FTGL/ftgl.h"
 	"FTInternals.h"
 	"FTExtrudeFontImpl.h"
 
-1213012460 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftfont\ftextrudefontimpl.h
+1289206260 d:\programming\tsuengine\src\libs\ftgl\ftfont\ftextrudefontimpl.h
 	"FTFontImpl.h"
 
-1279143134 source:d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftfont\ftfont.cpp
+1289206260 source:d:\programming\tsuengine\src\libs\ftgl\ftfont\ftfont.cpp
 	"config.h"
 	"FTInternals.h"
 	"FTUnicode.h"
@@ -2097,49 +515,49 @@
 	"FTGlyphContainer.h"
 	"FTFace.h"
 
-1212480970 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftunicode.h
+1289206262 d:\programming\tsuengine\src\libs\ftgl\ftunicode.h
 
-1213012462 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftfont\ftoutlinefontimpl.h
+1289206260 d:\programming\tsuengine\src\libs\ftgl\ftfont\ftoutlinefontimpl.h
 	"FTFontImpl.h"
 
-1213012464 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftfont\ftpixmapfontimpl.h
+1289206260 d:\programming\tsuengine\src\libs\ftgl\ftfont\ftpixmapfontimpl.h
 	"FTFontImpl.h"
 
-1213012464 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftfont\ftpolygonfontimpl.h
+1289206260 d:\programming\tsuengine\src\libs\ftgl\ftfont\ftpolygonfontimpl.h
 	"FTFontImpl.h"
 
-1213012466 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftfont\fttexturefontimpl.h
+1289206260 d:\programming\tsuengine\src\libs\ftgl\ftfont\fttexturefontimpl.h
 	"FTFontImpl.h"
 	"FTVector.h"
 
-1213012184 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftglyphcontainer.h
+1289206262 d:\programming\tsuengine\src\libs\ftgl\ftglyphcontainer.h
 	<ft2build.h>
 	"FTGL/ftgl.h"
 	"FTVector.h"
 
-1213012326 source:d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftfont\ftfontglue.cpp
+1289206260 source:d:\programming\tsuengine\src\libs\ftgl\ftfont\ftfontglue.cpp
 	"config.h"
 	"FTInternals.h"
 
-1213012328 source:d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftfont\ftoutlinefont.cpp
+1289206260 source:d:\programming\tsuengine\src\libs\ftgl\ftfont\ftoutlinefont.cpp
 	"config.h"
 	"FTGL/ftgl.h"
 	"FTInternals.h"
 	"FTOutlineFontImpl.h"
 
-1213012330 source:d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftfont\ftpixmapfont.cpp
+1289206260 source:d:\programming\tsuengine\src\libs\ftgl\ftfont\ftpixmapfont.cpp
 	"config.h"
 	"FTGL/ftgl.h"
 	"FTInternals.h"
 	"FTPixmapFontImpl.h"
 
-1213012332 source:d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftfont\ftpolygonfont.cpp
+1289206260 source:d:\programming\tsuengine\src\libs\ftgl\ftfont\ftpolygonfont.cpp
 	"config.h"
 	"FTGL/ftgl.h"
 	"FTInternals.h"
 	"FTPolygonFontImpl.h"
 
-1213012332 source:d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftfont\fttexturefont.cpp
+1289206260 source:d:\programming\tsuengine\src\libs\ftgl\ftfont\fttexturefont.cpp
 	"config.h"
 	<cassert>
 	<string>
@@ -2148,40 +566,40 @@
 	"../FTGlyph/FTTextureGlyphImpl.h"
 	"./FTTextureFontImpl.h"
 
-1213012214 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftglyph\fttextureglyphimpl.h
+1289206262 d:\programming\tsuengine\src\libs\ftgl\ftglyph\fttextureglyphimpl.h
 	"FTGlyphImpl.h"
 
-1213012200 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftglyph\ftglyphimpl.h
+1289206262 d:\programming\tsuengine\src\libs\ftgl\ftglyph\ftglyphimpl.h
 	"FTGL/ftgl.h"
 
-1213012334 source:d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftglyphcontainer.cpp
+1289206262 source:d:\programming\tsuengine\src\libs\ftgl\ftglyphcontainer.cpp
 	"config.h"
 	"FTGL/ftgl.h"
 	"FTGlyphContainer.h"
 	"FTFace.h"
 	"FTCharmap.h"
 
-1213012336 source:d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftglyph\ftbitmapglyph.cpp
+1289206262 source:d:\programming\tsuengine\src\libs\ftgl\ftglyph\ftbitmapglyph.cpp
 	"config.h"
 	<string>
 	"FTGL/ftgl.h"
 	"FTInternals.h"
 	"FTBitmapGlyphImpl.h"
 
-1213012192 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftglyph\ftbitmapglyphimpl.h
+1289206262 d:\programming\tsuengine\src\libs\ftgl\ftglyph\ftbitmapglyphimpl.h
 	"FTGlyphImpl.h"
 
-1213006130 source:d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftglyph\ftbufferglyph.cpp
+1289206262 source:d:\programming\tsuengine\src\libs\ftgl\ftglyph\ftbufferglyph.cpp
 	"config.h"
 	<string>
 	"FTGL/ftgl.h"
 	"FTInternals.h"
 	"FTBufferGlyphImpl.h"
 
-1211306882 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftglyph\ftbufferglyphimpl.h
+1289206262 d:\programming\tsuengine\src\libs\ftgl\ftglyph\ftbufferglyphimpl.h
 	"FTGlyphImpl.h"
 
-1213012338 source:d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftglyph\ftextrudeglyph.cpp
+1289206262 source:d:\programming\tsuengine\src\libs\ftgl\ftglyph\ftextrudeglyph.cpp
 	"config.h"
 	<iostream>
 	"FTGL/ftgl.h"
@@ -2189,81 +607,81 @@
 	"FTExtrudeGlyphImpl.h"
 	"FTVectoriser.h"
 
-1213012196 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftglyph\ftextrudeglyphimpl.h
+1289206262 d:\programming\tsuengine\src\libs\ftgl\ftglyph\ftextrudeglyphimpl.h
 	"FTGlyphImpl.h"
 
-1213012288 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftvectoriser.h
+1289206262 d:\programming\tsuengine\src\libs\ftgl\ftvectoriser.h
 	"FTGL/ftgl.h"
 	"FTContour.h"
 	"FTList.h"
 	"FTVector.h"
 
-1209579562 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftlist.h
+1289206262 d:\programming\tsuengine\src\libs\ftgl\ftlist.h
 	"FTGL/ftgl.h"
 
-1213012340 source:d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftglyph\ftglyph.cpp
+1289206262 source:d:\programming\tsuengine\src\libs\ftgl\ftglyph\ftglyph.cpp
 	"config.h"
 	"FTGL/ftgl.h"
 	"FTInternals.h"
 	"FTGlyphImpl.h"
 
-1213273426 source:d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftglyph\ftglyphglue.cpp
+1289206262 source:d:\programming\tsuengine\src\libs\ftgl\ftglyph\ftglyphglue.cpp
 	"config.h"
 	"FTGL/ftgl.h"
 	"FTInternals.h"
 
-1213012354 source:d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftglyph\ftoutlineglyph.cpp
+1289206262 source:d:\programming\tsuengine\src\libs\ftgl\ftglyph\ftoutlineglyph.cpp
 	"config.h"
 	"FTGL/ftgl.h"
 	"FTInternals.h"
 	"FTOutlineGlyphImpl.h"
 	"FTVectoriser.h"
 
-1213012202 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftglyph\ftoutlineglyphimpl.h
+1289206262 d:\programming\tsuengine\src\libs\ftgl\ftglyph\ftoutlineglyphimpl.h
 	"FTGlyphImpl.h"
 
-1213012356 source:d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftglyph\ftpixmapglyph.cpp
+1289206262 source:d:\programming\tsuengine\src\libs\ftgl\ftglyph\ftpixmapglyph.cpp
 	"config.h"
 	<math.h>
 	"FTGL/ftgl.h"
 	"FTInternals.h"
 	"FTPixmapGlyphImpl.h"
 
-1213012204 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftglyph\ftpixmapglyphimpl.h
+1289206262 d:\programming\tsuengine\src\libs\ftgl\ftglyph\ftpixmapglyphimpl.h
 	"FTGlyphImpl.h"
 
-1213012362 source:d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftglyph\ftpolygonglyph.cpp
+1289206262 source:d:\programming\tsuengine\src\libs\ftgl\ftglyph\ftpolygonglyph.cpp
 	"config.h"
 	"FTGL/ftgl.h"
 	"FTInternals.h"
 	"FTPolygonGlyphImpl.h"
 	"FTVectoriser.h"
 
-1213012210 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftglyph\ftpolygonglyphimpl.h
+1289206262 d:\programming\tsuengine\src\libs\ftgl\ftglyph\ftpolygonglyphimpl.h
 	"FTGlyphImpl.h"
 
-1281885722 source:d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftglyph\fttextureglyph.cpp
+1289206262 source:d:\programming\tsuengine\src\libs\ftgl\ftglyph\fttextureglyph.cpp
 	"config.h"
 	<math.h>
 	"FTGL/ftgl.h"
 	"FTInternals.h"
 	"FTTextureGlyphImpl.h"
 
-1213012366 source:d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftlayout\ftlayout.cpp
+1289206261 source:d:\programming\tsuengine\src\libs\ftgl\ftlayout\ftlayout.cpp
 	"config.h"
 	"FTGL/ftgl.h"
 	"../FTFont/FTFontImpl.h"
 	"./FTLayoutImpl.h"
 
-1213012232 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftlayout\ftlayoutimpl.h
+1289206261 d:\programming\tsuengine\src\libs\ftgl\ftlayout\ftlayoutimpl.h
 	"FTSize.h"
 	"FTGlyphContainer.h"
 
-1213012372 source:d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftlayout\ftlayoutglue.cpp
+1289206261 source:d:\programming\tsuengine\src\libs\ftgl\ftlayout\ftlayoutglue.cpp
 	"config.h"
 	"FTInternals.h"
 
-1213012374 source:d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftlayout\ftsimplelayout.cpp
+1289206261 source:d:\programming\tsuengine\src\libs\ftgl\ftlayout\ftsimplelayout.cpp
 	"config.h"
 	<ctype.h>
 	<wctype.h>
@@ -2272,667 +690,57 @@
 	"FTGlyphContainer.h"
 	"FTSimpleLayoutImpl.h"
 
-1213012234 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftlayout\ftsimplelayoutimpl.h
+1289206261 d:\programming\tsuengine\src\libs\ftgl\ftlayout\ftsimplelayoutimpl.h
 	"FTLayoutImpl.h"
 
-1209476564 source:d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftlibrary.cpp
+1289206262 source:d:\programming\tsuengine\src\libs\ftgl\ftlibrary.cpp
 	"config.h"
 	"FTLibrary.h"
 
-1213012386 source:d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftpoint.cpp
+1289206262 source:d:\programming\tsuengine\src\libs\ftgl\ftpoint.cpp
 	"config.h"
 	<math.h>
 	"FTGL/ftgl.h"
 
-1281882357 source:d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftsize.cpp
+1289206262 source:d:\programming\tsuengine\src\libs\ftgl\ftsize.cpp
 	"macros.h"
 	"config.h"
 	"FTSize.h"
 
-1213012416 source:d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftvectoriser.cpp
+1289206262 source:d:\programming\tsuengine\src\libs\ftgl\ftvectoriser.cpp
 	"config.h"
 	"FTInternals.h"
 	"FTVectoriser.h"
 
-1289169220 source:d:\fast4shoot\programming\tsuengine\src\font.cpp
-	"Font.h"
-	<cmath>
-	"CFontMgr.h"
-	"macros.h"
-
-1289169184 d:\fast4shoot\programming\tsuengine\src\font.h
-	<string>
-	<gl/gl.h>
-	"vec2d.h"
-	"datatypes.h"
-	"FTGL/FTGL/ftgl.h"
-	"FontBase.h"
-
-1289143005 d:\fast4shoot\programming\tsuengine\src\cfontmgr.h
-	<map>
-	<string>
-	"FTGL/FTGL/ftgl.h"
-
-1288784357 d:\programming\tsuengine\src\cfontmgr.h
-	<map>
-	<string>
-	"FTGL/FTGL/ftgl.h"
-
-1284016192 d:\programming\tsuengine\src\libs\ftgl\ftgl\ftgl.h
-	<ft2build.h>
-	<FTGL/FTPoint.h>
-	<FTGL/FTBBox.h>
-	<FTGL/FTBuffer.h>
-	<FTGL/FTGlyph.h>
-	<FTGL/FTBitmapGlyph.h>
-	<FTGL/FTBufferGlyph.h>
-	<FTGL/FTExtrdGlyph.h>
-	<FTGL/FTOutlineGlyph.h>
-	<FTGL/FTPixmapGlyph.h>
-	<FTGL/FTPolyGlyph.h>
-	<FTGL/FTTextureGlyph.h>
-	<FTGL/FTFont.h>
-	<FTGL/FTGLBitmapFont.h>
-	<FTGL/FTBufferFont.h>
-	<FTGL/FTGLExtrdFont.h>
-	<FTGL/FTGLOutlineFont.h>
-	<FTGL/FTGLPixmapFont.h>
-	<FTGL/FTGLPolygonFont.h>
-	<FTGL/FTGLTextureFont.h>
-	<FTGL/FTLayout.h>
-	<FTGL/FTSimpleLayout.h>
-
-1284016192 d:\programming\tsuengine\src\libs\ftgl\ftgl\ftpoint.h
-	<FTGL/ftgl.h>
-
-1284016192 d:\programming\tsuengine\src\libs\ftgl\ftgl\ftbbox.h
-	<FTGL/ftgl.h>
-
-1284016192 d:\programming\tsuengine\src\libs\ftgl\ftgl\ftbuffer.h
-	<FTGL/ftgl.h>
-
-1284016192 d:\programming\tsuengine\src\libs\ftgl\ftgl\ftglyph.h
-	<FTGL/ftgl.h>
-
-1284016192 d:\programming\tsuengine\src\libs\ftgl\ftgl\ftbitmapglyph.h
-	<FTGL/ftgl.h>
-
-1284016192 d:\programming\tsuengine\src\libs\ftgl\ftgl\ftbufferglyph.h
-	<FTGL/ftgl.h>
-
-1284016192 d:\programming\tsuengine\src\libs\ftgl\ftgl\ftextrdglyph.h
-	<FTGL/ftgl.h>
-
-1284016192 d:\programming\tsuengine\src\libs\ftgl\ftgl\ftoutlineglyph.h
-	<FTGL/ftgl.h>
-
-1284016192 d:\programming\tsuengine\src\libs\ftgl\ftgl\ftpixmapglyph.h
-	<FTGL/ftgl.h>
-
-1284016192 d:\programming\tsuengine\src\libs\ftgl\ftgl\ftpolyglyph.h
-	<FTGL/ftgl.h>
-
-1284016192 d:\programming\tsuengine\src\libs\ftgl\ftgl\fttextureglyph.h
-	<FTGL/ftgl.h>
-
-1284016192 d:\programming\tsuengine\src\libs\ftgl\ftgl\ftfont.h
-	<FTGL/ftgl.h>
-
-1284016192 d:\programming\tsuengine\src\libs\ftgl\ftgl\ftglbitmapfont.h
-	<FTGL/ftgl.h>
-
-1284016192 d:\programming\tsuengine\src\libs\ftgl\ftgl\ftbufferfont.h
-	<FTGL/ftgl.h>
-
-1284016192 d:\programming\tsuengine\src\libs\ftgl\ftgl\ftglextrdfont.h
-	<FTGL/ftgl.h>
-
-1284016192 d:\programming\tsuengine\src\libs\ftgl\ftgl\ftgloutlinefont.h
-	<FTGL/ftgl.h>
-
-1284016192 d:\programming\tsuengine\src\libs\ftgl\ftgl\ftglpixmapfont.h
-	<FTGL/ftgl.h>
-
-1284016192 d:\programming\tsuengine\src\libs\ftgl\ftgl\ftglpolygonfont.h
-	<FTGL/ftgl.h>
-
-1284016192 d:\programming\tsuengine\src\libs\ftgl\ftgl\ftgltexturefont.h
-	<FTGL/ftgl.h>
-
-1284016192 d:\programming\tsuengine\src\libs\ftgl\ftgl\ftlayout.h
-	<FTGL/ftgl.h>
-
-1284016192 d:\programming\tsuengine\src\libs\ftgl\ftgl\ftsimplelayout.h
-	<FTGL/ftgl.h>
-
-1288784565 d:\programming\tsuengine\src\font.h
-	<string>
-	<gl/gl.h>
-	"vec2d.h"
-	"datatypes.h"
-	"FTGL/FTGL/ftgl.h"
-
-1288784565 source:d:\programming\tsuengine\src\font.cpp
-	"Font.h"
-	<cmath>
-	"CFontMgr.h"
-	"macros.h"
-
-1284016196 source:d:\programming\tsuengine\src\libs\ftgl\ftbuffer.cpp
-	"config.h"
-	"FTGL/ftgl.h"
-
-1284016196 d:\programming\tsuengine\src\libs\ftgl\config.h
-
-1284016196 source:d:\programming\tsuengine\src\libs\ftgl\ftcharmap.cpp
-	"config.h"
-	"FTFace.h"
-	"FTCharmap.h"
-
-1284016196 d:\programming\tsuengine\src\libs\ftgl\ftface.h
-	<ft2build.h>
-	"FTGL/ftgl.h"
-	"FTSize.h"
-
-1284016196 d:\programming\tsuengine\src\libs\ftgl\ftsize.h
-	<ft2build.h>
-	"FTGL/ftgl.h"
-
-1284016196 d:\programming\tsuengine\src\libs\ftgl\ftcharmap.h
-	<ft2build.h>
-	"FTGL/ftgl.h"
-	"FTCharToGlyphIndexMap.h"
-
-1284016196 d:\programming\tsuengine\src\libs\ftgl\ftchartoglyphindexmap.h
-	<stdlib.h>
-	"FTGL/ftgl.h"
-
-1284016196 source:d:\programming\tsuengine\src\libs\ftgl\ftcontour.cpp
-	"config.h"
-	"FTContour.h"
-	<math.h>
-
-1284016196 d:\programming\tsuengine\src\libs\ftgl\ftcontour.h
-	"FTGL/ftgl.h"
-	"FTVector.h"
-
-1284016196 d:\programming\tsuengine\src\libs\ftgl\ftvector.h
-	"FTGL/ftgl.h"
-
-1284016196 source:d:\programming\tsuengine\src\libs\ftgl\ftface.cpp
-	"config.h"
-	"FTFace.h"
-	"FTLibrary.h"
-
-1284016196 d:\programming\tsuengine\src\libs\ftgl\ftlibrary.h
-	<ft2build.h>
-	"FTGL/ftgl.h"
-
-1284016193 source:d:\programming\tsuengine\src\libs\ftgl\ftfont\ftbitmapfont.cpp
-	"config.h"
-	"FTGL/ftgl.h"
-	"FTInternals.h"
-	"FTBitmapFontImpl.h"
-
-1284016196 d:\programming\tsuengine\src\libs\ftgl\ftinternals.h
-	"FTGL/ftgl.h"
-	<stdlib.h>
-	<stdio.h>
+1289471819 source:d:\programming\tsuengine\src\main.cpp
 	<windows.h>
-	<GL/gl.h>
-	<GL/glu.h>
-	"SDL_opengl.h"
-	<OpenGL/gl.h>
-	<OpenGL/glu.h>
-	<GL/gl.h>
-	<mesa/glu.h>
-	<GL/glu.h>
-
-1284016193 d:\programming\tsuengine\src\libs\ftgl\ftfont\ftbitmapfontimpl.h
-	"FTFontImpl.h"
-
-1284016193 d:\programming\tsuengine\src\libs\ftgl\ftfont\ftfontimpl.h
-	"FTGL/ftgl.h"
-	"FTFace.h"
-
-1284016193 source:d:\programming\tsuengine\src\libs\ftgl\ftfont\ftbufferfont.cpp
-	"config.h"
-	<wchar.h>
-	"FTGL/ftgl.h"
-	"FTInternals.h"
-	"FTBufferFontImpl.h"
-
-1284016193 d:\programming\tsuengine\src\libs\ftgl\ftfont\ftbufferfontimpl.h
-	"FTFontImpl.h"
-
-1284016193 source:d:\programming\tsuengine\src\libs\ftgl\ftfont\ftextrudefont.cpp
-	"config.h"
-	"FTGL/ftgl.h"
-	"FTInternals.h"
-	"FTExtrudeFontImpl.h"
-
-1284016193 d:\programming\tsuengine\src\libs\ftgl\ftfont\ftextrudefontimpl.h
-	"FTFontImpl.h"
-
-1284016193 source:d:\programming\tsuengine\src\libs\ftgl\ftfont\ftfont.cpp
-	"config.h"
-	"FTInternals.h"
-	"FTUnicode.h"
-	"FTFontImpl.h"
-	"FTBitmapFontImpl.h"
-	"FTExtrudeFontImpl.h"
-	"FTOutlineFontImpl.h"
-	"FTPixmapFontImpl.h"
-	"FTPolygonFontImpl.h"
-	"FTTextureFontImpl.h"
-	"FTGlyphContainer.h"
-	"FTFace.h"
-
-1284016196 d:\programming\tsuengine\src\libs\ftgl\ftunicode.h
-
-1284016193 d:\programming\tsuengine\src\libs\ftgl\ftfont\ftoutlinefontimpl.h
-	"FTFontImpl.h"
-
-1284016193 d:\programming\tsuengine\src\libs\ftgl\ftfont\ftpixmapfontimpl.h
-	"FTFontImpl.h"
-
-1284016193 d:\programming\tsuengine\src\libs\ftgl\ftfont\ftpolygonfontimpl.h
-	"FTFontImpl.h"
-
-1284016193 d:\programming\tsuengine\src\libs\ftgl\ftfont\fttexturefontimpl.h
-	"FTFontImpl.h"
-	"FTVector.h"
-
-1284016196 d:\programming\tsuengine\src\libs\ftgl\ftglyphcontainer.h
-	<ft2build.h>
-	"FTGL/ftgl.h"
-	"FTVector.h"
-
-1284016193 source:d:\programming\tsuengine\src\libs\ftgl\ftfont\ftfontglue.cpp
-	"config.h"
-	"FTInternals.h"
-
-1284016193 source:d:\programming\tsuengine\src\libs\ftgl\ftfont\ftoutlinefont.cpp
-	"config.h"
-	"FTGL/ftgl.h"
-	"FTInternals.h"
-	"FTOutlineFontImpl.h"
-
-1284016193 source:d:\programming\tsuengine\src\libs\ftgl\ftfont\ftpixmapfont.cpp
-	"config.h"
-	"FTGL/ftgl.h"
-	"FTInternals.h"
-	"FTPixmapFontImpl.h"
-
-1284016193 source:d:\programming\tsuengine\src\libs\ftgl\ftfont\ftpolygonfont.cpp
-	"config.h"
-	"FTGL/ftgl.h"
-	"FTInternals.h"
-	"FTPolygonFontImpl.h"
-
-1284016193 source:d:\programming\tsuengine\src\libs\ftgl\ftfont\fttexturefont.cpp
-	"config.h"
-	<cassert>
-	<string>
-	"FTGL/ftgl.h"
-	"FTInternals.h"
-	"../FTGlyph/FTTextureGlyphImpl.h"
-	"./FTTextureFontImpl.h"
-
-1284016196 d:\programming\tsuengine\src\libs\ftgl\ftglyph\fttextureglyphimpl.h
-	"FTGlyphImpl.h"
-
-1284016195 d:\programming\tsuengine\src\libs\ftgl\ftglyph\ftglyphimpl.h
-	"FTGL/ftgl.h"
-
-1284016196 source:d:\programming\tsuengine\src\libs\ftgl\ftglyphcontainer.cpp
-	"config.h"
-	"FTGL/ftgl.h"
-	"FTGlyphContainer.h"
-	"FTFace.h"
-	"FTCharmap.h"
-
-1284016195 source:d:\programming\tsuengine\src\libs\ftgl\ftglyph\ftbitmapglyph.cpp
-	"config.h"
-	<string>
-	"FTGL/ftgl.h"
-	"FTInternals.h"
-	"FTBitmapGlyphImpl.h"
-
-1284016195 d:\programming\tsuengine\src\libs\ftgl\ftglyph\ftbitmapglyphimpl.h
-	"FTGlyphImpl.h"
-
-1284016195 source:d:\programming\tsuengine\src\libs\ftgl\ftglyph\ftbufferglyph.cpp
-	"config.h"
-	<string>
-	"FTGL/ftgl.h"
-	"FTInternals.h"
-	"FTBufferGlyphImpl.h"
-
-1284016195 d:\programming\tsuengine\src\libs\ftgl\ftglyph\ftbufferglyphimpl.h
-	"FTGlyphImpl.h"
-
-1284016195 source:d:\programming\tsuengine\src\libs\ftgl\ftglyph\ftextrudeglyph.cpp
-	"config.h"
-	<iostream>
-	"FTGL/ftgl.h"
-	"FTInternals.h"
-	"FTExtrudeGlyphImpl.h"
-	"FTVectoriser.h"
-
-1284016195 d:\programming\tsuengine\src\libs\ftgl\ftglyph\ftextrudeglyphimpl.h
-	"FTGlyphImpl.h"
-
-1284016196 d:\programming\tsuengine\src\libs\ftgl\ftvectoriser.h
-	"FTGL/ftgl.h"
-	"FTContour.h"
-	"FTList.h"
-	"FTVector.h"
-
-1284016196 d:\programming\tsuengine\src\libs\ftgl\ftlist.h
-	"FTGL/ftgl.h"
-
-1284016195 source:d:\programming\tsuengine\src\libs\ftgl\ftglyph\ftglyph.cpp
-	"config.h"
-	"FTGL/ftgl.h"
-	"FTInternals.h"
-	"FTGlyphImpl.h"
-
-1284016196 source:d:\programming\tsuengine\src\libs\ftgl\ftglyph\ftglyphglue.cpp
-	"config.h"
-	"FTGL/ftgl.h"
-	"FTInternals.h"
-
-1284016195 source:d:\programming\tsuengine\src\libs\ftgl\ftglyph\ftoutlineglyph.cpp
-	"config.h"
-	"FTGL/ftgl.h"
-	"FTInternals.h"
-	"FTOutlineGlyphImpl.h"
-	"FTVectoriser.h"
-
-1284016195 d:\programming\tsuengine\src\libs\ftgl\ftglyph\ftoutlineglyphimpl.h
-	"FTGlyphImpl.h"
-
-1284016196 source:d:\programming\tsuengine\src\libs\ftgl\ftglyph\ftpixmapglyph.cpp
-	"config.h"
-	<math.h>
-	"FTGL/ftgl.h"
-	"FTInternals.h"
-	"FTPixmapGlyphImpl.h"
-
-1284016195 d:\programming\tsuengine\src\libs\ftgl\ftglyph\ftpixmapglyphimpl.h
-	"FTGlyphImpl.h"
-
-1284016196 source:d:\programming\tsuengine\src\libs\ftgl\ftglyph\ftpolygonglyph.cpp
-	"config.h"
-	"FTGL/ftgl.h"
-	"FTInternals.h"
-	"FTPolygonGlyphImpl.h"
-	"FTVectoriser.h"
-
-1284016195 d:\programming\tsuengine\src\libs\ftgl\ftglyph\ftpolygonglyphimpl.h
-	"FTGlyphImpl.h"
-
-1284016195 source:d:\programming\tsuengine\src\libs\ftgl\ftglyph\fttextureglyph.cpp
-	"config.h"
-	<math.h>
-	"FTGL/ftgl.h"
-	"FTInternals.h"
-	"FTTextureGlyphImpl.h"
-
-1284016194 source:d:\programming\tsuengine\src\libs\ftgl\ftlayout\ftlayout.cpp
-	"config.h"
-	"FTGL/ftgl.h"
-	"../FTFont/FTFontImpl.h"
-	"./FTLayoutImpl.h"
-
-1284016194 d:\programming\tsuengine\src\libs\ftgl\ftlayout\ftlayoutimpl.h
-	"FTSize.h"
-	"FTGlyphContainer.h"
-
-1284016194 source:d:\programming\tsuengine\src\libs\ftgl\ftlayout\ftlayoutglue.cpp
-	"config.h"
-	"FTInternals.h"
-
-1284016194 source:d:\programming\tsuengine\src\libs\ftgl\ftlayout\ftsimplelayout.cpp
-	"config.h"
-	<ctype.h>
-	<wctype.h>
-	"FTInternals.h"
-	"FTUnicode.h"
-	"FTGlyphContainer.h"
-	"FTSimpleLayoutImpl.h"
-
-1284016194 d:\programming\tsuengine\src\libs\ftgl\ftlayout\ftsimplelayoutimpl.h
-	"FTLayoutImpl.h"
-
-1284016196 source:d:\programming\tsuengine\src\libs\ftgl\ftlibrary.cpp
-	"config.h"
-	"FTLibrary.h"
-
-1284016196 source:d:\programming\tsuengine\src\libs\ftgl\ftpoint.cpp
-	"config.h"
-	<math.h>
-	"FTGL/ftgl.h"
-
-1284016196 source:d:\programming\tsuengine\src\libs\ftgl\ftsize.cpp
-	"macros.h"
-	"config.h"
-	"FTSize.h"
-
-1284016196 source:d:\programming\tsuengine\src\libs\ftgl\ftvectoriser.cpp
-	"config.h"
-	"FTInternals.h"
-	"FTVectoriser.h"
-
-1285327304 d:\programming\tsuengine\src\gui\cabstractbutton.h
-	"CGuiPanel.h"
-
-1285327271 source:d:\programming\tsuengine\src\gui\cbutton.cpp
-	"CButton.h"
-
-1285241805 d:\programming\tsuengine\src\gui\cbutton.h
-	"CAbstractButton.h"
-	"CLabel.h"
-
-1284702523 d:\programming\tsuengine\src\cmainmenu.h
-
-1288947827 source:d:\programming\tsuengine\src\gui\cmainmenu.cpp
-	"CMainMenu.h"
-	"CCenteredWindow.h"
-	"CCheckBox.h"
-	"CTextField.h"
-	"CConsole.h"
-
-1285238222 d:\programming\tsuengine\src\gui\cmainmenu.h
-	"CGuiPanel.h"
-	"CActionListener.h"
-	"CButton.h"
-	"CDraggable.h"
-	"macros.h"
-
-1285229451 d:\programming\tsuengine\src\gui\cdraggable.h
-	"datatypes.h"
-	"CAbstractButton.h"
-
-1285305831 source:d:\programming\tsuengine\src\gui\cdraggable.cpp
-	"CDraggable.h"
-
-1285238827 d:\programming\tsuengine\src\gui\cwindow.h
-	"CGuiPanel.h"
-	"CActionListener.h"
-
-1285240435 source:d:\programming\tsuengine\src\gui\cwindow.cpp
-	"CWindow.h"
-	"CDraggable.h"
-	"CLabel.h"
-	"CButton.h"
-
-1285231588 source:d:\programming\tsuengine\src\gui\ccenteredwindow.cpp
-	"CCenteredWindow.h"
-	"const.h"
-
-1285231615 d:\programming\tsuengine\src\gui\ccenteredwindow.h
-	"datatypes.h"
-	"CWindow.h"
-
-1285234804 d:\programming\tsuengine\src\gui\cactionlistenerpanel.h
-
-1285234346 source:d:\programming\tsuengine\src\gui\cactionlistenerpanel.cpp
-	"CActionListenerPanel.h"
-
-1286347358 source:d:\programming\tsuengine\src\gui\cabstracttoggle.cpp
-	"CAbstractToggle.h"
-
-1286345529 d:\programming\tsuengine\src\gui\cabstracttoggle.h
-	"datatypes.h"
-	"CAbstractButton.h"
-
-1286345134 source:d:\programming\tsuengine\src\gui\ccheckbox.cpp
-	"CCheckBox.h"
-	"CLabel.h"
-
-1286344167 d:\programming\tsuengine\src\gui\ccheckbox.h
-	"CAbstractToggle.h"
-
-1285254696 d:\fast4shoot\programming\tsuengine\src\gui\cactionlistenerpanel.h
-
-1285254696 source:d:\fast4shoot\programming\tsuengine\src\gui\cactionlistenerpanel.cpp
-	"CActionListenerPanel.h"
-
-1285254696 source:d:\fast4shoot\programming\tsuengine\src\gui\ccenteredwindow.cpp
-	"CCenteredWindow.h"
-	"const.h"
-
-1285254696 d:\fast4shoot\programming\tsuengine\src\gui\ccenteredwindow.h
-	"datatypes.h"
-	"CWindow.h"
-
-1285254696 d:\fast4shoot\programming\tsuengine\src\gui\cwindow.h
-	"CGuiPanel.h"
-	"CActionListener.h"
-
-1285254696 source:d:\fast4shoot\programming\tsuengine\src\gui\cwindow.cpp
-	"CWindow.h"
-	"CDraggable.h"
-	"CLabel.h"
-	"CButton.h"
-
-1285254696 d:\fast4shoot\programming\tsuengine\src\gui\cdraggable.h
-	"datatypes.h"
-	"CAbstractButton.h"
-
-1286563719 d:\fast4shoot\programming\tsuengine\src\gui\cabstractbutton.h
-	"CGuiPanel.h"
-
-1289169208 d:\fast4shoot\programming\tsuengine\src\gui\cbutton.h
-	"CAbstractButton.h"
-	"CLabel.h"
-
-1285254696 d:\fast4shoot\programming\tsuengine\src\gui\cmainmenu.h
-	"CGuiPanel.h"
-	"CActionListener.h"
-	"CButton.h"
-	"CDraggable.h"
-	"macros.h"
-
-1286563719 source:d:\fast4shoot\programming\tsuengine\src\gui\cabstracttoggle.cpp
-	"CAbstractToggle.h"
-
-1286563719 d:\fast4shoot\programming\tsuengine\src\gui\cabstracttoggle.h
-	"datatypes.h"
-	"CAbstractButton.h"
-
-1286563719 source:d:\fast4shoot\programming\tsuengine\src\gui\cbutton.cpp
-	"CButton.h"
-
-1286563719 source:d:\fast4shoot\programming\tsuengine\src\gui\ccheckbox.cpp
-	"CCheckBox.h"
-	"CLabel.h"
-
-1286563719 d:\fast4shoot\programming\tsuengine\src\gui\ccheckbox.h
-	"CAbstractToggle.h"
-
-1286563719 source:d:\fast4shoot\programming\tsuengine\src\gui\cdraggable.cpp
-	"CDraggable.h"
-
-1289143851 source:d:\fast4shoot\programming\tsuengine\src\gui\cmainmenu.cpp
-	"CMainMenu.h"
-	"CCenteredWindow.h"
-	"CCheckBox.h"
-	"CTextField.h"
-	"CConsole.h"
-
-1287157133 source:d:\fast4shoot\programming\tsuengine\src\gui\ctextfield.cpp
-	"CTextField.h"
-
-1286570274 d:\fast4shoot\programming\tsuengine\src\gui\ctextfield.h
-	"CGuiPanel.h"
-	"CLabel.h"
-
-1287139393 d:\programming\tsuengine\src\gui\ctextfield.h
-	"CGuiPanel.h"
-	"CLabel.h"
-
-1287740144 source:d:\programming\tsuengine\src\gui\ctextfield.cpp
-	"CTextField.h"
-
-1288457624 d:\programming\tsuengine\src\vecbase.h
-	"macros.h"
-
-1288365884 source:d:\programming\tsuengine\src\vecbase.cpp
-	"vecBase.h"
-
-1288457407 d:\programming\tsuengine\src\vecopbase.h
-	<cmath>
-	"vecBase.h"
-
-1288426388 source:d:\programming\tsuengine\src\vecopbase.cpp
-	"vecOpBase.h"
-
-1289138784 source:d:\programming\tsuengine\src\gui\ctext.cpp
-	"CText.h"
-
-1289138784 d:\programming\tsuengine\src\gui\ctext.h
-	"CGuiPanel.h"
-
-1288894973 source:d:\programming\tsuengine\src\cconsole.cpp
-	"CConsole.h"
-
-1288868027 d:\programming\tsuengine\src\cconsole.h
-	"CWindow.h"
-
-1288894973 source:d:\programming\tsuengine\src\gui\cconsole.cpp
-	"CConsole.h"
-
-1288868027 d:\programming\tsuengine\src\gui\cconsole.h
-	"CWindow.h"
-
-1289143005 d:\fast4shoot\programming\tsuengine\src\vecopbase.h
-	<cmath>
-	"vecBase.h"
-
-1289144343 d:\fast4shoot\programming\tsuengine\src\vecbase.h
-	<cmath>
-	"macros.h"
-
-1289143005 source:d:\fast4shoot\programming\tsuengine\src\gui\cconsole.cpp
-	"CConsole.h"
-
-1289143005 d:\fast4shoot\programming\tsuengine\src\gui\cconsole.h
-	"CWindow.h"
-
-1289143005 source:d:\fast4shoot\programming\tsuengine\src\gui\ctext.cpp
-	"CText.h"
-
-1289166115 d:\fast4shoot\programming\tsuengine\src\gui\ctext.h
-	"CGuiPanel.h"
-
-1289169257 d:\fast4shoot\programming\tsuengine\src\fontbase.h
-	<string>
-	"datatypes.h"
-
-1289169276 source:d:\fast4shoot\programming\tsuengine\src\fontbase.cpp
-	"FontBase.h"
 	<gl/gl.h>
+	<iostream>
+	<cmath>
+	<string>
+	<exception>
+	"const.h"
+	"datatypes.h"
+	"globals.h"
+	"CBaseEngine.h"
+	"CBaseEntity.h"
+	"macros.h"
+	"exceptions.h"
+
+1289206264 source:d:\programming\tsuengine\src\utils.cpp
+	"utils.h"
+
+1289206263 source:d:\programming\tsuengine\src\utils\stringutils.cpp
+	"stringUtils.h"
+
+1289206264 source:d:\programming\tsuengine\src\vec2d.cpp
+	"vec2d.h"
+	"macros.h"
+	<cstdio>
+
+1289206263 source:d:\programming\tsuengine\src\vec3d.cpp
+
+1289810687 source:d:\programming\tsuengine\src\gui\cconsole.cpp
+	"CConsole.h"
+	"CText.h"
 

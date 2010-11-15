@@ -10,7 +10,7 @@
 
 class Font : public FontBase{
     public:
-      double            width();
+      double            width(const std::wstring& text, double size);
     protected:
       virtual void      renderImpl(const std::wstring& text);
                         Font(FTGLTextureFont* font, const std::wstring& name, const double size);
@@ -19,8 +19,12 @@ class Font : public FontBase{
       std::wstring      _name;
 
     friend class CFontMgr;
-    friend class WrappedFont;
+    friend class FontWrapped;
 };
+
+inline double Font::width(const std::wstring& text, double size){
+  return (size/_size)*_font->Advance(text.c_str());
+}
 
 
 #endif // FONT_H

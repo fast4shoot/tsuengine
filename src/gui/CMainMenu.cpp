@@ -36,7 +36,7 @@ CMainMenu::CMainMenu():
 
   addChild(newGame=new CCenteredWindow(vec2d(500,230), L"Nová hra"));
   newGame->setVisible(false);
-  newGame->addChild(new CLabel(vec2d(50,70), vec2d(150,70),L"THE GAME!"));
+  //newGame->addChild(new CLabel(vec2d(50,70), vec2d(150,70),L"THE GAME!"));
 
   addChild(new CCheckBox(vec2d(20,170), vec2d(160,16), L"Test"));
   addChild(new CCheckBox(vec2d(20,190), vec2d(160,16), L"Další test"));
