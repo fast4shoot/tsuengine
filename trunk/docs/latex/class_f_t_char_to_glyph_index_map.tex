@@ -1,0 +1,65 @@
+\hypertarget{class_f_t_char_to_glyph_index_map}{
+\section{FTCharToGlyphIndexMap Class Reference}
+\label{class_f_t_char_to_glyph_index_map}\index{FTCharToGlyphIndexMap@{FTCharToGlyphIndexMap}}
+}
+
+
+{\ttfamily \#include $<$FTCharToGlyphIndexMap.h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ {\bfseries NumberOfBuckets} =  256, 
+{\bfseries BucketSize} =  256, 
+{\bfseries IndexNotFound} =  -\/1
+ \}
+\item 
+\hypertarget{class_f_t_char_to_glyph_index_map_a0c3d673d5c3e978b7c04ea367f82e624}{
+typedef unsigned long {\bfseries CharacterCode}}
+\label{class_f_t_char_to_glyph_index_map_a0c3d673d5c3e978b7c04ea367f82e624}
+
+\item 
+\hypertarget{class_f_t_char_to_glyph_index_map_a54a7eca7f7b06f9389c12ab96db36a25}{
+typedef signed long {\bfseries GlyphIndex}}
+\label{class_f_t_char_to_glyph_index_map_a54a7eca7f7b06f9389c12ab96db36a25}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_f_t_char_to_glyph_index_map_adc045f0ce5b32fa84681d63e35ac7369}{
+void {\bfseries clear} ()}
+\label{class_f_t_char_to_glyph_index_map_adc045f0ce5b32fa84681d63e35ac7369}
+
+\item 
+\hypertarget{class_f_t_char_to_glyph_index_map_a94a2e63c8689298ac8dffdc90f290bb2}{
+const GlyphIndex {\bfseries find} (CharacterCode c)}
+\label{class_f_t_char_to_glyph_index_map_a94a2e63c8689298ac8dffdc90f290bb2}
+
+\item 
+\hypertarget{class_f_t_char_to_glyph_index_map_aa5ee6e5371094dfa05fa69145c33547f}{
+void {\bfseries insert} (CharacterCode c, GlyphIndex g)}
+\label{class_f_t_char_to_glyph_index_map_aa5ee6e5371094dfa05fa69145c33547f}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provides a non-\/STL alternative to the STL map$<$unsigned long, unsigned long$>$ which maps character codes to glyph indices inside \hyperlink{class_f_t_charmap}{FTCharmap}.
+
+Implementation:
+\begin{DoxyItemize}
+\item NumberOfBuckets buckets are considered.
+\item Each bucket has BucketSize entries.
+\item When the glyph index for the character code C has to be stored, the bucket this character belongs to is found using 'C div BucketSize'. If this bucket has not been allocated yet, do it now. The entry in the bucked is found using 'C mod BucketSize'. If it is set to IndexNotFound, then the glyph entry has not been set.
+\item Try to mimic the calls made to the STL map API.
+\end{DoxyItemize}
+
+Caveats:
+\begin{DoxyItemize}
+\item The glyph index is now a signed long instead of unsigned long, so the special value IndexNotFound (= -\/1) can be used to specify that the glyph index has not been stored yet. 
+\end{DoxyItemize}
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+src/libs/FTGL/FTCharToGlyphIndexMap.h\end{DoxyCompactItemize}

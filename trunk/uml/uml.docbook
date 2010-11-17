@@ -1,0 +1,4681 @@
+<?xml version="1.0"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD Simplified DocBook XML V4.1.2.5//EN" "http://www.oasis-open.org/docbook/xml/simple/4.1.2.5/sdocbook.dtd">
+<article role="specification">
+  <title>UML model</title>
+  <title>Logical View</title>
+  <title>Use Case View</title>
+  <title>Component View</title>
+  <title>Deployment View</title>
+  <title>Entity Relationship Model</title>
+  <section id="actors">
+    <title>Actors</title>
+  </section>
+  <section id="usecases">
+    <title>Use Cases</title>
+  </section>
+  <section id="interfaces">
+    <title>Interfaces</title>
+  </section>
+  <section id="classes">
+    <title>Classes</title>
+    <section>
+      <title>vecBase</title>
+      <table frame="all">
+        <title/>
+        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+          <colspec colname="c1"/>
+          <colspec colname="c2"/>
+          <colspec colname="c3"/>
+          <thead>
+            <row>
+              <entry role="class-title">Class</entry>
+              <entry role="class-name" namest="c2" nameend="c3">vecBase</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">Attributes:</entry>
+            </row>
+            <row>
+              <entry role="feature-heading">visibility</entry>
+              <entry role="feature-heading">type</entry>
+              <entry role="feature-heading">name</entry>
+            </row>
+            <row>
+              <entry role="feature-detail">protected</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">data</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">
+                <para>Operations:</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-heading">
+                <para>visibility</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>return</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>name</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">vecBase</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">vecBase</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">~ vecBase</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">operator =</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">operator +=</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">operator -=</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">operator *=</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">operator /=</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">operator +</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">operator -</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">operator *</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">operator /</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">floored</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>Derived</title>
+      <table frame="all">
+        <title/>
+        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+          <colspec colname="c1"/>
+          <colspec colname="c2"/>
+          <colspec colname="c3"/>
+          <thead>
+            <row>
+              <entry role="class-title">Class</entry>
+              <entry role="class-name" namest="c2" nameend="c3">Derived</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry namest="c1" nameend="c3">
+                <para/>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>T</title>
+      <table frame="all">
+        <title/>
+        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+          <colspec colname="c1"/>
+          <colspec colname="c2"/>
+          <colspec colname="c3"/>
+          <thead>
+            <row>
+              <entry role="class-title">Class</entry>
+              <entry role="class-name" namest="c2" nameend="c3">T</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry namest="c1" nameend="c3">
+                <para/>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>vecOpBase</title>
+      <table frame="all">
+        <title/>
+        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+          <colspec colname="c1"/>
+          <colspec colname="c2"/>
+          <colspec colname="c3"/>
+          <thead>
+            <row>
+              <entry role="class-title">Class</entry>
+              <entry role="class-name" namest="c2" nameend="c3">vecOpBase</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">
+                <para>Operations:</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-heading">
+                <para>visibility</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>return</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>name</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">vecOpBase</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">vecOpBase</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">~ vecOpBase</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">dot</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">normalized</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">length</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">lengthSqr</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>vec2d</title>
+      <table frame="all">
+        <title/>
+        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+          <colspec colname="c1"/>
+          <colspec colname="c2"/>
+          <colspec colname="c3"/>
+          <thead>
+            <row>
+              <entry role="class-title">Class</entry>
+              <entry role="class-name" namest="c2" nameend="c3">vec2d</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">Attributes:</entry>
+            </row>
+            <row>
+              <entry role="feature-heading">visibility</entry>
+              <entry role="feature-heading">type</entry>
+              <entry role="feature-heading">name</entry>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">x</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">y</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">
+                <para>Operations:</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-heading">
+                <para>visibility</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>return</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>name</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">vec2d</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">vec2d</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">set</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">operator =</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment">vec2d&amp; operator+=(const vec2d&amp; rhs);&#13;
+vec2d&amp; operator-=(const vec2d&amp; rhs);&#13;
+vec2d&amp; operator*=(const double&amp; rhs);&#13;
+vec2d&amp; operator/=(const double&amp; rhs);&#13;
+
+const vec2d operator+(const vec2d&amp; rhs) const;&#13;
+const vec2d operator-(const vec2d&amp; rhs) const;&#13;
+const vec2d operator*(const double&amp; rhs) const;&#13;
+const vec2d operator/(const double&amp; rhs) const;&#13;</entry>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">operator &gt;</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">operator &lt;</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">operator ==</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">operator &gt;=</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">operator &lt;=</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>vec3d</title>
+      <table frame="all">
+        <title/>
+        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+          <colspec colname="c1"/>
+          <colspec colname="c2"/>
+          <colspec colname="c3"/>
+          <thead>
+            <row>
+              <entry role="class-title">Class</entry>
+              <entry role="class-name" namest="c2" nameend="c3">vec3d</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">Attributes:</entry>
+            </row>
+            <row>
+              <entry role="feature-heading">visibility</entry>
+              <entry role="feature-heading">type</entry>
+              <entry role="feature-heading">name</entry>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">x</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">y</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">z</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">
+                <para>Operations:</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-heading">
+                <para>visibility</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>return</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>name</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">operator =</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">vec3d</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">vec3d</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">set</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>Str</title>
+      <table frame="all">
+        <title/>
+        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+          <colspec colname="c1"/>
+          <colspec colname="c2"/>
+          <colspec colname="c3"/>
+          <thead>
+            <row>
+              <entry role="class-title">Class</entry>
+              <entry role="class-name" namest="c2" nameend="c3">Str</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry namest="c1" nameend="c3">
+                <para/>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>rgb</title>
+      <table frame="all">
+        <title/>
+        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+          <colspec colname="c1"/>
+          <colspec colname="c2"/>
+          <colspec colname="c3"/>
+          <thead>
+            <row>
+              <entry role="class-title">Class</entry>
+              <entry role="class-name" namest="c2" nameend="c3">rgb</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">Attributes:</entry>
+            </row>
+            <row>
+              <entry role="feature-heading">visibility</entry>
+              <entry role="feature-heading">type</entry>
+              <entry role="feature-heading">name</entry>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">r</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">g</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">b</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>rgba</title>
+      <table frame="all">
+        <title/>
+        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+          <colspec colname="c1"/>
+          <colspec colname="c2"/>
+          <colspec colname="c3"/>
+          <thead>
+            <row>
+              <entry role="class-title">Class</entry>
+              <entry role="class-name" namest="c2" nameend="c3">rgba</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">Attributes:</entry>
+            </row>
+            <row>
+              <entry role="feature-heading">visibility</entry>
+              <entry role="feature-heading">type</entry>
+              <entry role="feature-heading">name</entry>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">r</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">g</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">b</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">a</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">
+                <para>Operations:</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-heading">
+                <para>visibility</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>return</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>name</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">rgba</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">rgba</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">set</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">rgba</entry>
+              <entry role="feature-detail">operator *</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>entParam</title>
+      <table frame="all">
+        <title/>
+        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+          <colspec colname="c1"/>
+          <colspec colname="c2"/>
+          <colspec colname="c3"/>
+          <thead>
+            <row>
+              <entry role="class-title">Class</entry>
+              <entry role="class-name" namest="c2" nameend="c3">entParam</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">Attributes:</entry>
+            </row>
+            <row>
+              <entry role="feature-heading">visibility</entry>
+              <entry role="feature-heading">type</entry>
+              <entry role="feature-heading">name</entry>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">memPointer</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">name</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">type</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>CParamMgr</title>
+      <table frame="all">
+        <title/>
+        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+          <colspec colname="c1"/>
+          <colspec colname="c2"/>
+          <colspec colname="c3"/>
+          <thead>
+            <row>
+              <entry role="class-title">Class</entry>
+              <entry role="class-name" namest="c2" nameend="c3">CParamMgr</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">Attributes:</entry>
+            </row>
+            <row>
+              <entry role="feature-heading">visibility</entry>
+              <entry role="feature-heading">type</entry>
+              <entry role="feature-heading">name</entry>
+            </row>
+            <row>
+              <entry role="feature-detail">private</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">params</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">
+                <para>Operations:</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-heading">
+                <para>visibility</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>return</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>name</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">linkVariableToParam</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">linkVariableToParam</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">getStringParam</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">getDoubleParam</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">getIntParam</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">setStringParam</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">setDoubleParam</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">setIntParam</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>CBaseEntity</title>
+      <table frame="all">
+        <title/>
+        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+          <colspec colname="c1"/>
+          <colspec colname="c2"/>
+          <colspec colname="c3"/>
+          <thead>
+            <row>
+              <entry role="class-title">Class</entry>
+              <entry role="class-name" namest="c2" nameend="c3">CBaseEntity</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">Attributes:</entry>
+            </row>
+            <row>
+              <entry role="feature-heading">visibility</entry>
+              <entry role="feature-heading">type</entry>
+              <entry role="feature-heading">name</entry>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">CParamMgr</entry>
+              <entry role="feature-detail">params</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">
+                <para>Operations:</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-heading">
+                <para>visibility</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>return</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>name</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">CBaseEntity</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">init</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">think</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">draw</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">processCollision</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">vec3d</entry>
+              <entry role="feature-detail">getPos</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>CEntMgr</title>
+      <table frame="all">
+        <title/>
+        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+          <colspec colname="c1"/>
+          <colspec colname="c2"/>
+          <colspec colname="c3"/>
+          <thead>
+            <row>
+              <entry role="class-title">Class</entry>
+              <entry role="class-name" namest="c2" nameend="c3">CEntMgr</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">Attributes:</entry>
+            </row>
+            <row>
+              <entry role="feature-heading">visibility</entry>
+              <entry role="feature-heading">type</entry>
+              <entry role="feature-heading">name</entry>
+            </row>
+            <row>
+              <entry role="feature-detail">private</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">entityTable</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">private</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">searchTable</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">private</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">entCount</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">private</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">lastSearchCount</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">
+                <para>Operations:</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-heading">
+                <para>visibility</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>return</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>name</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">CEntMgr</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">getEntCount</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">getEntById</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">getEntCountByTargetName</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">findEntsByTargetName</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">findEntsInSphere</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">getNextEntFromLastSearch</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>CGuiMgr</title>
+      <table frame="all">
+        <title/>
+        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+          <colspec colname="c1"/>
+          <colspec colname="c2"/>
+          <colspec colname="c3"/>
+          <thead>
+            <row>
+              <entry role="class-title">Class</entry>
+              <entry role="class-name" namest="c2" nameend="c3">CGuiMgr</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">Attributes:</entry>
+            </row>
+            <row>
+              <entry role="feature-heading">visibility</entry>
+              <entry role="feature-heading">type</entry>
+              <entry role="feature-heading">name</entry>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">_basePanel</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">_keyboardReceiver</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">
+                <para>Operations:</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-heading">
+                <para>visibility</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>return</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>name</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">CGuiMgr</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">init</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">update</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">drawElements</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">setKeyboardReceiver</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">isKeyboardReceiver</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>CInputMgr</title>
+      <table frame="all">
+        <title/>
+        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+          <colspec colname="c1"/>
+          <colspec colname="c2"/>
+          <colspec colname="c3"/>
+          <thead>
+            <row>
+              <entry role="class-title">Class</entry>
+              <entry role="class-name" namest="c2" nameend="c3">CInputMgr</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">Attributes:</entry>
+            </row>
+            <row>
+              <entry role="feature-heading">visibility</entry>
+              <entry role="feature-heading">type</entry>
+              <entry role="feature-heading">name</entry>
+            </row>
+            <row>
+              <entry role="feature-detail">private</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">DIKeyboardDevice</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">private</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">DIMouseDevice</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">
+                <para>Operations:</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-heading">
+                <para>visibility</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>return</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>name</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">CInputMgr</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">~ CInputMgr</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">init</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">update</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">keyDown</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">keyStillDown</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">keyPressed</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">keyDepressed</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">keyTimed</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">keyTimedDelta</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">keyRealTimed</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">keyRealTimedDelta</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">getString</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">buttonDown</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">buttonPressed</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">buttonDepressed</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">getX</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">getY</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">getCursor</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">getCursorDelta</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">characterInput</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>CBaseEngine</title>
+      <table frame="all">
+        <title/>
+        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+          <colspec colname="c1"/>
+          <colspec colname="c2"/>
+          <colspec colname="c3"/>
+          <thead>
+            <row>
+              <entry role="class-title">Class</entry>
+              <entry role="class-name" namest="c2" nameend="c3">CBaseEngine</entry>
+            </row>
+          </thead>
+          <tbody>
+            <section>
+              <title>Associations</title>
+              <para>visibility, type, properties.</para>
+              <para>public</para>
+              <para/>
+              <para>
+      Rolename: 
+    (none)</para>
+              <para>public</para>
+              <para/>
+              <para>
+      Rolename: 
+    (none)</para>
+            </section>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">Attributes:</entry>
+            </row>
+            <row>
+              <entry role="feature-heading">visibility</entry>
+              <entry role="feature-heading">type</entry>
+              <entry role="feature-heading">name</entry>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">ents</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">input</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">gui</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">fonts</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">
+                <para>Operations:</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-heading">
+                <para>visibility</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>return</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>name</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">init</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">destroy</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">setDrawPos</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">setDrawPos</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">setDrawColor</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">setDrawColor</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">drawModel</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">getTime</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">getLastTime</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">getTimeDelta</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">getRealTime</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">getLastRealTime</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">getRealTimeDelta</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">getFrameCount</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">getFPS</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">createEntity</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">think</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">initWorldView</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">initGuiView</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">drawScene</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">log</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">quit</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>CText</title>
+      <table frame="all">
+        <title/>
+        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+          <colspec colname="c1"/>
+          <colspec colname="c2"/>
+          <colspec colname="c3"/>
+          <thead>
+            <row>
+              <entry role="class-title">Class</entry>
+              <entry role="class-name" namest="c2" nameend="c3">CText</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">
+                <para>Operations:</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-heading">
+                <para>visibility</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>return</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>name</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">CText</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">~ CText</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>ParameterNonExistant</title>
+      <table frame="all">
+        <title/>
+        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+          <colspec colname="c1"/>
+          <colspec colname="c2"/>
+          <colspec colname="c3"/>
+          <thead>
+            <row>
+              <entry role="class-title">Class</entry>
+              <entry role="class-name" namest="c2" nameend="c3">ParameterNonExistant</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">
+                <para>Operations:</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-heading">
+                <para>visibility</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>return</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>name</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">ParameterNonExistant</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>WrongParameterType</title>
+      <table frame="all">
+        <title/>
+        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+          <colspec colname="c1"/>
+          <colspec colname="c2"/>
+          <colspec colname="c3"/>
+          <thead>
+            <row>
+              <entry role="class-title">Class</entry>
+              <entry role="class-name" namest="c2" nameend="c3">WrongParameterType</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">
+                <para>Operations:</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-heading">
+                <para>visibility</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>return</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>name</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">WrongParameterType</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>CodeFailure</title>
+      <table frame="all">
+        <title/>
+        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+          <colspec colname="c1"/>
+          <colspec colname="c2"/>
+          <colspec colname="c3"/>
+          <thead>
+            <row>
+              <entry role="class-title">Class</entry>
+              <entry role="class-name" namest="c2" nameend="c3">CodeFailure</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">
+                <para>Operations:</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-heading">
+                <para>visibility</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>return</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>name</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">CodeFailure</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>GeneralFailure</title>
+      <table frame="all">
+        <title/>
+        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+          <colspec colname="c1"/>
+          <colspec colname="c2"/>
+          <colspec colname="c3"/>
+          <thead>
+            <row>
+              <entry role="class-title">Class</entry>
+              <entry role="class-name" namest="c2" nameend="c3">GeneralFailure</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">
+                <para>Operations:</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-heading">
+                <para>visibility</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>return</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>name</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">GeneralFailure</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>Font</title>
+      <table frame="all">
+        <title/>
+        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+          <colspec colname="c1"/>
+          <colspec colname="c2"/>
+          <colspec colname="c3"/>
+          <thead>
+            <row>
+              <entry role="class-title">Class</entry>
+              <entry role="class-name" namest="c2" nameend="c3">Font</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">Attributes:</entry>
+            </row>
+            <row>
+              <entry role="feature-heading">visibility</entry>
+              <entry role="feature-heading">type</entry>
+              <entry role="feature-heading">name</entry>
+            </row>
+            <row>
+              <entry role="feature-detail">protected</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">_font</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">protected</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">_name</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">
+                <para>Operations:</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-heading">
+                <para>visibility</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>return</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>name</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">width</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">protected</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">renderImpl</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">protected</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">Font</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">protected</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">~ Font</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>WrappedFont</title>
+      <table frame="all">
+        <title/>
+        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+          <colspec colname="c1"/>
+          <colspec colname="c2"/>
+          <colspec colname="c3"/>
+          <thead>
+            <row>
+              <entry role="class-title">Class</entry>
+              <entry role="class-name" namest="c2" nameend="c3">WrappedFont</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry namest="c1" nameend="c3">
+                <para/>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>new_class</title>
+      <table frame="all">
+        <title/>
+        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+          <colspec colname="c1"/>
+          <colspec colname="c2"/>
+          <colspec colname="c3"/>
+          <thead>
+            <row>
+              <entry role="class-title">Class</entry>
+              <entry role="class-name" namest="c2" nameend="c3">new_class</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">Attributes:</entry>
+            </row>
+            <row>
+              <entry role="feature-heading">visibility</entry>
+              <entry role="feature-heading">type</entry>
+              <entry role="feature-heading">name</entry>
+            </row>
+            <row>
+              <entry role="feature-detail">private</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">_fonts</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">
+                <para>Operations:</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-heading">
+                <para>visibility</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>return</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>name</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">getFont</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">loadFont</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">private</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">createFTGLFont</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>WrappedFont</title>
+      <table frame="all">
+        <title/>
+        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+          <colspec colname="c1"/>
+          <colspec colname="c2"/>
+          <colspec colname="c3"/>
+          <thead>
+            <row>
+              <entry role="class-title">Class</entry>
+              <entry role="class-name" namest="c2" nameend="c3">WrappedFont</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">Attributes:</entry>
+            </row>
+            <row>
+              <entry role="feature-heading">visibility</entry>
+              <entry role="feature-heading">type</entry>
+              <entry role="feature-heading">name</entry>
+            </row>
+            <row>
+              <entry role="feature-detail">private</entry>
+              <entry role="feature-detail">Font</entry>
+              <entry role="feature-detail">_font</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">
+                <para>Operations:</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-heading">
+                <para>visibility</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>return</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>name</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">render</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">render</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">render</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">render</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">width</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">doLoad</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">private</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">Font</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">private</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">~ Font</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>CActionListener</title>
+      <table frame="all">
+        <title/>
+        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+          <colspec colname="c1"/>
+          <colspec colname="c2"/>
+          <colspec colname="c3"/>
+          <thead>
+            <row>
+              <entry role="class-title">Class</entry>
+              <entry role="class-name" namest="c2" nameend="c3">CActionListener</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">Attributes:</entry>
+            </row>
+            <row>
+              <entry role="feature-heading">visibility</entry>
+              <entry role="feature-heading">type</entry>
+              <entry role="feature-heading">name</entry>
+            </row>
+            <row>
+              <entry role="feature-detail">private</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">_id</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">private</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">_originator</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">private</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">_panel</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">
+                <para>Operations:</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-heading">
+                <para>visibility</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>return</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>name</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">CActionListener</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">getId</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">setOriginator</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">getOriginator</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">actionPerformed</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>CLabel</title>
+      <table frame="all">
+        <title/>
+        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+          <colspec colname="c1"/>
+          <colspec colname="c2"/>
+          <colspec colname="c3"/>
+          <thead>
+            <row>
+              <entry role="class-title">Class</entry>
+              <entry role="class-name" namest="c2" nameend="c3">CLabel</entry>
+            </row>
+          </thead>
+          <tbody>
+            <section>
+              <title>Associations</title>
+              <para>visibility, type, properties.</para>
+              <para>public</para>
+              <para/>
+              <para>
+      Rolename: 
+    (none)</para>
+              <para>public</para>
+              <para/>
+              <para>
+      Rolename: 
+    (none)</para>
+            </section>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">Attributes:</entry>
+            </row>
+            <row>
+              <entry role="feature-heading">visibility</entry>
+              <entry role="feature-heading">type</entry>
+              <entry role="feature-heading">name</entry>
+            </row>
+            <row>
+              <entry role="feature-detail">protected</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">_text</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">protected</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">_height</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">protected</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">_font</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">protected</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">_align</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">
+                <para>Operations:</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-heading">
+                <para>visibility</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>return</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>name</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">CLabel</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">setText</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">getText</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">draw</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">updateFont</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>CButton</title>
+      <table frame="all">
+        <title/>
+        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+          <colspec colname="c1"/>
+          <colspec colname="c2"/>
+          <colspec colname="c3"/>
+          <thead>
+            <row>
+              <entry role="class-title">Class</entry>
+              <entry role="class-name" namest="c2" nameend="c3">CButton</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">Attributes:</entry>
+            </row>
+            <row>
+              <entry role="feature-heading">visibility</entry>
+              <entry role="feature-heading">type</entry>
+              <entry role="feature-heading">name</entry>
+            </row>
+            <row>
+              <entry role="feature-detail">protected</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">label</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">
+                <para>Operations:</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-heading">
+                <para>visibility</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>return</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>name</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">CButton</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">draw</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">onMouseClick</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>CAbstractButton</title>
+      <table frame="all">
+        <title/>
+        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+          <colspec colname="c1"/>
+          <colspec colname="c2"/>
+          <colspec colname="c3"/>
+          <thead>
+            <row>
+              <entry role="class-title">Class</entry>
+              <entry role="class-name" namest="c2" nameend="c3">CAbstractButton</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">Attributes:</entry>
+            </row>
+            <row>
+              <entry role="feature-heading">visibility</entry>
+              <entry role="feature-heading">type</entry>
+              <entry role="feature-heading">name</entry>
+            </row>
+            <row>
+              <entry role="feature-detail">protected</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">_active</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">protected</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">_pressed</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">
+                <para>Operations:</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-heading">
+                <para>visibility</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>return</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>name</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">CAbstractButton</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">onMouseDown</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">onMouseUp</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">onMouseOver</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">onMouseOut</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>CCenteredWindow</title>
+      <table frame="all">
+        <title/>
+        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+          <colspec colname="c1"/>
+          <colspec colname="c2"/>
+          <colspec colname="c3"/>
+          <thead>
+            <row>
+              <entry role="class-title">Class</entry>
+              <entry role="class-name" namest="c2" nameend="c3">CCenteredWindow</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">
+                <para>Operations:</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-heading">
+                <para>visibility</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>return</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>name</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">CCenteredWindow</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>CCheckBox</title>
+      <table frame="all">
+        <title/>
+        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+          <colspec colname="c1"/>
+          <colspec colname="c2"/>
+          <colspec colname="c3"/>
+          <thead>
+            <row>
+              <entry role="class-title">Class</entry>
+              <entry role="class-name" namest="c2" nameend="c3">CCheckBox</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">
+                <para>Operations:</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-heading">
+                <para>visibility</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>return</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>name</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">CCheckBox</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">draw</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">onStateChanged</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>CAbstractToggle</title>
+      <table frame="all">
+        <title/>
+        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+          <colspec colname="c1"/>
+          <colspec colname="c2"/>
+          <colspec colname="c3"/>
+          <thead>
+            <row>
+              <entry role="class-title">Class</entry>
+              <entry role="class-name" namest="c2" nameend="c3">CAbstractToggle</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">Attributes:</entry>
+            </row>
+            <row>
+              <entry role="feature-heading">visibility</entry>
+              <entry role="feature-heading">type</entry>
+              <entry role="feature-heading">name</entry>
+            </row>
+            <row>
+              <entry role="feature-detail">protected</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">_selected</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">
+                <para>Operations:</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-heading">
+                <para>visibility</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>return</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>name</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">CAbstractToggle</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">CAbstractToggle</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">getSelected</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">onStateChanged</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">onMouseClick</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>CConsole</title>
+      <table frame="all">
+        <title/>
+        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+          <colspec colname="c1"/>
+          <colspec colname="c2"/>
+          <colspec colname="c3"/>
+          <thead>
+            <row>
+              <entry role="class-title">Class</entry>
+              <entry role="class-name" namest="c2" nameend="c3">CConsole</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">
+                <para>Operations:</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-heading">
+                <para>visibility</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>return</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>name</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">CConsole</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">~ CConsole</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>CWindow</title>
+      <table frame="all">
+        <title/>
+        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+          <colspec colname="c1"/>
+          <colspec colname="c2"/>
+          <colspec colname="c3"/>
+          <thead>
+            <row>
+              <entry role="class-title">Class</entry>
+              <entry role="class-name" namest="c2" nameend="c3">CWindow</entry>
+            </row>
+          </thead>
+          <tbody>
+            <section>
+              <title>Associations</title>
+              <para>visibility, type, properties.</para>
+              <para>public</para>
+              <para/>
+              <para>
+      Rolename: 
+    (none)</para>
+            </section>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">
+                <para>Operations:</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-heading">
+                <para>visibility</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>return</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>name</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">CWindow</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">draw</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">actionPerformed</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">onMouseDown</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>CDraggable</title>
+      <table frame="all">
+        <title/>
+        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+          <colspec colname="c1"/>
+          <colspec colname="c2"/>
+          <colspec colname="c3"/>
+          <thead>
+            <row>
+              <entry role="class-title">Class</entry>
+              <entry role="class-name" namest="c2" nameend="c3">CDraggable</entry>
+            </row>
+          </thead>
+          <tbody>
+            <section>
+              <title>Associations</title>
+              <para>visibility, type, properties.</para>
+              <para>public</para>
+              <para/>
+              <para>
+      Rolename: 
+    (none)</para>
+            </section>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">Attributes:</entry>
+            </row>
+            <row>
+              <entry role="feature-heading">visibility</entry>
+              <entry role="feature-heading">type</entry>
+              <entry role="feature-heading">name</entry>
+            </row>
+            <row>
+              <entry role="feature-detail">protected</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">pressed</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">
+                <para>Operations:</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-heading">
+                <para>visibility</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>return</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>name</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">CDraggable</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">mouseMove</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">onMouseDown</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">onMouseUp</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">draw</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>CMainMenu</title>
+      <table frame="all">
+        <title/>
+        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+          <colspec colname="c1"/>
+          <colspec colname="c2"/>
+          <colspec colname="c3"/>
+          <thead>
+            <row>
+              <entry role="class-title">Class</entry>
+              <entry role="class-name" namest="c2" nameend="c3">CMainMenu</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">Attributes:</entry>
+            </row>
+            <row>
+              <entry role="feature-heading">visibility</entry>
+              <entry role="feature-heading">type</entry>
+              <entry role="feature-heading">name</entry>
+            </row>
+            <row>
+              <entry role="feature-detail">protected</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">panelWidth</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">
+                <para>Operations:</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-heading">
+                <para>visibility</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>return</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>name</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">CMainMenu</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">draw</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">actionPerformed</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>CActionListenerPanel</title>
+      <table frame="all">
+        <title/>
+        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+          <colspec colname="c1"/>
+          <colspec colname="c2"/>
+          <colspec colname="c3"/>
+          <thead>
+            <row>
+              <entry role="class-title">Class</entry>
+              <entry role="class-name" namest="c2" nameend="c3">CActionListenerPanel</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">
+                <para>Operations:</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-heading">
+                <para>visibility</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>return</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>name</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">actionPerformed</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>CTextField</title>
+      <table frame="all">
+        <title/>
+        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+          <colspec colname="c1"/>
+          <colspec colname="c2"/>
+          <colspec colname="c3"/>
+          <thead>
+            <row>
+              <entry role="class-title">Class</entry>
+              <entry role="class-name" namest="c2" nameend="c3">CTextField</entry>
+            </row>
+          </thead>
+          <tbody>
+            <section>
+              <title>Associations</title>
+              <para>visibility, type, properties.</para>
+              <para>public</para>
+              <para/>
+              <para>
+      Rolename: 
+    (none)</para>
+              <para>public</para>
+              <para/>
+              <para>
+      Rolename: 
+    (none)</para>
+            </section>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">Attributes:</entry>
+            </row>
+            <row>
+              <entry role="feature-heading">visibility</entry>
+              <entry role="feature-heading">type</entry>
+              <entry role="feature-heading">name</entry>
+            </row>
+            <row>
+              <entry role="feature-detail">protected</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">_label</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">
+                <para>Operations:</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-heading">
+                <para>visibility</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>return</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>name</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">CTextField</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">onKeyboard</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">draw</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>CGuiPanel</title>
+      <table frame="all">
+        <title/>
+        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+          <colspec colname="c1"/>
+          <colspec colname="c2"/>
+          <colspec colname="c3"/>
+          <thead>
+            <row>
+              <entry role="class-title">Class</entry>
+              <entry role="class-name" namest="c2" nameend="c3">CGuiPanel</entry>
+            </row>
+          </thead>
+          <tbody>
+            <section>
+              <title>Associations</title>
+              <para>visibility, type, properties.</para>
+              <para>public</para>
+              <para/>
+              <para>
+      Rolename: 
+    (none)</para>
+              <para>public</para>
+              <para/>
+              <para>
+      Rolename: 
+    (none)</para>
+            </section>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">
+                <para>Operations:</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-heading">
+                <para>visibility</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>return</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>name</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">CGuiPanel</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">~ CGuiPanel</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">init</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">draw</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">drawChildren</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">setX</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">setY</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">setPosition</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">setPosition</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">getX</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">getY</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">vec2d</entry>
+              <entry role="feature-detail">getPosition</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">setW</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">setH</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">setSize</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">setSize</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">getW</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">getH</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">vec2d</entry>
+              <entry role="feature-detail">getSize</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">isPointInside</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">setVisible</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">getVisible</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">isVisible</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">setOpacity</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">getOpacity</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">getParent</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">getParentIndex</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">addChild</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">removeChild</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">removeChild</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">requestFocus</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">giveFocusTo</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">toString</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">handleMouseClick</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">onMouseDown</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">onMouseUp</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">onMouseClick</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">handleMouseMove</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">mouseMove</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">onMouseOver</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">onMouseOut</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">getMouseOver</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">getMouseDown</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">onKeyboard</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">requestKeyboardFocus</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">getAllowKeyboardInput</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">addActionListener</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">setBgColor</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">rgba</entry>
+              <entry role="feature-detail">getBgColor</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">setFgColor</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">rgba</entry>
+              <entry role="feature-detail">getFgColor</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">setDrawColor</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">drawQuad</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">drawVerticalGradient</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">drawHorizontalGradient</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">drawFrame</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">protected</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">setParent</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">protected</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">setParentIndex</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">protected</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">fireListeners</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>SStr</title>
+      <table frame="all">
+        <title/>
+        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+          <colspec colname="c1"/>
+          <colspec colname="c2"/>
+          <colspec colname="c3"/>
+          <thead>
+            <row>
+              <entry role="class-title">Class</entry>
+              <entry role="class-name" namest="c2" nameend="c3">SStr</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry namest="c1" nameend="c3">
+                <para/>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>ColorBase</title>
+      <table frame="all">
+        <title/>
+        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+          <colspec colname="c1"/>
+          <colspec colname="c2"/>
+          <colspec colname="c3"/>
+          <thead>
+            <row>
+              <entry role="class-title">Class</entry>
+              <entry role="class-name" namest="c2" nameend="c3">ColorBase</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry namest="c1" nameend="c3">
+                <para/>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>CFontMgr</title>
+      <table frame="all">
+        <title/>
+        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+          <colspec colname="c1"/>
+          <colspec colname="c2"/>
+          <colspec colname="c3"/>
+          <thead>
+            <row>
+              <entry role="class-title">Class</entry>
+              <entry role="class-name" namest="c2" nameend="c3">CFontMgr</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry namest="c1" nameend="c3">
+                <para/>
+              </entry>
+            </row>
+            <section>
+              <title>Associations</title>
+              <para>visibility, type, properties.</para>
+              <para>public</para>
+              <para/>
+              <para>
+      Rolename: 
+    (none)</para>
+              <para>public</para>
+              <para/>
+              <para>
+      Rolename: 
+    (none)</para>
+              <para>public</para>
+              <para/>
+              <para>
+      Rolename: 
+    (none)</para>
+              <para>public</para>
+              <para/>
+              <para>
+      Rolename: 
+    (none)</para>
+            </section>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>FontBase</title>
+      <table frame="all">
+        <title/>
+        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+          <colspec colname="c1"/>
+          <colspec colname="c2"/>
+          <colspec colname="c3"/>
+          <thead>
+            <row>
+              <entry role="class-title">Class</entry>
+              <entry role="class-name" namest="c2" nameend="c3">FontBase</entry>
+            </row>
+          </thead>
+          <tbody>
+            <section>
+              <title>Associations</title>
+              <para>visibility, type, properties.</para>
+              <para>public</para>
+              <para/>
+              <para>
+      Rolename: 
+    (none)</para>
+              <para>public</para>
+              <para/>
+              <para>
+      Rolename: 
+    (none)</para>
+            </section>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">Attributes:</entry>
+            </row>
+            <row>
+              <entry role="feature-heading">visibility</entry>
+              <entry role="feature-heading">type</entry>
+              <entry role="feature-heading">name</entry>
+            </row>
+            <row>
+              <entry role="feature-detail">protected</entry>
+              <entry role="feature-detail"/>
+              <entry role="feature-detail">_size</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="info-title" namest="c1" nameend="c3">
+                <para>Operations:</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-heading">
+                <para>visibility</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>return</para>
+              </entry>
+              <entry role="feature-heading">
+                <para>name</para>
+              </entry>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">render</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">render</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">render</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">render</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">FontBase</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">public</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">~ FontBase</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+            <row>
+              <entry role="feature-detail">protected</entry>
+              <entry role="feature-detail">
+                <para role="datatype">void</para>
+              </entry>
+              <entry role="feature-detail">renderImpl</entry>
+            </row>
+            <row>
+              <entry role="comment"/>
+              <entry namest="c2" nameend="c3" role="comment"/>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>FontWrapped</title>
+      <table frame="all">
+        <title/>
+        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+          <colspec colname="c1"/>
+          <colspec colname="c2"/>
+          <colspec colname="c3"/>
+          <thead>
+            <row>
+              <entry role="class-title">Class</entry>
+              <entry role="class-name" namest="c2" nameend="c3">FontWrapped</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry namest="c1" nameend="c3">
+                <para/>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+  </section>
+  <section id="diagrams">
+    <title>Diagrams</title>
+    <!--diagrambegin1namebeginDiagram třídynameend-->
+    <!--diagram1documentationbegindocumentationend-->
+    <section>
+      <title>Diagram třídy</title>
+      <para/>
+      <mediaobject>
+        <imageobject>
+          <imagedata format="PNG" fileref="Diagram t&#x159;&#xED;dy.png"/>
+        </imageobject>
+      </mediaobject>
+    </section>
+    <section>
+      <title>Classes:</title>
+      <para/>
+    </section>
+    <!--diagramend1-->
+  </section>
+</article>

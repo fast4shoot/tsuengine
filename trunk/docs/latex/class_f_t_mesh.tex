@@ -1,0 +1,151 @@
+\hypertarget{class_f_t_mesh}{
+\section{FTMesh Class Reference}
+\label{class_f_t_mesh}\index{FTMesh@{FTMesh}}
+}
+
+
+{\ttfamily \#include $<$FTVectoriser.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_f_t_mesh_aa78f98bec8f9cd15d0255c326b7cf62d}{FTMesh} ()
+\item 
+\hyperlink{class_f_t_mesh_a7282fec857e649bf91c91b2957f292ac}{$\sim$FTMesh} ()
+\item 
+void \hyperlink{class_f_t_mesh_a4a503faa60d78f67cd487611b0f44b68}{AddPoint} (const FTGL\_\-DOUBLE x, const FTGL\_\-DOUBLE y, const FTGL\_\-DOUBLE z)
+\item 
+const FTGL\_\-DOUBLE $\ast$ \hyperlink{class_f_t_mesh_a41c229d00a0edd342fff2577c7024dae}{Combine} (const FTGL\_\-DOUBLE x, const FTGL\_\-DOUBLE y, const FTGL\_\-DOUBLE z)
+\item 
+void \hyperlink{class_f_t_mesh_a03ddbeb4313ce4353c477d0afcdc4a1e}{Begin} (GLenum meshType)
+\item 
+void \hyperlink{class_f_t_mesh_a1ead56fbe963c5976ea3c268b8b0544d}{End} ()
+\item 
+void \hyperlink{class_f_t_mesh_a2e07adc55441296e88b6886c153c50fd}{Error} (GLenum e)
+\item 
+size\_\-t \hyperlink{class_f_t_mesh_a21075ff9bd0534574aede7f72fd33281}{TesselationCount} () const 
+\item 
+const \hyperlink{class_f_t_tesselation}{FTTesselation} $\ast$const \hyperlink{class_f_t_mesh_a5d8f540f3f6497209b91b53a3daa4190}{Tesselation} (size\_\-t index) const 
+\item 
+const \hyperlink{class_f_t_list}{PointList} \& \hyperlink{class_f_t_mesh_ac75f054b4e430c12d1f098070713acbb}{TempPointList} () const 
+\item 
+GLenum \hyperlink{class_f_t_mesh_ac706276fad2215121ffb1fdf1acffa8f}{Error} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_f_t_mesh}{FTMesh} is a container of FTTesselation's that make up a polygon glyph 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_f_t_mesh_aa78f98bec8f9cd15d0255c326b7cf62d}{
+\index{FTMesh@{FTMesh}!FTMesh@{FTMesh}}
+\index{FTMesh@{FTMesh}!FTMesh@{FTMesh}}
+\subsubsection[{FTMesh}]{\setlength{\rightskip}{0pt plus 5cm}FTMesh::FTMesh (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_f_t_mesh_aa78f98bec8f9cd15d0255c326b7cf62d}
+Default constructor \hypertarget{class_f_t_mesh_a7282fec857e649bf91c91b2957f292ac}{
+\index{FTMesh@{FTMesh}!$\sim$FTMesh@{$\sim$FTMesh}}
+\index{$\sim$FTMesh@{$\sim$FTMesh}!FTMesh@{FTMesh}}
+\subsubsection[{$\sim$FTMesh}]{\setlength{\rightskip}{0pt plus 5cm}FTMesh::$\sim$FTMesh (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_f_t_mesh_a7282fec857e649bf91c91b2957f292ac}
+Destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_f_t_mesh_a4a503faa60d78f67cd487611b0f44b68}{
+\index{FTMesh@{FTMesh}!AddPoint@{AddPoint}}
+\index{AddPoint@{AddPoint}!FTMesh@{FTMesh}}
+\subsubsection[{AddPoint}]{\setlength{\rightskip}{0pt plus 5cm}void FTMesh::AddPoint (
+\begin{DoxyParamCaption}
+\item[{const FTGL\_\-DOUBLE}]{ x, }
+\item[{const FTGL\_\-DOUBLE}]{ y, }
+\item[{const FTGL\_\-DOUBLE}]{ z}
+\end{DoxyParamCaption}
+)}}
+\label{class_f_t_mesh_a4a503faa60d78f67cd487611b0f44b68}
+Add a point to the mesh \hypertarget{class_f_t_mesh_a03ddbeb4313ce4353c477d0afcdc4a1e}{
+\index{FTMesh@{FTMesh}!Begin@{Begin}}
+\index{Begin@{Begin}!FTMesh@{FTMesh}}
+\subsubsection[{Begin}]{\setlength{\rightskip}{0pt plus 5cm}void FTMesh::Begin (
+\begin{DoxyParamCaption}
+\item[{GLenum}]{ meshType}
+\end{DoxyParamCaption}
+)}}
+\label{class_f_t_mesh_a03ddbeb4313ce4353c477d0afcdc4a1e}
+Begin a new polygon \hypertarget{class_f_t_mesh_a41c229d00a0edd342fff2577c7024dae}{
+\index{FTMesh@{FTMesh}!Combine@{Combine}}
+\index{Combine@{Combine}!FTMesh@{FTMesh}}
+\subsubsection[{Combine}]{\setlength{\rightskip}{0pt plus 5cm}const FTGL\_\-DOUBLE $\ast$ FTMesh::Combine (
+\begin{DoxyParamCaption}
+\item[{const FTGL\_\-DOUBLE}]{ x, }
+\item[{const FTGL\_\-DOUBLE}]{ y, }
+\item[{const FTGL\_\-DOUBLE}]{ z}
+\end{DoxyParamCaption}
+)}}
+\label{class_f_t_mesh_a41c229d00a0edd342fff2577c7024dae}
+Create a combine point for the gluTesselator \hypertarget{class_f_t_mesh_a1ead56fbe963c5976ea3c268b8b0544d}{
+\index{FTMesh@{FTMesh}!End@{End}}
+\index{End@{End}!FTMesh@{FTMesh}}
+\subsubsection[{End}]{\setlength{\rightskip}{0pt plus 5cm}void FTMesh::End (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_f_t_mesh_a1ead56fbe963c5976ea3c268b8b0544d}
+End a polygon \hypertarget{class_f_t_mesh_a2e07adc55441296e88b6886c153c50fd}{
+\index{FTMesh@{FTMesh}!Error@{Error}}
+\index{Error@{Error}!FTMesh@{FTMesh}}
+\subsubsection[{Error}]{\setlength{\rightskip}{0pt plus 5cm}void FTMesh::Error (
+\begin{DoxyParamCaption}
+\item[{GLenum}]{ e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_f_t_mesh_a2e07adc55441296e88b6886c153c50fd}
+Record a gluTesselation error \hypertarget{class_f_t_mesh_ac706276fad2215121ffb1fdf1acffa8f}{
+\index{FTMesh@{FTMesh}!Error@{Error}}
+\index{Error@{Error}!FTMesh@{FTMesh}}
+\subsubsection[{Error}]{\setlength{\rightskip}{0pt plus 5cm}GLenum FTMesh::Error (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_f_t_mesh_ac706276fad2215121ffb1fdf1acffa8f}
+Get the GL ERROR returned by the glu tesselator \hypertarget{class_f_t_mesh_ac75f054b4e430c12d1f098070713acbb}{
+\index{FTMesh@{FTMesh}!TempPointList@{TempPointList}}
+\index{TempPointList@{TempPointList}!FTMesh@{FTMesh}}
+\subsubsection[{TempPointList}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf PointList}\& FTMesh::TempPointList (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_f_t_mesh_ac75f054b4e430c12d1f098070713acbb}
+Return the temporary point list. For testing only. \hypertarget{class_f_t_mesh_a5d8f540f3f6497209b91b53a3daa4190}{
+\index{FTMesh@{FTMesh}!Tesselation@{Tesselation}}
+\index{Tesselation@{Tesselation}!FTMesh@{FTMesh}}
+\subsubsection[{Tesselation}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf FTTesselation} $\ast$const FTMesh::Tesselation (
+\begin{DoxyParamCaption}
+\item[{size\_\-t}]{ index}
+\end{DoxyParamCaption}
+) const}}
+\label{class_f_t_mesh_a5d8f540f3f6497209b91b53a3daa4190}
+Get a tesselation by index \hypertarget{class_f_t_mesh_a21075ff9bd0534574aede7f72fd33281}{
+\index{FTMesh@{FTMesh}!TesselationCount@{TesselationCount}}
+\index{TesselationCount@{TesselationCount}!FTMesh@{FTMesh}}
+\subsubsection[{TesselationCount}]{\setlength{\rightskip}{0pt plus 5cm}size\_\-t FTMesh::TesselationCount (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_f_t_mesh_a21075ff9bd0534574aede7f72fd33281}
+The number of tesselations in the mesh 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+src/libs/FTGL/FTVectoriser.h\item 
+src/libs/FTGL/FTVectoriser.cpp\end{DoxyCompactItemize}

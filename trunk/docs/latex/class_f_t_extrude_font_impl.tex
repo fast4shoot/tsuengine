@@ -1,0 +1,109 @@
+\hypertarget{class_f_t_extrude_font_impl}{
+\section{FTExtrudeFontImpl Class Reference}
+\label{class_f_t_extrude_font_impl}\index{FTExtrudeFontImpl@{FTExtrudeFontImpl}}
+}
+Inheritance diagram for FTExtrudeFontImpl:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_f_t_extrude_font_impl}
+\end{center}
+\end{figure}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_f_t_extrude_font_impl_a43da54bf40a55db304395d8dec46897f}{
+{\bfseries FTExtrudeFontImpl} (FTFont $\ast$ftFont, const char $\ast$fontFilePath)}
+\label{class_f_t_extrude_font_impl_a43da54bf40a55db304395d8dec46897f}
+
+\item 
+\hypertarget{class_f_t_extrude_font_impl_aa433e0addf2dba2ae9232d6522ccdb5f}{
+{\bfseries FTExtrudeFontImpl} (FTFont $\ast$ftFont, const unsigned char $\ast$pBufferBytes, size\_\-t bufferSizeInBytes)}
+\label{class_f_t_extrude_font_impl_aa433e0addf2dba2ae9232d6522ccdb5f}
+
+\item 
+virtual void \hyperlink{class_f_t_extrude_font_impl_a852e6d263a34982d56d19dfdf43722f0}{Depth} (float d)
+\item 
+virtual void \hyperlink{class_f_t_extrude_font_impl_a559ce64b4d0e881455b050d3be57cac0}{Outset} (float o)
+\item 
+virtual void \hyperlink{class_f_t_extrude_font_impl_a24e6ada58e9086284e99611454c7b335}{Outset} (float f, float b)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_f_t_extrude_font_impl_a06be1600e211ee41aa1b1ed9c7d25639}{
+class {\bfseries FTExtrudeFont}}
+\label{class_f_t_extrude_font_impl_a06be1600e211ee41aa1b1ed9c7d25639}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_f_t_extrude_font_impl_a852e6d263a34982d56d19dfdf43722f0}{
+\index{FTExtrudeFontImpl@{FTExtrudeFontImpl}!Depth@{Depth}}
+\index{Depth@{Depth}!FTExtrudeFontImpl@{FTExtrudeFontImpl}}
+\subsubsection[{Depth}]{\setlength{\rightskip}{0pt plus 5cm}virtual void FTExtrudeFontImpl::Depth (
+\begin{DoxyParamCaption}
+\item[{float}]{ d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}
+\label{class_f_t_extrude_font_impl_a852e6d263a34982d56d19dfdf43722f0}
+Set the extrusion distance for the font.
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & The extrusion distance. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_f_t_font_impl}{FTFontImpl}.
+
+\hypertarget{class_f_t_extrude_font_impl_a24e6ada58e9086284e99611454c7b335}{
+\index{FTExtrudeFontImpl@{FTExtrudeFontImpl}!Outset@{Outset}}
+\index{Outset@{Outset}!FTExtrudeFontImpl@{FTExtrudeFontImpl}}
+\subsubsection[{Outset}]{\setlength{\rightskip}{0pt plus 5cm}virtual void FTExtrudeFontImpl::Outset (
+\begin{DoxyParamCaption}
+\item[{float}]{ f, }
+\item[{float}]{ b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}
+\label{class_f_t_extrude_font_impl_a24e6ada58e9086284e99611454c7b335}
+Set the outset distance for the font. Only implemented by FTExtrudeFont
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & The front outset distance. \\
+\hline
+{\em b} & The back outset distance. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_f_t_font_impl}{FTFontImpl}.
+
+\hypertarget{class_f_t_extrude_font_impl_a559ce64b4d0e881455b050d3be57cac0}{
+\index{FTExtrudeFontImpl@{FTExtrudeFontImpl}!Outset@{Outset}}
+\index{Outset@{Outset}!FTExtrudeFontImpl@{FTExtrudeFontImpl}}
+\subsubsection[{Outset}]{\setlength{\rightskip}{0pt plus 5cm}virtual void FTExtrudeFontImpl::Outset (
+\begin{DoxyParamCaption}
+\item[{float}]{ o}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}
+\label{class_f_t_extrude_font_impl_a559ce64b4d0e881455b050d3be57cac0}
+Set the outset distance for the font. Only implemented by FTOutlineFont, FTPolygonFont and FTExtrudeFont
+
+
+\begin{DoxyParams}{Parameters}
+{\em o} & The outset distance. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_f_t_font_impl}{FTFontImpl}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+src/libs/FTGL/FTFont/FTExtrudeFontImpl.h\item 
+src/libs/FTGL/FTFont/FTExtrudeFont.cpp\end{DoxyCompactItemize}

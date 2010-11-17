@@ -1,0 +1,110 @@
+\hypertarget{class_f_t_simple_layout_impl}{
+\section{FTSimpleLayoutImpl Class Reference}
+\label{class_f_t_simple_layout_impl}\index{FTSimpleLayoutImpl@{FTSimpleLayoutImpl}}
+}
+Inheritance diagram for FTSimpleLayoutImpl:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_f_t_simple_layout_impl}
+\end{center}
+\end{figure}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_f_t_simple_layout_impl_a6cdedbc1045881dcb3ddedea054a7987}{
+virtual FTBBox {\bfseries BBox} (const char $\ast$string, const int len, FTPoint position)}
+\label{class_f_t_simple_layout_impl_a6cdedbc1045881dcb3ddedea054a7987}
+
+\item 
+\hypertarget{class_f_t_simple_layout_impl_a682650a15a67eb182b2de9e7001875cb}{
+virtual FTBBox {\bfseries BBox} (const wchar\_\-t $\ast$string, const int len, FTPoint position)}
+\label{class_f_t_simple_layout_impl_a682650a15a67eb182b2de9e7001875cb}
+
+\item 
+\hypertarget{class_f_t_simple_layout_impl_abfe85f44b3d4a2f8691b5e11ab26828a}{
+virtual void {\bfseries Render} (const char $\ast$string, const int len, FTPoint position, int renderMode)}
+\label{class_f_t_simple_layout_impl_abfe85f44b3d4a2f8691b5e11ab26828a}
+
+\item 
+\hypertarget{class_f_t_simple_layout_impl_ac69f1a3cdac5e6dd692b547df3f77825}{
+virtual void {\bfseries Render} (const wchar\_\-t $\ast$string, const int len, FTPoint position, int renderMode)}
+\label{class_f_t_simple_layout_impl_ac69f1a3cdac5e6dd692b547df3f77825}
+
+\item 
+virtual void \hyperlink{class_f_t_simple_layout_impl_abdbd064c650f1e17d2bd3139536aff47}{RenderSpace} (const char $\ast$string, const int len, FTPoint position, int renderMode, const float extraSpace)
+\item 
+virtual void \hyperlink{class_f_t_simple_layout_impl_a6b5334d053e9c79dd459f8b88c0e60a4}{RenderSpace} (const wchar\_\-t $\ast$string, const int len, FTPoint position, int renderMode, const float extraSpace)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_f_t_simple_layout_impl_ae27eaa779922d14c8eb0f476456c7099}{
+class {\bfseries FTSimpleLayout}}
+\label{class_f_t_simple_layout_impl_ae27eaa779922d14c8eb0f476456c7099}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_f_t_simple_layout_impl_a6b5334d053e9c79dd459f8b88c0e60a4}{
+\index{FTSimpleLayoutImpl@{FTSimpleLayoutImpl}!RenderSpace@{RenderSpace}}
+\index{RenderSpace@{RenderSpace}!FTSimpleLayoutImpl@{FTSimpleLayoutImpl}}
+\subsubsection[{RenderSpace}]{\setlength{\rightskip}{0pt plus 5cm}void FTSimpleLayoutImpl::RenderSpace (
+\begin{DoxyParamCaption}
+\item[{const wchar\_\-t $\ast$}]{ string, }
+\item[{const int}]{ len, }
+\item[{FTPoint}]{ position, }
+\item[{int}]{ renderMode, }
+\item[{const float}]{ extraSpace}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{class_f_t_simple_layout_impl_a6b5334d053e9c79dd459f8b88c0e60a4}
+Render a string of characters and distribute extra space amongst the whitespace regions of the string.
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & A buffer of wchar\_\-t characters to output. \\
+\hline
+{\em len} & The length of the string. If $<$ 0 then all characters will be displayed until a null character is encountered. \\
+\hline
+{\em position} & TODO \\
+\hline
+{\em renderMode} & Render mode to display \\
+\hline
+{\em extraSpace} & The amount of extra space to distribute amongst the characters. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_f_t_simple_layout_impl_abdbd064c650f1e17d2bd3139536aff47}{
+\index{FTSimpleLayoutImpl@{FTSimpleLayoutImpl}!RenderSpace@{RenderSpace}}
+\index{RenderSpace@{RenderSpace}!FTSimpleLayoutImpl@{FTSimpleLayoutImpl}}
+\subsubsection[{RenderSpace}]{\setlength{\rightskip}{0pt plus 5cm}void FTSimpleLayoutImpl::RenderSpace (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{ string, }
+\item[{const int}]{ len, }
+\item[{FTPoint}]{ position, }
+\item[{int}]{ renderMode, }
+\item[{const float}]{ extraSpace}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{class_f_t_simple_layout_impl_abdbd064c650f1e17d2bd3139536aff47}
+Render a string of characters and distribute extra space amongst the whitespace regions of the string.
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & A buffer of wchar\_\-t characters to output. \\
+\hline
+{\em len} & The length of the string. If $<$ 0 then all characters will be displayed until a null character is encountered. \\
+\hline
+{\em position} & TODO \\
+\hline
+{\em renderMode} & Render mode to display \\
+\hline
+{\em extraSpace} & The amount of extra space to distribute amongst the characters. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+src/libs/FTGL/FTLayout/FTSimpleLayoutImpl.h\item 
+src/libs/FTGL/FTLayout/FTSimpleLayout.cpp\end{DoxyCompactItemize}

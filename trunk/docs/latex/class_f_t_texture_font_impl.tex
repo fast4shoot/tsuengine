@@ -1,0 +1,78 @@
+\hypertarget{class_f_t_texture_font_impl}{
+\section{FTTextureFontImpl Class Reference}
+\label{class_f_t_texture_font_impl}\index{FTTextureFontImpl@{FTTextureFontImpl}}
+}
+Inheritance diagram for FTTextureFontImpl:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_f_t_texture_font_impl}
+\end{center}
+\end{figure}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_f_t_texture_font_impl_a6e5537e5ce6f58e8f8244c9d0cd44d9f}{
+{\bfseries FTTextureFontImpl} (FTFont $\ast$ftFont, const char $\ast$fontFilePath)}
+\label{class_f_t_texture_font_impl_a6e5537e5ce6f58e8f8244c9d0cd44d9f}
+
+\item 
+\hypertarget{class_f_t_texture_font_impl_a4554181466170efa12b9a12e4936b61d}{
+{\bfseries FTTextureFontImpl} (FTFont $\ast$ftFont, const unsigned char $\ast$pBufferBytes, size\_\-t bufferSizeInBytes)}
+\label{class_f_t_texture_font_impl_a4554181466170efa12b9a12e4936b61d}
+
+\item 
+virtual bool \hyperlink{class_f_t_texture_font_impl_ac5ccaca6cc8a53292b5028a629e49244}{FaceSize} (const unsigned int size, const unsigned int res=72)
+\item 
+\hypertarget{class_f_t_texture_font_impl_a8b53cbe2b70ad38af59a7d79945122d9}{
+virtual FTPoint {\bfseries Render} (const char $\ast$s, const int len, FTPoint position, FTPoint spacing, int renderMode)}
+\label{class_f_t_texture_font_impl_a8b53cbe2b70ad38af59a7d79945122d9}
+
+\item 
+\hypertarget{class_f_t_texture_font_impl_aba852ac4cc9b759073b6370e059e6c11}{
+virtual FTPoint {\bfseries Render} (const wchar\_\-t $\ast$s, const int len, FTPoint position, FTPoint spacing, int renderMode)}
+\label{class_f_t_texture_font_impl_aba852ac4cc9b759073b6370e059e6c11}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_f_t_texture_font_impl_a7870c341f7269dfae257e93406c17c92}{
+class {\bfseries FTTextureFont}}
+\label{class_f_t_texture_font_impl_a7870c341f7269dfae257e93406c17c92}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_f_t_texture_font_impl_ac5ccaca6cc8a53292b5028a629e49244}{
+\index{FTTextureFontImpl@{FTTextureFontImpl}!FaceSize@{FaceSize}}
+\index{FaceSize@{FaceSize}!FTTextureFontImpl@{FTTextureFontImpl}}
+\subsubsection[{FaceSize}]{\setlength{\rightskip}{0pt plus 5cm}bool FTTextureFontImpl::FaceSize (
+\begin{DoxyParamCaption}
+\item[{const unsigned int}]{ size, }
+\item[{const unsigned int}]{ res = {\ttfamily 72}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{class_f_t_texture_font_impl_ac5ccaca6cc8a53292b5028a629e49244}
+Set the char size for the current face.
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & the face size in points (1/72 inch) \\
+\hline
+{\em res} & the resolution of the target device. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if size was set correctly 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_f_t_font_impl}{FTFontImpl}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+src/libs/FTGL/FTFont/FTTextureFontImpl.h\item 
+src/libs/FTGL/FTFont/FTTextureFont.cpp\end{DoxyCompactItemize}
