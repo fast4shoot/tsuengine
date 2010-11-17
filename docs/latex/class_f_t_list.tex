@@ -1,0 +1,121 @@
+\hypertarget{class_f_t_list}{
+\section{FTList$<$ FT\_\-LIST\_\-ITEM\_\-TYPE $>$ Class Template Reference}
+\label{class_f_t_list}\index{FTList@{FTList}}
+}
+
+
+{\ttfamily \#include $<$FTList.h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bfseries Node}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_f_t_list_ae172da3e03bcd6dab4b5f60efe0fc7a3}{
+typedef FT\_\-LIST\_\-ITEM\_\-TYPE {\bfseries value\_\-type}}
+\label{class_f_t_list_ae172da3e03bcd6dab4b5f60efe0fc7a3}
+
+\item 
+\hypertarget{class_f_t_list_a37fe33040a67a2d5aad9ead2bb2179d7}{
+typedef value\_\-type \& {\bfseries reference}}
+\label{class_f_t_list_a37fe33040a67a2d5aad9ead2bb2179d7}
+
+\item 
+\hypertarget{class_f_t_list_a82677d676935b1f3cb5e9328523bf3a6}{
+typedef const value\_\-type \& {\bfseries const\_\-reference}}
+\label{class_f_t_list_a82677d676935b1f3cb5e9328523bf3a6}
+
+\item 
+\hypertarget{class_f_t_list_a5ebe9866c4f86791c6970f19deb09cb1}{
+typedef size\_\-t {\bfseries size\_\-type}}
+\label{class_f_t_list_a5ebe9866c4f86791c6970f19deb09cb1}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_f_t_list_a4de727811240b9d8568d1d47fd389502}{FTList} ()
+\item 
+\hyperlink{class_f_t_list_aabfac3b136119f727611d490aef3eab4}{$\sim$FTList} ()
+\item 
+size\_\-type \hyperlink{class_f_t_list_a73542705ba9556d5cd594c3ec32fe5d2}{size} () const 
+\item 
+void \hyperlink{class_f_t_list_acd30af5d1a32185842decac3e0c183ce}{push\_\-back} (const value\_\-type \&item)
+\item 
+reference \hyperlink{class_f_t_list_a068805ebb222e9ce69a8828b31fd87df}{front} () const 
+\item 
+reference \hyperlink{class_f_t_list_ae6b5f56991e9d2ac226ce7960e4661f4}{back} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename FT\_\-LIST\_\-ITEM\_\-TYPE$>$ class FTList$<$ FT\_\-LIST\_\-ITEM\_\-TYPE $>$}
+
+Provides a non-\/STL alternative to the STL list 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_f_t_list_a4de727811240b9d8568d1d47fd389502}{
+\index{FTList@{FTList}!FTList@{FTList}}
+\index{FTList@{FTList}!FTList@{FTList}}
+\subsubsection[{FTList}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename FT\_\-LIST\_\-ITEM\_\-TYPE$>$ {\bf FTList}$<$ FT\_\-LIST\_\-ITEM\_\-TYPE $>$::{\bf FTList} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_f_t_list_a4de727811240b9d8568d1d47fd389502}
+Constructor \hypertarget{class_f_t_list_aabfac3b136119f727611d490aef3eab4}{
+\index{FTList@{FTList}!$\sim$FTList@{$\sim$FTList}}
+\index{$\sim$FTList@{$\sim$FTList}!FTList@{FTList}}
+\subsubsection[{$\sim$FTList}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename FT\_\-LIST\_\-ITEM\_\-TYPE$>$ {\bf FTList}$<$ FT\_\-LIST\_\-ITEM\_\-TYPE $>$::$\sim${\bf FTList} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_f_t_list_aabfac3b136119f727611d490aef3eab4}
+Destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_f_t_list_ae6b5f56991e9d2ac226ce7960e4661f4}{
+\index{FTList@{FTList}!back@{back}}
+\index{back@{back}!FTList@{FTList}}
+\subsubsection[{back}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename FT\_\-LIST\_\-ITEM\_\-TYPE$>$ reference {\bf FTList}$<$ FT\_\-LIST\_\-ITEM\_\-TYPE $>$::back (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_f_t_list_ae6b5f56991e9d2ac226ce7960e4661f4}
+Get the item at the end of the list \hypertarget{class_f_t_list_a068805ebb222e9ce69a8828b31fd87df}{
+\index{FTList@{FTList}!front@{front}}
+\index{front@{front}!FTList@{FTList}}
+\subsubsection[{front}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename FT\_\-LIST\_\-ITEM\_\-TYPE$>$ reference {\bf FTList}$<$ FT\_\-LIST\_\-ITEM\_\-TYPE $>$::front (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_f_t_list_a068805ebb222e9ce69a8828b31fd87df}
+Get the item at the front of the list \hypertarget{class_f_t_list_acd30af5d1a32185842decac3e0c183ce}{
+\index{FTList@{FTList}!push\_\-back@{push\_\-back}}
+\index{push\_\-back@{push\_\-back}!FTList@{FTList}}
+\subsubsection[{push\_\-back}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename FT\_\-LIST\_\-ITEM\_\-TYPE$>$ void {\bf FTList}$<$ FT\_\-LIST\_\-ITEM\_\-TYPE $>$::push\_\-back (
+\begin{DoxyParamCaption}
+\item[{const value\_\-type \&}]{ item}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_f_t_list_acd30af5d1a32185842decac3e0c183ce}
+Add an item to the end of the list \hypertarget{class_f_t_list_a73542705ba9556d5cd594c3ec32fe5d2}{
+\index{FTList@{FTList}!size@{size}}
+\index{size@{size}!FTList@{FTList}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename FT\_\-LIST\_\-ITEM\_\-TYPE$>$ size\_\-type {\bf FTList}$<$ FT\_\-LIST\_\-ITEM\_\-TYPE $>$::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_f_t_list_a73542705ba9556d5cd594c3ec32fe5d2}
+Get the number of items in the list 
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+src/libs/FTGL/FTList.h\end{DoxyCompactItemize}

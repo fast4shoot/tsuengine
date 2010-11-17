@@ -1,0 +1,105 @@
+\hypertarget{class_f_t_unicode_string_itr}{
+\section{FTUnicodeStringItr$<$ T $>$ Class Template Reference}
+\label{class_f_t_unicode_string_itr}\index{FTUnicodeStringItr@{FTUnicodeStringItr}}
+}
+
+
+{\ttfamily \#include $<$FTUnicode.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_f_t_unicode_string_itr_ab640405eaa904f1609f1b659e5657989}{FTUnicodeStringItr} (const T $\ast$string)
+\item 
+\hyperlink{class_f_t_unicode_string_itr}{FTUnicodeStringItr} \& \hyperlink{class_f_t_unicode_string_itr_a476aa8e48d5ea56de9ee979af1cd4007}{operator++} ()
+\item 
+\hyperlink{class_f_t_unicode_string_itr}{FTUnicodeStringItr} \hyperlink{class_f_t_unicode_string_itr_a84c9354998144c4f221cde699e3f8455}{operator++} (int)
+\item 
+bool \hyperlink{class_f_t_unicode_string_itr_ae27e7162e014fbcbf731a50bd34b2946}{operator==} (const \hyperlink{class_f_t_unicode_string_itr}{FTUnicodeStringItr} \&right) const 
+\item 
+unsigned int \hyperlink{class_f_t_unicode_string_itr_a90300d6888d77e7a349b0d476a7c0bb4}{operator$\ast$} () const 
+\item 
+const T $\ast$ \hyperlink{class_f_t_unicode_string_itr_a8ced99f40fd1af46e0a76b844187efe1}{getBufferFromHere} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$ class FTUnicodeStringItr$<$ T $>$}
+
+Provides a way to easily walk multibyte unicode strings in the various Unicode encodings (UTF-\/8, UTF-\/16, UTF-\/32, UCS-\/2, and UCS-\/4). Encodings with elements larger than one byte must already be in the correct endian order for the current architecture. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_f_t_unicode_string_itr_ab640405eaa904f1609f1b659e5657989}{
+\index{FTUnicodeStringItr@{FTUnicodeStringItr}!FTUnicodeStringItr@{FTUnicodeStringItr}}
+\index{FTUnicodeStringItr@{FTUnicodeStringItr}!FTUnicodeStringItr@{FTUnicodeStringItr}}
+\subsubsection[{FTUnicodeStringItr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf FTUnicodeStringItr}$<$ T $>$::{\bf FTUnicodeStringItr} (
+\begin{DoxyParamCaption}
+\item[{const T $\ast$}]{ string}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_f_t_unicode_string_itr_ab640405eaa904f1609f1b659e5657989}
+Constructor. Also reads the first character and stores it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & The buffer to iterate. No copy is made. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_f_t_unicode_string_itr_a8ced99f40fd1af46e0a76b844187efe1}{
+\index{FTUnicodeStringItr@{FTUnicodeStringItr}!getBufferFromHere@{getBufferFromHere}}
+\index{getBufferFromHere@{getBufferFromHere}!FTUnicodeStringItr@{FTUnicodeStringItr}}
+\subsubsection[{getBufferFromHere}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ const T$\ast$ {\bf FTUnicodeStringItr}$<$ T $>$::getBufferFromHere (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_f_t_unicode_string_itr_a8ced99f40fd1af46e0a76b844187efe1}
+Buffer-\/fetching getter. You can use this to retreive the buffer starting at the currently-\/iterated character for functions which require a Unicode string as input. \hypertarget{class_f_t_unicode_string_itr_a90300d6888d77e7a349b0d476a7c0bb4}{
+\index{FTUnicodeStringItr@{FTUnicodeStringItr}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!FTUnicodeStringItr@{FTUnicodeStringItr}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ unsigned int {\bf FTUnicodeStringItr}$<$ T $>$::operator$\ast$ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_f_t_unicode_string_itr_a90300d6888d77e7a349b0d476a7c0bb4}
+Dereference operator.
+
+\begin{DoxyReturn}{Returns}
+The unicode codepoint of the character currently pointed to by the \hyperlink{class_f_t_unicode_string_itr}{FTUnicodeStringItr}. 
+\end{DoxyReturn}
+\hypertarget{class_f_t_unicode_string_itr_a84c9354998144c4f221cde699e3f8455}{
+\index{FTUnicodeStringItr@{FTUnicodeStringItr}!operator++@{operator++}}
+\index{operator++@{operator++}!FTUnicodeStringItr@{FTUnicodeStringItr}}
+\subsubsection[{operator++}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf FTUnicodeStringItr} {\bf FTUnicodeStringItr}$<$ T $>$::operator++ (
+\begin{DoxyParamCaption}
+\item[{int}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_f_t_unicode_string_itr_a84c9354998144c4f221cde699e3f8455}
+Post-\/increment operator. Reads the next character and sets the state appropriately. Note -\/ not protected against overruns. \hypertarget{class_f_t_unicode_string_itr_a476aa8e48d5ea56de9ee979af1cd4007}{
+\index{FTUnicodeStringItr@{FTUnicodeStringItr}!operator++@{operator++}}
+\index{operator++@{operator++}!FTUnicodeStringItr@{FTUnicodeStringItr}}
+\subsubsection[{operator++}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf FTUnicodeStringItr}\& {\bf FTUnicodeStringItr}$<$ T $>$::operator++ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_f_t_unicode_string_itr_a476aa8e48d5ea56de9ee979af1cd4007}
+Pre-\/increment operator. Reads the next unicode character and sets the state appropriately. Note -\/ not protected against overruns. \hypertarget{class_f_t_unicode_string_itr_ae27e7162e014fbcbf731a50bd34b2946}{
+\index{FTUnicodeStringItr@{FTUnicodeStringItr}!operator==@{operator==}}
+\index{operator==@{operator==}!FTUnicodeStringItr@{FTUnicodeStringItr}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool {\bf FTUnicodeStringItr}$<$ T $>$::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf FTUnicodeStringItr}$<$ T $>$ \&}]{ right}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_f_t_unicode_string_itr_ae27e7162e014fbcbf731a50bd34b2946}
+Equality operator. Two FTUnicodeStringItrs are considered equal if they have the same current buffer and buffer position. 
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+src/libs/FTGL/FTUnicode.h\end{DoxyCompactItemize}

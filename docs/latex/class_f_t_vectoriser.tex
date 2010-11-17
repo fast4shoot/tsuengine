@@ -1,0 +1,188 @@
+\hypertarget{class_f_t_vectoriser}{
+\section{FTVectoriser Class Reference}
+\label{class_f_t_vectoriser}\index{FTVectoriser@{FTVectoriser}}
+}
+
+
+{\ttfamily \#include $<$FTVectoriser.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_f_t_vectoriser_a32ca6ea1d5e99fa0337f4e2430a336cb}{FTVectoriser} (const \hyperlink{struct_f_t___glyph_slot_rec__}{FT\_\-GlyphSlot} glyph)
+\item 
+virtual \hyperlink{class_f_t_vectoriser_a76d1b9b2a0333b8cb5c21b25f51001dd}{$\sim$FTVectoriser} ()
+\item 
+void \hyperlink{class_f_t_vectoriser_a3c74bd2dc8f6292a920d17d8e1d0266f}{MakeMesh} (FTGL\_\-DOUBLE zNormal=FTGL\_\-FRONT\_\-FACING, int outsetType=0, float outsetSize=0.0f)
+\item 
+const \hyperlink{class_f_t_mesh}{FTMesh} $\ast$const \hyperlink{class_f_t_vectoriser_adbc45a678dcd5da1bdc122f18e1397a7}{GetMesh} () const 
+\item 
+size\_\-t \hyperlink{class_f_t_vectoriser_aff1d33b51ede40e45f80d143cd4b7680}{PointCount} ()
+\item 
+size\_\-t \hyperlink{class_f_t_vectoriser_a9b65af714c20171fb61e9d62e802290a}{ContourCount} () const 
+\item 
+const \hyperlink{class_f_t_contour}{FTContour} $\ast$const \hyperlink{class_f_t_vectoriser_ad0bc396b4fbc01046264e365646b4449}{Contour} (size\_\-t index) const 
+\item 
+size\_\-t \hyperlink{class_f_t_vectoriser_a73345585f77d37d84362ce2b60a18be9}{ContourSize} (int c) const 
+\item 
+int \hyperlink{class_f_t_vectoriser_a257790691ff01bcf7ca1a7f1e2362f8c}{ContourFlag} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_f_t_vectoriser}{FTVectoriser} class is a helper class that converts font outlines into point data.
+
+\begin{DoxySeeAlso}{See also}
+FTExtrudeGlyph 
+
+FTOutlineGlyph 
+
+FTPolygonGlyph 
+
+\hyperlink{class_f_t_contour}{FTContour} 
+
+FTPoint 
+\end{DoxySeeAlso}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_f_t_vectoriser_a32ca6ea1d5e99fa0337f4e2430a336cb}{
+\index{FTVectoriser@{FTVectoriser}!FTVectoriser@{FTVectoriser}}
+\index{FTVectoriser@{FTVectoriser}!FTVectoriser@{FTVectoriser}}
+\subsubsection[{FTVectoriser}]{\setlength{\rightskip}{0pt plus 5cm}FTVectoriser::FTVectoriser (
+\begin{DoxyParamCaption}
+\item[{const {\bf FT\_\-GlyphSlot}}]{ glyph}
+\end{DoxyParamCaption}
+)}}
+\label{class_f_t_vectoriser_a32ca6ea1d5e99fa0337f4e2430a336cb}
+Constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em glyph} & The freetype glyph to be processed \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_f_t_vectoriser_a76d1b9b2a0333b8cb5c21b25f51001dd}{
+\index{FTVectoriser@{FTVectoriser}!$\sim$FTVectoriser@{$\sim$FTVectoriser}}
+\index{$\sim$FTVectoriser@{$\sim$FTVectoriser}!FTVectoriser@{FTVectoriser}}
+\subsubsection[{$\sim$FTVectoriser}]{\setlength{\rightskip}{0pt plus 5cm}FTVectoriser::$\sim$FTVectoriser (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_f_t_vectoriser_a76d1b9b2a0333b8cb5c21b25f51001dd}
+Destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_f_t_vectoriser_ad0bc396b4fbc01046264e365646b4449}{
+\index{FTVectoriser@{FTVectoriser}!Contour@{Contour}}
+\index{Contour@{Contour}!FTVectoriser@{FTVectoriser}}
+\subsubsection[{Contour}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf FTContour} $\ast$const FTVectoriser::Contour (
+\begin{DoxyParamCaption}
+\item[{size\_\-t}]{ index}
+\end{DoxyParamCaption}
+) const}}
+\label{class_f_t_vectoriser_ad0bc396b4fbc01046264e365646b4449}
+Return a contour at index
+
+\begin{DoxyReturn}{Returns}
+the number of contours 
+\end{DoxyReturn}
+\hypertarget{class_f_t_vectoriser_a9b65af714c20171fb61e9d62e802290a}{
+\index{FTVectoriser@{FTVectoriser}!ContourCount@{ContourCount}}
+\index{ContourCount@{ContourCount}!FTVectoriser@{FTVectoriser}}
+\subsubsection[{ContourCount}]{\setlength{\rightskip}{0pt plus 5cm}size\_\-t FTVectoriser::ContourCount (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_f_t_vectoriser_a9b65af714c20171fb61e9d62e802290a}
+Get the count of contours in this outline
+
+\begin{DoxyReturn}{Returns}
+the number of contours 
+\end{DoxyReturn}
+\hypertarget{class_f_t_vectoriser_a257790691ff01bcf7ca1a7f1e2362f8c}{
+\index{FTVectoriser@{FTVectoriser}!ContourFlag@{ContourFlag}}
+\index{ContourFlag@{ContourFlag}!FTVectoriser@{FTVectoriser}}
+\subsubsection[{ContourFlag}]{\setlength{\rightskip}{0pt plus 5cm}int FTVectoriser::ContourFlag (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_f_t_vectoriser_a257790691ff01bcf7ca1a7f1e2362f8c}
+Get the flag for the tesselation rule for this outline
+
+\begin{DoxyReturn}{Returns}
+The contour flag 
+\end{DoxyReturn}
+\hypertarget{class_f_t_vectoriser_a73345585f77d37d84362ce2b60a18be9}{
+\index{FTVectoriser@{FTVectoriser}!ContourSize@{ContourSize}}
+\index{ContourSize@{ContourSize}!FTVectoriser@{FTVectoriser}}
+\subsubsection[{ContourSize}]{\setlength{\rightskip}{0pt plus 5cm}size\_\-t FTVectoriser::ContourSize (
+\begin{DoxyParamCaption}
+\item[{int}]{ c}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_f_t_vectoriser_a73345585f77d37d84362ce2b60a18be9}
+Get the number of points in a specific contour in this outline
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & The contour index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of points in contour\mbox{[}c\mbox{]} 
+\end{DoxyReturn}
+\hypertarget{class_f_t_vectoriser_adbc45a678dcd5da1bdc122f18e1397a7}{
+\index{FTVectoriser@{FTVectoriser}!GetMesh@{GetMesh}}
+\index{GetMesh@{GetMesh}!FTVectoriser@{FTVectoriser}}
+\subsubsection[{GetMesh}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf FTMesh}$\ast$ const FTVectoriser::GetMesh (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_f_t_vectoriser_adbc45a678dcd5da1bdc122f18e1397a7}
+Get the current mesh. \hypertarget{class_f_t_vectoriser_a3c74bd2dc8f6292a920d17d8e1d0266f}{
+\index{FTVectoriser@{FTVectoriser}!MakeMesh@{MakeMesh}}
+\index{MakeMesh@{MakeMesh}!FTVectoriser@{FTVectoriser}}
+\subsubsection[{MakeMesh}]{\setlength{\rightskip}{0pt plus 5cm}void FTVectoriser::MakeMesh (
+\begin{DoxyParamCaption}
+\item[{FTGL\_\-DOUBLE}]{ zNormal = {\ttfamily FTGL\_\-FRONT\_\-FACING}, }
+\item[{int}]{ outsetType = {\ttfamily 0}, }
+\item[{float}]{ outsetSize = {\ttfamily 0.0f}}
+\end{DoxyParamCaption}
+)}}
+\label{class_f_t_vectoriser_a3c74bd2dc8f6292a920d17d8e1d0266f}
+Build an \hyperlink{class_f_t_mesh}{FTMesh} from the vector outline data.
+
+
+\begin{DoxyParams}{Parameters}
+{\em zNormal} & The direction of the z axis of the normal for this mesh FIXME: change the following for a constant \\
+\hline
+{\em outsetType} & Specify the outset type contour 0 : Original 1 : Front 2 : Back \\
+\hline
+{\em outsetSize} & Specify the outset size contour \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_f_t_vectoriser_aff1d33b51ede40e45f80d143cd4b7680}{
+\index{FTVectoriser@{FTVectoriser}!PointCount@{PointCount}}
+\index{PointCount@{PointCount}!FTVectoriser@{FTVectoriser}}
+\subsubsection[{PointCount}]{\setlength{\rightskip}{0pt plus 5cm}size\_\-t FTVectoriser::PointCount (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_f_t_vectoriser_aff1d33b51ede40e45f80d143cd4b7680}
+Get the total count of points in this outline
+
+\begin{DoxyReturn}{Returns}
+the number of points 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+src/libs/FTGL/FTVectoriser.h\item 
+src/libs/FTGL/FTVectoriser.cpp\end{DoxyCompactItemize}

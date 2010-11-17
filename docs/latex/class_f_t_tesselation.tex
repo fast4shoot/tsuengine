@@ -1,0 +1,87 @@
+\hypertarget{class_f_t_tesselation}{
+\section{FTTesselation Class Reference}
+\label{class_f_t_tesselation}\index{FTTesselation@{FTTesselation}}
+}
+
+
+{\ttfamily \#include $<$FTVectoriser.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_f_t_tesselation_a8ae81852ffa0dfb1bc65e85dc6d35df2}{FTTesselation} (GLenum m)
+\item 
+\hyperlink{class_f_t_tesselation_a55bd008edbf969720fa3dc083bce1ac0}{$\sim$FTTesselation} ()
+\item 
+void \hyperlink{class_f_t_tesselation_a204a9e646cee25f374faad125d71d5e6}{AddPoint} (const FTGL\_\-DOUBLE x, const FTGL\_\-DOUBLE y, const FTGL\_\-DOUBLE z)
+\item 
+size\_\-t \hyperlink{class_f_t_tesselation_aa3cb26a53c3534576339f946acdc0cc7}{PointCount} () const 
+\item 
+\hypertarget{class_f_t_tesselation_a964ae8f16f216ca545f44a087f31e827}{
+const FTPoint \& {\bfseries Point} (unsigned int index) const }
+\label{class_f_t_tesselation_a964ae8f16f216ca545f44a087f31e827}
+
+\item 
+GLenum \hyperlink{class_f_t_tesselation_a06c290061a75bad0d38a2d5b2f6b09a1}{PolygonType} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_f_t_tesselation}{FTTesselation} captures points that are output by OpenGL's gluTesselator. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_f_t_tesselation_a8ae81852ffa0dfb1bc65e85dc6d35df2}{
+\index{FTTesselation@{FTTesselation}!FTTesselation@{FTTesselation}}
+\index{FTTesselation@{FTTesselation}!FTTesselation@{FTTesselation}}
+\subsubsection[{FTTesselation}]{\setlength{\rightskip}{0pt plus 5cm}FTTesselation::FTTesselation (
+\begin{DoxyParamCaption}
+\item[{GLenum}]{ m}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_f_t_tesselation_a8ae81852ffa0dfb1bc65e85dc6d35df2}
+Default constructor \hypertarget{class_f_t_tesselation_a55bd008edbf969720fa3dc083bce1ac0}{
+\index{FTTesselation@{FTTesselation}!$\sim$FTTesselation@{$\sim$FTTesselation}}
+\index{$\sim$FTTesselation@{$\sim$FTTesselation}!FTTesselation@{FTTesselation}}
+\subsubsection[{$\sim$FTTesselation}]{\setlength{\rightskip}{0pt plus 5cm}FTTesselation::$\sim$FTTesselation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_f_t_tesselation_a55bd008edbf969720fa3dc083bce1ac0}
+Destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_f_t_tesselation_a204a9e646cee25f374faad125d71d5e6}{
+\index{FTTesselation@{FTTesselation}!AddPoint@{AddPoint}}
+\index{AddPoint@{AddPoint}!FTTesselation@{FTTesselation}}
+\subsubsection[{AddPoint}]{\setlength{\rightskip}{0pt plus 5cm}void FTTesselation::AddPoint (
+\begin{DoxyParamCaption}
+\item[{const FTGL\_\-DOUBLE}]{ x, }
+\item[{const FTGL\_\-DOUBLE}]{ y, }
+\item[{const FTGL\_\-DOUBLE}]{ z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_f_t_tesselation_a204a9e646cee25f374faad125d71d5e6}
+Add a point to the mesh. \hypertarget{class_f_t_tesselation_aa3cb26a53c3534576339f946acdc0cc7}{
+\index{FTTesselation@{FTTesselation}!PointCount@{PointCount}}
+\index{PointCount@{PointCount}!FTTesselation@{FTTesselation}}
+\subsubsection[{PointCount}]{\setlength{\rightskip}{0pt plus 5cm}size\_\-t FTTesselation::PointCount (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_f_t_tesselation_aa3cb26a53c3534576339f946acdc0cc7}
+The number of points in this mesh \hypertarget{class_f_t_tesselation_a06c290061a75bad0d38a2d5b2f6b09a1}{
+\index{FTTesselation@{FTTesselation}!PolygonType@{PolygonType}}
+\index{PolygonType@{PolygonType}!FTTesselation@{FTTesselation}}
+\subsubsection[{PolygonType}]{\setlength{\rightskip}{0pt plus 5cm}GLenum FTTesselation::PolygonType (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_f_t_tesselation_a06c290061a75bad0d38a2d5b2f6b09a1}
+Return the OpenGL polygon type. 
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+src/libs/FTGL/FTVectoriser.h\end{DoxyCompactItemize}

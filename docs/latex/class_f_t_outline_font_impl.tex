@@ -1,0 +1,72 @@
+\hypertarget{class_f_t_outline_font_impl}{
+\section{FTOutlineFontImpl Class Reference}
+\label{class_f_t_outline_font_impl}\index{FTOutlineFontImpl@{FTOutlineFontImpl}}
+}
+Inheritance diagram for FTOutlineFontImpl:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_f_t_outline_font_impl}
+\end{center}
+\end{figure}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_f_t_outline_font_impl_a01af1e37c082fce3f483361b455f9ac2}{
+{\bfseries FTOutlineFontImpl} (FTFont $\ast$ftFont, const char $\ast$fontFilePath)}
+\label{class_f_t_outline_font_impl_a01af1e37c082fce3f483361b455f9ac2}
+
+\item 
+\hypertarget{class_f_t_outline_font_impl_a3b0befb0c886bbc7cb8873afbfc0a9db}{
+{\bfseries FTOutlineFontImpl} (FTFont $\ast$ftFont, const unsigned char $\ast$pBufferBytes, size\_\-t bufferSizeInBytes)}
+\label{class_f_t_outline_font_impl_a3b0befb0c886bbc7cb8873afbfc0a9db}
+
+\item 
+virtual void \hyperlink{class_f_t_outline_font_impl_a22cb75a9c717403f399906d24d4aac82}{Outset} (float o)
+\item 
+\hypertarget{class_f_t_outline_font_impl_a10caae0ba62ba4c7d5a8742114517651}{
+virtual FTPoint {\bfseries Render} (const char $\ast$s, const int len, FTPoint position, FTPoint spacing, int renderMode)}
+\label{class_f_t_outline_font_impl_a10caae0ba62ba4c7d5a8742114517651}
+
+\item 
+\hypertarget{class_f_t_outline_font_impl_aa4957e338292c7202df9bfb1362e4084}{
+virtual FTPoint {\bfseries Render} (const wchar\_\-t $\ast$s, const int len, FTPoint position, FTPoint spacing, int renderMode)}
+\label{class_f_t_outline_font_impl_aa4957e338292c7202df9bfb1362e4084}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_f_t_outline_font_impl_a17f6eed308c6d1116a7f1d86010f6c9e}{
+class {\bfseries FTOutlineFont}}
+\label{class_f_t_outline_font_impl_a17f6eed308c6d1116a7f1d86010f6c9e}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_f_t_outline_font_impl_a22cb75a9c717403f399906d24d4aac82}{
+\index{FTOutlineFontImpl@{FTOutlineFontImpl}!Outset@{Outset}}
+\index{Outset@{Outset}!FTOutlineFontImpl@{FTOutlineFontImpl}}
+\subsubsection[{Outset}]{\setlength{\rightskip}{0pt plus 5cm}virtual void FTOutlineFontImpl::Outset (
+\begin{DoxyParamCaption}
+\item[{float}]{ o}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}
+\label{class_f_t_outline_font_impl_a22cb75a9c717403f399906d24d4aac82}
+Set the outset distance for the font. Only implemented by FTOutlineFont, FTPolygonFont and FTExtrudeFont
+
+
+\begin{DoxyParams}{Parameters}
+{\em outset} & The outset distance. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_f_t_font_impl}{FTFontImpl}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+src/libs/FTGL/FTFont/FTOutlineFontImpl.h\item 
+src/libs/FTGL/FTFont/FTOutlineFont.cpp\end{DoxyCompactItemize}
