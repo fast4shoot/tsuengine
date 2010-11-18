@@ -13,12 +13,12 @@ class CGuiPanel{
   typedef std::vector<CActionListener*> ActionListenerList;
   typedef std::vector<CGuiPanel*> ChildrenList;
   public:
-    ChildrenList    children;
                     CGuiPanel(const vec2d& pos, const vec2d& size);
     virtual         ~CGuiPanel();
     void            init();
     virtual void    draw();
     virtual void    drawChildren();
+    virtual void    afterDraw();
 
     void            setX(double x);
     void            setY(double y);
@@ -27,6 +27,8 @@ class CGuiPanel{
     double          getX() const;
     double          getY() const;
     vec2d           getPosition() const;
+    void            doPositionChange(const vec2d& newPosition);
+    virtual void    positionChanged(){}
 
 
     void            setW(double w);
@@ -36,7 +38,11 @@ class CGuiPanel{
     double          getW() const;
     double          getH() const;
     vec2d           getSize() const;
+    void            doSizeChange(const vec2d& newSize);
+    virtual void    sizeChanged(){}
+
     virtual bool    isPointInside(const vec2d& point);
+
 
     void            setVisible(bool vis);
     bool            getVisible() const;
@@ -50,6 +56,7 @@ class CGuiPanel{
     void            addChild(CGuiPanel* newChild);
     void            removeChild(CGuiPanel* child);
     void            removeChild(int childIndex);
+    void            deleteChildren();
     void            requestFocus();
     void            giveFocusTo(int childIndex);
     std::string     toString();
@@ -87,7 +94,12 @@ class CGuiPanel{
     void            setParent(CGuiPanel* newParent);
     void            setParentIndex(int newParentIndex);
     void            fireListeners();
+    void            firePositionChanged();
+    void            fireSizeChanged();
+    void            fireChildAdded(CGuiPanel* child);
 
+    ChildrenList    children;
+    ActionListenerList actionListeners;
     vec2d           position;
     vec2d           size;
     bool            visible;
@@ -99,27 +111,40 @@ class CGuiPanel{
     bool            mouseDown;
     bool            allowMouseClickPropagation;
     bool            allowKeyboardInput;
-    ActionListenerList actionListeners;
     rgba            fgColor;
     rgba            bgColor;
     rgba            glossColor;
 
 };
 
+inline CGuiPanel::~CGuiPanel(){
+  deleteChildren();
+}
+
+inline CGuiPanel::CGuiPanel(const vec2d& position, const vec2d& size){
+  init();
+  this->position=position;
+  this->size=size;
+}
+
+inline void CGuiPanel::draw(){}
+
+inline void CGuiPanel::afterDraw(){}
+
 inline void CGuiPanel::setX(double x){
-  position.x=x;
+  doPositionChange(vec2d(x, getY()));
 }
 
 inline void CGuiPanel::setY(double y){
-  position.y=y;
+  doPositionChange(vec2d(getX(), y));
 }
 
 inline void CGuiPanel::setPosition(double x, double y){
-  position.set(x,y);
+  doPositionChange(vec2d(x, y));
 }
 
 inline void CGuiPanel::setPosition(const vec2d& newPosition){
-  position=newPosition;
+  doPositionChange(newPosition);
 }
 
 inline vec2d CGuiPanel::getPosition() const{
@@ -134,20 +159,27 @@ inline double CGuiPanel::getY() const{
   return position.y;
 }
 
+inline void CGuiPanel::doPositionChange(const vec2d& newPosition){
+  if(position!=newPosition){
+    position=newPosition;
+    firePositionChanged();
+  }
+}
+
 inline void CGuiPanel::setW(double w){
-  size.x=w;
+  doSizeChange(vec2d(w, getH()));
 }
 
 inline void CGuiPanel::setH(double h){
-  size.y=h;
+  doSizeChange(vec2d(getW(), h));
 }
 
 inline void CGuiPanel::setSize(double w, double h){
-  size.set(w,h);
+  doSizeChange(vec2d(w, h));
 }
 
 inline void CGuiPanel::setSize(const vec2d& newSize){
-  size=newSize;
+  doSizeChange(newSize);
 }
 
 inline double CGuiPanel::getW() const{
@@ -160,6 +192,13 @@ inline double CGuiPanel::getH() const{
 
 inline vec2d CGuiPanel::getSize() const{
   return size;
+}
+
+inline void CGuiPanel::doSizeChange(const vec2d& newSize){
+  if(size!=newSize){
+    size=newSize;
+    fireSizeChanged();
+  }
 }
 
 inline bool CGuiPanel::isPointInside(const vec2d& point){
@@ -229,6 +268,10 @@ inline void CGuiPanel::setFgColor(rgba newFg){
 
 inline rgba CGuiPanel::getFgColor() const{
   return fgColor;
+}
+
+inline void CGuiPanel::deleteChildren(){
+  children.clear();
 }
 
 #endif

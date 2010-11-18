@@ -55,8 +55,6 @@
 		<Unit filename="Font.h" />
 		<Unit filename="FontBase.cpp" />
 		<Unit filename="FontBase.h" />
-		<Unit filename="FontWrapped.cpp" />
-		<Unit filename="FontWrapped.h" />
 		<Unit filename="const.h" />
 		<Unit filename="datatypes.cpp" />
 		<Unit filename="datatypes.h" />
@@ -68,10 +66,9 @@
 		<Unit filename="gui\CAbstractButton.h" />
 		<Unit filename="gui\CAbstractToggle.cpp" />
 		<Unit filename="gui\CAbstractToggle.h" />
-		<Unit filename="gui\CActionListener.cpp" />
 		<Unit filename="gui\CActionListener.h" />
-		<Unit filename="gui\CActionListenerPanel.cpp" />
 		<Unit filename="gui\CActionListenerPanel.h" />
+		<Unit filename="gui\CBox.h" />
 		<Unit filename="gui\CButton.cpp" />
 		<Unit filename="gui\CButton.h" />
 		<Unit filename="gui\CCenteredWindow.cpp" />
@@ -88,6 +85,12 @@
 		<Unit filename="gui\CLabel.h" />
 		<Unit filename="gui\CMainMenu.cpp" />
 		<Unit filename="gui\CMainMenu.h" />
+		<Unit filename="gui\CScrollBar.cpp" />
+		<Unit filename="gui\CScrollBar.h" />
+		<Unit filename="gui\CScrollable.cpp" />
+		<Unit filename="gui\CScrollable.h" />
+		<Unit filename="gui\CScrollablePanel.cpp" />
+		<Unit filename="gui\CScrollablePanel.h" />
 		<Unit filename="gui\CText.cpp" />
 		<Unit filename="gui\CText.h" />
 		<Unit filename="gui\CTextField.cpp" />
@@ -179,8 +182,10 @@
 		<Unit filename="libs\ft2build.h" />
 		<Unit filename="macros.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="typedefs.h" />
 		<Unit filename="utils.cpp" />
 		<Unit filename="utils.h" />
+		<Unit filename="utils\math.h" />
 		<Unit filename="utils\stringUtils.cpp" />
 		<Unit filename="utils\stringUtils.h" />
 		<Unit filename="vec2d.cpp" />
@@ -194,7 +199,7 @@
 			<envvars />
 			<debugger />
 			<AutoVersioning>
-				<Scheme minor_max="100" build_max="0" rev_max="0" rev_rand_max="10" build_times_to_increment_minor="100" />
+				<Scheme minor_max="99" build_max="9999" rev_max="9999" rev_rand_max="10" build_times_to_increment_minor="100" />
 				<Settings autoincrement="1" date_declarations="1" do_auto_increment="1" ask_to_increment="0" language="C++" svn="0" svn_directory="" header_path="version.h" />
 				<Changes_Log show_changes_editor="0" app_title="released version %M.%m.%b of %p" changeslog_path="ChangesLog.txt" />
 				<Code header_guard="VERSION_H" namespace="AutoVersion" prefix="" />

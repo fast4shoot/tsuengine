@@ -18,33 +18,35 @@ CMainMenu::CMainMenu():
   addChild(new CLabel(vec2d(20,40),vec2d(15,15),L"The"));
   addChild(new CLabel(vec2d(20,55),vec2d(30,30),L"TSUEngine"));
 
-  temp=new CButton(vec2d(20,100),vec2d(160,30),L"Nová hra");
+  addChild(temp=new CButton(vec2d(20,100),vec2d(160,30),L"Nová hra"));
   temp->addActionListener(new CActionListener(this,1));
-  addChild(temp);
 
-  temp=new CButton(vec2d(20,135),vec2d(160,30),L"Nastavení");
+  addChild(temp=new CButton(vec2d(20,135),vec2d(160,30),L"Nastavení"));
   temp->addActionListener(new CActionListener(this,2));
-  addChild(temp);
+
+  addChild(temp=new CButton(vec2d(20,170),vec2d(160,30),L"Konzole"));
+  temp->addActionListener(new CActionListener(this,3));
 
   temp=new CButton(vec2d(20,SCREENHEIGHT-160),vec2d(160,30),L"Ukončit");
   temp->addActionListener(new CActionListener(this,0));
   addChild(temp);
 
-  addChild(settings=new CCenteredWindow(vec2d(400,300), L"Nastavení"));
-  settings->setVisible(false);
-  settings->addChild(new CTextField(vec2d(20, 50), vec2d(160,24)));
+  addChild(_settings=new CCenteredWindow(vec2d(400,300), L"Nastavení"));
+  _settings->setVisible(false);
+  _settings->addChild(new CTextField(vec2d(20, 50), vec2d(160,24)));
 
-  addChild(newGame=new CCenteredWindow(vec2d(500,230), L"Nová hra"));
-  newGame->setVisible(false);
-  //newGame->addChild(new CLabel(vec2d(50,70), vec2d(150,70),L"THE GAME!"));
+  addChild(_newGame=new CCenteredWindow(vec2d(500,230), L"Nová hra"));
+  _newGame->setVisible(false);
 
-  addChild(new CCheckBox(vec2d(20,170), vec2d(160,16), L"Test"));
-  addChild(new CCheckBox(vec2d(20,190), vec2d(160,16), L"Další test"));
+  addChild(_console=new CConsole());
+  _console->setVisible(false);
+
+
   addChild(new CCheckBox(vec2d(20,210), vec2d(160,16), L"Jinej test"));
   addChild(new CCheckBox(vec2d(20,230), vec2d(160,16), L"Úplně jinej test"));
   addChild(new CCheckBox(vec2d(20,250), vec2d(160,16), L"A ještě něco"));
 
-  addChild(new CConsole());
+
 }
 
 void CMainMenu::draw(){
@@ -55,14 +57,9 @@ void CMainMenu::draw(){
 
 void CMainMenu::actionPerformed(int id){
   switch(id){
-    case 1:
-      newGame->setVisible(true);
-      newGame->requestFocus();
-      break;
-    case 2:
-      settings->setVisible(true);
-      settings->requestFocus();
-      break;
+    case 1: displayElement(_newGame); break;
+    case 2: displayElement(_settings); break;
+    case 3: displayElement(_console); break;
     case 0:
       engine->quit();
       break;

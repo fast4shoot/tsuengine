@@ -4,7 +4,6 @@
     { 
       "position": { "x": 10, "y": -10, "z": 0 },
       "texCoord": { "u": 0, "v": 0 },
-      "joint": 0
     },
     { 
       "position": { "x": 10, "y": 10, "z": 0 },

@@ -6,8 +6,6 @@
 #include "CBaseEngine.h"
 #include <gl/gl.h>
 
-
-
 CLabel::CLabel(const vec2d& position, const vec2d& size, const std::wstring& text, ALIGN align):
 CGuiPanel(position,size),
 _text(text)

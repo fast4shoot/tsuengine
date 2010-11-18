@@ -4,18 +4,6 @@
 #include <typeinfo>
 #include "CActionListener.h"
 
-CGuiPanel::~CGuiPanel(){
-  for (ChildrenList::iterator it = children.begin(); it != children.end(); ++it){
-     delete *it;
-  }
-}
-
-CGuiPanel::CGuiPanel(const vec2d& position, const vec2d& size){
-  init();
-  this->position=position;
-  this->size=size;
-}
-
 void CGuiPanel::init(){
   position.set(0.,0.);
   parent=NULL;
@@ -25,7 +13,6 @@ void CGuiPanel::init(){
   mouseDown=false;
   children.reserve(8);
   allowMouseClickPropagation=true;
-  //MSGBOX("New CGuiPanel inited/created");
   fgColor.set(1.,1.,1.,1.);
   bgColor.set(0.,0.,0.,.25);
   glossColor.set(1., 1., 1., .1);
@@ -43,6 +30,7 @@ void CGuiPanel::addChild(CGuiPanel* newChild){
   newChild->setParent(this);
   newChild->setParentIndex(children.size());
   children.push_back(newChild);
+  fireChildAdded(newChild);
 }
 
 void CGuiPanel::removeChild(CGuiPanel* child){
@@ -60,8 +48,7 @@ void CGuiPanel::removeChild(int childIndex){
   children.erase(children.begin()+childIndex);
 }
 
-void CGuiPanel::draw(){
-}
+
 
 void CGuiPanel::drawChildren(){
   for (ChildrenList::iterator i = children.begin(); i != children.end(); ++i){
@@ -71,6 +58,7 @@ void CGuiPanel::drawChildren(){
       glTranslatef(child->getX(),child->getY(),0.);
       child->draw();
       child->drawChildren();
+      child->afterDraw();
       glPopMatrix();
     }
   }
@@ -121,11 +109,6 @@ bool CGuiPanel::handleMouseClick(const vec2d& position, const MouseButton button
   }
   up?onMouseUp(position,button):onMouseDown(position,button);
   if(!up && !childrenHasKeyboard){
-    std::string buff(typeid(this).name());
-    std::wstring wBuff(buff.length(), L' '); // Make room for characters
-    std::copy(buff.begin(), buff.end(), wBuff.begin());
-
-    engine->log(wBuff);
     requestKeyboardFocus();
   }
   return allowMouseClickPropagation;
@@ -163,7 +146,6 @@ void CGuiPanel::handleMouseMove(const vec2d& newPosition, const bool mouseOver){
 
 void CGuiPanel::addActionListener(CActionListener* al){
   actionListeners.push_back(al);
-  al->setOriginator(this);
 }
 
 void CGuiPanel::drawQuad(float x, float y, float w, float h){
@@ -211,5 +193,25 @@ void CGuiPanel::setDrawColor(const rgba& color){
 void CGuiPanel::fireListeners(){
   for(ActionListenerList::iterator it = actionListeners.begin(); it!=actionListeners.end(); ++it){
     (*it)->actionPerformed();
+  }
+}
+
+void CGuiPanel::firePositionChanged(){
+  positionChanged();
+  for(ActionListenerList::iterator it = actionListeners.begin(); it!=actionListeners.end(); ++it){
+    (*it)->positionChangePerformed();
+  }
+}
+
+void CGuiPanel::fireSizeChanged(){
+  sizeChanged();
+  for(ActionListenerList::iterator it = actionListeners.begin(); it!=actionListeners.end(); ++it){
+    (*it)->sizeChangePerformed();
+  }
+}
+
+void CGuiPanel::fireChildAdded(CGuiPanel* child){
+  for(ActionListenerList::iterator it = actionListeners.begin(); it!=actionListeners.end(); ++it){
+    (*it)->addChildPerformed(child);
   }
 }
