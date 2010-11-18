@@ -14,6 +14,7 @@
 #include "utils/stringUtils.h"
 #include "gui/CText.h"
 #include "version.h"
+#include "json_spirit/json_spirit.h"
 
 CBaseEngine* engine;
 
@@ -33,6 +34,10 @@ void CBaseEngine::init(){
   gui = new CGuiMgr();
   gui->init();
   log(swformat(L"TSUEngine verze %d.%d.%d revize %d",AutoVersion::MAJOR,AutoVersion::MINOR,AutoVersion::BUILD,AutoVersion::REVISION));
+  json_spirit::wmValue value;
+  json_spirit::read( L"{\"rofl\": 42}", value );
+
+  log(swformat(L"přečteno %d",value.get_obj().find(L"rofl")->second.get_int()));
 }
 
 /*int CBaseTransmission() {
