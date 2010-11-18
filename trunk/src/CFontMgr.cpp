@@ -31,5 +31,6 @@ FTGLTextureFont* CFontMgr::loadFont(const wstring& name,double size){
 FTGLTextureFont* CFontMgr::createFTGLFont(const wstring& name){
   string path="C:\\Windows\\Fonts\\"+string(name.begin(),name.end());
   FTGLTextureFont* tf=new FTGLTextureFont(path.c_str());
+  tf->UseDisplayList(true);
   return tf;
 }

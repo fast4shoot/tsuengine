@@ -24,6 +24,9 @@ class vecBase
     const Derived operator*(const T& rhs) const;
     const Derived operator/(const T& rhs) const;
 
+    bool operator==(const Derived& rhs) const;
+    bool operator!=(const Derived& rhs) const;
+
     Derived floored() const;
   protected:
     T data[N];
@@ -115,6 +118,21 @@ inline Derived vecBase<T,N,Derived>::floored() const{
     ret.data[i]=floor(data[i]);
   }
   return ret;
+}
+
+template<class T, int N, class Derived>
+inline bool vecBase<T,N,Derived>::operator==(const Derived& rhs) const{
+  for(int i=0;i<N;i++){
+    if(data[i]!=rhs.data[i]){
+      return false;
+    }
+  }
+  return true;
+}
+
+template<class T, int N, class Derived>
+bool vecBase<T,N,Derived>::operator!=(const Derived& rhs) const{
+  return !operator==(rhs);
 }
 
 #endif // VECBASE_H

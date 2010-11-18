@@ -54,3 +54,21 @@ SStr vsformat(const SStr& format, va_list args){
  return vsformat(format.c_str(), args);
 }
 
+std::vector<String> explode(const String & in, const String & delim){
+  typedef String::size_type size_type ;
+
+  const size_type delim_len = delim.length() ;
+  std::vector<String> result ;
+
+  size_type i = 0, j ;
+  while(1){
+    j = in.find(delim, i) ;
+    result.push_back(in.substr(i, j-i)) ;
+    if (j == std::string::npos){
+      break;
+    }
+    i = j + delim_len ;
+  }
+
+  return result ;
+}

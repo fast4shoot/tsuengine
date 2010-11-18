@@ -15,6 +15,8 @@ class vecOpBase : public vecBase<T,N,Derived>{
     Derived normalized() const;
     T length() const;
     T lengthSqr() const;
+
+    bool operator==(Derived) const;
 };
 
 
@@ -56,5 +58,6 @@ template<class T, int N, class Derived>
 inline T vecOpBase<T,N,Derived>::length() const{
   return sqrt(length());
 }
+
 
 #endif // VECOPBASE_H

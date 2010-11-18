@@ -12,6 +12,8 @@
 #include "const.h"
 #include "Font.h"
 #include "utils/stringUtils.h"
+#include "gui/CText.h"
+#include "version.h"
 
 CBaseEngine* engine;
 
@@ -30,6 +32,7 @@ void CBaseEngine::init(){
   fonts->getFont(L"ARIALUNI.TTF",55.);
   gui = new CGuiMgr();
   gui->init();
+  log(swformat(L"TSUEngine verze %d.%d.%d revize %d",AutoVersion::MAJOR,AutoVersion::MINOR,AutoVersion::BUILD,AutoVersion::REVISION));
 }
 
 /*int CBaseTransmission() {
@@ -111,7 +114,7 @@ void CBaseEngine::drawScene(){
   frameCount++;
 
   glClearColor (0.0f, 0.0f, 0.0f, 0.0f);
-  glClear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+  glClear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
 
 
   //world drawing settings
@@ -160,7 +163,7 @@ void CBaseEngine::drawScene(){
   systemFont->render(swformat(L"realTime: %.1lf | FPS: %.1lf | Frame: %llu",getRealTime(),fps,getFrameCount()),14.);
   glPushMatrix();
   glTranslatef(0.,16., 0.);
-  systemFont->render(_log,14.);
+  //systemFont->render(_log,14.);
   glPopMatrix();
 
   glPushMatrix();
@@ -200,5 +203,17 @@ void CBaseEngine::initGuiView(){
 
 
 void CBaseEngine::createEntity(std::string name){}
+
+void CBaseEngine::log(const std::wstring& text){
+  static bool firstLog=true;
+  String console=_consoleOutput->getText();
+  if(!firstLog){
+    console.append(L"\n");
+  }
+  firstLog=false;
+  console.append(text);
+  _consoleOutput->setText(console);
+}
+
 
 

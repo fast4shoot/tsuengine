@@ -6,12 +6,16 @@
 #include <ctime>
 #include "globals.h"
 #include "const.h"
+#include "typedefs.h"
 #include "datatypes.h"
 #include "CBaseEntity.h"
 #include "CEntMgr.h"
 #include "CInputMgr.h"
 #include "CGuiMgr.h"
 #include "CFontMgr.h"
+
+
+class CText;
 
 class CBaseEngine{
   private:
@@ -30,7 +34,7 @@ class CBaseEngine{
     double          timeScale;
     unsigned long long int    frameCount;
     double          fps;
-    std::wstring    _log;
+    CText*          _consoleOutput;
 
 
   public:
@@ -63,11 +67,13 @@ class CBaseEngine{
     void            initGuiView();
     void            drawScene();
 
+    void            setConsoleOutput(CText* console);
     void            log(const std::wstring& text);
 
     void            quit();
 
     Font*           systemFont;
+
 
 };
 
@@ -107,9 +113,13 @@ inline void CBaseEngine::quit(){
   PostQuitMessage(0);
 }
 
-inline void CBaseEngine::log(const std::wstring& text){
-  _log=text;
+inline void CBaseEngine::setConsoleOutput(CText* console){
+  _consoleOutput=console;
 }
+
+
 
 extern CBaseEngine* engine;
 #endif
+
+
