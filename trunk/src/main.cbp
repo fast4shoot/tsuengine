@@ -180,6 +180,9 @@
 		<Unit filename="libs\FTGL\FTVectoriser.cpp" />
 		<Unit filename="libs\FTGL\FTVectoriser.h" />
 		<Unit filename="libs\ft2build.h" />
+		<Unit filename="libs\json_spirit\json_spirit_reader.cpp" />
+		<Unit filename="libs\json_spirit\json_spirit_value.cpp" />
+		<Unit filename="libs\json_spirit\json_spirit_writer.cpp" />
 		<Unit filename="macros.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="typedefs.h" />
