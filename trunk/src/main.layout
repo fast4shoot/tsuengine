@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="default" />
-	<File name="CBaseEngine.cpp" open="1" top="1" tabpos="0">
+	<File name="CBaseEngine.cpp" open="1" top="1" tabpos="1">
 		<Cursor position="1079" topLine="33" />
 	</File>
 	<File name="CBaseEngine.h" open="0" top="0" tabpos="6">
@@ -51,6 +51,12 @@
 	</File>
 	<File name="datatypes.h" open="0" top="0" tabpos="3">
 		<Cursor position="390" topLine="0" />
+	</File>
+	<File name="elements\Material.cpp" open="1" top="0" tabpos="0">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="elements\Material.h" open="1" top="0" tabpos="0">
+		<Cursor position="0" topLine="0" />
 	</File>
 	<File name="globals.cpp" open="0" top="0" tabpos="11">
 		<Cursor position="44" topLine="0" />
@@ -134,13 +140,10 @@
 		<Cursor position="554" topLine="0" />
 	</File>
 	<File name="gui\CScrollable.h" open="0" top="0" tabpos="2">
-		<Cursor position="1034" topLine="6" />
+		<Cursor position="1077" topLine="8" />
 	</File>
-	<File name="gui\CScrollablePanel.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="33" topLine="0" />
-	</File>
-	<File name="gui\CScrollablePanel.h" open="0" top="0" tabpos="3">
-		<Cursor position="603" topLine="19" />
+	<File name="gui\CStencilPanel.h" open="0" top="0" tabpos="3">
+		<Cursor position="0" topLine="0" />
 	</File>
 	<File name="gui\CText.cpp" open="0" top="0" tabpos="1">
 		<Cursor position="22" topLine="0" />

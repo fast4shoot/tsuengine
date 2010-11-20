@@ -1427,7 +1427,7 @@
 
 1289143005 source:d:\fast4shoot\programming\tsuengine\src\vec3d.cpp
 
-1290107992 source:d:\fast4shoot\programming\tsuengine\src\cbaseengine.cpp
+1290108129 source:d:\fast4shoot\programming\tsuengine\src\cbaseengine.cpp
 	<cmath>
 	<windows.h>
 	<gl/gl.h>
@@ -1502,10 +1502,10 @@
 1290023695 source:d:\fast4shoot\programming\tsuengine\src\gui\ctext.cpp
 	"CText.h"
 
-1290042289 d:\fast4shoot\programming\tsuengine\src\gui\cscrollable.h
+1290184320 d:\fast4shoot\programming\tsuengine\src\gui\cscrollable.h
 	<gl/gl.h>
 	"CGuiPanel.h"
-	"CScrollablePanel.h"
+	"CStencilPanel.h"
 	"CScrollBar.h"
 
 1290073743 d:\fast4shoot\programming\tsuengine\src\gui\cscrollablepanel.h
@@ -1537,7 +1537,7 @@
 1290076356 d:\fast4shoot\programming\tsuengine\src\gui\cbox.h
 	"CGuiPanel.h"
 
-1290107992 d:\fast4shoot\programming\tsuengine\src\version.h
+1290291013 d:\fast4shoot\programming\tsuengine\src\version.h
 
 1263235038 d:\fast4shoot\programming\tsuengine\src\libs\json_spirit\json_spirit.h
 	"json_spirit_value.h"
@@ -6407,4 +6407,20 @@
 	<cassert>
 	<sstream>
 	<iomanip>
+
+1290183881 d:\fast4shoot\programming\tsuengine\src\gui\cstencilpanel.h
+	"datatypes.h"
+	"CGuiPanel.h"
+
+1290273059 source:d:\fast4shoot\programming\tsuengine\src\cmaterialmgr.cpp
+	"CMaterialMgr.h"
+
+1290273059 d:\fast4shoot\programming\tsuengine\src\cmaterialmgr.h
+
+1290291013 source:d:\fast4shoot\programming\tsuengine\src\elements\material.cpp
+	"Material.h"
+
+1290290998 d:\fast4shoot\programming\tsuengine\src\elements\material.h
+	<gl/gl.h>
+	"typedefs.h"
 
