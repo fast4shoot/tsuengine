@@ -3,7 +3,7 @@
 
 #include <gl/gl.h>
 #include "CGuiPanel.h"
-#include "CScrollablePanel.h"
+#include "CStencilPanel.h"
 #include "CScrollBar.h"
 
 
@@ -13,7 +13,7 @@ class CScrollable : public CGuiPanel, CActionListenerPanel{
     void setScrolledItem(CGuiPanel* scrolled);
     void actionPerformed(int id);
   protected:
-    CScrollablePanel* _panel;
+    CStencilPanel* _panel;
     CScrollBar* _bar;
     CGuiPanel* _scrolled;
 
@@ -22,7 +22,7 @@ class CScrollable : public CGuiPanel, CActionListenerPanel{
 
 inline CScrollable::CScrollable(const vec2d& pos, const vec2d& size):
   CGuiPanel(pos, size),
-  _panel(new CScrollablePanel(vec2d(0,0), size-vec2d(20., 0.))),
+  _panel(new CStencilPanel(vec2d(0,0), size-vec2d(20., 0.))),
   _bar(new CScrollBar(vec2d(getW()-20., 0), vec2d(20., getH())))
 {
   _bar->addActionListener(new CActionListener(this, SCROLLBAR));
@@ -32,11 +32,12 @@ inline CScrollable::CScrollable(const vec2d& pos, const vec2d& size):
 
 inline void CScrollable::setScrolledItem(CGuiPanel* scrolled){
   _scrolled=scrolled;
+  _scrolled->setPosition(0., 0.);
   _panel->addChild(scrolled);
 }
 
 inline void CScrollable::actionPerformed(int id){
-  if(id==SCROLLBAR) _panel->setOffset(vec2d(0., -(_scrolled->getH()-getH())*(_bar->getScrollAmount())));
+  if(id==SCROLLBAR) _scrolled->setY(-(_scrolled->getH()-getH())*(_bar->getScrollAmount()));
 }
 
 

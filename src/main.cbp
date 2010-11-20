@@ -35,6 +35,7 @@
 			<Add library="glu32" />
 			<Add library="dinput8" />
 			<Add library="dxguid" />
+			<Add library="devil" />
 			<Add directory=".\libs" />
 		</Linker>
 		<Unit filename="CBaseEngine.cpp" />
@@ -49,6 +50,8 @@
 		<Unit filename="CGuiMgr.h" />
 		<Unit filename="CInputMgr.cpp" />
 		<Unit filename="CInputMgr.h" />
+		<Unit filename="CMaterialMgr.cpp" />
+		<Unit filename="CMaterialMgr.h" />
 		<Unit filename="CParamMgr.cpp" />
 		<Unit filename="CParamMgr.h" />
 		<Unit filename="Font.cpp" />
@@ -58,6 +61,8 @@
 		<Unit filename="const.h" />
 		<Unit filename="datatypes.cpp" />
 		<Unit filename="datatypes.h" />
+		<Unit filename="elements\Material.cpp" />
+		<Unit filename="elements\Material.h" />
 		<Unit filename="exceptions.cpp" />
 		<Unit filename="exceptions.h" />
 		<Unit filename="globals.cpp" />
@@ -89,8 +94,7 @@
 		<Unit filename="gui\CScrollBar.h" />
 		<Unit filename="gui\CScrollable.cpp" />
 		<Unit filename="gui\CScrollable.h" />
-		<Unit filename="gui\CScrollablePanel.cpp" />
-		<Unit filename="gui\CScrollablePanel.h" />
+		<Unit filename="gui\CStencilPanel.h" />
 		<Unit filename="gui\CText.cpp" />
 		<Unit filename="gui\CText.h" />
 		<Unit filename="gui\CTextField.cpp" />

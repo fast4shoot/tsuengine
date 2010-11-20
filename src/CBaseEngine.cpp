@@ -16,6 +16,7 @@
 #include "version.h"
 #include "json_spirit/json_spirit.h"
 
+
 CBaseEngine* engine;
 
 void CBaseEngine::init(){
