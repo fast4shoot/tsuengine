@@ -1,7 +1,6 @@
 #include "Material.h"
 
-Material::Material(String name)
-{
+Material::Material(String name){
     //ctor
 }
 
