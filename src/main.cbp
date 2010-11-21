@@ -36,6 +36,8 @@
 			<Add library="dinput8" />
 			<Add library="dxguid" />
 			<Add library="devil" />
+			<Add library="ilu" />
+			<Add library="ilut" />
 			<Add directory=".\libs" />
 		</Linker>
 		<Unit filename="CBaseEngine.cpp" />

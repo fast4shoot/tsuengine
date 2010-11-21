@@ -24,15 +24,18 @@
       "d": 0 
     }
   ],
+  "materials": [
+    "wall1"
+  ]
   "triangles": [
     {
       "plane": 0,
-      "material": "test.png",
+      "material": 0,
       "vertices": [0,1,2]
     },
     {
       "plane": 0,
-      "material": "test.png",
+      "material": 0,
       "vertices": [2,3,0]
     }
   ]
