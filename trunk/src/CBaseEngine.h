@@ -59,7 +59,7 @@ class CBaseEngine{
     double          getRealTimeDelta() const;
     unsigned long long int getFrameCount() const;
     double          getFPS() const;
-    void            createEntity(std::string name);
+    void            createEntity(String name);
 
 
     void            think();
@@ -68,7 +68,7 @@ class CBaseEngine{
     void            drawScene();
 
     void            setConsoleOutput(CText* console);
-    void            log(const std::wstring& text);
+    void            log(const String& text);
 
     void            quit();
 

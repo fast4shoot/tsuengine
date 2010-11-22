@@ -2,23 +2,18 @@
 #define CFONTMGR_H
 
 #include <map>
-#include <string>
 #include "FTGL/FTGL/ftgl.h"
-
-
-using namespace std;
+#include "typedefs.h"
 
 class Font;
 
-typedef map<wstring, Font*> FontList;
-
-
 class CFontMgr{
+  typedef std::map<String, Font*> FontList;
   public:
-    Font* getFont(const wstring& name, const double size);
-    FTGLTextureFont* loadFont(const wstring& name, const double size);
+    Font* getFont(const String& name, const double size);
+    FTGLTextureFont* loadFont(const String& name, const double size);
   private:
-    FTGLTextureFont* createFTGLFont(const wstring& name);
+    FTGLTextureFont* createFTGLFont(const String& name);
     FontList _fonts;
 };
 

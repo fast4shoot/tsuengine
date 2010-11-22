@@ -28,7 +28,7 @@ void CGuiMgr::update(){
   }
   _basePanel->handleMouseMove(engine->input->getCursor(),true);
   if(_keyboardReceiver && _keyboardReceiver->isVisible()){
-    std::wstring input = engine->input->getString();
+    String input = engine->input->getString();
     if(!input.empty()){
       _keyboardReceiver->onKeyboard(input);
     }else{

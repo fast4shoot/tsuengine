@@ -5,6 +5,7 @@
 #include <dinput.h>
 #include "datatypes.h"
 #include "macros.h"
+#include "typedefs.h"
 class CInputMgr{
   public:
                     CInputMgr();
@@ -20,7 +21,7 @@ class CInputMgr{
     float           keyRealTimed(int key);
     float           keyRealTimedDelta(int key);
 
-    std::wstring    getString();
+    String          getString();
 
     bool            buttonDown(MouseButton button) const;
     bool            buttonPressed(MouseButton button) const;
@@ -31,7 +32,7 @@ class CInputMgr{
     const vec2d     getCursor() const;
     const vec2d     getCursorDelta() const;
 
-    void            characterInput(wchar_t character);
+    void            characterInput(String character);
 
     DIMOUSESTATE2   MouseState[2];
     char            keyBuffer[2][256];
@@ -50,7 +51,7 @@ class CInputMgr{
     vec2d           cursorDelta;
     int             iAxes,              //number of axes (NEW)
                     iButtons;           //number of buttons (NEW)
-    std::wstring    _inputString[2];
+    String          _inputString[2];
 };
 
 inline const float CInputMgr::getX() const{

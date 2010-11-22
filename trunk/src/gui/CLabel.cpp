@@ -5,13 +5,14 @@
 #include "macros.h"
 #include "CBaseEngine.h"
 #include <gl/gl.h>
+#include "typedefs.h"
 
-CLabel::CLabel(const vec2d& position, const vec2d& size, const std::wstring& text, ALIGN align):
+CLabel::CLabel(const vec2d& position, const vec2d& size, const String& text, ALIGN align):
 CGuiPanel(position,size),
 _text(text)
 {
   allowKeyboardInput=false;
-  _font=engine->fonts->getFont(L"ARIALUNI.TTF",getH());
+  _font=engine->fonts->getFont("ARIALUNI.TTF",getH());
 }
 
 void CLabel::draw(){

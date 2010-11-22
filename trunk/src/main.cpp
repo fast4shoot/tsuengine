@@ -162,7 +162,8 @@ LRESULT CALLBACK WndProc (HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
       }
 
     case WM_CHAR:
-      engine->input->characterInput((wchar_t)wParam);
+      //TODO: convert Windows UTF-16 to UTF-8 for CInputMGr (needs to handle surrogate pairs too!)
+      engine->input->characterInput(String(&wParam,(&wParam)+1));
       return false;
 
 

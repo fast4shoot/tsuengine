@@ -30,15 +30,15 @@ void CBaseEngine::init(){
   input = new CInputMgr();
   input->init();
   fonts=new CFontMgr();
-  systemFont=fonts->getFont(L"ARIALUNI.TTF",14.);
-  fonts->getFont(L"ARIALUNI.TTF",55.);
+  systemFont=fonts->getFont("ARIALUNI.TTF",14.);
+  fonts->getFont("ARIALUNI.TTF",55.);
   gui = new CGuiMgr();
   gui->init();
-  log(swformat(L"TSUEngine verze %d.%d.%d revize %d",AutoVersion::MAJOR,AutoVersion::MINOR,AutoVersion::BUILD,AutoVersion::REVISION));
-  json_spirit::wmValue value;
-  json_spirit::read( L"{\"rofl\": 42}", value );
+  log(sformat("TSUEngine verze %d.%d.%d revize %d",AutoVersion::MAJOR,AutoVersion::MINOR,AutoVersion::BUILD,AutoVersion::REVISION));
+  json_spirit::mValue value;
+  json_spirit::read( "{\"rofl\": 42}", value );
 
-  log(swformat(L"přečteno %d",value.get_obj().find(L"rofl")->second.get_int()));
+  log(sformat("přečteno %d",value.get_obj().find("rofl")->second.get_int()));
 }
 
 /*int CBaseTransmission() {
@@ -166,7 +166,7 @@ void CBaseEngine::drawScene(){
   gui->drawElements();
 
   glColor3f(1.0f, 1.0f, 1.0f);
-  systemFont->render(swformat(L"realTime: %.1lf | FPS: %.1lf | Frame: %llu",getRealTime(),fps,getFrameCount()),14.);
+  systemFont->render(sformat("realTime: %.1lf | FPS: %.1lf | Frame: %llu",getRealTime(),fps,getFrameCount()),14.);
   glPushMatrix();
   glTranslatef(0.,16., 0.);
   //systemFont->render(_log,14.);
@@ -208,13 +208,13 @@ void CBaseEngine::initGuiView(){
 
 
 
-void CBaseEngine::createEntity(std::string name){}
+void CBaseEngine::createEntity(String name){}
 
-void CBaseEngine::log(const std::wstring& text){
+void CBaseEngine::log(const String& text){
   static bool firstLog=true;
   String console=_consoleOutput->getText();
   if(!firstLog){
-    console.append(L"\n");
+    console.append("\n");
   }
   firstLog=false;
   console.append(text);

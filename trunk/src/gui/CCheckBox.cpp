@@ -2,7 +2,7 @@
 #include "CLabel.h"
 
 
-CCheckBox::CCheckBox(const vec2d& pos, const vec2d& size, const std::wstring& text, bool selected):
+CCheckBox::CCheckBox(const vec2d& pos, const vec2d& size, const String& text, bool selected):
   CAbstractToggle(pos,size,selected)
 {
   addChild(new CLabel(vec2d(getH()+5., 0), vec2d(getH(), getH()), text));

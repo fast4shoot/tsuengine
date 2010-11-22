@@ -785,7 +785,7 @@
 	<vector>
 	"datatypes.h"
 
-1290072274 d:\fast4shoot\programming\tsuengine\src\cbaseengine.h
+1290460912 d:\fast4shoot\programming\tsuengine\src\cbaseengine.h
 	<string>
 	<gl/gl.h>
 	<ctime>
@@ -810,18 +810,19 @@
 	"datatypes.h"
 	"const.h"
 
-1286574511 d:\fast4shoot\programming\tsuengine\src\cinputmgr.h
+1290462914 d:\fast4shoot\programming\tsuengine\src\cinputmgr.h
 	<dinput.h>
 	"datatypes.h"
 	"macros.h"
+	"typedefs.h"
 
 1286572303 d:\fast4shoot\programming\tsuengine\src\cguimgr.h
 	"macros.h"
 
-1289143005 d:\fast4shoot\programming\tsuengine\src\cfontmgr.h
+1290461024 d:\fast4shoot\programming\tsuengine\src\cfontmgr.h
 	<map>
-	<string>
 	"FTGL/FTGL/ftgl.h"
+	"typedefs.h"
 
 1212669320 d:\fast4shoot\programming\tsuengine\src\libs\ftgl\ftgl\ftgl.h
 	<ft2build.h>
@@ -920,7 +921,7 @@
 	"CBaseEntity.h"
 	"const.h"
 
-1290077133 source:d:\fast4shoot\programming\tsuengine\src\cfontmgr.cpp
+1290461090 source:d:\fast4shoot\programming\tsuengine\src\cfontmgr.cpp
 	<cmath>
 	"utils/stringUtils.h"
 	"CFontMgr.h"
@@ -935,20 +936,22 @@
 	<cstdio>
 	"typedefs.h"
 
-1290023695 d:\fast4shoot\programming\tsuengine\src\font.h
+1290460761 d:\fast4shoot\programming\tsuengine\src\font.h
 	<string>
 	<gl/gl.h>
 	"vec2d.h"
 	"datatypes.h"
 	"FTGL/FTGL/ftgl.h"
 	"FontBase.h"
+	"typedefs.h"
 
-1290023695 d:\fast4shoot\programming\tsuengine\src\fontbase.h
+1290461208 d:\fast4shoot\programming\tsuengine\src\fontbase.h
 	<string>
 	<gl/gl.h>
 	"datatypes.h"
+	"typedefs.h"
 
-1290077090 source:d:\fast4shoot\programming\tsuengine\src\cguimgr.cpp
+1290462614 source:d:\fast4shoot\programming\tsuengine\src\cguimgr.cpp
 	"CGuiMgr.h"
 	"CGuiPanel.h"
 	"CMainMenu.h"
@@ -957,7 +960,7 @@
 	"CBaseEngine.h"
 	"CCenteredWindow.h"
 
-1290039391 d:\fast4shoot\programming\tsuengine\src\gui\cguipanel.h
+1290462661 d:\fast4shoot\programming\tsuengine\src\gui\cguipanel.h
 	<vector>
 	"datatypes.h"
 	"CGuiMgr.h"
@@ -976,14 +979,15 @@
 
 1290039391 d:\fast4shoot\programming\tsuengine\src\gui\cactionlistenerpanel.h
 
-1289169208 d:\fast4shoot\programming\tsuengine\src\gui\cbutton.h
+1290461295 d:\fast4shoot\programming\tsuengine\src\gui\cbutton.h
 	"CAbstractButton.h"
 	"CLabel.h"
+	"typedefs.h"
 
 1286563719 d:\fast4shoot\programming\tsuengine\src\gui\cabstractbutton.h
 	"CGuiPanel.h"
 
-1290023695 d:\fast4shoot\programming\tsuengine\src\gui\clabel.h
+1290460845 d:\fast4shoot\programming\tsuengine\src\gui\clabel.h
 	<string>
 	<map>
 	"vec2d.h"
@@ -995,15 +999,15 @@
 	"datatypes.h"
 	"CAbstractButton.h"
 
-1285254696 d:\fast4shoot\programming\tsuengine\src\gui\ccenteredwindow.h
+1290461376 d:\fast4shoot\programming\tsuengine\src\gui\ccenteredwindow.h
 	"datatypes.h"
 	"CWindow.h"
 
-1285254696 d:\fast4shoot\programming\tsuengine\src\gui\cwindow.h
+1290461483 d:\fast4shoot\programming\tsuengine\src\gui\cwindow.h
 	"CGuiPanel.h"
 	"CActionListener.h"
 
-1289143005 source:d:\fast4shoot\programming\tsuengine\src\cinputmgr.cpp
+1290462914 source:d:\fast4shoot\programming\tsuengine\src\cinputmgr.cpp
 	"CInputMgr.h"
 	"macros.h"
 	"const.h"
@@ -1023,7 +1027,7 @@
 	"datatypes.h"
 	"exceptions.h"
 
-1289169220 source:d:\fast4shoot\programming\tsuengine\src\font.cpp
+1290461222 source:d:\fast4shoot\programming\tsuengine\src\font.cpp
 	"Font.h"
 	<cmath>
 	"CFontMgr.h"
@@ -1059,31 +1063,31 @@
 1285254696 source:d:\fast4shoot\programming\tsuengine\src\gui\cactionlistenerpanel.cpp
 	"CActionListenerPanel.h"
 
-1286563719 source:d:\fast4shoot\programming\tsuengine\src\gui\cbutton.cpp
+1290461252 source:d:\fast4shoot\programming\tsuengine\src\gui\cbutton.cpp
 	"CButton.h"
 
-1285254696 source:d:\fast4shoot\programming\tsuengine\src\gui\ccenteredwindow.cpp
+1290461376 source:d:\fast4shoot\programming\tsuengine\src\gui\ccenteredwindow.cpp
 	"CCenteredWindow.h"
 	"const.h"
 
-1286563719 source:d:\fast4shoot\programming\tsuengine\src\gui\ccheckbox.cpp
+1290461312 source:d:\fast4shoot\programming\tsuengine\src\gui\ccheckbox.cpp
 	"CCheckBox.h"
 	"CLabel.h"
 
-1286563719 d:\fast4shoot\programming\tsuengine\src\gui\ccheckbox.h
+1290461325 d:\fast4shoot\programming\tsuengine\src\gui\ccheckbox.h
 	"CAbstractToggle.h"
 
 1290076634 source:d:\fast4shoot\programming\tsuengine\src\gui\cdraggable.cpp
 	"CDraggable.h"
 
-1287157133 source:d:\fast4shoot\programming\tsuengine\src\gui\ctextfield.cpp
+1290461578 source:d:\fast4shoot\programming\tsuengine\src\gui\ctextfield.cpp
 	"CTextField.h"
 
-1286570274 d:\fast4shoot\programming\tsuengine\src\gui\ctextfield.h
+1290461565 d:\fast4shoot\programming\tsuengine\src\gui\ctextfield.h
 	"CGuiPanel.h"
 	"CLabel.h"
 
-1290076835 source:d:\fast4shoot\programming\tsuengine\src\gui\cwindow.cpp
+1290461596 source:d:\fast4shoot\programming\tsuengine\src\gui\cwindow.cpp
 	"CWindow.h"
 	"CDraggable.h"
 	"CLabel.h"
@@ -1427,7 +1431,7 @@
 
 1289143005 source:d:\fast4shoot\programming\tsuengine\src\vec3d.cpp
 
-1290292257 source:d:\fast4shoot\programming\tsuengine\src\cbaseengine.cpp
+1290461144 source:d:\fast4shoot\programming\tsuengine\src\cbaseengine.cpp
 	<cmath>
 	<windows.h>
 	<gl/gl.h>
@@ -1445,7 +1449,7 @@
 	"version.h"
 	"json_spirit/json_spirit.h"
 
-1290030342 d:\fast4shoot\programming\tsuengine\src\typedefs.h
+1290458114 d:\fast4shoot\programming\tsuengine\src\typedefs.h
 	<string>
 
 1290023695 source:d:\fast4shoot\programming\tsuengine\src\fontbase.cpp
@@ -1459,7 +1463,7 @@
 	"FontBase.h"
 	"Font.h"
 
-1290076072 source:d:\fast4shoot\programming\tsuengine\src\gui\cconsole.cpp
+1290461494 source:d:\fast4shoot\programming\tsuengine\src\gui\cconsole.cpp
 	"CConsole.h"
 	"CText.h"
 	"CScrollable.h"
@@ -1469,7 +1473,7 @@
 1289143005 d:\fast4shoot\programming\tsuengine\src\gui\cconsole.h
 	"CWindow.h"
 
-1290044315 d:\fast4shoot\programming\tsuengine\src\gui\ctext.h
+1290461052 d:\fast4shoot\programming\tsuengine\src\gui\ctext.h
 	"typedefs.h"
 	"CGuiPanel.h"
 	"CLabel.h"
@@ -1483,7 +1487,7 @@
 	<typeinfo>
 	"CActionListener.h"
 
-1290075563 source:d:\fast4shoot\programming\tsuengine\src\gui\clabel.cpp
+1290461335 source:d:\fast4shoot\programming\tsuengine\src\gui\clabel.cpp
 	"CLabel.h"
 	<string>
 	"vec2d.h"
@@ -1491,8 +1495,9 @@
 	"macros.h"
 	"CBaseEngine.h"
 	<gl/gl.h>
+	"typedefs.h"
 
-1290076072 source:d:\fast4shoot\programming\tsuengine\src\gui\cmainmenu.cpp
+1290461351 source:d:\fast4shoot\programming\tsuengine\src\gui\cmainmenu.cpp
 	"CMainMenu.h"
 	"CCenteredWindow.h"
 	"CCheckBox.h"
@@ -1519,7 +1524,7 @@
 	"CActionListener.h"
 	"CActionListenerPanel.h"
 
-1290037185 source:d:\fast4shoot\programming\tsuengine\src\gui\cscrollbar.cpp
+1290461510 source:d:\fast4shoot\programming\tsuengine\src\gui\cscrollbar.cpp
 	"CScrollBar.h"
 	"CButton.h"
 
@@ -1537,7 +1542,7 @@
 1290076356 d:\fast4shoot\programming\tsuengine\src\gui\cbox.h
 	"CGuiPanel.h"
 
-1290364887 d:\fast4shoot\programming\tsuengine\src\version.h
+1290463593 d:\fast4shoot\programming\tsuengine\src\version.h
 
 1263235038 d:\fast4shoot\programming\tsuengine\src\libs\json_spirit\json_spirit.h
 	"json_spirit_value.h"
@@ -6412,15 +6417,61 @@
 	"datatypes.h"
 	"CGuiPanel.h"
 
-1290273059 source:d:\fast4shoot\programming\tsuengine\src\cmaterialmgr.cpp
+1290460537 source:d:\fast4shoot\programming\tsuengine\src\cmaterialmgr.cpp
 	"CMaterialMgr.h"
+	<utility>
+	"libs/IL/il.h"
+	"libs/IL/ilu.h"
+	"libs/IL/ilut.h"
+	"CBaseEngine.h"
 
-1290273059 d:\fast4shoot\programming\tsuengine\src\cmaterialmgr.h
+1290363753 d:\fast4shoot\programming\tsuengine\src\cmaterialmgr.h
+	<map>
+	"typedefs.h"
+	"elements/Material.h"
 
-1290291013 source:d:\fast4shoot\programming\tsuengine\src\elements\material.cpp
+1290365253 source:d:\fast4shoot\programming\tsuengine\src\elements\material.cpp
 	"Material.h"
 
 1290290998 d:\fast4shoot\programming\tsuengine\src\elements\material.h
 	<gl/gl.h>
 	"typedefs.h"
+
+1236474206 d:\fast4shoot\programming\tsuengine\src\libs\il\il.h
+	<stdio.h>
+	<limits.h>
+	<wchar.h>
+
+1236474206 d:\fast4shoot\programming\tsuengine\src\libs\il\ilu.h
+	<IL/il.h>
+
+1236474206 d:\fast4shoot\programming\tsuengine\src\libs\il\ilut.h
+	<IL/il.h>
+	<IL/ilu.h>
+	"IL/config.h"
+	"IL/config.h"
+	<IL/ilut_config.h>
+	<windows.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<stdlib.h>
+	<crtdbg.h>
+	<windows.h>
+	<d3d8.h>
+	<d3d9.h>
+	<rpcsal.h>
+	<sal.h>
+	<d3d10.h>
+	<X11/Xlib.h>
+	<X11/Xutil.h>
+	<sys/ipc.h>
+	<sys/shm.h>
+	<X11/extensions/XShm.h>
+	<allegro.h>
+
+1234913384 d:\fast4shoot\programming\tsuengine\src\libs\il\config.h
+
+1235987578 d:\fast4shoot\programming\tsuengine\src\libs\il\ilut_config.h
 

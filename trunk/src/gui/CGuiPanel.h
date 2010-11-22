@@ -74,7 +74,7 @@ class CGuiPanel{
     bool            getMouseDown() const;
 
     //keyboard function
-    virtual void    onKeyboard(const std::wstring& string){};
+    virtual void    onKeyboard(const String& string){};
     void            requestKeyboardFocus();
     bool            getAllowKeyboardInput() const;
     void            addActionListener(CActionListener* al);

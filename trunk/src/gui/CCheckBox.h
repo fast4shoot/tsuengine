@@ -6,7 +6,7 @@
 class CCheckBox: public CAbstractToggle
 {
   public:
-    CCheckBox(const vec2d& pos, const vec2d& size, const std::wstring& text, bool selected=false);
+    CCheckBox(const vec2d& pos, const vec2d& size, const String& text, bool selected=false);
     virtual void draw();
     virtual void onStateChanged(){};
   protected:

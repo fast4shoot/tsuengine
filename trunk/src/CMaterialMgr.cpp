@@ -22,7 +22,7 @@ Material* CMaterialMgr::getMaterial(String name){
   if((it = matList.find(name)) != matList.end()){
     return it->second;
   }else{
-    engine->log(L"Vytvářím materiál "+name);
+    engine->log("Vytvářím materiál "+name);
     Material* newMat = new Material(name);
     matList.insert(std::make_pair(name, newMat));
     return newMat;

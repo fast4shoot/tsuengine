@@ -5,8 +5,8 @@ CScrollBar::CScrollBar(const vec2d& pos, const vec2d& size):
   _scrollAmt(0.)
 {
   CButton* temp;
-  addChild(temp=new CButton(vec2d(0.,0.), vec2d(getW(), getW()), L"^"));
+  addChild(temp=new CButton(vec2d(0.,0.), vec2d(getW(), getW()), "^"));
   temp->addActionListener(new CActionListener(this,0));
-  addChild(temp=new CButton(vec2d(0.,getW()), vec2d(getW(), getW()), L"V"));
+  addChild(temp=new CButton(vec2d(0.,getW()), vec2d(getW(), getW()), "V"));
   temp->addActionListener(new CActionListener(this,1));
 }

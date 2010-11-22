@@ -168,7 +168,7 @@ bool CInputMgr::buttonDepressed(MouseButton button) const {
    return !(MouseState[iCurrBuffer].rgbButtons[button] & 0x80) && (MouseState[!iCurrBuffer].rgbButtons[button] & 0x80);
 }
 
-void CInputMgr::characterInput(wchar_t character){
+void CInputMgr::characterInput(String character){
   _inputString[!iCurrBuffer]+=character;
 }
 
@@ -183,7 +183,7 @@ void CInputMgr::characterInput(wchar_t character){
      }
  }*/
 
-std::wstring CInputMgr::getString(){
+String CInputMgr::getString(){
   /*std::wstring rofl;
   rofl+=L"getString(): ";
   rofl+=_inputString[iCurrBuffer];
