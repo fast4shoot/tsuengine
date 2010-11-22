@@ -17,25 +17,25 @@ class CLabel: public CGuiPanel{
       ALIGN_RIGHT
     };
 
-                    CLabel(const vec2d& position, const vec2d& size, const std::wstring& text=L"", ALIGN align=ALIGN_LEFT);
-    void            setText(const std::wstring& text);
-    std::wstring    getText();
+                    CLabel(const vec2d& position, const vec2d& size, const String& text="", ALIGN align=ALIGN_LEFT);
+    void            setText(const String& text);
+    String          getText();
 
     virtual void    draw();
 
   protected:
-    std::wstring    _text;
+    String          _text;
     float           _height;
     Font*           _font;
     ALIGN           _align;
 
 };
 
-inline void CLabel::setText(const std::wstring& text){
+inline void CLabel::setText(const String& text){
   _text=text;
 }
 
-inline std::wstring CLabel::getText(){
+inline String CLabel::getText(){
   return _text;
 }
 

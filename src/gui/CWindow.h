@@ -7,7 +7,7 @@
 class CWindow: public CGuiPanel, CActionListenerPanel
 {
   public:
-    CWindow(const vec2d& position, const vec2d& size, const std::wstring& label);
+    CWindow(const vec2d& position, const vec2d& size, const String& label);
     virtual void draw();
     virtual void actionPerformed(int id);
     virtual void onMouseDown(const vec2d& position,const  MouseButton button);

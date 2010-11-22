@@ -7,11 +7,11 @@
 class CTextField : public CGuiPanel
 {
   public:
-                    CTextField(const vec2d& position, const vec2d& size, const std::wstring& text=L"");
-    virtual void    onKeyboard(const std::wstring& string);
+                    CTextField(const vec2d& position, const vec2d& size, const String& text="");
+    virtual void    onKeyboard(const String& string);
     virtual void    draw();
   protected:
-    std::wstring    _string;
+    String    _string;
     CLabel*         _label;
 };
 

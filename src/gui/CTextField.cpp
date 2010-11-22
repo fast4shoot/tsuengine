@@ -1,6 +1,6 @@
 #include "CTextField.h"
 
-CTextField::CTextField(const vec2d& position, const vec2d& size, const std::wstring& text):
+CTextField::CTextField(const vec2d& position, const vec2d& size, const String& text):
   CGuiPanel(position,size),
   _string(text),
   _label(new CLabel(vec2d(2., 4.), vec2d(0., getH()-8.), text))
@@ -9,15 +9,15 @@ CTextField::CTextField(const vec2d& position, const vec2d& size, const std::wstr
 }
 
 /*
-void CTextField::onKeyboard(const std::wstring& string){
+void CTextField::onKeyboard(const String& string){
   _string+=string;
   _label->setText(_string);
 }
 */
 
-void CTextField::onKeyboard(const std::wstring& string){
+void CTextField::onKeyboard(const String& string){
 
-  for(std::wstring::const_iterator it=string.begin(); it!=string.end(); ++it){
+  for(String::const_iterator it=string.begin(); it!=string.end(); ++it){
     switch(*it){
       case 0x0A: //linefeed
       case 0x1B: //escape
@@ -29,7 +29,7 @@ void CTextField::onKeyboard(const std::wstring& string){
         }
       break;
       case 0x09:  // tab
-        _string.append(L"    ");
+        _string.append("    ");
       break;
       default:
         _string.push_back(*it);

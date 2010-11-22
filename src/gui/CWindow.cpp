@@ -4,7 +4,7 @@
 #include "CLabel.h"
 #include "CButton.h"
 
-CWindow::CWindow(const vec2d& position, const vec2d& size, const std::wstring& label):
+CWindow::CWindow(const vec2d& position, const vec2d& size, const String& label):
   CGuiPanel(position,size)
 {
   bgColor.set(.4, .4, .4, .8);
@@ -20,7 +20,7 @@ CWindow::CWindow(const vec2d& position, const vec2d& size, const std::wstring& l
   temp->setFgColor(rgba(.0, .0, .0, 1. ));
 
 
-  temp=new CButton(vec2d(getW()-26,3), vec2d(20,24), L"X");
+  temp=new CButton(vec2d(getW()-26,3), vec2d(20,24), "X");
   temp->addActionListener(new CActionListener(this,1));
   drag->addChild(temp);
 

@@ -1,6 +1,6 @@
 #include "CButton.h"
 
-CButton::CButton(const vec2d& pos, const vec2d& size, const std::wstring& text):
+CButton::CButton(const vec2d& pos, const vec2d& size, const String& text):
 CAbstractButton(pos,size)
 {
   fgColor.set(1., 1., 1., 1.);

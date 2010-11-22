@@ -7,22 +7,23 @@
 #include "datatypes.h"
 #include "FTGL/FTGL/ftgl.h"
 #include "FontBase.h"
+#include "typedefs.h"
 
 class Font : public FontBase{
     public:
-      double            width(const std::wstring& text, double size);
+      double            width(const String& text, double size);
     protected:
-      virtual void      renderImpl(const std::wstring& text);
-                        Font(FTGLTextureFont* font, const std::wstring& name, const double size);
+      virtual void      renderImpl(const String& text);
+                        Font(FTGLTextureFont* font, const String& name, const double size);
                         ~Font();
       FTGLTextureFont*  _font;
-      std::wstring      _name;
+      String      _name;
 
     friend class CFontMgr;
     friend class FontWrapped;
 };
 
-inline double Font::width(const std::wstring& text, double size){
+inline double Font::width(const String& text, double size){
   return (size/_size)*_font->Advance(text.c_str());
 }
 
