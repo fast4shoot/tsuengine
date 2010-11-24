@@ -32,6 +32,7 @@ void CBaseEngine::init(){
   fonts=new CFontMgr();
   systemFont=fonts->getFont("ARIALUNI.TTF",14.);
   fonts->getFont("ARIALUNI.TTF",55.);
+  materials=new CMaterialMgr();
   gui = new CGuiMgr();
   gui->init();
   log(sformat("TSUEngine verze %d.%d.%d revize %d",AutoVersion::MAJOR,AutoVersion::MINOR,AutoVersion::BUILD,AutoVersion::REVISION));
@@ -39,6 +40,8 @@ void CBaseEngine::init(){
   json_spirit::read( "{\"rofl\": 42}", value );
 
   log(sformat("přečteno %d",value.get_obj().find("rofl")->second.get_int()));
+
+  testMat=materials->getMaterial("wall1");
 }
 
 /*int CBaseTransmission() {
@@ -50,7 +53,9 @@ void CBaseEngine::init(){
 }*/
 
 void CBaseEngine::destroy(){
+
   delete gui;
+  delete materials;
   delete fonts;
   delete input;
 }
@@ -132,6 +137,8 @@ void CBaseEngine::drawScene(){
   glRotatef(getTime()*90,0,0,1);
   glColor4f(1.,1.,1.,1.);
 
+  glEnable(GL_TEXTURE_2D);
+  testMat->bind();
   glBegin(GL_QUADS);
     glColor3f(0.,0.,1.);
     glNormal3i(0,0,1);
@@ -156,7 +163,7 @@ void CBaseEngine::drawScene(){
   glEnd();
   glDisable(GL_LIGHT0);
   glDisable(GL_LIGHTING);
-
+  glDisable(GL_TEXTURE_2D);
   /*
    * GUI drawing
    */

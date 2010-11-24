@@ -1,4 +1,5 @@
 #include "CTextField.h"
+#include "libs/utf8/utf8.h"
 
 CTextField::CTextField(const vec2d& position, const vec2d& size, const String& text):
   CGuiPanel(position,size),
@@ -25,7 +26,9 @@ void CTextField::onKeyboard(const String& string){
       break;
       case 0x08:  // backspace
         if(!_string.empty()){
-          _string.erase(_string.begin()+_string.size()-1);
+          String::iterator it = _string.end();
+          utf8::prior(it, _string.begin());
+          _string.erase(it,_string.end());
         }
       break;
       case 0x09:  // tab

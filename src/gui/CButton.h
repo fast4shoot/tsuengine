@@ -14,6 +14,7 @@ class CButton: public CAbstractButton
 
   protected:
     CLabel  *label;
+    CLabel  *label2;
     rgba bgTopColor;
 };
 
