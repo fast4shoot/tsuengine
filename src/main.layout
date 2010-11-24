@@ -2,10 +2,10 @@
 <CodeBlocks_layout_file>
 	<ActiveTarget name="default" />
 	<File name="CBaseEngine.cpp" open="1" top="0" tabpos="4">
-		<Cursor position="3619" topLine="131" />
+		<Cursor position="4193" topLine="176" />
 	</File>
 	<File name="CBaseEngine.h" open="1" top="0" tabpos="3">
-		<Cursor position="2086" topLine="73" />
+		<Cursor position="2118" topLine="48" />
 	</File>
 	<File name="CFontMgr.cpp" open="0" top="0" tabpos="9">
 		<Cursor position="520" topLine="0" />
@@ -58,11 +58,11 @@
 	<File name="datatypes.h" open="0" top="0" tabpos="3">
 		<Cursor position="390" topLine="0" />
 	</File>
-	<File name="elements\Material.cpp" open="1" top="1" tabpos="1">
-		<Cursor position="750" topLine="19" />
+	<File name="elements\Material.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="1465" topLine="20" />
 	</File>
 	<File name="elements\Material.h" open="1" top="0" tabpos="2">
-		<Cursor position="201" topLine="6" />
+		<Cursor position="6" topLine="0" />
 	</File>
 	<File name="globals.cpp" open="0" top="0" tabpos="11">
 		<Cursor position="44" topLine="0" />
@@ -257,10 +257,10 @@
 		<Cursor position="1326" topLine="16" />
 	</File>
 	<File name="macros.h" open="0" top="0" tabpos="8">
-		<Cursor position="222" topLine="0" />
+		<Cursor position="221" topLine="0" />
 	</File>
-	<File name="main.cpp" open="1" top="0" tabpos="6">
-		<Cursor position="3104" topLine="115" />
+	<File name="main.cpp" open="1" top="1" tabpos="5">
+		<Cursor position="3067" topLine="106" />
 	</File>
 	<File name="typedefs.h" open="0" top="0" tabpos="0">
 		<Cursor position="89" topLine="0" />
