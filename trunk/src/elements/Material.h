@@ -6,7 +6,7 @@
 
 class Material{
   public:
-
+    void bind();
   protected:
     Material(String name);
     virtual ~Material();
@@ -17,5 +17,9 @@ class Material{
   friend class CMaterialMgr;
 
 };
+
+inline void Material::bind(){
+  glBindTexture(GL_TEXTURE_2D,_glName);
+}
 
 #endif // MATERIAL_H

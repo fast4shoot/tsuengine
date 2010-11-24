@@ -11,8 +11,10 @@
 #include "CBaseEntity.h"
 #include "CEntMgr.h"
 #include "CInputMgr.h"
+#include "CMaterialMgr.h"
 #include "CGuiMgr.h"
 #include "CFontMgr.h"
+#include "elements/Material.h"
 
 
 class CText;
@@ -42,6 +44,7 @@ class CBaseEngine{
     CInputMgr*      input;
     CGuiMgr*        gui;
     CFontMgr*       fonts;
+    CMaterialMgr*   materials;
 
 
     void            init();
@@ -73,6 +76,7 @@ class CBaseEngine{
     void            quit();
 
     Font*           systemFont;
+    Material*       testMat;
 
 
 };

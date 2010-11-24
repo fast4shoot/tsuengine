@@ -4,7 +4,9 @@
 #include <cmath>
 #include <string>
 #include <exception>
+#include <iterator>
 
+#include "libs/utf8/utf8.h"
 
 #include "const.h"
 #include "datatypes.h"
@@ -57,12 +59,12 @@ int WINAPI WinMain (HINSTANCE hInstance,
   wc.hCursor = LoadCursor (NULL, IDC_ARROW);
   wc.hbrBackground = NULL;
   wc.lpszMenuName = NULL;
-  wc.lpszClassName = L"TSUEWindow";
+  wc.lpszClassName = "TSUEWindow";
   RegisterClass (&wc);
 
   // create main window
   hWnd = CreateWindow (
-    L"TSUEWindow", L"TSU Engine window",
+    "TSUEWindow", "TSU Engine window",
     WS_MINIMIZEBOX | WS_CAPTION | WS_POPUPWINDOW | WS_VISIBLE,
     0, 0, SCREENWIDTH+6, SCREENHEIGHT+27,
     NULL, NULL, hInstance, NULL);
@@ -116,10 +118,10 @@ int WINAPI WinMain (HINSTANCE hInstance,
         }
     }
   }catch(std::runtime_error e){
-    std::wstring result;
-    result=L"An exception occured: \n";
+    std::string result;
+    result="An exception occured: \n";
     //result+=e.what();
-    MessageBox(hWnd,result.c_str(),L"Exception",MB_OK | MB_ICONEXCLAMATION);
+    MessageBox(hWnd,result.c_str(),"Exception",MB_OK | MB_ICONEXCLAMATION);
   }
   engine->destroy();
   delete engine;
@@ -161,10 +163,13 @@ LRESULT CALLBACK WndProc (HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
           return 0;
       }
 
-    case WM_CHAR:
+    case WM_CHAR: {
       //TODO: convert Windows UTF-16 to UTF-8 for CInputMGr (needs to handle surrogate pairs too!)
-      engine->input->characterInput(String(&wParam,(&wParam)+1));
+      String result;
+      utf8::utf16to8(&wParam, &wParam+1, std::back_inserter(result));
+      engine->input->characterInput(result);
       return false;
+    }
 
 
     default:

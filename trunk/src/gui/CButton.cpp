@@ -6,8 +6,12 @@ CAbstractButton(pos,size)
   fgColor.set(1., 1., 1., 1.);
   bgColor.set(.5, .5, .5, .4);
   bgTopColor.set(0., 0., 0., .4);
-  label=new CLabel(vec2d(4., getH()/15.), vec2d(getW()-12, getH()-getH()/3.),text);
+  label =new CLabel(vec2d(4., getH()/15.), vec2d(getW()-12, getH()-getH()/3.),text);
+  label2 = new CLabel(label->getPosition()+vec2d(1., 1.), label->getSize(), text);
+  label2->setFgColor(rgba(0., 0., 0., 1.));
+  addChild(label2);
   addChild(label);
+
 }
 
 void CButton::draw(){
