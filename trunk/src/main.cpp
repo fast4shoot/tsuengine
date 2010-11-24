@@ -1,3 +1,4 @@
+#define UNICODE
 #include <windows.h>
 #include <gl/gl.h>
 #include <iostream>
@@ -59,12 +60,12 @@ int WINAPI WinMain (HINSTANCE hInstance,
   wc.hCursor = LoadCursor (NULL, IDC_ARROW);
   wc.hbrBackground = NULL;
   wc.lpszMenuName = NULL;
-  wc.lpszClassName = "TSUEWindow";
-  RegisterClass (&wc);
+  wc.lpszClassName = L"TSUEWindow";
+  RegisterClass(&wc);
 
   // create main window
   hWnd = CreateWindow (
-    "TSUEWindow", "TSU Engine window",
+    L"TSUEWindow", L"TSU Engine window",
     WS_MINIMIZEBOX | WS_CAPTION | WS_POPUPWINDOW | WS_VISIBLE,
     0, 0, SCREENWIDTH+6, SCREENHEIGHT+27,
     NULL, NULL, hInstance, NULL);
@@ -120,8 +121,8 @@ int WINAPI WinMain (HINSTANCE hInstance,
   }catch(std::runtime_error e){
     std::string result;
     result="An exception occured: \n";
-    //result+=e.what();
-    MessageBox(hWnd,result.c_str(),"Exception",MB_OK | MB_ICONEXCLAMATION);
+    result+=e.what();
+    MessageBoxA(hWnd,result.c_str(),"Exception",MB_OK | MB_ICONEXCLAMATION);
   }
   engine->destroy();
   delete engine;

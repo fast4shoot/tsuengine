@@ -42,6 +42,7 @@ void CBaseEngine::init(){
   log(sformat("přečteno %d",value.get_obj().find("rofl")->second.get_int()));
 
   testMat=materials->getMaterial("wall1");
+  cursorMat=materials->getMaterial("system/cursor");
 }
 
 /*int CBaseTransmission() {
@@ -140,26 +141,36 @@ void CBaseEngine::drawScene(){
   glEnable(GL_TEXTURE_2D);
   testMat->bind();
   glBegin(GL_QUADS);
-    glColor3f(0.,0.,1.);
+    glColor3f(1.,1.,1.);
     glNormal3i(0,0,1);
-    glVertex3f(0.,-10.,0.);
-    glVertex3f(-20.,-10.,0.);
-    glVertex3f(-20.,10.,0.);
-    glVertex3f(0.,10.,0.);
+    glTexCoord2d(0,0);
+    glVertex3f(0.,-20.,-20.);
+    glTexCoord2d(0,1);
+    glVertex3f(-40.,-20.,-20.);
+    glTexCoord2d(0,0);
+    glVertex3f(-40.,20.,-20.);
+    glTexCoord2d(1,0);
+    glVertex3f(0.,20.,-20.);
 
-    glColor3f(1.,.5,1.);
     glNormal3i(-1,0,0);
-    glVertex3f(0.,-10.,0.);
-    glVertex3f(0.,-10.,10.);
-    glVertex3f(0.,10.,10.);
-    glVertex3f(0.,10.,0.);
+    glTexCoord2d(0,0);
+    glVertex3f(0.,-20.,-20.);
+    glTexCoord2d(0,1);
+    glVertex3f(0.,-20.,20.);
+    glTexCoord2d(1,1);
+    glVertex3f(0.,20.,20.);
+    glTexCoord2d(1,0);
+    glVertex3f(0.,20.,-20.);
 
-    glColor3f(1.,1.,0.);
     glNormal3i(0,-1,0);
-    glVertex3f(0.,-10.,0.);
-    glVertex3f(0.,-10.,10.);
-    glVertex3f(-20.,-10.,10.);
-    glVertex3f(-20.,-10.,0.);
+    glTexCoord2d(1,0);
+    glVertex3f(0.,-20.,-20.);
+    glTexCoord2d(1,1);
+    glVertex3f(0.,-20.,20.);
+    glTexCoord2d(0,1);
+    glVertex3f(-40.,-20.,20.);
+    glTexCoord2d(0,0);
+    glVertex3f(-40.,-20.,-20.);
   glEnd();
   glDisable(GL_LIGHT0);
   glDisable(GL_LIGHTING);
@@ -172,22 +183,22 @@ void CBaseEngine::drawScene(){
 
   gui->drawElements();
 
-  glColor3f(1.0f, 1.0f, 1.0f);
-  systemFont->render(sformat("realTime: %.1lf | FPS: %.1lf | Frame: %llu",getRealTime(),fps,getFrameCount()),14.);
-  glPushMatrix();
-  glTranslatef(0.,16., 0.);
-  //systemFont->render(_log,14.);
-  glPopMatrix();
-
   glPushMatrix();
   glTranslatef(input->getX(),input-> getY(),0.0f);
+  cursorMat->bind();
+  glEnable(GL_TEXTURE_2D);
   glBegin(GL_QUADS);
-    glColor4f(1.0f, 0.0f, 0.0f,0.5f);
+    glColor4f(1.f, 1.f, 1.f, 0.9f);
+    glTexCoord2d(0,0);
     glVertex2f(0.0,24.0);
-    glVertex2f(12.0,24.0);
-    glVertex2f(12.0,0.0);
+    glTexCoord2d(1,0);
+    glVertex2f(24.0,24.0);
+    glTexCoord2d(1,1);
+    glVertex2f(24.0,0.0);
+    glTexCoord2d(0,1);
     glVertex2f(0.0,0.0);
   glEnd();
+  glDisable(GL_TEXTURE_2D);
   glPopMatrix();
 
   SwapBuffers (hDC);

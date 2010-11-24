@@ -77,6 +77,7 @@ class CBaseEngine{
 
     Font*           systemFont;
     Material*       testMat;
+    Material*       cursorMat;
 
 
 };

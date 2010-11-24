@@ -18,25 +18,10 @@
       "texCoord": { "u": 0, "v": 1 }
     }
   ],
-  "planes": [
-    { 
-      "normal": { "x": 0, "y": 0, "z": 1 },
-      "d": 0 
-    }
-  ],
-  "materials": [
-    "wall1"
-  ]
   "triangles": [
     {
-      "plane": 0,
-      "material": 0,
-      "vertices": [0,1,2]
-    },
-    {
-      "plane": 0,
-      "material": 0,
-      "vertices": [2,3,0]
+      "material": "wall1",
+      "vertices": [0,1,2,2,3,0]
     }
   ]
 }

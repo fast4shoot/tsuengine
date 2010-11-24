@@ -1,6 +1,8 @@
 #include "Material.h"
 
 #include <fstream>
+#include <streambuf>
+#include <string>
 #include "typedefs.h"
 #include "libs/json_spirit/json_spirit.h"
 #include "libs/il/ilut.h"
@@ -16,17 +18,35 @@ Material::Material(String name){
   json::read(jsonFile, data);
   jsonFile.close();
 
-  engine->log(sformat("my ass: %d",(int)data.type()));
   _name = data.get_obj().find("texture")->second.get_str();
-  String fullPath = "materials/"+_name;
-  char* cstr = new char [fullPath.size()+1];
-  strcpy(cstr, fullPath.c_str());
 
-  _glName=ilutGLLoadImage(cstr);
 
+
+  ILuint ImageName; // The image name to return.
+  ilGenImages(1, &ImageName);
+  ilBindImage(ImageName);
+
+  std::ifstream dataFile(("materials/"+_name).c_str(),std::ifstream::binary);
+  std::string imgData;
+
+  dataFile.seekg(0, std::ios::end);
+  imgData.reserve(dataFile.tellg());
+  dataFile.seekg(0, std::ios::beg);
+
+  imgData.assign((std::istreambuf_iterator<char>(dataFile)), std::istreambuf_iterator<char>());
+  dataFile.close();
+  ilLoadL(IL_TYPE_UNKNOWN,imgData.c_str(),imgData.size());
+  _glName=ilutGLBindTexImage();
+  ilDeleteImages(1,&ImageName);
+
+  //for some strange reason, these do not work
+  //TODO: make ilutGLLoadImage work
+  //ilLoadImage(((const ILstring)"materials/wall1.png"));
+  //_glName=ilutGLBindTexImage();
+  //_glName=ilutGLLoadImage("D:\\fast4shoot\\programming\\TSUEngine\\release\\wall1.png");
   ILenum Error;
   while ((Error = ilGetError()) != IL_NO_ERROR) {
-    MSGBOX(sformat("%d: %s/n", Error, iluErrorString(Error)).c_str());
+    engine->log(sformat("DevIL ERROR: 0x%x: %s/n", Error, iluErrorString(Error)).c_str());
   }
 
 }
