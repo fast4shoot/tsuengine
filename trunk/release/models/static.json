@@ -2,20 +2,20 @@
   "type": "static",
   "vertices": [
     { 
-      "position": { "x": 10, "y": -10, "z": 0 },
-      "texCoord": { "u": 0, "v": 0 },
+      "position": { "x": 10.0, "y": -10.0, "z": 0.0 },
+      "texCoord": { "u": 0.0, "v": 0.0 },
     },
     { 
-      "position": { "x": 10, "y": 10, "z": 0 },
-      "texCoord": { "u": 1, "v": 0 }
+      "position": { "x": 10.0, "y": 10.0, "z": 0.0 },
+      "texCoord": { "u": 1.0, "v": 0.0 }
     },
     { 
-      "position": { "x": -10, "y": 10, "z": 0 },
-      "texCoord": { "u": 1, "v": 1 }
+      "position": { "x": -10.0, "y": 10.0, "z": 0.0 },
+      "texCoord": { "u": 1.0, "v": 1.0 }
     },
     { 
-      "position": { "x": -10, "y": -10, "z": 0},
-      "texCoord": { "u": 0, "v": 1 }
+      "position": { "x": -10.0, "y": -10.0, "z": 0.0},
+      "texCoord": { "u": 0.0, "v": 1.0 }
     }
   ],
   "triangles": [

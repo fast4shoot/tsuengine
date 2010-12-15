@@ -50,7 +50,7 @@ CMainMenu::CMainMenu():
 }
 
 void CMainMenu::draw(){
-  drawHorizontalGradient(0,0,panelWidth-1,getH(),fgColor,bgColor);
+  drawVerticalGradient(0,0,panelWidth-1,getH(),bgColor,fgColor);
   setDrawColor(fgColor);
   drawQuad(panelWidth-1,0,1,getH());
 }

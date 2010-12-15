@@ -2,6 +2,7 @@
 #define VEC3D_H
 
 #include "vecOpBase.h"
+#include "libs/json/json.h"
 
 
 class vec3d: public vecOpBase<double,3,vec3d>{
@@ -15,6 +16,8 @@ class vec3d: public vecOpBase<double,3,vec3d>{
     vec3d(const vec3d& rhs);
     vec3d(double x=0., double y=0., double z=0.);
     void   set(double x, double y, double z);
+
+    void   fromJson(json::mValue& val);
 
 };
 
@@ -41,6 +44,19 @@ inline void vec3d::set(double x, double y, double z){
   data[2]=z;
 }
 
+inline void vec3d::fromJson(json::mValue& val){
+  json::mObject::iterator it;
+  json::mObject& obj=val.get_obj();
+  if((it=obj.find("x"))!=obj.end()){
+    x = it->second.get_real();
+  }
+  if((it=obj.find("y"))!=obj.end()){
+    y = it->second.get_real();
+  }
+  if((it=obj.find("z"))!=obj.end()){
+    z = it->second.get_real();
+  }
+}
 
 inline vec3d& vec3d::operator=(const vec3d& rhs){
   return vecBase<double,3,vec3d>::operator=(rhs);

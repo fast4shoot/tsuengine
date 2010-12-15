@@ -14,7 +14,7 @@
 #include "utils/stringUtils.h"
 #include "gui/CText.h"
 #include "version.h"
-#include "json_spirit/json_spirit.h"
+#include "libs/json/json.h"
 
 
 CBaseEngine* engine;
@@ -146,11 +146,11 @@ void CBaseEngine::drawScene(){
     glTexCoord2d(0,0);
     glVertex3f(0.,-20.,-20.);
     glTexCoord2d(0,1);
-    glVertex3f(-40.,-20.,-20.);
-    glTexCoord2d(0,0);
+    glVertex3f(0.,20.,-20.);
+    glTexCoord2d(1,1);
     glVertex3f(-40.,20.,-20.);
     glTexCoord2d(1,0);
-    glVertex3f(0.,20.,-20.);
+    glVertex3f(-40.,-20.,-20.);
 
     glNormal3i(-1,0,0);
     glTexCoord2d(0,0);
@@ -165,12 +165,12 @@ void CBaseEngine::drawScene(){
     glNormal3i(0,-1,0);
     glTexCoord2d(1,0);
     glVertex3f(0.,-20.,-20.);
-    glTexCoord2d(1,1);
-    glVertex3f(0.,-20.,20.);
-    glTexCoord2d(0,1);
-    glVertex3f(-40.,-20.,20.);
     glTexCoord2d(0,0);
     glVertex3f(-40.,-20.,-20.);
+    glTexCoord2d(0,1);
+    glVertex3f(-40.,-20.,20.);
+    glTexCoord2d(1,1);
+    glVertex3f(0.,-20.,20.);
   glEnd();
   glDisable(GL_LIGHT0);
   glDisable(GL_LIGHTING);
@@ -207,10 +207,13 @@ void CBaseEngine::drawScene(){
 void CBaseEngine::initWorldView(){
   glMatrixMode(GL_PROJECTION);
   glLoadIdentity();
-  gluPerspective(65.0f,(GLfloat)SCREENWIDTH/(GLfloat)SCREENHEIGHT,0.1f,1000000.0f);
+  gluPerspective(70.0f,(GLfloat)SCREENWIDTH/(GLfloat)SCREENHEIGHT,0.1f,1000000.0f);
   glMatrixMode(GL_MODELVIEW);
   glLoadIdentity();
   glEnable(GL_DEPTH_TEST);
+  glCullFace(GL_BACK);
+  glEnable(GL_CULL_FACE);
+  glCullFace(GL_BACK);
 }
 
 void CBaseEngine::initGuiView(){
