@@ -2,7 +2,7 @@
 <CodeBlocks_layout_file>
 	<ActiveTarget name="default" />
 	<File name="CBaseEngine.cpp" open="1" top="0" tabpos="4">
-		<Cursor position="4193" topLine="176" />
+		<Cursor position="3346" topLine="144" />
 	</File>
 	<File name="CBaseEngine.h" open="1" top="0" tabpos="3">
 		<Cursor position="2118" topLine="48" />
@@ -59,10 +59,16 @@
 		<Cursor position="390" topLine="0" />
 	</File>
 	<File name="elements\Material.cpp" open="1" top="0" tabpos="1">
-		<Cursor position="1465" topLine="20" />
+		<Cursor position="128" topLine="9" />
 	</File>
 	<File name="elements\Material.h" open="1" top="0" tabpos="2">
 		<Cursor position="6" topLine="0" />
+	</File>
+	<File name="elements\Plane.h" open="1" top="0" tabpos="10">
+		<Cursor position="203" topLine="0" />
+	</File>
+	<File name="elements\Vertex.h" open="1" top="0" tabpos="8">
+		<Cursor position="519" topLine="0" />
 	</File>
 	<File name="globals.cpp" open="0" top="0" tabpos="11">
 		<Cursor position="44" topLine="0" />
@@ -121,8 +127,8 @@
 	<File name="gui\CDraggable.h" open="0" top="0" tabpos="6">
 		<Cursor position="134" topLine="0" />
 	</File>
-	<File name="gui\CGuiPanel.cpp" open="0" top="0" tabpos="4">
-		<Cursor position="2940" topLine="99" />
+	<File name="gui\CGuiPanel.cpp" open="1" top="0" tabpos="12">
+		<Cursor position="4682" topLine="148" />
 	</File>
 	<File name="gui\CGuiPanel.h" open="0" top="0" tabpos="5">
 		<Cursor position="2783" topLine="58" />
@@ -133,8 +139,8 @@
 	<File name="gui\CLabel.h" open="0" top="0" tabpos="12">
 		<Cursor position="751" topLine="26" />
 	</File>
-	<File name="gui\CMainMenu.cpp" open="0" top="0" tabpos="2">
-		<Cursor position="995" topLine="15" />
+	<File name="gui\CMainMenu.cpp" open="1" top="0" tabpos="13">
+		<Cursor position="1673" topLine="39" />
 	</File>
 	<File name="gui\CMainMenu.h" open="0" top="0" tabpos="3">
 		<Cursor position="141" topLine="1" />
@@ -259,8 +265,8 @@
 	<File name="macros.h" open="0" top="0" tabpos="8">
 		<Cursor position="221" topLine="0" />
 	</File>
-	<File name="main.cpp" open="1" top="1" tabpos="5">
-		<Cursor position="3067" topLine="106" />
+	<File name="main.cpp" open="1" top="0" tabpos="5">
+		<Cursor position="3067" topLine="0" />
 	</File>
 	<File name="typedefs.h" open="0" top="0" tabpos="0">
 		<Cursor position="89" topLine="0" />
@@ -283,19 +289,19 @@
 	<File name="vec2d.cpp" open="0" top="0" tabpos="1">
 		<Cursor position="287" topLine="0" />
 	</File>
-	<File name="vec2d.h" open="0" top="0" tabpos="2">
-		<Cursor position="1529" topLine="91" />
+	<File name="vec2d.h" open="1" top="0" tabpos="6">
+		<Cursor position="1482" topLine="51" />
 	</File>
 	<File name="vec3d.cpp" open="0" top="0" tabpos="4">
 		<Cursor position="24" topLine="0" />
 	</File>
-	<File name="vec3d.h" open="0" top="0" tabpos="3">
-		<Cursor position="505" topLine="25" />
+	<File name="vec3d.h" open="1" top="1" tabpos="7">
+		<Cursor position="1126" topLine="27" />
 	</File>
 	<File name="vecBase.h" open="0" top="0" tabpos="5">
 		<Cursor position="3581" topLine="100" />
 	</File>
-	<File name="vecOpBase.h" open="0" top="0" tabpos="6">
-		<Cursor position="442" topLine="0" />
+	<File name="vecOpBase.h" open="1" top="0" tabpos="9">
+		<Cursor position="889" topLine="26" />
 	</File>
 </CodeBlocks_layout_file>
