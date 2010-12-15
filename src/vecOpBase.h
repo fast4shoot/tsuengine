@@ -11,8 +11,10 @@ class vecOpBase : public vecBase<T,N,Derived>{
             vecOpBase(const Derived& rhs);
     virtual ~vecOpBase(){};
 
-    T dot(const Derived& b) const;
+    void normalize();
+
     Derived normalized() const;
+    T dot(const Derived& b) const;
     T length() const;
     T lengthSqr() const;
 
@@ -32,18 +34,27 @@ inline vecOpBase<T,N,Derived>::vecOpBase(const Derived& rhs):
 {}
 
 template<class T, int N, class Derived>
-inline T vecOpBase<T,N,Derived>::dot(const Derived& b) const{
-  T sum=0.;
+inline void vecOpBase<T,N,Derived>::normalize(){
+  T len=length();
   for(int i=0;i<N;++i){
-    sum+=this->data[i]*b.data[i];
+    this->data[i]/=len;
   }
-  return sum/(length()*b.length());
 }
 
 template<class T, int N, class Derived>
 inline Derived vecOpBase<T,N,Derived>::normalized() const{
   return Derived(dynamic_cast<const Derived&>(*this))/length();
 }
+
+template<class T, int N, class Derived>
+inline T vecOpBase<T,N,Derived>::dot(const Derived& b) const{
+  T sum=0.;
+  for(int i=0;i<N;++i){
+    sum+=this->data[i]*b.data[i];
+  }
+  return sum;
+}
+
 
 template<class T, int N, class Derived>
 inline T vecOpBase<T,N,Derived>::lengthSqr() const{

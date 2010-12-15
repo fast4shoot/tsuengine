@@ -3,27 +3,21 @@
 
 #include <cmath>
 #include "vecOpBase.h"
+#include "libs/json/json.h"
 
 class vec2d: public vecOpBase<double,2,vec2d>{
   public:
     double& x;
     double& y;
+    double& u;
+    double& v;
            vec2d(const vec2d& rhs);
            vec2d(double x=0., double y=0.);
     void   set(double x, double y);
+    void   fromJson(json::mValue& val);
 
     vec2d& operator=(const vec2d& rhs);
-    /*
-    vec2d& operator+=(const vec2d& rhs);
-    vec2d& operator-=(const vec2d& rhs);
-    vec2d& operator*=(const double& rhs);
-    vec2d& operator/=(const double& rhs);
 
-    const vec2d operator+(const vec2d& rhs) const;
-    const vec2d operator-(const vec2d& rhs) const;
-    const vec2d operator*(const double& rhs) const;
-    const vec2d operator/(const double& rhs) const;
-    */
     bool operator>(const vec2d& in) const;
     bool operator<(const vec2d& in) const;
     bool operator==(const vec2d& in) const;
@@ -33,7 +27,9 @@ class vec2d: public vecOpBase<double,2,vec2d>{
 
 inline vec2d::vec2d(double x, double y):
   x(data[0]),
-  y(data[1])
+  y(data[1]),
+  u(data[0]),
+  v(data[1])
 {
   data[0]=x;
   data[1]=y;
@@ -42,8 +38,22 @@ inline vec2d::vec2d(double x, double y):
 inline vec2d::vec2d(const vec2d& rhs):
   x(data[0]),
   y(data[1]),
+  u(data[0]),
+  v(data[1]),
   vecOpBase<double,2,vec2d>(rhs)
 {}
+
+inline void vec2d::fromJson(json::mValue& val){
+  json::mObject::iterator it;
+  json::mObject& obj=val.get_obj();
+
+  if(((it = obj.find("x"))!=obj.end()) || ((it = obj.find("u"))!=obj.end())){
+    x = it->second.get_real();
+  }
+  if(((it = obj.find("y"))!=obj.end()) || ((it = obj.find("v"))!=obj.end())){
+    y = it->second.get_real();
+  }
+}
 
 inline void vec2d::set(double x, double y){
   data[0]=x;
@@ -53,48 +63,6 @@ inline void vec2d::set(double x, double y){
 inline vec2d& vec2d::operator=(const vec2d& rhs){
   return vecBase<double,2,vec2d>::operator=(rhs);
 }
-
-/*
-inline vec2d& vec2d::operator+=(const vec2d& rhs){
-  x+=rhs.x;
-  y+=rhs.y;
-  return *this;
-}
-
-inline vec2d& vec2d::operator-=(const vec2d& rhs){
-  x-=rhs.x;
-  y-=rhs.y;
-  return *this;
-}
-
-inline vec2d& vec2d::operator*=(const double& rhs){
-  x*=rhs;
-  y*=rhs;
-  return *this;
-}
-
-inline vec2d& vec2d::operator/=(const double& rhs){
-  x/=rhs;
-  y/=rhs;
-  return *this;
-}
-
-inline const vec2d vec2d::operator+(const vec2d& rhs) const {
-  return (vec2d(*this) += rhs);
-}
-
-inline const vec2d vec2d::operator-(const vec2d& rhs) const {
-  return (vec2d(*this) -= rhs);
-}
-
-inline const vec2d vec2d::operator*(const double& rhs) const {
-  return (vec2d(*this) *= rhs);
-}
-
-inline const vec2d vec2d::operator/(const double& rhs) const {
-  return (vec2d(*this) /= rhs);
-}
-*/
 
 inline bool vec2d::operator>(const vec2d& in) const {
   return x>in.x && y>in.y;

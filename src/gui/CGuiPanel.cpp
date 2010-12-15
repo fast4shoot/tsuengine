@@ -150,32 +150,32 @@ void CGuiPanel::addActionListener(CActionListener* al){
 
 void CGuiPanel::drawQuad(float x, float y, float w, float h){
   glBegin(GL_QUADS);
-  glVertex2f(x,y);
   glVertex2f(x+w,y);
-  glVertex2f(x+w,y+h);
+  glVertex2f(x,y);
   glVertex2f(x,y+h);
+  glVertex2f(x+w,y+h);
   glEnd();
 }
 
 void CGuiPanel::drawVerticalGradient(float x, float y, float w, float h, const rgba& colOne, const rgba& colTwo){
   glBegin(GL_QUADS);
   setDrawColor(colOne);
-  glVertex2f(x,y);
   glVertex2f(x+w,y);
+  glVertex2f(x,y);
   setDrawColor(colTwo);
-  glVertex2f(x+w,y+h);
   glVertex2f(x,y+h);
+  glVertex2f(x+w,y+h);
   glEnd();
 }
 
 void CGuiPanel::drawHorizontalGradient(float x, float y, float w, float h, const rgba& colOne, const rgba& colTwo){
   glBegin(GL_QUADS);
   setDrawColor(colOne);
-  glVertex2f(x,y+h);
   glVertex2f(x,y);
+  glVertex2f(x,y+h);
   setDrawColor(colTwo);
-  glVertex2f(x+w,y);
   glVertex2f(x+w,y+h);
+  glVertex2f(x+w,y);
   glEnd();
 }
 
