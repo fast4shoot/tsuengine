@@ -5,7 +5,7 @@
 #include <cstddef>
 
 #define LINKVARTOPARAM(lvtp_mem,lvtp_name) params.linkVariableToParam((void*)&lvtp_mem,lvtp_name)
-#define MSGBOX(msg) MessageBox(NULL,msg,"Message",MB_OK)
+#define MSGBOX(msg) MessageBoxA(NULL,msg,"Message",MB_OK)
 #define HANDLEMSFAILURE(x) if(FAILED(x)){throw CodeFailure(#x);}
 #define CLIPMINMAX(val,min,max) ( (val)>=(max)?(max):( (val)<=(min)?(min):(val) ) )
 #define CLIPMIN(val,min) ((val)<=(min)?(min):(val))

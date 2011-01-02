@@ -1,5 +1,3 @@
-//#include "vec3d.h"
-//#include "macros.h"
-
+#include "vec3d.h"
 
 

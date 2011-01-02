@@ -1,6 +1,7 @@
 #ifndef CACTIONLISTENERPANEL_H
 #define CACTIONLISTENERPANEL_H
 
+#include "CGuiPanel.h"
 
 class CActionListenerPanel
 {

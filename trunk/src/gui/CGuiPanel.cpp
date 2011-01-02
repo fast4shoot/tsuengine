@@ -2,7 +2,7 @@
 #include "macros.h"
 #include <gl/gl.h>
 #include <typeinfo>
-#include "CActionListener.h"
+#include "listeners/CListener.h"
 
 void CGuiPanel::init(){
   position.set(0.,0.);
@@ -11,7 +11,7 @@ void CGuiPanel::init(){
   visible=true;
   mouseOver=false;
   mouseDown=false;
-  children.reserve(8);
+  children.reserve(4);
   allowMouseClickPropagation=true;
   fgColor.set(1.,1.,1.,1.);
   bgColor.set(0.,0.,0.,.25);
@@ -144,8 +144,8 @@ void CGuiPanel::handleMouseMove(const vec2d& newPosition, const bool mouseOver){
   }
 }
 
-void CGuiPanel::addActionListener(CActionListener* al){
-  actionListeners.push_back(al);
+void CGuiPanel::addListener(CListener* al){
+  listeners.push_back(al);
 }
 
 void CGuiPanel::drawQuad(float x, float y, float w, float h){
@@ -191,27 +191,27 @@ void CGuiPanel::setDrawColor(const rgba& color){
 }
 
 void CGuiPanel::fireListeners(){
-  for(ActionListenerList::iterator it = actionListeners.begin(); it!=actionListeners.end(); ++it){
+  for(ListenerList::iterator it = listeners.begin(); it!=listeners.end(); ++it){
     (*it)->actionPerformed();
   }
 }
 
 void CGuiPanel::firePositionChanged(){
   positionChanged();
-  for(ActionListenerList::iterator it = actionListeners.begin(); it!=actionListeners.end(); ++it){
+  for(ListenerList::iterator it = listeners.begin(); it!=listeners.end(); ++it){
     (*it)->positionChangePerformed();
   }
 }
 
 void CGuiPanel::fireSizeChanged(){
   sizeChanged();
-  for(ActionListenerList::iterator it = actionListeners.begin(); it!=actionListeners.end(); ++it){
+  for(ListenerList::iterator it = listeners.begin(); it!=listeners.end(); ++it){
     (*it)->sizeChangePerformed();
   }
 }
 
 void CGuiPanel::fireChildAdded(CGuiPanel* child){
-  for(ActionListenerList::iterator it = actionListeners.begin(); it!=actionListeners.end(); ++it){
+  for(ListenerList::iterator it = listeners.begin(); it!=listeners.end(); ++it){
     (*it)->addChildPerformed(child);
   }
 }

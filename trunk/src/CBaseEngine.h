@@ -21,9 +21,6 @@ class CText;
 
 class CBaseEngine{
   private:
-    rgba            drawColor;
-    vec3d           drawPos;
-
 
     //time vars
     clock_t         lastClock;
@@ -49,11 +46,6 @@ class CBaseEngine{
 
     void            init();
     void            destroy();
-    void            setDrawPos(double x, double y, double z);
-    void            setDrawPos(vec3d pos);
-    void            setDrawColor(float r, float g, float b, float a);
-    void            setDrawColor(rgba col);
-    void            drawModel(int wmId);
     double          getTime() const;
     double          getLastTime() const;
     double          getTimeDelta() const;
@@ -62,7 +54,6 @@ class CBaseEngine{
     double          getRealTimeDelta() const;
     unsigned long long int getFrameCount() const;
     double          getFPS() const;
-    void            createEntity(String name);
 
 
     void            think();

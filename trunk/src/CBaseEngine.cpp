@@ -8,7 +8,7 @@
 #include "exceptions.h"
 #include "macros.h"
 #include "CInputMgr.h"
-#include "utils.h"
+#include "utils/math.h"
 #include "const.h"
 #include "Font.h"
 #include "utils/stringUtils.h"
@@ -16,11 +16,9 @@
 #include "version.h"
 #include "libs/json/json.h"
 
-
 CBaseEngine* engine;
 
 void CBaseEngine::init(){
-  drawPos.x=drawPos.y=0.0f;  //this is old, remainder from sparta engine
   lastClock=clock();
   timeScale=1.0f;
   time=0.0;
@@ -37,9 +35,13 @@ void CBaseEngine::init(){
   gui->init();
   log(sformat("TSUEngine verze %d.%d.%d revize %d",AutoVersion::MAJOR,AutoVersion::MINOR,AutoVersion::BUILD,AutoVersion::REVISION));
   json_spirit::mValue value;
-  json_spirit::read( "{\"rofl\": 42}", value );
+  json_spirit::read( "{\"rofl\": [1337.2, 2, 3]}", value );
 
-  log(sformat("přečteno %d",value.get_obj().find("rofl")->second.get_int()));
+  //log(sformat("přečteno %d",value.get_obj().find("rofl")->second.get_int()));
+  vec3d rofl;
+  rofl.fromJson(value.get_obj().find("rofl")->second);
+  double x = rofl.x;
+  log(sformat("přečten vektor: %f, %f, %f",x, rofl.y, rofl.z));
 
   testMat=materials->getMaterial("wall1");
   cursorMat=materials->getMaterial("system/cursor");
@@ -59,22 +61,6 @@ void CBaseEngine::destroy(){
   delete materials;
   delete fonts;
   delete input;
-}
-
-void CBaseEngine::setDrawPos(double x, double y, double z){
-  drawPos.set(x,y,z);
-}
-
-void CBaseEngine::setDrawPos(vec3d pos){
-  drawPos=pos;
-}
-
-void CBaseEngine::setDrawColor(float r, float g, float b, float a){
-  drawColor.set(r,g,b,a);
-}
-
-void CBaseEngine::setDrawColor(rgba col){
-  drawColor=col;
 }
 
 void CBaseEngine::think(){
@@ -104,7 +90,7 @@ void CBaseEngine::think(){
 
   /*
   for(i=0;i<ENT_MAX;i++){
-    //TODO: make it use CEntMgr
+    //TODO: finish and use CEntMgr
     if(entityTable[i]){
       entityTable[i]->think();
     }
@@ -116,12 +102,6 @@ void CBaseEngine::think(){
   }
 }
 
-void CBaseEngine::drawModel(int wmId){
-  glPushMatrix();
-
-  glPopMatrix();
-}
-
 void CBaseEngine::drawScene(){
   frameCount++;
 
@@ -129,7 +109,6 @@ void CBaseEngine::drawScene(){
   glClear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
 
 
-  //world drawing settings
   initWorldView();
 
   gluLookAt(0,0,10,100,0,0,0,0,1);
@@ -207,7 +186,7 @@ void CBaseEngine::drawScene(){
 void CBaseEngine::initWorldView(){
   glMatrixMode(GL_PROJECTION);
   glLoadIdentity();
-  gluPerspective(70.0f,(GLfloat)SCREENWIDTH/(GLfloat)SCREENHEIGHT,0.1f,1000000.0f);
+  gluPerspective(70.0f,(GLfloat)SCREENWIDTH/(GLfloat)SCREENHEIGHT,0.1f,100000.0f);
   glMatrixMode(GL_MODELVIEW);
   glLoadIdentity();
   glEnable(GL_DEPTH_TEST);
@@ -226,10 +205,6 @@ void CBaseEngine::initGuiView(){
   //glTranslatef(0.,SCREENHEIGHT/*+0.375*/,0.0);
   //glScalef(1.0,-1.0,1.0);
 }
-
-
-
-void CBaseEngine::createEntity(String name){}
 
 void CBaseEngine::log(const String& text){
   static bool firstLog=true;

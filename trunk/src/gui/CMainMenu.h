@@ -2,18 +2,18 @@
 #define CMAINMENU_H
 
 #include "CGuiPanel.h"
-#include "CActionListener.h"
+#include "listeners/CListenerMemberFn.h"
 #include "CButton.h"
 #include "CConsole.h"
 
 #include "macros.h"
 
 
-class CMainMenu: public CGuiPanel, CActionListenerPanel{
+class CMainMenu: public CGuiPanel{
   public:
     CMainMenu();
     virtual void draw();
-    virtual void actionPerformed(int id);
+    virtual void buttonClicked(int id);
     virtual void displayElement(CGuiPanel* element);
   protected:
     CGuiPanel* _newGame;

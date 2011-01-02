@@ -21,21 +21,18 @@ CWindow::CWindow(const vec2d& position, const vec2d& size, const String& label):
 
 
   temp=new CButton(vec2d(getW()-26,3), vec2d(20,24), "X");
-  temp->addActionListener(new CActionListener(this,1));
+  temp->addListener(makeCListenerMemberFn(0, this, &CWindow::windowButtonPressed));
   drag->addChild(temp);
-
-
 }
 
 void CWindow::draw(){
   setDrawColor(fgColor);
   drawFrame(0, 0, getW(), getH());
   drawVerticalGradient(1, 31, getW()-2, getH()-32,rgba(.25,.25,.25,.8),bgColor);
-
 }
 
-void CWindow::actionPerformed(int id){
-  if(id==1) setVisible(false);
+void CWindow::windowButtonPressed(int id){
+  if(id==0) setVisible(false);
 }
 
 void CWindow::onMouseDown(const vec2d& position,const  MouseButton button){
