@@ -1,5 +1,6 @@
 #include "CMainMenu.h"
 
+#include "listeners/CListenerMemberFn.h"
 #include "CCenteredWindow.h"
 #include "CCheckBox.h"
 #include "CTextField.h"
@@ -19,16 +20,16 @@ CMainMenu::CMainMenu():
   addChild(new CLabel(vec2d(20,55),vec2d(30,30),"TSUEngine"));
 
   addChild(temp=new CButton(vec2d(20,100),vec2d(160,30),"Nová hra"));
-  temp->addActionListener(new CActionListener(this,1));
+  temp->addListener(makeCListenerMemberFn(1,this,&CMainMenu::buttonClicked));
 
   addChild(temp=new CButton(vec2d(20,135),vec2d(160,30),"Nastavení"));
-  temp->addActionListener(new CActionListener(this,2));
+  temp->addListener(makeCListenerMemberFn(2,this,&CMainMenu::buttonClicked));
 
   addChild(temp=new CButton(vec2d(20,170),vec2d(160,30),"Konzole"));
-  temp->addActionListener(new CActionListener(this,3));
+  temp->addListener(makeCListenerMemberFn(3,this,&CMainMenu::buttonClicked));
 
   temp=new CButton(vec2d(20,SCREENHEIGHT-160),vec2d(160,30),"Ukončit");
-  temp->addActionListener(new CActionListener(this,0));
+  temp->addListener(makeCListenerMemberFn(0,this,&CMainMenu::buttonClicked));
   addChild(temp);
 
   addChild(_settings=new CCenteredWindow(vec2d(400,300), "Nastavení"));
@@ -55,7 +56,7 @@ void CMainMenu::draw(){
   drawQuad(panelWidth-1,0,1,getH());
 }
 
-void CMainMenu::actionPerformed(int id){
+void CMainMenu::buttonClicked(int id){
   switch(id){
     case 1: displayElement(_newGame); break;
     case 2: displayElement(_settings); break;

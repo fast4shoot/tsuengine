@@ -5,10 +5,12 @@
 #include "macros.h"
 #include "CParamMgr.h"
 
+//TODO: rewrite completely
+
 CBaseEntity::CBaseEntity(){
   //link all parameters to variables here
   LINKVARTOPARAM(targetname,"targetname");
-  
+
 }
 
 
@@ -20,19 +22,19 @@ void CBaseEntity::init(){
 }
 
 void CBaseEntity::think(){
-  
+
 }
 
 void CBaseEntity::draw(){
   if(visible){
-    engine->setDrawPos(pos);
+    /*engine->setDrawPos(pos);
     engine->setDrawColor(1.0,1.0,1.0,1.0);
-    engine->drawModel(worldModel);
+    engine->drawModel(worldModel);*/
   }
 }
 
 vec3d CBaseEntity::getPos(){
   return pos;
 }
-   
+
 void CBaseEntity::processCollision(CBaseEntity *collider){}

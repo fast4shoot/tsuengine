@@ -4,16 +4,15 @@
 #include "utils/math.h"
 #include "utils/stringUtils.h"
 #include "CGuiPanel.h"
-#include "CActionListener.h"
-#include "CActionListenerPanel.h"
+#include "listeners/CListenerMemberFn.h"
 
 
-class CScrollBar : public CGuiPanel, CActionListenerPanel{
+class CScrollBar : public CGuiPanel{
   public:
     CScrollBar(const vec2d& pos, const vec2d& size);
     double getScrollAmount();
   protected:
-    void actionPerformed(int id);
+    void buttonScroll(int id);
     double _scrollAmt;
 
 };
@@ -22,7 +21,7 @@ inline double CScrollBar::getScrollAmount(){
   return _scrollAmt;
 }
 
-inline void CScrollBar::actionPerformed(int id){
+inline void CScrollBar::buttonScroll(int id){
   switch(id){
     case 0: _scrollAmt+=0.05; fireListeners(); break;
     case 1: _scrollAmt-=0.05; fireListeners(); break;

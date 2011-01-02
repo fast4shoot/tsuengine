@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1269179966 source:d:\fast4shoot\programming\tsuengine\src\cbaseentity.cpp
+1293908826 source:d:\fast4shoot\programming\tsuengine\src\cbaseentity.cpp
 	<vector>
 	"CBaseEntity.h"
 	"CBaseEngine.h"
@@ -17,30 +17,34 @@
 	"vec2d.h"
 	"vec3d.h"
 
-1289143005 d:\fast4shoot\programming\tsuengine\src\vec2d.h
+1293902623 d:\fast4shoot\programming\tsuengine\src\vec2d.h
 	<cmath>
 	"vecOpBase.h"
+	"libs/json/json.h"
 
-1290030184 d:\fast4shoot\programming\tsuengine\src\vecopbase.h
+1292623384 d:\fast4shoot\programming\tsuengine\src\vecopbase.h
 	<cmath>
 	"vecBase.h"
 
-1290030171 d:\fast4shoot\programming\tsuengine\src\vecbase.h
+1293907069 d:\fast4shoot\programming\tsuengine\src\vecbase.h
 	<cmath>
+	<exception>
 	"macros.h"
+	"libs/json/json.h"
+	"utils/stringUtils.h"
 
-1290619076 d:\fast4shoot\programming\tsuengine\src\macros.h
+1293906628 d:\fast4shoot\programming\tsuengine\src\macros.h
 	<windows.h>
 	<cstddef>
 
-1289143005 d:\fast4shoot\programming\tsuengine\src\vec3d.h
+1293903382 d:\fast4shoot\programming\tsuengine\src\vec3d.h
 	"vecOpBase.h"
 
 1269179966 d:\fast4shoot\programming\tsuengine\src\cparammgr.h
 	<vector>
 	"datatypes.h"
 
-1290633046 d:\fast4shoot\programming\tsuengine\src\cbaseengine.h
+1293908432 d:\fast4shoot\programming\tsuengine\src\cbaseengine.h
 	<string>
 	<gl/gl.h>
 	<ctime>
@@ -229,24 +233,25 @@
 	"CBaseEngine.h"
 	"CCenteredWindow.h"
 
-1290462661 d:\fast4shoot\programming\tsuengine\src\gui\cguipanel.h
+1293927245 d:\fast4shoot\programming\tsuengine\src\gui\cguipanel.h
 	<vector>
 	"datatypes.h"
 	"CGuiMgr.h"
 	"CBaseEngine.h"
 
-1290076103 d:\fast4shoot\programming\tsuengine\src\gui\cmainmenu.h
+1293926913 d:\fast4shoot\programming\tsuengine\src\gui\cmainmenu.h
 	"CGuiPanel.h"
-	"CActionListener.h"
+	"listeners/CListenerMemberFn.h"
 	"CButton.h"
 	"CConsole.h"
 	"macros.h"
 
-1290041252 d:\fast4shoot\programming\tsuengine\src\gui\cactionlistener.h
+1293918675 d:\fast4shoot\programming\tsuengine\src\gui\cactionlistener.h
 	"CActionListenerPanel.h"
 	"macros.h"
 
-1290039391 d:\fast4shoot\programming\tsuengine\src\gui\cactionlistenerpanel.h
+1293915186 d:\fast4shoot\programming\tsuengine\src\gui\cactionlistenerpanel.h
+	"CGuiPanel.h"
 
 1290618900 d:\fast4shoot\programming\tsuengine\src\gui\cbutton.h
 	"CAbstractButton.h"
@@ -267,9 +272,9 @@
 1289143005 d:\fast4shoot\programming\tsuengine\src\gui\cconsole.h
 	"CWindow.h"
 
-1290461483 d:\fast4shoot\programming\tsuengine\src\gui\cwindow.h
+1293927591 d:\fast4shoot\programming\tsuengine\src\gui\cwindow.h
 	"CGuiPanel.h"
-	"CActionListener.h"
+	"listeners/CListenerMemberFn.h"
 
 1290461376 d:\fast4shoot\programming\tsuengine\src\gui\ccenteredwindow.h
 	"datatypes.h"
@@ -356,13 +361,13 @@
 	<cstdlib>
 	<windows.h>
 
-1290633573 source:d:\fast4shoot\programming\tsuengine\src\elements\material.cpp
+1292623384 source:d:\fast4shoot\programming\tsuengine\src\elements\material.cpp
 	"Material.h"
 	<fstream>
 	<streambuf>
 	<string>
 	"typedefs.h"
-	"libs/json_spirit/json_spirit.h"
+	"libs/json/json.h"
 	"libs/il/ilut.h"
 	"utils/stringUtils.h"
 	"CBaseEngine.h"
@@ -3457,8 +3462,9 @@
 	"macros.h"
 	"utils/stringUtils.h"
 
-1290184320 d:\fast4shoot\programming\tsuengine\src\gui\cscrollable.h
+1293927267 d:\fast4shoot\programming\tsuengine\src\gui\cscrollable.h
 	<gl/gl.h>
+	"listeners/CListenerMemberFn.h"
 	"CGuiPanel.h"
 	"CStencilPanel.h"
 	"CScrollBar.h"
@@ -3467,14 +3473,13 @@
 	"datatypes.h"
 	"CGuiPanel.h"
 
-1290042641 d:\fast4shoot\programming\tsuengine\src\gui\cscrollbar.h
+1293927467 d:\fast4shoot\programming\tsuengine\src\gui\cscrollbar.h
 	"utils/math.h"
 	"utils/stringUtils.h"
 	"CGuiPanel.h"
-	"CActionListener.h"
-	"CActionListenerPanel.h"
+	"listeners/CListenerMemberFn.h"
 
-1290040991 d:\fast4shoot\programming\tsuengine\src\utils\math.h
+1293902766 d:\fast4shoot\programming\tsuengine\src\utils\math.h
 	<algorithm>
 
 1290076356 d:\fast4shoot\programming\tsuengine\src\gui\cbox.h
@@ -3487,12 +3492,12 @@
 	"datatypes.h"
 	"CAbstractButton.h"
 
-1290075604 source:d:\fast4shoot\programming\tsuengine\src\gui\cguipanel.cpp
+1293927289 source:d:\fast4shoot\programming\tsuengine\src\gui\cguipanel.cpp
 	"CGuiPanel.h"
 	"macros.h"
 	<gl/gl.h>
 	<typeinfo>
-	"CActionListener.h"
+	"listeners/CListener.h"
 
 1290461335 source:d:\fast4shoot\programming\tsuengine\src\gui\clabel.cpp
 	"CLabel.h"
@@ -3504,8 +3509,9 @@
 	<gl/gl.h>
 	"typedefs.h"
 
-1290461351 source:d:\fast4shoot\programming\tsuengine\src\gui\cmainmenu.cpp
+1293927324 source:d:\fast4shoot\programming\tsuengine\src\gui\cmainmenu.cpp
 	"CMainMenu.h"
+	"listeners/CListenerMemberFn.h"
 	"CCenteredWindow.h"
 	"CCheckBox.h"
 	"CTextField.h"
@@ -3515,7 +3521,7 @@
 	"CGuiPanel.h"
 	"CLabel.h"
 
-1290461510 source:d:\fast4shoot\programming\tsuengine\src\gui\cscrollbar.cpp
+1293927453 source:d:\fast4shoot\programming\tsuengine\src\gui\cscrollbar.cpp
 	"CScrollBar.h"
 	"CButton.h"
 
@@ -3543,7 +3549,7 @@
 1260127296 d:\fast4shoot\programming\tsuengine\src\libs\utf8\utf8\unchecked.h
 	"core.h"
 
-1290461596 source:d:\fast4shoot\programming\tsuengine\src\gui\cwindow.cpp
+1292627674 source:d:\fast4shoot\programming\tsuengine\src\gui\cwindow.cpp
 	"CWindow.h"
 	"CDraggable.h"
 	"CLabel.h"
@@ -5681,7 +5687,7 @@
 	<sstream>
 	<iomanip>
 
-1290619135 source:d:\fast4shoot\programming\tsuengine\src\main.cpp
+1293901790 source:d:\fast4shoot\programming\tsuengine\src\main.cpp
 	<windows.h>
 	<gl/gl.h>
 	<iostream>
@@ -5712,9 +5718,10 @@
 	"macros.h"
 	<cstdio>
 
-1289143005 source:d:\fast4shoot\programming\tsuengine\src\vec3d.cpp
+1293902323 source:d:\fast4shoot\programming\tsuengine\src\vec3d.cpp
+	"vec3d.h"
 
-1290633397 source:d:\fast4shoot\programming\tsuengine\src\cbaseengine.cpp
+1293911923 source:d:\fast4shoot\programming\tsuengine\src\cbaseengine.cpp
 	<cmath>
 	<windows.h>
 	<gl/gl.h>
@@ -5724,15 +5731,15 @@
 	"exceptions.h"
 	"macros.h"
 	"CInputMgr.h"
-	"utils.h"
+	"utils/math.h"
 	"const.h"
 	"Font.h"
 	"utils/stringUtils.h"
 	"gui/CText.h"
 	"version.h"
-	"json_spirit/json_spirit.h"
+	"libs/json/json.h"
 
-1290634184 d:\fast4shoot\programming\tsuengine\src\version.h
+1293927613 d:\fast4shoot\programming\tsuengine\src\version.h
 
 1292408161 source:c:\tsue\src\cbaseengine.cpp
 	<cmath>
@@ -11479,4 +11486,106 @@
 	<cassert>
 	<sstream>
 	<iomanip>
+
+1292626080 d:\fast4shoot\programming\tsuengine\src\libs\json\json.h
+	"json_spirit.h"
+
+1292626028 d:\fast4shoot\programming\tsuengine\src\libs\json\json_spirit.h
+	"json_spirit_value.h"
+	"json_spirit_reader.h"
+	"json_spirit_writer.h"
+	"json_spirit_utils.h"
+
+1292626028 d:\fast4shoot\programming\tsuengine\src\libs\json\json_spirit_value.h
+	<vector>
+	<map>
+	<string>
+	<cassert>
+	<sstream>
+	<stdexcept>
+	<boost/config.hpp>
+	<boost/cstdint.hpp>
+	<boost/shared_ptr.hpp>
+	<boost/variant.hpp>
+
+1292626028 d:\fast4shoot\programming\tsuengine\src\libs\json\json_spirit_reader.h
+	"json_spirit_value.h"
+	"json_spirit_error_position.h"
+	<iostream>
+
+1292626028 d:\fast4shoot\programming\tsuengine\src\libs\json\json_spirit_error_position.h
+	<string>
+
+1292626028 d:\fast4shoot\programming\tsuengine\src\libs\json\json_spirit_writer.h
+	"json_spirit_value.h"
+	<iostream>
+
+1292626028 d:\fast4shoot\programming\tsuengine\src\libs\json\json_spirit_utils.h
+	"json_spirit_value.h"
+	<map>
+
+1292623384 source:d:\fast4shoot\programming\tsuengine\src\elements\plane.cpp
+	"Plane.h"
+
+1293903440 d:\fast4shoot\programming\tsuengine\src\elements\plane.h
+	"vec3d.h"
+	"Vertex.h"
+
+1293903887 d:\fast4shoot\programming\tsuengine\src\elements\vertex.h
+	"vec2d.h"
+	"vec3d.h"
+	"libs/json/json.h"
+
+1292626028 source:d:\fast4shoot\programming\tsuengine\src\libs\json\json_spirit_reader.cpp
+	"json_spirit_reader.h"
+	"json_spirit_reader_template.h"
+
+1292626028 d:\fast4shoot\programming\tsuengine\src\libs\json\json_spirit_reader_template.h
+	"json_spirit_value.h"
+	"json_spirit_error_position.h"
+	<boost/bind.hpp>
+	<boost/function.hpp>
+	<boost/version.hpp>
+	<boost/spirit/include/classic_core.hpp>
+	<boost/spirit/include/classic_confix.hpp>
+	<boost/spirit/include/classic_escape_char.hpp>
+	<boost/spirit/include/classic_multi_pass.hpp>
+	<boost/spirit/include/classic_position_iterator.hpp>
+	<boost/spirit/core.hpp>
+	<boost/spirit/utility/confix.hpp>
+	<boost/spirit/utility/escape_char.hpp>
+	<boost/spirit/iterator/multi_pass.hpp>
+	<boost/spirit/iterator/position_iterator.hpp>
+
+1292626028 source:d:\fast4shoot\programming\tsuengine\src\libs\json\json_spirit_value.cpp
+	"json_spirit_value.h"
+
+1292626028 source:d:\fast4shoot\programming\tsuengine\src\libs\json\json_spirit_writer.cpp
+	"json_spirit_writer.h"
+	"json_spirit_writer_template.h"
+
+1292626028 d:\fast4shoot\programming\tsuengine\src\libs\json\json_spirit_writer_template.h
+	"json_spirit_value.h"
+	<cassert>
+	<sstream>
+	<iomanip>
+
+1293815310 source:d:\fast4shoot\programming\tsuengine\src\elements\staticmodel.cpp
+	"StaticModel.h"
+
+1293902881 d:\fast4shoot\programming\tsuengine\src\elements\staticmodel.h
+	<vector>
+	"Vertex.h"
+
+1293915204 source:d:\fast4shoot\programming\tsuengine\src\gui\cactionlistenermemberfn.cpp
+	"CActionListenerMemberFn.h"
+
+1293925666 d:\fast4shoot\programming\tsuengine\src\gui\cactionlistenermemberfn.h
+	"CActionListener.h"
+
+1293926934 d:\fast4shoot\programming\tsuengine\src\gui\listeners\clistenermemberfn.h
+	"CListener.h"
+
+1293926323 d:\fast4shoot\programming\tsuengine\src\gui\listeners\clistener.h
+	"macros.h"
 

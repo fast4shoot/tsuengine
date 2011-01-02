@@ -10,6 +10,9 @@ class Vertex{
   public:
     void fromJson(json::mValue& val);
     void addNormal(vec3d& normal);
+    vec3d getPosition() const;
+    vec2d getTexCoord() const;
+    vec3d getNormal() const;
   protected:
     vec3d _position;
     vec2d _texCoord;
@@ -19,16 +22,26 @@ class Vertex{
   private:
 };
 
-void Vertex::fromJson(json::mValue& val){
+inline void Vertex::fromJson(json::mValue& val){
   _position.fromJson(val.get_obj().find("position")->second);
   _texCoord.fromJson(val.get_obj().find("texCoord")->second);
 }
 
-void Vertex::addNormal(vec3d& normal){
+inline void Vertex::addNormal(vec3d& normal){
   _normalSum += normal;
   _normal = _normalSum.normalized();
 }
 
+inline vec3d Vertex::getPosition() const{
+  return _position;
+}
 
+inline vec2d Vertex::getTexCoord() const{
+  return _texCoord;
+}
+
+inline vec3d Vertex::getNormal() const{
+  return _normal;
+}
 
 #endif // VERTEX_H

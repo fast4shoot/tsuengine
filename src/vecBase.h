@@ -2,7 +2,10 @@
 #define VECBASE_H
 
 #include <cmath>
+#include <exception>
 #include "macros.h"
+#include "libs/json/json.h"
+#include "utils/stringUtils.h"
 
 template<class T, int N, class Derived>
 class vecBase
@@ -28,6 +31,8 @@ class vecBase
     bool operator!=(const Derived& rhs) const;
 
     Derived floored() const;
+
+    void fromJson(const json::mValue& val);
   protected:
     T data[N];
   private:
@@ -131,8 +136,19 @@ inline bool vecBase<T,N,Derived>::operator==(const Derived& rhs) const{
 }
 
 template<class T, int N, class Derived>
-bool vecBase<T,N,Derived>::operator!=(const Derived& rhs) const{
+inline bool vecBase<T,N,Derived>::operator!=(const Derived& rhs) const{
   return !operator==(rhs);
+}
+
+template<class T, int N, class Derived>
+inline void vecBase<T,N,Derived>::fromJson(const json::mValue& val){
+  const json::mArray& arr=val.get_array();
+  if(arr.size()<N){
+    throw std::runtime_error(sformat("Cannot parse %d-component vector from JSON: too few values",N));
+  }
+  for(int i = 0; i < N; i++){
+    data[i] = arr[i].get_real();
+  }
 }
 
 #endif // VECBASE_H

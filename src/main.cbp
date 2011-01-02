@@ -66,6 +66,8 @@
 		<Unit filename="elements\Material.h" />
 		<Unit filename="elements\Plane.cpp" />
 		<Unit filename="elements\Plane.h" />
+		<Unit filename="elements\StaticModel.cpp" />
+		<Unit filename="elements\StaticModel.h" />
 		<Unit filename="elements\Vertex.h" />
 		<Unit filename="exceptions.cpp" />
 		<Unit filename="exceptions.h" />
@@ -75,7 +77,6 @@
 		<Unit filename="gui\CAbstractButton.h" />
 		<Unit filename="gui\CAbstractToggle.cpp" />
 		<Unit filename="gui\CAbstractToggle.h" />
-		<Unit filename="gui\CActionListener.h" />
 		<Unit filename="gui\CActionListenerPanel.h" />
 		<Unit filename="gui\CBox.h" />
 		<Unit filename="gui\CButton.cpp" />
@@ -105,6 +106,9 @@
 		<Unit filename="gui\CTextField.h" />
 		<Unit filename="gui\CWindow.cpp" />
 		<Unit filename="gui\CWindow.h" />
+		<Unit filename="gui\listeners\CListener.h" />
+		<Unit filename="gui\listeners\CListenerMemberFn.cpp" />
+		<Unit filename="gui\listeners\CListenerMemberFn.h" />
 		<Unit filename="libs\FTGL\FTBuffer.cpp" />
 		<Unit filename="libs\FTGL\FTCharToGlyphIndexMap.h" />
 		<Unit filename="libs\FTGL\FTCharmap.cpp" />
@@ -204,8 +208,6 @@
 		<Unit filename="macros.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="typedefs.h" />
-		<Unit filename="utils.cpp" />
-		<Unit filename="utils.h" />
 		<Unit filename="utils\math.h" />
 		<Unit filename="utils\stringUtils.cpp" />
 		<Unit filename="utils\stringUtils.h" />

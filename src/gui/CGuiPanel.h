@@ -7,10 +7,10 @@
 #include "CBaseEngine.h"
 
 
-class CActionListener;
+class CListener;
 
 class CGuiPanel{
-  typedef std::vector<CActionListener*> ActionListenerList;
+  typedef std::vector<CListener*> ListenerList;
   typedef std::vector<CGuiPanel*> ChildrenList;
   public:
                     CGuiPanel(const vec2d& pos, const vec2d& size);
@@ -77,7 +77,7 @@ class CGuiPanel{
     virtual void    onKeyboard(const String& string){};
     void            requestKeyboardFocus();
     bool            getAllowKeyboardInput() const;
-    void            addActionListener(CActionListener* al);
+    void            addListener(CListener* al);
     void            setBgColor(rgba newBg);
     rgba            getBgColor() const;
     void            setFgColor(rgba newFg);
@@ -99,7 +99,7 @@ class CGuiPanel{
     void            fireChildAdded(CGuiPanel* child);
 
     ChildrenList    children;
-    ActionListenerList actionListeners;
+    ListenerList    listeners;
     vec2d           position;
     vec2d           size;
     bool            visible;

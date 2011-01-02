@@ -2,16 +2,17 @@
 #define CSCROLLABLE_H
 
 #include <gl/gl.h>
+#include "listeners/CListenerMemberFn.h"
 #include "CGuiPanel.h"
 #include "CStencilPanel.h"
 #include "CScrollBar.h"
 
 
-class CScrollable : public CGuiPanel, CActionListenerPanel{
+class CScrollable : public CGuiPanel{
   public:
     CScrollable(const vec2d& pos, const vec2d& size);
     void setScrolledItem(CGuiPanel* scrolled);
-    void actionPerformed(int id);
+    void apFn(int id);
   protected:
     CStencilPanel* _panel;
     CScrollBar* _bar;
@@ -25,7 +26,7 @@ inline CScrollable::CScrollable(const vec2d& pos, const vec2d& size):
   _panel(new CStencilPanel(vec2d(0,0), size-vec2d(20., 0.))),
   _bar(new CScrollBar(vec2d(getW()-20., 0), vec2d(20., getH())))
 {
-  _bar->addActionListener(new CActionListener(this, SCROLLBAR));
+  _bar->addListener(makeCListenerMemberFn(SCROLLBAR, this, &CScrollable::apFn));
   addChild(_panel);
   addChild(_bar);
 }
@@ -36,7 +37,7 @@ inline void CScrollable::setScrolledItem(CGuiPanel* scrolled){
   _panel->addChild(scrolled);
 }
 
-inline void CScrollable::actionPerformed(int id){
+inline void CScrollable::apFn(int id){
   if(id==SCROLLBAR) _scrolled->setY(-(_scrolled->getH()-getH())*(_bar->getScrollAmount()));
 }
 

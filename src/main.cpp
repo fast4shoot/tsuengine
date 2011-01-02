@@ -118,7 +118,7 @@ int WINAPI WinMain (HINSTANCE hInstance,
           //if(engine->getFPS()>800.0)Sleep(1);
         }
     }
-  }catch(std::runtime_error e){
+  }catch(std::exception e){
     std::string result;
     result="An exception occured: \n";
     result+=e.what();
