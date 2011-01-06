@@ -272,7 +272,7 @@
 1289143005 d:\fast4shoot\programming\tsuengine\src\gui\cconsole.h
 	"CWindow.h"
 
-1293927591 d:\fast4shoot\programming\tsuengine\src\gui\cwindow.h
+1294169795 d:\fast4shoot\programming\tsuengine\src\gui\cwindow.h
 	"CGuiPanel.h"
 	"listeners/CListenerMemberFn.h"
 
@@ -3448,7 +3448,7 @@
 1290461325 d:\fast4shoot\programming\tsuengine\src\gui\ccheckbox.h
 	"CAbstractToggle.h"
 
-1290461494 source:d:\fast4shoot\programming\tsuengine\src\gui\cconsole.cpp
+1294170116 source:d:\fast4shoot\programming\tsuengine\src\gui\cconsole.cpp
 	"CConsole.h"
 	"CText.h"
 	"CScrollable.h"
@@ -3549,7 +3549,7 @@
 1260127296 d:\fast4shoot\programming\tsuengine\src\libs\utf8\utf8\unchecked.h
 	"core.h"
 
-1292627674 source:d:\fast4shoot\programming\tsuengine\src\gui\cwindow.cpp
+1294170606 source:d:\fast4shoot\programming\tsuengine\src\gui\cwindow.cpp
 	"CWindow.h"
 	"CDraggable.h"
 	"CLabel.h"
@@ -5739,7 +5739,7 @@
 	"version.h"
 	"libs/json/json.h"
 
-1293927613 d:\fast4shoot\programming\tsuengine\src\version.h
+1294170606 d:\fast4shoot\programming\tsuengine\src\version.h
 
 1292408161 source:c:\tsue\src\cbaseengine.cpp
 	<cmath>
@@ -11588,4 +11588,8 @@
 
 1293926323 d:\fast4shoot\programming\tsuengine\src\gui\listeners\clistener.h
 	"macros.h"
+
+1293926873 source:d:\fast4shoot\programming\tsuengine\src\gui\listeners\clistenermemberfn.cpp
+
+1294086221 d:\fast4shoot\programming\tsuengine\src\gui\cwindowinside.h
 

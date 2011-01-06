@@ -106,6 +106,7 @@
 		<Unit filename="gui\CTextField.h" />
 		<Unit filename="gui\CWindow.cpp" />
 		<Unit filename="gui\CWindow.h" />
+		<Unit filename="gui\CWindowInside.h" />
 		<Unit filename="gui\listeners\CListener.h" />
 		<Unit filename="gui\listeners\CListenerMemberFn.cpp" />
 		<Unit filename="gui\listeners\CListenerMemberFn.h" />

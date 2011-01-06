@@ -11,6 +11,9 @@ class CWindow: public CGuiPanel
     virtual void draw();
     virtual void windowButtonPressed(int id);
     virtual void onMouseDown(const vec2d& position,const  MouseButton button);
+    virtual CGuiPanel* getContent(){return _content;}
+  private:
+    CGuiPanel* _content;
 };
 
 #endif // CWINDOW_H
