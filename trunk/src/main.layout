@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="default" />
-	<File name="CBaseEngine.cpp" open="1" top="0" tabpos="4">
-		<Cursor position="225" topLine="0" />
+	<File name="CBaseEngine.cpp" open="0" top="0" tabpos="4">
+		<Cursor position="2528" topLine="93" />
 	</File>
 	<File name="CBaseEngine.h" open="0" top="0" tabpos="3">
 		<Cursor position="1368" topLine="36" />
@@ -67,14 +67,11 @@
 	<File name="elements\Material.h" open="0" top="0" tabpos="2">
 		<Cursor position="6" topLine="0" />
 	</File>
-	<File name="elements\Plane.h" open="1" top="0" tabpos="3">
-		<Cursor position="470" topLine="0" />
+	<File name="elements\Plane.h" open="0" top="0" tabpos="3">
+		<Cursor position="546" topLine="0" />
 	</File>
-	<File name="elements\StaticModel.cpp" open="1" top="0" tabpos="0">
-		<Cursor position="0" topLine="0" />
-	</File>
-	<File name="elements\Vertex.h" open="1" top="0" tabpos="1">
-		<Cursor position="370" topLine="9" />
+	<File name="elements\Vertex.h" open="0" top="0" tabpos="1">
+		<Cursor position="634" topLine="11" />
 	</File>
 	<File name="globals.cpp" open="0" top="0" tabpos="11">
 		<Cursor position="44" topLine="0" />
@@ -98,7 +95,7 @@
 		<Cursor position="88" topLine="0" />
 	</File>
 	<File name="gui\CBox.h" open="0" top="0" tabpos="5">
-		<Cursor position="177" topLine="0" />
+		<Cursor position="62" topLine="0" />
 	</File>
 	<File name="gui\CButton.cpp" open="0" top="0" tabpos="10">
 		<Cursor position="315" topLine="1" />
@@ -118,10 +115,10 @@
 	<File name="gui\CCheckBox.h" open="0" top="0" tabpos="2">
 		<Cursor position="194" topLine="0" />
 	</File>
-	<File name="gui\CConsole.cpp" open="1" top="0" tabpos="1">
-		<Cursor position="194" topLine="0" />
+	<File name="gui\CConsole.cpp" open="1" top="0" tabpos="2">
+		<Cursor position="242" topLine="0" />
 	</File>
-	<File name="gui\CConsole.h" open="0" top="0" tabpos="10">
+	<File name="gui\CConsole.h" open="1" top="0" tabpos="5">
 		<Cursor position="0" topLine="0" />
 	</File>
 	<File name="gui\CDraggable.cpp" open="0" top="0" tabpos="7">
@@ -130,11 +127,11 @@
 	<File name="gui\CDraggable.h" open="0" top="0" tabpos="6">
 		<Cursor position="134" topLine="0" />
 	</File>
-	<File name="gui\CGuiPanel.cpp" open="1" top="1" tabpos="4">
-		<Cursor position="275" topLine="0" />
+	<File name="gui\CGuiPanel.cpp" open="0" top="0" tabpos="4">
+		<Cursor position="107" topLine="0" />
 	</File>
-	<File name="gui\CGuiPanel.h" open="1" top="0" tabpos="5">
-		<Cursor position="2783" topLine="58" />
+	<File name="gui\CGuiPanel.h" open="1" top="0" tabpos="3">
+		<Cursor position="2909" topLine="76" />
 	</File>
 	<File name="gui\CLabel.cpp" open="0" top="0" tabpos="9">
 		<Cursor position="479" topLine="6" />
@@ -142,20 +139,20 @@
 	<File name="gui\CLabel.h" open="0" top="0" tabpos="12">
 		<Cursor position="751" topLine="26" />
 	</File>
-	<File name="gui\CMainMenu.cpp" open="1" top="0" tabpos="5">
-		<Cursor position="1673" topLine="31" />
+	<File name="gui\CMainMenu.cpp" open="0" top="0" tabpos="5">
+		<Cursor position="1036" topLine="37" />
 	</File>
-	<File name="gui\CMainMenu.h" open="1" top="0" tabpos="3">
-		<Cursor position="141" topLine="1" />
+	<File name="gui\CMainMenu.h" open="0" top="0" tabpos="3">
+		<Cursor position="88" topLine="0" />
 	</File>
 	<File name="gui\CScrollBar.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="372" topLine="0" />
+		<Cursor position="447" topLine="0" />
 	</File>
-	<File name="gui\CScrollBar.h" open="1" top="0" tabpos="1">
-		<Cursor position="554" topLine="0" />
+	<File name="gui\CScrollBar.h" open="0" top="0" tabpos="1">
+		<Cursor position="342" topLine="3" />
 	</File>
-	<File name="gui\CScrollable.h" open="1" top="0" tabpos="2">
-		<Cursor position="1077" topLine="8" />
+	<File name="gui\CScrollable.h" open="0" top="0" tabpos="2">
+		<Cursor position="742" topLine="13" />
 	</File>
 	<File name="gui\CStencilPanel.h" open="0" top="0" tabpos="3">
 		<Cursor position="0" topLine="0" />
@@ -172,20 +169,23 @@
 	<File name="gui\CTextField.h" open="0" top="0" tabpos="6">
 		<Cursor position="236" topLine="0" />
 	</File>
-	<File name="gui\CWindow.cpp" open="0" top="0" tabpos="8">
-		<Cursor position="947" topLine="0" />
+	<File name="gui\CWindow.cpp" open="1" top="1" tabpos="1">
+		<Cursor position="823" topLine="0" />
 	</File>
-	<File name="gui\CWindow.h" open="1" top="0" tabpos="0">
-		<Cursor position="231" topLine="0" />
+	<File name="gui\CWindow.h" open="1" top="0" tabpos="4">
+		<Cursor position="437" topLine="0" />
 	</File>
-	<File name="gui\listeners\CListener.h" open="1" top="0" tabpos="0">
-		<Cursor position="0" topLine="0" />
+	<File name="gui\CWindowInside.h" open="0" top="0" tabpos="0">
+		<Cursor position="400" topLine="0" />
 	</File>
-	<File name="gui\listeners\CListenerMemberFn.cpp" open="1" top="0" tabpos="0">
-		<Cursor position="0" topLine="0" />
+	<File name="gui\listeners\CListener.h" open="0" top="0" tabpos="0">
+		<Cursor position="30" topLine="0" />
 	</File>
-	<File name="gui\listeners\CListenerMemberFn.h" open="1" top="0" tabpos="0">
-		<Cursor position="0" topLine="0" />
+	<File name="gui\listeners\CListenerMemberFn.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="2" topLine="0" />
+	</File>
+	<File name="gui\listeners\CListenerMemberFn.h" open="0" top="0" tabpos="0">
+		<Cursor position="161" topLine="0" />
 	</File>
 	<File name="libs\FTGL\FTBuffer.cpp" open="0" top="0" tabpos="0">
 		<Cursor position="1167" topLine="12" />
@@ -310,7 +310,7 @@
 	<File name="vecBase.h" open="0" top="0" tabpos="5">
 		<Cursor position="4039" topLine="73" />
 	</File>
-	<File name="vecOpBase.h" open="1" top="0" tabpos="2">
+	<File name="vecOpBase.h" open="0" top="0" tabpos="2">
 		<Cursor position="889" topLine="26" />
 	</File>
 </CodeBlocks_layout_file>
