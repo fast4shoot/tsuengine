@@ -22,6 +22,7 @@
 			<Add option="-O2" />
 			<Add option="-O1" />
 			<Add option="-O" />
+			<Add option="-DGLEW_STATIC" />
 			<Add directory="libs" />
 			<Add directory="gui" />
 			<Add directory="." />
@@ -30,6 +31,7 @@
 		<Linker>
 			<Add library="freetype" />
 			<Add library="uuid" />
+			<Add library="glew" />
 			<Add library="opengl32" />
 			<Add library="glu32" />
 			<Add library="dinput8" />
@@ -53,6 +55,8 @@
 		<Unit filename="CInputMgr.h" />
 		<Unit filename="CMaterialMgr.cpp" />
 		<Unit filename="CMaterialMgr.h" />
+		<Unit filename="CModelMgr.cpp" />
+		<Unit filename="CModelMgr.h" />
 		<Unit filename="CParamMgr.cpp" />
 		<Unit filename="CParamMgr.h" />
 		<Unit filename="Font.cpp" />
@@ -64,10 +68,18 @@
 		<Unit filename="datatypes.h" />
 		<Unit filename="elements\Material.cpp" />
 		<Unit filename="elements\Material.h" />
+		<Unit filename="elements\Model.cpp" />
+		<Unit filename="elements\Model.h" />
+		<Unit filename="elements\ModelBase.cpp" />
+		<Unit filename="elements\ModelBase.h" />
+		<Unit filename="elements\ModelHandle.cpp" />
+		<Unit filename="elements\ModelHandle.h" />
 		<Unit filename="elements\Plane.cpp" />
 		<Unit filename="elements\Plane.h" />
 		<Unit filename="elements\StaticModel.cpp" />
 		<Unit filename="elements\StaticModel.h" />
+		<Unit filename="elements\StaticModelPart.cpp" />
+		<Unit filename="elements\StaticModelPart.h" />
 		<Unit filename="elements\Vertex.h" />
 		<Unit filename="exceptions.cpp" />
 		<Unit filename="exceptions.h" />

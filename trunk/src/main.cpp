@@ -1,6 +1,6 @@
 #define UNICODE
 #include <windows.h>
-#include <gl/gl.h>
+#include "glew/glew.h"
 #include <iostream>
 #include <cmath>
 #include <string>

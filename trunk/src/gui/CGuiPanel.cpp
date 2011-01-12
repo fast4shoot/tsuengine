@@ -1,6 +1,6 @@
 #include "CGuiPanel.h"
 #include "macros.h"
-#include <gl/gl.h>
+#include "glew/glew.h"
 #include <typeinfo>
 #include "listeners/CListener.h"
 

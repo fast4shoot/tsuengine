@@ -9,8 +9,7 @@ class CMaterialMgr{
   typedef std::map<String,Material*> MaterialList;
   public:
     CMaterialMgr();
-    virtual ~CMaterialMgr();
-    Material* getMaterial(String name);
+    Material* getMaterial(const String& name);
   protected:
     MaterialList matList;
 };
