@@ -12,8 +12,10 @@ class StaticModel: public Model{
   typedef std::list<StaticModelPart> PartList;
   public:
     StaticModel(const json::mValue& value);
+    double getRadius() const {return m_radius;};
   protected:
     PartList m_parts;
+    double m_radius;
 
   friend class CModelMgr;
 };

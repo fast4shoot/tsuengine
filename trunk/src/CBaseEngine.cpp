@@ -1,5 +1,7 @@
 #include <cmath>
 #include <windows.h>
+#include <fstream>
+
 #include "glew/glew.h"
 
 #include "CBaseEngine.h"
@@ -50,9 +52,16 @@ void CBaseEngine::init(){
   testMat=materials->getMaterial("wall1");
   cursorMat=materials->getMaterial("system/cursor");
 
-  /*for(int i =0; i< 1337; ++i){
-    new StaticModel("static");
-  }*/
+  for(int i = 0; i < 10; ++i){
+    std::ifstream file("models/static.json");
+    if(file.good()){
+      json::mValue value;
+      json::read(file, value);
+      file.close();
+      StaticModel* mdl = new StaticModel(value);
+      log(sformat("radius: %f",mdl->getRadius()));
+    }
+  }
 }
 
 /*int CBaseTransmission() {

@@ -9,9 +9,9 @@ class CModelMgr{
   typedef std::map<String,StaticModel*> StaticModelList;
   public:
     CModelMgr();
-    StaticModelList staticModels;
-  protected:
 
+  protected:
+    StaticModelList staticModels;
     GLuint staticVbo;
     GLuint staticIndexVbo;
     GLuint dynamicVbo;

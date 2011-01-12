@@ -11,7 +11,7 @@ CModelMgr::CModelMgr(){
   dynamicIndexVbo = buff[3];
 }
 
-ModelHandle* CModelMgr::getModel(String name){
+//ModelHandle* CModelMgr::getModel(String name){
   /*
     std::ifstream file(("models/"+model+".json").c_str());
   if(file.good()){

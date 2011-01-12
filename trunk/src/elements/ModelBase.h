@@ -5,7 +5,7 @@
 class ModelBase{
   public:
     virtual ~ModelBase();
-    void draw()=0;
+    virtual void draw()=0;
   protected:
 };
 
