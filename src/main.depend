@@ -3448,7 +3448,7 @@
 1294402886 d:\fast4shoot\programming\tsuengine\src\gui\ccheckbox.h
 	"CAbstractToggle.h"
 
-1294402886 source:d:\fast4shoot\programming\tsuengine\src\gui\cconsole.cpp
+1294851219 source:d:\fast4shoot\programming\tsuengine\src\gui\cconsole.cpp
 	"CConsole.h"
 	"CText.h"
 	"CScrollable.h"
@@ -5721,9 +5721,10 @@
 1294403426 source:d:\fast4shoot\programming\tsuengine\src\vec3d.cpp
 	"vec3d.h"
 
-1294680129 source:d:\fast4shoot\programming\tsuengine\src\cbaseengine.cpp
+1294852296 source:d:\fast4shoot\programming\tsuengine\src\cbaseengine.cpp
 	<cmath>
 	<windows.h>
+	<fstream>
 	"glew/glew.h"
 	"CBaseEngine.h"
 	"CBaseEntity.h"
@@ -5739,7 +5740,7 @@
 	"libs/json/json.h"
 	"elements/StaticModel.h"
 
-1294681622 d:\fast4shoot\programming\tsuengine\src\version.h
+1294852296 d:\fast4shoot\programming\tsuengine\src\version.h
 
 1292408161 source:c:\tsue\src\cbaseengine.cpp
 	<cmath>
@@ -11570,12 +11571,12 @@
 	<sstream>
 	<iomanip>
 
-1294510762 source:d:\fast4shoot\programming\tsuengine\src\elements\staticmodel.cpp
+1294850733 source:d:\fast4shoot\programming\tsuengine\src\elements\staticmodel.cpp
 	"StaticModel.h"
-	<fstream>
+	<algorithm>
 	"CBaseEngine.h"
 
-1294510720 d:\fast4shoot\programming\tsuengine\src\elements\staticmodel.h
+1294850650 d:\fast4shoot\programming\tsuengine\src\elements\staticmodel.h
 	<list>
 	"typedefs.h"
 	"Vertex.h"
@@ -11599,21 +11600,23 @@
 
 1294086221 d:\fast4shoot\programming\tsuengine\src\gui\cwindowinside.h
 
-1294680165 source:d:\fast4shoot\programming\tsuengine\src\cmodelmgr.cpp
+1294850210 source:d:\fast4shoot\programming\tsuengine\src\cmodelmgr.cpp
 	"CModelMgr.h"
 	"glew/glew.h"
 
-1294680129 d:\fast4shoot\programming\tsuengine\src\cmodelmgr.h
+1294850210 d:\fast4shoot\programming\tsuengine\src\cmodelmgr.h
 	"glew/glew.h"
 	"elements/StaticModel.h"
 
-1294504902 d:\fast4shoot\programming\tsuengine\src\elements\staticmodelpart.h
+1294850691 d:\fast4shoot\programming\tsuengine\src\elements\staticmodelpart.h
 	"libs/json/json.h"
 	"elements/Vertex.h"
 	"elements/Material.h"
 
-1294506128 source:d:\fast4shoot\programming\tsuengine\src\elements\staticmodelpart.cpp
+1294850502 source:d:\fast4shoot\programming\tsuengine\src\elements\staticmodelpart.cpp
 	"StaticModelPart.h"
+	<algorithm>
+	<cmath>
 	"CBaseEngine.h"
 	"elements/Plane.h"
 
@@ -11641,4 +11644,15 @@
 	<inttypes.h>
 	<OpenGL/glu.h>
 	<GL/glu.h>
+
+1294850238 source:d:\fast4shoot\programming\tsuengine\src\elements\modelbase.cpp
+	"ModelBase.h"
+
+1294850229 d:\fast4shoot\programming\tsuengine\src\elements\modelbase.h
+
+1294850276 source:d:\fast4shoot\programming\tsuengine\src\elements\modelhandle.cpp
+	"ModelHandle.h"
+
+1294850299 d:\fast4shoot\programming\tsuengine\src\elements\modelhandle.h
+	"elements/ModelBase.h"
 

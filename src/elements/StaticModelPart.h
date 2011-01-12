@@ -11,10 +11,12 @@ class StaticModelPart{
 
   public:
     StaticModelPart(json::mValue& data);
+    double getRadius() const {return m_radius;}
   protected:
     VertexList m_vertices;
     Material* m_material;
     IndexList m_indices;
+    double m_radius;
 };
 
 #endif // STATICMODELPART_H

@@ -1,9 +1,13 @@
 #include "StaticModelPart.h"
 
+#include <algorithm>
+#include <cmath>
 #include "CBaseEngine.h"
 #include "elements/Plane.h"
 
 StaticModelPart::StaticModelPart(json::mValue& data){
+  double radiusSqr=0;
+
   json::mObject& obj = data.get_obj();
   m_material = engine->materials->getMaterial(obj.find("material")->second.get_str());
 
@@ -40,6 +44,10 @@ StaticModelPart::StaticModelPart(json::mValue& data){
     m_indices.push_back(i1);
     m_indices.push_back(i2);
     m_indices.push_back(i3);
+    radiusSqr = std::max(radiusSqr, m_vertices[i1].getPosition().lengthSqr());
+    radiusSqr = std::max(radiusSqr, m_vertices[i2].getPosition().lengthSqr());
+    radiusSqr = std::max(radiusSqr, m_vertices[i3].getPosition().lengthSqr());
   }
+  m_radius = sqrt(radiusSqr);
 
 }
