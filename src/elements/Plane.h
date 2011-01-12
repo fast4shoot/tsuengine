@@ -6,7 +6,7 @@
 
 class Plane{
   public:
-    void fromVertices(const Vertex& a, const Vertex& b, const Vertex& c);
+    Plane(const Vertex& a, const Vertex& b, const Vertex& c);
     vec3d getNormal(){return _normal;}
     double getD(){return _d;}
   protected:
@@ -15,10 +15,10 @@ class Plane{
   private:
 };
 
-void Plane::fromVertices(const Vertex& a, const Vertex& b, const Vertex& c){
+inline Plane::Plane(const Vertex& a, const Vertex& b, const Vertex& c){
   _normal = (b.getPosition()-a.getPosition()).cross(c.getPosition()-a.getPosition());
   _normal.normalize();
-  _d = -(_normal.dot(a.getPosition()));
+  /*_d = -(_normal.dot(a.getPosition()));*/
 }
 
 #endif // PLANE_H

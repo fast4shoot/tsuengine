@@ -2,7 +2,7 @@
 #define FONT_H
 
 #include <string>
-#include <gl/gl.h>
+#include "glew/glew.h"
 #include "vec2d.h"
 #include "datatypes.h"
 #include "FTGL/FTGL/ftgl.h"

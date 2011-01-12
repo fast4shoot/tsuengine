@@ -1,7 +1,6 @@
 #include <cmath>
 #include <windows.h>
-#include <gl/gl.h>
-#include <gl/glu.h>
+#include "glew/glew.h"
 
 #include "CBaseEngine.h"
 #include "CBaseEntity.h"
@@ -16,6 +15,8 @@
 #include "version.h"
 #include "libs/json/json.h"
 
+#include "elements/StaticModel.h"
+
 CBaseEngine* engine;
 
 void CBaseEngine::init(){
@@ -24,6 +25,8 @@ void CBaseEngine::init(){
   time=0.0;
   realTime=0.0;
   frameCount=0;
+
+  glewInit();
 
   input = new CInputMgr();
   input->init();
@@ -34,6 +37,7 @@ void CBaseEngine::init(){
   gui = new CGuiMgr();
   gui->init();
   log(sformat("TSUEngine verze %d.%d.%d revize %d",AutoVersion::MAJOR,AutoVersion::MINOR,AutoVersion::BUILD,AutoVersion::REVISION));
+  log(sformat("OpenGL verze: %s",glGetString(GL_VERSION)));
   json_spirit::mValue value;
   json_spirit::read( "{\"rofl\": [1337.2, 2, 3]}", value );
 
@@ -45,6 +49,10 @@ void CBaseEngine::init(){
 
   testMat=materials->getMaterial("wall1");
   cursorMat=materials->getMaterial("system/cursor");
+
+  /*for(int i =0; i< 1337; ++i){
+    new StaticModel("static");
+  }*/
 }
 
 /*int CBaseTransmission() {

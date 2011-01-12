@@ -8,40 +8,39 @@
 
 class Vertex{
   public:
-    void fromJson(json::mValue& val);
-    void addNormal(vec3d& normal);
+    Vertex(json::mValue& val);
+    void addNormal(const vec3d& normal);
     vec3d getPosition() const;
     vec2d getTexCoord() const;
     vec3d getNormal() const;
   protected:
-    vec3d _position;
-    vec2d _texCoord;
-    vec3d _normal;
-    int _normalCnt;
-    vec3d _normalSum;
-  private:
+    vec3d m_position;
+    vec2d m_texCoord;
+    vec3d m_normal;
+    int m_normalCnt;
+    vec3d m_normalSum;
 };
 
-inline void Vertex::fromJson(json::mValue& val){
-  _position.fromJson(val.get_obj().find("position")->second);
-  _texCoord.fromJson(val.get_obj().find("texCoord")->second);
+inline Vertex::Vertex(json::mValue& val){
+  m_position.fromJson(val.get_obj().find("position")->second);
+  m_texCoord.fromJson(val.get_obj().find("texCoord")->second);
 }
 
-inline void Vertex::addNormal(vec3d& normal){
-  _normalSum += normal;
-  _normal = _normalSum.normalized();
+inline void Vertex::addNormal(const vec3d& normal){
+  m_normalSum += normal;
+  m_normal = m_normalSum.normalized();
 }
 
 inline vec3d Vertex::getPosition() const{
-  return _position;
+  return m_position;
 }
 
 inline vec2d Vertex::getTexCoord() const{
-  return _texCoord;
+  return m_texCoord;
 }
 
 inline vec3d Vertex::getNormal() const{
-  return _normal;
+  return m_normal;
 }
 
 #endif // VERTEX_H

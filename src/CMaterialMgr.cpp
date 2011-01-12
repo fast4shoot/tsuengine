@@ -13,11 +13,7 @@ CMaterialMgr::CMaterialMgr(){
   ilutRenderer(ILUT_OPENGL);
 }
 
-CMaterialMgr::~CMaterialMgr(){
-    //dtor
-}
-
-Material* CMaterialMgr::getMaterial(String name){
+Material* CMaterialMgr::getMaterial(const String& name){
   MaterialList::iterator it;
   if((it = matList.find(name)) != matList.end()){
     return it->second;

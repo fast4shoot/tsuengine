@@ -67,7 +67,7 @@ inline T vecOpBase<T,N,Derived>::lengthSqr() const{
 
 template<class T, int N, class Derived>
 inline T vecOpBase<T,N,Derived>::length() const{
-  return sqrt(length());
+  return sqrt(lengthSqr());
 }
 
 

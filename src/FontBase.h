@@ -2,7 +2,7 @@
 #define FONTBASE_H
 
 #include <string>
-#include <gl/gl.h>
+#include "glew/glew.h"
 #include "datatypes.h"
 #include "typedefs.h"
 

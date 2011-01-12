@@ -2,7 +2,7 @@
 #define CBASEENGINE_H
 
 #include <string>
-#include <gl/gl.h>
+#include "glew/glew.h"
 #include <ctime>
 #include "globals.h"
 #include "const.h"
@@ -63,6 +63,7 @@ class CBaseEngine{
 
     void            setConsoleOutput(CText* console);
     void            log(const String& text);
+    void            warning(const String& text);
 
     void            quit();
 
@@ -113,6 +114,9 @@ inline void CBaseEngine::setConsoleOutput(CText* console){
   _consoleOutput=console;
 }
 
+inline void CBaseEngine::warning(const String& text){
+  log("Warning: "+text);
+}
 
 
 extern CBaseEngine* engine;

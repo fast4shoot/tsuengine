@@ -1,16 +1,21 @@
 #ifndef STATICMODEL_H
 #define STATICMODEL_H
 
-#include <vector>
+#include <list>
+#include "typedefs.h"
 #include "Vertex.h"
-class StaticModel{
-  typedef std::vector<Vertex> VertexList;
-  //typedef
-  public:
-    StaticModel();
-  protected:
+#include "libs/json/json.h"
+#include "elements/StaticModelPart.h"
+#include "elements/Model.h"
 
-  private:
+class StaticModel: public Model{
+  typedef std::list<StaticModelPart> PartList;
+  public:
+    StaticModel(const json::mValue& value);
+  protected:
+    PartList m_parts;
+
+  friend class CModelMgr;
 };
 
 #endif // STATICMODEL_H
