@@ -54,4 +54,10 @@ enum MouseButton{
   BUTTON8
 };
 
+
+enum ModelType{
+  STATIC,
+  DYNAMIC
+};
+
 #endif

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="default" />
-	<File name="CBaseEngine.cpp" open="1" top="1" tabpos="6">
-		<Cursor position="1466" topLine="42" />
+	<File name="CBaseEngine.cpp" open="0" top="0" tabpos="6">
+		<Cursor position="1466" topLine="24" />
 	</File>
 	<File name="CBaseEngine.h" open="0" top="0" tabpos="1">
 		<Cursor position="88" topLine="0" />
@@ -34,11 +34,11 @@
 	<File name="CMaterialMgr.h" open="0" top="0" tabpos="5">
 		<Cursor position="146" topLine="0" />
 	</File>
-	<File name="CModelMgr.cpp" open="1" top="0" tabpos="1">
-		<Cursor position="295" topLine="2" />
+	<File name="CModelMgr.cpp" open="1" top="1" tabpos="1">
+		<Cursor position="1120" topLine="13" />
 	</File>
 	<File name="CModelMgr.h" open="1" top="0" tabpos="2">
-		<Cursor position="261" topLine="0" />
+		<Cursor position="719" topLine="0" />
 	</File>
 	<File name="CParamMgr.h" open="0" top="0" tabpos="0">
 		<Cursor position="99" topLine="2" />
@@ -61,8 +61,8 @@
 	<File name="datatypes.cpp" open="0" top="0" tabpos="4">
 		<Cursor position="379" topLine="0" />
 	</File>
-	<File name="datatypes.h" open="0" top="0" tabpos="3">
-		<Cursor position="390" topLine="0" />
+	<File name="datatypes.h" open="1" top="0" tabpos="4">
+		<Cursor position="754" topLine="30" />
 	</File>
 	<File name="elements\Material.cpp" open="0" top="0" tabpos="1">
 		<Cursor position="128" topLine="9" />
@@ -70,31 +70,31 @@
 	<File name="elements\Material.h" open="0" top="0" tabpos="2">
 		<Cursor position="64" topLine="0" />
 	</File>
-	<File name="elements\ModelBase.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="24" topLine="0" />
+	<File name="elements\ModelBase.cpp" open="1" top="0" tabpos="5">
+		<Cursor position="51" topLine="0" />
 	</File>
-	<File name="elements\ModelBase.h" open="1" top="0" tabpos="5">
+	<File name="elements\ModelBase.h" open="0" top="0" tabpos="5">
 		<Cursor position="114" topLine="0" />
 	</File>
 	<File name="elements\ModelHandle.cpp" open="0" top="0" tabpos="0">
 		<Cursor position="26" topLine="0" />
 	</File>
-	<File name="elements\ModelHandle.h" open="0" top="0" tabpos="0">
-		<Cursor position="149" topLine="0" />
+	<File name="elements\ModelHandle.h" open="1" top="0" tabpos="3">
+		<Cursor position="394" topLine="0" />
 	</File>
 	<File name="elements\Plane.h" open="0" top="0" tabpos="3">
 		<Cursor position="494" topLine="0" />
 	</File>
-	<File name="elements\StaticModel.cpp" open="1" top="0" tabpos="8">
+	<File name="elements\StaticModel.cpp" open="1" top="0" tabpos="6">
 		<Cursor position="499" topLine="0" />
 	</File>
 	<File name="elements\StaticModel.h" open="1" top="0" tabpos="7">
 		<Cursor position="392" topLine="0" />
 	</File>
-	<File name="elements\StaticModelPart.cpp" open="1" top="0" tabpos="3">
-		<Cursor position="204" topLine="9" />
+	<File name="elements\StaticModelPart.cpp" open="0" top="0" tabpos="3">
+		<Cursor position="204" topLine="5" />
 	</File>
-	<File name="elements\StaticModelPart.h" open="1" top="0" tabpos="4">
+	<File name="elements\StaticModelPart.h" open="0" top="0" tabpos="4">
 		<Cursor position="357" topLine="0" />
 	</File>
 	<File name="elements\Vertex.h" open="0" top="0" tabpos="1">
@@ -142,10 +142,10 @@
 	<File name="gui\CCheckBox.h" open="0" top="0" tabpos="2">
 		<Cursor position="194" topLine="0" />
 	</File>
-	<File name="gui\CConsole.cpp" open="1" top="0" tabpos="10">
+	<File name="gui\CConsole.cpp" open="0" top="0" tabpos="10">
 		<Cursor position="397" topLine="0" />
 	</File>
-	<File name="gui\CConsole.h" open="1" top="0" tabpos="9">
+	<File name="gui\CConsole.h" open="0" top="0" tabpos="9">
 		<Cursor position="0" topLine="0" />
 	</File>
 	<File name="gui\CDraggable.cpp" open="0" top="0" tabpos="7">
