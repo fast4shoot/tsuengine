@@ -68,12 +68,9 @@
 		<Unit filename="datatypes.h" />
 		<Unit filename="elements\Material.cpp" />
 		<Unit filename="elements\Material.h" />
-		<Unit filename="elements\Model.cpp" />
 		<Unit filename="elements\Model.h" />
 		<Unit filename="elements\ModelBase.cpp" />
 		<Unit filename="elements\ModelBase.h" />
-		<Unit filename="elements\ModelHandle.cpp" />
-		<Unit filename="elements\ModelHandle.h" />
 		<Unit filename="elements\Plane.cpp" />
 		<Unit filename="elements\Plane.h" />
 		<Unit filename="elements\StaticModel.cpp" />

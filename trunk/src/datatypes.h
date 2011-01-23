@@ -54,10 +54,15 @@ enum MouseButton{
   BUTTON8
 };
 
-
 enum ModelType{
   STATIC,
   DYNAMIC
+};
+
+struct StaticVertexData{
+  float x, y, z;  //position
+  float nx, ny, nz;  //normal
+  float u, v; //texture coordinates
 };
 
 #endif

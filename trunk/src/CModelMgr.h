@@ -3,20 +3,22 @@
 
 #include "datatypes.h"
 #include "glew/glew.h"
+#include "elements/Model.h"
 #include "elements/StaticModel.h"
-#include "elements/ModelHandle.h"
 
 class CModelMgr{
   typedef std::map<String,StaticModel*> StaticModelList;
-  typedef std::vector<ModelHandle*> ModelHandleList;
+  typedef std::vector<Model*> ModelHandleList;
   typedef std::map<String,ModelType> ModelTypeMap;
   public:
     CModelMgr();
-    ModelHandle*  getModel(String name);
+    Model*  getModel(String name);
+    void uploadData();
+    void draw();
 
   protected:
     StaticModelList staticModels;
-    ModelHandleList ModelHandle;
+    ModelHandleList modelHandles;
     ModelTypeMap modelTypeMap;
     GLuint staticVbo;
     GLuint staticIndexVbo;
