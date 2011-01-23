@@ -37,9 +37,10 @@ void CBaseEngine::init(){
   fonts->getFont("ARIALUNI.TTF",55.);
   materials=new CMaterialMgr();
   gui = new CGuiMgr();
+  models = new CModelMgr();
   gui->init();
   log(sformat("TSUEngine verze %d.%d.%d revize %d",AutoVersion::MAJOR,AutoVersion::MINOR,AutoVersion::BUILD,AutoVersion::REVISION));
-  log(sformat("OpenGL verze: %s",glGetString(GL_VERSION)));
+  log(sformat("OpenGL verze %s",glGetString(GL_VERSION)));
   json_spirit::mValue value;
   json_spirit::read( "{\"rofl\": [1337.2, 2, 3]}", value );
 
@@ -52,16 +53,9 @@ void CBaseEngine::init(){
   testMat=materials->getMaterial("wall1");
   cursorMat=materials->getMaterial("system/cursor");
 
-  for(int i = 0; i < 10; ++i){
-    std::ifstream file("models/static.json");
-    if(file.good()){
-      json::mValue value;
-      json::read(file, value);
-      file.close();
-      StaticModel* mdl = new StaticModel(value);
-      log(sformat("radius: %f",mdl->getRadius()));
-    }
-  }
+  models->getModel("static");
+  models->uploadData();
+
 }
 
 /*int CBaseTransmission() {
@@ -134,8 +128,11 @@ void CBaseEngine::drawScene(){
   glRotatef(getTime()*90,0,0,1);
   glColor4f(1.,1.,1.,1.);
 
+  models->draw();
+
+
   glEnable(GL_TEXTURE_2D);
-  testMat->bind();
+/*  testMat->bind();
   glBegin(GL_QUADS);
     glColor3f(1.,1.,1.);
     glNormal3i(0,0,1);
@@ -167,7 +164,7 @@ void CBaseEngine::drawScene(){
     glVertex3f(-40.,-20.,20.);
     glTexCoord2d(1,1);
     glVertex3f(0.,-20.,20.);
-  glEnd();
+  glEnd();*/
   glDisable(GL_LIGHT0);
   glDisable(GL_LIGHTING);
   glDisable(GL_TEXTURE_2D);

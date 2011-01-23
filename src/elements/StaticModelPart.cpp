@@ -51,3 +51,34 @@ StaticModelPart::StaticModelPart(json::mValue& data){
   m_radius = sqrt(radiusSqr);
 
 }
+
+void StaticModelPart::uploadData(){
+  StaticVertexData* vertices;
+  vertices = new StaticVertexData[getVertexCount()];
+  GLuint* indices;
+  indices = new GLuint[getIndexCount()];
+  int i=0;
+  for(VertexList::iterator it = m_vertices.begin(); it != m_vertices.end(); ++it, ++i){
+    vertices[i].x = it->getPosition().x;
+    vertices[i].y = it->getPosition().y;
+    vertices[i].z = it->getPosition().z;
+    vertices[i].nx = it->getNormal().x;
+    vertices[i].ny = it->getNormal().y;
+    vertices[i].nz = it->getNormal().z;
+    vertices[i].u = it->getTexCoord().x;
+    vertices[i].v = it->getTexCoord().y;
+  }
+
+  i=0;
+  for(IndexList::iterator it = m_indices.begin(); it != m_indices.end(); ++it, ++i){
+    indices[i] = (*it);
+  }
+
+  glBufferSubData(GL_ARRAY_BUFFER, m_vboOffset, getVertexCount(), vertices);
+  glBufferSubData(GL_ELEMENT_ARRAY_BUFFER, m_indexVboOffset, getIndexCount(), indices);
+}
+
+void StaticModelPart::draw(){
+  m_material->bind();
+  glDrawRangeElements(GL_TRIANGLES, m_vboOffset, m_vboOffset+getVertexCount()-1, getIndexCount(), GL_UNSIGNED_INT, BUFFER_OFFSET(m_indexVboOffset));
+}

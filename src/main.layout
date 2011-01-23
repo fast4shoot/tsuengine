@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="default" />
-	<File name="CBaseEngine.cpp" open="0" top="0" tabpos="6">
-		<Cursor position="1466" topLine="24" />
+	<File name="CBaseEngine.cpp" open="1" top="1" tabpos="7">
+		<Cursor position="2942" topLine="152" />
 	</File>
 	<File name="CBaseEngine.h" open="0" top="0" tabpos="1">
-		<Cursor position="88" topLine="0" />
+		<Cursor position="358" topLine="0" />
 	</File>
 	<File name="CBaseEntity.cpp" open="0" top="0" tabpos="0">
 		<Cursor position="289" topLine="9" />
@@ -34,11 +34,11 @@
 	<File name="CMaterialMgr.h" open="0" top="0" tabpos="5">
 		<Cursor position="146" topLine="0" />
 	</File>
-	<File name="CModelMgr.cpp" open="1" top="1" tabpos="1">
-		<Cursor position="1120" topLine="13" />
+	<File name="CModelMgr.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="3072" topLine="79" />
 	</File>
 	<File name="CModelMgr.h" open="1" top="0" tabpos="2">
-		<Cursor position="719" topLine="0" />
+		<Cursor position="439" topLine="0" />
 	</File>
 	<File name="CParamMgr.h" open="0" top="0" tabpos="0">
 		<Cursor position="99" topLine="2" />
@@ -59,10 +59,10 @@
 		<Cursor position="36" topLine="0" />
 	</File>
 	<File name="datatypes.cpp" open="0" top="0" tabpos="4">
-		<Cursor position="379" topLine="0" />
+		<Cursor position="469" topLine="0" />
 	</File>
 	<File name="datatypes.h" open="1" top="0" tabpos="4">
-		<Cursor position="754" topLine="30" />
+		<Cursor position="893" topLine="25" />
 	</File>
 	<File name="elements\Material.cpp" open="0" top="0" tabpos="1">
 		<Cursor position="128" topLine="9" />
@@ -70,32 +70,26 @@
 	<File name="elements\Material.h" open="0" top="0" tabpos="2">
 		<Cursor position="64" topLine="0" />
 	</File>
-	<File name="elements\ModelBase.cpp" open="1" top="0" tabpos="5">
-		<Cursor position="51" topLine="0" />
+	<File name="elements\ModelBase.cpp" open="0" top="0" tabpos="5">
+		<Cursor position="24" topLine="0" />
 	</File>
-	<File name="elements\ModelBase.h" open="0" top="0" tabpos="5">
-		<Cursor position="114" topLine="0" />
-	</File>
-	<File name="elements\ModelHandle.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="26" topLine="0" />
-	</File>
-	<File name="elements\ModelHandle.h" open="1" top="0" tabpos="3">
-		<Cursor position="394" topLine="0" />
+	<File name="elements\ModelBase.h" open="0" top="0" tabpos="3">
+		<Cursor position="490" topLine="0" />
 	</File>
 	<File name="elements\Plane.h" open="0" top="0" tabpos="3">
 		<Cursor position="494" topLine="0" />
 	</File>
-	<File name="elements\StaticModel.cpp" open="1" top="0" tabpos="6">
-		<Cursor position="499" topLine="0" />
+	<File name="elements\StaticModel.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="1256" topLine="0" />
 	</File>
-	<File name="elements\StaticModel.h" open="1" top="0" tabpos="7">
-		<Cursor position="392" topLine="0" />
+	<File name="elements\StaticModel.h" open="1" top="0" tabpos="4">
+		<Cursor position="551" topLine="11" />
 	</File>
-	<File name="elements\StaticModelPart.cpp" open="0" top="0" tabpos="3">
-		<Cursor position="204" topLine="5" />
+	<File name="elements\StaticModelPart.cpp" open="1" top="0" tabpos="5">
+		<Cursor position="1819" topLine="53" />
 	</File>
 	<File name="elements\StaticModelPart.h" open="0" top="0" tabpos="4">
-		<Cursor position="357" topLine="0" />
+		<Cursor position="463" topLine="0" />
 	</File>
 	<File name="elements\Vertex.h" open="0" top="0" tabpos="1">
 		<Cursor position="650" topLine="15" />
@@ -307,8 +301,8 @@
 	<File name="libs\json\json_spirit_value.h" open="0" top="0" tabpos="8">
 		<Cursor position="885" topLine="0" />
 	</File>
-	<File name="macros.h" open="0" top="0" tabpos="8">
-		<Cursor position="507" topLine="0" />
+	<File name="macros.h" open="1" top="0" tabpos="6">
+		<Cursor position="530" topLine="0" />
 	</File>
 	<File name="main.cpp" open="0" top="0" tabpos="5">
 		<Cursor position="61" topLine="0" />
