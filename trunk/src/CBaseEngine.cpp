@@ -21,12 +21,18 @@
 
 CBaseEngine* engine;
 
-void CBaseEngine::init(){
-  lastClock=clock();
+CBaseEngine::CBaseEngine(){
+  m_ready = false;
   timeScale=1.0f;
   time=0.0;
   realTime=0.0;
   frameCount=0;
+}
+
+void CBaseEngine::init(){
+  lastClock=clock();
+
+  m_logFile.open("tsuengine.log");
 
   glewInit();
 
@@ -39,21 +45,23 @@ void CBaseEngine::init(){
   gui = new CGuiMgr();
   models = new CModelMgr();
   gui->init();
+  m_ready=true;
   log(sformat("TSUEngine verze %d.%d.%d revize %d",AutoVersion::MAJOR,AutoVersion::MINOR,AutoVersion::BUILD,AutoVersion::REVISION));
   log(sformat("OpenGL verze %s",glGetString(GL_VERSION)));
-  json_spirit::mValue value;
+
+  /*json_spirit::mValue value;
   json_spirit::read( "{\"rofl\": [1337.2, 2, 3]}", value );
 
   //log(sformat("přečteno %d",value.get_obj().find("rofl")->second.get_int()));
   vec3d rofl;
   rofl.fromJson(value.get_obj().find("rofl")->second);
   double x = rofl.x;
-  log(sformat("přečten vektor: %f, %f, %f",x, rofl.y, rofl.z));
+  log(sformat("přečten vektor: %f, %f, %f",x, rofl.y, rofl.z));*/
 
   testMat=materials->getMaterial("wall1");
   cursorMat=materials->getMaterial("system/cursor");
 
-  models->getModel("static");
+  models->getModel("barrel");
   models->uploadData();
 
 }
@@ -222,14 +230,21 @@ void CBaseEngine::initGuiView(){
 
 void CBaseEngine::log(const String& text){
   static bool firstLog=true;
-  String console=_consoleOutput->getText();
-  if(!firstLog){
-    console.append("\n");
+  m_logFile << text << std::endl;
+  if(isReady()){
+    String console=_consoleOutput->getText();
+    if(!firstLog){
+      console.append("\n");
+    }
+    firstLog=false;
+    console.append(text);
+    _consoleOutput->setText(console);
   }
-  firstLog=false;
-  console.append(text);
-  _consoleOutput->setText(console);
 }
 
-
-
+void CBaseEngine::checkGl(){
+  GLenum err;
+  while((err = glGetError())!=GL_NO_ERROR){
+    log(sformat("GL error %d: %s",err,gluErrorString(err)));
+  }
+}

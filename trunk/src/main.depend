@@ -33,7 +33,7 @@
 	"libs/json/json.h"
 	"utils/stringUtils.h"
 
-1295654818 d:\fast4shoot\programming\tsuengine\src\macros.h
+1295971992 d:\fast4shoot\programming\tsuengine\src\macros.h
 	<windows.h>
 	<cstddef>
 
@@ -44,8 +44,9 @@
 	<vector>
 	"datatypes.h"
 
-1295651183 d:\fast4shoot\programming\tsuengine\src\cbaseengine.h
+1295970092 d:\fast4shoot\programming\tsuengine\src\cbaseengine.h
 	<string>
+	<fstream>
 	"glew/glew.h"
 	<ctime>
 	"globals.h"
@@ -5722,7 +5723,7 @@
 1295515063 source:d:\fast4shoot\programming\tsuengine\src\vec3d.cpp
 	"vec3d.h"
 
-1295654965 source:d:\fast4shoot\programming\tsuengine\src\cbaseengine.cpp
+1295992679 source:d:\fast4shoot\programming\tsuengine\src\cbaseengine.cpp
 	<cmath>
 	<windows.h>
 	<fstream>
@@ -5741,7 +5742,7 @@
 	"libs/json/json.h"
 	"elements/StaticModel.h"
 
-1295655007 d:\fast4shoot\programming\tsuengine\src\version.h
+1295992698 d:\fast4shoot\programming\tsuengine\src\version.h
 
 1292408161 source:c:\tsue\src\cbaseengine.cpp
 	<cmath>
@@ -11572,7 +11573,7 @@
 	<sstream>
 	<iomanip>
 
-1295654292 source:d:\fast4shoot\programming\tsuengine\src\elements\staticmodel.cpp
+1295972532 source:d:\fast4shoot\programming\tsuengine\src\elements\staticmodel.cpp
 	"StaticModel.h"
 	<algorithm>
 	"CBaseEngine.h"
@@ -11601,7 +11602,7 @@
 
 1294086221 d:\fast4shoot\programming\tsuengine\src\gui\cwindowinside.h
 
-1295654790 source:d:\fast4shoot\programming\tsuengine\src\cmodelmgr.cpp
+1295972835 source:d:\fast4shoot\programming\tsuengine\src\cmodelmgr.cpp
 	"CModelMgr.h"
 	<fstream>
 	"CBaseEngine.h"
@@ -11618,7 +11619,7 @@
 	"elements/Vertex.h"
 	"elements/Material.h"
 
-1295655029 source:d:\fast4shoot\programming\tsuengine\src\elements\staticmodelpart.cpp
+1295972223 source:d:\fast4shoot\programming\tsuengine\src\elements\staticmodelpart.cpp
 	"StaticModelPart.h"
 	<algorithm>
 	<cmath>

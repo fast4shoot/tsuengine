@@ -74,8 +74,14 @@ void StaticModelPart::uploadData(){
     indices[i] = (*it);
   }
 
-  glBufferSubData(GL_ARRAY_BUFFER, m_vboOffset, getVertexCount(), vertices);
-  glBufferSubData(GL_ELEMENT_ARRAY_BUFFER, m_indexVboOffset, getIndexCount(), indices);
+  engine->log("StaticModelPart::uploadData()");
+  engine->checkGl();
+  glBufferSubData(GL_ARRAY_BUFFER, m_vboOffset, getVertexCount()*sizeof(StaticVertexData), vertices);
+  engine->log("StaticModelPart::uploadData()");
+  engine->checkGl();
+  glBufferSubData(GL_ELEMENT_ARRAY_BUFFER, m_indexVboOffset, getIndexCount()*sizeof(GLuint), indices);
+  engine->log("StaticModelPart::uploadData()");
+  engine->checkGl();
 }
 
 void StaticModelPart::draw(){

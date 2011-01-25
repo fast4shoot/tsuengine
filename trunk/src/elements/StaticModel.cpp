@@ -10,15 +10,14 @@ StaticModel::StaticModel(const json::mValue& value){
     m_parts.push_back(StaticModelPart(*it));
   }
 
-  double radius;
-  int vertexCount;
-  int indexCount;
+  m_radius = 0.;
+  m_vertexCount = 0;
+  m_indexCount = 0;
   for(PartList::iterator it=m_parts.begin(); it!=m_parts.end(); ++it){
-    radius = std::max(radius,(*it).getRadius());
-    vertexCount += it->getVertexCount();
-    indexCount += it->getIndexCount();
+    m_radius = std::max(m_radius,(*it).getRadius());
+    m_vertexCount += it->getVertexCount();
+    m_indexCount += it->getIndexCount();
   }
-  m_radius = radius;
 }
 
 void StaticModel::uploadData(){

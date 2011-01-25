@@ -5,23 +5,23 @@
       "material": "wall1",
       "vertices": [
         { 
-          "position": [10.0, -10, 0.0],
+          "position": [20.0, -20, 0.0],
           "texCoord": [0.0, 0.0]
         },
         { 
-          "position": [10.0, 10.0, 0.0],
+          "position": [20.0, 20.0, 0.0],
           "texCoord": [1.0, 0.0]
         },
         { 
-          "position": [-10.0, 10.0, 0.0],
+          "position": [-20.0, 20.0, 0.0],
           "texCoord": [1.0, 1.0]
         },
         { 
-          "position": [-10.0, -10.0, 0.0],
+          "position": [-20.0, -20.0, 0.0],
           "texCoord": [0.0, 1.0]
         }
       ],
-      "indices": [0,1,2,2,3,0,2,1,0,0,3,2]
+      "indices": [0,1,2,2,3,0]
     }
   ]
 }

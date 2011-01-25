@@ -2,6 +2,7 @@
 #define CBASEENGINE_H
 
 #include <string>
+#include <fstream>
 #include "glew/glew.h"
 #include <ctime>
 #include "globals.h"
@@ -35,6 +36,8 @@ class CBaseEngine{
     unsigned long long int    frameCount;
     double          fps;
     CText*          _consoleOutput;
+    std::ofstream   m_logFile;
+    bool            m_ready;
 
 
   public:
@@ -46,6 +49,7 @@ class CBaseEngine{
     CModelMgr*      models;
 
 
+                    CBaseEngine();
     void            init();
     void            destroy();
     double          getTime() const;
@@ -63,9 +67,13 @@ class CBaseEngine{
     void            initGuiView();
     void            drawScene();
 
+    bool            isReady();
+
     void            setConsoleOutput(CText* console);
     void            log(const String& text);
     void            warning(const String& text);
+
+    void            checkGl();
 
     void            quit();
 
@@ -110,6 +118,10 @@ inline double CBaseEngine::getFPS() const{
 
 inline void CBaseEngine::quit(){
   PostQuitMessage(0);
+}
+
+inline bool CBaseEngine::isReady(){
+  return m_ready;
 }
 
 inline void CBaseEngine::setConsoleOutput(CText* console){
