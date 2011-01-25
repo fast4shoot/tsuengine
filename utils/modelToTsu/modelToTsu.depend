@@ -1,0 +1,119 @@
+# depslib dependency file v1.0
+1295992353 source:d:\fast4shoot\programming\objtotsu\main.cpp
+	<iostream>
+	<fstream>
+	"json/json.h"
+
+1294869705 d:\fast4shoot\programming\objtotsu\json\json.h
+	"json_spirit.h"
+
+1294869705 d:\fast4shoot\programming\objtotsu\json\json_spirit.h
+	"json_spirit_value.h"
+	"json_spirit_reader.h"
+	"json_spirit_writer.h"
+	"json_spirit_utils.h"
+
+1294869705 d:\fast4shoot\programming\objtotsu\json\json_spirit_value.h
+	<vector>
+	<map>
+	<string>
+	<cassert>
+	<sstream>
+	<stdexcept>
+	<boost/config.hpp>
+	<boost/cstdint.hpp>
+	<boost/shared_ptr.hpp>
+	<boost/variant.hpp>
+
+1294869705 d:\fast4shoot\programming\objtotsu\json\json_spirit_reader.h
+	"json_spirit_value.h"
+	"json_spirit_error_position.h"
+	<iostream>
+
+1294869705 d:\fast4shoot\programming\objtotsu\json\json_spirit_error_position.h
+	<string>
+
+1294869705 d:\fast4shoot\programming\objtotsu\json\json_spirit_writer.h
+	"json_spirit_value.h"
+	<iostream>
+
+1294869705 d:\fast4shoot\programming\objtotsu\json\json_spirit_utils.h
+	"json_spirit_value.h"
+	<map>
+
+1294869705 source:d:\fast4shoot\programming\tsuengine\utils\modeltotsu\json\json_spirit_value.cpp
+	"json_spirit_value.h"
+
+1294869705 d:\fast4shoot\programming\tsuengine\utils\modeltotsu\json\json_spirit_value.h
+	<vector>
+	<map>
+	<string>
+	<cassert>
+	<sstream>
+	<stdexcept>
+	<boost/config.hpp>
+	<boost/cstdint.hpp>
+	<boost/shared_ptr.hpp>
+	<boost/variant.hpp>
+
+1294869705 source:d:\fast4shoot\programming\tsuengine\utils\modeltotsu\json\json_spirit_writer.cpp
+	"json_spirit_writer.h"
+	"json_spirit_writer_template.h"
+
+1294869705 d:\fast4shoot\programming\tsuengine\utils\modeltotsu\json\json_spirit_writer.h
+	"json_spirit_value.h"
+	<iostream>
+
+1294869705 d:\fast4shoot\programming\tsuengine\utils\modeltotsu\json\json_spirit_writer_template.h
+	"json_spirit_value.h"
+	<cassert>
+	<sstream>
+	<iomanip>
+
+1295992353 source:d:\fast4shoot\programming\tsuengine\utils\modeltotsu\main.cpp
+	<iostream>
+	<fstream>
+	"json/json.h"
+
+1294869705 d:\fast4shoot\programming\tsuengine\utils\modeltotsu\json\json.h
+	"json_spirit.h"
+
+1294869705 d:\fast4shoot\programming\tsuengine\utils\modeltotsu\json\json_spirit.h
+	"json_spirit_value.h"
+	"json_spirit_reader.h"
+	"json_spirit_writer.h"
+	"json_spirit_utils.h"
+
+1294869705 d:\fast4shoot\programming\tsuengine\utils\modeltotsu\json\json_spirit_reader.h
+	"json_spirit_value.h"
+	"json_spirit_error_position.h"
+	<iostream>
+
+1294869705 d:\fast4shoot\programming\tsuengine\utils\modeltotsu\json\json_spirit_error_position.h
+	<string>
+
+1294869705 d:\fast4shoot\programming\tsuengine\utils\modeltotsu\json\json_spirit_utils.h
+	"json_spirit_value.h"
+	<map>
+
+1294869705 source:d:\fast4shoot\programming\tsuengine\utils\modeltotsu\json\json_spirit_reader.cpp
+	"json_spirit_reader.h"
+	"json_spirit_reader_template.h"
+
+1294869705 d:\fast4shoot\programming\tsuengine\utils\modeltotsu\json\json_spirit_reader_template.h
+	"json_spirit_value.h"
+	"json_spirit_error_position.h"
+	<boost/bind.hpp>
+	<boost/function.hpp>
+	<boost/version.hpp>
+	<boost/spirit/include/classic_core.hpp>
+	<boost/spirit/include/classic_confix.hpp>
+	<boost/spirit/include/classic_escape_char.hpp>
+	<boost/spirit/include/classic_multi_pass.hpp>
+	<boost/spirit/include/classic_position_iterator.hpp>
+	<boost/spirit/core.hpp>
+	<boost/spirit/utility/confix.hpp>
+	<boost/spirit/utility/escape_char.hpp>
+	<boost/spirit/iterator/multi_pass.hpp>
+	<boost/spirit/iterator/position_iterator.hpp>
+
