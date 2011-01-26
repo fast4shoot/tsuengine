@@ -61,7 +61,7 @@ void CBaseEngine::init(){
   testMat=materials->getMaterial("wall1");
   cursorMat=materials->getMaterial("system/cursor");
 
-  models->getModel("barrel");
+  models->getModel("ffx_yuna");
   models->uploadData();
 
 }
@@ -130,10 +130,10 @@ void CBaseEngine::drawScene(){
 
   initWorldView();
 
-  gluLookAt(0,0,10,100,0,0,0,0,1);
+  gluLookAt(0,0,150,100,0,100,0,0,1);
 
-  glTranslatef(50.,0.,0.);
-  glRotatef(getTime()*90,0,0,1);
+  glTranslatef(100.,0.,0.);
+  glRotatef(getTime()*20,0,0,1);
   glColor4f(1.,1.,1.,1.);
 
   models->draw();

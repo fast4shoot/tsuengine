@@ -38,9 +38,6 @@ inline int StaticModelPart::getIndexCount() const{
   return m_indices.size();
 }
 
-inline void StaticModelPart::setOffsets(int vboOffset, int indexVboOffset){
-  m_vboOffset = vboOffset;
-  m_indexVboOffset = indexVboOffset;
-}
+
 
 #endif // STATICMODELPART_H

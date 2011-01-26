@@ -8,7 +8,7 @@ CModelMgr::CModelMgr(){
   modelTypeMap["static"]=STATIC;
   modelTypeMap["dynamic"]=DYNAMIC;
   GLuint buff[4];
-  glGenBuffers(4, buff);
+  glGenBuffersARB(4, buff);
   staticVbo = buff[0];
   staticIndexVbo = buff[1];
   dynamicVbo = buff[2];
@@ -37,9 +37,11 @@ Model* CModelMgr::getModel(String name){
     }else{
       engine->log("Wrong model type "+(value.get_obj().find("type")->second.get_str())+" in model "+name);
     }
+    file.close();
   }else{
     engine->log("Can't open file for model "+name);
   }
+
 
   return NULL;
 
@@ -76,8 +78,11 @@ void CModelMgr::uploadData(){
 
   glBindBufferARB(GL_ARRAY_BUFFER_ARB, staticVbo);
   glBindBufferARB(GL_ELEMENT_ARRAY_BUFFER, staticIndexVbo);
+  engine->log(sformat("Vertex count: %d, index count: %d", staticVertexCount, staticIndexCount));
+  engine->log(sformat("Buffer sizes: %d, %d", sizeof(StaticVertexData)*staticVertexCount, sizeof(unsigned int)*staticIndexCount));
+
   glBufferDataARB(GL_ARRAY_BUFFER_ARB, sizeof(StaticVertexData)*staticVertexCount, NULL, GL_STATIC_DRAW);
-  glBufferDataARB(GL_ELEMENT_ARRAY_BUFFER, sizeof(unsigned int)*staticIndexCount, NULL, GL_STATIC_DRAW);
+  glBufferDataARB(GL_ELEMENT_ARRAY_BUFFER_ARB, sizeof(unsigned int)*staticIndexCount, NULL, GL_STATIC_DRAW);
 
   engine->log("uploadData()");
   engine->checkGl();
@@ -104,7 +109,7 @@ void CModelMgr::draw(){
 
   glVertexPointer(3, GL_FLOAT, sizeof(StaticVertexData), BUFFER_OFFSET(0));               // last param is offset, not ptr
   glNormalPointer(GL_FLOAT, sizeof(StaticVertexData), BUFFER_OFFSET(12));
-  glClientActiveTexture(GL_TEXTURE0);
+  glClientActiveTextureARB(GL_TEXTURE0);
   glTexCoordPointer(2, GL_FLOAT, sizeof(StaticVertexData), BUFFER_OFFSET(24));
 
   glEnable(GL_TEXTURE_2D);
