@@ -11,7 +11,7 @@
 #define CLIPMIN(val,min) ((val)<=(min)?(min):(val))
 #define CLIPMAX(val,max) ((val)>=(max)?(max):(val))
 
-#define BUFFER_OFFSET(n) ((void*)((char*)NULL + n))
+#define BUFFER_OFFSET(n) ((char*)NULL + n)
 
 
 #endif

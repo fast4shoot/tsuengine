@@ -71,20 +71,24 @@ void StaticModelPart::uploadData(){
 
   i=0;
   for(IndexList::iterator it = m_indices.begin(); it != m_indices.end(); ++it, ++i){
-    indices[i] = (*it);
+    indices[i] = (*it)+m_vboOffset;
+    //engine->log(sformat("index: %d", indices[i]));
   }
 
-  engine->log("StaticModelPart::uploadData()");
-  engine->checkGl();
-  glBufferSubData(GL_ARRAY_BUFFER, m_vboOffset, getVertexCount()*sizeof(StaticVertexData), vertices);
-  engine->log("StaticModelPart::uploadData()");
-  engine->checkGl();
-  glBufferSubData(GL_ELEMENT_ARRAY_BUFFER, m_indexVboOffset, getIndexCount()*sizeof(GLuint), indices);
-  engine->log("StaticModelPart::uploadData()");
+  engine->log(sformat("uploadData(): m_vboOffset=%d, m_indexVboOffset=%d, getVertexCount()=%d, getIndexCount()=%d", m_vboOffset, m_indexVboOffset, getVertexCount(), getIndexCount()));
+  glBufferSubDataARB(GL_ARRAY_BUFFER, m_vboOffset*sizeof(StaticVertexData), getVertexCount()*sizeof(StaticVertexData), vertices);
+  glBufferSubDataARB(GL_ELEMENT_ARRAY_BUFFER, m_indexVboOffset*sizeof(GLuint), getIndexCount()*sizeof(GLuint), indices);
   engine->checkGl();
 }
 
 void StaticModelPart::draw(){
   m_material->bind();
-  glDrawRangeElements(GL_TRIANGLES, m_vboOffset, m_vboOffset+getVertexCount()-1, getIndexCount(), GL_UNSIGNED_INT, BUFFER_OFFSET(m_indexVboOffset));
+  //engine->log(sformat("draw(): m_vboOffset=%d, m_indexVboOffset=%d, getVertexCount()=%d, getIndexCount()=%d", m_vboOffset, m_indexVboOffset, getVertexCount(), getIndexCount()));
+  glDrawRangeElements(GL_TRIANGLES, m_vboOffset, m_vboOffset+getVertexCount()-1, getIndexCount(), GL_UNSIGNED_INT, BUFFER_OFFSET(m_indexVboOffset*sizeof(GLuint)));
+}
+
+void StaticModelPart::setOffsets(int vboOffset, int indexVboOffset){
+  engine->log(sformat("setOffsets(%d, %d)", vboOffset, indexVboOffset));
+  m_vboOffset = vboOffset;
+  m_indexVboOffset = indexVboOffset;
 }

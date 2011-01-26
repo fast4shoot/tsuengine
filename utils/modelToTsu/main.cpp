@@ -34,12 +34,14 @@ void vertToOutVert(OutVert& out, const InVert& in){
 
 int main(int argc, char *argv[]){
   try{
-    string tempStr;
+    string tempStr, filename;
     string mat;
     int tempInt;
     double tempDbl;
     int groupCnt;
-    ifstream file("barrelfortsu.txt");
+    cout<<"Input file?";
+    cin>>filename;
+    ifstream file((filename+".txt").c_str());
     if(!file.good()) cout<<"FAIL";
     file>>tempStr;
     file>>tempInt;
@@ -134,8 +136,8 @@ int main(int argc, char *argv[]){
     json::mObject obj;
     obj["type"]="static";
     obj["parts"]=parts;
-    ofstream output("barrelfortsu.json");
-    write_formatted(obj, output);
+    ofstream output((filename+".json").c_str());
+    write(obj, output);
     output.close();
     file.close();
   }catch(exception e){

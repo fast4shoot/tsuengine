@@ -1,17 +1,45 @@
 CModelMgr()
-TSUEngine verze 0.17.1727 revize 9511
+TSUEngine verze 0.17.1768 revize 9731
 OpenGL verze 3.3.10362 Compatibility Profile Context
 Vytvářím materiál wall1
 Vytvářím materiál system/cursor
 Odhaduji typ modelu...
 Vytvářím model...
-Vytvářím materiál barrel
+Vytvářím materiál yuna0
+Vytvářím materiál yuna1
+Vytvářím materiál yuna2
+Vytvářím materiál yuna3
+Vytvářím materiál yuna4
+Vytvářím materiál yuna5
+Vytvářím materiál yuna6
+Vytvářím materiál yuna7
+Vytvářím materiál yuna8
+Vytvářím materiál yuna9
+Vytvářím materiál yuna10
+setOffsets(0, 0)
+setOffsets(2580, 13587)
+setOffsets(2602, 13647)
+setOffsets(3574, 20571)
+setOffsets(3769, 21945)
+setOffsets(4247, 24231)
+setOffsets(4297, 24471)
+setOffsets(4587, 25803)
+setOffsets(4648, 26070)
+setOffsets(4968, 27186)
+setOffsets(5168, 28104)
 uploadData()
+Vertex count: 5219, index count: 28296
+Buffer sizes: 167008, 113184
 uploadData()
-StaticModelPart::uploadData()
-StaticModelPart::uploadData()
-StaticModelPart::uploadData()
-StaticModelPart::uploadData()
-StaticModelPart::uploadData()
-StaticModelPart::uploadData()
+uploadData(): m_vboOffset=0, m_indexVboOffset=0, getVertexCount()=2580, getIndexCount()=13587
+uploadData(): m_vboOffset=2580, m_indexVboOffset=13587, getVertexCount()=22, getIndexCount()=60
+uploadData(): m_vboOffset=2602, m_indexVboOffset=13647, getVertexCount()=972, getIndexCount()=6924
+uploadData(): m_vboOffset=3574, m_indexVboOffset=20571, getVertexCount()=195, getIndexCount()=1374
+uploadData(): m_vboOffset=3769, m_indexVboOffset=21945, getVertexCount()=478, getIndexCount()=2286
+uploadData(): m_vboOffset=4247, m_indexVboOffset=24231, getVertexCount()=50, getIndexCount()=240
+uploadData(): m_vboOffset=4297, m_indexVboOffset=24471, getVertexCount()=290, getIndexCount()=1332
+uploadData(): m_vboOffset=4587, m_indexVboOffset=25803, getVertexCount()=61, getIndexCount()=267
+uploadData(): m_vboOffset=4648, m_indexVboOffset=26070, getVertexCount()=320, getIndexCount()=1116
+uploadData(): m_vboOffset=4968, m_indexVboOffset=27186, getVertexCount()=200, getIndexCount()=918
+uploadData(): m_vboOffset=5168, m_indexVboOffset=28104, getVertexCount()=51, getIndexCount()=192
 uploadData()
