@@ -6,3 +6,4 @@ HDC hDC;
 HINSTANCE appInstance;
 HWND      appWindow;
 
+globals g;

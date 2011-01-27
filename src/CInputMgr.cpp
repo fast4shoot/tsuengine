@@ -10,7 +10,7 @@ CInputMgr::CInputMgr(){
   DIObject=NULL;
   DIKeyboardDevice=NULL;
   DIMouseDevice=NULL;
-  cursor.set(SCREENWIDTH/2.,SCREENHEIGHT/2.);
+  cursor.set(engine->getScreenWidth()/2.,engine->getScreenHeight()/2.);
   fSensitivity = 1.f;
   bInverted = false;
   iCurrBuffer=0;
@@ -106,8 +106,8 @@ void CInputMgr::update(){
   cursor.x += MouseState[iCurrBuffer].lX * fSensitivity;
   cursor.y += MouseState[iCurrBuffer].lY * fSensitivity;
 
-  cursor.x = CLIPMINMAX(cursor.x,0,SCREENWIDTH-1);
-  cursor.y = CLIPMINMAX(cursor.y,0,SCREENHEIGHT-1);
+  cursor.x = CLIPMINMAX(cursor.x,0,engine->getScreenWidth()-1);
+  cursor.y = CLIPMINMAX(cursor.y,0,engine->getScreenHeight()-1);
 
   cursorDelta = cursor - cursorOld;
 }

@@ -61,7 +61,12 @@ void CBaseEngine::init(){
   testMat=materials->getMaterial("wall1");
   cursorMat=materials->getMaterial("system/cursor");
 
+
+
   models->getModel("ffx_yuna");
+  testMdl=models->getModel("barrel");
+  testMdl->setPosition(vec3d(50, 0, 0));
+  (testMdl2 = models->getModel("barrel"))->setPosition(vec3d(25, 0, -30));
   models->uploadData();
 
 }
@@ -119,6 +124,9 @@ void CBaseEngine::think(){
   if(input->keyPressed(DIK_ESCAPE)){
     quit();
   }
+
+  testMdl->setRotation(0, getTime()*-1500, 0 );
+  testMdl2->setRotation(0, getTime()*1500, 0 );
 }
 
 void CBaseEngine::drawScene(){
@@ -130,10 +138,10 @@ void CBaseEngine::drawScene(){
 
   initWorldView();
 
-  gluLookAt(0,0,150,100,0,100,0,0,1);
+  gluLookAt(0,140,0,0,120,-100,0,1,0);
 
-  glTranslatef(100.,0.,0.);
-  glRotatef(getTime()*20,0,0,1);
+  glTranslatef(0.,0.,-100.);
+  glRotatef(getTime()*40,0,1,0);
   glColor4f(1.,1.,1.,1.);
 
   models->draw();
@@ -208,7 +216,7 @@ void CBaseEngine::drawScene(){
 void CBaseEngine::initWorldView(){
   glMatrixMode(GL_PROJECTION);
   glLoadIdentity();
-  gluPerspective(70.0f,(GLfloat)SCREENWIDTH/(GLfloat)SCREENHEIGHT,0.1f,100000.0f);
+  gluPerspective(70.0f,(GLfloat)getScreenWidth()/(GLfloat)getScreenHeight(),0.1f,100000.0f);
   glMatrixMode(GL_MODELVIEW);
   glLoadIdentity();
   glEnable(GL_DEPTH_TEST);
@@ -221,7 +229,7 @@ void CBaseEngine::initGuiView(){
   glDisable(GL_DEPTH_TEST);
   glMatrixMode(GL_PROJECTION);
   glLoadIdentity();
-  gluOrtho2D (0, SCREENWIDTH, SCREENHEIGHT, 0);
+  gluOrtho2D (0, getScreenWidth(), getScreenHeight(), 0);
   glMatrixMode(GL_MODELVIEW);						// Select The Modelview Matrix
   glLoadIdentity();
   //glTranslatef(0.,SCREENHEIGHT/*+0.375*/,0.0);

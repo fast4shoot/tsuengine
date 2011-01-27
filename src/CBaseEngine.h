@@ -81,6 +81,10 @@ class CBaseEngine{
     Material*       testMat;
     Material*       cursorMat;
 
+    int             getScreenHeight();
+    int             getScreenWidth();
+
+    Model *testMdl, *testMdl2;
 
 };
 
@@ -132,6 +136,12 @@ inline void CBaseEngine::warning(const String& text){
   log("Warning: "+text);
 }
 
+inline int CBaseEngine::getScreenHeight(){
+  return g.scrHeight;
+}
+inline int CBaseEngine::getScreenWidth(){
+  return g.scrWidth;
+}
 
 extern CBaseEngine* engine;
 #endif

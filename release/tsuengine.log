@@ -1,5 +1,5 @@
 CModelMgr()
-TSUEngine verze 0.17.1768 revize 9731
+TSUEngine verze 0.18.1851 revize 166
 OpenGL verze 3.3.10362 Compatibility Profile Context
 Vytvářím materiál wall1
 Vytvářím materiál system/cursor
@@ -7,7 +7,6 @@ Odhaduji typ modelu...
 Vytvářím model...
 Vytvářím materiál yuna0
 Vytvářím materiál yuna1
-Vytvářím materiál yuna2
 Vytvářím materiál yuna3
 Vytvářím materiál yuna4
 Vytvářím materiál yuna5
@@ -16,6 +15,11 @@ Vytvářím materiál yuna7
 Vytvářím materiál yuna8
 Vytvářím materiál yuna9
 Vytvářím materiál yuna10
+Odhaduji typ modelu...
+Vytvářím model...
+Vytvářím materiál barrel
+Odhaduji typ modelu...
+Znovu využívám model...
 setOffsets(0, 0)
 setOffsets(2580, 13587)
 setOffsets(2602, 13647)
@@ -27,9 +31,13 @@ setOffsets(4587, 25803)
 setOffsets(4648, 26070)
 setOffsets(4968, 27186)
 setOffsets(5168, 28104)
+setOffsets(5219, 28296)
+setOffsets(5467, 29436)
+setOffsets(5499, 29502)
+setOffsets(5747, 30642)
 uploadData()
-Vertex count: 5219, index count: 28296
-Buffer sizes: 167008, 113184
+Vertex count: 5779, index count: 30708
+Buffer sizes: 184928, 122832
 uploadData()
 uploadData(): m_vboOffset=0, m_indexVboOffset=0, getVertexCount()=2580, getIndexCount()=13587
 uploadData(): m_vboOffset=2580, m_indexVboOffset=13587, getVertexCount()=22, getIndexCount()=60
@@ -42,4 +50,8 @@ uploadData(): m_vboOffset=4587, m_indexVboOffset=25803, getVertexCount()=61, get
 uploadData(): m_vboOffset=4648, m_indexVboOffset=26070, getVertexCount()=320, getIndexCount()=1116
 uploadData(): m_vboOffset=4968, m_indexVboOffset=27186, getVertexCount()=200, getIndexCount()=918
 uploadData(): m_vboOffset=5168, m_indexVboOffset=28104, getVertexCount()=51, getIndexCount()=192
+uploadData(): m_vboOffset=5499, m_indexVboOffset=29502, getVertexCount()=248, getIndexCount()=1140
+uploadData(): m_vboOffset=5747, m_indexVboOffset=30642, getVertexCount()=32, getIndexCount()=66
+uploadData(): m_vboOffset=5499, m_indexVboOffset=29502, getVertexCount()=248, getIndexCount()=1140
+uploadData(): m_vboOffset=5747, m_indexVboOffset=30642, getVertexCount()=32, getIndexCount()=66
 uploadData()

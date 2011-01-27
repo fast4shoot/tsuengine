@@ -7,7 +7,7 @@
 #include "CConsole.h"
 
 CMainMenu::CMainMenu():
-  CGuiPanel(vec2d(0,0),vec2d(SCREENWIDTH,SCREENHEIGHT))
+  CGuiPanel(vec2d(0,0),vec2d(engine->getScreenWidth(),engine->getScreenHeight()))
 {
   fgColor.set(1., 1., 1., .7);
   bgColor.set(.25, .25, .25, .4);
@@ -28,7 +28,7 @@ CMainMenu::CMainMenu():
   addChild(temp=new CButton(vec2d(20,170),vec2d(160,30),"Konzole"));
   temp->addListener(makeCListenerMemberFn(3,this,&CMainMenu::buttonClicked));
 
-  temp=new CButton(vec2d(20,SCREENHEIGHT-160),vec2d(160,30),"Ukončit");
+  temp=new CButton(vec2d(20,engine->getScreenHeight()-160),vec2d(160,30),"Ukončit");
   temp->addListener(makeCListenerMemberFn(0,this,&CMainMenu::buttonClicked));
   addChild(temp);
 

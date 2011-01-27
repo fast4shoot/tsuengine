@@ -116,7 +116,7 @@ void CModelMgr::draw(){
 
   for(ModelHandleList::iterator it = modelHandles.begin(); it != modelHandles.end(); it++){
     if((*it)->getType()==STATIC){
-      (*it)->getModelRepresentation()->draw();
+      (*it)->draw();
     }
   }
 
