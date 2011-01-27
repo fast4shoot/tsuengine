@@ -48,8 +48,8 @@ int WINAPI WinMain (HINSTANCE hInstance,
   HGLRC hRC;
   MSG msg;
   BOOL bQuit = FALSE;
-  float theta = 0.0f;
-
+  g.scrWidth = 640;
+  g.scrHeight = 480;
   // register window class
   wc.style = CS_HREDRAW | CS_VREDRAW | CS_OWNDC;
   wc.lpfnWndProc = WndProc;
@@ -63,14 +63,19 @@ int WINAPI WinMain (HINSTANCE hInstance,
   wc.lpszClassName = L"TSUEWindow";
   RegisterClass(&wc);
 
+
+
   // create main window
   hWnd = CreateWindow (
     L"TSUEWindow", L"TSU Engine window",
-    WS_MINIMIZEBOX | WS_CAPTION | WS_POPUPWINDOW | WS_VISIBLE,
-    0, 0, SCREENWIDTH+6, SCREENHEIGHT+27,
+    WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_CAPTION | WS_POPUPWINDOW | WS_VISIBLE,
+    10, 10, g.scrWidth+6, g.scrHeight+27,
+    //10,10, CW_USEDEFAULT, CW_USEDEFAULT,
     NULL, NULL, hInstance, NULL);
 
   appWindow=hWnd;
+  ShowWindow(hWnd, SW_SHOWMAXIMIZED);
+
 
   try{
     // enable OpenGL for the window
@@ -82,15 +87,15 @@ int WINAPI WinMain (HINSTANCE hInstance,
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA);
 
-    glPushMatrix();
+    /*glPushMatrix();
     glTranslatef(-1.0,1.0f,0.0f);
     glScalef(2.0f/SCREENWIDTH,-2.0f/SCREENHEIGHT,1.0);
 
-    /*GLFT_Font* loadingFont = new GLFT_Font("arial.ttf", 16);
-    loadingFont->drawText(SCREENWIDTH-loadingFont->calcStringWidth("Loading...")-15,SCREENHEIGHT-loadingFont->getHeight()-15,"Loading...");
-    */
+    //GLFT_Font* loadingFont = new GLFT_Font("arial.ttf", 16);
+    //loadingFont->drawText(SCREENWIDTH-loadingFont->calcStringWidth("Loading...")-15,SCREENHEIGHT-loadingFont->getHeight()-15,"Loading...");
 
-    glPopMatrix();
+    glPopMatrix();*/
+
     //create and start the engine
     SwapBuffers (hDC);
     engine=new CBaseEngine();
@@ -156,6 +161,10 @@ LRESULT CALLBACK WndProc (HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
       PostQuitMessage(0);
       return 0;
 
+    case WM_SIZE:
+      g.scrWidth = LOWORD(lParam);
+      g.scrHeight = HIWORD(lParam);
+
     case WM_SYSCOMMAND:
       switch (wParam){
         case SC_SCREENSAVE:
@@ -200,7 +209,8 @@ void EnableOpenGL (HWND hWnd, HDC *hDC, HGLRC *hRC)
       PFD_SUPPORT_OPENGL | PFD_DOUBLEBUFFER;
     pfd.iPixelType = PFD_TYPE_RGBA;
     pfd.cColorBits = 24;
-    pfd.cDepthBits = 16;
+    pfd.cDepthBits = 24;
+    pfd.cStencilBits = 8;
     pfd.iLayerType = PFD_MAIN_PLANE;
     iFormat = ChoosePixelFormat (*hDC, &pfd);
     SetPixelFormat (*hDC, iFormat, &pfd);

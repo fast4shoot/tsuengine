@@ -10,5 +10,11 @@ extern HDC hDC;
 extern HINSTANCE appInstance;
 extern HWND      appWindow;
 
+struct globals{
+  int scrHeight;
+  int scrWidth;
+};
+
+extern globals g;
 
 #endif

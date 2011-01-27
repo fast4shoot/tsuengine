@@ -10,7 +10,7 @@ CGuiMgr::CGuiMgr(){}
 
 void CGuiMgr::init(){
   _keyboardReceiver=NULL;
-  _basePanel=new CGuiPanel(vec2d(0.,0.),vec2d(SCREENWIDTH,SCREENHEIGHT));
+  _basePanel=new CGuiPanel(vec2d(0.,0.),vec2d(engine->getScreenWidth(),engine->getScreenHeight()));
 
   _basePanel->addChild(new CMainMenu());
 

@@ -23,8 +23,8 @@ inline double CScrollBar::getScrollAmount(){
 
 inline void CScrollBar::buttonScroll(int id){
   switch(id){
-    case 0: _scrollAmt+=0.05; fireListeners(); break;
-    case 1: _scrollAmt-=0.05; fireListeners(); break;
+    case 0: _scrollAmt-=0.05; fireListeners(); break;
+    case 1: _scrollAmt+=0.05; fireListeners(); break;
   }
   _scrollAmt=clamp(_scrollAmt, 0., 1.);
   fireListeners();
