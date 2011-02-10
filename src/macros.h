@@ -13,5 +13,6 @@
 
 #define BUFFER_OFFSET(n) ((char*)NULL + n)
 
+#define REGISTER_DESCRIPTOR(Entity) static bool Entity ## Registered = DescriptorList::instance()->registerDescriptor(new Entity ## Descriptor< Entity >());
 
 #endif

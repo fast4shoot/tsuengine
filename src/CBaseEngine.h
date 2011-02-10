@@ -9,7 +9,7 @@
 #include "const.h"
 #include "typedefs.h"
 #include "datatypes.h"
-#include "CBaseEntity.h"
+#include "entities/CBaseEntity.h"
 #include "CEntMgr.h"
 #include "CInputMgr.h"
 #include "CMaterialMgr.h"
@@ -84,7 +84,7 @@ class CBaseEngine{
     int             getScreenHeight();
     int             getScreenWidth();
 
-    Model *testMdl, *testMdl2;
+    Model *testMdl, *testMdl2, *testMdl3;
 
 };
 

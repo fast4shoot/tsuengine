@@ -13,7 +13,6 @@
 #include "datatypes.h"
 #include "globals.h"
 #include "CBaseEngine.h"
-#include "CBaseEntity.h"
 #include "macros.h"
 #include "exceptions.h"
 
@@ -63,19 +62,16 @@ int WINAPI WinMain (HINSTANCE hInstance,
   wc.lpszClassName = L"TSUEWindow";
   RegisterClass(&wc);
 
-
-
   // create main window
   hWnd = CreateWindow (
     L"TSUEWindow", L"TSU Engine window",
     WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_CAPTION | WS_POPUPWINDOW | WS_VISIBLE,
-    10, 10, g.scrWidth+6, g.scrHeight+27,
+    0, 0, g.scrWidth+6, g.scrHeight+27,
     //10,10, CW_USEDEFAULT, CW_USEDEFAULT,
     NULL, NULL, hInstance, NULL);
 
   appWindow=hWnd;
   ShowWindow(hWnd, SW_SHOWMAXIMIZED);
-
 
   try{
     // enable OpenGL for the window
@@ -164,6 +160,7 @@ LRESULT CALLBACK WndProc (HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
     case WM_SIZE:
       g.scrWidth = LOWORD(lParam);
       g.scrHeight = HIWORD(lParam);
+      return 0;
 
     case WM_SYSCOMMAND:
       switch (wParam){
@@ -172,14 +169,17 @@ LRESULT CALLBACK WndProc (HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         case SC_KEYMENU:
           return 0;
       }
+      return 1;
 
-    case WM_CHAR: {
+    case WM_CHAR:{
       //TODO: convert Windows UTF-16 to UTF-8 for CInputMGr (needs to handle surrogate pairs too!)
       String result;
       utf8::utf16to8(&wParam, &wParam+1, std::back_inserter(result));
       engine->input->characterInput(result);
       return false;
     }
+
+
 
 
     default:
@@ -210,7 +210,7 @@ void EnableOpenGL (HWND hWnd, HDC *hDC, HGLRC *hRC)
     pfd.iPixelType = PFD_TYPE_RGBA;
     pfd.cColorBits = 24;
     pfd.cDepthBits = 24;
-    pfd.cStencilBits = 8;
+    pfd.cStencilBits = 0;
     pfd.iLayerType = PFD_MAIN_PLANE;
     iFormat = ChoosePixelFormat (*hDC, &pfd);
     SetPixelFormat (*hDC, iFormat, &pfd);
