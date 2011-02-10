@@ -1,6 +1,6 @@
 CModelMgr()
-TSUEngine verze 0.18.1851 revize 166
-OpenGL verze 3.3.10362 Compatibility Profile Context
+TSUEngine verze 0.19.1981 revize 903
+OpenGL verze 1.4.0 - Build 8.14.10.1930
 Vytvářím materiál wall1
 Vytvářím materiál system/cursor
 Odhaduji typ modelu...
@@ -20,6 +20,13 @@ Vytvářím model...
 Vytvářím materiál barrel
 Odhaduji typ modelu...
 Znovu využívám model...
+Odhaduji typ modelu...
+Znovu využívám model...
+Odhaduji typ modelu...
+Znovu využívám model...
+Odhaduji typ modelu...
+Vytvářím model...
+Vytvářím materiál white
 setOffsets(0, 0)
 setOffsets(2580, 13587)
 setOffsets(2602, 13647)
@@ -35,23 +42,51 @@ setOffsets(5219, 28296)
 setOffsets(5467, 29436)
 setOffsets(5499, 29502)
 setOffsets(5747, 30642)
+setOffsets(5779, 30708)
+setOffsets(6027, 31848)
+setOffsets(6059, 31914)
+setOffsets(8639, 45501)
+setOffsets(8661, 45561)
+setOffsets(9633, 52485)
+setOffsets(9828, 53859)
+setOffsets(10306, 56145)
+setOffsets(10356, 56385)
+setOffsets(10646, 57717)
+setOffsets(10707, 57984)
+setOffsets(11027, 59100)
+setOffsets(11227, 60018)
+setOffsets(11278, 60210)
 uploadData()
-Vertex count: 5779, index count: 30708
-Buffer sizes: 184928, 122832
+Vertex count: 11324, index count: 60411
+Buffer sizes: 362368, 241644
 uploadData()
-uploadData(): m_vboOffset=0, m_indexVboOffset=0, getVertexCount()=2580, getIndexCount()=13587
-uploadData(): m_vboOffset=2580, m_indexVboOffset=13587, getVertexCount()=22, getIndexCount()=60
-uploadData(): m_vboOffset=2602, m_indexVboOffset=13647, getVertexCount()=972, getIndexCount()=6924
-uploadData(): m_vboOffset=3574, m_indexVboOffset=20571, getVertexCount()=195, getIndexCount()=1374
-uploadData(): m_vboOffset=3769, m_indexVboOffset=21945, getVertexCount()=478, getIndexCount()=2286
-uploadData(): m_vboOffset=4247, m_indexVboOffset=24231, getVertexCount()=50, getIndexCount()=240
-uploadData(): m_vboOffset=4297, m_indexVboOffset=24471, getVertexCount()=290, getIndexCount()=1332
-uploadData(): m_vboOffset=4587, m_indexVboOffset=25803, getVertexCount()=61, getIndexCount()=267
-uploadData(): m_vboOffset=4648, m_indexVboOffset=26070, getVertexCount()=320, getIndexCount()=1116
-uploadData(): m_vboOffset=4968, m_indexVboOffset=27186, getVertexCount()=200, getIndexCount()=918
-uploadData(): m_vboOffset=5168, m_indexVboOffset=28104, getVertexCount()=51, getIndexCount()=192
-uploadData(): m_vboOffset=5499, m_indexVboOffset=29502, getVertexCount()=248, getIndexCount()=1140
-uploadData(): m_vboOffset=5747, m_indexVboOffset=30642, getVertexCount()=32, getIndexCount()=66
-uploadData(): m_vboOffset=5499, m_indexVboOffset=29502, getVertexCount()=248, getIndexCount()=1140
-uploadData(): m_vboOffset=5747, m_indexVboOffset=30642, getVertexCount()=32, getIndexCount()=66
+uploadData(): m_vboOffset=6059, m_indexVboOffset=31914, getVertexCount()=2580, getIndexCount()=13587
+uploadData(): m_vboOffset=8639, m_indexVboOffset=45501, getVertexCount()=22, getIndexCount()=60
+uploadData(): m_vboOffset=8661, m_indexVboOffset=45561, getVertexCount()=972, getIndexCount()=6924
+uploadData(): m_vboOffset=9633, m_indexVboOffset=52485, getVertexCount()=195, getIndexCount()=1374
+uploadData(): m_vboOffset=9828, m_indexVboOffset=53859, getVertexCount()=478, getIndexCount()=2286
+uploadData(): m_vboOffset=10306, m_indexVboOffset=56145, getVertexCount()=50, getIndexCount()=240
+uploadData(): m_vboOffset=10356, m_indexVboOffset=56385, getVertexCount()=290, getIndexCount()=1332
+uploadData(): m_vboOffset=10646, m_indexVboOffset=57717, getVertexCount()=61, getIndexCount()=267
+uploadData(): m_vboOffset=10707, m_indexVboOffset=57984, getVertexCount()=320, getIndexCount()=1116
+uploadData(): m_vboOffset=11027, m_indexVboOffset=59100, getVertexCount()=200, getIndexCount()=918
+uploadData(): m_vboOffset=11227, m_indexVboOffset=60018, getVertexCount()=51, getIndexCount()=192
+uploadData(): m_vboOffset=5779, m_indexVboOffset=30708, getVertexCount()=248, getIndexCount()=1140
+uploadData(): m_vboOffset=6027, m_indexVboOffset=31848, getVertexCount()=32, getIndexCount()=66
+uploadData(): m_vboOffset=5779, m_indexVboOffset=30708, getVertexCount()=248, getIndexCount()=1140
+uploadData(): m_vboOffset=6027, m_indexVboOffset=31848, getVertexCount()=32, getIndexCount()=66
+uploadData(): m_vboOffset=5779, m_indexVboOffset=30708, getVertexCount()=248, getIndexCount()=1140
+uploadData(): m_vboOffset=6027, m_indexVboOffset=31848, getVertexCount()=32, getIndexCount()=66
+uploadData(): m_vboOffset=6059, m_indexVboOffset=31914, getVertexCount()=2580, getIndexCount()=13587
+uploadData(): m_vboOffset=8639, m_indexVboOffset=45501, getVertexCount()=22, getIndexCount()=60
+uploadData(): m_vboOffset=8661, m_indexVboOffset=45561, getVertexCount()=972, getIndexCount()=6924
+uploadData(): m_vboOffset=9633, m_indexVboOffset=52485, getVertexCount()=195, getIndexCount()=1374
+uploadData(): m_vboOffset=9828, m_indexVboOffset=53859, getVertexCount()=478, getIndexCount()=2286
+uploadData(): m_vboOffset=10306, m_indexVboOffset=56145, getVertexCount()=50, getIndexCount()=240
+uploadData(): m_vboOffset=10356, m_indexVboOffset=56385, getVertexCount()=290, getIndexCount()=1332
+uploadData(): m_vboOffset=10646, m_indexVboOffset=57717, getVertexCount()=61, getIndexCount()=267
+uploadData(): m_vboOffset=10707, m_indexVboOffset=57984, getVertexCount()=320, getIndexCount()=1116
+uploadData(): m_vboOffset=11027, m_indexVboOffset=59100, getVertexCount()=200, getIndexCount()=918
+uploadData(): m_vboOffset=11227, m_indexVboOffset=60018, getVertexCount()=51, getIndexCount()=192
+uploadData(): m_vboOffset=11278, m_indexVboOffset=60210, getVertexCount()=46, getIndexCount()=201
 uploadData()

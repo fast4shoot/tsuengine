@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="default" />
-	<File name="CBaseEngine.cpp" open="1" top="1" tabpos="1">
-		<Cursor position="2875" topLine="119" />
+	<File name="CBaseEngine.cpp" open="0" top="0" tabpos="1">
+		<Cursor position="6268" topLine="232" />
 	</File>
-	<File name="CBaseEngine.h" open="1" top="0" tabpos="3">
-		<Cursor position="2128" topLine="88" />
+	<File name="CBaseEngine.h" open="0" top="0" tabpos="3">
+		<Cursor position="2168" topLine="74" />
 	</File>
-	<File name="CBaseEntity.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="289" topLine="9" />
+	<File name="CEntMgr.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="92" topLine="0" />
+	</File>
+	<File name="CEntMgr.h" open="0" top="0" tabpos="2">
+		<Cursor position="61" topLine="0" />
 	</File>
 	<File name="CFontMgr.cpp" open="0" top="0" tabpos="9">
 		<Cursor position="520" topLine="0" />
@@ -37,11 +40,14 @@
 	<File name="CModelMgr.cpp" open="0" top="0" tabpos="6">
 		<Cursor position="1127" topLine="0" />
 	</File>
-	<File name="CModelMgr.h" open="1" top="0" tabpos="4">
+	<File name="CModelMgr.h" open="0" top="0" tabpos="4">
 		<Cursor position="439" topLine="0" />
 	</File>
 	<File name="CParamMgr.h" open="0" top="0" tabpos="0">
 		<Cursor position="99" topLine="2" />
+	</File>
+	<File name="DescriptorList.h" open="1" top="0" tabpos="4">
+		<Cursor position="292" topLine="0" />
 	</File>
 	<File name="Font.cpp" open="0" top="0" tabpos="2">
 		<Cursor position="263" topLine="0" />
@@ -64,8 +70,8 @@
 	<File name="datatypes.h" open="0" top="0" tabpos="4">
 		<Cursor position="893" topLine="25" />
 	</File>
-	<File name="elements\Material.cpp" open="0" top="0" tabpos="1">
-		<Cursor position="128" topLine="9" />
+	<File name="elements\Material.cpp" open="0" top="0" tabpos="7">
+		<Cursor position="223" topLine="24" />
 	</File>
 	<File name="elements\Material.h" open="0" top="0" tabpos="2">
 		<Cursor position="64" topLine="0" />
@@ -94,11 +100,20 @@
 	<File name="elements\Vertex.h" open="0" top="0" tabpos="1">
 		<Cursor position="650" topLine="15" />
 	</File>
-	<File name="globals.cpp" open="0" top="0" tabpos="11">
-		<Cursor position="125" topLine="0" />
+	<File name="entities\BaseEntityDescriptor.h" open="0" top="0" tabpos="5">
+		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="globals.h" open="0" top="0" tabpos="9">
-		<Cursor position="246" topLine="0" />
+	<File name="entities\CBaseEntity.cpp" open="1" top="0" tabpos="2">
+		<Cursor position="357" topLine="3" />
+	</File>
+	<File name="entities\CBaseEntity.h" open="1" top="1" tabpos="1">
+		<Cursor position="2282" topLine="72" />
+	</File>
+	<File name="globals.cpp" open="0" top="0" tabpos="11">
+		<Cursor position="115" topLine="0" />
+	</File>
+	<File name="globals.h" open="0" top="0" tabpos="3">
+		<Cursor position="258" topLine="0" />
 	</File>
 	<File name="gui\CAbstractButton.cpp" open="0" top="0" tabpos="3">
 		<Cursor position="163" topLine="0" />
@@ -298,17 +313,29 @@
 	<File name="libs\ft2build.h" open="0" top="0" tabpos="0">
 		<Cursor position="1326" topLine="16" />
 	</File>
+	<File name="libs\json\json.h" open="0" top="0" tabpos="6">
+		<Cursor position="107" topLine="0" />
+	</File>
+	<File name="libs\json\json_spirit_reader.h" open="0" top="0" tabpos="0">
+		<Cursor position="853" topLine="31" />
+	</File>
 	<File name="libs\json\json_spirit_value.h" open="0" top="0" tabpos="8">
-		<Cursor position="885" topLine="0" />
+		<Cursor position="12703" topLine="500" />
 	</File>
-	<File name="macros.h" open="0" top="0" tabpos="3">
-		<Cursor position="541" topLine="0" />
+	<File name="macros.h" open="1" top="0" tabpos="5">
+		<Cursor position="696" topLine="0" />
 	</File>
-	<File name="main.cpp" open="1" top="0" tabpos="2">
-		<Cursor position="1459" topLine="48" />
+	<File name="main.cpp" open="0" top="0" tabpos="2">
+		<Cursor position="1749" topLine="54" />
 	</File>
 	<File name="typedefs.h" open="0" top="0" tabpos="0">
 		<Cursor position="89" topLine="0" />
+	</File>
+	<File name="utils\Singleton.cpp" open="0" top="0" tabpos="3">
+		<Cursor position="22" topLine="0" />
+	</File>
+	<File name="utils\Singleton.h" open="0" top="0" tabpos="4">
+		<Cursor position="182" topLine="0" />
 	</File>
 	<File name="utils\math.h" open="0" top="0" tabpos="0">
 		<Cursor position="227" topLine="0" />
@@ -331,8 +358,8 @@
 	<File name="vec3d.h" open="0" top="0" tabpos="7">
 		<Cursor position="923" topLine="0" />
 	</File>
-	<File name="vecBase.h" open="0" top="0" tabpos="5">
-		<Cursor position="327" topLine="0" />
+	<File name="vecBase.h" open="0" top="0" tabpos="8">
+		<Cursor position="4100" topLine="130" />
 	</File>
 	<File name="vecOpBase.h" open="0" top="0" tabpos="2">
 		<Cursor position="844" topLine="0" />

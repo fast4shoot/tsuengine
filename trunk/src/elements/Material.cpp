@@ -9,7 +9,6 @@
 #include "utils/stringUtils.h"
 #include "CBaseEngine.h"
 
-namespace json=json_spirit;
 
 Material::Material(String name){
   std::ifstream jsonFile(("materials/"+name+".json").c_str());

@@ -1,18 +1,18 @@
 #include "CEntMgr.h"
-#include "CBaseEntity.h"
+#include "entities/CBaseEntity.h"
 #include "const.h"
 
 CEntMgr::CEntMgr(){
-  entCount=0;
-  lastSearchCount=0;                   
+/*  entCount=0;
+  lastSearchCount=0;  */
 }
-
+/*
 int CEntMgr::getEntCount(){
-  return entCount;   
+  return entCount;
 }
 
 CBaseEntity* CEntMgr::getEntById(int id){
-  return entityTable[id];             
+  return entityTable[id];
 }
 
 int CEntMgr::getEntCountByTargetName(std::string targetname){
@@ -32,13 +32,14 @@ void CEntMgr::findEntsByTargetName(std::string targetname){
       searchTable[lastSearchCount]=ent;
       lastSearchCount++;
     }
-  }           
+  }
 }
 
 void CEntMgr::findEntsInSphere(vec3d pos, double radius){
-     
+
 }
 
 CBaseEntity* CEntMgr::getNextEntFromLastSearch(){
   return NULL;
 }
+*/

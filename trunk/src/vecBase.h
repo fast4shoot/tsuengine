@@ -151,4 +151,11 @@ inline void vecBase<T,N,Derived>::fromJson(const json::mValue& val){
   }
 }
 
+namespace json{
+  template< class T, int N, class Derived >
+  inline int extract(vecBase<T, N, Derived>& result, const mValue& value){
+    result = result.fromJson(value);
+  }
+}
+
 #endif // VECBASE_H

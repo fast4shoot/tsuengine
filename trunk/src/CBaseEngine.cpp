@@ -5,7 +5,7 @@
 #include "glew/glew.h"
 
 #include "CBaseEngine.h"
-#include "CBaseEntity.h"
+#include "entities/CBaseEntity.h"
 #include "exceptions.h"
 #include "macros.h"
 #include "CInputMgr.h"
@@ -61,12 +61,16 @@ void CBaseEngine::init(){
   testMat=materials->getMaterial("wall1");
   cursorMat=materials->getMaterial("system/cursor");
 
+  Model* temp;
 
-
-  models->getModel("ffx_yuna");
+  testMdl3 = models->getModel("ffx_yuna");
   testMdl=models->getModel("barrel");
   testMdl->setPosition(vec3d(50, 0, 0));
   (testMdl2 = models->getModel("barrel"))->setPosition(vec3d(25, 0, -30));
+  models->getModel("barrel")->setPosition(vec3d(-10, 0, -35));
+  (temp = models->getModel("ffx_yuna"))->setPosition(vec3d(-100, 0, -35));
+  temp->setRotation(0, 45, 0);
+  models->getModel("man")->setPosition(vec3d(-60, 0, -30));
   models->uploadData();
 
 }
@@ -127,6 +131,7 @@ void CBaseEngine::think(){
 
   testMdl->setRotation(0, getTime()*-1500, 0 );
   testMdl2->setRotation(0, getTime()*1500, 0 );
+  testMdl3->setRotation(getTime()*200, 0 , 0 );
 }
 
 void CBaseEngine::drawScene(){

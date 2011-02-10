@@ -43,8 +43,6 @@
 		</Linker>
 		<Unit filename="CBaseEngine.cpp" />
 		<Unit filename="CBaseEngine.h" />
-		<Unit filename="CBaseEntity.cpp" />
-		<Unit filename="CBaseEntity.h" />
 		<Unit filename="CEntMgr.cpp" />
 		<Unit filename="CEntMgr.h" />
 		<Unit filename="CFontMgr.cpp" />
@@ -59,6 +57,7 @@
 		<Unit filename="CModelMgr.h" />
 		<Unit filename="CParamMgr.cpp" />
 		<Unit filename="CParamMgr.h" />
+		<Unit filename="DescriptorList.h" />
 		<Unit filename="Font.cpp" />
 		<Unit filename="Font.h" />
 		<Unit filename="FontBase.cpp" />
@@ -78,6 +77,9 @@
 		<Unit filename="elements\StaticModelPart.cpp" />
 		<Unit filename="elements\StaticModelPart.h" />
 		<Unit filename="elements\Vertex.h" />
+		<Unit filename="entities\BaseEntityDescriptor.h" />
+		<Unit filename="entities\CBaseEntity.cpp" />
+		<Unit filename="entities\CBaseEntity.h" />
 		<Unit filename="exceptions.cpp" />
 		<Unit filename="exceptions.h" />
 		<Unit filename="globals.cpp" />
@@ -218,6 +220,8 @@
 		<Unit filename="macros.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="typedefs.h" />
+		<Unit filename="utils\Singleton.cpp" />
+		<Unit filename="utils\Singleton.h" />
 		<Unit filename="utils\math.h" />
 		<Unit filename="utils\stringUtils.cpp" />
 		<Unit filename="utils\stringUtils.h" />
