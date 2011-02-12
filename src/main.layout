@@ -2,16 +2,16 @@
 <CodeBlocks_layout_file>
 	<ActiveTarget name="default" />
 	<File name="CBaseEngine.cpp" open="0" top="0" tabpos="1">
-		<Cursor position="6268" topLine="232" />
+		<Cursor position="1188" topLine="230" />
 	</File>
 	<File name="CBaseEngine.h" open="0" top="0" tabpos="3">
-		<Cursor position="2168" topLine="74" />
+		<Cursor position="1107" topLine="41" />
 	</File>
-	<File name="CEntMgr.cpp" open="1" top="0" tabpos="3">
-		<Cursor position="92" topLine="0" />
+	<File name="CEntMgr.cpp" open="1" top="0" tabpos="7">
+		<Cursor position="751" topLine="0" />
 	</File>
-	<File name="CEntMgr.h" open="0" top="0" tabpos="2">
-		<Cursor position="61" topLine="0" />
+	<File name="CEntMgr.h" open="0" top="0" tabpos="6">
+		<Cursor position="266" topLine="0" />
 	</File>
 	<File name="CFontMgr.cpp" open="0" top="0" tabpos="9">
 		<Cursor position="520" topLine="0" />
@@ -37,8 +37,8 @@
 	<File name="CMaterialMgr.h" open="0" top="0" tabpos="5">
 		<Cursor position="146" topLine="0" />
 	</File>
-	<File name="CModelMgr.cpp" open="0" top="0" tabpos="6">
-		<Cursor position="1127" topLine="0" />
+	<File name="CModelMgr.cpp" open="1" top="0" tabpos="8">
+		<Cursor position="2884" topLine="75" />
 	</File>
 	<File name="CModelMgr.h" open="0" top="0" tabpos="4">
 		<Cursor position="439" topLine="0" />
@@ -46,8 +46,8 @@
 	<File name="CParamMgr.h" open="0" top="0" tabpos="0">
 		<Cursor position="99" topLine="2" />
 	</File>
-	<File name="DescriptorList.h" open="1" top="0" tabpos="4">
-		<Cursor position="292" topLine="0" />
+	<File name="DescriptorList.h" open="0" top="0" tabpos="9">
+		<Cursor position="103" topLine="0" />
 	</File>
 	<File name="Font.cpp" open="0" top="0" tabpos="2">
 		<Cursor position="263" topLine="0" />
@@ -100,14 +100,23 @@
 	<File name="elements\Vertex.h" open="0" top="0" tabpos="1">
 		<Cursor position="650" topLine="15" />
 	</File>
-	<File name="entities\BaseEntityDescriptor.h" open="0" top="0" tabpos="5">
-		<Cursor position="0" topLine="0" />
+	<File name="entities\CBaseEntity.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="647" topLine="0" />
 	</File>
-	<File name="entities\CBaseEntity.cpp" open="1" top="0" tabpos="2">
-		<Cursor position="357" topLine="3" />
+	<File name="entities\CBaseEntity.h" open="1" top="0" tabpos="4">
+		<Cursor position="524" topLine="0" />
 	</File>
-	<File name="entities\CBaseEntity.h" open="1" top="1" tabpos="1">
-		<Cursor position="2282" topLine="72" />
+	<File name="entities\CBaseEntityDescriptor.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="64" topLine="0" />
+	</File>
+	<File name="entities\CBaseEntityDescriptor.h" open="1" top="0" tabpos="2">
+		<Cursor position="3311" topLine="79" />
+	</File>
+	<File name="entities\CLogicEntity.cpp" open="1" top="0" tabpos="6">
+		<Cursor position="194" topLine="0" />
+	</File>
+	<File name="entities\CLogicEntity.h" open="1" top="0" tabpos="5">
+		<Cursor position="533" topLine="0" />
 	</File>
 	<File name="globals.cpp" open="0" top="0" tabpos="11">
 		<Cursor position="115" topLine="0" />
@@ -322,11 +331,11 @@
 	<File name="libs\json\json_spirit_value.h" open="0" top="0" tabpos="8">
 		<Cursor position="12703" topLine="500" />
 	</File>
-	<File name="macros.h" open="1" top="0" tabpos="5">
-		<Cursor position="696" topLine="0" />
+	<File name="macros.h" open="0" top="0" tabpos="6">
+		<Cursor position="570" topLine="0" />
 	</File>
-	<File name="main.cpp" open="0" top="0" tabpos="2">
-		<Cursor position="1749" topLine="54" />
+	<File name="main.cpp" open="1" top="0" tabpos="9">
+		<Cursor position="1749" topLine="48" />
 	</File>
 	<File name="typedefs.h" open="0" top="0" tabpos="0">
 		<Cursor position="89" topLine="0" />

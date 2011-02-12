@@ -3,16 +3,17 @@
 
 #include <vector>
 #include "utils/Singleton.h"
-#include "entities/CBaseEntity.h"
+#include "entities/CBaseEntityDescriptor.h"
 
 class DescriptorList: public Singleton<DescriptorList>{
   public:
-    bool registerDescriptor(Descriptor* descriptor);
+    bool registerDescriptor(CBaseEntityDescriptor* descriptor);
   protected:
-    std::vector<Descriptor*> descriptors;
+    std::vector<CBaseEntityDescriptor*> descriptors;
+  friend class CEntMgr;
 };
 
-inline bool DescriptorList::registerDescriptor(Descriptor* descriptor){
+inline bool DescriptorList::registerDescriptor(CBaseEntityDescriptor* descriptor){
   descriptors.push_back(descriptor);
 }
 

@@ -7,9 +7,6 @@
 #include "CEntMgr.h"
 #include "DescriptorList.h"
 
-CBaseEntity::CBaseEntity(){
-  visible=0;
-}
 
 void CBaseEntity::think(){
 
@@ -19,4 +16,22 @@ vec3d CBaseEntity::getPos(){
   return pos;
 }
 
-REGISTER_DESCRIPTOR(CBaseEntity)
+void CBaseEntity::fireInput(const String& name, CBaseEntity* originator){
+  CBaseEntity* originatorTemp = m_originator;
+  m_originator = originator;
+  m_descriptor -> fireInput(name, this, originator);
+  m_originator = originatorTemp;
+}
+
+void CBaseEntity::setValue(const String& name, const json::mValue& value){
+  m_descriptor -> setValue(name, this, value);
+}
+
+void CBaseEntity::print(CBaseEntity* originator){
+  engine->log("rofl test");
+}
+
+
+
+
+REGISTER_ENTITY(CBaseEntity)

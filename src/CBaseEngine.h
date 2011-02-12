@@ -41,12 +41,13 @@ class CBaseEngine{
 
 
   public:
-    CEntMgr*        ents;
+
     CInputMgr*      input;
     CGuiMgr*        gui;
     CFontMgr*       fonts;
     CMaterialMgr*   materials;
     CModelMgr*      models;
+    CEntMgr*        ents;
 
 
                     CBaseEngine();

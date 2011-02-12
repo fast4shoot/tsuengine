@@ -77,9 +77,12 @@
 		<Unit filename="elements\StaticModelPart.cpp" />
 		<Unit filename="elements\StaticModelPart.h" />
 		<Unit filename="elements\Vertex.h" />
-		<Unit filename="entities\BaseEntityDescriptor.h" />
 		<Unit filename="entities\CBaseEntity.cpp" />
 		<Unit filename="entities\CBaseEntity.h" />
+		<Unit filename="entities\CBaseEntityDescriptor.cpp" />
+		<Unit filename="entities\CBaseEntityDescriptor.h" />
+		<Unit filename="entities\CLogicEntity.cpp" />
+		<Unit filename="entities\CLogicEntity.h" />
 		<Unit filename="exceptions.cpp" />
 		<Unit filename="exceptions.h" />
 		<Unit filename="globals.cpp" />

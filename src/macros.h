@@ -13,6 +13,15 @@
 
 #define BUFFER_OFFSET(n) ((char*)NULL + n)
 
-#define REGISTER_DESCRIPTOR(Entity) static bool Entity ## Registered = DescriptorList::instance()->registerDescriptor(new Entity ## Descriptor< Entity >());
+#define ENTITY_DESCRIPTOR(This, Base) \
+class This##Descriptor: public Base##Descriptor{ \
+  protected: \
+    virtual CBaseEntity* createInstance(){ \
+      return new This(); \
+    } \
+  public:
+
+#define REGISTER_ENTITY(Entity) static bool Entity ## Registered = DescriptorList::instance()->registerDescriptor(new Entity ## Descriptor());
+
 
 #endif
