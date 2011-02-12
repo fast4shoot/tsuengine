@@ -1,10 +1,14 @@
 CModelMgr()
-TSUEngine verze 0.19.1981 revize 903
-OpenGL verze 1.4.0 - Build 8.14.10.1930
+TSUEngine verze 0.21.2135 revize 1769
+OpenGL verze 3.3.10362 Compatibility Profile Context
+Zaregistrovane entity: 
+CBaseEntity
+CLogicEntity
+rofl test
+rofl test z logické entity
+imho logicentity test: 123
 Vytvářím materiál wall1
 Vytvářím materiál system/cursor
-Odhaduji typ modelu...
-Vytvářím model...
 Vytvářím materiál yuna0
 Vytvářím materiál yuna1
 Vytvářím materiál yuna3
@@ -15,17 +19,7 @@ Vytvářím materiál yuna7
 Vytvářím materiál yuna8
 Vytvářím materiál yuna9
 Vytvářím materiál yuna10
-Odhaduji typ modelu...
-Vytvářím model...
 Vytvářím materiál barrel
-Odhaduji typ modelu...
-Znovu využívám model...
-Odhaduji typ modelu...
-Znovu využívám model...
-Odhaduji typ modelu...
-Znovu využívám model...
-Odhaduji typ modelu...
-Vytvářím model...
 Vytvářím materiál white
 setOffsets(0, 0)
 setOffsets(2580, 13587)
@@ -56,10 +50,6 @@ setOffsets(10707, 57984)
 setOffsets(11027, 59100)
 setOffsets(11227, 60018)
 setOffsets(11278, 60210)
-uploadData()
-Vertex count: 11324, index count: 60411
-Buffer sizes: 362368, 241644
-uploadData()
 uploadData(): m_vboOffset=6059, m_indexVboOffset=31914, getVertexCount()=2580, getIndexCount()=13587
 uploadData(): m_vboOffset=8639, m_indexVboOffset=45501, getVertexCount()=22, getIndexCount()=60
 uploadData(): m_vboOffset=8661, m_indexVboOffset=45561, getVertexCount()=972, getIndexCount()=6924
@@ -89,4 +79,3 @@ uploadData(): m_vboOffset=10707, m_indexVboOffset=57984, getVertexCount()=320, g
 uploadData(): m_vboOffset=11027, m_indexVboOffset=59100, getVertexCount()=200, getIndexCount()=918
 uploadData(): m_vboOffset=11227, m_indexVboOffset=60018, getVertexCount()=51, getIndexCount()=192
 uploadData(): m_vboOffset=11278, m_indexVboOffset=60210, getVertexCount()=46, getIndexCount()=201
-uploadData()

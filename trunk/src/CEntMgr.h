@@ -8,8 +8,11 @@
 
 class CEntMgr{
   public:
-                  CEntMgr();
+    CEntMgr();
+    void print();
   private:
+    typedef std::map<String, CBaseEntityDescriptor*> DescriptorMap;
+    DescriptorMap m_descriptors;
 //    typedef vector<CBaseEntity> EntityList;
 //    EntityList    entities;
 };

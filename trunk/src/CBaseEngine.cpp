@@ -45,9 +45,12 @@ void CBaseEngine::init(){
   gui = new CGuiMgr();
   models = new CModelMgr();
   gui->init();
+  ents = new CEntMgr();
   m_ready=true;
   log(sformat("TSUEngine verze %d.%d.%d revize %d",AutoVersion::MAJOR,AutoVersion::MINOR,AutoVersion::BUILD,AutoVersion::REVISION));
   log(sformat("OpenGL verze %s",glGetString(GL_VERSION)));
+
+  ents->print();
 
   /*json_spirit::mValue value;
   json_spirit::read( "{\"rofl\": [1337.2, 2, 3]}", value );

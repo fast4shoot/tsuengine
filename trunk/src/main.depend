@@ -331,7 +331,7 @@
 	"CBaseEngine.h"
 	"Font.h"
 
-1297349533 d:\programming\tsuengine\src\version.h
+1297427741 d:\programming\tsuengine\src\version.h
 
 1296199321 source:d:\programming\tsuengine\src\cbaseentity.cpp
 	<vector>
@@ -982,7 +982,7 @@
 	<sstream>
 	<iomanip>
 
-1296934888 source:d:\programming\tsuengine\src\main.cpp
+1297414942 source:d:\programming\tsuengine\src\main.cpp
 	<windows.h>
 	"glew/glew.h"
 	<iostream>
@@ -1025,13 +1025,13 @@
 1296637329 source:d:\programming\tsuengine\src\entities\baseentitydescriptor.cpp
 	"BaseEntityDescriptor.h"
 
-1297349533 d:\programming\tsuengine\src\entities\cbaseentity.h
+1297427741 d:\programming\tsuengine\src\entities\cbaseentity.h
 	<string>
 	<list>
 	"datatypes.h"
 	"CParamMgr.h"
 
-1297347180 source:d:\programming\tsuengine\src\entities\cbaseentity.cpp
+1297414726 source:d:\programming\tsuengine\src\entities\cbaseentity.cpp
 	<vector>
 	"CBaseEntity.h"
 	"CBaseEngine.h"
@@ -1044,7 +1044,7 @@
 1296933974 source:d:\programming\tsuengine\src\utils\singleton.cpp
 	"Singleton.h"
 
-1296729959 source:d:\fast4shoot\programming\tsuengine\src\cbaseengine.cpp
+1297447459 source:d:\fast4shoot\programming\tsuengine\src\cbaseengine.cpp
 	<cmath>
 	<windows.h>
 	<fstream>
@@ -1071,7 +1071,7 @@
 	<OpenGL/glu.h>
 	<GL/glu.h>
 
-1296727571 d:\fast4shoot\programming\tsuengine\src\cbaseengine.h
+1297446887 d:\fast4shoot\programming\tsuengine\src\cbaseengine.h
 	<string>
 	<fstream>
 	"glew/glew.h"
@@ -1114,7 +1114,7 @@
 	"libs/json/json.h"
 	"utils/stringUtils.h"
 
-1296936062 d:\fast4shoot\programming\tsuengine\src\macros.h
+1297460087 d:\fast4shoot\programming\tsuengine\src\macros.h
 	<windows.h>
 	<cstddef>
 
@@ -1172,17 +1172,17 @@
 1296199322 d:\fast4shoot\programming\tsuengine\src\const.h
 	"globals.h"
 
-1296944513 d:\fast4shoot\programming\tsuengine\src\entities\cbaseentity.h
-	<string>
-	<list>
+1297534960 d:\fast4shoot\programming\tsuengine\src\entities\cbaseentity.h
+	<map>
+	<set>
 	"datatypes.h"
-	"CParamMgr.h"
+	"utils/TemplateFriend.h"
 
 1296199321 d:\fast4shoot\programming\tsuengine\src\cparammgr.h
 	<vector>
 	"datatypes.h"
 
-1296723893 d:\fast4shoot\programming\tsuengine\src\centmgr.h
+1297460865 d:\fast4shoot\programming\tsuengine\src\centmgr.h
 	"entities/CBaseEntity.h"
 	"datatypes.h"
 	"const.h"
@@ -1377,12 +1377,14 @@
 	"CBaseEngine.h"
 	"Font.h"
 
-1296947310 d:\fast4shoot\programming\tsuengine\src\version.h
+1297535307 d:\fast4shoot\programming\tsuengine\src\version.h
 
-1296724285 source:d:\fast4shoot\programming\tsuengine\src\centmgr.cpp
+1297535189 source:d:\fast4shoot\programming\tsuengine\src\centmgr.cpp
 	"CEntMgr.h"
 	"entities/CBaseEntity.h"
 	"const.h"
+	"CBaseEngine.h"
+	"DescriptorList.h"
 
 1296199321 source:d:\fast4shoot\programming\tsuengine\src\cfontmgr.cpp
 	<cmath>
@@ -1487,7 +1489,7 @@
 
 1296199307 d:\fast4shoot\programming\tsuengine\src\libs\il\ilut_config.h
 
-1296199321 source:d:\fast4shoot\programming\tsuengine\src\cmodelmgr.cpp
+1297535307 source:d:\fast4shoot\programming\tsuengine\src\cmodelmgr.cpp
 	"CModelMgr.h"
 	<fstream>
 	"CBaseEngine.h"
@@ -1503,10 +1505,10 @@
 1296633796 source:d:\fast4shoot\programming\tsuengine\src\descriptorlist.cpp
 	"DescriptorList.h"
 
-1296740264 d:\fast4shoot\programming\tsuengine\src\descriptorlist.h
+1297530712 d:\fast4shoot\programming\tsuengine\src\descriptorlist.h
 	<vector>
 	"utils/Singleton.h"
-	"entities/CBaseEntity.h"
+	"entities/CBaseEntityDescriptor.h"
 
 1296934749 d:\fast4shoot\programming\tsuengine\src\utils\singleton.h
 	<cstring>
@@ -1564,7 +1566,7 @@
 
 1296731432 d:\fast4shoot\programming\tsuengine\src\entities\baseentitydescriptor.h
 
-1296936141 source:d:\fast4shoot\programming\tsuengine\src\entities\cbaseentity.cpp
+1297534823 source:d:\fast4shoot\programming\tsuengine\src\entities\cbaseentity.cpp
 	<vector>
 	"CBaseEntity.h"
 	"CBaseEngine.h"
@@ -2046,7 +2048,7 @@
 	<sstream>
 	<iomanip>
 
-1296934888 source:d:\fast4shoot\programming\tsuengine\src\main.cpp
+1297414942 source:d:\fast4shoot\programming\tsuengine\src\main.cpp
 	<windows.h>
 	"glew/glew.h"
 	<iostream>
@@ -2075,4 +2077,23 @@
 
 1296199321 source:d:\fast4shoot\programming\tsuengine\src\vec3d.cpp
 	"vec3d.h"
+
+1297442087 d:\fast4shoot\programming\tsuengine\src\utils\templatefriend.h
+
+1297535132 source:d:\fast4shoot\programming\tsuengine\src\entities\clogicentity.cpp
+	"CLogicEntity.h"
+	"DescriptorList.h"
+	"CBaseEngine.h"
+
+1297534960 d:\fast4shoot\programming\tsuengine\src\entities\clogicentity.h
+	"CBaseEntity.h"
+	"CBaseEntityDescriptor.h"
+
+1297535057 d:\fast4shoot\programming\tsuengine\src\entities\cbaseentitydescriptor.h
+	"entities/CBaseEntity.h"
+	"CBaseEngine.h"
+
+1297533982 source:d:\fast4shoot\programming\tsuengine\src\entities\cbaseentitydescriptor.cpp
+	"CBaseEntityDescriptor.h"
+	"CBaseEngine.h"
 

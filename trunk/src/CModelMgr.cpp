@@ -22,7 +22,6 @@ Model* CModelMgr::getModel(String name){
   if(file.good()){
     json::mValue value;
     json::read(file, value);
-    engine->log("Odhaduji typ modelu...");
     ModelTypeMap::iterator it = modelTypeMap.find(value.get_obj().find("type")->second.get_str());
     if(it != modelTypeMap.end()){
       ModelType mt = it->second;
@@ -50,11 +49,9 @@ Model* CModelMgr::getModel(String name){
 StaticModel* CModelMgr::loadStaticModel(const String& name, const json::mValue& data){
   StaticModel* model;
   if(staticModels.find(name) == staticModels.end()){
-    engine->log("Vytvářím model...");
     model = new StaticModel(data);
     staticModels[name] = model;
   }else{
-    engine->log("Znovu využívám model...");
     model = staticModels[name];
   }
   return model;
@@ -73,25 +70,25 @@ void CModelMgr::uploadData(){
     }
   }
 
-  engine->log("uploadData()");
+  //engine->log("uploadData()");
   engine->checkGl();
 
   glBindBufferARB(GL_ARRAY_BUFFER_ARB, staticVbo);
   glBindBufferARB(GL_ELEMENT_ARRAY_BUFFER, staticIndexVbo);
-  engine->log(sformat("Vertex count: %d, index count: %d", staticVertexCount, staticIndexCount));
-  engine->log(sformat("Buffer sizes: %d, %d", sizeof(StaticVertexData)*staticVertexCount, sizeof(unsigned int)*staticIndexCount));
+  //engine->log(sformat("Vertex count: %d, index count: %d", staticVertexCount, staticIndexCount));
+  //engine->log(sformat("Buffer sizes: %d, %d", sizeof(StaticVertexData)*staticVertexCount, sizeof(unsigned int)*staticIndexCount));
 
   glBufferDataARB(GL_ARRAY_BUFFER_ARB, sizeof(StaticVertexData)*staticVertexCount, NULL, GL_STATIC_DRAW);
   glBufferDataARB(GL_ELEMENT_ARRAY_BUFFER_ARB, sizeof(unsigned int)*staticIndexCount, NULL, GL_STATIC_DRAW);
 
-  engine->log("uploadData()");
+  //engine->log("uploadData()");
   engine->checkGl();
 
   for(ModelHandleList::iterator it = modelHandles.begin(); it != modelHandles.end(); it++){
     (*it)->getModelRepresentation()->uploadData();
   }
 
-  engine->log("uploadData()");
+  //engine->log("uploadData()");
   engine->checkGl();
 }
 

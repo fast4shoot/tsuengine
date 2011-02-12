@@ -2,9 +2,30 @@
 #include "entities/CBaseEntity.h"
 #include "const.h"
 
+#include <map>
+
+#include "CBaseEngine.h"
+#include "DescriptorList.h"
+
 CEntMgr::CEntMgr(){
-/*  entCount=0;
-  lastSearchCount=0;  */
+  std::vector<CBaseEntityDescriptor*>& l = DescriptorList::instance()->descriptors;
+  for(std::vector<CBaseEntityDescriptor*>::iterator it = l.begin(); it != l.end(); ++it){
+    (*it)->doRegister(*it);
+    m_descriptors[(*it)->getClassname()] = (*it);
+  }
+}
+
+void CEntMgr::print(){
+  engine->log("Zaregistrovane entity: ");
+  for(DescriptorMap::iterator it = m_descriptors.begin(); it != m_descriptors.end(); ++it){
+    engine->log((*it).second->getClassname());
+  }
+  CBaseEntity* cbe = m_descriptors["CBaseEntity"]->create();
+  cbe->fireInput("print",NULL);
+  cbe = m_descriptors["CLogicEntity"]->create();
+  cbe->fireInput("print",NULL);
+  cbe->setValue("random",123);
+  cbe->fireInput("test",NULL);
 }
 /*
 int CEntMgr::getEntCount(){
