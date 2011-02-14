@@ -4,7 +4,7 @@
 #include <list>
 #include "typedefs.h"
 #include "Vertex.h"
-#include "libs/json/json.h"
+#include "json/json.h"
 #include "elements/StaticModelPart.h"
 #include "elements/ModelBase.h"
 

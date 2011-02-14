@@ -1044,7 +1044,7 @@
 1296933974 source:d:\programming\tsuengine\src\utils\singleton.cpp
 	"Singleton.h"
 
-1297447459 source:d:\fast4shoot\programming\tsuengine\src\cbaseengine.cpp
+1297542906 source:d:\fast4shoot\programming\tsuengine\src\cbaseengine.cpp
 	<cmath>
 	<windows.h>
 	<fstream>
@@ -1060,7 +1060,7 @@
 	"utils/stringUtils.h"
 	"gui/CText.h"
 	"version.h"
-	"libs/json/json.h"
+	"json/json.h"
 	"elements/StaticModel.h"
 
 1296199319 d:\fast4shoot\programming\tsuengine\src\libs\glew\glew.h
@@ -1098,20 +1098,20 @@
 	"vec2d.h"
 	"vec3d.h"
 
-1296199321 d:\fast4shoot\programming\tsuengine\src\vec2d.h
+1297542811 d:\fast4shoot\programming\tsuengine\src\vec2d.h
 	<cmath>
 	"vecOpBase.h"
-	"libs/json/json.h"
+	"json/json.h"
 
 1296199321 d:\fast4shoot\programming\tsuengine\src\vecopbase.h
 	<cmath>
 	"vecBase.h"
 
-1296947310 d:\fast4shoot\programming\tsuengine\src\vecbase.h
+1297542803 d:\fast4shoot\programming\tsuengine\src\vecbase.h
 	<cmath>
 	<exception>
 	"macros.h"
-	"libs/json/json.h"
+	"json/json.h"
 	"utils/stringUtils.h"
 
 1297460087 d:\fast4shoot\programming\tsuengine\src\macros.h
@@ -1316,21 +1316,21 @@
 1296199321 d:\fast4shoot\programming\tsuengine\src\elements\modelbase.h
 	"glew/glew.h"
 
-1296199321 d:\fast4shoot\programming\tsuengine\src\elements\staticmodel.h
+1297542892 d:\fast4shoot\programming\tsuengine\src\elements\staticmodel.h
 	<list>
 	"typedefs.h"
 	"Vertex.h"
-	"libs/json/json.h"
+	"json/json.h"
 	"elements/StaticModelPart.h"
 	"elements/ModelBase.h"
 
-1296199321 d:\fast4shoot\programming\tsuengine\src\elements\vertex.h
+1297542885 d:\fast4shoot\programming\tsuengine\src\elements\vertex.h
 	"vec2d.h"
 	"vec3d.h"
-	"libs/json/json.h"
+	"json/json.h"
 
-1296199321 d:\fast4shoot\programming\tsuengine\src\elements\staticmodelpart.h
-	"libs/json/json.h"
+1297542899 d:\fast4shoot\programming\tsuengine\src\elements\staticmodelpart.h
+	"json/json.h"
 	"elements/Vertex.h"
 	"elements/Material.h"
 
@@ -1377,12 +1377,13 @@
 	"CBaseEngine.h"
 	"Font.h"
 
-1297535307 d:\fast4shoot\programming\tsuengine\src\version.h
+1297543434 d:\fast4shoot\programming\tsuengine\src\version.h
 
-1297535189 source:d:\fast4shoot\programming\tsuengine\src\centmgr.cpp
+1297536382 source:d:\fast4shoot\programming\tsuengine\src\centmgr.cpp
 	"CEntMgr.h"
 	"entities/CBaseEntity.h"
 	"const.h"
+	<map>
 	"CBaseEngine.h"
 	"DescriptorList.h"
 
@@ -1393,14 +1394,14 @@
 	"Font.h"
 	"macros.h"
 
-1296199321 source:d:\fast4shoot\programming\tsuengine\src\cguimgr.cpp
+1297542935 source:d:\fast4shoot\programming\tsuengine\src\cguimgr.cpp
 	"CGuiMgr.h"
-	"CGuiPanel.h"
-	"CMainMenu.h"
+	"gui/CGuiPanel.h"
+	"gui/CMainMenu.h"
 	"const.h"
 	"macros.h"
 	"CBaseEngine.h"
-	"CCenteredWindow.h"
+	"gui/CCenteredWindow.h"
 
 1296199297 d:\fast4shoot\programming\tsuengine\src\gui\cmainmenu.h
 	"CGuiPanel.h"
@@ -1443,12 +1444,12 @@
 	"datatypes.h"
 	"CBaseEngine.h"
 
-1296199321 source:d:\fast4shoot\programming\tsuengine\src\cmaterialmgr.cpp
+1297542955 source:d:\fast4shoot\programming\tsuengine\src\cmaterialmgr.cpp
 	"CMaterialMgr.h"
 	<utility>
-	"libs/IL/il.h"
-	"libs/IL/ilu.h"
-	"libs/IL/ilut.h"
+	"IL/il.h"
+	"IL/ilu.h"
+	"IL/ilut.h"
 	"CBaseEngine.h"
 
 1296199307 d:\fast4shoot\programming\tsuengine\src\libs\il\il.h
@@ -1528,14 +1529,14 @@
 	<cstdlib>
 	<windows.h>
 
-1296944548 source:d:\fast4shoot\programming\tsuengine\src\elements\material.cpp
+1297542980 source:d:\fast4shoot\programming\tsuengine\src\elements\material.cpp
 	"Material.h"
 	<fstream>
 	<streambuf>
 	<string>
 	"typedefs.h"
-	"libs/json/json.h"
-	"libs/il/ilut.h"
+	"json/json.h"
+	"il/ilut.h"
 	"utils/stringUtils.h"
 	"CBaseEngine.h"
 
@@ -1681,9 +1682,9 @@
 1296199297 source:d:\fast4shoot\programming\tsuengine\src\gui\ctext.cpp
 	"CText.h"
 
-1296199297 source:d:\fast4shoot\programming\tsuengine\src\gui\ctextfield.cpp
+1297543060 source:d:\fast4shoot\programming\tsuengine\src\gui\ctextfield.cpp
 	"CTextField.h"
-	"libs/utf8/utf8.h"
+	"utf8/utf8.h"
 
 1296199307 d:\fast4shoot\programming\tsuengine\src\libs\utf8\utf8.h
 	"utf8/checked.h"
@@ -2048,7 +2049,7 @@
 	<sstream>
 	<iomanip>
 
-1297414942 source:d:\fast4shoot\programming\tsuengine\src\main.cpp
+1297543086 source:d:\fast4shoot\programming\tsuengine\src\main.cpp
 	<windows.h>
 	"glew/glew.h"
 	<iostream>
@@ -2056,7 +2057,7 @@
 	<string>
 	<exception>
 	<iterator>
-	"libs/utf8/utf8.h"
+	"utf8/utf8.h"
 	"const.h"
 	"datatypes.h"
 	"globals.h"
@@ -2096,4 +2097,533 @@
 1297533982 source:d:\fast4shoot\programming\tsuengine\src\entities\cbaseentitydescriptor.cpp
 	"CBaseEntityDescriptor.h"
 	"CBaseEngine.h"
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\glew\glew.h
+	<stddef.h>
+	<inttypes.h>
+	<stdint.h>
+	<inttypes.h>
+	<OpenGL/glu.h>
+	<GL/glu.h>
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftgl\ftgl.h
+	<ft2build.h>
+	<FTGL/FTPoint.h>
+	<FTGL/FTBBox.h>
+	<FTGL/FTBuffer.h>
+	<FTGL/FTGlyph.h>
+	<FTGL/FTBitmapGlyph.h>
+	<FTGL/FTBufferGlyph.h>
+	<FTGL/FTExtrdGlyph.h>
+	<FTGL/FTOutlineGlyph.h>
+	<FTGL/FTPixmapGlyph.h>
+	<FTGL/FTPolyGlyph.h>
+	<FTGL/FTTextureGlyph.h>
+	<FTGL/FTFont.h>
+	<FTGL/FTGLBitmapFont.h>
+	<FTGL/FTBufferFont.h>
+	<FTGL/FTGLExtrdFont.h>
+	<FTGL/FTGLOutlineFont.h>
+	<FTGL/FTGLPixmapFont.h>
+	<FTGL/FTGLPolygonFont.h>
+	<FTGL/FTGLTextureFont.h>
+	<FTGL/FTLayout.h>
+	<FTGL/FTSimpleLayout.h>
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ft2build.h
+	<freetype/config/ftheader.h>
+
+1297542201 d:\fast4shoot\programming\tsuengine\libs\freetype\config\ftheader.h
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\json\json.h
+	"json_spirit.h"
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\json\json_spirit.h
+	"json_spirit_value.h"
+	"json_spirit_reader.h"
+	"json_spirit_writer.h"
+	"json_spirit_utils.h"
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\json\json_spirit_value.h
+	<vector>
+	<map>
+	<string>
+	<cassert>
+	<sstream>
+	<stdexcept>
+	<boost/config.hpp>
+	<boost/cstdint.hpp>
+	<boost/shared_ptr.hpp>
+	<boost/variant.hpp>
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\json\json_spirit_reader.h
+	"json_spirit_value.h"
+	"json_spirit_error_position.h"
+	<iostream>
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\json\json_spirit_error_position.h
+	<string>
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\json\json_spirit_writer.h
+	"json_spirit_value.h"
+	<iostream>
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\json\json_spirit_utils.h
+	"json_spirit_value.h"
+	<map>
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftgl\ftpoint.h
+	<FTGL/ftgl.h>
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftgl\ftbbox.h
+	<FTGL/ftgl.h>
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftgl\ftbuffer.h
+	<FTGL/ftgl.h>
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftgl\ftglyph.h
+	<FTGL/ftgl.h>
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftgl\ftbitmapglyph.h
+	<FTGL/ftgl.h>
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftgl\ftbufferglyph.h
+	<FTGL/ftgl.h>
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftgl\ftextrdglyph.h
+	<FTGL/ftgl.h>
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftgl\ftoutlineglyph.h
+	<FTGL/ftgl.h>
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftgl\ftpixmapglyph.h
+	<FTGL/ftgl.h>
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftgl\ftpolyglyph.h
+	<FTGL/ftgl.h>
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftgl\fttextureglyph.h
+	<FTGL/ftgl.h>
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftgl\ftfont.h
+	<FTGL/ftgl.h>
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftgl\ftglbitmapfont.h
+	<FTGL/ftgl.h>
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftgl\ftbufferfont.h
+	<FTGL/ftgl.h>
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftgl\ftglextrdfont.h
+	<FTGL/ftgl.h>
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftgl\ftgloutlinefont.h
+	<FTGL/ftgl.h>
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftgl\ftglpixmapfont.h
+	<FTGL/ftgl.h>
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftgl\ftglpolygonfont.h
+	<FTGL/ftgl.h>
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftgl\ftgltexturefont.h
+	<FTGL/ftgl.h>
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftgl\ftlayout.h
+	<FTGL/ftgl.h>
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftgl\ftsimplelayout.h
+	<FTGL/ftgl.h>
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\il\il.h
+	<stdio.h>
+	<limits.h>
+	<wchar.h>
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\il\ilu.h
+	<IL/il.h>
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\il\ilut.h
+	<IL/il.h>
+	<IL/ilu.h>
+	"IL/config.h"
+	"IL/config.h"
+	<IL/ilut_config.h>
+	<windows.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<stdlib.h>
+	<crtdbg.h>
+	<windows.h>
+	<d3d8.h>
+	<d3d9.h>
+	<rpcsal.h>
+	<sal.h>
+	<d3d10.h>
+	<X11/Xlib.h>
+	<X11/Xutil.h>
+	<sys/ipc.h>
+	<sys/shm.h>
+	<X11/extensions/XShm.h>
+	<allegro.h>
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\il\config.h
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\il\ilut_config.h
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\utf8\utf8.h
+	"utf8/checked.h"
+	"utf8/unchecked.h"
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\utf8\utf8\checked.h
+	"core.h"
+	<stdexcept>
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\utf8\utf8\core.h
+	<iterator>
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\utf8\utf8\unchecked.h
+	"core.h"
+
+1297542202 source:d:\fast4shoot\programming\tsuengine\libs\ftgl\ftbuffer.cpp
+	"config.h"
+	"FTGL/ftgl.h"
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\config.h
+
+1297542202 source:d:\fast4shoot\programming\tsuengine\libs\ftgl\ftcharmap.cpp
+	"config.h"
+	"FTFace.h"
+	"FTCharmap.h"
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftface.h
+	<ft2build.h>
+	"FTGL/ftgl.h"
+	"FTSize.h"
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftsize.h
+	<ft2build.h>
+	"FTGL/ftgl.h"
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftcharmap.h
+	<ft2build.h>
+	"FTGL/ftgl.h"
+	"FTCharToGlyphIndexMap.h"
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftchartoglyphindexmap.h
+	<stdlib.h>
+	"FTGL/ftgl.h"
+
+1297542202 source:d:\fast4shoot\programming\tsuengine\libs\ftgl\ftcontour.cpp
+	"config.h"
+	"FTContour.h"
+	<math.h>
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftcontour.h
+	"FTGL/ftgl.h"
+	"FTVector.h"
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftvector.h
+	"FTGL/ftgl.h"
+
+1297542202 source:d:\fast4shoot\programming\tsuengine\libs\ftgl\ftface.cpp
+	"config.h"
+	"FTFace.h"
+	"FTLibrary.h"
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftlibrary.h
+	<ft2build.h>
+	"FTGL/ftgl.h"
+
+1297542202 source:d:\fast4shoot\programming\tsuengine\libs\ftgl\ftfont\ftbitmapfont.cpp
+	"config.h"
+	"FTGL/ftgl.h"
+	"FTInternals.h"
+	"FTBitmapFontImpl.h"
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftinternals.h
+	"FTGL/ftgl.h"
+	<stdlib.h>
+	<stdio.h>
+	<windows.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	"SDL_opengl.h"
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<GL/gl.h>
+	<mesa/glu.h>
+	<GL/glu.h>
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftfont\ftbitmapfontimpl.h
+	"FTFontImpl.h"
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftfont\ftfontimpl.h
+	"FTGL/ftgl.h"
+	"FTFace.h"
+
+1297542202 source:d:\fast4shoot\programming\tsuengine\libs\ftgl\ftfont\ftbufferfont.cpp
+	"config.h"
+	<wchar.h>
+	"FTGL/ftgl.h"
+	"FTInternals.h"
+	"FTBufferFontImpl.h"
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftfont\ftbufferfontimpl.h
+	"FTFontImpl.h"
+
+1297542202 source:d:\fast4shoot\programming\tsuengine\libs\ftgl\ftfont\ftextrudefont.cpp
+	"config.h"
+	"FTGL/ftgl.h"
+	"FTInternals.h"
+	"FTExtrudeFontImpl.h"
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftfont\ftextrudefontimpl.h
+	"FTFontImpl.h"
+
+1297542202 source:d:\fast4shoot\programming\tsuengine\libs\ftgl\ftfont\ftfont.cpp
+	"config.h"
+	"FTInternals.h"
+	"FTUnicode.h"
+	"FTFontImpl.h"
+	"FTBitmapFontImpl.h"
+	"FTExtrudeFontImpl.h"
+	"FTOutlineFontImpl.h"
+	"FTPixmapFontImpl.h"
+	"FTPolygonFontImpl.h"
+	"FTTextureFontImpl.h"
+	"FTGlyphContainer.h"
+	"FTFace.h"
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftunicode.h
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftfont\ftoutlinefontimpl.h
+	"FTFontImpl.h"
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftfont\ftpixmapfontimpl.h
+	"FTFontImpl.h"
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftfont\ftpolygonfontimpl.h
+	"FTFontImpl.h"
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftfont\fttexturefontimpl.h
+	"FTFontImpl.h"
+	"FTVector.h"
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftglyphcontainer.h
+	<ft2build.h>
+	"FTGL/ftgl.h"
+	"FTVector.h"
+
+1297542202 source:d:\fast4shoot\programming\tsuengine\libs\ftgl\ftfont\ftfontglue.cpp
+	"config.h"
+	"FTInternals.h"
+
+1297542202 source:d:\fast4shoot\programming\tsuengine\libs\ftgl\ftfont\ftoutlinefont.cpp
+	"config.h"
+	"FTGL/ftgl.h"
+	"FTInternals.h"
+	"FTOutlineFontImpl.h"
+
+1297542202 source:d:\fast4shoot\programming\tsuengine\libs\ftgl\ftfont\ftpixmapfont.cpp
+	"config.h"
+	"FTGL/ftgl.h"
+	"FTInternals.h"
+	"FTPixmapFontImpl.h"
+
+1297542202 source:d:\fast4shoot\programming\tsuengine\libs\ftgl\ftfont\ftpolygonfont.cpp
+	"config.h"
+	"FTGL/ftgl.h"
+	"FTInternals.h"
+	"FTPolygonFontImpl.h"
+
+1297542202 source:d:\fast4shoot\programming\tsuengine\libs\ftgl\ftfont\fttexturefont.cpp
+	"config.h"
+	<cassert>
+	<string>
+	"FTGL/ftgl.h"
+	"FTInternals.h"
+	"../FTGlyph/FTTextureGlyphImpl.h"
+	"./FTTextureFontImpl.h"
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftglyph\fttextureglyphimpl.h
+	"FTGlyphImpl.h"
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftglyph\ftglyphimpl.h
+	"FTGL/ftgl.h"
+
+1297542202 source:d:\fast4shoot\programming\tsuengine\libs\ftgl\ftglyphcontainer.cpp
+	"config.h"
+	"FTGL/ftgl.h"
+	"FTGlyphContainer.h"
+	"FTFace.h"
+	"FTCharmap.h"
+
+1297542202 source:d:\fast4shoot\programming\tsuengine\libs\ftgl\ftglyph\ftbitmapglyph.cpp
+	"config.h"
+	<string>
+	"FTGL/ftgl.h"
+	"FTInternals.h"
+	"FTBitmapGlyphImpl.h"
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftglyph\ftbitmapglyphimpl.h
+	"FTGlyphImpl.h"
+
+1297542202 source:d:\fast4shoot\programming\tsuengine\libs\ftgl\ftglyph\ftbufferglyph.cpp
+	"config.h"
+	<string>
+	"FTGL/ftgl.h"
+	"FTInternals.h"
+	"FTBufferGlyphImpl.h"
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftglyph\ftbufferglyphimpl.h
+	"FTGlyphImpl.h"
+
+1297542202 source:d:\fast4shoot\programming\tsuengine\libs\ftgl\ftglyph\ftextrudeglyph.cpp
+	"config.h"
+	<iostream>
+	"FTGL/ftgl.h"
+	"FTInternals.h"
+	"FTExtrudeGlyphImpl.h"
+	"FTVectoriser.h"
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftglyph\ftextrudeglyphimpl.h
+	"FTGlyphImpl.h"
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftvectoriser.h
+	"FTGL/ftgl.h"
+	"FTContour.h"
+	"FTList.h"
+	"FTVector.h"
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftlist.h
+	"FTGL/ftgl.h"
+
+1297542202 source:d:\fast4shoot\programming\tsuengine\libs\ftgl\ftglyph\ftglyph.cpp
+	"config.h"
+	"FTGL/ftgl.h"
+	"FTInternals.h"
+	"FTGlyphImpl.h"
+
+1297542202 source:d:\fast4shoot\programming\tsuengine\libs\ftgl\ftglyph\ftglyphglue.cpp
+	"config.h"
+	"FTGL/ftgl.h"
+	"FTInternals.h"
+
+1297542202 source:d:\fast4shoot\programming\tsuengine\libs\ftgl\ftglyph\ftoutlineglyph.cpp
+	"config.h"
+	"FTGL/ftgl.h"
+	"FTInternals.h"
+	"FTOutlineGlyphImpl.h"
+	"FTVectoriser.h"
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftglyph\ftoutlineglyphimpl.h
+	"FTGlyphImpl.h"
+
+1297542202 source:d:\fast4shoot\programming\tsuengine\libs\ftgl\ftglyph\ftpixmapglyph.cpp
+	"config.h"
+	<math.h>
+	"FTGL/ftgl.h"
+	"FTInternals.h"
+	"FTPixmapGlyphImpl.h"
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftglyph\ftpixmapglyphimpl.h
+	"FTGlyphImpl.h"
+
+1297542202 source:d:\fast4shoot\programming\tsuengine\libs\ftgl\ftglyph\ftpolygonglyph.cpp
+	"config.h"
+	"FTGL/ftgl.h"
+	"FTInternals.h"
+	"FTPolygonGlyphImpl.h"
+	"FTVectoriser.h"
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftglyph\ftpolygonglyphimpl.h
+	"FTGlyphImpl.h"
+
+1297542202 source:d:\fast4shoot\programming\tsuengine\libs\ftgl\ftglyph\fttextureglyph.cpp
+	"config.h"
+	<math.h>
+	"FTGL/ftgl.h"
+	"FTInternals.h"
+	"FTTextureGlyphImpl.h"
+
+1297542202 source:d:\fast4shoot\programming\tsuengine\libs\ftgl\ftlayout\ftlayout.cpp
+	"config.h"
+	"FTGL/ftgl.h"
+	"../FTFont/FTFontImpl.h"
+	"./FTLayoutImpl.h"
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftlayout\ftlayoutimpl.h
+	"FTSize.h"
+	"FTGlyphContainer.h"
+
+1297542202 source:d:\fast4shoot\programming\tsuengine\libs\ftgl\ftlayout\ftlayoutglue.cpp
+	"config.h"
+	"FTInternals.h"
+
+1297542202 source:d:\fast4shoot\programming\tsuengine\libs\ftgl\ftlayout\ftsimplelayout.cpp
+	"config.h"
+	<ctype.h>
+	<wctype.h>
+	"FTInternals.h"
+	"FTUnicode.h"
+	"FTGlyphContainer.h"
+	"FTSimpleLayoutImpl.h"
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\ftgl\ftlayout\ftsimplelayoutimpl.h
+	"FTLayoutImpl.h"
+
+1297542202 source:d:\fast4shoot\programming\tsuengine\libs\ftgl\ftlibrary.cpp
+	"config.h"
+	"FTLibrary.h"
+
+1297542202 source:d:\fast4shoot\programming\tsuengine\libs\ftgl\ftpoint.cpp
+	"config.h"
+	<math.h>
+	"FTGL/ftgl.h"
+
+1297543434 source:d:\fast4shoot\programming\tsuengine\libs\ftgl\ftsize.cpp
+	"config.h"
+	"FTSize.h"
+
+1297542202 source:d:\fast4shoot\programming\tsuengine\libs\ftgl\ftvectoriser.cpp
+	"config.h"
+	"FTInternals.h"
+	"FTVectoriser.h"
+
+1297542202 source:d:\fast4shoot\programming\tsuengine\libs\json\json_spirit_reader.cpp
+	"json_spirit_reader.h"
+	"json_spirit_reader_template.h"
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\json\json_spirit_reader_template.h
+	"json_spirit_value.h"
+	"json_spirit_error_position.h"
+	<boost/bind.hpp>
+	<boost/function.hpp>
+	<boost/version.hpp>
+	<boost/spirit/include/classic_core.hpp>
+	<boost/spirit/include/classic_confix.hpp>
+	<boost/spirit/include/classic_escape_char.hpp>
+	<boost/spirit/include/classic_multi_pass.hpp>
+	<boost/spirit/include/classic_position_iterator.hpp>
+	<boost/spirit/core.hpp>
+	<boost/spirit/utility/confix.hpp>
+	<boost/spirit/utility/escape_char.hpp>
+	<boost/spirit/iterator/multi_pass.hpp>
+	<boost/spirit/iterator/position_iterator.hpp>
+
+1297542202 source:d:\fast4shoot\programming\tsuengine\libs\json\json_spirit_value.cpp
+	"json_spirit_value.h"
+
+1297542202 source:d:\fast4shoot\programming\tsuengine\libs\json\json_spirit_writer.cpp
+	"json_spirit_writer.h"
+	"json_spirit_writer_template.h"
+
+1297542202 d:\fast4shoot\programming\tsuengine\libs\json\json_spirit_writer_template.h
+	"json_spirit_value.h"
+	<cassert>
+	<sstream>
+	<iomanip>
 
