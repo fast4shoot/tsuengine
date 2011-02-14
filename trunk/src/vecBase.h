@@ -4,7 +4,7 @@
 #include <cmath>
 #include <exception>
 #include "macros.h"
-#include "libs/json/json.h"
+#include "json/json.h"
 #include "utils/stringUtils.h"
 
 template<class T, int N, class Derived>

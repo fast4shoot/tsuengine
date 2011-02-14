@@ -4,8 +4,8 @@
 #include <streambuf>
 #include <string>
 #include "typedefs.h"
-#include "libs/json/json.h"
-#include "libs/il/ilut.h"
+#include "json/json.h"
+#include "il/ilut.h"
 #include "utils/stringUtils.h"
 #include "CBaseEngine.h"
 

@@ -1,9 +1,9 @@
 #include "CMaterialMgr.h"
 
 #include <utility>
-#include "libs/IL/il.h"
-#include "libs/IL/ilu.h"
-#include "libs/IL/ilut.h"
+#include "IL/il.h"
+#include "IL/ilu.h"
+#include "IL/ilut.h"
 
 #include "CBaseEngine.h"
 

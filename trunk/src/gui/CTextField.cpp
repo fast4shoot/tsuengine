@@ -1,5 +1,5 @@
 #include "CTextField.h"
-#include "libs/utf8/utf8.h"
+#include "utf8/utf8.h"
 
 CTextField::CTextField(const vec2d& position, const vec2d& size, const String& text):
   CGuiPanel(position,size),

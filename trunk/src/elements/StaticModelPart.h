@@ -1,7 +1,7 @@
 #ifndef STATICMODELPART_H
 #define STATICMODELPART_H
 
-#include "libs/json/json.h"
+#include "json/json.h"
 #include "elements/Vertex.h"
 #include "elements/Material.h"
 

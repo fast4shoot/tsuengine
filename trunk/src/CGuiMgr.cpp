@@ -1,10 +1,10 @@
 #include "CGuiMgr.h"
-#include "CGuiPanel.h"
-#include "CMainMenu.h"
+#include "gui/CGuiPanel.h"
+#include "gui/CMainMenu.h"
 #include "const.h"
 #include "macros.h"
 #include "CBaseEngine.h"
-#include "CCenteredWindow.h"
+#include "gui/CCenteredWindow.h"
 
 CGuiMgr::CGuiMgr(){}
 

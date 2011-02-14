@@ -4,7 +4,7 @@
 #include "vec2d.h"
 #include "vec3d.h"
 
-#include "libs/json/json.h"
+#include "json/json.h"
 
 class Vertex{
   public:

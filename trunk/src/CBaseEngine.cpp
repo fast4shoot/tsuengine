@@ -15,7 +15,7 @@
 #include "utils/stringUtils.h"
 #include "gui/CText.h"
 #include "version.h"
-#include "libs/json/json.h"
+#include "json/json.h"
 
 #include "elements/StaticModel.h"
 

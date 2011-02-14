@@ -7,7 +7,7 @@
 #include <exception>
 #include <iterator>
 
-#include "libs/utf8/utf8.h"
+#include "utf8/utf8.h"
 
 #include "const.h"
 #include "datatypes.h"

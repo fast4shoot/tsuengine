@@ -3,7 +3,7 @@
 
 #include <cmath>
 #include "vecOpBase.h"
-#include "libs/json/json.h"
+#include "json/json.h"
 
 class vec2d: public vecOpBase<double,2,vec2d>{
   public:
