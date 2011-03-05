@@ -5,27 +5,27 @@
 #include "CBaseEngine.h"
 #include "elements/Plane.h"
 
-StaticModelPart::StaticModelPart(json::mValue& data){
+StaticModelPart::StaticModelPart(const json::mValue& data){
   double radiusSqr=0;
 
-  json::mObject& obj = data.get_obj();
+  const json::mObject& obj = data.get_obj();
   m_material = engine->materials->getMaterial(obj.find("material")->second.get_str());
 
-  json::mArray& vertices = obj.find("vertices")->second.get_array();
+  const json::mArray& vertices = obj.find("vertices")->second.get_array();
   m_vertices.reserve(vertices.size());
 
-  for(json::mArray::iterator it=vertices.begin(); it!=vertices.end(); ++it){
+  for(json::mArray::const_iterator it=vertices.begin(); it!=vertices.end(); ++it){
     m_vertices.push_back(Vertex(*it));
   }
 
-  json::mArray& indices = obj.find("indices")->second.get_array();
+  const json::mArray& indices = obj.find("indices")->second.get_array();
   m_indices.reserve(indices.size());
 
   if(indices.size()%3){
     engine->warning(sformat("Incorrect number of indices: %d", indices.size()));
   }
 
-  for(json::mArray::iterator it=indices.begin(); it!=indices.end(); ++it){
+  for(json::mArray::const_iterator it=indices.begin(); it!=indices.end(); ++it){
     int i1=(*it).get_int();
     ++it;
     if(it==indices.end()) break;

@@ -7,12 +7,12 @@
 #include "elements/StaticModel.h"
 
 class CModelMgr{
-  typedef std::map<String,StaticModel*> StaticModelList;
+  typedef std::map<String,StaticModelImpl*> StaticModelList;
   typedef std::vector<Model*> ModelHandleList;
   typedef std::map<String,ModelType> ModelTypeMap;
   public:
     CModelMgr();
-    Model*  getModel(String name);
+    Model*  getModel(const String& name);
     void uploadData();
     void draw();
 
@@ -25,7 +25,7 @@ class CModelMgr{
     GLuint dynamicVbo;
     GLuint dynamicIndexVbo;
 
-    StaticModel* loadStaticModel(const String& name, const json::mValue& data);
+    StaticModelImpl* loadStaticModel(const String& name, const json::mValue& data);
 
 };
 

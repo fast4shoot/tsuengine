@@ -5,8 +5,8 @@
 #include "glew/glew.h"
 
 CModelMgr::CModelMgr(){
-  modelTypeMap["static"]=STATIC;
-  modelTypeMap["dynamic"]=DYNAMIC;
+  modelTypeMap["static"]=M_STATIC;
+  modelTypeMap["dynamic"]=M_DYNAMIC;
   GLuint buff[4];
   glGenBuffersARB(4, buff);
   staticVbo = buff[0];
@@ -17,21 +17,27 @@ CModelMgr::CModelMgr(){
   engine->checkGl();
 }
 
-Model* CModelMgr::getModel(String name){
+Model* CModelMgr::getModel(const String& name){
+  if(staticModels.find(name) != staticModels.end()){
+    Model* mdl = new StaticModel(staticModels[name]);
+    modelHandles.push_back(mdl);
+    return mdl;
+  }
+
   std::ifstream file(("models/"+name+".json").c_str());
   if(file.good()){
     json::mValue value;
     json::read(file, value);
     ModelTypeMap::iterator it = modelTypeMap.find(value.get_obj().find("type")->second.get_str());
     if(it != modelTypeMap.end()){
+      engine->log("Vytvářím model "+name);
       ModelType mt = it->second;
-      ModelBase* mb;
-      if(mt==STATIC){
-        mb = loadStaticModel(name,value);
+      Model* mdl;
+      if(mt==M_STATIC){
+        mdl = new StaticModel(loadStaticModel(name,value));
       }
-      Model* mh = new Model(mb,mt);
-      modelHandles.push_back(mh);
-      return mh;
+      modelHandles.push_back(mdl);
+      return mdl;
 
     }else{
       engine->log("Wrong model type "+(value.get_obj().find("type")->second.get_str())+" in model "+name);
@@ -46,10 +52,10 @@ Model* CModelMgr::getModel(String name){
 
 }
 
-StaticModel* CModelMgr::loadStaticModel(const String& name, const json::mValue& data){
-  StaticModel* model;
+StaticModelImpl* CModelMgr::loadStaticModel(const String& name, const json::mValue& data){
+  StaticModelImpl* model;
   if(staticModels.find(name) == staticModels.end()){
-    model = new StaticModel(data);
+    model = new StaticModelImpl(data);
     staticModels[name] = model;
   }else{
     model = staticModels[name];
@@ -62,12 +68,10 @@ void CModelMgr::uploadData(){
   int staticIndexCount=0;
   int dynamicVertexCount=0;
   int dynamicIndexCount=0;
-  for(ModelHandleList::iterator it = modelHandles.begin(); it != modelHandles.end(); ++it){
-    if((*it)->getType() == STATIC){
-      (*it)->getModelRepresentation()->assignVbos(staticVbo, staticVertexCount, staticIndexVbo, staticIndexCount);
-      staticVertexCount += (*it)->getModelRepresentation()->getVertexCount();
-      staticIndexCount += (*it)->getModelRepresentation()->getIndexCount();
-    }
+  for(StaticModelList::iterator it = staticModels.begin(); it != staticModels.end(); ++it){
+    it->second->assignVbos(staticVbo, staticVertexCount, staticIndexVbo, staticIndexCount);
+    staticVertexCount += it->second->getVertexCount();
+    staticIndexCount += it->second->getIndexCount();
   }
 
   //engine->log("uploadData()");
@@ -84,8 +88,8 @@ void CModelMgr::uploadData(){
   //engine->log("uploadData()");
   engine->checkGl();
 
-  for(ModelHandleList::iterator it = modelHandles.begin(); it != modelHandles.end(); it++){
-    (*it)->getModelRepresentation()->uploadData();
+  for(StaticModelList::iterator it = staticModels.begin(); it != staticModels.end(); it++){
+    it->second->uploadData();
   }
 
   //engine->log("uploadData()");
@@ -112,7 +116,7 @@ void CModelMgr::draw(){
   glEnable(GL_TEXTURE_2D);
 
   for(ModelHandleList::iterator it = modelHandles.begin(); it != modelHandles.end(); it++){
-    if((*it)->getType()==STATIC){
+    if((*it)->getType() == M_STATIC){
       (*it)->draw();
     }
   }

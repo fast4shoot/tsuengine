@@ -16,11 +16,6 @@
 		</Build>
 		<Compiler>
 			<Add option="-march=nocona" />
-			<Add option="-fexpensive-optimizations" />
-			<Add option="-Os" />
-			<Add option="-O3" />
-			<Add option="-O2" />
-			<Add option="-O1" />
 			<Add option="-O" />
 			<Add option="-DGLEW_STATIC" />
 			<Add directory="libs" />
@@ -28,6 +23,7 @@
 			<Add directory="..\libs" />
 			<Add directory="..\libs\FTGL" />
 			<Add directory="." />
+			<Add directory="..\libs\bullet" />
 		</Compiler>
 		<Linker>
 			<Add library="freetype" />
@@ -40,6 +36,9 @@
 			<Add library="devil" />
 			<Add library="ilu" />
 			<Add library="ilut" />
+			<Add library="BulletDynamics" />
+			<Add library="BulletCollision" />
+			<Add library="LinearMath" />
 			<Add directory="..\libs" />
 		</Linker>
 		<Unit filename="..\libs\FTGL\FTBuffer.cpp" />
@@ -148,12 +147,16 @@
 		<Unit filename="CGuiMgr.h" />
 		<Unit filename="CInputMgr.cpp" />
 		<Unit filename="CInputMgr.h" />
+		<Unit filename="CMapMgr.cpp" />
+		<Unit filename="CMapMgr.h" />
 		<Unit filename="CMaterialMgr.cpp" />
 		<Unit filename="CMaterialMgr.h" />
 		<Unit filename="CModelMgr.cpp" />
 		<Unit filename="CModelMgr.h" />
 		<Unit filename="CParamMgr.cpp" />
 		<Unit filename="CParamMgr.h" />
+		<Unit filename="CPhysicsMgr.cpp" />
+		<Unit filename="CPhysicsMgr.h" />
 		<Unit filename="DescriptorList.h" />
 		<Unit filename="Font.cpp" />
 		<Unit filename="Font.h" />
@@ -164,13 +167,18 @@
 		<Unit filename="datatypes.h" />
 		<Unit filename="elements\Material.cpp" />
 		<Unit filename="elements\Material.h" />
+		<Unit filename="elements\Model.cpp" />
 		<Unit filename="elements\Model.h" />
 		<Unit filename="elements\ModelBase.cpp" />
 		<Unit filename="elements\ModelBase.h" />
+		<Unit filename="elements\PhysicsModel.cpp" />
+		<Unit filename="elements\PhysicsModel.h" />
 		<Unit filename="elements\Plane.cpp" />
 		<Unit filename="elements\Plane.h" />
 		<Unit filename="elements\StaticModel.cpp" />
 		<Unit filename="elements\StaticModel.h" />
+		<Unit filename="elements\StaticModelImpl.cpp" />
+		<Unit filename="elements\StaticModelImpl.h" />
 		<Unit filename="elements\StaticModelPart.cpp" />
 		<Unit filename="elements\StaticModelPart.h" />
 		<Unit filename="elements\Vertex.h" />
@@ -226,6 +234,7 @@
 		<Unit filename="typedefs.h" />
 		<Unit filename="utils\Singleton.cpp" />
 		<Unit filename="utils\Singleton.h" />
+		<Unit filename="utils\math.cpp" />
 		<Unit filename="utils\math.h" />
 		<Unit filename="utils\stringUtils.cpp" />
 		<Unit filename="utils\stringUtils.h" />

@@ -3,54 +3,57 @@
 
 #include "datatypes.h"
 #include "elements/ModelBase.h"
+#include "btBulletDynamicsCommon.h"
 
-class Model{
+
+class Model: public btMotionState{
   public:
-    Model(ModelBase* model, ModelType type);
+    Model(ModelType type);
     virtual ~Model(){}
     virtual ModelType getType() const;
-    virtual ModelBase* getModelRepresentation() const;
     virtual void setPosition(const vec3d& newPosition);
     virtual void setRotation(float pitch, float yaw, float roll);
+    virtual ModelType getModelType();
+
+    virtual void setPhysics(PhysicsType physics)=0;
+
+    void getWorldTransform(btTransform &worldTrans) const;
+    void setWorldTransform(const btTransform &worldTrans);
 
     virtual void draw();
+    virtual void render()=0;
 
   protected:
-    ModelBase* m_model;
     ModelType  m_type;
-    vec3d m_position;
-    vec3d m_rotation;
+    btTransform m_transform;
+
 };
 
-inline Model::Model(ModelBase* model, ModelType type){
-  m_model = model;
-  m_type = type;
+inline Model::Model(ModelType type):
+  m_type(type),
+  m_transform()
+{
+  m_transform.setIdentity();
 }
 
 inline ModelType Model::getType() const{
   return m_type;
 }
 
-inline ModelBase* Model::getModelRepresentation() const{
-  return m_model;
-}
-
 inline void Model::setPosition(const vec3d& newPosition){
-  m_position = newPosition;
+  m_transform.setOrigin(btVector3(newPosition.x, newPosition.y, newPosition.z));
 }
 
 inline void Model::setRotation(float pitch, float yaw, float roll){
-  m_rotation = vec3d(pitch, yaw, roll);
+  m_transform.setRotation(btQuaternion(yaw, pitch, roll));
 }
 
-inline void Model::draw(){
-  glPushMatrix();
-  glTranslatef(m_position.x, m_position.y, m_position.z);
-  glRotatef(m_rotation.x, 1, 0, 0);
-  glRotatef(m_rotation.y, 0, 1, 0);
-  glRotatef(m_rotation.z, 0, 0, 1);
-  m_model->draw();
-  glPopMatrix();
+
+
+inline ModelType Model::getModelType(){
+  return m_type;
 }
+
+
 
 #endif // MODEL_H

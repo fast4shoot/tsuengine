@@ -1,6 +1,6 @@
 #ifndef CPARAMMGR_H
 #define CPARAMMGR_H
-
+/*
 #include <vector>
 #include "datatypes.h"
 
@@ -17,5 +17,5 @@ class CParamMgr{
     double 		setDoubleParam(std::string name, double value);
     int 		setIntParam(std::string name, int value);
 };
-
+*/
 #endif

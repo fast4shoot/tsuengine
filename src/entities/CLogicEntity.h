@@ -9,6 +9,12 @@ class CLogicEntity : public CBaseEntity{
   public:
     void test(CBaseEntity* originator);
     void print(CBaseEntity* originator);
+    void think(){
+      if(engine->input->keyPressed(DIK_A)){
+        fireInput("test", NULL);
+      }
+      random++;
+    }
     int random;
 };
 

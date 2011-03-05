@@ -6,37 +6,29 @@
 #include "Vertex.h"
 #include "json/json.h"
 #include "elements/StaticModelPart.h"
-#include "elements/ModelBase.h"
+#include "elements/Model.h"
+#include "elements/StaticModelImpl.h"
 
-class StaticModel: public ModelBase{
-  typedef std::list<StaticModelPart> PartList;
+
+class StaticModel: public Model{
+
   public:
-    StaticModel(const json::mValue& value);
-    double getRadius() const;
-    int getVertexCount() const;
-    int getIndexCount() const;
-    void assignVbos(GLuint vbo, int vboOffset, GLuint indexVbo, int indexVboOffset);
-    void draw();
-    void uploadData();
+    StaticModel(StaticModelImpl* impl);
+    //double getRadius() const;
+    void render();
+    virtual void setPhysics(PhysicsType physics);
+
   protected:
-    PartList m_parts;
-    double m_radius;
-    int m_vertexCount;
-    int m_indexCount;
+    StaticModelImpl* m_impl;
 
   friend class CModelMgr;
 };
 
+/*
 inline double StaticModel::getRadius() const{
-  return m_radius;
-}
+  return m_impl;
+}*/
 
-inline int StaticModel::getVertexCount() const{
-  return m_vertexCount;
-}
 
-inline int StaticModel::getIndexCount() const{
-  return m_indexCount;
-}
 
 #endif // STATICMODEL_H

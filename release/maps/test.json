@@ -1,8 +1,21 @@
 {
   "entities": [
-     {
-       "position": [0, 0, 0],
-       "rotation": [0, 0, 0]
-     }
+    {
+      "classname": "prop_static",
+      "position": [1, 0.5, 0],
+      "rotation": [0, 0, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [-1, 0.5, 0],
+      "rotation": [0, 0, 0], 
+      "model": "barrel"  
+    },
+    {
+      "classname": "world",
+      "model": "static"
+    }
   ]
+  "relations": []
 }

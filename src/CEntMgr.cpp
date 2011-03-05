@@ -20,13 +20,20 @@ void CEntMgr::print(){
   for(DescriptorMap::iterator it = m_descriptors.begin(); it != m_descriptors.end(); ++it){
     engine->log((*it).second->getClassname());
   }
-  CBaseEntity* cbe = m_descriptors["CBaseEntity"]->create();
-  cbe->fireInput("print",NULL);
-  cbe = m_descriptors["CLogicEntity"]->create();
-  cbe->fireInput("print",NULL);
-  cbe->setValue("random",123);
-  cbe->fireInput("test",NULL);
 }
+
+CBaseEntity* CEntMgr::create(const String& classname){
+  DescriptorMap::iterator it = m_descriptors.find(classname);
+  if(it == m_descriptors.end()){
+    engine->warning(sformat("Can't create entity %s: entity not found", classname.c_str()));
+    return NULL;
+  }
+  CBaseEntity* ent = (*it).second->create();
+  m_entities.push_back(ent);
+  return ent;
+}
+
+
 /*
 int CEntMgr::getEntCount(){
   return entCount;

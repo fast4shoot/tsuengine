@@ -47,8 +47,8 @@ int WINAPI WinMain (HINSTANCE hInstance,
   HGLRC hRC;
   MSG msg;
   BOOL bQuit = FALSE;
-  g.scrWidth = 640;
-  g.scrHeight = 480;
+  g.scrWidth = 900;
+  g.scrHeight = 500;
   // register window class
   wc.style = CS_HREDRAW | CS_VREDRAW | CS_OWNDC;
   wc.lpfnWndProc = WndProc;
@@ -71,7 +71,7 @@ int WINAPI WinMain (HINSTANCE hInstance,
     NULL, NULL, hInstance, NULL);
 
   appWindow=hWnd;
-  ShowWindow(hWnd, SW_SHOWMAXIMIZED);
+  //ShowWindow(hWnd, SW_SHOWMAXIMIZED);
 
   try{
     // enable OpenGL for the window

@@ -10,7 +10,7 @@ class StaticModelPart{
   typedef std::vector<GLuint> IndexList;
 
   public:
-    StaticModelPart(json::mValue& data);
+    StaticModelPart(const json::mValue& data);
     double getRadius() const;
     int getVertexCount() const;
     int getIndexCount() const;
