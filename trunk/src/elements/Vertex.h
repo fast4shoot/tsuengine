@@ -8,7 +8,7 @@
 
 class Vertex{
   public:
-    Vertex(json::mValue& val);
+    Vertex(const json::mValue& val);
     void addNormal(const vec3d& normal);
     vec3d getPosition() const;
     vec2d getTexCoord() const;
@@ -21,9 +21,9 @@ class Vertex{
     vec3d m_normalSum;
 };
 
-inline Vertex::Vertex(json::mValue& val){
-  m_position.fromJson(val.get_obj().find("position")->second);
-  m_texCoord.fromJson(val.get_obj().find("texCoord")->second);
+inline Vertex::Vertex(const json::mValue& val){
+  json::extract(m_position, val.get_obj().find("position")->second);
+  json::extract(m_texCoord, val.get_obj().find("texCoord")->second);
 }
 
 inline void Vertex::addNormal(const vec3d& normal){

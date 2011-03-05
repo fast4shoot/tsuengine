@@ -16,6 +16,7 @@
 #include "CGuiMgr.h"
 #include "CFontMgr.h"
 #include "CModelMgr.h"
+#include "CPhysicsMgr.h"
 #include "elements/Material.h"
 
 
@@ -46,8 +47,10 @@ class CBaseEngine{
     CGuiMgr*        gui;
     CFontMgr*       fonts;
     CMaterialMgr*   materials;
+    CPhysicsMgr*    physics;
     CModelMgr*      models;
     CEntMgr*        ents;
+
 
 
                     CBaseEngine();

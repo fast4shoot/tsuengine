@@ -26,22 +26,9 @@ class rgba{
     rgba operator*(float rhs);
 };
 
-enum MOVETYPE{
-  NONE,
-  LINEAR
-};
 
-enum DATATYPE{
-  DT_STRING,
-  DT_FLOAT,
-  DT_INT
-};
 
-struct entParam{
-  void*         memPointer;
-  std::string   name;
-  DATATYPE		type;
-};
+
 
 enum MouseButton{
   LMB =0,
@@ -55,8 +42,15 @@ enum MouseButton{
 };
 
 enum ModelType{
-  STATIC,
-  DYNAMIC
+  M_STATIC,
+  M_DYNAMIC
+};
+
+enum PhysicsType{
+  P_NONE,
+  P_STATIC,
+  P_KINEMATIC,
+  P_DYNAMIC
 };
 
 struct StaticVertexData{

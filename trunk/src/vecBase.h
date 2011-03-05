@@ -4,7 +4,6 @@
 #include <cmath>
 #include <exception>
 #include "macros.h"
-#include "json/json.h"
 #include "utils/stringUtils.h"
 
 template<class T, int N, class Derived>
@@ -32,8 +31,7 @@ class vecBase
 
     Derived floored() const;
 
-    void fromJson(const json::mValue& val);
-  protected:
+    //void fromJson(const json::mValue& val);
     T data[N];
   private:
 };
@@ -140,7 +138,7 @@ inline bool vecBase<T,N,Derived>::operator!=(const Derived& rhs) const{
   return !operator==(rhs);
 }
 
-template<class T, int N, class Derived>
+/*template<class T, int N, class Derived>
 inline void vecBase<T,N,Derived>::fromJson(const json::mValue& val){
   const json::mArray& arr=val.get_array();
   if(arr.size()<N){
@@ -150,12 +148,7 @@ inline void vecBase<T,N,Derived>::fromJson(const json::mValue& val){
     data[i] = arr[i].get_real();
   }
 }
+*/
 
-namespace json{
-  template< class T, int N, class Derived >
-  inline int extract(vecBase<T, N, Derived>& result, const mValue& value){
-    result = result.fromJson(value);
-  }
-}
 
 #endif // VECBASE_H

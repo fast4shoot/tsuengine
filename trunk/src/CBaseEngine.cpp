@@ -16,6 +16,7 @@
 #include "gui/CText.h"
 #include "version.h"
 #include "json/json.h"
+#include "vec3d.h"
 
 #include "elements/StaticModel.h"
 
@@ -43,13 +44,13 @@ void CBaseEngine::init(){
   fonts->getFont("ARIALUNI.TTF",55.);
   materials=new CMaterialMgr();
   gui = new CGuiMgr();
+  physics = new CPhysicsMgr();
   models = new CModelMgr();
   gui->init();
   ents = new CEntMgr();
   m_ready=true;
   log(sformat("TSUEngine verze %d.%d.%d revize %d",AutoVersion::MAJOR,AutoVersion::MINOR,AutoVersion::BUILD,AutoVersion::REVISION));
   log(sformat("OpenGL verze %s",glGetString(GL_VERSION)));
-
   ents->print();
 
   /*json_spirit::mValue value;
@@ -66,15 +67,59 @@ void CBaseEngine::init(){
 
   Model* temp;
 
-  testMdl3 = models->getModel("ffx_yuna");
-  testMdl=models->getModel("barrel");
-  testMdl->setPosition(vec3d(50, 0, 0));
+  //testMdl3 = models->getModel("ffx_yuna");
+
+  /*testMdl->setPosition(vec3d(50, 0, 0));
   (testMdl2 = models->getModel("barrel"))->setPosition(vec3d(25, 0, -30));
   models->getModel("barrel")->setPosition(vec3d(-10, 0, -35));
   (temp = models->getModel("ffx_yuna"))->setPosition(vec3d(-100, 0, -35));
   temp->setRotation(0, 45, 0);
   models->getModel("man")->setPosition(vec3d(-60, 0, -30));
+  */
+  testMdl=models->getModel("barrel");
+  testMdl->setPosition(vec3d(1., 5., -3.));
+  testMdl->setPhysics(P_DYNAMIC);
+  testMdl=models->getModel("barrel");
+  testMdl->setPosition(vec3d(0.5, 3., -3.5));
+  testMdl->setPhysics(P_DYNAMIC);
+  testMdl=models->getModel("barrel");
+  testMdl->setPosition(vec3d(0.5, 4., -7.5));
+  testMdl->setPhysics(P_DYNAMIC);
+  testMdl=models->getModel("barrel");
+  testMdl->setPosition(vec3d(1., 4., -4.7));
+  testMdl->setPhysics(P_DYNAMIC);
+  testMdl=models->getModel("barrel");
+  testMdl->setPosition(vec3d(1., 5., -4.6));
+  testMdl->setPhysics(P_DYNAMIC);
+  testMdl=models->getModel("barrel");
+  testMdl->setPosition(vec3d(1., 6., -4.6));
+  testMdl->setRotation(0., PI/8., 0.);
+  testMdl->setPhysics(P_DYNAMIC);
+  testMdl=models->getModel("barrel");
+  testMdl->setPosition(vec3d(1., 7., -4.6));
+  testMdl->setRotation(0., PI/9., 0.);
+  testMdl->setPhysics(P_DYNAMIC);
+
+
+  testMdl=models->getModel("static");
+  testMdl->setPosition(vec3d(0., -1., 0.));
+  testMdl->setRotation(PI/8., 0., 0.);
+  testMdl->setPhysics(P_STATIC);
+
+  testMdl=models->getModel("static");
+  testMdl->setPosition(vec3d(0., -5., 0.));
+  testMdl->setRotation(-PI/8., 0., PI/8.);
+  testMdl->setPhysics(P_STATIC);
+
+/*
+  testMdl=models->getModel("static");
+  testMdl->setPosition(vec3d(0., -5., 0.));
+  testMdl->setRotation(PI/8., 0., -PI/8.);
+  testMdl->setPhysics(P_STATIC);*/
+
   models->uploadData();
+
+
 
 }
 
@@ -118,80 +163,40 @@ void CBaseEngine::think(){
 
   input->update();
   gui->update();
-
-  /*
-  for(i=0;i<ENT_MAX;i++){
-    //TODO: finish and use CEntMgr
-    if(entityTable[i]){
-      entityTable[i]->think();
-    }
-  }*/
+  physics->update();
+  ents->doThink();
 
 
   if(input->keyPressed(DIK_ESCAPE)){
     quit();
   }
 
+/*
   testMdl->setRotation(0, getTime()*-1500, 0 );
   testMdl2->setRotation(0, getTime()*1500, 0 );
-  testMdl3->setRotation(getTime()*200, 0 , 0 );
+  testMdl3->setRotation(getTime()*2, 0 , 0 );*/
 }
 
 void CBaseEngine::drawScene(){
   frameCount++;
 
   glClearColor (0.0f, 0.0f, 0.0f, 0.0f);
-  glClear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
+  glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
 
 
   initWorldView();
 
-  gluLookAt(0,140,0,0,120,-100,0,1,0);
+  gluLookAt(0, 0.50, 0, 0, 0.20, -3.00 , 0, 1, 0);
 
-  glTranslatef(0.,0.,-100.);
-  glRotatef(getTime()*40,0,1,0);
+  glTranslatef(0.,0.,-10.00);
+  glRotatef(getTime(),0,1,0);
   glColor4f(1.,1.,1.,1.);
 
   models->draw();
 
 
-  glEnable(GL_TEXTURE_2D);
-/*  testMat->bind();
-  glBegin(GL_QUADS);
-    glColor3f(1.,1.,1.);
-    glNormal3i(0,0,1);
-    glTexCoord2d(0,0);
-    glVertex3f(0.,-20.,-20.);
-    glTexCoord2d(0,1);
-    glVertex3f(0.,20.,-20.);
-    glTexCoord2d(1,1);
-    glVertex3f(-40.,20.,-20.);
-    glTexCoord2d(1,0);
-    glVertex3f(-40.,-20.,-20.);
-
-    glNormal3i(-1,0,0);
-    glTexCoord2d(0,0);
-    glVertex3f(0.,-20.,-20.);
-    glTexCoord2d(0,1);
-    glVertex3f(0.,-20.,20.);
-    glTexCoord2d(1,1);
-    glVertex3f(0.,20.,20.);
-    glTexCoord2d(1,0);
-    glVertex3f(0.,20.,-20.);
-
-    glNormal3i(0,-1,0);
-    glTexCoord2d(1,0);
-    glVertex3f(0.,-20.,-20.);
-    glTexCoord2d(0,0);
-    glVertex3f(-40.,-20.,-20.);
-    glTexCoord2d(0,1);
-    glVertex3f(-40.,-20.,20.);
-    glTexCoord2d(1,1);
-    glVertex3f(0.,-20.,20.);
-  glEnd();*/
   glDisable(GL_LIGHT0);
   glDisable(GL_LIGHTING);
-  glDisable(GL_TEXTURE_2D);
   /*
    * GUI drawing
    */

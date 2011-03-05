@@ -4,7 +4,7 @@
 #include "datatypes.h"
 #include "exceptions.h"
 
-
+/*
 void CParamMgr::linkVariableToParam(void *memPointer,const std::string name){
   entParam* param=new entParam;
   param->memPointer=memPointer;
@@ -26,16 +26,17 @@ std::string CParamMgr::getStringParam(std::string name){
     param=params.at(i);
     if(param->name == name){
       return param->name;
-	}						  		  
+	}
   }
   throw ParameterNonExistant(name);
 }
 
 double CParamMgr::getDoubleParam(std::string name){
-  return atof(getStringParam(name).c_str());  
+  return atof(getStringParam(name).c_str());
 }
 
 int CParamMgr::getIntParam(std::string name){
-  return atoi(getStringParam(name).c_str());		
+  return atoi(getStringParam(name).c_str());
 }
 
+*/

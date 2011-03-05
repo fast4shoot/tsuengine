@@ -3,6 +3,7 @@
 
 #include "glew/glew.h"
 
+/*
 class ModelBase{
   public:
     virtual ~ModelBase(){};
@@ -25,5 +26,5 @@ inline void ModelBase::assignVbos(GLuint vbo, int vboOffset, GLuint indexVbo, in
   m_indexVbo = indexVbo;
   m_indexVboOffset = indexVboOffset;
 }
-
+*/
 #endif // MODELBASE_H

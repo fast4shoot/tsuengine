@@ -1,8 +1,10 @@
 #ifndef CBASEENTITYDESCRIPTOR_H
 #define CBASEENTITYDESCRIPTOR_H
 
+#include <set>
 #include "entities/CBaseEntity.h"
 #include "CBaseEngine.h"
+
 
 class CBaseEntityDescriptor{
   public:
@@ -31,6 +33,9 @@ class CBaseEntityDescriptor{
       public:
         void set(EntityType* entity, const json::mValue& value){
           json::extract(entity->*m_value, value);
+        }
+        void setDefault(EntityType* entity){
+          entity->*m_value = m_default;
         }
         EntityValue(T EntityType::*variable, const T& defaultVal):
           m_value(variable),
@@ -88,9 +93,16 @@ inline void CBaseEntityDescriptor::registerEntity(){
 }
 
 inline CBaseEntity* CBaseEntityDescriptor::create(){
-  EntityType* temp = createInstance();
-  temp->m_descriptor = this;
-  return temp;
+  if(m_spawnable){
+    EntityType* temp = createInstance();
+    temp->m_descriptor = this;
+    for(ValueList::iterator it = m_values.begin(); it != m_values.end(); ++it){
+      //(*it)
+    }
+
+    return temp;
+  }
+  return NULL;
 }
 
 inline CBaseEntity* CBaseEntityDescriptor::createInstance(){

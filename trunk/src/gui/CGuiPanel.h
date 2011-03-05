@@ -78,12 +78,14 @@ class CGuiPanel{
     void            requestKeyboardFocus();
     bool            getAllowKeyboardInput() const;
     void            addListener(CListener* al);
+
+    //basic color functions
     void            setBgColor(rgba newBg);
     rgba            getBgColor() const;
     void            setFgColor(rgba newFg);
     rgba            getFgColor() const;
 
-    //draw functionsng
+    //drawing functions
     void            setDrawColor(const rgba& color);
     void            drawQuad(float x, float y, float w, float h);
     void            drawVerticalGradient(float x, float y, float w, float h, const rgba& colOne, const rgba& colTwo);

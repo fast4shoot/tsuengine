@@ -1,81 +1,44 @@
 CModelMgr()
-TSUEngine verze 0.21.2143 revize 1814
-OpenGL verze 3.3.10362 Compatibility Profile Context
+TSUEngine verze 0.23.2378 revize 3091
+OpenGL verze 1.4.0 - Build 8.14.10.1930
 Zaregistrovane entity: 
 CBaseEntity
 CLogicEntity
-rofl test
-rofl test z logické entity
-imho logicentity test: 123
 Vytvářím materiál wall1
 Vytvářím materiál system/cursor
-Vytvářím materiál yuna0
-Vytvářím materiál yuna1
-Vytvářím materiál yuna3
-Vytvářím materiál yuna4
-Vytvářím materiál yuna5
-Vytvářím materiál yuna6
-Vytvářím materiál yuna7
-Vytvářím materiál yuna8
-Vytvářím materiál yuna9
-Vytvářím materiál yuna10
+Vytvářím model barrel
+new PhysicsModel(physModel->second);
 Vytvářím materiál barrel
-Vytvářím materiál white
+addBody(0x511dc70, 0x4c99470, 3);
+physMdl->getMass(): 100.000000
+mass: 100.000000
+addBody(0x511f548, 0x4c99470, 3);
+physMdl->getMass(): 100.000000
+mass: 100.000000
+addBody(0x581f860, 0x4c99470, 3);
+physMdl->getMass(): 100.000000
+mass: 100.000000
+addBody(0x581f918, 0x4c99470, 3);
+physMdl->getMass(): 100.000000
+mass: 100.000000
+addBody(0x581f3f8, 0x4c99470, 3);
+physMdl->getMass(): 100.000000
+mass: 100.000000
+addBody(0x511d370, 0x4c99470, 3);
+physMdl->getMass(): 100.000000
+mass: 100.000000
+addBody(0x511d428, 0x4c99470, 3);
+physMdl->getMass(): 100.000000
+mass: 100.000000
+Vytvářím model static
+new PhysicsModel(physModel->second);
+addBody(0x581fa78, 0x4c99518, 1);
+physMdl->getMass(): 0.000000
+mass: 0.000000
+addBody(0x583a728, 0x4c99518, 1);
+physMdl->getMass(): 0.000000
+mass: 0.000000
 setOffsets(0, 0)
-setOffsets(2580, 13587)
-setOffsets(2602, 13647)
-setOffsets(3574, 20571)
-setOffsets(3769, 21945)
-setOffsets(4247, 24231)
-setOffsets(4297, 24471)
-setOffsets(4587, 25803)
-setOffsets(4648, 26070)
-setOffsets(4968, 27186)
-setOffsets(5168, 28104)
-setOffsets(5219, 28296)
-setOffsets(5467, 29436)
-setOffsets(5499, 29502)
-setOffsets(5747, 30642)
-setOffsets(5779, 30708)
-setOffsets(6027, 31848)
-setOffsets(6059, 31914)
-setOffsets(8639, 45501)
-setOffsets(8661, 45561)
-setOffsets(9633, 52485)
-setOffsets(9828, 53859)
-setOffsets(10306, 56145)
-setOffsets(10356, 56385)
-setOffsets(10646, 57717)
-setOffsets(10707, 57984)
-setOffsets(11027, 59100)
-setOffsets(11227, 60018)
-setOffsets(11278, 60210)
-uploadData(): m_vboOffset=6059, m_indexVboOffset=31914, getVertexCount()=2580, getIndexCount()=13587
-uploadData(): m_vboOffset=8639, m_indexVboOffset=45501, getVertexCount()=22, getIndexCount()=60
-uploadData(): m_vboOffset=8661, m_indexVboOffset=45561, getVertexCount()=972, getIndexCount()=6924
-uploadData(): m_vboOffset=9633, m_indexVboOffset=52485, getVertexCount()=195, getIndexCount()=1374
-uploadData(): m_vboOffset=9828, m_indexVboOffset=53859, getVertexCount()=478, getIndexCount()=2286
-uploadData(): m_vboOffset=10306, m_indexVboOffset=56145, getVertexCount()=50, getIndexCount()=240
-uploadData(): m_vboOffset=10356, m_indexVboOffset=56385, getVertexCount()=290, getIndexCount()=1332
-uploadData(): m_vboOffset=10646, m_indexVboOffset=57717, getVertexCount()=61, getIndexCount()=267
-uploadData(): m_vboOffset=10707, m_indexVboOffset=57984, getVertexCount()=320, getIndexCount()=1116
-uploadData(): m_vboOffset=11027, m_indexVboOffset=59100, getVertexCount()=200, getIndexCount()=918
-uploadData(): m_vboOffset=11227, m_indexVboOffset=60018, getVertexCount()=51, getIndexCount()=192
-uploadData(): m_vboOffset=5779, m_indexVboOffset=30708, getVertexCount()=248, getIndexCount()=1140
-uploadData(): m_vboOffset=6027, m_indexVboOffset=31848, getVertexCount()=32, getIndexCount()=66
-uploadData(): m_vboOffset=5779, m_indexVboOffset=30708, getVertexCount()=248, getIndexCount()=1140
-uploadData(): m_vboOffset=6027, m_indexVboOffset=31848, getVertexCount()=32, getIndexCount()=66
-uploadData(): m_vboOffset=5779, m_indexVboOffset=30708, getVertexCount()=248, getIndexCount()=1140
-uploadData(): m_vboOffset=6027, m_indexVboOffset=31848, getVertexCount()=32, getIndexCount()=66
-uploadData(): m_vboOffset=6059, m_indexVboOffset=31914, getVertexCount()=2580, getIndexCount()=13587
-uploadData(): m_vboOffset=8639, m_indexVboOffset=45501, getVertexCount()=22, getIndexCount()=60
-uploadData(): m_vboOffset=8661, m_indexVboOffset=45561, getVertexCount()=972, getIndexCount()=6924
-uploadData(): m_vboOffset=9633, m_indexVboOffset=52485, getVertexCount()=195, getIndexCount()=1374
-uploadData(): m_vboOffset=9828, m_indexVboOffset=53859, getVertexCount()=478, getIndexCount()=2286
-uploadData(): m_vboOffset=10306, m_indexVboOffset=56145, getVertexCount()=50, getIndexCount()=240
-uploadData(): m_vboOffset=10356, m_indexVboOffset=56385, getVertexCount()=290, getIndexCount()=1332
-uploadData(): m_vboOffset=10646, m_indexVboOffset=57717, getVertexCount()=61, getIndexCount()=267
-uploadData(): m_vboOffset=10707, m_indexVboOffset=57984, getVertexCount()=320, getIndexCount()=1116
-uploadData(): m_vboOffset=11027, m_indexVboOffset=59100, getVertexCount()=200, getIndexCount()=918
-uploadData(): m_vboOffset=11227, m_indexVboOffset=60018, getVertexCount()=51, getIndexCount()=192
-uploadData(): m_vboOffset=11278, m_indexVboOffset=60210, getVertexCount()=46, getIndexCount()=201
+setOffsets(560, 2412)
+uploadData(): m_vboOffset=0, m_indexVboOffset=0, getVertexCount()=560, getIndexCount()=2412
+uploadData(): m_vboOffset=560, m_indexVboOffset=2412, getVertexCount()=4, getIndexCount()=6
