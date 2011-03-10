@@ -6,8 +6,8 @@
 class CMapMgr{
   public:
     CMapMgr();
-    void loadMap(const String& name);
-    void update(){}
+    void load(const String& name);
+    void unload();
   private:
     String m_mapName;
     bool m_isLoaded;

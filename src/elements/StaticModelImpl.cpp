@@ -26,6 +26,10 @@ StaticModelImpl::StaticModelImpl(const json::mValue& value){
   }
 }
 
+StaticModelImpl::~StaticModelImpl(){
+  delete m_physModel;
+}
+
 void StaticModelImpl::uploadData(){
   for(PartList::iterator it=m_parts.begin(); it!=m_parts.end(); ++it){
     it->uploadData();

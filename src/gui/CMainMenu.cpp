@@ -5,6 +5,7 @@
 #include "CCheckBox.h"
 #include "CTextField.h"
 #include "CConsole.h"
+#include "CBaseEngine.h"
 
 CMainMenu::CMainMenu():
   CGuiPanel(vec2d(0,0),vec2d(engine->getScreenWidth(),engine->getScreenHeight()))

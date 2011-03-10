@@ -5,20 +5,26 @@
 #include "elements/ModelBase.h"
 #include "btBulletDynamicsCommon.h"
 
+class CBaseEntity;
+class CWorldEntity;
+
 
 class Model: public btMotionState{
   public:
     Model(ModelType type);
     virtual ~Model(){}
     virtual ModelType getType() const;
+
     virtual void setPosition(const vec3d& newPosition);
     virtual void setRotation(float pitch, float yaw, float roll);
-    virtual ModelType getModelType();
+    virtual void getWorldTransform(btTransform &worldTrans) const;
+    virtual void setWorldTransform(const btTransform &worldTrans);
+
+    virtual void linkToEntity(CBaseEntity* ent);
+    virtual void linkToEntity(CWorldEntity* ent);
 
     virtual void setPhysics(PhysicsType physics)=0;
-
-    void getWorldTransform(btTransform &worldTrans) const;
-    void setWorldTransform(const btTransform &worldTrans);
+    virtual PhysicsType getPhysics() const=0;
 
     virtual void draw();
     virtual void render()=0;
@@ -26,14 +32,19 @@ class Model: public btMotionState{
   protected:
     ModelType  m_type;
     btTransform m_transform;
+    CWorldEntity* m_linkedWorldEntity;
+    CBaseEntity* m_linkedBaseEntity;
 
 };
 
 inline Model::Model(ModelType type):
   m_type(type),
-  m_transform()
+  m_transform(),
+  m_linkedBaseEntity(NULL),
+  m_linkedWorldEntity(NULL)
 {
   m_transform.setIdentity();
+
 }
 
 inline ModelType Model::getType() const{
@@ -48,11 +59,6 @@ inline void Model::setRotation(float pitch, float yaw, float roll){
   m_transform.setRotation(btQuaternion(yaw, pitch, roll));
 }
 
-
-
-inline ModelType Model::getModelType(){
-  return m_type;
-}
 
 
 

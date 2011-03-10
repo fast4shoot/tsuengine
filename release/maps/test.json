@@ -8,7 +8,7 @@
     },
     {
       "classname": "prop_dynamic",
-      "position": [-1, 0.5, 0],
+      "position": [-1, 1, 0],
       "rotation": [0, 0, 0], 
       "model": "barrel"  
     },

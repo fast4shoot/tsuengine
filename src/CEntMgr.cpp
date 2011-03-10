@@ -3,11 +3,14 @@
 #include "const.h"
 
 #include <map>
+#include <typeinfo>
 
 #include "CBaseEngine.h"
 #include "DescriptorList.h"
 
-CEntMgr::CEntMgr(){
+CEntMgr::CEntMgr():
+  m_entityCount(0)
+{
   std::vector<CBaseEntityDescriptor*>& l = DescriptorList::instance()->descriptors;
   for(std::vector<CBaseEntityDescriptor*>::iterator it = l.begin(); it != l.end(); ++it){
     (*it)->doRegister(*it);
@@ -22,52 +25,30 @@ void CEntMgr::print(){
   }
 }
 
-CBaseEntity* CEntMgr::create(const String& classname){
-  DescriptorMap::iterator it = m_descriptors.find(classname);
-  if(it == m_descriptors.end()){
-    engine->warning(sformat("Can't create entity %s: entity not found", classname.c_str()));
+CBaseEntity* CEntMgr::create(const json::mValue& value){
+  try{
+    json::mObject::const_iterator cnIt = value.get_obj().find("classname");
+    if(cnIt == value.get_obj().end()) throw std::invalid_argument("No classname provided");
+
+    const String& classname = cnIt->second.get_str();
+    DescriptorMap::iterator it = m_descriptors.find(classname);
+
+    if(it == m_descriptors.end()) throw std::invalid_argument("Unknown classname "+classname);
+
+    CBaseEntity* ent = it->second->create(value);
+    engine->log("Pushing entity back");
+    m_entities.push_back(ent);
+    engine->log(sformat("Returning entity %s", typeid(ent).name()));
+    return ent;
+  }catch(std::exception& e){
+    engine->warning(String("Can't create entity: ")+e.what());
     return NULL;
   }
-  CBaseEntity* ent = (*it).second->create();
-  m_entities.push_back(ent);
-  return ent;
 }
 
-
-/*
-int CEntMgr::getEntCount(){
-  return entCount;
-}
-
-CBaseEntity* CEntMgr::getEntById(int id){
-  return entityTable[id];
-}
-
-int CEntMgr::getEntCountByTargetName(std::string targetname){
-  int count=0;
-  for(int i=0;i<ENT_MAX;i++){
-    if(getEntById(i)->params.getStringParam("targetname") == targetname)count++;
+void CEntMgr::removeAll(){
+  for(EntityList::iterator it = m_entities.begin(); it != m_entities.end(); ++it){
+    delete (*it);
   }
-  return count;
+  m_entities.clear();
 }
-
-void CEntMgr::findEntsByTargetName(std::string targetname){
-  lastSearchCount=0;
-  CBaseEntity* ent;
-  for(int i=0;i<ENT_MAX;i++){
-    ent=getEntById(i);
-    if(ent->params.getStringParam("targetname") == targetname){
-      searchTable[lastSearchCount]=ent;
-      lastSearchCount++;
-    }
-  }
-}
-
-void CEntMgr::findEntsInSphere(vec3d pos, double radius){
-
-}
-
-CBaseEntity* CEntMgr::getNextEntFromLastSearch(){
-  return NULL;
-}
-*/

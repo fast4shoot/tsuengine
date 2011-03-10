@@ -27,13 +27,13 @@ void CPhysicsMgr::update(){
   m_dynamicsWorld->stepSimulation(engine->getTimeDelta());
 }
 
-void CPhysicsMgr::addBody(Model* mdl, PhysicsModel* physMdl, PhysicsType type){
+btRigidBody* CPhysicsMgr::addBody(Model* mdl, PhysicsModel* physMdl, PhysicsType type){
   if(type == P_NONE){
-    return;
+    return NULL;
   }
   if(type == P_DYNAMIC && physMdl->getMass() == 0.){
     engine->warning("Can't create dynamic body without mass!");
-    return;
+    return NULL;
   }
 
   engine->log(sformat("physMdl->getMass(): %f",physMdl->getMass()));
@@ -58,9 +58,21 @@ void CPhysicsMgr::addBody(Model* mdl, PhysicsModel* physMdl, PhysicsType type){
     body->setActivationState(ACTIVE_TAG);
   }
 
-	m_dynamicsWorld->addRigidBody(body);
+  m_dynamicsWorld->addRigidBody(body);
 
   if(type != P_KINEMATIC){
     body->setActivationState(ACTIVE_TAG);
   }
+
+  m_bodies.insert(body);
+
+  return body;
+}
+
+void CPhysicsMgr::removeAll(){
+  for(BodyList::iterator it = m_bodies.begin(); it != m_bodies.end(); ++it){
+    m_dynamicsWorld->removeRigidBody(*it);
+    delete (*it);
+  }
+  m_bodies.clear();
 }

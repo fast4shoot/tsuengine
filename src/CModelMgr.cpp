@@ -7,44 +7,43 @@
 CModelMgr::CModelMgr(){
   modelTypeMap["static"]=M_STATIC;
   modelTypeMap["dynamic"]=M_DYNAMIC;
-  GLuint buff[4];
-  glGenBuffersARB(4, buff);
-  staticVbo = buff[0];
-  staticIndexVbo = buff[1];
-  dynamicVbo = buff[2];
-  dynamicIndexVbo = buff[3];
+  m_buffersGenerated = false;
   engine->log("CModelMgr()");
   engine->checkGl();
 }
 
 Model* CModelMgr::getModel(const String& name){
+  generateBuffers();
+
   if(staticModels.find(name) != staticModels.end()){
     Model* mdl = new StaticModel(staticModels[name]);
     modelHandles.push_back(mdl);
     return mdl;
   }
 
+  engine->log("Vytvářím model "+name);
   std::ifstream file(("models/"+name+".json").c_str());
   if(file.good()){
     json::mValue value;
     json::read(file, value);
     ModelTypeMap::iterator it = modelTypeMap.find(value.get_obj().find("type")->second.get_str());
     if(it != modelTypeMap.end()){
-      engine->log("Vytvářím model "+name);
+
       ModelType mt = it->second;
       Model* mdl;
       if(mt==M_STATIC){
         mdl = new StaticModel(loadStaticModel(name,value));
       }
       modelHandles.push_back(mdl);
+      engine->log(sformat("...model finished (%p)",mdl));
       return mdl;
 
     }else{
-      engine->log("Wrong model type "+(value.get_obj().find("type")->second.get_str())+" in model "+name);
+      engine->warning("Wrong model type "+(value.get_obj().find("type")->second.get_str())+" in model "+name);
     }
     file.close();
   }else{
-    engine->log("Can't open file for model "+name);
+    engine->warning("Can't open file for model "+name);
   }
 
 
@@ -64,6 +63,7 @@ StaticModelImpl* CModelMgr::loadStaticModel(const String& name, const json::mVal
 }
 
 void CModelMgr::uploadData(){
+  engine->log("Uploading model data to GPU");
   int staticVertexCount=0;
   int staticIndexCount=0;
   int dynamicVertexCount=0;
@@ -94,6 +94,7 @@ void CModelMgr::uploadData(){
 
   //engine->log("uploadData()");
   engine->checkGl();
+  engine->logAppend("...finished");
 }
 
 
@@ -130,4 +131,34 @@ void CModelMgr::draw(){
   glBindBufferARB(GL_ARRAY_BUFFER_ARB, 0);
   glBindBufferARB(GL_ELEMENT_ARRAY_BUFFER_ARB, 0);
 
+}
+
+void CModelMgr::removeAll(){
+  for(ModelHandleList::iterator it = modelHandles.begin(); it != modelHandles.end(); ++it){
+    delete (*it);
+  }
+  modelHandles.clear();
+
+  for(StaticModelList::iterator it = staticModels.begin(); it != staticModels.end(); ++it){
+    delete it->second;
+  }
+  staticModels.clear();
+
+  deleteBuffers();
+}
+
+void CModelMgr::generateBuffers(){
+  if(m_buffersGenerated) return;
+
+  glGenBuffersARB(4, m_buffers);
+  staticVbo = m_buffers[0];
+  staticIndexVbo = m_buffers[1];
+  dynamicVbo = m_buffers[2];
+  dynamicIndexVbo = m_buffers[3];
+}
+
+void CModelMgr::deleteBuffers(){
+  if(m_buffersGenerated){
+    glDeleteBuffersARB(4, m_buffers);
+  }
 }

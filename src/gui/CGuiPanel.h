@@ -4,7 +4,6 @@
 #include <vector>
 #include "datatypes.h"
 #include "CGuiMgr.h"
-#include "CBaseEngine.h"
 
 
 class CListener;
@@ -246,10 +245,6 @@ inline bool CGuiPanel::getMouseDown() const{
 
 inline int CGuiPanel::getParentIndex() const{
   return parentIndex;
-}
-
-inline void CGuiPanel::requestKeyboardFocus(){
-  engine->gui->setKeyboardReceiver(this);
 }
 
 inline bool CGuiPanel::getAllowKeyboardInput() const{

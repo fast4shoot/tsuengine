@@ -3,6 +3,7 @@
 #include "glew/glew.h"
 #include <typeinfo>
 #include "listeners/CListener.h"
+#include "CBaseEngine.h"
 
 void CGuiPanel::init(){
   position.set(0.,0.);
@@ -214,4 +215,8 @@ void CGuiPanel::fireChildAdded(CGuiPanel* child){
   for(ListenerList::iterator it = listeners.begin(); it!=listeners.end(); ++it){
     (*it)->addChildPerformed(child);
   }
+}
+
+void CGuiPanel::requestKeyboardFocus(){
+  engine->gui->setKeyboardReceiver(this);
 }

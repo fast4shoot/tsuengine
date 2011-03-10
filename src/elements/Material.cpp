@@ -10,7 +10,9 @@
 #include "CBaseEngine.h"
 
 
-Material::Material(String name){
+Material::Material(const String& name):
+  m_persistent(false)
+{
   std::ifstream jsonFile(("materials/"+name+".json").c_str());
 
   json::mValue data;
@@ -43,11 +45,11 @@ Material::Material(String name){
   //ilLoadImage(((const ILstring)"materials/wall1.png"));
   //_glName=ilutGLBindTexImage();
   //_glName=ilutGLLoadImage("D:\\fast4shoot\\programming\\TSUEngine\\release\\wall1.png");
+
   ILenum Error;
   while ((Error = ilGetError()) != IL_NO_ERROR) {
     engine->log(sformat("DevIL ERROR: 0x%x: %s/n", Error, iluErrorString(Error)).c_str());
   }
-
 }
 
 Material::~Material(){

@@ -16,8 +16,12 @@
 #define ENTITY_DESCRIPTOR(This, Base) \
 class This##Descriptor: public Base##Descriptor{ \
   protected: \
-    virtual CBaseEntity* createInstance(){ \
-      return new This(); \
+    CBaseEntity* createInstance(){ \
+      return new This; \
+    } \
+    void inherit(){ \
+      Base##Descriptor desc; \
+      desc.doRegister(m_currDescriptor); \
     } \
   public:
 

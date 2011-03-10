@@ -9,6 +9,7 @@ class StaticModelImpl{
   typedef std::list<StaticModelPart> PartList;
   public:
     StaticModelImpl(const json::mValue& value);
+    ~StaticModelImpl();
     double getRadius() const;
     int getVertexCount() const;
     int getIndexCount() const;

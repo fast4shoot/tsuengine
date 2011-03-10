@@ -27,10 +27,10 @@ class CInputMgr{
     bool            buttonPressed(MouseButton button) const;
     bool            buttonDepressed(MouseButton button) const;
 
-    const float     getX() const;
-    const float     getY() const;
-    const vec2d     getCursor() const;
-    const vec2d     getCursorDelta() const;
+    float           getX() const;
+    float           getY() const;
+    vec2d           getCursor() const;
+    vec2d           getCursorDelta() const;
 
     void            characterInput(String character);
 
@@ -54,19 +54,19 @@ class CInputMgr{
     String          _inputString[2];
 };
 
-inline const float CInputMgr::getX() const{
+inline float CInputMgr::getX() const{
   return cursor.x;
 }
 
-inline const float CInputMgr::getY() const{
+inline float CInputMgr::getY() const{
   return cursor.y;
 }
 
-inline const vec2d CInputMgr::getCursor() const{
+inline vec2d CInputMgr::getCursor() const{
   return cursor;
 }
 
-inline const vec2d CInputMgr::getCursorDelta() const{
+inline vec2d CInputMgr::getCursorDelta() const{
   return cursorDelta;
 }
 
