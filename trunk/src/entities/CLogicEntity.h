@@ -9,22 +9,16 @@ class CLogicEntity : public CBaseEntity{
   public:
     void test(CBaseEntity* originator);
     void print(CBaseEntity* originator);
-    void think(){
-      if(engine->input->keyPressed(DIK_A)){
-        fireInput("test", NULL);
-      }
-      random++;
-    }
+    void think();
     int random;
 };
 
 ENTITY_DESCRIPTOR(CLogicEntity, CBaseEntity)
   virtual void registerEntity(){
-    inherit<CBaseEntityDescriptor>();
     classname("CLogicEntity");
     spawnable(false);
     input("test",&CLogicEntity::test);
-    value("random", &CLogicEntity::random, 5);
+    value("random", &CLogicEntity::random);
   }
 };
 

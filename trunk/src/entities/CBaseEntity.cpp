@@ -1,9 +1,9 @@
-#include <vector>
 #include "CBaseEntity.h"
+
+#include <vector>
 #include "CBaseEngine.h"
 #include "globals.h"
 #include "macros.h"
-#include "CBaseEngine.h"
 #include "CEntMgr.h"
 #include "DescriptorList.h"
 
@@ -35,10 +35,6 @@ void CBaseEntity::setValue(const String& name, const json::mValue& value){
   m_descriptor->setValue(name, this, value);
 }
 
-void CBaseEntity::print(CBaseEntity* originator){
-  engine->log("rofl test");
-}
-
 void EntityRelation::addRelation(CBaseEntity* ent, const String& input){
   m_relations.push_back(std::make_pair(ent, input));
 }
@@ -46,6 +42,38 @@ void EntityRelation::addRelation(CBaseEntity* ent, const String& input){
 void EntityRelation::fire(CBaseEntity* originator){
   for(EntityInputList::iterator it = m_relations.begin(); it != m_relations.end(); ++it){
     (*it).first->fireInput((*it).second, originator);
+  }
+}
+
+namespace json{
+  void extract(Model* result, const mValue& value){
+    if(engine->isReady()){
+      result = engine->models->getModel(value.get_str());
+    }
+  }
+}
+
+CBaseEntity* CBaseEntityDescriptor::create(const json::mValue& value){
+  if(!m_spawnable) throw std::logic_error(sformat("Entity %s is not spawnable", m_classname.c_str()));
+
+  CBaseEntity* ent = createInstance();
+  ent->m_descriptor = this;
+
+  for(ValueList::iterator it = m_values.begin(); it != m_values.end(); ++it){
+    json::mObject::const_iterator vIt = value.get_obj().find(it->first);
+    engine->log("Setting property "+it->first);
+    if(vIt != value.get_obj().end()){
+      it->second->set(ent, vIt->second);
+    }
+  }
+  engine->log("Properties setup finished");
+  ent->init();
+  return ent;
+}
+
+void CBaseEntityDescriptor::fireInput(const String& name, CBaseEntity* receiver, CBaseEntity* originator){
+  if(!m_inputs[name]->invoke(receiver,originator)){
+    engine->log(sformat("Can't fire input %s of entity %s, probably a programming bug.", name.c_str(), receiver->m_descriptor->getClassname().c_str()));
   }
 }
 

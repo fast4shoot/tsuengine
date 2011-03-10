@@ -16,10 +16,12 @@ class StaticModel: public Model{
     StaticModel(StaticModelImpl* impl);
     //double getRadius() const;
     void render();
-    virtual void setPhysics(PhysicsType physics);
+    void setPhysics(PhysicsType physics);
+    PhysicsType getPhysics() const;
 
   protected:
     StaticModelImpl* m_impl;
+    PhysicsType m_physType;
 
   friend class CModelMgr;
 };
@@ -29,6 +31,8 @@ inline double StaticModel::getRadius() const{
   return m_impl;
 }*/
 
-
+inline PhysicsType StaticModel::getPhysics() const{
+  return m_physType;
+}
 
 #endif // STATICMODEL_H

@@ -16,10 +16,19 @@ class CModelMgr{
     void uploadData();
     void draw();
 
+    void removeAll();
+
   protected:
+    void generateBuffers();
+    void deleteBuffers();
+    bool m_buffersGenerated;
+
     StaticModelList staticModels;
     ModelHandleList modelHandles;
     ModelTypeMap modelTypeMap;
+
+    GLuint m_buffers[4];
+
     GLuint staticVbo;
     GLuint staticIndexVbo;
     GLuint dynamicVbo;

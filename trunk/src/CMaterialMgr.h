@@ -10,6 +10,8 @@ class CMaterialMgr{
   public:
     CMaterialMgr();
     Material* getMaterial(const String& name);
+    Material* getPersistentMaterial(const String& name);
+    void removeAll();
   protected:
     MaterialList matList;
 };

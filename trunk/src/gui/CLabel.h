@@ -5,7 +5,6 @@
 #include <map>
 #include "vec2d.h"
 #include "CGuiPanel.h"
-#include "CBaseEngine.h"
 #include "Font.h"
 
 

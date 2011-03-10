@@ -10,13 +10,14 @@
 #include "typedefs.h"
 #include "datatypes.h"
 #include "entities/CBaseEntity.h"
-#include "CEntMgr.h"
 #include "CInputMgr.h"
 #include "CMaterialMgr.h"
 #include "CGuiMgr.h"
 #include "CFontMgr.h"
 #include "CModelMgr.h"
 #include "CPhysicsMgr.h"
+#include "CMapMgr.h"
+#include "CEntMgr.h"
 #include "elements/Material.h"
 
 
@@ -50,6 +51,7 @@ class CBaseEngine{
     CPhysicsMgr*    physics;
     CModelMgr*      models;
     CEntMgr*        ents;
+    CMapMgr*        map;
 
 
 
@@ -75,6 +77,7 @@ class CBaseEngine{
 
     void            setConsoleOutput(CText* console);
     void            log(const String& text);
+    void            logAppend(const String& text);
     void            warning(const String& text);
 
     void            checkGl();
@@ -82,13 +85,10 @@ class CBaseEngine{
     void            quit();
 
     Font*           systemFont;
-    Material*       testMat;
     Material*       cursorMat;
 
     int             getScreenHeight();
     int             getScreenWidth();
-
-    Model *testMdl, *testMdl2, *testMdl3;
 
 };
 

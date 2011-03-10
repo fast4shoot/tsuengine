@@ -1,9 +1,13 @@
 #ifndef JSON_H
 #define JSON_H
+
 #include "json_spirit.h"
 #include "vecBase.h"
+
 namespace json{
   using namespace json_spirit;
+
+  //void extract(Model& result, const mValue& value);
 
   inline void extract(String& result, const mValue& value){
     result = value.get_value<String>();

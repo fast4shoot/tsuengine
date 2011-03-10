@@ -7,6 +7,7 @@
 #include "macros.h"
 #include "utils/stringUtils.h"
 
+
 class CText : public CGuiPanel
 {
   public:
@@ -27,16 +28,7 @@ class CText : public CGuiPanel
 
 };
 
-inline CText::CText(const vec2d& pos, const vec2d& size, const double height):
-  CGuiPanel(pos,size),
-  _textContainer(new CGuiPanel(pos,size)),
-  _height(height),
-  _font(engine->fonts->getFont("ARIALUNI.TTF", height)),
-  _text()
-{
-  invalidate();
-  addChild(_textContainer);
-}
+
 
 inline CText::~CText(){}
 

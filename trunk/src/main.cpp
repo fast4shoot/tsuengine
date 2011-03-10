@@ -119,11 +119,13 @@ int WINAPI WinMain (HINSTANCE hInstance,
           //if(engine->getFPS()>800.0)Sleep(1);
         }
     }
-  }catch(std::exception e){
+  }catch(std::exception& e){
     std::string result;
     result="An exception occured: \n";
     result+=e.what();
     MessageBoxA(hWnd,result.c_str(),"Exception",MB_OK | MB_ICONEXCLAMATION);
+  }catch(...){
+    MessageBoxA(hWnd,"An exception occured.","Exception",MB_OK | MB_ICONEXCLAMATION);
   }
   engine->destroy();
   delete engine;

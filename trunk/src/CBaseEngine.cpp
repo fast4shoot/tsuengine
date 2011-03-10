@@ -48,91 +48,32 @@ void CBaseEngine::init(){
   models = new CModelMgr();
   gui->init();
   ents = new CEntMgr();
+  map = new CMapMgr();
   m_ready=true;
   log(sformat("TSUEngine verze %d.%d.%d revize %d",AutoVersion::MAJOR,AutoVersion::MINOR,AutoVersion::BUILD,AutoVersion::REVISION));
   log(sformat("OpenGL verze %s",glGetString(GL_VERSION)));
   ents->print();
 
-  /*json_spirit::mValue value;
-  json_spirit::read( "{\"rofl\": [1337.2, 2, 3]}", value );
 
-  //log(sformat("přečteno %d",value.get_obj().find("rofl")->second.get_int()));
-  vec3d rofl;
-  rofl.fromJson(value.get_obj().find("rofl")->second);
-  double x = rofl.x;
-  log(sformat("přečten vektor: %f, %f, %f",x, rofl.y, rofl.z));*/
+  //testMat=materials->getMaterial("wall1");
+  cursorMat=materials->getPersistentMaterial("system/cursor");
 
-  testMat=materials->getMaterial("wall1");
-  cursorMat=materials->getMaterial("system/cursor");
-
-  Model* temp;
-
-  //testMdl3 = models->getModel("ffx_yuna");
-
-  /*testMdl->setPosition(vec3d(50, 0, 0));
-  (testMdl2 = models->getModel("barrel"))->setPosition(vec3d(25, 0, -30));
-  models->getModel("barrel")->setPosition(vec3d(-10, 0, -35));
-  (temp = models->getModel("ffx_yuna"))->setPosition(vec3d(-100, 0, -35));
-  temp->setRotation(0, 45, 0);
-  models->getModel("man")->setPosition(vec3d(-60, 0, -30));
-  */
+  /*
   testMdl=models->getModel("barrel");
   testMdl->setPosition(vec3d(1., 5., -3.));
   testMdl->setPhysics(P_DYNAMIC);
-  testMdl=models->getModel("barrel");
-  testMdl->setPosition(vec3d(0.5, 3., -3.5));
-  testMdl->setPhysics(P_DYNAMIC);
-  testMdl=models->getModel("barrel");
-  testMdl->setPosition(vec3d(0.5, 4., -7.5));
-  testMdl->setPhysics(P_DYNAMIC);
-  testMdl=models->getModel("barrel");
-  testMdl->setPosition(vec3d(1., 4., -4.7));
-  testMdl->setPhysics(P_DYNAMIC);
-  testMdl=models->getModel("barrel");
-  testMdl->setPosition(vec3d(1., 5., -4.6));
-  testMdl->setPhysics(P_DYNAMIC);
-  testMdl=models->getModel("barrel");
-  testMdl->setPosition(vec3d(1., 6., -4.6));
-  testMdl->setRotation(0., PI/8., 0.);
-  testMdl->setPhysics(P_DYNAMIC);
-  testMdl=models->getModel("barrel");
-  testMdl->setPosition(vec3d(1., 7., -4.6));
-  testMdl->setRotation(0., PI/9., 0.);
-  testMdl->setPhysics(P_DYNAMIC);
+  */
 
 
-  testMdl=models->getModel("static");
-  testMdl->setPosition(vec3d(0., -1., 0.));
-  testMdl->setRotation(PI/8., 0., 0.);
-  testMdl->setPhysics(P_STATIC);
-
-  testMdl=models->getModel("static");
-  testMdl->setPosition(vec3d(0., -5., 0.));
-  testMdl->setRotation(-PI/8., 0., PI/8.);
-  testMdl->setPhysics(P_STATIC);
-
-/*
-  testMdl=models->getModel("static");
-  testMdl->setPosition(vec3d(0., -5., 0.));
-  testMdl->setRotation(PI/8., 0., -PI/8.);
-  testMdl->setPhysics(P_STATIC);*/
-
+  map->load("test");
   models->uploadData();
-
-
 
 }
 
-/*int CBaseTransmission() {
-  if (car->getRadiciPaka().pushed()) {
-    car.setGear(car->getRadiciPaka().getValue());
-  }
-
-  return 5;
-}*/
-
 void CBaseEngine::destroy(){
-
+  delete map;
+  delete ents;
+  delete models;
   delete gui;
   delete materials;
   delete fonts;
@@ -169,6 +110,10 @@ void CBaseEngine::think(){
 
   if(input->keyPressed(DIK_ESCAPE)){
     quit();
+  }
+
+  if(input->keyPressed(DIK_Q)){
+    map->unload();
   }
 
 /*
@@ -249,17 +194,24 @@ void CBaseEngine::initGuiView(){
   //glScalef(1.0,-1.0,1.0);
 }
 
-void CBaseEngine::log(const String& text){
+void CBaseEngine::logAppend(const String& text){
   static bool firstLog=true;
   m_logFile << text << std::endl;
   if(isReady()){
     String console=_consoleOutput->getText();
-    if(!firstLog){
-      console.append("\n");
-    }
-    firstLog=false;
+
     console.append(text);
     _consoleOutput->setText(console);
+  }
+}
+
+void CBaseEngine::log(const String& text){
+  static bool firstLog=true;
+  if(firstLog){
+    logAppend(text);
+    firstLog=false;
+  }else{
+    logAppend("\n"+text);
   }
 }
 

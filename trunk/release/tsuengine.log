@@ -1,44 +1,79 @@
 CModelMgr()
-TSUEngine verze 0.23.2378 revize 3091
-OpenGL verze 1.4.0 - Build 8.14.10.1930
+
+TSUEngine verze 0.25.2551 revize 4004
+
+OpenGL verze 3.3.10524 Compatibility Profile Context
+
 Zaregistrovane entity: 
+
 CBaseEntity
-CLogicEntity
-Vytvářím materiál wall1
+
+CModelEntity
+
+CVisibleEntity
+
+CWorldEntity
+
+prop_dynamic
+
+world
+
 Vytvářím materiál system/cursor
+...hotovo
+
+Loading map test
+
+Warning: Can't create entity: Unknown classname prop_static
+
+Setting property model
+
 Vytvářím model barrel
+
 new PhysicsModel(physModel->second);
+
 Vytvářím materiál barrel
-addBody(0x511dc70, 0x4c99470, 3);
-physMdl->getMass(): 100.000000
-mass: 100.000000
-addBody(0x511f548, 0x4c99470, 3);
-physMdl->getMass(): 100.000000
-mass: 100.000000
-addBody(0x581f860, 0x4c99470, 3);
-physMdl->getMass(): 100.000000
-mass: 100.000000
-addBody(0x581f918, 0x4c99470, 3);
-physMdl->getMass(): 100.000000
-mass: 100.000000
-addBody(0x581f3f8, 0x4c99470, 3);
-physMdl->getMass(): 100.000000
-mass: 100.000000
-addBody(0x511d370, 0x4c99470, 3);
-physMdl->getMass(): 100.000000
-mass: 100.000000
-addBody(0x511d428, 0x4c99470, 3);
-physMdl->getMass(): 100.000000
-mass: 100.000000
+...hotovo
+
+...model finished (0x2367460)
+
+Setting property position
+
+Setting property rotation
+
+Properties setup finished
+
+Pushing entity back
+
+Returning entity P11CBaseEntity
+
+Setting property model
+
 Vytvářím model static
+
 new PhysicsModel(physModel->second);
-addBody(0x581fa78, 0x4c99518, 1);
-physMdl->getMass(): 0.000000
-mass: 0.000000
-addBody(0x583a728, 0x4c99518, 1);
-physMdl->getMass(): 0.000000
-mass: 0.000000
+
+Vytvářím materiál wall1
+...hotovo
+
+...model finished (0x236a048)
+
+Properties setup finished
+
+Pushing entity back
+
+Returning entity P11CBaseEntity
+
+Spawning entities
+
+Map loaded
+
+Uploading model data to GPU
+
 setOffsets(0, 0)
+
 setOffsets(560, 2412)
+
 uploadData(): m_vboOffset=0, m_indexVboOffset=0, getVertexCount()=560, getIndexCount()=2412
+
 uploadData(): m_vboOffset=560, m_indexVboOffset=2412, getVertexCount()=4, getIndexCount()=6
+...finished
