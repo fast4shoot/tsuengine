@@ -29,6 +29,8 @@ class CInputMgr{
 
     float           getX() const;
     float           getY() const;
+    float           getCursorX() const;
+    float           getCursorY() const;
     vec2d           getCursor() const;
     vec2d           getCursorDelta() const;
 
@@ -47,6 +49,8 @@ class CInputMgr{
     bool            bInverted;           //inverted y axis (NEW)
     int             iCurrBuffer;
     float           fSensitivity;        //mouse sensitivity (NEW)
+    vec2d           mouse;
+    vec2d           mouseDelta;
     vec2d           cursor;
     vec2d           cursorDelta;
     int             iAxes,              //number of axes (NEW)
@@ -55,10 +59,18 @@ class CInputMgr{
 };
 
 inline float CInputMgr::getX() const{
-  return cursor.x;
+  return mouse.x;
 }
 
 inline float CInputMgr::getY() const{
+  return mouse.y;
+}
+
+inline float CInputMgr::getCursorX() const{
+  return cursor.x;
+}
+
+inline float CInputMgr::getCursorY() const{
   return cursor.y;
 }
 

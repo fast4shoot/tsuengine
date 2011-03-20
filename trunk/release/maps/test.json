@@ -1,9 +1,9 @@
 {
   "entities": [
     {
-      "classname": "prop_static",
-      "position": [1, 0.5, 0],
-      "rotation": [0, 0, 0], 
+      "classname": "prop_dynamic",
+      "position": [1, 2, 0],
+      "rotation": [0, 45, 0], 
       "model": "barrel"    
     },
     {
@@ -13,9 +13,90 @@
       "model": "barrel"  
     },
     {
+      "classname": "prop_static",
+      "position": [-1, 1, 4],
+      "rotation": [0, 0, 0], 
+      "model": "box"  
+    },
+    {
+      "classname": "prop_static",
+      "position": [-1, 1, 6],
+      "rotation": [0, 0, 0], 
+      "model": "box2"  
+    },
+    {
+      "classname": "prop_static",
+      "position": [-1, 1, 8],
+      "rotation": [0, 0, 0], 
+      "model": "box2"  
+    },
+    
+    {
+      "classname": "prop_static",
+      "position": [-3, -0.75, 4],
+      "rotation": [0, -12, 0], 
+      "model": "box2"  
+    },
+    {
+      "classname": "prop_static",
+      "position": [-3, -0.5, 6],
+      "rotation": [0, -12, 0], 
+      "model": "box2"  
+    },
+    
+    {
+      "classname": "prop_static",
+      "position": [-3, 1, 8],
+      "rotation": [0, 0, 0], 
+      "model": "box2"  
+    },
+    
+    
+    {
+      "classname": "prop_static",
+      "position": [-1, 1, 3],
+      "model": "barrel"  
+    },
+    {
+      "classname": "prop_static",
+      "position": [-1, -0.23, 1],
+      "model": "barrel"  
+    },
+    {
+      "classname": "prop_static",
+      "position": [-1, 0, 1.5],
+      "model": "barrel"  
+    },
+    
+    {
       "classname": "world",
       "model": "static"
+    },
+    {
+      "classname": "player",
+      "position": [-1, 1, 0],
+      "rotation": [0, 0, 0]
+    },
+    {
+      "classname": "func_door_rotating",
+      "speed": 2,
+      "model": "door1",
+      "position": [-2, 0,-4]
+    },
+    {
+      "classname": "prop_static",
+      "position": [-3, 1, -3],
+      "rotation": [0, 0, 0], 
+      "model": "box"  
+    },
+    {
+      "classname": "prop_static",
+      "position": [-0.15, 1, -3],
+      "rotation": [0, 0, 0], 
+      "model": "box"  
     }
+  ],
+  "relations": [
+    
   ]
-  "relations": []
 }

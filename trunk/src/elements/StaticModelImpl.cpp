@@ -5,10 +5,8 @@
 StaticModelImpl::StaticModelImpl(const json::mValue& value){
   json::mObject::const_iterator physModel = value.get_obj().find("physModel");
   if(physModel != value.get_obj().end()){
-    engine->log("new PhysicsModel(physModel->second);");
     m_physModel = new PhysicsModel(physModel->second);
   }else{
-    engine->log("new PhysicsModel();");
     m_physModel = new PhysicsModel();
   }
   const json::mArray& parts = value.get_obj().find("parts")->second.get_array();

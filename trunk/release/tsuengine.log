@@ -1,79 +1,39 @@
 CModelMgr()
-
-TSUEngine verze 0.25.2551 revize 4004
-
+TSUEngine verze 0.28.2805 revize 5410
 OpenGL verze 3.3.10524 Compatibility Profile Context
-
+Engine is now ready
 Zaregistrovane entity: 
-
 CBaseEntity
-
+CDoorBase
 CModelEntity
-
 CVisibleEntity
-
 CWorldEntity
-
+func_door_rotating
+player
 prop_dynamic
-
+prop_static
 world
-
-Vytvářím materiál system/cursor
-...hotovo
-
+Vytvářím materiál system/cursor...hotovo
 Loading map test
-
-Warning: Can't create entity: Unknown classname prop_static
-
-Setting property model
-
 Vytvářím model barrel
-
-new PhysicsModel(physModel->second);
-
-Vytvářím materiál barrel
-...hotovo
-
-...model finished (0x2367460)
-
-Setting property position
-
-Setting property rotation
-
-Properties setup finished
-
-Pushing entity back
-
-Returning entity P11CBaseEntity
-
-Setting property model
-
+Vytvářím materiál barrel...hotovo
+...model finished (0x21eed58)
+Vytvářím model box
+Vytvářím materiál wall1...hotovo
+...model finished (0x21edf60)
+Vytvářím model box2
+...model finished (0x6298ee8)
 Vytvářím model static
-
-new PhysicsModel(physModel->second);
-
-Vytvářím materiál wall1
-...hotovo
-
-...model finished (0x236a048)
-
-Properties setup finished
-
-Pushing entity back
-
-Returning entity P11CBaseEntity
-
+...model finished (0x2286298)
+Vytvářím model door1
+Vytvářím materiál white...hotovo
+...model finished (0x22862f8)
+Creating relations...
 Spawning entities
-
-Map loaded
-
 Uploading model data to GPU
-
-setOffsets(0, 0)
-
-setOffsets(560, 2412)
-
-uploadData(): m_vboOffset=0, m_indexVboOffset=0, getVertexCount()=560, getIndexCount()=2412
-
-uploadData(): m_vboOffset=560, m_indexVboOffset=2412, getVertexCount()=4, getIndexCount()=6
-...finished
+Uploading data
+Uploading data
+Uploading data
+Uploading data
+Uploading data...finished
+Map loaded

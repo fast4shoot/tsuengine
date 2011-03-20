@@ -28,7 +28,11 @@ void CBaseEntity::fireOutput(const String& name){
 }
 
 void CBaseEntity::addRelation(const String& output, CBaseEntity* callee, const String& input){
-  m_relations[output].addRelation(callee, input);
+  if(m_descriptor->m_outputs.find(output) != m_descriptor->m_outputs.end()){
+    m_relations[output].addRelation(callee, input);
+  }else{
+    throw std::runtime_error("Entity "+m_descriptor->getClassname()+" has no output '"+output+"'");
+  }
 }
 
 void CBaseEntity::setValue(const String& name, const json::mValue& value){
@@ -36,17 +40,17 @@ void CBaseEntity::setValue(const String& name, const json::mValue& value){
 }
 
 void EntityRelation::addRelation(CBaseEntity* ent, const String& input){
-  m_relations.push_back(std::make_pair(ent, input));
+  m_relations.insert(std::make_pair(ent, input));
 }
 
 void EntityRelation::fire(CBaseEntity* originator){
   for(EntityInputList::iterator it = m_relations.begin(); it != m_relations.end(); ++it){
-    (*it).first->fireInput((*it).second, originator);
+    it->first->fireInput(it->second, originator);
   }
 }
 
 namespace json{
-  void extract(Model* result, const mValue& value){
+  void extract(Model*& result, const mValue& value){
     if(engine->isReady()){
       result = engine->models->getModel(value.get_str());
     }
@@ -61,17 +65,16 @@ CBaseEntity* CBaseEntityDescriptor::create(const json::mValue& value){
 
   for(ValueList::iterator it = m_values.begin(); it != m_values.end(); ++it){
     json::mObject::const_iterator vIt = value.get_obj().find(it->first);
-    engine->log("Setting property "+it->first);
     if(vIt != value.get_obj().end()){
       it->second->set(ent, vIt->second);
     }
   }
-  engine->log("Properties setup finished");
   ent->init();
   return ent;
 }
 
 void CBaseEntityDescriptor::fireInput(const String& name, CBaseEntity* receiver, CBaseEntity* originator){
+  if(m_inputs.find(name) == m_inputs.end()) return;
   if(!m_inputs[name]->invoke(receiver,originator)){
     engine->log(sformat("Can't fire input %s of entity %s, probably a programming bug.", name.c_str(), receiver->m_descriptor->getClassname().c_str()));
   }

@@ -17,7 +17,12 @@ inline T saw(const T& value, const T& period, const T& amp){
 
 template <class T>
 inline T toDeg(const T& radians){
-  return radians/PI*180;
+  return radians*180/PI;
+}
+
+template <class T>
+inline T toRad(const T& degrees){
+  return degrees*PI/180;
 }
 
 #endif

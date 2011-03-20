@@ -16,6 +16,7 @@
 #include "CFontMgr.h"
 #include "CModelMgr.h"
 #include "CPhysicsMgr.h"
+#include "CCameraMgr.h"
 #include "CMapMgr.h"
 #include "CEntMgr.h"
 #include "elements/Material.h"
@@ -37,7 +38,7 @@ class CBaseEngine{
     double          timeScale;
     unsigned long long int    frameCount;
     double          fps;
-    CText*          _consoleOutput;
+
     std::ofstream   m_logFile;
     bool            m_ready;
 
@@ -45,6 +46,7 @@ class CBaseEngine{
   public:
 
     CInputMgr*      input;
+    CCameraMgr*     camera;
     CGuiMgr*        gui;
     CFontMgr*       fonts;
     CMaterialMgr*   materials;
@@ -53,7 +55,8 @@ class CBaseEngine{
     CEntMgr*        ents;
     CMapMgr*        map;
 
-
+    CText*          _consoleOutput;
+    CText*          m_tempConsoleOutput;
 
                     CBaseEngine();
     void            init();
@@ -66,7 +69,7 @@ class CBaseEngine{
     double          getRealTimeDelta() const;
     unsigned long long int getFrameCount() const;
     double          getFPS() const;
-
+    void            resetGameTime();
 
     void            think();
     void            initWorldView();
@@ -79,6 +82,7 @@ class CBaseEngine{
     void            log(const String& text);
     void            logAppend(const String& text);
     void            warning(const String& text);
+    void            debug(const String& text);
 
     void            checkGl();
 

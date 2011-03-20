@@ -7,12 +7,17 @@
 class PhysicsModel{
     public:
       PhysicsModel();
+      ~PhysicsModel();
       PhysicsModel(const json::mValue& value);
       btCollisionShape* getCollisionShape() const;
       double getMass() const;
     protected:
       btCollisionShape* m_shape;
       double m_mass;
+
+      btScalar* m_vertices;
+      int*  m_indices;
+      btStridingMeshInterface* m_meshInterface;
 };
 
 inline btCollisionShape* PhysicsModel::getCollisionShape() const{

@@ -71,7 +71,7 @@ int WINAPI WinMain (HINSTANCE hInstance,
     NULL, NULL, hInstance, NULL);
 
   appWindow=hWnd;
-  //ShowWindow(hWnd, SW_SHOWMAXIMIZED);
+  ShowWindow(hWnd, SW_SHOWMAXIMIZED);
 
   try{
     // enable OpenGL for the window

@@ -3,6 +3,8 @@
 #include <fstream>
 #include "CBaseEngine.h"
 #include "glew/glew.h"
+#include "elements/Model.h"
+#include "elements/StaticModel.h"
 
 CModelMgr::CModelMgr(){
   modelTypeMap["static"]=M_STATIC;
@@ -89,6 +91,7 @@ void CModelMgr::uploadData(){
   engine->checkGl();
 
   for(StaticModelList::iterator it = staticModels.begin(); it != staticModels.end(); it++){
+    engine->log("Uploading data");
     it->second->uploadData();
   }
 

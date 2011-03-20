@@ -14,7 +14,7 @@ class EntityRelation{
     void addRelation(CBaseEntity* ent, const String& input);
     void fire(CBaseEntity* originator);
   protected:
-    typedef std::list< std::pair<CBaseEntity*, const String&> > EntityInputList;
+    typedef std::set< std::pair<CBaseEntity*, String> > EntityInputList;
     EntityInputList m_relations;
 };
 
@@ -45,7 +45,7 @@ class CBaseEntity{
 
 
 namespace json{
-  void extract(Model* result, const mValue& value);
+  void extract(Model*& result, const mValue& value);
 }
 
 class CBaseEntityDescriptor{
@@ -123,12 +123,13 @@ class CBaseEntityDescriptor{
     InputList m_inputs;
     OutputList m_outputs;
     ValueList m_values;
+
+    friend class CBaseEntity;
 };
 
 inline void CBaseEntityDescriptor::registerEntity(){
   classname("CBaseEntity");
-  spawnable(true);
-  //input("print",&CBaseEntity::print);
+  spawnable(false);
 }
 
 inline CBaseEntity* CBaseEntityDescriptor::createInstance(){

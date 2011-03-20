@@ -5,9 +5,11 @@
 
 void Model::draw(){
   glPushMatrix();
-  glTranslatef(m_transform.getOrigin().x(), m_transform.getOrigin().y(), m_transform.getOrigin().z());
-  btVector3 axis = m_transform.getRotation().getAxis();
-  glRotatef(toDeg(m_transform.getRotation().getAngle()), axis.x(), axis.y(), axis.z());
+  btTransform transform;
+  getWorldTransform(transform);
+  glTranslatef(transform.getOrigin().x(), transform.getOrigin().y(), transform.getOrigin().z());
+  btVector3 axis = transform.getRotation().getAxis();
+  glRotatef(toDeg(transform.getRotation().getAngle()), axis.x(), axis.y(), axis.z());
   render();
   glPopMatrix();
 }

@@ -11,6 +11,9 @@ class CWorldEntity : public CBaseEntity{
     virtual void setWorldTransform(const btTransform &worldTrans);
     virtual void setPosition(const vec3d& newPosition);
     virtual void setRotation(double yaw, double pitch, double roll);
+    virtual vec3d getPosition();
+    virtual vec3d getForward();
+    virtual vec3d getUp();
     vec3d m_position;
     vec3d m_rotation;
   protected:

@@ -11,24 +11,20 @@ class CScrollBar : public CGuiPanel{
   public:
     CScrollBar(const vec2d& pos, const vec2d& size);
     double getScrollAmount();
+    void setContentHeight(double height);
   protected:
     void buttonScroll(int id);
     double _scrollAmt;
+    double m_contentHeight;
 
 };
+
+inline void CScrollBar::setContentHeight(double height){
+  m_contentHeight = height;
+}
 
 inline double CScrollBar::getScrollAmount(){
   return _scrollAmt;
 }
-
-inline void CScrollBar::buttonScroll(int id){
-  switch(id){
-    case 0: _scrollAmt-=0.05; fireListeners(); break;
-    case 1: _scrollAmt+=0.05; fireListeners(); break;
-  }
-  _scrollAmt=clamp(_scrollAmt, 0., 1.);
-  fireListeners();
-}
-
 
 #endif // CSCROLLBAR_H

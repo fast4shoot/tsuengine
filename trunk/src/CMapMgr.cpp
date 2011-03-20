@@ -23,20 +23,31 @@ void CMapMgr::load(const String& name){
       tempEntList.push_back(engine->ents->create(*it));
     }
 
-    /*
-    const json::mArray& rels = value.get_obj()["relations"].get_array();
-    for(json::mArray::const_iterator it = ents.begin(); it != ents.end(); ++it){
-
-      CBaseEntity* e1 = tempEntList[it->get_obj()["caller"];
-    }*/
+    engine->log("Creating relations...");
+    if(value.get_obj().find("relations") != value.get_obj().end()){
+      const json::mArray& rels = value.get_obj().find("relations")->second.get_array();
+      for(json::mArray::const_iterator it = rels.begin(); it != rels.end(); ++it){
+        try{
+          CBaseEntity* e1 = tempEntList[it->get_obj().find("caller")->second.get_int()];
+          CBaseEntity* e2 = tempEntList[it->get_obj().find("callee")->second.get_int()];
+          if(e1 != NULL && e1 != NULL){
+            e1->addRelation(it->get_obj().find("output")->second.get_str(), e2, it->get_obj().find("input")->second.get_str());
+          }
+        }catch(std::exception& e){
+          engine->warning("Can't create relation: "+String(e.what()));
+        }
+      }
+    }
 
     engine->log("Spawning entities");
     engine->ents->doSpawn();
 
+    engine->models->uploadData();
+    engine->resetGameTime();
     m_mapName = name;
     m_isLoaded = true;
     engine->log("Map loaded");
-  }catch(std::exception e){
+  }catch(std::exception& e){
     engine->warning("Couldn't load map "+name+": "+String(e.what()));
   }
 }
@@ -47,6 +58,7 @@ void CMapMgr::unload(){
   engine->physics->removeAll();
   engine->models->removeAll();
   engine->materials->removeAll();
+  engine->camera->removeAll();
   engine->log("Map "+m_mapName+" unloaded");
   m_isLoaded = false;
   m_mapName = "";

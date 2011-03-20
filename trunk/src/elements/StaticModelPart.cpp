@@ -75,7 +75,6 @@ void StaticModelPart::uploadData(){
     //engine->log(sformat("index: %d", indices[i]));
   }
 
-  engine->log(sformat("uploadData(): m_vboOffset=%d, m_indexVboOffset=%d, getVertexCount()=%d, getIndexCount()=%d", m_vboOffset, m_indexVboOffset, getVertexCount(), getIndexCount()));
   glBufferSubDataARB(GL_ARRAY_BUFFER, m_vboOffset*sizeof(StaticVertexData), getVertexCount()*sizeof(StaticVertexData), vertices);
   glBufferSubDataARB(GL_ELEMENT_ARRAY_BUFFER, m_indexVboOffset*sizeof(GLuint), getIndexCount()*sizeof(GLuint), indices);
   engine->checkGl();
@@ -88,7 +87,6 @@ void StaticModelPart::draw(){
 }
 
 void StaticModelPart::setOffsets(int vboOffset, int indexVboOffset){
-  engine->log(sformat("setOffsets(%d, %d)", vboOffset, indexVboOffset));
   m_vboOffset = vboOffset;
   m_indexVboOffset = indexVboOffset;
 }

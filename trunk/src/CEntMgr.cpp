@@ -36,9 +36,7 @@ CBaseEntity* CEntMgr::create(const json::mValue& value){
     if(it == m_descriptors.end()) throw std::invalid_argument("Unknown classname "+classname);
 
     CBaseEntity* ent = it->second->create(value);
-    engine->log("Pushing entity back");
     m_entities.push_back(ent);
-    engine->log(sformat("Returning entity %s", typeid(ent).name()));
     return ent;
   }catch(std::exception& e){
     engine->warning(String("Can't create entity: ")+e.what());

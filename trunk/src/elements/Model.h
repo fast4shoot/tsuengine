@@ -22,9 +22,13 @@ class Model: public btMotionState{
 
     virtual void linkToEntity(CBaseEntity* ent);
     virtual void linkToEntity(CWorldEntity* ent);
+    virtual CBaseEntity* getLinkedEntity() const;
 
     virtual void setPhysics(PhysicsType physics)=0;
     virtual PhysicsType getPhysics() const=0;
+
+    void setVisible(bool visible);
+    bool getVisible() const;
 
     virtual void draw();
     virtual void render()=0;
@@ -59,7 +63,9 @@ inline void Model::setRotation(float pitch, float yaw, float roll){
   m_transform.setRotation(btQuaternion(yaw, pitch, roll));
 }
 
-
+inline CBaseEntity* Model::getLinkedEntity() const{
+  return m_linkedBaseEntity;
+}
 
 
 #endif // MODEL_H

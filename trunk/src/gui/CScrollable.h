@@ -21,21 +21,7 @@ class CScrollable : public CGuiPanel{
     static const int SCROLLBAR=0;
 };
 
-inline CScrollable::CScrollable(const vec2d& pos, const vec2d& size):
-  CGuiPanel(pos, size),
-  _panel(new CStencilPanel(vec2d(0,0), size-vec2d(20., 0.))),
-  _bar(new CScrollBar(vec2d(getW()-20., 0), vec2d(20., getH())))
-{
-  _bar->addListener(makeCListenerMemberFn(SCROLLBAR, this, &CScrollable::apFn));
-  addChild(_panel);
-  addChild(_bar);
-}
 
-inline void CScrollable::setScrolledItem(CGuiPanel* scrolled){
-  _scrolled=scrolled;
-  _scrolled->setPosition(0., 0.);
-  _panel->addChild(scrolled);
-}
 
 inline void CScrollable::apFn(int id){
   if(id==SCROLLBAR) _scrolled->setY(-(_scrolled->getH()-getH())*(_bar->getScrollAmount()));
