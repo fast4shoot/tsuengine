@@ -3,8 +3,11 @@
 
 #include "datatypes.h"
 #include "glew/glew.h"
-#include "elements/Model.h"
-#include "elements/StaticModel.h"
+
+
+class Model;
+class StaticModel;
+class StaticModelImpl;
 
 class CModelMgr{
   typedef std::map<String,StaticModelImpl*> StaticModelList;

@@ -4,6 +4,7 @@
 #include "CCenteredWindow.h"
 #include "CCheckBox.h"
 #include "CTextField.h"
+#include "CText.h"
 #include "CConsole.h"
 #include "CBaseEngine.h"
 
@@ -43,6 +44,7 @@ CMainMenu::CMainMenu():
   addChild(_console=new CConsole());
   _console->setVisible(false);
 
+  addChild(engine->m_tempConsoleOutput = new CText(vec2d(), vec2d(engine->getScreenWidth(), 80), 12));
 
   addChild(new CCheckBox(vec2d(20,210), vec2d(160,16), "Jinej test"));
   addChild(new CCheckBox(vec2d(20,230), vec2d(160,16), "Úplně jinej test"));

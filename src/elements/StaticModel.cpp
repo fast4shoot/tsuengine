@@ -17,6 +17,5 @@ void StaticModel::render(){
 
 void StaticModel::setPhysics(PhysicsType physics){
   m_physType = physics;
-  engine->log(sformat("addBody(%p, %p, %d);",this, m_impl->getPhysModel(), physics));
   engine->physics->addBody(this, m_impl->getPhysModel(), physics);
 }

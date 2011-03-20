@@ -5,6 +5,7 @@
 #include "exceptions.h"
 #include "datatypes.h"
 #include "CBaseEngine.h"
+#include "utils/math.h"
 
 CInputMgr::CInputMgr(){
   DIObject=NULL;
@@ -101,14 +102,15 @@ void CInputMgr::update(){
   }
 
 
+
+  vec2d mouseOld = mouse;
+  mouse.x += MouseState[iCurrBuffer].lX * fSensitivity;
+  mouse.y += MouseState[iCurrBuffer].lY * fSensitivity;
+  mouseDelta = mouse - mouseOld;
+
   vec2d cursorOld = cursor;
-
-  cursor.x += MouseState[iCurrBuffer].lX * fSensitivity;
-  cursor.y += MouseState[iCurrBuffer].lY * fSensitivity;
-
-  cursor.x = CLIPMINMAX(cursor.x,0,engine->getScreenWidth()-1);
-  cursor.y = CLIPMINMAX(cursor.y,0,engine->getScreenHeight()-1);
-
+  cursor.x = clamp(cursor.x+mouseDelta.x,0.,(double)engine->getScreenWidth()-1.);
+  cursor.y = clamp(cursor.y+mouseDelta.y,0.,(double)engine->getScreenHeight()-1.);
   cursorDelta = cursor - cursorOld;
 }
 
@@ -124,11 +126,11 @@ bool CInputMgr::keyStillDown(int key){
 }
 
 bool CInputMgr::keyPressed(int key){
-  return (!(keyBuffer[iCurrBuffer][key] & 0x80) && (keyBuffer[!iCurrBuffer][key] & 0x80));
+  return ((keyBuffer[iCurrBuffer][key] & 0x80) && !(keyBuffer[!iCurrBuffer][key] & 0x80));
 }
 
 bool CInputMgr::keyDepressed(int key){
-  return ((keyBuffer[iCurrBuffer][key] & 0x80) && !(keyBuffer[!iCurrBuffer][key] & 0x80));
+  return (!(keyBuffer[iCurrBuffer][key] & 0x80) && (keyBuffer[!iCurrBuffer][key] & 0x80));
 }
 
 float CInputMgr::keyTimed(int key){

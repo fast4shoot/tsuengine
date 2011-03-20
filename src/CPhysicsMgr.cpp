@@ -2,6 +2,7 @@
 
 #include "CBaseEngine.h"
 #include "datatypes.h"
+#include "BulletCollision/CollisionDispatch/btGhostObject.h"
 CPhysicsMgr::CPhysicsMgr(){
 
 	///collision configuration contains default setup for memory, collision setup
@@ -20,6 +21,7 @@ CPhysicsMgr::CPhysicsMgr(){
 	m_dynamicsWorld = new btDiscreteDynamicsWorld(m_dispatcher,m_broadphase,m_solver,m_collisionConfiguration);
 
 	m_dynamicsWorld->setGravity(btVector3(0,-10,0));
+	m_dynamicsWorld->getPairCache()->setInternalGhostPairCallback(new btGhostPairCallback());
 
 }
 
@@ -33,14 +35,10 @@ btRigidBody* CPhysicsMgr::addBody(Model* mdl, PhysicsModel* physMdl, PhysicsType
   }
   if(type == P_DYNAMIC && physMdl->getMass() == 0.){
     engine->warning("Can't create dynamic body without mass!");
-    return NULL;
+    type = P_KINEMATIC;
   }
 
-  engine->log(sformat("physMdl->getMass(): %f",physMdl->getMass()));
-
   double mass = (type == P_DYNAMIC?physMdl->getMass():0.);
-
-  engine->log(sformat("mass: %f", mass));
 
   btVector3 localInertia(0,0,0);
 	if (type == P_DYNAMIC){
@@ -49,6 +47,8 @@ btRigidBody* CPhysicsMgr::addBody(Model* mdl, PhysicsModel* physMdl, PhysicsType
 
   btRigidBody::btRigidBodyConstructionInfo rbInfo(mass, mdl, physMdl->getCollisionShape(),localInertia);
 	btRigidBody* body = new btRigidBody(rbInfo);
+
+  body->setUserPointer(mdl);
 
   if(type == P_KINEMATIC){
     body->setCollisionFlags( body->getCollisionFlags() |

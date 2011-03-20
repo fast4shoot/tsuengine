@@ -13,14 +13,19 @@ class CPhysicsMgr{
     void update();
     btRigidBody* addBody(Model* mdl, PhysicsModel* physMdl, PhysicsType type);
     void removeAll();
+    btDynamicsWorld* getWorld();
   protected:
     btBroadphaseInterface*	m_broadphase;
-	btCollisionDispatcher*	m_dispatcher;
-	btConstraintSolver*	m_solver;
-	btDefaultCollisionConfiguration* m_collisionConfiguration;
-	btDynamicsWorld*  m_dynamicsWorld;
-	typedef std::set<btRigidBody*> BodyList;
-	BodyList m_bodies;
+	  btCollisionDispatcher*	m_dispatcher;
+  	btConstraintSolver*	m_solver;
+   	btDefaultCollisionConfiguration* m_collisionConfiguration;
+  	btDynamicsWorld*  m_dynamicsWorld;
+  	typedef std::set<btRigidBody*> BodyList;
+  	BodyList m_bodies;
 };
+
+inline btDynamicsWorld* CPhysicsMgr::getWorld(){
+  return m_dynamicsWorld;
+}
 
 #endif // CPHYSICSMGR_H

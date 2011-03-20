@@ -39,6 +39,7 @@ void CBaseEngine::init(){
 
   input = new CInputMgr();
   input->init();
+  camera = new CCameraMgr();
   fonts=new CFontMgr();
   systemFont=fonts->getFont("ARIALUNI.TTF",14.);
   fonts->getFont("ARIALUNI.TTF",55.);
@@ -52,6 +53,7 @@ void CBaseEngine::init(){
   m_ready=true;
   log(sformat("TSUEngine verze %d.%d.%d revize %d",AutoVersion::MAJOR,AutoVersion::MINOR,AutoVersion::BUILD,AutoVersion::REVISION));
   log(sformat("OpenGL verze %s",glGetString(GL_VERSION)));
+  log("Engine is now ready");
   ents->print();
 
 
@@ -66,7 +68,6 @@ void CBaseEngine::init(){
 
 
   map->load("test");
-  models->uploadData();
 
 }
 
@@ -101,6 +102,7 @@ void CBaseEngine::think(){
     frameBefore=getFrameCount();
   }
 
+  m_tempConsoleOutput->setText("");
 
   input->update();
   gui->update();
@@ -131,11 +133,13 @@ void CBaseEngine::drawScene(){
 
   initWorldView();
 
-  gluLookAt(0, 0.50, 0, 0, 0.20, -3.00 , 0, 1, 0);
+  /*gluLookAt(0, 0.50, 0, 0, 0.20, -3.00 , 0, 1, 0);
 
   glTranslatef(0.,0.,-10.00);
   glRotatef(getTime(),0,1,0);
+  */
   glColor4f(1.,1.,1.,1.);
+
 
   models->draw();
 
@@ -151,7 +155,7 @@ void CBaseEngine::drawScene(){
   gui->drawElements();
 
   glPushMatrix();
-  glTranslatef(input->getX(),input-> getY(),0.0f);
+  glTranslatef(input->getCursorX(),input->getCursorY(),0.0f);
   cursorMat->bind();
   glEnable(GL_TEXTURE_2D);
   glBegin(GL_QUADS);
@@ -174,9 +178,10 @@ void CBaseEngine::drawScene(){
 void CBaseEngine::initWorldView(){
   glMatrixMode(GL_PROJECTION);
   glLoadIdentity();
-  gluPerspective(70.0f,(GLfloat)getScreenWidth()/(GLfloat)getScreenHeight(),0.1f,100000.0f);
+  gluPerspective(60.0f,(GLfloat)getScreenWidth()/(GLfloat)getScreenHeight(),0.1f,10000.0f);
   glMatrixMode(GL_MODELVIEW);
   glLoadIdentity();
+  camera->doTransform();
   glEnable(GL_DEPTH_TEST);
   glCullFace(GL_BACK);
   glEnable(GL_CULL_FACE);
@@ -196,13 +201,17 @@ void CBaseEngine::initGuiView(){
 
 void CBaseEngine::logAppend(const String& text){
   static bool firstLog=true;
-  m_logFile << text << std::endl;
+  m_logFile << text;
   if(isReady()){
     String console=_consoleOutput->getText();
-
     console.append(text);
     _consoleOutput->setText(console);
+    m_tempConsoleOutput->setText(m_tempConsoleOutput->getText()+text);
   }
+}
+
+void CBaseEngine::debug(const String& text){
+  m_tempConsoleOutput->setText(m_tempConsoleOutput->getText()+text+"\n");
 }
 
 void CBaseEngine::log(const String& text){
@@ -220,4 +229,10 @@ void CBaseEngine::checkGl(){
   while((err = glGetError())!=GL_NO_ERROR){
     log(sformat("GL error %d: %s",err,gluErrorString(err)));
   }
+}
+
+void CBaseEngine::resetGameTime(){
+  time = 0.;
+  lastTime = 0.;
+  timeDelta = 0.;
 }
