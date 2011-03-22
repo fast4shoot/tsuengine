@@ -13,6 +13,7 @@ class CScrollable : public CGuiPanel{
     CScrollable(const vec2d& pos, const vec2d& size);
     void setScrolledItem(CGuiPanel* scrolled);
     void apFn(int id);
+    void updateContentHeight(int dummy);
   protected:
     CStencilPanel* _panel;
     CScrollBar* _bar;

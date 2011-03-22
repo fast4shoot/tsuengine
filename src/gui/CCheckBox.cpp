@@ -20,6 +20,6 @@ void CCheckBox::draw(){
   drawQuad(0., u, u, u*6. );
   drawQuad(u*7., u, u, u*6. );
 
-  if(_selected)
+  if(m_selected)
     drawQuad(u*2., u*2., u*4., u*4. );
 }

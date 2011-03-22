@@ -7,6 +7,7 @@
 #include "CText.h"
 #include "CConsole.h"
 #include "CBaseEngine.h"
+#include "CListBox.h"
 
 CMainMenu::CMainMenu():
   CGuiPanel(vec2d(0,0),vec2d(engine->getScreenWidth(),engine->getScreenHeight()))
@@ -37,6 +38,29 @@ CMainMenu::CMainMenu():
   addChild(_settings=new CCenteredWindow(vec2d(400,300), "Nastavení"));
   _settings->setVisible(false);
   _settings->addChild(new CTextField(vec2d(20, 50), vec2d(160,24)));
+
+  CListBox* setList = new CListBox(vec2d(20, 100), vec2d(360, 180));
+  setList->addItem("rofl");
+  setList->addItem("test");
+  setList->addItem("does it work?");
+  setList->addItem("Yes, yes it does!");
+  setList->addItem("Yes, yes it does!");
+  setList->addItem("Yes, yes it does!");
+  setList->addItem("Yes, yes it does!");
+  setList->addItem("Yes, yes it does!");
+  setList->addItem("Yes, yes it does!");
+  setList->addItem("Definitely.");
+  setList->addItem("rofl");
+  setList->addItem("test");
+  setList->addItem("does it work?");
+  setList->addItem("Yes, yes it does!");
+  setList->addItem("Yes, yes it does!");
+  setList->addItem("Yes, yes it does!");
+  setList->addItem("Yes, yes it does!");
+  setList->addItem("Yes, yes it does!");
+  setList->addItem("Yes, yes it does!");
+  setList->addItem("Definitely.");
+  _settings->addChild(setList);
 
   addChild(_newGame=new CCenteredWindow(vec2d(500,230), "Nová hra"));
   _newGame->setVisible(false);

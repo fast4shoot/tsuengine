@@ -30,3 +30,5 @@ rgba rgba::operator*(float rhs){
   rgba out(r*rhs,g*rhs,b*rhs,a*rhs);
   return out;
 }
+
+rgba rgba::white = rgba(1., 1., 1., 1.);

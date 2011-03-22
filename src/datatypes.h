@@ -24,6 +24,7 @@ class rgba{
     rgba(float r, float g, float b, float a);
     void set(float r, float g, float b, float a);
     rgba operator*(float rhs);
+    static rgba white;
 };
 
 
