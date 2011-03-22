@@ -9,8 +9,7 @@
 class CListener;
 
 class CGuiPanel{
-  typedef std::vector<CListener*> ListenerList;
-  typedef std::vector<CGuiPanel*> ChildrenList;
+
   public:
                     CGuiPanel(const vec2d& pos, const vec2d& size);
     virtual         ~CGuiPanel();
@@ -92,6 +91,8 @@ class CGuiPanel{
     void            drawFrame(float x, float y, float w, float h);
 
   protected:
+    typedef std::vector<CListener*> ListenerList;
+    typedef std::vector<CGuiPanel*> ChildrenList;
     void            setParent(CGuiPanel* newParent);
     void            setParentIndex(int newParentIndex);
     void            fireListeners();

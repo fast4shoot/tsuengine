@@ -217,6 +217,8 @@
 		<Unit filename="gui\CAbstractToggle.cpp" />
 		<Unit filename="gui\CAbstractToggle.h" />
 		<Unit filename="gui\CActionListenerPanel.h" />
+		<Unit filename="gui\CAutoSizePanel.cpp" />
+		<Unit filename="gui\CAutoSizePanel.h" />
 		<Unit filename="gui\CBox.h" />
 		<Unit filename="gui\CButton.cpp" />
 		<Unit filename="gui\CButton.h" />
