@@ -7,7 +7,7 @@
 class CCenteredWindow: public CWindow
 {
   public:
-    CCenteredWindow(const vec2d& size, const String& label);
+    CCenteredWindow(const vec2d& size, const String& label, double bottomHeight=0);
 };
 
 #endif // CCENTEREDWINDOW_H

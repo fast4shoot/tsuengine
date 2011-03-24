@@ -10,7 +10,7 @@ CListBoxItem::CListBoxItem(const vec2d& pos, const vec2d& size, const String& te
 {
   addChild(m_label);
   setBgColor(rgba(.1, .1, .1, .2));
-  setFgColor(rgba(0., .8, .843, .4));
+  setFgColor(rgba(0., .8, .843, .5));
 }
 
 void CListBoxItem::draw(){

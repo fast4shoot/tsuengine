@@ -19,7 +19,6 @@ void CScrollBar::buttonScroll(int id){
     case 0: _scrollAmt-=20./m_contentHeight; break;
     case 1: _scrollAmt+=20./m_contentHeight; break;
   }
-  engine->log(sformat("_scrollAmt: %f", _scrollAmt));
   _scrollAmt=clamp(_scrollAmt, 0., 1.);
   fireListeners();
 }
