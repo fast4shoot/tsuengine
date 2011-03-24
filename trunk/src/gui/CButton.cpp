@@ -24,6 +24,7 @@ void CButton::draw(){
     drawQuad(1., 1., getW()-2, (getH()-2)/2.);
   }
   setDrawColor(bgColor*5);
+  //  setDrawColor(rgba(0., .8, .843, .8));
   drawFrame(0., 0., getW(), getH());
 }
 

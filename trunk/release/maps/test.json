@@ -2,16 +2,641 @@
   "entities": [
     {
       "classname": "prop_dynamic",
-      "position": [1, 2, 0],
+      "position": [0, 50, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },    
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
       "rotation": [0, 45, 0], 
       "model": "barrel"    
     },
     {
       "classname": "prop_dynamic",
-      "position": [-1, 1, 0],
-      "rotation": [0, 0, 0], 
-      "model": "barrel"  
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
     },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 50, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 50, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    {
+      "classname": "prop_dynamic",
+      "position": [0, 3, 0],
+      "rotation": [0, 45, 0], 
+      "model": "barrel"    
+    },
+    
     {
       "classname": "prop_static",
       "position": [-1, 1, 4],
@@ -64,10 +689,28 @@
     },
     {
       "classname": "prop_static",
-      "position": [-1, 0, 1.5],
-      "model": "barrel"  
+      "position": [-10, 0, 0],
+      "rotation": [90, 90, 0],
+      "model": "static"  
     },
-    
+    {
+      "classname": "prop_static",
+      "position": [10, 0, 0],
+      "rotation": [90, -90, 0],
+      "model": "static"  
+    },
+    {
+      "classname": "prop_static",
+      "position": [0, 0, 10],
+      "rotation": [0, -90, 0],
+      "model": "static"  
+    },
+    {
+      "classname": "prop_static",
+      "position": [0, 0, -10],
+      "rotation": [0, 90, 0],
+      "model": "static"  
+    },
     {
       "classname": "world",
       "model": "static"

@@ -2,9 +2,10 @@
 #define CGUIPANEL_H
 
 #include <vector>
+#include <boost/foreach.hpp>
 #include "datatypes.h"
 #include "CGuiMgr.h"
-
+#include "glew/glew.h"
 
 class CListener;
 
@@ -13,7 +14,7 @@ class CGuiPanel{
   public:
                     CGuiPanel(const vec2d& pos, const vec2d& size);
     virtual         ~CGuiPanel();
-    void            init();
+    virtual void            init();
     virtual void    draw();
     virtual void    drawChildren();
     virtual void    afterDraw();
@@ -57,7 +58,6 @@ class CGuiPanel{
     void            deleteChildren();
     void            requestFocus();
     void            giveFocusTo(int childIndex);
-    std::string     toString();
 
     //mouse functions
     virtual bool    handleMouseClick(const vec2d& position,const  MouseButton button,const bool up);
@@ -268,8 +268,7 @@ inline rgba CGuiPanel::getFgColor() const{
   return fgColor;
 }
 
-inline void CGuiPanel::deleteChildren(){
-  children.clear();
+inline void CGuiPanel::setDrawColor(const rgba& color){
+  glColor4f(color.r,color.g,color.b,color.a);
 }
-
 #endif

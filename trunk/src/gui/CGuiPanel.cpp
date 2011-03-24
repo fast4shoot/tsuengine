@@ -1,6 +1,6 @@
 #include "CGuiPanel.h"
 #include "macros.h"
-#include "glew/glew.h"
+
 #include <typeinfo>
 #include "listeners/CListener.h"
 #include "CBaseEngine.h"
@@ -45,7 +45,7 @@ void CGuiPanel::removeChild(CGuiPanel* child){
 }
 
 void CGuiPanel::removeChild(int childIndex){
-  children.at(childIndex)->setParent(NULL);
+  delete children[childIndex];
   children.erase(children.begin()+childIndex);
 }
 
@@ -80,13 +80,6 @@ void CGuiPanel::giveFocusTo(int childIndex){
       children.at(i)->setParentIndex(i);
     }
   }
-}
-
-std::string CGuiPanel::toString(){
-  char buff[1024];
-  //sprintf(buff,"CGuiPanel[x=%.0lf,y=%.0lf,w=%.0lf,h=%.0lf]",position.x,position.y,size.x,size.y);
-  std::string ret=buff;
-  return ret;
 }
 
 bool CGuiPanel::handleMouseClick(const vec2d& position, const MouseButton button, const bool up){
@@ -187,9 +180,7 @@ void CGuiPanel::drawFrame(float x, float y, float w, float h){
   drawQuad(x+1.,   y+h-1., w-2., 1.);
 }
 
-void CGuiPanel::setDrawColor(const rgba& color){
-  glColor4f(color.r,color.g,color.b,color.a);
-}
+
 
 void CGuiPanel::fireListeners(){
   for(ListenerList::iterator it = listeners.begin(); it!=listeners.end(); ++it){
@@ -220,3 +211,11 @@ void CGuiPanel::fireChildAdded(CGuiPanel* child){
 void CGuiPanel::requestKeyboardFocus(){
   engine->gui->setKeyboardReceiver(this);
 }
+
+void CGuiPanel::deleteChildren(){
+  BOOST_FOREACH(CGuiPanel* pnl, children){
+    delete pnl;
+  }
+  children.clear();
+}
+

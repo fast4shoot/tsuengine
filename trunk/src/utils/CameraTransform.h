@@ -3,7 +3,7 @@
 
 #include <LinearMath/btQuaternion.h>
 #include "vec3d.h"
-#include "angle.h"
+//#include "angle.h"
 
 class CWorldEntity;
 

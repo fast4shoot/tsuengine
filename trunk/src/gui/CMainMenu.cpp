@@ -8,6 +8,8 @@
 #include "CConsole.h"
 #include "CBaseEngine.h"
 #include "CListBox.h"
+#include "CNewGame.h"
+#include "CDownloadMaps.h"
 
 CMainMenu::CMainMenu():
   CGuiPanel(vec2d(0,0),vec2d(engine->getScreenWidth(),engine->getScreenHeight()))
@@ -62,11 +64,13 @@ CMainMenu::CMainMenu():
   setList->addItem("Definitely.");
   _settings->addChild(setList);
 
-  addChild(_newGame=new CCenteredWindow(vec2d(500,230), "Nová hra"));
+  addChild(_newGame=new CNewGame());
   _newGame->setVisible(false);
 
   addChild(_console=new CConsole());
   _console->setVisible(false);
+
+  addChild(new CDownloadMaps());
 
   addChild(engine->m_tempConsoleOutput = new CText(vec2d(), vec2d(engine->getScreenWidth(), 80), 12));
 

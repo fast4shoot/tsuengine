@@ -1,5 +1,56 @@
 CModelMgr()
-TSUEngine verze 0.28.2805 revize 5410
+CAutoSizePanel::recalcSizeOnNewChildCallback
+Height is 20.000000
+CAutoSizePanel::recalcSizeOnNewChildCallback
+Height is 40.000000
+CAutoSizePanel::recalcSizeOnNewChildCallback
+Height is 60.000000
+CAutoSizePanel::recalcSizeOnNewChildCallback
+Height is 80.000000
+CAutoSizePanel::recalcSizeOnNewChildCallback
+Height is 100.000000
+CAutoSizePanel::recalcSizeOnNewChildCallback
+Height is 120.000000
+CAutoSizePanel::recalcSizeOnNewChildCallback
+Height is 140.000000
+CAutoSizePanel::recalcSizeOnNewChildCallback
+Height is 160.000000
+CAutoSizePanel::recalcSizeOnNewChildCallback
+Height is 180.000000
+CAutoSizePanel::recalcSizeOnNewChildCallback
+Height is 200.000000
+CAutoSizePanel::recalcSizeOnNewChildCallback
+Height is 220.000000
+CAutoSizePanel::recalcSizeOnNewChildCallback
+Height is 240.000000
+CAutoSizePanel::recalcSizeOnNewChildCallback
+Height is 260.000000
+CAutoSizePanel::recalcSizeOnNewChildCallback
+Height is 280.000000
+CAutoSizePanel::recalcSizeOnNewChildCallback
+Height is 300.000000
+CAutoSizePanel::recalcSizeOnNewChildCallback
+Height is 320.000000
+CAutoSizePanel::recalcSizeOnNewChildCallback
+Height is 340.000000
+CAutoSizePanel::recalcSizeOnNewChildCallback
+Height is 360.000000
+CAutoSizePanel::recalcSizeOnNewChildCallback
+Height is 380.000000
+CAutoSizePanel::recalcSizeOnNewChildCallback
+Height is 400.000000
+CAutoSizePanel::recalcSizeOnNewChildCallback
+Height is 20.000000
+Request built
+Response got
+Body extracted
+adding item
+CAutoSizePanel::recalcSizeOnNewChildCallback
+Height is 20.000000
+adding item
+CAutoSizePanel::recalcSizeOnNewChildCallback
+Height is 40.000000
+TSUEngine verze 0.30.3020 revize 6593
 OpenGL verze 3.3.10524 Compatibility Profile Context
 Engine is now ready
 Zaregistrovane entity: 
@@ -17,17 +68,17 @@ Vytvářím materiál system/cursor...hotovo
 Loading map test
 Vytvářím model barrel
 Vytvářím materiál barrel...hotovo
-...model finished (0x21eed58)
+...model finished (0x23f8468)
 Vytvářím model box
 Vytvářím materiál wall1...hotovo
-...model finished (0x21edf60)
+...model finished (0x30ad410)
 Vytvářím model box2
-...model finished (0x6298ee8)
+...model finished (0x30ad470)
 Vytvářím model static
-...model finished (0x2286298)
+...model finished (0x30ad710)
 Vytvářím model door1
 Vytvářím materiál white...hotovo
-...model finished (0x22862f8)
+...model finished (0x30ad8f0)
 Creating relations...
 Spawning entities
 Uploading model data to GPU
