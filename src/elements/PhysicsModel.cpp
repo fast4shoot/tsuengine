@@ -14,13 +14,21 @@ PhysicsModel::PhysicsModel():
 {}
 
 PhysicsModel::~PhysicsModel(){
-  delete[] m_indices;
-  delete[] m_vertices;
-  delete m_meshInterface;
+  if(m_meshInterface != NULL){
+    delete[] m_indices;
+    delete[] m_vertices;
+    delete m_meshInterface;
+  }
 }
 
 
-PhysicsModel::PhysicsModel(const json::mValue& value){
+PhysicsModel::PhysicsModel(const json::mValue& value):
+  m_mass(0.),
+  m_shape(NULL),
+  m_meshInterface(NULL),
+  m_indices(NULL),
+  m_vertices(NULL)
+{
   const String& type = value.get_obj().find("type")->second.get_str();
   json::mObject::const_iterator it=value.get_obj().find("mass");
   if(it != value.get_obj().end()){

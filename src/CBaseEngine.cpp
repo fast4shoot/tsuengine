@@ -58,7 +58,7 @@ void CBaseEngine::init(){
 
 
   //testMat=materials->getMaterial("wall1");
-  cursorMat=materials->getPersistentMaterial("system/cursor");
+
 
   /*
   testMdl=models->getModel("barrel");
@@ -82,6 +82,9 @@ void CBaseEngine::destroy(){
 }
 
 void CBaseEngine::think(){
+
+  map->update();
+
   realTimeDelta=(double)((clock()-lastClock)/(double)CLOCKS_PER_SEC);
 
   lastClock=clock();
@@ -107,12 +110,12 @@ void CBaseEngine::think(){
   input->update();
   gui->update();
   physics->update();
-  ents->doThink();
 
-
-  if(input->keyPressed(DIK_ESCAPE)){
-    quit();
+  BOOST_FOREACH(Thinker* thinker, m_thinkers){
+    thinker->think();
   }
+
+  ents->doThink();
 
   if(input->keyPressed(DIK_Q)){
     map->unload();
@@ -154,24 +157,6 @@ void CBaseEngine::drawScene(){
 
   gui->drawElements();
 
-  glPushMatrix();
-  glTranslatef(input->getCursorX(),input->getCursorY(),0.0f);
-  cursorMat->bind();
-  glEnable(GL_TEXTURE_2D);
-  glBegin(GL_QUADS);
-    glColor4f(1.f, 1.f, 1.f, 0.9f);
-    glTexCoord2d(0,0);
-    glVertex2f(0.0,24.0);
-    glTexCoord2d(1,0);
-    glVertex2f(24.0,24.0);
-    glTexCoord2d(1,1);
-    glVertex2f(24.0,0.0);
-    glTexCoord2d(0,1);
-    glVertex2f(0.0,0.0);
-  glEnd();
-  glDisable(GL_TEXTURE_2D);
-  glPopMatrix();
-
   SwapBuffers (hDC);
 }
 
@@ -202,6 +187,7 @@ void CBaseEngine::initGuiView(){
 void CBaseEngine::logAppend(const String& text){
   static bool firstLog=true;
   m_logFile << text;
+  m_logFile.flush();
   if(isReady()){
     String console=_consoleOutput->getText();
     console.append(text);
@@ -235,4 +221,8 @@ void CBaseEngine::resetGameTime(){
   time = 0.;
   lastTime = 0.;
   timeDelta = 0.;
+}
+
+void CBaseEngine::registerThinker(Thinker* thinker){
+  m_thinkers.push_back(thinker);
 }

@@ -10,6 +10,7 @@ class CListBoxItem: public CAbstractToggle{
   public:
     CListBoxItem(const vec2d& pos, const vec2d& size, const String& text);
     void draw();
+    String getText();
   private:
     CLabel* m_label;
 };
@@ -19,6 +20,7 @@ class CListBox: public CGuiPanel{
     CListBox(const vec2d& pos, const vec2d& size, double itemHeight = 20.);
     void addItem(const String& text);
     int getSelectedItem();
+    String getSelectedString();
     void setSelectedItem(int id);
     void draw();
   protected:
@@ -32,6 +34,14 @@ class CListBox: public CGuiPanel{
 
 inline int CListBox::getSelectedItem(){
   return m_selectedItem;
+}
+
+inline String CListBox::getSelectedString(){
+  return m_items[getSelectedItem()]->getText();
+}
+
+inline String CListBoxItem::getText(){
+  return m_label->getText();
 }
 
 #endif // CLISTBOX_H

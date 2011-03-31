@@ -1,5 +1,6 @@
 #include "stringUtils.h"
 
+
 WStr swformat(const wchar_t* format, ...){
  va_list args;
  va_start(args, format);

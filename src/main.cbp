@@ -17,7 +17,9 @@
 		<Compiler>
 			<Add option="-march=nocona" />
 			<Add option="-O" />
+			<Add option="-DBOOST_THREAD_USE_LIB" />
 			<Add option="-DGLEW_STATIC" />
+			<Add option="-D_WIN32_WINNT=0x0501" />
 			<Add directory="libs" />
 			<Add directory="gui" />
 			<Add directory="..\libs" />
@@ -40,6 +42,7 @@
 			<Add library="BulletCollision" />
 			<Add library="LinearMath" />
 			<Add library="ws2_32" />
+			<Add library="boost_thread" />
 			<Add library="boost_system" />
 			<Add library="boost_filesystem" />
 			<Add library="boost_regex" />
@@ -268,6 +271,8 @@
 		<Unit filename="utils\FilteredClosestRayResultCallback.h" />
 		<Unit filename="utils\Singleton.cpp" />
 		<Unit filename="utils\Singleton.h" />
+		<Unit filename="utils\Thinker.cpp" />
+		<Unit filename="utils\Thinker.h" />
 		<Unit filename="utils\math.cpp" />
 		<Unit filename="utils\math.h" />
 		<Unit filename="utils\network.cpp">

@@ -20,6 +20,7 @@
 #include "CMapMgr.h"
 #include "CEntMgr.h"
 #include "elements/Material.h"
+#include "utils/Thinker.h"
 
 
 class CText;
@@ -41,6 +42,7 @@ class CBaseEngine{
 
     std::ofstream   m_logFile;
     bool            m_ready;
+    std::vector<Thinker*> m_thinkers;
 
 
   public:
@@ -70,11 +72,14 @@ class CBaseEngine{
     unsigned long long int getFrameCount() const;
     double          getFPS() const;
     void            resetGameTime();
+    void            setTimeScale(double newTimeScale);
 
     void            think();
     void            initWorldView();
     void            initGuiView();
     void            drawScene();
+
+    void            registerThinker(Thinker* thinker);
 
     bool            isReady();
 
@@ -84,12 +89,16 @@ class CBaseEngine{
     void            warning(const String& text);
     void            debug(const String& text);
 
+    void            log(const format& text);
+    void            logAppend(const format& text);
+    void            warning(const format& text);
+    void            debug(const format& text);
+
     void            checkGl();
 
     void            quit();
 
     Font*           systemFont;
-    Material*       cursorMat;
 
     int             getScreenHeight();
     int             getScreenWidth();
@@ -149,6 +158,26 @@ inline int CBaseEngine::getScreenHeight(){
 }
 inline int CBaseEngine::getScreenWidth(){
   return g.scrWidth;
+}
+
+inline void CBaseEngine::setTimeScale(double newTimeScale){
+  timeScale = newTimeScale;
+}
+
+inline void CBaseEngine::log(const format& text){
+  log(text.str());
+}
+
+inline void CBaseEngine::logAppend(const format& text){
+  logAppend(text.str());
+}
+
+inline void CBaseEngine::warning(const format& text){
+  warning(text.str());
+}
+
+inline void CBaseEngine::debug(const format& text){
+  debug(text.str());
 }
 
 extern CBaseEngine* engine;

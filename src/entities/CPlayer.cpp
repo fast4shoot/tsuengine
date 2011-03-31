@@ -9,7 +9,15 @@
 void CPlayer::think(){
 
   static btVector3 lastDirection;
-  double yaw = -engine->input->getX()*0.005;
+  static double yaw = 0.;
+  static double pitch = 0.;
+
+  yaw += -engine->input->getMouseDelta().x*engine->getTimeDelta()*0.5;
+  pitch += -engine->input->getMouseDelta().y*engine->getTimeDelta()*0.5;
+  pitch = clamp(pitch, -1.5, 1.5);
+
+  engine->debug(format("playerRot: %1%, %2%") % yaw % pitch);
+
   bool moving;
   btVector3 direction(0., 0., 0.);
 
@@ -54,7 +62,7 @@ void CPlayer::think(){
   m_player->setVelocityForTimeInterval(direction, .1);
 
   //m_camera->setPosition(vec3d(0., 0.75, 0.));
-  btQuaternion cameraAngle = btQuaternion(yaw+PI, clamp(engine->input->getY()*-0.005, -1.5, 1.5), 0.);
+  btQuaternion cameraAngle = btQuaternion(yaw+PI, pitch, 0.);
   m_camera->overrideAngle(cameraAngle);
 
 
@@ -105,6 +113,14 @@ void CPlayer::spawn(){
 
   engine->physics->getWorld()->addAction(m_player);
 
+}
+
+CPlayer::~CPlayer(){
+  engine->physics->getWorld()->removeAction(m_player);
+  engine->physics->getWorld()->removeCollisionObject(m_ghost);
+  delete m_player;
+  delete m_ghost;
+  delete m_shape;
 }
 
 REGISTER_ENTITY(CPlayer)

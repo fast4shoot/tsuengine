@@ -6,7 +6,7 @@
 #include "elements/PhysicsModel.h"
 
 class StaticModelImpl{
-  typedef std::list<StaticModelPart> PartList;
+  typedef std::list<StaticModelPart*> PartList;
   public:
     StaticModelImpl(const json::mValue& value);
     ~StaticModelImpl();
