@@ -101,6 +101,7 @@ int WINAPI WinMain (HINSTANCE hInstance,
 
     while (!bQuit)
     {
+      SetCursorPos(g.scrWidth/2, g.scrHeight/2);
       // check for messages
       if (PeekMessage (&msg, NULL, 0, 0, PM_REMOVE)){
         // handle or dispatch messages

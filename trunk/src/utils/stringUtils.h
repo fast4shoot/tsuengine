@@ -7,6 +7,10 @@
 #include <cstdio>
 #include "typedefs.h"
 
+#include <boost/format.hpp>
+
+using boost::format;
+
 WStr swformat(const wchar_t* format, ...);
 WStr vswformat(const wchar_t* format, va_list args);
 WStr swformat(const WStr& format, ...);

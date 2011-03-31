@@ -137,16 +137,19 @@ void CModelMgr::draw(){
 }
 
 void CModelMgr::removeAll(){
+  engine->log("Deleting handles");
   for(ModelHandleList::iterator it = modelHandles.begin(); it != modelHandles.end(); ++it){
     delete (*it);
   }
   modelHandles.clear();
 
+  engine->log("Deleting static models");
   for(StaticModelList::iterator it = staticModels.begin(); it != staticModels.end(); ++it){
     delete it->second;
   }
   staticModels.clear();
 
+  engine->log("Deleting buffers");
   deleteBuffers();
 }
 

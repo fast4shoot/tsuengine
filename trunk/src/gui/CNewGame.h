@@ -2,12 +2,16 @@
 #define CNEWGAME_H
 
 #include "CCenteredWindow.h"
+#include "CButton.h"
+#include "CListBox.h"
 
 class CNewGame: public CCenteredWindow{
   public:
     CNewGame();
   protected:
-  private:
+    void newGameLoad(int id);
+    CButton* m_loadGameButton;
+    CListBox* m_mapList;
 };
 
 #endif // CNEWGAME_H

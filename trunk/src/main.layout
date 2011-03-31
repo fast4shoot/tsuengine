@@ -1,322 +1,82 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="default" />
-	<File name="..\libs\FTGL\FTSize.cpp" open="0" top="0" tabpos="1">
-		<Cursor position="1182" topLine="6" />
+	<File name="CBaseEngine.cpp" open="1" top="0" tabpos="6">
+		<Cursor position="1787" topLine="72" />
 	</File>
-	<File name="..\libs\json\json.h" open="0" top="0" tabpos="0">
-		<Cursor position="139" topLine="0" />
+	<File name="CBaseEngine.h" open="1" top="1" tabpos="7">
+		<Cursor position="4249" topLine="146" />
 	</File>
-	<File name="..\libs\json\json_spirit_reader_template.h" open="1" top="0" tabpos="6">
-		<Cursor position="2172" topLine="54" />
+	<File name="CGuiMgr.cpp" open="0" top="0" tabpos="2">
+		<Cursor position="1164" topLine="0" />
 	</File>
-	<File name="..\libs\json\json_spirit_value.h" open="1" top="0" tabpos="7">
-		<Cursor position="551" topLine="22" />
+	<File name="CGuiMgr.h" open="0" top="0" tabpos="1">
+		<Cursor position="652" topLine="0" />
 	</File>
-	<File name="..\libs\json\json_spirit_writer.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="233" topLine="61" />
+	<File name="CMapMgr.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="780" topLine="15" />
 	</File>
-	<File name="CBaseEngine.cpp" open="0" top="0" tabpos="14">
-		<Cursor position="3848" topLine="197" />
+	<File name="CMapMgr.h" open="0" top="0" tabpos="0">
+		<Cursor position="289" topLine="0" />
 	</File>
-	<File name="CBaseEngine.h" open="0" top="0" tabpos="8">
-		<Cursor position="2221" topLine="65" />
+	<File name="CModelMgr.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="2122" topLine="43" />
 	</File>
-	<File name="CCameraMgr.cpp" open="0" top="0" tabpos="8">
-		<Cursor position="194" topLine="0" />
-	</File>
-	<File name="CEntMgr.cpp" open="0" top="0" tabpos="4">
-		<Cursor position="1210" topLine="18" />
-	</File>
-	<File name="CEntMgr.h" open="0" top="0" tabpos="3">
-		<Cursor position="581" topLine="3" />
-	</File>
-	<File name="CGuiMgr.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="0" topLine="9" />
-	</File>
-	<File name="CGuiMgr.h" open="0" top="0" tabpos="0">
-		<Cursor position="363" topLine="0" />
-	</File>
-	<File name="CInputMgr.cpp" open="0" top="0" tabpos="13">
-		<Cursor position="3894" topLine="111" />
-	</File>
-	<File name="CInputMgr.h" open="0" top="0" tabpos="12">
-		<Cursor position="1404" topLine="53" />
-	</File>
-	<File name="CMapMgr.cpp" open="0" top="0" tabpos="3">
-		<Cursor position="719" topLine="31" />
-	</File>
-	<File name="CMapMgr.h" open="0" top="0" tabpos="2">
-		<Cursor position="159" topLine="0" />
-	</File>
-	<File name="CMaterialMgr.cpp" open="0" top="0" tabpos="4">
-		<Cursor position="992" topLine="8" />
-	</File>
-	<File name="CMaterialMgr.h" open="0" top="0" tabpos="0">
-		<Cursor position="332" topLine="0" />
-	</File>
-	<File name="CModelMgr.cpp" open="0" top="0" tabpos="18">
-		<Cursor position="581" topLine="133" />
-	</File>
-	<File name="CModelMgr.h" open="0" top="0" tabpos="15">
-		<Cursor position="152" topLine="10" />
-	</File>
-	<File name="CParamMgr.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="988" topLine="24" />
-	</File>
-	<File name="CParamMgr.h" open="0" top="0" tabpos="0">
-		<Cursor position="642" topLine="4" />
-	</File>
-	<File name="CPhysicsMgr.cpp" open="0" top="0" tabpos="7">
-		<Cursor position="1894" topLine="30" />
-	</File>
-	<File name="CPhysicsMgr.h" open="0" top="0" tabpos="6">
-		<Cursor position="64" topLine="0" />
-	</File>
-	<File name="const.h" open="0" top="0" tabpos="0">
-		<Cursor position="162" topLine="0" />
-	</File>
-	<File name="datatypes.cpp" open="0" top="0" tabpos="8">
-		<Cursor position="471" topLine="0" />
-	</File>
-	<File name="datatypes.h" open="0" top="0" tabpos="9">
-		<Cursor position="436" topLine="0" />
-	</File>
-	<File name="elements\Material.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="249" topLine="0" />
-	</File>
-	<File name="elements\Material.h" open="0" top="0" tabpos="13">
-		<Cursor position="539" topLine="0" />
-	</File>
-	<File name="elements\Model.cpp" open="0" top="0" tabpos="16">
-		<Cursor position="818" topLine="0" />
-	</File>
-	<File name="elements\Model.h" open="0" top="0" tabpos="17">
-		<Cursor position="834" topLine="7" />
-	</File>
-	<File name="elements\ModelBase.h" open="0" top="0" tabpos="5">
-		<Cursor position="700" topLine="0" />
-	</File>
-	<File name="elements\PhysicsModel.cpp" open="0" top="0" tabpos="15">
-		<Cursor position="49" topLine="0" />
-	</File>
-	<File name="elements\PhysicsModel.h" open="0" top="0" tabpos="18">
-		<Cursor position="650" topLine="0" />
-	</File>
-	<File name="elements\StaticModel.cpp" open="0" top="0" tabpos="9">
-		<Cursor position="218" topLine="0" />
-	</File>
-	<File name="elements\StaticModel.h" open="0" top="0" tabpos="8">
-		<Cursor position="488" topLine="4" />
-	</File>
-	<File name="elements\StaticModelImpl.cpp" open="0" top="0" tabpos="7">
-		<Cursor position="923" topLine="16" />
-	</File>
-	<File name="elements\StaticModelImpl.h" open="0" top="0" tabpos="3">
-		<Cursor position="864" topLine="10" />
-	</File>
-	<File name="elements\StaticModelPart.cpp" open="0" top="0" tabpos="8">
-		<Cursor position="2600" topLine="0" />
-	</File>
-	<File name="elements\StaticModelPart.h" open="0" top="0" tabpos="3">
-		<Cursor position="750" topLine="9" />
-	</File>
-	<File name="elements\Vertex.h" open="0" top="0" tabpos="7">
-		<Cursor position="624" topLine="16" />
-	</File>
-	<File name="entities\CBaseEntity.cpp" open="0" top="0" tabpos="10">
-		<Cursor position="2363" topLine="49" />
-	</File>
-	<File name="entities\CBaseEntity.h" open="0" top="0" tabpos="9">
-		<Cursor position="3637" topLine="154" />
-	</File>
-	<File name="entities\CDoorBase.cpp" open="0" top="0" tabpos="3">
-		<Cursor position="252" topLine="3" />
-	</File>
-	<File name="entities\CDoorBase.h" open="0" top="0" tabpos="4">
-		<Cursor position="420" topLine="2" />
-	</File>
-	<File name="entities\CDoorRotating.cpp" open="0" top="0" tabpos="2">
-		<Cursor position="265" topLine="0" />
-	</File>
-	<File name="entities\CLogicEntity.cpp" open="0" top="0" tabpos="11">
-		<Cursor position="429" topLine="0" />
-	</File>
-	<File name="entities\CLogicEntity.h" open="0" top="0" tabpos="5">
-		<Cursor position="523" topLine="0" />
-	</File>
-	<File name="entities\CModelEntity.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="29" topLine="0" />
-	</File>
-	<File name="entities\CModelEntity.h" open="0" top="0" tabpos="3">
-		<Cursor position="251" topLine="0" />
-	</File>
-	<File name="entities\CPlayer.cpp" open="0" top="0" tabpos="12">
-		<Cursor position="801" topLine="21" />
-	</File>
-	<File name="entities\CPlayer.h" open="0" top="0" tabpos="1">
-		<Cursor position="450" topLine="0" />
-	</File>
-	<File name="entities\CPropDynamic.cpp" open="0" top="0" tabpos="6">
-		<Cursor position="187" topLine="0" />
-	</File>
-	<File name="entities\CPropDynamic.h" open="0" top="0" tabpos="11">
-		<Cursor position="81" topLine="0" />
-	</File>
-	<File name="entities\CPropStatic.cpp" open="0" top="0" tabpos="7">
-		<Cursor position="182" topLine="0" />
-	</File>
-	<File name="entities\CPropStatic.h" open="0" top="0" tabpos="8">
-		<Cursor position="128" topLine="0" />
-	</File>
-	<File name="entities\CVisibleEntity.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="35" topLine="0" />
-	</File>
-	<File name="entities\CVisibleEntity.h" open="0" top="0" tabpos="5">
-		<Cursor position="133" topLine="0" />
-	</File>
-	<File name="entities\CWorld.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="110" topLine="0" />
-	</File>
-	<File name="entities\CWorld.h" open="0" top="0" tabpos="3">
-		<Cursor position="67" topLine="0" />
-	</File>
-	<File name="entities\CWorldEntity.cpp" open="0" top="0" tabpos="13">
-		<Cursor position="790" topLine="0" />
-	</File>
-	<File name="entities\CWorldEntity.h" open="0" top="0" tabpos="5">
-		<Cursor position="446" topLine="0" />
-	</File>
-	<File name="gui\CAbstractButton.h" open="0" top="0" tabpos="7">
-		<Cursor position="0" topLine="0" />
-	</File>
-	<File name="gui\CAbstractToggle.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="362" topLine="0" />
-	</File>
-	<File name="gui\CAbstractToggle.h" open="0" top="0" tabpos="0">
+	<File name="elements\Model.cpp" open="0" top="0" tabpos="0">
 		<Cursor position="351" topLine="0" />
 	</File>
-	<File name="gui\CAutoSizePanel.cpp" open="0" top="0" tabpos="11">
-		<Cursor position="496" topLine="0" />
+	<File name="elements\PhysicsModel.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="549" topLine="3" />
 	</File>
-	<File name="gui\CAutoSizePanel.h" open="0" top="0" tabpos="10">
-		<Cursor position="76" topLine="0" />
+	<File name="elements\StaticModelImpl.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="1106" topLine="0" />
 	</File>
-	<File name="gui\CButton.cpp" open="1" top="1" tabpos="10">
-		<Cursor position="800" topLine="0" />
+	<File name="elements\StaticModelImpl.h" open="0" top="0" tabpos="0">
+		<Cursor position="210" topLine="0" />
 	</File>
-	<File name="gui\CButton.h" open="0" top="0" tabpos="0">
-		<Cursor position="156" topLine="0" />
+	<File name="elements\StaticModelPart.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="0" topLine="3" />
 	</File>
-	<File name="gui\CCenteredWindow.cpp" open="1" top="0" tabpos="5">
-		<Cursor position="160" topLine="0" />
+	<File name="elements\StaticModelPart.h" open="0" top="0" tabpos="0">
+		<Cursor position="0" topLine="9" />
 	</File>
-	<File name="gui\CCenteredWindow.h" open="0" top="0" tabpos="6">
-		<Cursor position="238" topLine="0" />
+	<File name="entities\CPlayer.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="543" topLine="1" />
 	</File>
-	<File name="gui\CCheckBox.cpp" open="0" top="0" tabpos="6">
-		<Cursor position="533" topLine="0" />
+	<File name="gui\CDownloadMaps.cpp" open="0" top="0" tabpos="1">
+		<Cursor position="5160" topLine="134" />
 	</File>
-	<File name="gui\CCheckBox.h" open="0" top="0" tabpos="0">
-		<Cursor position="249" topLine="0" />
+	<File name="gui\CDownloadMaps.h" open="0" top="0" tabpos="2">
+		<Cursor position="121" topLine="0" />
 	</File>
-	<File name="gui\CConsole.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="203" topLine="0" />
-	</File>
-	<File name="gui\CDownloadMaps.cpp" open="1" top="0" tabpos="2">
-		<Cursor position="516" topLine="14" />
-	</File>
-	<File name="gui\CDownloadMaps.h" open="1" top="0" tabpos="1">
-		<Cursor position="223" topLine="0" />
-	</File>
-	<File name="gui\CGuiPanel.cpp" open="1" top="0" tabpos="4">
-		<Cursor position="45" topLine="0" />
-	</File>
-	<File name="gui\CGuiPanel.h" open="0" top="0" tabpos="13">
-		<Cursor position="161" topLine="72" />
-	</File>
-	<File name="gui\CLabel.h" open="0" top="0" tabpos="0">
-		<Cursor position="115" topLine="0" />
-	</File>
-	<File name="gui\CListBox.cpp" open="1" top="0" tabpos="9">
-		<Cursor position="399" topLine="0" />
-	</File>
-	<File name="gui\CListBox.h" open="0" top="0" tabpos="5">
-		<Cursor position="338" topLine="0" />
-	</File>
-	<File name="gui\CMainMenu.cpp" open="0" top="0" tabpos="4">
-		<Cursor position="288" topLine="0" />
-	</File>
-	<File name="gui\CNewGame.cpp" open="1" top="0" tabpos="8">
-		<Cursor position="421" topLine="0" />
-	</File>
-	<File name="gui\CNewGame.h" open="0" top="0" tabpos="2">
-		<Cursor position="141" topLine="0" />
-	</File>
-	<File name="gui\CScrollBar.cpp" open="1" top="0" tabpos="3">
-		<Cursor position="691" topLine="0" />
-	</File>
-	<File name="gui\CScrollBar.h" open="0" top="0" tabpos="3">
-		<Cursor position="274" topLine="0" />
-	</File>
-	<File name="gui\CScrollable.cpp" open="0" top="0" tabpos="1">
-		<Cursor position="860" topLine="6" />
-	</File>
-	<File name="gui\CScrollable.h" open="0" top="0" tabpos="3">
-		<Cursor position="14" topLine="0" />
-	</File>
-	<File name="gui\CStencilPanel.h" open="0" top="0" tabpos="5">
-		<Cursor position="251" topLine="0" />
-	</File>
-	<File name="gui\CText.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="183" topLine="0" />
-	</File>
-	<File name="gui\CText.h" open="0" top="0" tabpos="0">
-		<Cursor position="823" topLine="22" />
-	</File>
-	<File name="gui\CWindow.cpp" open="0" top="0" tabpos="4">
-		<Cursor position="1345" topLine="15" />
-	</File>
-	<File name="gui\CWindow.h" open="0" top="0" tabpos="3">
-		<Cursor position="515" topLine="1" />
-	</File>
-	<File name="gui\listeners\CListenerMemberFn.h" open="0" top="0" tabpos="14">
-		<Cursor position="2008" topLine="42" />
-	</File>
-	<File name="macros.h" open="0" top="0" tabpos="14">
-		<Cursor position="780" topLine="0" />
-	</File>
-	<File name="main.cpp" open="0" top="0" tabpos="15">
-		<Cursor position="1744" topLine="54" />
-	</File>
-	<File name="utils\CameraTransform.cpp" open="0" top="0" tabpos="3">
-		<Cursor position="1498" topLine="30" />
-	</File>
-	<File name="utils\CameraTransform.h" open="0" top="0" tabpos="15">
-		<Cursor position="383" topLine="7" />
-	</File>
-	<File name="utils\FilteredClosestRayResultCallback.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="414" topLine="0" />
-	</File>
-	<File name="utils\FilteredClosestRayResultCallback.h" open="0" top="0" tabpos="0">
-		<Cursor position="104" topLine="0" />
-	</File>
-	<File name="utils\math.cpp" open="0" top="0" tabpos="11">
-		<Cursor position="84" topLine="0" />
-	</File>
-	<File name="utils\math.h" open="0" top="0" tabpos="5">
-		<Cursor position="494" topLine="0" />
-	</File>
-	<File name="utils\stringUtils.h" open="0" top="0" tabpos="2">
-		<Cursor position="143" topLine="0" />
-	</File>
-	<File name="vec3d.cpp" open="0" top="0" tabpos="16">
+	<File name="gui\CGuiPanel.cpp" open="0" top="0" tabpos="4">
 		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="vec3d.h" open="0" top="0" tabpos="7">
-		<Cursor position="917" topLine="36" />
+	<File name="gui\CGuiPanel.h" open="0" top="0" tabpos="5">
+		<Cursor position="0" topLine="231" />
 	</File>
-	<File name="vecBase.h" open="0" top="0" tabpos="0">
-		<Cursor position="3684" topLine="0" />
+	<File name="gui\CLabel.h" open="0" top="0" tabpos="3">
+		<Cursor position="140" topLine="0" />
+	</File>
+	<File name="gui\CNewGame.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="1238" topLine="5" />
+	</File>
+	<File name="gui\CNewGame.h" open="0" top="0" tabpos="0">
+		<Cursor position="117" topLine="0" />
+	</File>
+	<File name="gui\listeners\CListener.h" open="0" top="0" tabpos="6">
+		<Cursor position="69" topLine="0" />
+	</File>
+	<File name="gui\listeners\CListenerMemberFn.h" open="0" top="0" tabpos="0">
+		<Cursor position="636" topLine="42" />
+	</File>
+	<File name="main.cpp" open="1" top="0" tabpos="2">
+		<Cursor position="2633" topLine="93" />
+	</File>
+	<File name="utils\stringUtils.cpp" open="1" top="0" tabpos="4">
+		<Cursor position="26" topLine="0" />
+	</File>
+	<File name="utils\stringUtils.h" open="1" top="0" tabpos="5">
+		<Cursor position="219" topLine="0" />
 	</File>
 </CodeBlocks_layout_file>

@@ -11,6 +11,7 @@ class CPlayer : public CWorldEntity{
   public:
     void spawn();
     void think();
+    ~CPlayer();
   protected:
     btKinematicCharacterController* m_player;
     btPairCachingGhostObject* m_ghost;

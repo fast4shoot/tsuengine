@@ -27,6 +27,7 @@ class CInputMgr{
     bool            buttonPressed(MouseButton button) const;
     bool            buttonDepressed(MouseButton button) const;
 
+    vec2d           getMouseDelta();
     float           getX() const;
     float           getY() const;
     float           getCursorX() const;
@@ -82,6 +83,8 @@ inline vec2d CInputMgr::getCursorDelta() const{
   return cursorDelta;
 }
 
-
+inline vec2d CInputMgr::getMouseDelta(){
+  return mouseDelta;
+}
 
 #endif

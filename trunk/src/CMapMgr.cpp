@@ -4,15 +4,43 @@
 #include "json/json.h"
 #include "CBaseEngine.h"
 
-CMapMgr::CMapMgr(){
-
-}
+CMapMgr::CMapMgr():
+  m_isLoaded(false),
+  m_shouldLoad(false)
+{}
 
 void CMapMgr::load(const String& name){
+  m_newMapName = name;
+  m_shouldLoad = true;
+}
+
+void CMapMgr::unload(){
+  if(!m_isLoaded) return;
+  engine->camera->removeAll();
+  engine->ents->removeAll();
+  engine->physics->removeAll();
+  engine->models->removeAll();
+  engine->materials->removeAll();
+
+
+  engine->log("Map "+m_mapName+" unloaded");
+  m_isLoaded = false;
+  m_mapName = "";
+}
+
+void CMapMgr::update(){
+  if(!m_background && engine->input->keyPressed(DIK_ESCAPE)){
+    engine->gui->showMainMenu(!m_menuOpen);
+    engine->setTimeScale(m_menuOpen * 1.f);
+    m_menuOpen = !m_menuOpen;
+  }
+
   try{
-    engine->log("Loading map "+name);
+    if(!m_shouldLoad) return;
+    if(m_isLoaded) unload();
+    engine->log("Loading map "+m_newMapName);
     std::ifstream file;
-    file.open(("maps/"+name+".json").c_str());
+    file.open(("maps/"+m_newMapName+".json").c_str());
     json::mValue value;
     json::read(file, value);
 
@@ -39,27 +67,26 @@ void CMapMgr::load(const String& name){
       }
     }
 
+    m_background = true;
     engine->log("Spawning entities");
     engine->ents->doSpawn();
 
+    m_menuOpen = m_background;
+    engine->gui->showMainMenu(m_menuOpen);
+    engine->setTimeScale(1.f);
+
     engine->models->uploadData();
     engine->resetGameTime();
-    m_mapName = name;
+    m_mapName = m_newMapName;
+    m_newMapName = "";
     m_isLoaded = true;
+    m_shouldLoad = false;
     engine->log("Map loaded");
   }catch(std::exception& e){
-    engine->warning("Couldn't load map "+name+": "+String(e.what()));
+    engine->warning("Couldn't load map "+m_newMapName+": "+String(e.what()));
   }
 }
 
-void CMapMgr::unload(){
-  if(!m_isLoaded) return;
-  engine->ents->removeAll();
-  engine->physics->removeAll();
-  engine->models->removeAll();
-  engine->materials->removeAll();
-  engine->camera->removeAll();
-  engine->log("Map "+m_mapName+" unloaded");
-  m_isLoaded = false;
-  m_mapName = "";
+void CMapMgr::setMapAsBackground(bool val){
+  m_background = val;
 }

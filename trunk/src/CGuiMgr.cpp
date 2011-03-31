@@ -5,6 +5,7 @@
 #include "macros.h"
 #include "CBaseEngine.h"
 #include "gui/CCenteredWindow.h"
+#include "CBaseEngine.h"
 
 CGuiMgr::CGuiMgr(){}
 
@@ -12,8 +13,9 @@ void CGuiMgr::init(){
   _keyboardReceiver=NULL;
   _basePanel=new CGuiPanel(vec2d(0.,0.),vec2d(engine->getScreenWidth(),engine->getScreenHeight()));
 
-  _basePanel->addChild(new CMainMenu());
+  _basePanel->addChild(m_mainMenu = new CMainMenu());
 
+  cursorMat = engine->materials->getPersistentMaterial("system/cursor");
 
 }
 
@@ -31,7 +33,6 @@ void CGuiMgr::update(){
     String input = engine->input->getString();
     if(!input.empty()){
       _keyboardReceiver->onKeyboard(input);
-    }else{
     }
   }
 }
@@ -40,4 +41,34 @@ void CGuiMgr::drawElements(){
   glDisable(GL_TEXTURE_2D);
   _basePanel->draw();
   _basePanel->drawChildren();
+
+  if(m_mainMenu->isVisible()){
+    float x = engine->input->getCursorX();
+    float y = engine->input->getCursorY();
+    cursorMat->bind();
+    glEnable(GL_TEXTURE_2D);
+    glBegin(GL_QUADS);
+      glColor4f(1.f, 1.f, 1.f, 0.9f);
+      glTexCoord2d(0,0);
+      glVertex2f(x+0.0, y+24.0);
+      glTexCoord2d(1,0);
+      glVertex2f(x+24.0, y+24.0);
+      glTexCoord2d(1,1);
+      glVertex2f(x+24.0, y+0.0);
+      glTexCoord2d(0,1);
+      glVertex2f(x+0.0, y+0.0);
+    glEnd();
+    glDisable(GL_TEXTURE_2D);
+  }
+
 }
+
+void CGuiMgr::addMainMenuElement(CGuiPanel* element){
+  m_mainMenu->addChild(element);
+}
+
+void CGuiMgr::showMainMenu(bool val){
+  m_mainMenu->setVisible(val);
+}
+
+
