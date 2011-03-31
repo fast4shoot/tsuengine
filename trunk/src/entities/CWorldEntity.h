@@ -6,6 +6,7 @@
 
 class CWorldEntity : public CBaseEntity{
   public:
+    CWorldEntity();
     void init();
     virtual void getWorldTransform(btTransform &worldTrans) const;
     virtual void setWorldTransform(const btTransform &worldTrans);

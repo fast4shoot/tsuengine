@@ -82,12 +82,9 @@ void CInputMgr::update(){
   for(int i=0;i<256;i++){
     if(keyStillDown(i)){
       keyTimeBuffer[iCurrBuffer][i]+=engine->getTimeDelta();
-    }else{
-      keyTimeBuffer[iCurrBuffer][i]=0.;
-    }
-    if(keyStillDown(i)){
       keyRealTimeBuffer[iCurrBuffer][i]+=engine->getRealTimeDelta();
     }else{
+      keyTimeBuffer[iCurrBuffer][i]=0.;
       keyRealTimeBuffer[iCurrBuffer][i]=0.;
     }
   }
@@ -115,6 +112,7 @@ void CInputMgr::update(){
 }
 
 bool CInputMgr::keyDown(int key){
+  if(!m_enabled) return false;
   if(keyBuffer[iCurrBuffer][key] & 0x80){
     return true;
   }
@@ -122,22 +120,27 @@ bool CInputMgr::keyDown(int key){
 }
 
 bool CInputMgr::keyStillDown(int key){
+  if(!m_enabled) return false;
   return (keyBuffer[iCurrBuffer][key] & 0x80) && (keyBuffer[!iCurrBuffer][key] & 0x80);
 }
 
 bool CInputMgr::keyPressed(int key){
+  if(!m_enabled) return false;
   return ((keyBuffer[iCurrBuffer][key] & 0x80) && !(keyBuffer[!iCurrBuffer][key] & 0x80));
 }
 
 bool CInputMgr::keyDepressed(int key){
+  if(!m_enabled) return false;
   return (!(keyBuffer[iCurrBuffer][key] & 0x80) && (keyBuffer[!iCurrBuffer][key] & 0x80));
 }
 
 float CInputMgr::keyTimed(int key){
+  if(!m_enabled) return false;
   return keyTimeBuffer[iCurrBuffer][key];
 }
 
 float CInputMgr::keyTimedDelta(int key){
+  if(!m_enabled) return 0.f;
   if(keyTimeBuffer[iCurrBuffer][key] > keyTimeBuffer[!iCurrBuffer][key])
     return keyTimeBuffer[iCurrBuffer][key] - keyTimeBuffer[!iCurrBuffer][key];
   else
@@ -145,10 +148,12 @@ float CInputMgr::keyTimedDelta(int key){
 }
 
 float CInputMgr::keyRealTimed(int key){
+  if(!m_enabled) return 0.f;
   return keyRealTimeBuffer[iCurrBuffer][key];
 }
 
 float CInputMgr::keyRealTimedDelta(int key){
+  if(!m_enabled) return 0.f;
   if(keyRealTimeBuffer[iCurrBuffer][key] > keyRealTimeBuffer[!iCurrBuffer][key])
     return keyRealTimeBuffer[iCurrBuffer][key] - keyRealTimeBuffer[!iCurrBuffer][key];
   else
@@ -156,6 +161,7 @@ float CInputMgr::keyRealTimedDelta(int key){
 }
 
 bool CInputMgr::buttonDown(MouseButton button) const {
+  if(!m_enabled) return false;
   if(MouseState[iCurrBuffer].rgbButtons[button] & 0x80){
     return true;
   }
@@ -163,10 +169,12 @@ bool CInputMgr::buttonDown(MouseButton button) const {
 }
 
 bool CInputMgr::buttonPressed(MouseButton button) const {
+  if(!m_enabled) return false;
    return (MouseState[iCurrBuffer].rgbButtons[button] & 0x80) && !(MouseState[!iCurrBuffer].rgbButtons[button] & 0x80);
 }
 
 bool CInputMgr::buttonDepressed(MouseButton button) const {
+  if(!m_enabled) return false;
    return !(MouseState[iCurrBuffer].rgbButtons[button] & 0x80) && (MouseState[!iCurrBuffer].rgbButtons[button] & 0x80);
 }
 

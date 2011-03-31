@@ -27,6 +27,13 @@ void CBaseEntity::fireOutput(const String& name){
   }
 }
 
+void CBaseEntity::fireOutput(const String& name, CBaseEntity* originator){
+  RelationList::iterator it = m_relations.find(name);
+  if(it != m_relations.end()){
+    it->second.fire(originator);
+  }
+}
+
 void CBaseEntity::addRelation(const String& output, CBaseEntity* callee, const String& input){
   if(m_descriptor->m_outputs.find(output) != m_descriptor->m_outputs.end()){
     m_relations[output].addRelation(callee, input);

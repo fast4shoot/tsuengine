@@ -16,9 +16,12 @@ class CPlayer : public CWorldEntity{
     btKinematicCharacterController* m_player;
     btPairCachingGhostObject* m_ghost;
     btConvexShape* m_shape;
+    btVector3 lastDirection;
     CameraTransform* m_camera;
     double m_speed;
     Model* model;
+    double m_yaw;
+    double m_pitch;
 };
 
 ENTITY_DESCRIPTOR(CPlayer, CWorldEntity)

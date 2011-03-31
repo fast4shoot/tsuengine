@@ -11,8 +11,9 @@ CGuiMgr::CGuiMgr(){}
 
 void CGuiMgr::init(){
   _keyboardReceiver=NULL;
+  m_hud = new CGuiPanel(vec2d(0.,0.),vec2d(engine->getScreenWidth(),engine->getScreenHeight()));
   _basePanel=new CGuiPanel(vec2d(0.,0.),vec2d(engine->getScreenWidth(),engine->getScreenHeight()));
-
+  _basePanel->addChild(m_hud);
   _basePanel->addChild(m_mainMenu = new CMainMenu());
 
   cursorMat = engine->materials->getPersistentMaterial("system/cursor");

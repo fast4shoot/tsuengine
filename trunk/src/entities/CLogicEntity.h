@@ -7,18 +7,12 @@
 
 class CLogicEntity : public CBaseEntity{
   public:
-    void test(CBaseEntity* originator);
-    void print(CBaseEntity* originator);
-    void think();
-    int random;
 };
 
 ENTITY_DESCRIPTOR(CLogicEntity, CBaseEntity)
   virtual void registerEntity(){
     classname("CLogicEntity");
     spawnable(false);
-    input("test",&CLogicEntity::test);
-    value("random", &CLogicEntity::random);
   }
 };
 
