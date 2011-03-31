@@ -12,6 +12,9 @@ class CInputMgr{
                     ~CInputMgr();
     void            init();
     void            update();
+
+    void            setEnabled(bool enabled);
+
     bool            keyDown(int key);
     bool            keyStillDown(int key);
     bool            keyPressed(int key);
@@ -42,6 +45,7 @@ class CInputMgr{
     double          keyTimeBuffer[2][256];
     double          keyRealTimeBuffer[2][256];
   private:
+    bool            m_enabled;
     LPDIRECTINPUT8  DIObject;
     LPDIRECTINPUTDEVICE8 DIKeyboardDevice;
 
@@ -60,10 +64,13 @@ class CInputMgr{
 };
 
 inline float CInputMgr::getX() const{
+  if(m_enabled)
   return mouse.x;
+  return 0.;
 }
 
 inline float CInputMgr::getY() const{
+  if(m_enabled)
   return mouse.y;
 }
 
@@ -84,7 +91,12 @@ inline vec2d CInputMgr::getCursorDelta() const{
 }
 
 inline vec2d CInputMgr::getMouseDelta(){
+  if(m_enabled)
   return mouseDelta;
+  return vec2d();
 }
 
+inline void CInputMgr::setEnabled(bool enabled){
+  m_enabled = enabled;
+}
 #endif

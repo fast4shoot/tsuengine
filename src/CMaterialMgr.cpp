@@ -5,6 +5,8 @@
 #include "IL/ilu.h"
 #include "IL/ilut.h"
 
+#include <boost/foreach.hpp>
+
 #include "CBaseEngine.h"
 
 CMaterialMgr::CMaterialMgr(){
@@ -33,10 +35,16 @@ Material* CMaterialMgr::getMaterial(const String& name){
 }
 
 void CMaterialMgr::removeAll(){
+  MaterialList persistent;
   for(MaterialList::iterator it = matList.begin(); it != matList.end(); ++it){
     if(!it->second->isPersistent()){
       delete it->second;
-      matList.erase(it);
+    }else{
+      persistent[it->first] = it->second;
     }
   }
+
+  matList.clear();
+
+  matList = MaterialList(persistent);
 }

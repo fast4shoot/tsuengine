@@ -36,6 +36,7 @@ class CBaseEntity{
 
   protected:
     virtual void fireOutput(const String& name);
+    virtual void fireOutput(const String& name, CBaseEntity* originator);
     typedef std::map<String, EntityRelation> RelationList;
     RelationList m_relations;
     CBaseEntity* m_originator;

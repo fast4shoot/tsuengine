@@ -19,11 +19,13 @@ class CGuiMgr{
     void addMainMenuElement(CGuiPanel* element);
 
     void showMainMenu(bool val);
+    CGuiPanel* getHud();
 
   protected:
     CGuiPanel* _basePanel;
     CGuiPanel* _keyboardReceiver;
     CGuiPanel* m_mainMenu;
+    CGuiPanel* m_hud;
     Material* cursorMat;
 };
 
@@ -35,6 +37,9 @@ inline bool CGuiMgr::isKeyboardReceiver(CGuiPanel* panel){
   return panel==_keyboardReceiver;
 }
 
+inline CGuiPanel* CGuiMgr::getHud(){
+  return m_hud;
+}
 
 
 #endif

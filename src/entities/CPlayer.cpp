@@ -8,15 +8,13 @@
 
 void CPlayer::think(){
 
-  static btVector3 lastDirection;
-  static double yaw = 0.;
-  static double pitch = 0.;
+  m_yaw += -engine->input->getMouseDelta().x * engine->getTimeScale() * 0.005;
+  m_pitch += -engine->input->getMouseDelta().y * engine->getTimeScale() * 0.005;
+  m_pitch = clamp(m_pitch, -1.5, 1.5);
 
-  yaw += -engine->input->getMouseDelta().x*engine->getTimeDelta()*0.5;
-  pitch += -engine->input->getMouseDelta().y*engine->getTimeDelta()*0.5;
-  pitch = clamp(pitch, -1.5, 1.5);
-
-  engine->debug(format("playerRot: %1%, %2%") % yaw % pitch);
+  m_yaw = saw(m_yaw, 2.*PI, 2.*PI);
+  //engine->log(format("timeDelta: %1%, mouseDelta.x: %2%") % engine->getTimeDelta() % engine->input->getMouseDelta().x);
+  //engine->log(format("playerRot: %1%, %2%") % toDeg(m_yaw) % toDeg(m_pitch));
 
   bool moving;
   btVector3 direction(0., 0., 0.);
@@ -52,7 +50,7 @@ void CPlayer::think(){
   m_speed = clamp(m_speed, 0., 3. );
 
   if(moving){
-    direction = direction.rotate(btVector3(0,1,0),yaw);
+    direction = direction.rotate(btVector3(0,1,0),m_yaw);
     direction.normalize();
     lastDirection = direction;
     direction*=m_speed;
@@ -62,12 +60,12 @@ void CPlayer::think(){
   m_player->setVelocityForTimeInterval(direction, .1);
 
   //m_camera->setPosition(vec3d(0., 0.75, 0.));
-  btQuaternion cameraAngle = btQuaternion(yaw+PI, pitch, 0.);
+  btQuaternion cameraAngle = btQuaternion(m_yaw+PI, m_pitch, 0.);
   m_camera->overrideAngle(cameraAngle);
 
 
   btTransform transform = m_ghost->getWorldTransform();
-  transform.setRotation(btQuaternion(yaw, 0., 0.));
+  transform.setRotation(btQuaternion(m_yaw, 0., 0.));
   m_ghost->setWorldTransform(transform);
   transform.setRotation(cameraAngle);
   this->setWorldTransform(transform);
@@ -89,6 +87,8 @@ void CPlayer::think(){
 }
 
 void CPlayer::spawn(){
+
+
 
   m_camera = new CameraTransform();
   m_camera->setBase(this);

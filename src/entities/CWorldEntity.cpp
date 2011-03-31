@@ -4,6 +4,13 @@
 #include "CBaseEngine.h"
 #include "utils/math.h"
 
+CWorldEntity::CWorldEntity():
+  CBaseEntity()
+{
+  engine->log("identity");
+  m_transform.setIdentity();
+}
+
 void CWorldEntity::init(){
   setPosition(m_position);
   setRotation(toRad(m_rotation.x), toRad(m_rotation.y), toRad(m_rotation.z));

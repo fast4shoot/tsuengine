@@ -41,6 +41,8 @@ CAutoSizePanel::recalcSizeOnNewChildCallback
 Height is 400.000000
 CAutoSizePanel::recalcSizeOnNewChildCallback
 Height is 20.000000
+CAutoSizePanel::recalcSizeOnNewChildCallback
+Height is 40.000000
 Request built
 Response got
 Body extracted
@@ -50,37 +52,116 @@ Height is 20.000000
 adding item
 CAutoSizePanel::recalcSizeOnNewChildCallback
 Height is 40.000000
-TSUEngine verze 0.30.3020 revize 6593
+adding item
+CAutoSizePanel::recalcSizeOnNewChildCallback
+Height is 60.000000
+Vytvářím materiál system/cursor...hotovo
+TSUEngine verze 0.32.3221 revize 7737
 OpenGL verze 3.3.10524 Compatibility Profile Context
 Engine is now ready
 Zaregistrovane entity: 
 CBaseEntity
 CDoorBase
+CLogicEntity
 CModelEntity
 CVisibleEntity
 CWorldEntity
 func_door_rotating
+game_control
 player
 prop_dynamic
 prop_static
 world
-Vytvářím materiál system/cursor...hotovo
 Loading map test
+identity
 Vytvářím model barrel
 Vytvářím materiál barrel...hotovo
-...model finished (0x23f8468)
+...model finished (0x2378f10)
+identity
+identity
 Vytvářím model box
 Vytvářím materiál wall1...hotovo
-...model finished (0x30ad410)
+...model finished (0x2379030)
+identity
 Vytvářím model box2
-...model finished (0x30ad470)
+...model finished (0x2379090)
+identity
+identity
+identity
+identity
+identity
+identity
+identity
 Vytvářím model static
-...model finished (0x30ad710)
+...model finished (0x2379330)
+identity
+identity
+identity
+identity
+identity
 Vytvářím model door1
 Vytvářím materiál white...hotovo
-...model finished (0x30ad8f0)
+...model finished (0x2379510)
+identity
+identity
 Creating relations...
 Spawning entities
+Uploading model data to GPU
+Uploading data
+Uploading data
+Uploading data
+Uploading data
+Uploading data...finished
+Map loaded
+Deleting handles
+Deleting static models
+deleting m_physModel
+deleting m_parts
+deleting m_physModel
+deleting m_parts
+deleting m_physModel
+deleting m_parts
+deleting m_physModel
+deleting m_parts
+deleting m_physModel
+deleting m_parts
+Deleting buffers
+Map test unloaded
+Loading map test2
+identity
+Vytvářím model barrel
+Vytvářím materiál barrel...hotovo
+...model finished (0x2379630)
+identity
+identity
+Vytvářím model box
+Vytvářím materiál wall1...hotovo
+...model finished (0x2379510)
+identity
+Vytvářím model box2
+...model finished (0x23794b0)
+identity
+identity
+identity
+identity
+identity
+identity
+identity
+Vytvářím model static
+...model finished (0x2379210)
+identity
+identity
+identity
+identity
+identity
+Vytvářím model door1
+Vytvářím materiál white...hotovo
+...model finished (0x2379030)
+identity
+identity
+Creating relations...
+Spawning entities
+Adding label
 Uploading model data to GPU
 Uploading data
 Uploading data

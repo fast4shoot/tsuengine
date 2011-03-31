@@ -73,6 +73,7 @@ class CBaseEngine{
     double          getFPS() const;
     void            resetGameTime();
     void            setTimeScale(double newTimeScale);
+    double          getTimeScale();
 
     void            think();
     void            initWorldView();
@@ -162,6 +163,10 @@ inline int CBaseEngine::getScreenWidth(){
 
 inline void CBaseEngine::setTimeScale(double newTimeScale){
   timeScale = newTimeScale;
+}
+
+inline double CBaseEngine::getTimeScale(){
+  return timeScale;
 }
 
 inline void CBaseEngine::log(const format& text){

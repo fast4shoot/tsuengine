@@ -198,6 +198,8 @@
 		<Unit filename="entities\CDoorBase.h" />
 		<Unit filename="entities\CDoorRotating.cpp" />
 		<Unit filename="entities\CDoorRotating.h" />
+		<Unit filename="entities\CGame.cpp" />
+		<Unit filename="entities\CGame.h" />
 		<Unit filename="entities\CLogicEntity.cpp" />
 		<Unit filename="entities\CLogicEntity.h" />
 		<Unit filename="entities\CModelEntity.cpp" />

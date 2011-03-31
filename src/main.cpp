@@ -117,7 +117,7 @@ int WINAPI WinMain (HINSTANCE hInstance,
         }else{
           engine->think();
           engine->drawScene();
-          //if(engine->getFPS()>800.0)Sleep(1);
+          /*if(engine->getFPS()>200.0)Sleep(1);*/
         }
     }
   }catch(std::exception& e){

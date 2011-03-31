@@ -9,6 +9,10 @@ namespace json{
 
   //void extract(Model& result, const mValue& value);
 
+  inline void extract(bool& result, const mValue& value){
+    result = value.get_value<bool>();
+  }
+
   inline void extract(String& result, const mValue& value){
     result = value.get_value<String>();
   }

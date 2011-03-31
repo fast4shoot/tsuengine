@@ -3,6 +3,7 @@
 #include <fstream>
 #include "json/json.h"
 #include "CBaseEngine.h"
+#include "CGuiPanel.h"
 
 CMapMgr::CMapMgr():
   m_isLoaded(false),
@@ -66,6 +67,9 @@ void CMapMgr::update(){
         }
       }
     }
+
+    engine->gui->getHud()->deleteChildren();
+    engine->input->setEnabled(true);
 
     m_background = true;
     engine->log("Spawning entities");
