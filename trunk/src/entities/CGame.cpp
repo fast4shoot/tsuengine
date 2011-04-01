@@ -41,6 +41,9 @@ void CGame::think(){
 }
 
 void CGame::endGameSuccess(CBaseEntity* originator){}
-void CGame::endGameFailure(CBaseEntity* originator){}
+void CGame::endGameFailure(CBaseEntity* originator){
+  engine->gui->fadeTo(.9, 3.);
+
+}
 
 REGISTER_ENTITY(CGame)

@@ -10,6 +10,7 @@ class CMapMgr{
     void update();
     void unload();
     void setMapAsBackground(bool val);
+    bool isBackground();
   private:
     String m_mapName;
     bool m_isLoaded;
@@ -19,5 +20,9 @@ class CMapMgr{
     bool m_background;
     bool m_menuOpen;
 };
+
+inline bool CMapMgr::isBackground(){
+  return m_background;
+}
 
 #endif // CMAPMGR_H

@@ -227,6 +227,8 @@
 		<Unit filename="gui\CActionListenerPanel.h" />
 		<Unit filename="gui\CAutoSizePanel.cpp" />
 		<Unit filename="gui\CAutoSizePanel.h" />
+		<Unit filename="gui\CBgFade.cpp" />
+		<Unit filename="gui\CBgFade.h" />
 		<Unit filename="gui\CBox.h" />
 		<Unit filename="gui\CButton.cpp" />
 		<Unit filename="gui\CButton.h" />
@@ -240,6 +242,8 @@
 		<Unit filename="gui\CDownloadMaps.h" />
 		<Unit filename="gui\CDraggable.cpp" />
 		<Unit filename="gui\CDraggable.h" />
+		<Unit filename="gui\CEndFailure.cpp" />
+		<Unit filename="gui\CEndFailure.h" />
 		<Unit filename="gui\CGuiPanel.cpp" />
 		<Unit filename="gui\CGuiPanel.h" />
 		<Unit filename="gui\CLabel.cpp" />

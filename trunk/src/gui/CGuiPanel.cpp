@@ -4,6 +4,7 @@
 #include <typeinfo>
 #include "listeners/CListener.h"
 #include "CBaseEngine.h"
+#include "utils/math.h"
 
 void CGuiPanel::init(){
   position.set(0.,0.);
@@ -17,6 +18,10 @@ void CGuiPanel::init(){
   fgColor.set(1.,1.,1.,1.);
   bgColor.set(0.,0.,0.,.25);
   glossColor.set(1., 1., 1., .1);
+  m_alphaStart = (1.);
+  m_alphaEnd = (1.);
+  m_timeStart = (0.);
+  m_time = (1.);
 }
 
 bool CGuiPanel::isVisible()  const{
@@ -49,7 +54,12 @@ void CGuiPanel::removeChild(int childIndex){
   children.erase(children.begin()+childIndex);
 }
 
-
+void CGuiPanel::doDraw(){
+  calcOpacity();
+  draw();
+  drawChildren();
+  afterDraw();
+}
 
 void CGuiPanel::drawChildren(){
   for (ChildrenList::iterator i = children.begin(); i != children.end(); ++i){
@@ -57,9 +67,7 @@ void CGuiPanel::drawChildren(){
     if(child->getVisible()){
       glPushMatrix();
       glTranslatef(child->getX(),child->getY(),0.);
-      child->draw();
-      child->drawChildren();
-      child->afterDraw();
+      child->doDraw();
       glPopMatrix();
     }
   }
@@ -219,3 +227,21 @@ void CGuiPanel::deleteChildren(){
   children.clear();
 }
 
+void CGuiPanel::fadeTo(double alpha, double time){
+  m_timeStart = engine->getRealTime();
+  m_time = time;
+  m_alphaStart = opacity;
+  m_alphaEnd = alpha;
+}
+
+void CGuiPanel::calcOpacity(){
+  opacity = (engine->getRealTime()-m_timeStart)/m_time;
+  opacity = clamp(double(opacity), 0., 1.);
+  opacity = m_alphaStart+(m_alphaEnd-m_alphaStart)*opacity;
+
+  if(getParent()){
+    m_calculatedOpacity = getParent()->m_calculatedOpacity * getOpacity();
+  }else{
+    m_calculatedOpacity = getOpacity();
+  }
+}

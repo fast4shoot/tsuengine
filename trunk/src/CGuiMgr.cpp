@@ -6,6 +6,7 @@
 #include "CBaseEngine.h"
 #include "gui/CCenteredWindow.h"
 #include "CBaseEngine.h"
+#include "CBgFade.h"
 
 CGuiMgr::CGuiMgr(){}
 
@@ -14,6 +15,7 @@ void CGuiMgr::init(){
   m_hud = new CGuiPanel(vec2d(0.,0.),vec2d(engine->getScreenWidth(),engine->getScreenHeight()));
   _basePanel=new CGuiPanel(vec2d(0.,0.),vec2d(engine->getScreenWidth(),engine->getScreenHeight()));
   _basePanel->addChild(m_hud);
+  _basePanel->addChild(m_fade = new CBgFade());
   _basePanel->addChild(m_mainMenu = new CMainMenu());
 
   cursorMat = engine->materials->getPersistentMaterial("system/cursor");
@@ -40,8 +42,7 @@ void CGuiMgr::update(){
 
 void CGuiMgr::drawElements(){
   glDisable(GL_TEXTURE_2D);
-  _basePanel->draw();
-  _basePanel->drawChildren();
+  _basePanel->doDraw();
 
   if(m_mainMenu->isVisible()){
     float x = engine->input->getCursorX();
@@ -70,6 +71,14 @@ void CGuiMgr::addMainMenuElement(CGuiPanel* element){
 
 void CGuiMgr::showMainMenu(bool val){
   m_mainMenu->setVisible(val);
+  if(!engine->map->isBackground()){
+    if(val)
+      fadeTo(.5, 3.);
+    else
+      fadeTo(0., 2.);
+  }
 }
 
-
+void CGuiMgr::fadeTo(double alpha, double time){
+  m_fade->fadeTo(alpha, time);
+}
