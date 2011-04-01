@@ -18,6 +18,7 @@ class CGuiPanel{
     virtual void    draw();
     virtual void    drawChildren();
     virtual void    afterDraw();
+    virtual void    doDraw();
 
     void            setX(double x);
     void            setY(double y);
@@ -48,6 +49,7 @@ class CGuiPanel{
     bool            isVisible() const;
     void            setOpacity(float opacity);
     float           getOpacity() const;
+    void            calcOpacity();
 
     CGuiPanel*      getParent() const;
 
@@ -82,7 +84,7 @@ class CGuiPanel{
     rgba            getBgColor() const;
     void            setFgColor(rgba newFg);
     rgba            getFgColor() const;
-
+    void            fadeTo(double alpha, double time);
     //drawing functions
     void            setDrawColor(const rgba& color);
     void            drawQuad(float x, float y, float w, float h);
@@ -116,6 +118,12 @@ class CGuiPanel{
     rgba            fgColor;
     rgba            bgColor;
     rgba            glossColor;
+
+    double m_alphaStart;
+    double m_timeStart;
+    double m_time;
+    double m_alphaEnd;
+    double m_calculatedOpacity;
 
 };
 
@@ -223,6 +231,8 @@ inline float CGuiPanel::getOpacity() const{
   return opacity;
 }
 
+
+
 inline void CGuiPanel::setParent(CGuiPanel* newParent){
   parent=newParent;
   hasParent=parent!=NULL;
@@ -269,6 +279,6 @@ inline rgba CGuiPanel::getFgColor() const{
 }
 
 inline void CGuiPanel::setDrawColor(const rgba& color){
-  glColor4f(color.r,color.g,color.b,color.a);
+  glColor4f(color.r,color.g,color.b,m_calculatedOpacity * color.a);
 }
 #endif

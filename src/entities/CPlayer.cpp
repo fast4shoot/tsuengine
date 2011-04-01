@@ -88,7 +88,8 @@ void CPlayer::think(){
 
 void CPlayer::spawn(){
 
-
+  m_yaw = 0.;
+  m_pitch = 0.;
 
   m_camera = new CameraTransform();
   m_camera->setBase(this);

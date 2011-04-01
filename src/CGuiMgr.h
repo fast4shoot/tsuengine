@@ -6,6 +6,7 @@
 
 
 class CGuiPanel;
+class CBgFade;
 
 class CGuiMgr{
   public:
@@ -19,6 +20,7 @@ class CGuiMgr{
     void addMainMenuElement(CGuiPanel* element);
 
     void showMainMenu(bool val);
+    void fadeTo(double alpha, double time);
     CGuiPanel* getHud();
 
   protected:
@@ -26,6 +28,8 @@ class CGuiMgr{
     CGuiPanel* _keyboardReceiver;
     CGuiPanel* m_mainMenu;
     CGuiPanel* m_hud;
+    CBgFade* m_fade;
+
     Material* cursorMat;
 };
 
