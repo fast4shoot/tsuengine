@@ -5,6 +5,9 @@
 #include "listeners/CListener.h"
 #include "CBaseEngine.h"
 #include "utils/math.h"
+#include <algorithm>
+#include <boost/foreach.hpp>
+
 
 void CGuiPanel::init(){
   position.set(0.,0.);
@@ -13,7 +16,6 @@ void CGuiPanel::init(){
   visible=true;
   mouseOver=false;
   mouseDown=false;
-  children.reserve(4);
   allowMouseClickPropagation=true;
   fgColor.set(1.,1.,1.,1.);
   bgColor.set(0.,0.,0.,.25);
@@ -22,6 +24,47 @@ void CGuiPanel::init(){
   m_alphaEnd = (1.);
   m_timeStart = (0.);
   m_time = (1.);
+  m_remove = false;
+  m_checkForRemoval = false;
+  m_hideAfterFade = false;
+}
+
+CGuiPanel::~CGuiPanel(){
+  deleteChildren();
+  deleteListeners();
+  engine->gui->stopKeyboardReceiving(this);
+}
+
+void CGuiPanel::remove(){
+  m_remove = true;
+  if(getParent()){
+    getParent()->notifyRemoval();
+  }
+}
+
+void CGuiPanel::notifyRemoval(){
+  m_checkForRemoval = true;
+  if(getParent()){
+    getParent()->notifyRemoval();
+  }
+}
+
+
+
+void CGuiPanel::doRemoval(){
+  if(m_checkForRemoval){
+    for(ChildrenList::iterator it = children.begin(); it != children.end();){
+      if((*it)->m_remove){
+        delete *it;
+        it = children.erase(it);
+      }else{
+        ++it;
+      }
+    }
+  }
+  BOOST_FOREACH(CGuiPanel* pnl, children){
+    pnl->doRemoval();
+  }
 }
 
 bool CGuiPanel::isVisible()  const{
@@ -33,12 +76,14 @@ bool CGuiPanel::isVisible()  const{
 }
 
 void CGuiPanel::addChild(CGuiPanel* newChild){
+  children.remove(newChild);
   newChild->setParent(this);
-  newChild->setParentIndex(children.size());
+  //newChild->setParentIndex(children.size());
   children.push_back(newChild);
   fireChildAdded(newChild);
 }
 
+/*
 void CGuiPanel::removeChild(CGuiPanel* child){
   int size=children.size();
   for (int i=0; i<size; i++){
@@ -53,6 +98,7 @@ void CGuiPanel::removeChild(int childIndex){
   delete children[childIndex];
   children.erase(children.begin()+childIndex);
 }
+*/
 
 void CGuiPanel::doDraw(){
   calcOpacity();
@@ -74,18 +120,15 @@ void CGuiPanel::drawChildren(){
 }
 
 void CGuiPanel::requestFocus(){
-  parent->giveFocusTo(parentIndex);
+  parent->giveFocusTo(this);
 }
 
-void CGuiPanel::giveFocusTo(int childIndex){
-  if(children.size()-1!=childIndex){         //if the child already has focus, do nothing
-    CGuiPanel* temp = children.at(childIndex);
-    children.erase(children.begin()+childIndex);
-    children.push_back(temp);
-
-    //now update the indexes for affected children
-    for(int i=childIndex;i<children.size();i++){
-      children.at(i)->setParentIndex(i);
+void CGuiPanel::giveFocusTo(CGuiPanel* child){
+  if(*(children.rbegin()) != child){         //if the child already has focus, do nothing
+    ChildrenList::iterator it = std::find(children.begin(), children.end(), child);
+    if(it != children.end()){
+      children.erase(it);
+      children.push_back(child);
     }
   }
 }
@@ -227,21 +270,48 @@ void CGuiPanel::deleteChildren(){
   children.clear();
 }
 
-void CGuiPanel::fadeTo(double alpha, double time){
+void CGuiPanel::deleteListeners(){
+  BOOST_FOREACH(CListener* lstnr, listeners){
+    delete lstnr;
+  }
+  listeners.clear();
+}
+
+void CGuiPanel::fadeTo(double alpha, double time, bool hideAfterFade){
   m_timeStart = engine->getRealTime();
   m_time = time;
   m_alphaStart = opacity;
   m_alphaEnd = alpha;
+  m_hideAfterFade = hideAfterFade;
 }
 
 void CGuiPanel::calcOpacity(){
   opacity = (engine->getRealTime()-m_timeStart)/m_time;
+
+  if(m_hideAfterFade && opacity >= 1.){
+    visible = false;
+    m_hideAfterFade = false;
+  }
+
   opacity = clamp(double(opacity), 0., 1.);
   opacity = m_alphaStart+(m_alphaEnd-m_alphaStart)*opacity;
 
   if(getParent()){
-    m_calculatedOpacity = getParent()->m_calculatedOpacity * getOpacity();
+    m_calculatedOpacity = getParent()->m_calculatedOpacity * opacity;
   }else{
-    m_calculatedOpacity = getOpacity();
+    m_calculatedOpacity = opacity;
   }
+
+}
+
+void CGuiPanel::setVisible(bool vis){
+  if(!visible && vis){
+    setOpacity(0.);
+    fadeTo(1., 0.5);
+    visible=vis;
+  }
+  if(visible && !vis){
+    fadeTo(0., 0.25, true);
+  }
+
 }

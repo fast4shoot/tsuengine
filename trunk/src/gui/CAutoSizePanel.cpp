@@ -12,8 +12,7 @@ CAutoSizePanel::CAutoSizePanel():
 }
 
 void CAutoSizePanel::recalcSizeOnNewChildCallback(int id, CGuiPanel* panel){
-  engine->log(sformat("CAutoSizePanel::recalcSizeOnNewChildCallback"));
-  panel->addListener(makeCListenerMemberFn(panel->getParentIndex(), this, (void(CAutoSizePanel::*)(int))NULL, &CAutoSizePanel::recalcSizeCallback, &CAutoSizePanel::recalcSizeCallback));
+  panel->addListener(makeCListenerMemberFn(0, this, (void(CAutoSizePanel::*)(int))NULL, &CAutoSizePanel::recalcSizeCallback, &CAutoSizePanel::recalcSizeCallback));
   recalc();
 }
 
@@ -29,5 +28,4 @@ void CAutoSizePanel::recalc(){
     maxY = std::max((*it)->getY() + (*it)->getH(), maxY);
   }
   setSize(vec2d(maxX, maxY));
-  engine->log(sformat("Height is %f", maxY));
 }

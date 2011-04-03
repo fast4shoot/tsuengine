@@ -37,6 +37,7 @@ void CBaseEngine::init(){
 
   glewInit();
 
+  net = new CNetwork();
   input = new CInputMgr();
   input->init();
   camera = new CCameraMgr();
@@ -79,6 +80,7 @@ void CBaseEngine::destroy(){
   delete materials;
   delete fonts;
   delete input;
+  delete net;
 }
 
 void CBaseEngine::think(){

@@ -1,14 +1,13 @@
 #ifndef CENDFAILURE_H
 #define CENDFAILURE_H
 
+#include "CCenteredWindow.h"
 
-class CEndFailure
-{
+class CEndFailure: public CCenteredWindow{
   public:
     CEndFailure();
-    virtual ~CEndFailure();
   protected:
-  private:
+    void endFailureAction(int id);
 };
 
 #endif // CENDFAILURE_H

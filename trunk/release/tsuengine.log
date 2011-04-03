@@ -1,62 +1,9 @@
 CModelMgr()
-CAutoSizePanel::recalcSizeOnNewChildCallback
-Height is 20.000000
-CAutoSizePanel::recalcSizeOnNewChildCallback
-Height is 40.000000
-CAutoSizePanel::recalcSizeOnNewChildCallback
-Height is 60.000000
-CAutoSizePanel::recalcSizeOnNewChildCallback
-Height is 80.000000
-CAutoSizePanel::recalcSizeOnNewChildCallback
-Height is 100.000000
-CAutoSizePanel::recalcSizeOnNewChildCallback
-Height is 120.000000
-CAutoSizePanel::recalcSizeOnNewChildCallback
-Height is 140.000000
-CAutoSizePanel::recalcSizeOnNewChildCallback
-Height is 160.000000
-CAutoSizePanel::recalcSizeOnNewChildCallback
-Height is 180.000000
-CAutoSizePanel::recalcSizeOnNewChildCallback
-Height is 200.000000
-CAutoSizePanel::recalcSizeOnNewChildCallback
-Height is 220.000000
-CAutoSizePanel::recalcSizeOnNewChildCallback
-Height is 240.000000
-CAutoSizePanel::recalcSizeOnNewChildCallback
-Height is 260.000000
-CAutoSizePanel::recalcSizeOnNewChildCallback
-Height is 280.000000
-CAutoSizePanel::recalcSizeOnNewChildCallback
-Height is 300.000000
-CAutoSizePanel::recalcSizeOnNewChildCallback
-Height is 320.000000
-CAutoSizePanel::recalcSizeOnNewChildCallback
-Height is 340.000000
-CAutoSizePanel::recalcSizeOnNewChildCallback
-Height is 360.000000
-CAutoSizePanel::recalcSizeOnNewChildCallback
-Height is 380.000000
-CAutoSizePanel::recalcSizeOnNewChildCallback
-Height is 400.000000
-CAutoSizePanel::recalcSizeOnNewChildCallback
-Height is 20.000000
-CAutoSizePanel::recalcSizeOnNewChildCallback
-Height is 40.000000
-Request built
-Response got
-Body extracted
 adding item
-CAutoSizePanel::recalcSizeOnNewChildCallback
-Height is 20.000000
 adding item
-CAutoSizePanel::recalcSizeOnNewChildCallback
-Height is 40.000000
 adding item
-CAutoSizePanel::recalcSizeOnNewChildCallback
-Height is 60.000000
 Vytvářím materiál system/cursor...hotovo
-TSUEngine verze 0.32.3221 revize 7737
+TSUEngine verze 0.34.3444 revize 9008
 OpenGL verze 3.3.10524 Compatibility Profile Context
 Engine is now ready
 Zaregistrovane entity: 
@@ -76,15 +23,15 @@ Loading map test
 identity
 Vytvářím model barrel
 Vytvářím materiál barrel...hotovo
-...model finished (0x2378f10)
+...model finished (0xac8fe8)
 identity
 identity
 Vytvářím model box
 Vytvářím materiál wall1...hotovo
-...model finished (0x2379030)
+...model finished (0xac9108)
 identity
 Vytvářím model box2
-...model finished (0x2379090)
+...model finished (0xac9168)
 identity
 identity
 identity
@@ -93,7 +40,7 @@ identity
 identity
 identity
 Vytvářím model static
-...model finished (0x2379330)
+...model finished (0xac9408)
 identity
 identity
 identity
@@ -101,7 +48,7 @@ identity
 identity
 Vytvářím model door1
 Vytvářím materiál white...hotovo
-...model finished (0x2379510)
+...model finished (0xac95e8)
 identity
 identity
 Creating relations...
@@ -131,15 +78,15 @@ Loading map test2
 identity
 Vytvářím model barrel
 Vytvářím materiál barrel...hotovo
-...model finished (0x2379630)
+...model finished (0xac9708)
 identity
 identity
 Vytvářím model box
 Vytvářím materiál wall1...hotovo
-...model finished (0x2379510)
+...model finished (0xac95e8)
 identity
 Vytvářím model box2
-...model finished (0x23794b0)
+...model finished (0xac9588)
 identity
 identity
 identity
@@ -148,7 +95,7 @@ identity
 identity
 identity
 Vytvářím model static
-...model finished (0x2379210)
+...model finished (0xac92e8)
 identity
 identity
 identity
@@ -156,7 +103,8 @@ identity
 identity
 Vytvářím model door1
 Vytvářím materiál white...hotovo
-...model finished (0x2379030)
+...model finished (0xac9108)
+identity
 identity
 identity
 Creating relations...
@@ -169,3 +117,5 @@ Uploading data
 Uploading data
 Uploading data...finished
 Map loaded
+TOGGLE!!
+{"player":13,"map":"2","key":"OkVZq60GsCOhenjb368QElVtmQHk4Q2hoG123EaM8EPmPfZ2gjHY2OzZ01sRmk6L"}

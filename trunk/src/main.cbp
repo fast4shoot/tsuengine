@@ -145,6 +145,8 @@
 		<Unit filename="..\libs\json\json_spirit_writer.cpp" />
 		<Unit filename="..\libs\json\json_spirit_writer.h" />
 		<Unit filename="..\libs\json\json_spirit_writer_template.h" />
+		<Unit filename="..\libs\md5\md5.cc" />
+		<Unit filename="..\libs\md5\md5.hh" />
 		<Unit filename="CBaseEngine.cpp" />
 		<Unit filename="CBaseEngine.h" />
 		<Unit filename="CCameraMgr.cpp" />
@@ -163,6 +165,8 @@
 		<Unit filename="CMaterialMgr.h" />
 		<Unit filename="CModelMgr.cpp" />
 		<Unit filename="CModelMgr.h" />
+		<Unit filename="CNetwork.cpp" />
+		<Unit filename="CNetwork.h" />
 		<Unit filename="CParamMgr.cpp" />
 		<Unit filename="CParamMgr.h" />
 		<Unit filename="CPhysicsMgr.cpp" />
@@ -244,6 +248,8 @@
 		<Unit filename="gui\CDraggable.h" />
 		<Unit filename="gui\CEndFailure.cpp" />
 		<Unit filename="gui\CEndFailure.h" />
+		<Unit filename="gui\CEndSuccess.cpp" />
+		<Unit filename="gui\CEndSuccess.h" />
 		<Unit filename="gui\CGuiPanel.cpp" />
 		<Unit filename="gui\CGuiPanel.h" />
 		<Unit filename="gui\CLabel.cpp" />
@@ -259,6 +265,8 @@
 		<Unit filename="gui\CScrollable.cpp" />
 		<Unit filename="gui\CScrollable.h" />
 		<Unit filename="gui\CStencilPanel.h" />
+		<Unit filename="gui\CSubmitScore.cpp" />
+		<Unit filename="gui\CSubmitScore.h" />
 		<Unit filename="gui\CText.cpp" />
 		<Unit filename="gui\CText.h" />
 		<Unit filename="gui\CTextField.cpp" />

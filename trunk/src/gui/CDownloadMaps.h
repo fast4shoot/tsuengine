@@ -1,15 +1,16 @@
 #ifndef CDOWNLOADMAPS_H
 #define CDOWNLOADMAPS_H
 
-#include <boost/network/include/http/client.hpp>
+
 #include <vector>
+#include "utils/network.h"
 #include "datatypes.h"
 #include "CCenteredWindow.h"
 #include "CListBox.h"
 #include "CText.h"
 #include "utils/Thinker.h"
 
-namespace net = boost::network;
+
 
 class CStatusOverlay: public CGuiPanel{
   public:
@@ -48,9 +49,8 @@ class CDownloadMaps: public CCenteredWindow, Thinker{
       DDS_FILES
     } m_dataDownloadStatus;
 
-    typedef net::http::basic_client<net::http::tags::http_async_8bit_udp_resolve, 1, 0> async_client;
-    async_client m_client;
-    async_client::response m_response;
+
+
 
 };
 

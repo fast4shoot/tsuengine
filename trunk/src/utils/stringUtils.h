@@ -23,4 +23,6 @@ SStr vsformat(const SStr& format, va_list args);
 
 std::vector<String> explode(const String& in, const String& delim);
 
+String formatTime(double seconds);
+
 #endif

@@ -2,6 +2,8 @@
 
 #include "CBaseEngine.h"
 #include "DescriptorList.h"
+#include "gui/CEndFailure.h"
+#include "gui/CEndSuccess.h"
 
 void CGame::init(){
   isBackground = false;
@@ -33,17 +35,32 @@ void CGame::think(){
   }
   if(engine->getTime() >= 5.){
     m_time = engine->getTime()-5.;
-    int min = floor(m_time/60.);
-    int sec = floor(m_time) - min*60.;
-    int dec = (m_time - floor(m_time))*100;
-    m_timerText->setText((format("%d:%02d.%02d") % min % sec % dec).str());
+    m_timerText->setText(formatTime(m_time));
   }
 }
 
-void CGame::endGameSuccess(CBaseEntity* originator){}
-void CGame::endGameFailure(CBaseEntity* originator){
-  engine->gui->fadeTo(.9, 3.);
+void CGame::endGameSuccess(CBaseEntity* originator){
+  engine->map->setMapTime(m_time);
+  engine->gui->fadeTo(.9, 1.);
+  CGuiPanel* temp = new CEndSuccess();
+  temp->setOpacity(0.);
+  temp->fadeTo(1., 1.);
+  engine->setTimeScale(0.);
+  engine->gui->addElement(temp);
+  engine->gui->enableCursor(true);
+  engine->gui->enableEscape(false);
 
+}
+
+void CGame::endGameFailure(CBaseEntity* originator){
+  engine->gui->fadeTo(.9, 1.);
+  CGuiPanel* temp = new CEndFailure();
+  temp->setOpacity(0.);
+  temp->fadeTo(1., 1.);
+  engine->setTimeScale(0.);
+  engine->gui->addElement(temp);
+  engine->gui->enableCursor(true);
+  engine->gui->enableEscape(false);
 }
 
 REGISTER_ENTITY(CGame)

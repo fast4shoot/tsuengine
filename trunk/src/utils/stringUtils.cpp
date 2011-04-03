@@ -1,5 +1,6 @@
 #include "stringUtils.h"
 
+#include <cmath>
 
 WStr swformat(const wchar_t* format, ...){
  va_list args;
@@ -72,4 +73,11 @@ std::vector<String> explode(const String & in, const String & delim){
   }
 
   return result ;
+}
+
+String formatTime(double seconds){
+  int min = floor(seconds/60.);
+  int sec = floor(seconds) - min*60.;
+  int dec = (seconds - floor(seconds))*100;
+  return (format("%d:%02d.%02d") % min % sec % dec).str();
 }
