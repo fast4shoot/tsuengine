@@ -10,9 +10,15 @@ class CTextField : public CGuiPanel
                     CTextField(const vec2d& position, const vec2d& size, const String& text="");
     virtual void    onKeyboard(const String& string);
     virtual void    draw();
+    String          getText();
   protected:
     String    _string;
     CLabel*         _label;
 };
+
+inline String CTextField::getText(){
+  return _string;
+}
+
 
 #endif // CTEXTFIELD_H

@@ -30,11 +30,7 @@ void CMapMgr::unload(){
 }
 
 void CMapMgr::update(){
-  if(!m_background && engine->input->keyPressed(DIK_ESCAPE)){
-    engine->gui->showMainMenu(!m_menuOpen);
-    engine->setTimeScale(m_menuOpen * 1.f);
-    m_menuOpen = !m_menuOpen;
-  }
+
 
   try{
     if(!m_shouldLoad) return;
@@ -77,6 +73,7 @@ void CMapMgr::update(){
 
     m_menuOpen = m_background;
     engine->gui->showMainMenu(m_menuOpen);
+    engine->gui->enableEscape(!m_background);
     engine->setTimeScale(1.f);
 
     engine->models->uploadData();
@@ -91,6 +88,8 @@ void CMapMgr::update(){
   }
 }
 
-void CMapMgr::setMapAsBackground(bool val){
-  m_background = val;
+double CMapMgr::getMapTime(){
+  if(m_mapTime + 5. != m_offsetMapTime) throw std::runtime_error((format("HAAAAAX! (%1%, %2%)") % m_mapTime % m_offsetMapTime).str());
+  return m_mapTime;
 }
+

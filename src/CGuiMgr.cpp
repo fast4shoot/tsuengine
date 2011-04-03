@@ -12,6 +12,8 @@ CGuiMgr::CGuiMgr(){}
 
 void CGuiMgr::init(){
   _keyboardReceiver=NULL;
+  m_cursor = true;
+  m_escape = false;
   m_hud = new CGuiPanel(vec2d(0.,0.),vec2d(engine->getScreenWidth(),engine->getScreenHeight()));
   _basePanel=new CGuiPanel(vec2d(0.,0.),vec2d(engine->getScreenWidth(),engine->getScreenHeight()));
   _basePanel->addChild(m_hud);
@@ -23,20 +25,28 @@ void CGuiMgr::init(){
 }
 
 void CGuiMgr::update(){
-  for(int i=0;i<NUMBUTTONS;i++){
-    if(engine->input->buttonPressed((MouseButton)i)){
-      _basePanel->handleMouseClick(engine->input->getCursor(),(MouseButton) i,false);
+  _basePanel->doRemoval();
+  if(m_cursor){
+    for(int i=0;i<NUMBUTTONS;i++){
+      if(engine->input->buttonPressed((MouseButton)i)){
+        _basePanel->handleMouseClick(engine->input->getCursor(),(MouseButton) i,false);
+      }
+      if(engine->input->buttonDepressed((MouseButton)i)){
+        _basePanel->handleMouseClick(engine->input->getCursor(),(MouseButton) i,true);
+      }
     }
-    if(engine->input->buttonDepressed((MouseButton)i)){
-      _basePanel->handleMouseClick(engine->input->getCursor(),(MouseButton) i,true);
+    _basePanel->handleMouseMove(engine->input->getCursor(),true);
+    if(_keyboardReceiver && _keyboardReceiver->isVisible()){
+      String input = engine->input->getString();
+      if(!input.empty()){
+        _keyboardReceiver->onKeyboard(input);
+      }
     }
   }
-  _basePanel->handleMouseMove(engine->input->getCursor(),true);
-  if(_keyboardReceiver && _keyboardReceiver->isVisible()){
-    String input = engine->input->getString();
-    if(!input.empty()){
-      _keyboardReceiver->onKeyboard(input);
-    }
+  if(m_escape && engine->input->keyPressed(DIK_ESCAPE)){
+    bool visible = !m_mainMenu->getVisible();
+    showMainMenu(visible);
+    engine->setTimeScale(!visible * 1.f);
   }
 }
 
@@ -44,7 +54,7 @@ void CGuiMgr::drawElements(){
   glDisable(GL_TEXTURE_2D);
   _basePanel->doDraw();
 
-  if(m_mainMenu->isVisible()){
+  if(m_cursor){
     float x = engine->input->getCursorX();
     float y = engine->input->getCursorY();
     cursorMat->bind();
@@ -65,20 +75,27 @@ void CGuiMgr::drawElements(){
 
 }
 
-void CGuiMgr::addMainMenuElement(CGuiPanel* element){
-  m_mainMenu->addChild(element);
+void CGuiMgr::addElement(CGuiPanel* element){
+  _basePanel->addChild(element);
 }
 
 void CGuiMgr::showMainMenu(bool val){
   m_mainMenu->setVisible(val);
+  m_cursor = val;
   if(!engine->map->isBackground()){
     if(val)
       fadeTo(.5, 3.);
     else
-      fadeTo(0., 2.);
+      fadeTo(0., .0);
   }
 }
 
 void CGuiMgr::fadeTo(double alpha, double time){
   m_fade->fadeTo(alpha, time);
+}
+
+void CGuiMgr::stopKeyboardReceiving(CGuiPanel* panel){
+  if(isKeyboardReceiver(panel)){
+    _keyboardReceiver = NULL;
+  }
 }

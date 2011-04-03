@@ -74,7 +74,7 @@ void CPlayer::think(){
 
   if(engine->input->keyPressed(DIK_E)){
     vec3d from = getPosition();
-    vec3d to = getPosition()+getForward()*1.2 + vec3d(0., 0.3, 0.);
+    vec3d to = getPosition()+getForward()*1.8 + vec3d(0., 0.3, 0.);
 
     FilteredClosestRayResultCallback ray(from, to);
     ray.addToBlacklist(m_ghost);

@@ -2,6 +2,7 @@
 #define CGUIPANEL_H
 
 #include <vector>
+#include <list>
 #include <boost/foreach.hpp>
 #include "datatypes.h"
 #include "CGuiMgr.h"
@@ -53,13 +54,18 @@ class CGuiPanel{
 
     CGuiPanel*      getParent() const;
 
-    int             getParentIndex() const;
+    //int             getParentIndex() const;
     void            addChild(CGuiPanel* newChild);
-    void            removeChild(CGuiPanel* child);
-    void            removeChild(int childIndex);
+    /*void            removeChild(CGuiPanel* child);
+    void            removeChild(int childIndex);*/
+    void            remove();
+    void            doRemoval();
     void            deleteChildren();
+    void            deleteListeners();
     void            requestFocus();
-    void            giveFocusTo(int childIndex);
+    void            giveFocusTo(CGuiPanel* child);
+
+    static bool     removePredicate(CGuiPanel* pnl);
 
     //mouse functions
     virtual bool    handleMouseClick(const vec2d& position,const  MouseButton button,const bool up);
@@ -84,7 +90,7 @@ class CGuiPanel{
     rgba            getBgColor() const;
     void            setFgColor(rgba newFg);
     rgba            getFgColor() const;
-    void            fadeTo(double alpha, double time);
+    void            fadeTo(double alpha, double time, bool hideAfterFade = false);
     //drawing functions
     void            setDrawColor(const rgba& color);
     void            drawQuad(float x, float y, float w, float h);
@@ -94,13 +100,14 @@ class CGuiPanel{
 
   protected:
     typedef std::vector<CListener*> ListenerList;
-    typedef std::vector<CGuiPanel*> ChildrenList;
+    typedef std::list<CGuiPanel*> ChildrenList;
     void            setParent(CGuiPanel* newParent);
-    void            setParentIndex(int newParentIndex);
+    //void            setParentIndex(int newParentIndex);
     void            fireListeners();
     void            firePositionChanged();
     void            fireSizeChanged();
     void            fireChildAdded(CGuiPanel* child);
+    void            notifyRemoval();
 
     ChildrenList    children;
     ListenerList    listeners;
@@ -110,7 +117,7 @@ class CGuiPanel{
     float           opacity;
     CGuiPanel*      parent;
     bool            hasParent;
-    int             parentIndex;
+    //int             parentIndex;
     bool            mouseOver;
     bool            mouseDown;
     bool            allowMouseClickPropagation;
@@ -124,11 +131,15 @@ class CGuiPanel{
     double m_time;
     double m_alphaEnd;
     double m_calculatedOpacity;
+    bool m_hideAfterFade;
+
+    bool m_remove;
+    bool m_checkForRemoval;
 
 };
 
-inline CGuiPanel::~CGuiPanel(){
-  deleteChildren();
+inline bool CGuiPanel::removePredicate(CGuiPanel* pnl){
+  return pnl->m_remove;
 }
 
 inline CGuiPanel::CGuiPanel(const vec2d& position, const vec2d& size){
@@ -215,10 +226,6 @@ inline bool CGuiPanel::isPointInside(const vec2d& point){
   return point.x>=0. && point.y>=0. && size>point;
 }
 
-inline void CGuiPanel::setVisible(bool vis){
-  visible=vis;
-}
-
 inline bool CGuiPanel::getVisible() const{
   return visible;
 }
@@ -238,9 +245,9 @@ inline void CGuiPanel::setParent(CGuiPanel* newParent){
   hasParent=parent!=NULL;
 }
 
-inline void CGuiPanel::setParentIndex(int newParentIndex){
+/*inline void CGuiPanel::setParentIndex(int newParentIndex){
   parentIndex=newParentIndex;
-}
+}*/
 
 inline CGuiPanel* CGuiPanel::getParent() const{
   return parent;
@@ -254,9 +261,9 @@ inline bool CGuiPanel::getMouseDown() const{
   return mouseDown;
 }
 
-inline int CGuiPanel::getParentIndex() const{
+/*inline int CGuiPanel::getParentIndex() const{
   return parentIndex;
-}
+}*/
 
 inline bool CGuiPanel::getAllowKeyboardInput() const{
   return allowKeyboardInput;

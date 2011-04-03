@@ -19,6 +19,7 @@
 #include "CCameraMgr.h"
 #include "CMapMgr.h"
 #include "CEntMgr.h"
+#include "CNetwork.h"
 #include "elements/Material.h"
 #include "utils/Thinker.h"
 
@@ -56,6 +57,7 @@ class CBaseEngine{
     CModelMgr*      models;
     CEntMgr*        ents;
     CMapMgr*        map;
+    CNetwork*       net;
 
     CText*          _consoleOutput;
     CText*          m_tempConsoleOutput;

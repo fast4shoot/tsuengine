@@ -11,7 +11,7 @@
 class CText : public CGuiPanel
 {
   public:
-                    CText(const vec2d& pos, const vec2d& size, const double height);
+                    CText(const vec2d& pos, const vec2d& size, const double height, CLabel::ALIGN align = CLabel::ALIGN_LEFT);
     virtual         ~CText();
     virtual void    draw();
     void            setText(const String& text);
@@ -25,6 +25,7 @@ class CText : public CGuiPanel
     double          _height;
     CGuiPanel*      _textContainer;
     bool            _valid;
+    CLabel::ALIGN   m_align;
 
 };
 

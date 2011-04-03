@@ -40,8 +40,11 @@ void CTextField::onKeyboard(const String& string){
     }
   }
   _label->setText(_string);
+  fireListeners();
 }
 
 void CTextField::draw(){
-  drawVerticalGradient(0, 0, getW(), getH(), rgba(.2, .2, .2, .3), rgba(.4, .4, .4, .3));
+  setDrawColor(fgColor);
+  drawFrame(0., 0., getW(), getH());
+  drawVerticalGradient(1., 1., getW()-2., getH()-2., rgba(.2, .2, .2, .3), rgba(.4, .4, .4, .3));
 }

@@ -1,23 +1,35 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="default" />
+	<File name="..\libs\FTGL\FTCharToGlyphIndexMap.h" open="0" top="0" tabpos="10">
+		<Cursor position="1638" topLine="23" />
+	</File>
+	<File name="..\libs\json\json_spirit_value.h" open="1" top="1" tabpos="19">
+		<Cursor position="5694" topLine="0" />
+	</File>
+	<File name="..\libs\md5\md5.cc" open="1" top="0" tabpos="11">
+		<Cursor position="4464" topLine="171" />
+	</File>
+	<File name="..\libs\md5\md5.hh" open="1" top="0" tabpos="10">
+		<Cursor position="1945" topLine="47" />
+	</File>
 	<File name="CBaseEngine.cpp" open="0" top="0" tabpos="6">
-		<Cursor position="1787" topLine="72" />
+		<Cursor position="717" topLine="15" />
 	</File>
-	<File name="CBaseEngine.h" open="0" top="0" tabpos="7">
-		<Cursor position="3613" topLine="146" />
+	<File name="CBaseEngine.h" open="1" top="0" tabpos="17">
+		<Cursor position="567" topLine="0" />
 	</File>
-	<File name="CGuiMgr.cpp" open="1" top="0" tabpos="6">
-		<Cursor position="1421" topLine="0" />
+	<File name="CGuiMgr.cpp" open="0" top="0" tabpos="3">
+		<Cursor position="1527" topLine="29" />
 	</File>
-	<File name="CGuiMgr.h" open="0" top="0" tabpos="2">
-		<Cursor position="473" topLine="13" />
+	<File name="CGuiMgr.h" open="0" top="0" tabpos="4">
+		<Cursor position="363" topLine="34" />
 	</File>
-	<File name="CMapMgr.cpp" open="0" top="0" tabpos="2">
-		<Cursor position="571" topLine="60" />
+	<File name="CMapMgr.cpp" open="0" top="0" tabpos="11">
+		<Cursor position="2771" topLine="61" />
 	</File>
-	<File name="CMapMgr.h" open="0" top="0" tabpos="3">
-		<Cursor position="471" topLine="13" />
+	<File name="CMapMgr.h" open="1" top="0" tabpos="9">
+		<Cursor position="917" topLine="19" />
 	</File>
 	<File name="CMaterialMgr.cpp" open="0" top="0" tabpos="3">
 		<Cursor position="1139" topLine="38" />
@@ -49,11 +61,11 @@
 	<File name="elements\StaticModelPart.h" open="0" top="0" tabpos="0">
 		<Cursor position="0" topLine="9" />
 	</File>
-	<File name="entities\CGame.cpp" open="0" top="0" tabpos="7">
-		<Cursor position="1615" topLine="27" />
+	<File name="entities\CGame.cpp" open="0" top="0" tabpos="3">
+		<Cursor position="1473" topLine="25" />
 	</File>
-	<File name="entities\CGame.h" open="0" top="0" tabpos="0">
-		<Cursor position="504" topLine="10" />
+	<File name="entities\CGame.h" open="0" top="0" tabpos="2">
+		<Cursor position="504" topLine="0" />
 	</File>
 	<File name="entities\CLogicEntity.cpp" open="0" top="0" tabpos="0">
 		<Cursor position="88" topLine="0" />
@@ -61,26 +73,53 @@
 	<File name="entities\CLogicEntity.h" open="0" top="0" tabpos="0">
 		<Cursor position="308" topLine="6" />
 	</File>
-	<File name="entities\CPlayer.cpp" open="1" top="0" tabpos="7">
-		<Cursor position="2748" topLine="0" />
+	<File name="entities\CPlayer.cpp" open="0" top="0" tabpos="13">
+		<Cursor position="2240" topLine="45" />
 	</File>
-	<File name="gui\CBgFade.cpp" open="1" top="0" tabpos="5">
+	<File name="gui\CAutoSizePanel.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="1107" topLine="0" />
+	</File>
+	<File name="gui\CBgFade.cpp" open="0" top="0" tabpos="5">
 		<Cursor position="178" topLine="0" />
 	</File>
-	<File name="gui\CBgFade.h" open="1" top="0" tabpos="4">
+	<File name="gui\CBgFade.h" open="0" top="0" tabpos="4">
 		<Cursor position="145" topLine="0" />
 	</File>
-	<File name="gui\CDownloadMaps.cpp" open="0" top="0" tabpos="1">
-		<Cursor position="5160" topLine="134" />
+	<File name="gui\CButton.cpp" open="0" top="0" tabpos="12">
+		<Cursor position="287" topLine="0" />
 	</File>
-	<File name="gui\CDownloadMaps.h" open="0" top="0" tabpos="2">
-		<Cursor position="121" topLine="0" />
+	<File name="gui\CCenteredWindow.cpp" open="0" top="0" tabpos="7">
+		<Cursor position="305" topLine="0" />
 	</File>
-	<File name="gui\CGuiPanel.cpp" open="0" top="0" tabpos="4">
-		<Cursor position="5969" topLine="228" />
+	<File name="gui\CCenteredWindow.h" open="0" top="0" tabpos="8">
+		<Cursor position="258" topLine="0" />
 	</File>
-	<File name="gui\CGuiPanel.h" open="1" top="1" tabpos="3">
-		<Cursor position="4636" topLine="116" />
+	<File name="gui\CConsole.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="287" topLine="0" />
+	</File>
+	<File name="gui\CDownloadMaps.cpp" open="1" top="0" tabpos="7">
+		<Cursor position="4759" topLine="107" />
+	</File>
+	<File name="gui\CDownloadMaps.h" open="1" top="0" tabpos="6">
+		<Cursor position="1061" topLine="23" />
+	</File>
+	<File name="gui\CEndFailure.cpp" open="0" top="0" tabpos="4">
+		<Cursor position="708" topLine="0" />
+	</File>
+	<File name="gui\CEndFailure.h" open="0" top="0" tabpos="0">
+		<Cursor position="173" topLine="0" />
+	</File>
+	<File name="gui\CEndSuccess.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="377" topLine="9" />
+	</File>
+	<File name="gui\CEndSuccess.h" open="0" top="0" tabpos="5">
+		<Cursor position="159" topLine="0" />
+	</File>
+	<File name="gui\CGuiPanel.cpp" open="0" top="0" tabpos="9">
+		<Cursor position="640" topLine="2" />
+	</File>
+	<File name="gui\CGuiPanel.h" open="0" top="0" tabpos="10">
+		<Cursor position="4950" topLine="127" />
 	</File>
 	<File name="gui\CLabel.cpp" open="0" top="0" tabpos="6">
 		<Cursor position="983" topLine="28" />
@@ -94,19 +133,46 @@
 	<File name="gui\CNewGame.h" open="0" top="0" tabpos="0">
 		<Cursor position="117" topLine="0" />
 	</File>
+	<File name="gui\CSubmitScore.cpp" open="1" top="0" tabpos="2">
+		<Cursor position="1754" topLine="37" />
+	</File>
+	<File name="gui\CSubmitScore.h" open="1" top="0" tabpos="3">
+		<Cursor position="266" topLine="0" />
+	</File>
+	<File name="gui\CText.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="1182" topLine="6" />
+	</File>
+	<File name="gui\CText.h" open="1" top="0" tabpos="10">
+		<Cursor position="207" topLine="5" />
+	</File>
+	<File name="gui\CTextField.cpp" open="1" top="0" tabpos="4">
+		<Cursor position="992" topLine="16" />
+	</File>
+	<File name="gui\CTextField.h" open="1" top="0" tabpos="5">
+		<Cursor position="486" topLine="0" />
+	</File>
+	<File name="gui\CWindow.cpp" open="0" top="0" tabpos="2">
+		<Cursor position="212" topLine="6" />
+	</File>
+	<File name="gui\CWindow.h" open="0" top="0" tabpos="5">
+		<Cursor position="274" topLine="0" />
+	</File>
 	<File name="gui\listeners\CListener.h" open="0" top="0" tabpos="6">
 		<Cursor position="69" topLine="0" />
 	</File>
 	<File name="gui\listeners\CListenerMemberFn.h" open="0" top="0" tabpos="0">
 		<Cursor position="636" topLine="4" />
 	</File>
-	<File name="main.cpp" open="0" top="0" tabpos="2">
-		<Cursor position="2633" topLine="93" />
+	<File name="main.cpp" open="0" top="0" tabpos="9">
+		<Cursor position="3119" topLine="109" />
 	</File>
-	<File name="utils\stringUtils.cpp" open="0" top="0" tabpos="4">
-		<Cursor position="26" topLine="0" />
+	<File name="utils\network.h" open="1" top="0" tabpos="8">
+		<Cursor position="233" topLine="0" />
 	</File>
-	<File name="utils\stringUtils.h" open="0" top="0" tabpos="5">
-		<Cursor position="219" topLine="0" />
+	<File name="utils\stringUtils.cpp" open="0" top="0" tabpos="7">
+		<Cursor position="297" topLine="49" />
+	</File>
+	<File name="utils\stringUtils.h" open="0" top="0" tabpos="6">
+		<Cursor position="668" topLine="0" />
 	</File>
 </CodeBlocks_layout_file>

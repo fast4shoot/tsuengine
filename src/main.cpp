@@ -16,7 +16,6 @@
 #include "macros.h"
 #include "exceptions.h"
 
-using namespace std;
 
 
 /**************************
@@ -101,7 +100,7 @@ int WINAPI WinMain (HINSTANCE hInstance,
 
     while (!bQuit)
     {
-      SetCursorPos(g.scrWidth/2, g.scrHeight/2);
+      if(GetActiveWindow() == hWnd) SetCursorPos(g.scrWidth/2, g.scrHeight/2);
       // check for messages
       if (PeekMessage (&msg, NULL, 0, 0, PM_REMOVE)){
         // handle or dispatch messages
@@ -117,6 +116,7 @@ int WINAPI WinMain (HINSTANCE hInstance,
         }else{
           engine->think();
           engine->drawScene();
+          if(GetActiveWindow() != hWnd && engine->getFPS()>100.0) Sleep(35);
           /*if(engine->getFPS()>200.0)Sleep(1);*/
         }
     }

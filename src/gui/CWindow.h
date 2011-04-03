@@ -7,7 +7,7 @@
 class CWindow: public CGuiPanel
 {
   public:
-    CWindow(const vec2d& position, const vec2d& size, const String& label, double bottomHeight = 0.);
+    CWindow(const vec2d& position, const vec2d& size, const String& label, double bottomHeight = 0., bool hasTitle=true);
     virtual void draw();
     virtual void windowButtonPressed(int id);
     virtual void onMouseDown(const vec2d& position,const  MouseButton button);
@@ -15,6 +15,7 @@ class CWindow: public CGuiPanel
   private:
     CGuiPanel* _content;
     double m_bottomHeight;
+    bool m_title;
 };
 
 #endif // CWINDOW_H
