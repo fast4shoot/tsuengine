@@ -6,6 +6,8 @@
 #include "CButton.h"
 #include "CConsole.h"
 
+class CDownloadMaps;
+
 #include "macros.h"
 
 
@@ -15,10 +17,12 @@ class CMainMenu: public CGuiPanel{
     virtual void draw();
     virtual void buttonClicked(int id);
     virtual void displayElement(CGuiPanel* element);
+    CGuiPanel* newGame;
+    CGuiPanel* settings;
+    CConsole*  console;
+    CDownloadMaps* download;
   protected:
-    CGuiPanel* _newGame;
-    CGuiPanel* _settings;
-    CConsole*  _console;
+
     double    panelWidth;
 };
 

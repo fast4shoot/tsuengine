@@ -57,7 +57,6 @@ class CBaseEngine{
     CModelMgr*      models;
     CEntMgr*        ents;
     CMapMgr*        map;
-    CNetwork*       net;
 
     CText*          _consoleOutput;
     CText*          m_tempConsoleOutput;

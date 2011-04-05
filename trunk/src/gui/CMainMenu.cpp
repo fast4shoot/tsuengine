@@ -27,7 +27,7 @@ CMainMenu::CMainMenu():
   addChild(temp=new CButton(vec2d(20,100),vec2d(160,30),"Nová hra"));
   temp->addListener(makeCListenerMemberFn(1,this,&CMainMenu::buttonClicked));
 
-  addChild(temp=new CButton(vec2d(20,135),vec2d(160,30),"Nastavení"));
+  addChild(temp=new CButton(vec2d(20,135),vec2d(160,30),"Stahování map"));
   temp->addListener(makeCListenerMemberFn(2,this,&CMainMenu::buttonClicked));
 
   addChild(temp=new CButton(vec2d(20,170),vec2d(160,30),"Konzole"));
@@ -37,9 +37,9 @@ CMainMenu::CMainMenu():
   temp->addListener(makeCListenerMemberFn(0,this,&CMainMenu::buttonClicked));
   addChild(temp);
 
-  addChild(_settings=new CCenteredWindow(vec2d(400,300), "Nastavení"));
-  _settings->setVisible(false);
-  _settings->addChild(new CTextField(vec2d(20, 50), vec2d(160,24)));
+  /*addChild(settings=new CCenteredWindow(vec2d(400,300), "Nastavení"));
+  settings->setVisible(false);
+  settings->addChild(new CTextField(vec2d(20, 50), vec2d(160,24)));
 
   CListBox* setList = new CListBox(vec2d(20, 100), vec2d(360, 180));
   setList->addItem("rofl");
@@ -62,21 +62,22 @@ CMainMenu::CMainMenu():
   setList->addItem("Yes, yes it does!");
   setList->addItem("Yes, yes it does!");
   setList->addItem("Definitely.");
-  _settings->addChild(setList);
+  settings->addChild(setList);*/
 
-  addChild(_newGame=new CNewGame());
-  _newGame->setVisible(false);
+  addChild(newGame=new CNewGame());
+  newGame->setVisible(false);
 
-  addChild(_console=new CConsole());
-  _console->setVisible(false);
+  addChild(console=new CConsole());
+  console->setVisible(false);
 
-  addChild(new CDownloadMaps());
+  addChild(download=new CDownloadMaps());
+  download->setVisible(false);
 
   addChild(engine->m_tempConsoleOutput = new CText(vec2d(), vec2d(engine->getScreenWidth(), 80), 12));
 
-  addChild(new CCheckBox(vec2d(20,210), vec2d(160,16), "Jinej test"));
+  /*addChild(new CCheckBox(vec2d(20,210), vec2d(160,16), "Jinej test"));
   addChild(new CCheckBox(vec2d(20,230), vec2d(160,16), "Úplně jinej test"));
-  addChild(new CCheckBox(vec2d(20,250), vec2d(160,16), "A ještě něco"));
+  addChild(new CCheckBox(vec2d(20,250), vec2d(160,16), "A ještě něco"));*/
 
 
 }
@@ -89,9 +90,9 @@ void CMainMenu::draw(){
 
 void CMainMenu::buttonClicked(int id){
   switch(id){
-    case 1: displayElement(_newGame); break;
-    case 2: displayElement(_settings); break;
-    case 3: displayElement(_console); break;
+    case 1: displayElement(newGame); break;
+    case 2: displayElement(download); break;
+    case 3: displayElement(console); break;
     case 0:
       engine->quit();
       break;

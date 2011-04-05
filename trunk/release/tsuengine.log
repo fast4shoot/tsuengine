@@ -2,8 +2,11 @@ CModelMgr()
 adding item
 adding item
 adding item
+adding item
+adding item
+adding item
 Vytvářím materiál system/cursor...hotovo
-TSUEngine verze 0.34.3444 revize 9008
+TSUEngine verze 0.34.3457 revize 9018
 OpenGL verze 3.3.10524 Compatibility Profile Context
 Engine is now ready
 Zaregistrovane entity: 
@@ -23,15 +26,15 @@ Loading map test
 identity
 Vytvářím model barrel
 Vytvářím materiál barrel...hotovo
-...model finished (0xac8fe8)
+...model finished (0x27bf100)
 identity
 identity
 Vytvářím model box
 Vytvářím materiál wall1...hotovo
-...model finished (0xac9108)
+...model finished (0x27bf220)
 identity
 Vytvářím model box2
-...model finished (0xac9168)
+...model finished (0x27bf280)
 identity
 identity
 identity
@@ -40,7 +43,7 @@ identity
 identity
 identity
 Vytvářím model static
-...model finished (0xac9408)
+...model finished (0x27bf520)
 identity
 identity
 identity
@@ -48,7 +51,7 @@ identity
 identity
 Vytvářím model door1
 Vytvářím materiál white...hotovo
-...model finished (0xac95e8)
+...model finished (0x27bf700)
 identity
 identity
 Creating relations...
@@ -78,15 +81,15 @@ Loading map test2
 identity
 Vytvářím model barrel
 Vytvářím materiál barrel...hotovo
-...model finished (0xac9708)
+...model finished (0x27bf820)
 identity
 identity
 Vytvářím model box
 Vytvářím materiál wall1...hotovo
-...model finished (0xac95e8)
+...model finished (0x27bf700)
 identity
 Vytvářím model box2
-...model finished (0xac9588)
+...model finished (0x27bf6a0)
 identity
 identity
 identity
@@ -95,7 +98,7 @@ identity
 identity
 identity
 Vytvářím model static
-...model finished (0xac92e8)
+...model finished (0x27bf400)
 identity
 identity
 identity
@@ -103,7 +106,7 @@ identity
 identity
 Vytvářím model door1
 Vytvářím materiál white...hotovo
-...model finished (0xac9108)
+...model finished (0x27bf220)
 identity
 identity
 identity
@@ -118,4 +121,7 @@ Uploading data
 Uploading data...finished
 Map loaded
 TOGGLE!!
-{"player":13,"map":"2","key":"OkVZq60GsCOhenjb368QElVtmQHk4Q2hoG123EaM8EPmPfZ2gjHY2OzZ01sRmk6L"}
+http://tsuengine.php5.cz/generateKey.php?map=test2&player=JehoVista
+{"player":40,"map":2,"key":"r6IugnoOJoJlX5zQFTaNvDF9KHtAqIi6XGvG9s9MttQVnp3mhtrFl4ENoVdckP57"}
+http://tsuengine.php5.cz/submitTime.php?hash=210584cba2bb6b0c8a0c04b2448ae2f3&key=r6IugnoOJoJlX5zQFTaNvDF9KHtAqIi6XGvG9s9MttQVnp3mhtrFl4ENoVdckP57&time=2.381000
+{ "current": { "position": 8, "time": 2.381 }, "top": [ { "name": "dghj", "time": 1 }, { "name": "ddfghjrhtgdf", "time": 2.006 }, { "name": "sfz", "time": 2.023 }, { "name": "sdfghj", "time": 2.028 }, { "name": "maturita je pro faggoty", "time": 2.032 }, { "name": "dffgghghg", "time": 2.237 }, { "name": "Tvoje matka", "time": 2.352 }, { "name": "JehoVista", "time": 2.381 }, { "name": "sdfdfdd", "time": 2.402 }, { "name": "Xyanzova matka", "time": 2.658 }, { "name": "dfh", "time": 2.806 }, { "name": "dfghjk", "time": 3.365 }, { "name": "Jeho matka", "time": 7.13 }, { "name": "dfghjkl", "time": 9.48 }, { "name": "sdetgz", "time": 10.237 }, { "name": "sdsdsds", "time": 13.169 } ] }

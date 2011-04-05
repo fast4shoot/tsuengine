@@ -18,12 +18,7 @@ class CSubmitScore: public CCenteredWindow{
     CText* m_statusText;
     String m_name;
 
-
-    enum{
-      STATUS_NONE,
-      STATUS_KEY,
-      STATUS_SUBMIT
-    } m_status;
+    CGuiPanel* m_finalPanel;
 };
 
 #endif // CSUBMITSCORE_H
