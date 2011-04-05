@@ -63,3 +63,8 @@ void CListBox::draw(){
   setDrawColor(bgColor);
   drawQuad(1, 1, getW()-2, getH()-2);
 }
+
+void CListBox::clear(){
+  m_items.clear();
+  m_panel->deleteChildren();
+}

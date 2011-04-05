@@ -175,6 +175,7 @@ void MD5::finalize (){
 MD5::MD5(const std::string& string){
   init();
   update((unsigned char*)string.c_str(), string.length());
+  finalize();
 }
 
 

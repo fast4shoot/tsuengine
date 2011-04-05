@@ -93,7 +93,7 @@ void CDownloadMaps::doDownload(int){
       m_dataDownloadStatus = DDS_FILELIST;
       AsyncClient::request request("http://tsuengine.php5.cz/data/dataLists/"+m_list->getSelectedString());
       request << net::header("Connection", "close");
-      engine->net->response = engine->net->client.get(request);
+      m_response = m_client.get(request);
       m_overlay->setVisible(true);
       m_statusMessage->setText("Stahuji seznam souborů");
       m_fileList.clear();
@@ -109,9 +109,9 @@ void CDownloadMaps::doDownload(int){
 void CDownloadMaps::think(){
   try{
     if(m_dataDownloadStatus != DDS_NONE){
-      if(ready(engine->net->response)){
-        if(status(engine->net->response) == 200){
-          String data = body(engine->net->response);
+      if(ready(m_response)){
+        if(status(m_response) == 200){
+          String data = body(m_response);
           if(m_dataDownloadStatus == DDS_FILELIST){
             json::mValue val;
             json::read(data, val);
@@ -151,7 +151,7 @@ void CDownloadMaps::downloadNextFile(){
     m_dataDownloadStatus = DDS_FILES;
     AsyncClient::request request("http://tsuengine.php5.cz/data/"+m_fileList[m_lastFile]);
     request << net::header("Connection", "close");
-    engine->net->response = engine->net->client.get(request);
+    m_response = m_client.get(request);
     m_statusMessage->setText("Stahuji soubor "+m_fileList[m_lastFile]+sformat("(%d/%d)", m_lastFile+1, m_fileList.size()));
   }
 }

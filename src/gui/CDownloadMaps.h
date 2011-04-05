@@ -1,7 +1,6 @@
 #ifndef CDOWNLOADMAPS_H
 #define CDOWNLOADMAPS_H
 
-
 #include <vector>
 #include "utils/network.h"
 #include "datatypes.h"
@@ -49,7 +48,8 @@ class CDownloadMaps: public CCenteredWindow, Thinker{
       DDS_FILES
     } m_dataDownloadStatus;
 
-
+    AsyncClient m_client;
+    AsyncClient::response m_response;
 
 
 };

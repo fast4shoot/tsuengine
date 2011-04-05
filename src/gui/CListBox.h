@@ -23,6 +23,7 @@ class CListBox: public CGuiPanel{
     String getSelectedString();
     void setSelectedItem(int id);
     void draw();
+    void clear();
   protected:
     typedef std::vector<CListBoxItem*> ItemList;
     ItemList m_items;

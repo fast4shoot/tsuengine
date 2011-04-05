@@ -4,31 +4,31 @@
 	<File name="..\libs\FTGL\FTCharToGlyphIndexMap.h" open="0" top="0" tabpos="10">
 		<Cursor position="1638" topLine="23" />
 	</File>
-	<File name="..\libs\json\json_spirit_value.h" open="1" top="1" tabpos="19">
-		<Cursor position="5694" topLine="0" />
+	<File name="..\libs\json\json_spirit_value.h" open="1" top="0" tabpos="3">
+		<Cursor position="5694" topLine="23" />
 	</File>
-	<File name="..\libs\md5\md5.cc" open="1" top="0" tabpos="11">
-		<Cursor position="4464" topLine="171" />
+	<File name="..\libs\md5\md5.cc" open="0" top="0" tabpos="5">
+		<Cursor position="4488" topLine="130" />
 	</File>
-	<File name="..\libs\md5\md5.hh" open="1" top="0" tabpos="10">
+	<File name="..\libs\md5\md5.hh" open="0" top="0" tabpos="3">
 		<Cursor position="1945" topLine="47" />
 	</File>
 	<File name="CBaseEngine.cpp" open="0" top="0" tabpos="6">
-		<Cursor position="717" topLine="15" />
+		<Cursor position="1692" topLine="73" />
 	</File>
-	<File name="CBaseEngine.h" open="1" top="0" tabpos="17">
-		<Cursor position="567" topLine="0" />
+	<File name="CBaseEngine.h" open="0" top="0" tabpos="17">
+		<Cursor position="1320" topLine="51" />
 	</File>
 	<File name="CGuiMgr.cpp" open="0" top="0" tabpos="3">
 		<Cursor position="1527" topLine="29" />
 	</File>
-	<File name="CGuiMgr.h" open="0" top="0" tabpos="4">
-		<Cursor position="363" topLine="34" />
+	<File name="CGuiMgr.h" open="1" top="0" tabpos="5">
+		<Cursor position="363" topLine="15" />
 	</File>
 	<File name="CMapMgr.cpp" open="0" top="0" tabpos="11">
 		<Cursor position="2771" topLine="61" />
 	</File>
-	<File name="CMapMgr.h" open="1" top="0" tabpos="9">
+	<File name="CMapMgr.h" open="0" top="0" tabpos="9">
 		<Cursor position="917" topLine="19" />
 	</File>
 	<File name="CMaterialMgr.cpp" open="0" top="0" tabpos="3">
@@ -39,6 +39,9 @@
 	</File>
 	<File name="CModelMgr.cpp" open="0" top="0" tabpos="0">
 		<Cursor position="2122" topLine="43" />
+	</File>
+	<File name="CNetwork.h" open="0" top="0" tabpos="0">
+		<Cursor position="40" topLine="0" />
 	</File>
 	<File name="Font.h" open="0" top="0" tabpos="0">
 		<Cursor position="0" topLine="5" />
@@ -97,11 +100,11 @@
 	<File name="gui\CConsole.cpp" open="0" top="0" tabpos="0">
 		<Cursor position="287" topLine="0" />
 	</File>
-	<File name="gui\CDownloadMaps.cpp" open="1" top="0" tabpos="7">
-		<Cursor position="4759" topLine="107" />
+	<File name="gui\CDownloadMaps.cpp" open="0" top="0" tabpos="7">
+		<Cursor position="5081" topLine="146" />
 	</File>
-	<File name="gui\CDownloadMaps.h" open="1" top="0" tabpos="6">
-		<Cursor position="1061" topLine="23" />
+	<File name="gui\CDownloadMaps.h" open="0" top="0" tabpos="6">
+		<Cursor position="1112" topLine="40" />
 	</File>
 	<File name="gui\CEndFailure.cpp" open="0" top="0" tabpos="4">
 		<Cursor position="708" topLine="0" />
@@ -109,7 +112,7 @@
 	<File name="gui\CEndFailure.h" open="0" top="0" tabpos="0">
 		<Cursor position="173" topLine="0" />
 	</File>
-	<File name="gui\CEndSuccess.cpp" open="1" top="0" tabpos="1">
+	<File name="gui\CEndSuccess.cpp" open="0" top="0" tabpos="1">
 		<Cursor position="377" topLine="9" />
 	</File>
 	<File name="gui\CEndSuccess.h" open="0" top="0" tabpos="5">
@@ -133,28 +136,28 @@
 	<File name="gui\CNewGame.h" open="0" top="0" tabpos="0">
 		<Cursor position="117" topLine="0" />
 	</File>
-	<File name="gui\CSubmitScore.cpp" open="1" top="0" tabpos="2">
-		<Cursor position="1754" topLine="37" />
+	<File name="gui\CSubmitScore.cpp" open="1" top="1" tabpos="1">
+		<Cursor position="2598" topLine="59" />
 	</File>
-	<File name="gui\CSubmitScore.h" open="1" top="0" tabpos="3">
-		<Cursor position="266" topLine="0" />
+	<File name="gui\CSubmitScore.h" open="1" top="0" tabpos="2">
+		<Cursor position="551" topLine="0" />
 	</File>
 	<File name="gui\CText.cpp" open="0" top="0" tabpos="0">
 		<Cursor position="1182" topLine="6" />
 	</File>
-	<File name="gui\CText.h" open="1" top="0" tabpos="10">
+	<File name="gui\CText.h" open="0" top="0" tabpos="10">
 		<Cursor position="207" topLine="5" />
 	</File>
-	<File name="gui\CTextField.cpp" open="1" top="0" tabpos="4">
+	<File name="gui\CTextField.cpp" open="0" top="0" tabpos="4">
 		<Cursor position="992" topLine="16" />
 	</File>
-	<File name="gui\CTextField.h" open="1" top="0" tabpos="5">
+	<File name="gui\CTextField.h" open="0" top="0" tabpos="5">
 		<Cursor position="486" topLine="0" />
 	</File>
 	<File name="gui\CWindow.cpp" open="0" top="0" tabpos="2">
 		<Cursor position="212" topLine="6" />
 	</File>
-	<File name="gui\CWindow.h" open="0" top="0" tabpos="5">
+	<File name="gui\CWindow.h" open="1" top="0" tabpos="4">
 		<Cursor position="274" topLine="0" />
 	</File>
 	<File name="gui\listeners\CListener.h" open="0" top="0" tabpos="6">
@@ -166,7 +169,7 @@
 	<File name="main.cpp" open="0" top="0" tabpos="9">
 		<Cursor position="3119" topLine="109" />
 	</File>
-	<File name="utils\network.h" open="1" top="0" tabpos="8">
+	<File name="utils\network.h" open="0" top="0" tabpos="8">
 		<Cursor position="233" topLine="0" />
 	</File>
 	<File name="utils\stringUtils.cpp" open="0" top="0" tabpos="7">
