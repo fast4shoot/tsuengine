@@ -8,6 +8,8 @@
 #include "CBaseEngine.h"
 #include "datatypes.h"
 #include "CButton.h"
+#include "CMainMenu.h"
+#include "CNewGame.h"
 
 CStatusOverlay::CStatusOverlay(const vec2d& pos, const vec2d& size):
   CGuiPanel(pos, size)
@@ -40,29 +42,34 @@ CDownloadMaps::CDownloadMaps():
     std::string s = body(rsp);
     //engine->log(s);
     json::read(s, mapList);
+  }catch(std::exception& e){
+    CText* tmp = new CText(vec2d(20, 50.), getSize()-vec2d(40., 70.), 14., CLabel::ALIGN_CENTER);
+    tmp->setText(String("Nebylo možné získat seznam dat ")+e.what());
+    addChild(tmp);
+    return;
   }catch(...){
     CText* tmp = new CText(vec2d(20, 50.), getSize()-vec2d(40., 70.), 14., CLabel::ALIGN_CENTER);
     tmp->setText("Nebylo možné získat seznam dat");
     addChild(tmp);
     return;
   }
-
-  m_list = new CListBox(vec2d(20,50), vec2d(260, 280));
+  try{
+  m_list = new CListBox(vec2d(20,20), vec2d(260, 280));
 
     m_list->addListener(makeCListenerMemberFn(0,this,&CDownloadMaps::setDescription));
-    addChild(m_list);
+    getContent()->addChild(m_list);
 
-    m_descText = new CText(vec2d(300., 50), vec2d(160, 280), 14);
+    m_descText = new CText(vec2d(300., 20), vec2d(160, 280), 14);
     m_descText->setText("Vyberte mapu ke stažení");
-    addChild(m_descText);
+    getContent()->addChild(m_descText);
 
-    CButton* tmp = new CButton(vec2d(300, getH()-45.), vec2d(100, 25), "Stáhnout");
+    CButton* tmp = new CButton(vec2d(300, getContent()->getH()-45.), vec2d(100, 25), "Stáhnout");
     tmp->addListener(makeCListenerMemberFn(0, this, &CDownloadMaps::doDownload));
-    addChild(tmp);
+    getContent()->addChild(tmp);
 
-  m_overlay = new CStatusOverlay(vec2d(1., 31.), getSize() - vec2d(2., 32.));
+  m_overlay = new CStatusOverlay(vec2d(1., 1.), getContent()->getSize() - vec2d(2., 2.));
   m_overlay->setVisible(false);
-  addChild(m_overlay);
+  getContent()->addChild(m_overlay);
 
   m_overlayButton = new CButton(m_overlay->getSize()-vec2d(120., 45.), vec2d(100., 25. ), "Zavřít");
   m_overlayButton->setVisible(false);
@@ -78,7 +85,13 @@ CDownloadMaps::CDownloadMaps():
     m_descList.push_back(map.get_obj().find("desc")->second.get_str());
   }
 
-
+  }catch(std::exception& e){
+    getContent()->deleteChildren();
+    CText* tmp = new CText(vec2d(20, 50.), getSize()-vec2d(40., 70.), 14., CLabel::ALIGN_CENTER);
+    tmp->setText(String("Nebylo možné získat seznam dat ")+e.what());
+    addChild(tmp);
+    return;
+  }
 
   //boost:network::body_directive
 }
@@ -147,6 +160,7 @@ void CDownloadMaps::downloadNextFile(){
     m_dataDownloadStatus = DDS_NONE;
     //m_overlay->setVisible(false);
     finishDownload("Stahování dokončeno.");
+    engine->gui->getMainMenu()->newGame->reloadList();
   }else{
     m_dataDownloadStatus = DDS_FILES;
     AsyncClient::request request("http://tsuengine.php5.cz/data/"+m_fileList[m_lastFile]);

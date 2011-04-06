@@ -8,14 +8,14 @@
 #include "md5/md5.hh"
 
 CSubmitScore::CSubmitScore():
-  CCenteredWindow( vec2d(300, 200), "", 65., false )
+  CCenteredWindow( vec2d(320, 250), "", 65., false )
 {
   CGuiPanel* c = getContent();
   CGuiPanel* tmp;
 
   c->addChild( m_statusText = new CText( vec2d(20., 20.), c->getSize()-vec2d(40., 155), 21., CLabel::ALIGN_CENTER ) );
   m_statusText->setText("Zadejte jméno, pod kterým bude čas na serveru uložen");
-  c->addChild( m_textField = new CTextField( vec2d(20., c->getH() - 50.), vec2d(c->getW() - 105., 30.) ) );
+  c->addChild( m_textField = new CTextField( vec2d(20., c->getH() - 115.), vec2d(c->getW() - 40., 30.) ) );
   m_textField->addListener( makeCListenerMemberFn(0, this, &CSubmitScore::submitAction) );
   c->addChild( tmp = new CButton( c->getSize() - vec2d( 120., 45. ), vec2d( 100., 25.), "Odeslat" ) );
   tmp->setOpacity(0.);

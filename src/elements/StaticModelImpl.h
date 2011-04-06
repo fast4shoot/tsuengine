@@ -14,7 +14,7 @@ class StaticModelImpl{
     int getVertexCount() const;
     int getIndexCount() const;
     void assignVbos(GLuint vbo, int vboOffset, GLuint indexVbo, int indexVboOffset);
-    void render();
+    void render(int pass);
     void uploadData();
     PhysicsModel* getPhysModel();
   protected:

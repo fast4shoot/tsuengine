@@ -9,13 +9,15 @@ class Material{
     void bind();
     bool isPersistent();
     void setPersistent(bool persistent);
+    bool getTransparent();
   protected:
     Material(const String& name);
     virtual ~Material();
 
     String _name;
     GLuint _glName;
-    bool m_persistent;;
+    bool m_persistent;
+    bool m_transparent;
 
   friend class CMaterialMgr;
 
@@ -31,5 +33,9 @@ inline bool Material::isPersistent(){
 
 inline void Material::setPersistent(bool persistent){
   m_persistent = persistent;
+}
+
+inline bool Material::getTransparent(){
+  return m_transparent;
 }
 #endif // MATERIAL_H

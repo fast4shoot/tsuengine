@@ -7,6 +7,7 @@
 #include "datatypes.h"
 #include "CGuiMgr.h"
 #include "glew/glew.h"
+#include "utils/math.h"
 
 class CListener;
 
@@ -286,6 +287,6 @@ inline rgba CGuiPanel::getFgColor() const{
 }
 
 inline void CGuiPanel::setDrawColor(const rgba& color){
-  glColor4f(color.r,color.g,color.b,m_calculatedOpacity * color.a);
+  glColor4f(color.r,color.g,color.b,m_calculatedOpacity * clamp((double)color.a, 0., 1.));
 }
 #endif

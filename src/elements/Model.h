@@ -30,20 +30,23 @@ class Model: public btMotionState{
     void setVisible(bool visible);
     bool getVisible() const;
 
-    virtual void draw();
-    virtual void render()=0;
+    virtual void draw(int pass);
+    virtual void render(int pass)=0;
 
   protected:
+    virtual void enablePhysics(bool physics)=0;
     ModelType  m_type;
     btTransform m_transform;
     CWorldEntity* m_linkedWorldEntity;
     CBaseEntity* m_linkedBaseEntity;
+    bool m_visible;
 
 };
 
 inline Model::Model(ModelType type):
   m_type(type),
   m_transform(),
+  m_visible(true),
   m_linkedBaseEntity(NULL),
   m_linkedWorldEntity(NULL)
 {
@@ -65,6 +68,10 @@ inline void Model::setRotation(float pitch, float yaw, float roll){
 
 inline CBaseEntity* Model::getLinkedEntity() const{
   return m_linkedBaseEntity;
+}
+
+inline bool Model::getVisible() const{
+  return m_visible;
 }
 
 

@@ -8,10 +8,12 @@
 class CNewGame: public CCenteredWindow{
   public:
     CNewGame();
+    void reloadList();
   protected:
     void newGameLoad(int id);
     CButton* m_loadGameButton;
     CListBox* m_mapList;
+
 };
 
 #endif // CNEWGAME_H

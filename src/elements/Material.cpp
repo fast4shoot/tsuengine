@@ -20,7 +20,10 @@ Material::Material(const String& name):
   jsonFile.close();
 
   _name = data.get_obj().find("texture")->second.get_str();
-
+  m_transparent = false;
+  if(data.get_obj().find("transparent") != data.get_obj().end()){
+    m_transparent = data.get_obj().find("transparent")->second.get_bool();
+  }
 
 
   ILuint ImageName; // The image name to return.

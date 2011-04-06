@@ -3,15 +3,17 @@
 #include "utils/math.h"
 #include "entities/CWorldEntity.h"
 
-void Model::draw(){
-  glPushMatrix();
-  btTransform transform;
-  getWorldTransform(transform);
-  glTranslatef(transform.getOrigin().x(), transform.getOrigin().y(), transform.getOrigin().z());
-  btVector3 axis = transform.getRotation().getAxis();
-  glRotatef(toDeg(transform.getRotation().getAngle()), axis.x(), axis.y(), axis.z());
-  render();
-  glPopMatrix();
+void Model::draw(int pass){
+  if(getVisible()){
+    glPushMatrix();
+    btTransform transform;
+    getWorldTransform(transform);
+    glTranslatef(transform.getOrigin().x(), transform.getOrigin().y(), transform.getOrigin().z());
+    btVector3 axis = transform.getRotation().getAxis();
+    glRotatef(toDeg(transform.getRotation().getAngle()), axis.x(), axis.y(), axis.z());
+    render(pass);
+    glPopMatrix();
+  }
 }
 
 void Model::getWorldTransform(btTransform &worldTrans) const{
@@ -46,4 +48,11 @@ void Model::linkToEntity(CBaseEntity* ent){
 void Model::linkToEntity(CWorldEntity* ent){
   m_linkedBaseEntity = ent;
   m_linkedWorldEntity = ent;
+}
+
+void Model::setVisible(bool visible){
+  if(m_visible != visible){
+    enablePhysics(visible);
+    m_visible = visible;
+  }
 }

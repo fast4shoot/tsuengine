@@ -16,7 +16,7 @@ class StaticModelPart{
     int getIndexCount() const;
     void setOffsets(int vboOffset, int indexVboOffset);
     void uploadData();
-    void draw();
+    void draw(int pass);
   protected:
     VertexList m_vertices;
     Material* m_material;
