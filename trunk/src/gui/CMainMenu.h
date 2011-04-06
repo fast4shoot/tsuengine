@@ -7,6 +7,8 @@
 #include "CConsole.h"
 
 class CDownloadMaps;
+class CNewGame;
+
 
 #include "macros.h"
 
@@ -17,7 +19,7 @@ class CMainMenu: public CGuiPanel{
     virtual void draw();
     virtual void buttonClicked(int id);
     virtual void displayElement(CGuiPanel* element);
-    CGuiPanel* newGame;
+    CNewGame* newGame;
     CGuiPanel* settings;
     CConsole*  console;
     CDownloadMaps* download;

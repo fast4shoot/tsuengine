@@ -6,6 +6,7 @@
 
 
 class CGuiPanel;
+class CMainMenu;
 class CBgFade;
 
 class CGuiMgr{
@@ -21,7 +22,7 @@ class CGuiMgr{
     void addElement(CGuiPanel* element);
 
     void showMainMenu(bool val);
-    CGuiPanel* getMainMenu();
+    CMainMenu* getMainMenu();
     void fadeTo(double alpha, double time);
     CGuiPanel* getHud();
 
@@ -31,7 +32,7 @@ class CGuiMgr{
   protected:
     CGuiPanel* _basePanel;
     CGuiPanel* _keyboardReceiver;
-    CGuiPanel* m_mainMenu;
+    CMainMenu* m_mainMenu;
     CGuiPanel* m_hud;
     CBgFade* m_fade;
 
@@ -53,7 +54,7 @@ inline CGuiPanel* CGuiMgr::getHud(){
   return m_hud;
 }
 
-inline CGuiPanel* CGuiMgr::getMainMenu(){
+inline CMainMenu* CGuiMgr::getMainMenu(){
   return m_mainMenu;
 }
 

@@ -214,6 +214,8 @@
 		<Unit filename="entities\CPropDynamic.h" />
 		<Unit filename="entities\CPropStatic.cpp" />
 		<Unit filename="entities\CPropStatic.h" />
+		<Unit filename="entities\CPropToggle.cpp" />
+		<Unit filename="entities\CPropToggle.h" />
 		<Unit filename="entities\CVisibleEntity.cpp" />
 		<Unit filename="entities\CVisibleEntity.h" />
 		<Unit filename="entities\CWorld.cpp" />
@@ -289,9 +291,7 @@
 		<Unit filename="utils\Thinker.h" />
 		<Unit filename="utils\math.cpp" />
 		<Unit filename="utils\math.h" />
-		<Unit filename="utils\network.cpp">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
+		<Unit filename="utils\network.cpp" />
 		<Unit filename="utils\network.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>

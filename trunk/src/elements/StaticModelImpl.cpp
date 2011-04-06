@@ -50,8 +50,8 @@ void StaticModelImpl::assignVbos(GLuint vbo, int vboOffset, GLuint indexVbo, int
   }
 }
 
-void StaticModelImpl::render(){
+void StaticModelImpl::render(int pass){
   for(PartList::iterator it=m_parts.begin(); it!=m_parts.end(); ++it){
-    (*it)->draw();
+    (*it)->draw(pass);
   }
 }

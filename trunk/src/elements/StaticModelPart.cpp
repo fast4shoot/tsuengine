@@ -80,10 +80,12 @@ void StaticModelPart::uploadData(){
   engine->checkGl();
 }
 
-void StaticModelPart::draw(){
-  m_material->bind();
-  //engine->log(sformat("draw(): m_vboOffset=%d, m_indexVboOffset=%d, getVertexCount()=%d, getIndexCount()=%d", m_vboOffset, m_indexVboOffset, getVertexCount(), getIndexCount()));
-  glDrawRangeElements(GL_TRIANGLES, m_vboOffset, m_vboOffset+getVertexCount()-1, getIndexCount(), GL_UNSIGNED_INT, BUFFER_OFFSET(m_indexVboOffset*sizeof(GLuint)));
+void StaticModelPart::draw(int pass){
+  if((!m_material->getTransparent() && pass==1) || (m_material->getTransparent() && pass==2) ){
+    m_material->bind();
+    //engine->log(sformat("draw(): m_vboOffset=%d, m_indexVboOffset=%d, getVertexCount()=%d, getIndexCount()=%d", m_vboOffset, m_indexVboOffset, getVertexCount(), getIndexCount()));
+    glDrawRangeElements(GL_TRIANGLES, m_vboOffset, m_vboOffset+getVertexCount()-1, getIndexCount(), GL_UNSIGNED_INT, BUFFER_OFFSET(m_indexVboOffset*sizeof(GLuint)));
+  }
 }
 
 void StaticModelPart::setOffsets(int vboOffset, int indexVboOffset){

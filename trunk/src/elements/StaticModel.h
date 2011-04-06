@@ -15,15 +15,16 @@ class StaticModel: public Model{
   public:
     StaticModel(StaticModelImpl* impl);
     //double getRadius() const;
-    void render();
+    void render(int pass);
     void setPhysics(PhysicsType physics);
     PhysicsType getPhysics() const;
 
   protected:
+    void enablePhysics(bool physics);
     StaticModelImpl* m_impl;
     PhysicsType m_physType;
+    btRigidBody* m_body;
 
-  friend class CModelMgr;
 };
 
 /*
