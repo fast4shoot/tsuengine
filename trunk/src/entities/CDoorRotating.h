@@ -6,6 +6,7 @@
 
 class CDoorRotating : public CDoorBase{
   public:
+    CDoorRotating();
     void init();
     void spawn();
     void think();
@@ -23,6 +24,8 @@ ENTITY_DESCRIPTOR(CDoorRotating, CDoorBase)
     spawnable(true);
     classname("func_door_rotating");
     value("model",&CDoorRotating::m_model);
+    value("rotationAxis",&CDoorRotating::m_rotationAxis);
+    value("rotationAngle",&CDoorRotating::m_rotationAngle);
   }
 };
 

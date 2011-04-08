@@ -4,7 +4,7 @@
 CTextField::CTextField(const vec2d& position, const vec2d& size, const String& text):
   CGuiPanel(position,size),
   _string(text),
-  _label(new CLabel(vec2d(2., 4.), vec2d(0., getH()-8.), text))
+  _label(new CLabel(vec2d(2., 3.), vec2d(0., getH()-6.), text))
 {
   addChild(_label);
 }

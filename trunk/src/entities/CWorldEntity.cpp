@@ -9,9 +9,12 @@ CWorldEntity::CWorldEntity():
 {
   engine->log("identity");
   m_transform.setIdentity();
+  m_position = vec3d();
+  m_rotation = vec3d();
 }
 
 void CWorldEntity::init(){
+  CBaseEntity::init();
   setPosition(m_position);
   setRotation(toRad(m_rotation.x), toRad(m_rotation.y), toRad(m_rotation.z));
 }

@@ -2,12 +2,17 @@
 #include "DescriptorList.h"
 #include "utils/math.h"
 
+CDoorRotating::CDoorRotating():
+  CDoorBase()
+{
+  m_rotationAxis = vec3d(0., 1., 0.);
+  m_rotationAngle = 90.;
+}
+
 void CDoorRotating::init(){
   CDoorBase::init();
   m_model->setPhysics(P_KINEMATIC);
   m_model->linkToEntity(this);
-  m_rotationAxis = vec3d(0., 1., 0.);
-  m_rotationAngle = 90.;
 
 }
 

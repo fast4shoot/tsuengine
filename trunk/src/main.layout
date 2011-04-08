@@ -13,11 +13,17 @@
 	<File name="..\libs\md5\md5.hh" open="0" top="0" tabpos="3">
 		<Cursor position="1945" topLine="47" />
 	</File>
-	<File name="CBaseEngine.cpp" open="1" top="0" tabpos="2">
+	<File name="CBaseEngine.cpp" open="0" top="0" tabpos="2">
 		<Cursor position="3031" topLine="127" />
 	</File>
 	<File name="CBaseEngine.h" open="0" top="0" tabpos="17">
 		<Cursor position="1320" topLine="51" />
+	</File>
+	<File name="CEntMgr.cpp" open="1" top="0" tabpos="2">
+		<Cursor position="0" topLine="18" />
+	</File>
+	<File name="CEntMgr.h" open="1" top="0" tabpos="3">
+		<Cursor position="368" topLine="5" />
 	</File>
 	<File name="CGuiMgr.cpp" open="0" top="0" tabpos="4">
 		<Cursor position="1527" topLine="29" />
@@ -37,7 +43,7 @@
 	<File name="CMaterialMgr.h" open="0" top="0" tabpos="4">
 		<Cursor position="0" topLine="4" />
 	</File>
-	<File name="CModelMgr.cpp" open="1" top="0" tabpos="3">
+	<File name="CModelMgr.cpp" open="0" top="0" tabpos="3">
 		<Cursor position="4350" topLine="99" />
 	</File>
 	<File name="CNetwork.h" open="0" top="0" tabpos="0">
@@ -52,23 +58,23 @@
 	<File name="Font.h" open="0" top="0" tabpos="0">
 		<Cursor position="0" topLine="5" />
 	</File>
-	<File name="elements\Material.cpp" open="1" top="0" tabpos="5">
+	<File name="elements\Material.cpp" open="0" top="0" tabpos="5">
 		<Cursor position="511" topLine="14" />
 	</File>
 	<File name="elements\Material.h" open="0" top="0" tabpos="0">
 		<Cursor position="738" topLine="8" />
 	</File>
-	<File name="elements\Model.cpp" open="1" top="0" tabpos="4">
-		<Cursor position="480" topLine="0" />
+	<File name="elements\Model.cpp" open="1" top="0" tabpos="7">
+		<Cursor position="603" topLine="24" />
 	</File>
 	<File name="elements\Model.h" open="0" top="0" tabpos="0">
 		<Cursor position="970" topLine="8" />
 	</File>
-	<File name="elements\PhysicsModel.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="549" topLine="3" />
+	<File name="elements\PhysicsModel.cpp" open="1" top="0" tabpos="9">
+		<Cursor position="1218" topLine="30" />
 	</File>
-	<File name="elements\StaticModel.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="223" topLine="0" />
+	<File name="elements\StaticModel.cpp" open="1" top="0" tabpos="8">
+		<Cursor position="493" topLine="0" />
 	</File>
 	<File name="elements\StaticModel.h" open="0" top="0" tabpos="0">
 		<Cursor position="389" topLine="0" />
@@ -79,11 +85,17 @@
 	<File name="elements\StaticModelImpl.h" open="0" top="0" tabpos="0">
 		<Cursor position="514" topLine="0" />
 	</File>
-	<File name="elements\StaticModelPart.cpp" open="1" top="0" tabpos="1">
+	<File name="elements\StaticModelPart.cpp" open="0" top="0" tabpos="1">
 		<Cursor position="3039" topLine="63" />
 	</File>
 	<File name="elements\StaticModelPart.h" open="0" top="0" tabpos="0">
 		<Cursor position="513" topLine="9" />
+	</File>
+	<File name="entities\CFuncButton.cpp" open="1" top="0" tabpos="5">
+		<Cursor position="626" topLine="0" />
+	</File>
+	<File name="entities\CFuncButton.h" open="1" top="0" tabpos="4">
+		<Cursor position="665" topLine="2" />
 	</File>
 	<File name="entities\CGame.cpp" open="0" top="0" tabpos="3">
 		<Cursor position="1473" topLine="25" />
@@ -106,6 +118,12 @@
 	<File name="entities\CPropToggle.h" open="0" top="0" tabpos="0">
 		<Cursor position="125" topLine="0" />
 	</File>
+	<File name="entities\CTriggerSphere.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="85" topLine="0" />
+	</File>
+	<File name="entities\CWorldEntity.h" open="1" top="0" tabpos="6">
+		<Cursor position="103" topLine="10" />
+	</File>
 	<File name="gui\CAutoSizePanel.cpp" open="0" top="0" tabpos="0">
 		<Cursor position="1107" topLine="0" />
 	</File>
@@ -127,11 +145,11 @@
 	<File name="gui\CConsole.cpp" open="0" top="0" tabpos="0">
 		<Cursor position="255" topLine="0" />
 	</File>
-	<File name="gui\CDownloadMaps.cpp" open="1" top="1" tabpos="6">
-		<Cursor position="1986" topLine="43" />
+	<File name="gui\CDownloadMaps.cpp" open="1" top="0" tabpos="10">
+		<Cursor position="6175" topLine="149" />
 	</File>
-	<File name="gui\CDownloadMaps.h" open="0" top="0" tabpos="13">
-		<Cursor position="463" topLine="18" />
+	<File name="gui\CDownloadMaps.h" open="1" top="0" tabpos="11">
+		<Cursor position="716" topLine="24" />
 	</File>
 	<File name="gui\CEndFailure.cpp" open="0" top="0" tabpos="4">
 		<Cursor position="708" topLine="0" />
@@ -175,8 +193,8 @@
 	<File name="gui\CNewGame.h" open="0" top="0" tabpos="10">
 		<Cursor position="196" topLine="0" />
 	</File>
-	<File name="gui\CSubmitScore.cpp" open="0" top="0" tabpos="7">
-		<Cursor position="583" topLine="0" />
+	<File name="gui\CSubmitScore.cpp" open="1" top="1" tabpos="12">
+		<Cursor position="5592" topLine="111" />
 	</File>
 	<File name="gui\CSubmitScore.h" open="0" top="0" tabpos="2">
 		<Cursor position="459" topLine="0" />

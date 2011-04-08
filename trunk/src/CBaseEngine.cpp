@@ -37,12 +37,16 @@ void CBaseEngine::init(){
 
   glewInit();
 
+  std::ifstream conf("config.json");
+  json::read(conf, m_config);
+  conf.close();
+
   input = new CInputMgr();
   input->init();
   camera = new CCameraMgr();
   fonts=new CFontMgr();
-  systemFont=fonts->getFont("ARIALUNI.TTF",14.);
-  fonts->getFont("ARIALUNI.TTF",55.);
+  systemFont=fonts->getFont(getConfig<String>("font"),14.);
+  fonts->getFont(getConfig<String>("font"),55.);
   materials=new CMaterialMgr();
   gui = new CGuiMgr();
   physics = new CPhysicsMgr();
@@ -67,7 +71,7 @@ void CBaseEngine::init(){
   */
 
 
-  map->load("test");
+  map->load(getConfig<String>("bgMap"));
 
 }
 
@@ -197,7 +201,7 @@ void CBaseEngine::logAppend(const String& text){
 }
 
 void CBaseEngine::debug(const String& text){
-  m_tempConsoleOutput->setText(m_tempConsoleOutput->getText()+text+"\n");
+  //m_tempConsoleOutput->setText(m_tempConsoleOutput->getText()+text+"\n");
 }
 
 void CBaseEngine::log(const String& text){
@@ -226,3 +230,4 @@ void CBaseEngine::resetGameTime(){
 void CBaseEngine::registerThinker(Thinker* thinker){
   m_thinkers.push_back(thinker);
 }
+

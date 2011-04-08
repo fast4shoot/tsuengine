@@ -32,6 +32,7 @@ class CDownloadMaps: public CCenteredWindow, Thinker{
     void downloadNextFile();
     void finishDownload(const String& text);
 
+    CGuiPanel* m_downloadButton;
     CListBox* m_list;
     CText* m_descText;
     CText* m_statusMessage;

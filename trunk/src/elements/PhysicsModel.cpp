@@ -43,10 +43,18 @@ PhysicsModel::PhysicsModel(const json::mValue& value):
     vec3d size;
     json::extract(size, value.get_obj().find("size")->second);
     m_shape = new btBoxShape(btVector3(size.x,size.y,size.z));
-  }else if(type == "cylinder"){
+  }else if(type == "cylinderX"){
+    vec3d size;
+    json::extract(size, value.get_obj().find("size")->second);
+    m_shape = new btCylinderShapeX(btVector3(size.x,size.y,size.z));
+  }else if(type == "cylinderY"){
     vec3d size;
     json::extract(size, value.get_obj().find("size")->second);
     m_shape = new btCylinderShape(btVector3(size.x,size.y,size.z));
+  }else if(type == "cylinderZ"){
+    vec3d size;
+    json::extract(size, value.get_obj().find("size")->second);
+    m_shape = new btCylinderShapeZ(btVector3(size.x,size.y,size.z));
   }else if(type == "sphere"){
     double size;
     json::extract(size, value.get_obj().find("size")->second.get_real());
