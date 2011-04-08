@@ -2,7 +2,7 @@
 #define CWORLDENTITY_H
 
 #include "CBaseEntity.h"
-
+#include "DescriptorList.h"
 
 class CWorldEntity : public CBaseEntity{
   public:

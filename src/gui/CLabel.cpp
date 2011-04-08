@@ -12,7 +12,7 @@ CGuiPanel(position,size),
 _align(align),
 m_shaded(shaded)
 {
-  _font=engine->fonts->getFont("ARIALUNI.TTF",getH());
+  _font=engine->fonts->getFont(engine->getConfig<String>("font"),getH());
   _text = text;
   allowKeyboardInput=false;
   invalidate();

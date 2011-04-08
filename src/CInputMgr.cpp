@@ -12,7 +12,7 @@ CInputMgr::CInputMgr(){
   DIKeyboardDevice=NULL;
   DIMouseDevice=NULL;
   cursor.set(engine->getScreenWidth()/2.,engine->getScreenHeight()/2.);
-  fSensitivity = 1.f;
+  fSensitivity = engine->getConfig<double>("mouseSensitivity");
   bInverted = false;
   iCurrBuffer=0;
 }

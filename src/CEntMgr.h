@@ -14,12 +14,14 @@ class CEntMgr{
     void doThink();
     void doSpawn();
     void removeAll();
+    typedef std::vector<CBaseEntity*> EntityList;
+    EntityList    m_entities;
   private:
     typedef std::map<String, CBaseEntityDescriptor*> DescriptorMap;
     DescriptorMap m_descriptors;
-    typedef std::vector<CBaseEntity*> EntityList;
+
     int m_entityCount;
-    EntityList    m_entities;
+
 };
 
 inline void CEntMgr::doThink(){

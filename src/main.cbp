@@ -202,6 +202,8 @@
 		<Unit filename="entities\CDoorBase.h" />
 		<Unit filename="entities\CDoorRotating.cpp" />
 		<Unit filename="entities\CDoorRotating.h" />
+		<Unit filename="entities\CFuncButton.cpp" />
+		<Unit filename="entities\CFuncButton.h" />
 		<Unit filename="entities\CGame.cpp" />
 		<Unit filename="entities\CGame.h" />
 		<Unit filename="entities\CLogicEntity.cpp" />
@@ -216,6 +218,8 @@
 		<Unit filename="entities\CPropStatic.h" />
 		<Unit filename="entities\CPropToggle.cpp" />
 		<Unit filename="entities\CPropToggle.h" />
+		<Unit filename="entities\CTriggerSphere.cpp" />
+		<Unit filename="entities\CTriggerSphere.h" />
 		<Unit filename="entities\CVisibleEntity.cpp" />
 		<Unit filename="entities\CVisibleEntity.h" />
 		<Unit filename="entities\CWorld.cpp" />

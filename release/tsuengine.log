@@ -5,7 +5,7 @@ adding item
 adding item
 adding item
 Vytvářím materiál system/cursor...hotovo
-TSUEngine verze 0.34.3494 revize 9203
+TSUEngine verze 0.35.3546 revize 9492
 OpenGL verze 3.3.10524 Compatibility Profile Context
 Engine is now ready
 Zaregistrovane entity: 
@@ -15,26 +15,44 @@ CLogicEntity
 CModelEntity
 CVisibleEntity
 CWorldEntity
+func_button
 func_door_rotating
 game_control
 player
 prop_dynamic
 prop_static
 prop_toggle
+trigger_sphere
 world
-Loading map test
+Loading map backgrounds/bg1
+identity
+Vytvářím model bg1
+Vytvářím materiál bg1...hotovo
+...model finished (0x28a3e48)
+Creating relations...
+Spawning entities
+Uploading model data to GPU
+Uploading data...finished
+Map loaded
+Deleting handles
+Deleting static models
+deleting m_physModel
+deleting m_parts
+Deleting buffers
+Map backgrounds/bg1 unloaded
+Loading map test2
 identity
 Vytvářím model barrel
 Vytvářím materiál barrel...hotovo
-...model finished (0x6fd0cf0)
+...model finished (0x6369a08)
 identity
 identity
 Vytvářím model box
 Vytvářím materiál wall1...hotovo
-...model finished (0x6fd12a0)
+...model finished (0x6369fb8)
 identity
 Vytvářím model box2
-...model finished (0x2732c18)
+...model finished (0x634a430)
 identity
 identity
 identity
@@ -43,7 +61,7 @@ identity
 identity
 identity
 Vytvářím model static
-...model finished (0x2732e88)
+...model finished (0x634a6a0)
 identity
 identity
 identity
@@ -51,11 +69,13 @@ identity
 identity
 Vytvářím model door1
 Vytvářím materiál white...hotovo
-...model finished (0x27c03c8)
+...model finished (0x635d050)
+identity
 identity
 identity
 Creating relations...
 Spawning entities
+Adding label
 Uploading model data to GPU
 Uploading data
 Uploading data
@@ -76,54 +96,51 @@ deleting m_parts
 deleting m_physModel
 deleting m_parts
 Deleting buffers
-Map test unloaded
-Loading map toggleTest
-Vytvářím model static
+Map test2 unloaded
+Loading map test2
+identity
+Vytvářím model barrel
+Vytvářím materiál barrel...hotovo
+...model finished (0x28d96d0)
+identity
+identity
+Vytvářím model box
 Vytvářím materiál wall1...hotovo
-...model finished (0x2743310)
+...model finished (0x28d97a0)
+identity
+Vytvářím model box2
+...model finished (0x635ca38)
+identity
+identity
+identity
+identity
+identity
+identity
+identity
+Vytvářím model static
+...model finished (0x635c7c8)
+identity
+identity
+identity
 identity
 identity
 Vytvářím model door1
 Vytvářím materiál white...hotovo
-...model finished (0x2748128)
+...model finished (0x28e0b28)
 identity
-Vytvářím model box2
-...model finished (0x6fd0bb8)
+identity
+identity
 Creating relations...
 Spawning entities
 Adding label
 Uploading model data to GPU
 Uploading data
 Uploading data
+Uploading data
+Uploading data
 Uploading data...finished
 Map loaded
-TOGGLE!!
-TOGGLE!!
-TOGGLE!!
-TOGGLE!!
-TOGGLE!!
-TOGGLE!!
-TOGGLE!!
-TOGGLE!!
-TOGGLE!!
-TOGGLE!!
-TOGGLE!!
-TOGGLE!!
-TOGGLE!!
-TOGGLE!!
-TOGGLE!!
-TOGGLE!!
-TOGGLE!!
-TOGGLE!!
-TOGGLE!!
-TOGGLE!!
-TOGGLE!!
-TOGGLE!!
-TOGGLE!!
-TOGGLE!!
-TOGGLE!!
-TOGGLE!!
-TOGGLE!!
-TOGGLE!!
-TOGGLE!!
-TOGGLE!!
+http://tsuengine.php5.cz/generateKey.php?map=test2&player=fast4shoot
+{"player":2,"map":2,"key":"KOqy9jSvY69ke5zAzvLpcsRN37UsjAJZbmS2tz3twJ77CKWznrn4p8k8kFamw9bd"}
+http://tsuengine.php5.cz/submitTime.php?hash=e12b61531ab9f7e72f306753c1c7bd3f&key=KOqy9jSvY69ke5zAzvLpcsRN37UsjAJZbmS2tz3twJ77CKWznrn4p8k8kFamw9bd&time=2.067000
+{ "current": { "position": 5, "time": 2.067 }, "top": [ { "name": "ddfghjrhtgdf", "time": 2.006 }, { "name": "sfz", "time": 2.023 }, { "name": "sdfghj", "time": 2.028 }, { "name": "maturita je pro faggoty", "time": 2.032 }, { "name": "fast4shoot", "time": 2.067 }, { "name": "dffgghghg", "time": 2.237 }, { "name": "ěščřžýáíé", "time": 2.342 }, { "name": "Tvoje matka", "time": 2.352 }, { "name": "JehoVista", "time": 2.381 }, { "name": "sdfdfdd", "time": 2.402 }, { "name": "Xyanzova matka", "time": 2.658 }, { "name": "dfh", "time": 2.806 }, { "name": "dfghjk", "time": 3.365 }, { "name": "Zloduchova matka", "time": 5.515 }, { "name": "mama", "time": 6.973 }, { "name": "Jeho matka", "time": 7.13 }, { "name": "dfghjkl", "time": 9.48 }, { "name": "dasjlůfjlyx", "time": 10.132 }, { "name": "sdetgz", "time": 10.237 }, { "name": "aaaa", "time": 11.919 } ] }

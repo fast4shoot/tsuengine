@@ -26,7 +26,7 @@ void CDoorBase::think(){
       fireOutput("onClose");
     }
   }
-  engine->debug(sformat("CDoorBase: %f, %d", m_fraction, m_direction) );
+  //engine->debug(sformat("CDoorBase: %f, %d", m_fraction, m_direction) );
 }
 
 void CDoorBase::open(CBaseEntity* originator){
@@ -38,7 +38,7 @@ void CDoorBase::close(CBaseEntity* originator){
 }
 
 void CDoorBase::toggle(CBaseEntity* originator){
-  engine->log("TOGGLE!!");
+  //engine->log("TOGGLE!!");
   if(m_direction == 0){
     m_direction = m_open?-1:1;
   }else{

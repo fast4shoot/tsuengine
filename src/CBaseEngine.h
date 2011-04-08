@@ -44,6 +44,7 @@ class CBaseEngine{
     std::ofstream   m_logFile;
     bool            m_ready;
     std::vector<Thinker*> m_thinkers;
+    json::mValue m_config;
 
 
   public:
@@ -104,6 +105,9 @@ class CBaseEngine{
 
     int             getScreenHeight();
     int             getScreenWidth();
+
+    template< class T >
+    T getConfig(const String& name);
 
 };
 
@@ -184,6 +188,11 @@ inline void CBaseEngine::warning(const format& text){
 
 inline void CBaseEngine::debug(const format& text){
   debug(text.str());
+}
+
+template< class T >
+T CBaseEngine::getConfig(const String& name){
+  return m_config.get_obj().find(name)->second.get_value<T>();
 }
 
 extern CBaseEngine* engine;

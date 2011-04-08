@@ -1,6 +1,6 @@
 { 
   "physModel": {
-    "type": "cylinder",
+    "type": "cylinderY",
     "size": [0.29, 0.429, 0.29],        
     "mass": 100.0
   },

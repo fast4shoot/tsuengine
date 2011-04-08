@@ -123,13 +123,13 @@ void CSubmitScore::submitAction(int id){
 
       CGuiPanel* tmp;
 
-      double btnW = (rghtWnd->getW() - 3*part/2) / 2;
+      double btnW = (rghtWnd->getW() - 3*part/4) / 2;
 
-      tmp = new CButton( vec2d( part/2, rghtWnd->getH() - 3*part/4 ), vec2d( btnW, part/2.), "Opakovat" );
+      tmp = new CButton( vec2d( part/4, rghtWnd->getH() - 3*part/4 ), vec2d( btnW, part/2.), "Opakovat" );
       tmp->addListener(makeCListenerMemberFn(3, this, &CSubmitScore::submitAction));
       rghtWnd->addChild(tmp);
 
-      tmp = new CButton( vec2d( rghtWnd->getW() - 18*(part)/4., rghtWnd->getH() - 3*part/4 ), vec2d( btnW, part/2.), "Hlavní menu" );
+      tmp = new CButton( vec2d( part/2+btnW, rghtWnd->getH() - 3*part/4 ), vec2d( btnW, part/2.), "Hlavní menu" );
       tmp->addListener(makeCListenerMemberFn(2, this, &CSubmitScore::submitAction));
       rghtWnd->addChild(tmp);
 

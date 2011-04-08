@@ -17,23 +17,24 @@ CMainMenu::CMainMenu():
   fgColor.set(1., 1., 1., .7);
   bgColor.set(.25, .25, .25, .4);
 
-  panelWidth=200;
+  panelWidth=250;
+  double w = panelWidth;
 
   CGuiPanel* temp;
 
-  addChild(new CLabel(vec2d(20,40),vec2d(15,15),"The"));
-  addChild(new CLabel(vec2d(20,55),vec2d(30,30),"TSUEngine"));
+  //addChild(new CLabel(vec2d(20,40),vec2d(15,15),"The"));
+  addChild(new CLabel(vec2d(20,55),vec2d(w-40.,30),"The MAZE", true, CLabel::ALIGN_CENTER));
 
-  addChild(temp=new CButton(vec2d(20,100),vec2d(160,30),"Nová hra"));
+  addChild(temp=new CButton(vec2d(20,100),vec2d(w-40.,30),"Nová hra"));
   temp->addListener(makeCListenerMemberFn(1,this,&CMainMenu::buttonClicked));
 
-  addChild(temp=new CButton(vec2d(20,135),vec2d(160,30),"Stahování map"));
+  addChild(temp=new CButton(vec2d(20,135),vec2d(w-40.,30),"Stahování map"));
   temp->addListener(makeCListenerMemberFn(2,this,&CMainMenu::buttonClicked));
 
-  addChild(temp=new CButton(vec2d(20,170),vec2d(160,30),"Konzole"));
+  addChild(temp=new CButton(vec2d(20,170),vec2d(w-40.,30),"Konzole"));
   temp->addListener(makeCListenerMemberFn(3,this,&CMainMenu::buttonClicked));
 
-  temp=new CButton(vec2d(20,engine->getScreenHeight()-160),vec2d(160,30),"Ukončit");
+  temp=new CButton(vec2d(20,engine->getScreenHeight()-160),vec2d(w-40.,30),"Ukončit");
   temp->addListener(makeCListenerMemberFn(0,this,&CMainMenu::buttonClicked));
   addChild(temp);
 

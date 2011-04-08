@@ -44,7 +44,7 @@ CDownloadMaps::CDownloadMaps():
     json::read(s, mapList);
   }catch(std::exception& e){
     CText* tmp = new CText(vec2d(20, 50.), getSize()-vec2d(40., 70.), 14., CLabel::ALIGN_CENTER);
-    tmp->setText(String("Nebylo možné získat seznam dat ")+e.what());
+    tmp->setText(String("Nebylo možné získat seznam dat ")/*+e.what()*/);
     addChild(tmp);
     return;
   }catch(...){
@@ -65,7 +65,9 @@ CDownloadMaps::CDownloadMaps():
 
     CButton* tmp = new CButton(vec2d(300, getContent()->getH()-45.), vec2d(100, 25), "Stáhnout");
     tmp->addListener(makeCListenerMemberFn(0, this, &CDownloadMaps::doDownload));
+    tmp->setVisible(false);
     getContent()->addChild(tmp);
+    m_downloadButton = tmp;
 
   m_overlay = new CStatusOverlay(vec2d(1., 1.), getContent()->getSize() - vec2d(2., 2.));
   m_overlay->setVisible(false);
@@ -98,6 +100,7 @@ CDownloadMaps::CDownloadMaps():
 
 void CDownloadMaps::setDescription(int){
   m_descText->setText(m_descList[m_list->getSelectedItem()]);
+  m_downloadButton->setVisible(true);
 }
 
 void CDownloadMaps::doDownload(int){
@@ -174,3 +177,4 @@ void CDownloadMaps::finishDownload(const String& text){
   m_statusMessage->setText(text);
   m_overlayButton->setVisible(true);
 }
+

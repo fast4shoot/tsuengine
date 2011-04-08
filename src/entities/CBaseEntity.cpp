@@ -76,7 +76,9 @@ CBaseEntity* CBaseEntityDescriptor::create(const json::mValue& value){
       it->second->set(ent, vIt->second);
     }
   }
+
   ent->init();
+
   return ent;
 }
 

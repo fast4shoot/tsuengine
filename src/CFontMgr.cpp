@@ -3,6 +3,10 @@
 #include "CFontMgr.h"
 #include "Font.h"
 #include "macros.h"
+#include <stdexcept>
+#include <boost/filesystem.hpp>
+
+namespace fs = boost::filesystem;
 
 Font* CFontMgr::getFont(const String& name, const double size){
   int sizeGroup=ceil(size/10.);
@@ -29,7 +33,13 @@ FTGLTextureFont* CFontMgr::loadFont(const String& name,double size){
 }
 
 FTGLTextureFont* CFontMgr::createFTGLFont(const String& name){
-  String path="C:\\Windows\\Fonts\\"+String(name.begin(),name.end());
+  String path = "fonts/"+name;
+  if(!fs::exists(path)){
+    path="C:\\Windows\\Fonts\\"+name;
+    if(!fs::exists(path)){
+      throw std::runtime_error("Cannot load font file "+name);
+    }
+  }
   FTGLTextureFont* tf=new FTGLTextureFont(path.c_str());
   tf->UseDisplayList(true);
   return tf;

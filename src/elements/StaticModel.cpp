@@ -18,8 +18,11 @@ void StaticModel::setPhysics(PhysicsType physics){
 }
 
 void StaticModel::enablePhysics(bool physics){
-  engine->physics->getWorld()->removeCollisionObject(m_body);
-  if(physics){
-    engine->physics->getWorld()->addCollisionObject(m_body);
+  if(m_physType != P_NONE && getVisible() != physics){
+    if(physics){
+      engine->physics->getWorld()->addCollisionObject(m_body);
+    }else{
+      engine->physics->getWorld()->removeCollisionObject(m_body);
+    }
   }
 }
