@@ -35,7 +35,7 @@ CDownloadMaps::CDownloadMaps():
   try{
 
 
-    net::http::client::request request("http://tsuengine.php5.cz/getMapList.php");
+    net::http::client::request request(engine->getConfig<String>("contentServer")+"/getMapList.php");
     request << net::header("Connection", "close");
     net::http::client::response rsp = net::http::client().get(request);
     if(status(rsp) != 200) throw 1;
@@ -107,13 +107,15 @@ void CDownloadMaps::doDownload(int){
   try{
     if(m_dataDownloadStatus == DDS_NONE){
       m_dataDownloadStatus = DDS_FILELIST;
-      AsyncClient::request request("http://tsuengine.php5.cz/data/dataLists/"+m_list->getSelectedString());
+      AsyncClient::request request(engine->getConfig<String>("contentServer")+"/data/dataLists/"+m_list->getSelectedString());
       request << net::header("Connection", "close");
       m_response = m_client.get(request);
       m_overlay->setVisible(true);
       m_statusMessage->setText("Stahuji seznam souborů");
       m_fileList.clear();
       m_lastFile = -1;
+      m_overlayButton->setOpacity(0.);
+      m_overlayButton->setVisible(false);
     }
   }catch(std::exception& e){
     m_statusMessage->setText(e.what());
@@ -166,7 +168,7 @@ void CDownloadMaps::downloadNextFile(){
     engine->gui->getMainMenu()->newGame->reloadList();
   }else{
     m_dataDownloadStatus = DDS_FILES;
-    AsyncClient::request request("http://tsuengine.php5.cz/data/"+m_fileList[m_lastFile]);
+    AsyncClient::request request(engine->getConfig<String>("contentServer")+"/data/"+m_fileList[m_lastFile]);
     request << net::header("Connection", "close");
     m_response = m_client.get(request);
     m_statusMessage->setText("Stahuji soubor "+m_fileList[m_lastFile]+sformat("(%d/%d)", m_lastFile+1, m_fileList.size()));

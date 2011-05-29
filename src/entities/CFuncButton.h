@@ -6,7 +6,7 @@
 
 class CFuncButton : public CWorldEntity{
   public:
-    void init();
+    CFuncButton();
     void spawn();
     void think();
     void use(CBaseEntity* originator);

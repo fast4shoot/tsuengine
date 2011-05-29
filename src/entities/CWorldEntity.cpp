@@ -7,7 +7,7 @@
 CWorldEntity::CWorldEntity():
   CBaseEntity()
 {
-  engine->log("identity");
+  //engine->log("identity");
   m_transform.setIdentity();
   m_position = vec3d();
   m_rotation = vec3d();

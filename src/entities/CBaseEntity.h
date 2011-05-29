@@ -65,7 +65,7 @@ class CBaseEntityDescriptor{
     class EntityValueBase{
       public:
         virtual void set(CBaseEntity* entity, const json::mValue& value)=0;
-        virtual void setDefault(CBaseEntity* entity);
+        virtual void setDefault(CBaseEntity* entity)=0;
     };
 
     template< class T >

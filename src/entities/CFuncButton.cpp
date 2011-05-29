@@ -2,18 +2,22 @@
 
 #include "CBaseEngine.h"
 
-void CFuncButton::init(){
+CFuncButton::CFuncButton():
+  CWorldEntity()
+{
   m_onceOnly = false;
   m_resetTime = 1.;
+  m_pressTime = engine->getTime();
+  m_pressed = false;
 }
 
 void CFuncButton::spawn(){
   m_modelOn->linkToEntity(this);
   m_modelOn->setPhysics(P_STATIC);
   m_modelOn->setVisible(false);
-  engine->log("wtf");
   m_modelOff->linkToEntity(this);
   m_modelOff->setPhysics(P_STATIC);
+  engine->log("CFuncButton spawned");
 }
 
 void CFuncButton::think(){
