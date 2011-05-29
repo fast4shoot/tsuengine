@@ -38,7 +38,7 @@ void CSubmitScore::submitAction(int id){
     String body;
 
     {
-      String query = "http://tsuengine.php5.cz/generateKey.php?map="+urlencode(engine->map->getMapName())+"&player="+urlencode(m_name);
+      String query = engine->getConfig<String>("contentServer")+"/generateKey.php?map="+urlencode(engine->map->getMapName())+"&player="+urlencode(m_name);
       net::http::client::request request_( query );
       engine->log(query);
       request_ << net::header("Connection", "close");
@@ -60,7 +60,7 @@ void CSubmitScore::submitAction(int id){
     }
 
     {
-      String query = (format( "http://tsuengine.php5.cz/submitTime.php?hash=%s&key=%s&time=%f") % hash % key % engine->map->getMapTime() ).str();
+      String query = (format( engine->getConfig<String>("contentServer")+"/submitTime.php?hash=%s&key=%s&time=%f") % hash % key % engine->map->getMapTime() ).str();
       engine->log(query);
       net::http::client::request request_(query);
       request_ << net::header("Connection", "close");
