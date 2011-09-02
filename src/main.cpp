@@ -73,8 +73,13 @@ int WINAPI WinMain (HINSTANCE hInstance,
   ShowWindow(hWnd, SW_SHOWMAXIMIZED);
 
   try{
+
     // enable OpenGL for the window
     EnableOpenGL (hWnd, &hDC, &hRC);
+
+    if(glewInit() != GLEW_OK){
+      throw std::runtime_error("glewInit() failed");
+    }
 
     glClearColor (0.0f, 0.0f, 0.0f, 0.0f);
     glClear (GL_COLOR_BUFFER_BIT);
@@ -82,17 +87,9 @@ int WINAPI WinMain (HINSTANCE hInstance,
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA);
 
-    /*glPushMatrix();
-    glTranslatef(-1.0,1.0f,0.0f);
-    glScalef(2.0f/SCREENWIDTH,-2.0f/SCREENHEIGHT,1.0);
-
-    //GLFT_Font* loadingFont = new GLFT_Font("arial.ttf", 16);
-    //loadingFont->drawText(SCREENWIDTH-loadingFont->calcStringWidth("Loading...")-15,SCREENHEIGHT-loadingFont->getHeight()-15,"Loading...");
-
-    glPopMatrix();*/
-
     //create and start the engine
     SwapBuffers (hDC);
+
     engine=new CBaseEngine();
     engine->init();
 
@@ -120,7 +117,7 @@ int WINAPI WinMain (HINSTANCE hInstance,
           /*if(engine->getFPS()>200.0)Sleep(1);*/
         }
     }
-  }catch(std::exception& e){
+  }catch(const std::exception& e){
     std::string result;
     result="An exception occured: \n";
     result+=e.what();

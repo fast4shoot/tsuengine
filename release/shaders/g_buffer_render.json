@@ -1,0 +1,8 @@
+{
+  "vertex":[
+    "g_buffer_render.vs"
+  ],
+  "fragment":[
+    "g_buffer_render.fs"
+  ]
+}

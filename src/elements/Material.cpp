@@ -19,12 +19,16 @@ Material::Material(const String& name):
   json::read(jsonFile, data);
   jsonFile.close();
 
-  _name = data.get_obj().find("texture")->second.get_str();
-  m_transparent = false;
-  if(data.get_obj().find("transparent") != data.get_obj().end()){
-    m_transparent = data.get_obj().find("transparent")->second.get_bool();
-  }
+  modifiers::PropertyMgr properties(data);
 
+  _name = value_cast<String>(properties.getValuePointer("texture"));
+
+  m_transparent = value_cast<bool>(properties.getValuePointer("transparent", false));
+
+  m_offset = properties.getValuePointer("offset", vec2d(0., 0.));
+  m_rotationCenter = properties.getValuePointer("rotationCenter", vec2d(.5, .5));
+  m_rotation = properties.getValuePointer("rotation", 0.);
+  m_scale = properties.getValuePointer("scale", vec2d(1., 1.));
 
   ILuint ImageName; // The image name to return.
   ilGenImages(1, &ImageName);
@@ -57,4 +61,27 @@ Material::Material(const String& name):
 
 Material::~Material(){
   glDeleteTextures(1,&_glName);
+}
+
+void Material::bind(){
+  glBindTexture(GL_TEXTURE_2D,_glName);
+  glMatrixMode(GL_TEXTURE);
+  glLoadIdentity();
+  vec2d temp = value_cast<vec2d>(m_scale);
+  glScalef(temp.x, temp.y, 1.);
+  temp = modifiers::value_cast< vec2d >(m_offset);
+  glTranslatef(temp.x, temp.y, 0.);
+  double rotation = value_cast<double>(m_rotation);
+  glRotatef(rotation, 0., 0., 1.);
+
+
+  glMatrixMode(GL_MODELVIEW);
+
+}
+
+void Material::unbind(){
+  glBindTexture(GL_TEXTURE_2D,0);
+  glMatrixMode(GL_TEXTURE);
+  glLoadIdentity();
+  glMatrixMode(GL_MODELVIEW);
 }

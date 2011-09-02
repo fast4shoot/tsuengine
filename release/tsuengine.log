@@ -1,12 +1,103 @@
 CModelMgr()
 adding item
 adding item
-adding item
-adding item
-adding item
-Vytvářím materiál system/cursor...hotovo
-TSUEngine verze 0.35.3546 revize 9492
-OpenGL verze 3.3.10524 Compatibility Profile Context
+Vytvářím materiál system/cursor
+Property texture...
+createValue()
+str_type
+Finding texture
+Found it!...hotovo
+Loading shader g_buffer_fill
+Property fragment...
+createValue()
+array_type
+createValue()
+str_type
+Property vertex...
+createValue()
+array_type
+createValue()
+str_type
+Finding vertex
+Found it!
+Finding fragment
+Found it!
+Loading shader ambient_light
+Property fragment...
+createValue()
+array_type
+createValue()
+str_type
+Property vertex...
+createValue()
+array_type
+createValue()
+str_type
+Finding vertex
+Found it!
+Finding fragment
+Found it!
+Loading shader light_prepass
+Property fragment...
+createValue()
+array_type
+createValue()
+str_type
+Property vertex...
+createValue()
+array_type
+createValue()
+str_type
+Finding vertex
+Found it!
+Finding fragment
+Found it!
+Loading shader point_light
+Property fragment...
+createValue()
+array_type
+createValue()
+str_type
+Property vertex...
+createValue()
+array_type
+createValue()
+str_type
+Finding vertex
+Found it!
+Finding fragment
+Found it!
+Found uniform 'depthMap' with location 6 in program 10
+Found uniform 'normalMap' with location 7 in program 10
+Found uniform 'specularMap' with location 8 in program 10
+Found uniform 'ProjectionA' with location 0 in program 10
+Found uniform 'ProjectionB' with location 1 in program 10
+Found uniform 'lightPositionIn' with location 4 in program 10
+Found uniform 'lightSize' with location 5 in program 10
+Loading shader final_composition
+Property fragment...
+createValue()
+array_type
+createValue()
+str_type
+Property vertex...
+createValue()
+array_type
+createValue()
+str_type
+Finding vertex
+Found it!
+Finding fragment
+Found it!
+Found uniform 'diffuseMap' with location 0 in program 13
+Found uniform 'lightMap' with location 1 in program 13
+stacks: 8, diameter: 2.705981
+stacks: 8, diameter: 2.705981
+stacks: 8, diameter: 2.705981
+stacks: 8, diameter: 2.164784
+Renderer successfully initiated
+TSUEngine verze 0.43.4337 revize 3838
+OpenGL verze 3.3.10907 Compatibility Profile Context, GLSL verze 3.30
 Engine is now ready
 Zaregistrovane entity: 
 CBaseEntity
@@ -25,64 +116,164 @@ prop_toggle
 trigger_sphere
 world
 Loading map backgrounds/bg1
-identity
+Generating buffers
 Vytvářím model bg1
-Vytvářím materiál bg1...hotovo
-...model finished (0x28a3e48)
+Vytvářím materiál bg1
+Property texture...
+createValue()
+str_type
+Finding texture
+Found it!...hotovo
+...model finished (06721148)
 Creating relations...
 Spawning entities
 Uploading model data to GPU
-Uploading data...finished
+uploadData();
+Uploading single model data...finished
 Map loaded
+Unloading map
 Deleting handles
 Deleting static models
 deleting m_physModel
 deleting m_parts
 Deleting buffers
 Map backgrounds/bg1 unloaded
-Loading map test2
-identity
-Vytvářím model barrel
-Vytvářím materiál barrel...hotovo
-...model finished (0x6369a08)
-identity
-identity
-Vytvářím model box
-Vytvářím materiál wall1...hotovo
-...model finished (0x6369fb8)
-identity
-Vytvářím model box2
-...model finished (0x634a430)
-identity
-identity
-identity
-identity
-identity
-identity
-identity
-Vytvářím model static
-...model finished (0x634a6a0)
-identity
-identity
-identity
-identity
-identity
+Loading map bludiste2
+Generating buffers
+Vytvářím model bludiste2
+Vytvářím materiál tilefloor2
+Property texture...
+createValue()
+str_type
+Finding texture
+Found it!...hotovo
+Vytvářím materiál tilefloor1
+Property texture...
+createValue()
+str_type
+Finding texture
+Found it!...hotovo
+Vytvářím materiál wall3
+Property texture...
+createValue()
+str_type
+Finding texture
+Found it!...hotovo
+...model finished (00a7a810)
+Generating buffers
+Vytvářím model generator1
+Vytvářím materiál generator1
+Property texture...
+createValue()
+str_type
+Finding texture
+Found it!...hotovo
+...model finished (06723048)
+Generating buffers
+Vytvářím model button3_on
+Vytvářím materiál button3_on
+Property texture...
+createValue()
+str_type
+Finding texture
+Found it!...hotovo
+...model finished (06725700)
+Generating buffers
+Vytvářím model button3_off
+Vytvářím materiál button3_off
+Property texture...
+createValue()
+str_type
+Finding texture
+Found it!...hotovo
+...model finished (00a92740)
+Generating buffers
+Vytvářím model forcefield_frame1
+Vytvářím materiál forcefield_frame1
+Property texture...
+createValue()
+str_type
+Finding texture
+Found it!...hotovo
+...model finished (00acfcb8)
+Generating buffers
+Vytvářím model forcefield_inside1
+Vytvářím materiál forcefield_inside1
+Property offset...
+createValue()
+array_type
+createValue()
+obj_type
+Modifier sine
+Modifier property: cyclesPerSec
+createValue()
+int_type
+Modifier property: max
+createValue()
+real_type
+Modifier property: min
+createValue()
+real_type
+createValue()
+int_type
+Property texture...
+createValue()
+str_type
+Property transparent...
+createValue()
+bool_type
+Finding texture
+Found it!...hotovo
+...model finished (00acd5a8)
+Generating buffers
 Vytvářím model door1
-Vytvářím materiál white...hotovo
-...model finished (0x635d050)
-identity
-identity
-identity
+Vytvářím materiál door1
+Property texture...
+createValue()
+str_type
+Finding texture
+Found it!...hotovo
+...model finished (00acd6f8)
+Generating buffers
+Vytvářím model sign_exit1
+Vytvářím materiál sign_exit1
+Property texture...
+createValue()
+str_type
+Finding texture
+Found it!...hotovo
+...model finished (00acd848)
+Generating buffers
+Vytvářím model barrel
+Vytvářím materiál barrel
+Property texture...
+createValue()
+str_type
+Finding texture
+Found it!...hotovo
+...model finished (00acd8f0)
+Generating buffers
+Generating buffers
+Generating buffers
+Generating buffers
+Generating buffers
 Creating relations...
 Spawning entities
 Adding label
+CFuncButton spawned
 Uploading model data to GPU
-Uploading data
-Uploading data
-Uploading data
-Uploading data
-Uploading data...finished
+uploadData();
+Uploading single model data
+Uploading single model data
+Uploading single model data
+Uploading single model data
+Uploading single model data
+Uploading single model data
+Uploading single model data
+Uploading single model data
+Uploading single model data...finished
 Map loaded
+Unloading map
 Deleting handles
 Deleting static models
 deleting m_physModel
@@ -95,52 +286,464 @@ deleting m_physModel
 deleting m_parts
 deleting m_physModel
 deleting m_parts
+deleting m_physModel
+deleting m_parts
+deleting m_physModel
+deleting m_parts
+deleting m_physModel
+deleting m_parts
+deleting m_physModel
+deleting m_parts
 Deleting buffers
-Map test2 unloaded
-Loading map test2
-identity
-Vytvářím model barrel
-Vytvářím materiál barrel...hotovo
-...model finished (0x28d96d0)
-identity
-identity
-Vytvářím model box
-Vytvářím materiál wall1...hotovo
-...model finished (0x28d97a0)
-identity
-Vytvářím model box2
-...model finished (0x635ca38)
-identity
-identity
-identity
-identity
-identity
-identity
-identity
-Vytvářím model static
-...model finished (0x635c7c8)
-identity
-identity
-identity
-identity
-identity
+Map bludiste2 unloaded
+Loading map bludiste2
+Generating buffers
+Vytvářím model bludiste2
+Vytvářím materiál tilefloor2
+Property texture...
+createValue()
+str_type
+Finding texture
+Found it!...hotovo
+Vytvářím materiál tilefloor1
+Property texture...
+createValue()
+str_type
+Finding texture
+Found it!...hotovo
+Vytvářím materiál wall3
+Property texture...
+createValue()
+str_type
+Finding texture
+Found it!...hotovo
+...model finished (00acd650)
+Generating buffers
+Vytvářím model generator1
+Vytvářím materiál generator1
+Property texture...
+createValue()
+str_type
+Finding texture
+Found it!...hotovo
+...model finished (00acdc38)
+Generating buffers
+Vytvářím model button3_on
+Vytvářím materiál button3_on
+Property texture...
+createValue()
+str_type
+Finding texture
+Found it!...hotovo
+...model finished (00acdae8)
+Generating buffers
+Vytvářím model button3_off
+Vytvářím materiál button3_off
+Property texture...
+createValue()
+str_type
+Finding texture
+Found it!...hotovo
+...model finished (00acd998)
+Generating buffers
+Vytvářím model forcefield_frame1
+Vytvářím materiál forcefield_frame1
+Property texture...
+createValue()
+str_type
+Finding texture
+Found it!...hotovo
+...model finished (00acd848)
+Generating buffers
+Vytvářím model forcefield_inside1
+Vytvářím materiál forcefield_inside1
+Property offset...
+createValue()
+array_type
+createValue()
+obj_type
+Modifier sine
+Modifier property: cyclesPerSec
+createValue()
+int_type
+Modifier property: max
+createValue()
+real_type
+Modifier property: min
+createValue()
+real_type
+createValue()
+int_type
+Property texture...
+createValue()
+str_type
+Property transparent...
+createValue()
+bool_type
+Finding texture
+Found it!...hotovo
+...model finished (00acd5a8)
+Generating buffers
 Vytvářím model door1
-Vytvářím materiál white...hotovo
-...model finished (0x28e0b28)
-identity
-identity
-identity
+Vytvářím materiál door1
+Property texture...
+createValue()
+str_type
+Finding texture
+Found it!...hotovo
+...model finished (00acded8)
+Generating buffers
+Vytvářím model sign_exit1
+Vytvářím materiál sign_exit1
+Property texture...
+createValue()
+str_type
+Finding texture
+Found it!...hotovo
+...model finished (00ace028)
+Generating buffers
+Vytvářím model barrel
+Vytvářím materiál barrel
+Property texture...
+createValue()
+str_type
+Finding texture
+Found it!...hotovo
+...model finished (00ace0d0)
+Generating buffers
+Generating buffers
+Generating buffers
+Generating buffers
+Generating buffers
 Creating relations...
 Spawning entities
 Adding label
+CFuncButton spawned
 Uploading model data to GPU
-Uploading data
-Uploading data
-Uploading data
-Uploading data
-Uploading data...finished
+uploadData();
+Uploading single model data
+Uploading single model data
+Uploading single model data
+Uploading single model data
+Uploading single model data
+Uploading single model data
+Uploading single model data
+Uploading single model data
+Uploading single model data...finished
 Map loaded
-http://tsuengine.php5.cz/generateKey.php?map=test2&player=fast4shoot
-{"player":2,"map":2,"key":"KOqy9jSvY69ke5zAzvLpcsRN37UsjAJZbmS2tz3twJ77CKWznrn4p8k8kFamw9bd"}
-http://tsuengine.php5.cz/submitTime.php?hash=e12b61531ab9f7e72f306753c1c7bd3f&key=KOqy9jSvY69ke5zAzvLpcsRN37UsjAJZbmS2tz3twJ77CKWznrn4p8k8kFamw9bd&time=2.067000
-{ "current": { "position": 5, "time": 2.067 }, "top": [ { "name": "ddfghjrhtgdf", "time": 2.006 }, { "name": "sfz", "time": 2.023 }, { "name": "sdfghj", "time": 2.028 }, { "name": "maturita je pro faggoty", "time": 2.032 }, { "name": "fast4shoot", "time": 2.067 }, { "name": "dffgghghg", "time": 2.237 }, { "name": "ěščřžýáíé", "time": 2.342 }, { "name": "Tvoje matka", "time": 2.352 }, { "name": "JehoVista", "time": 2.381 }, { "name": "sdfdfdd", "time": 2.402 }, { "name": "Xyanzova matka", "time": 2.658 }, { "name": "dfh", "time": 2.806 }, { "name": "dfghjk", "time": 3.365 }, { "name": "Zloduchova matka", "time": 5.515 }, { "name": "mama", "time": 6.973 }, { "name": "Jeho matka", "time": 7.13 }, { "name": "dfghjkl", "time": 9.48 }, { "name": "dasjlůfjlyx", "time": 10.132 }, { "name": "sdetgz", "time": 10.237 }, { "name": "aaaa", "time": 11.919 } ] }
+Unloading map
+Deleting handles
+Deleting static models
+deleting m_physModel
+deleting m_parts
+deleting m_physModel
+deleting m_parts
+deleting m_physModel
+deleting m_parts
+deleting m_physModel
+deleting m_parts
+deleting m_physModel
+deleting m_parts
+deleting m_physModel
+deleting m_parts
+deleting m_physModel
+deleting m_parts
+deleting m_physModel
+deleting m_parts
+deleting m_physModel
+deleting m_parts
+Deleting buffers
+Map bludiste2 unloaded
+Loading map bludiste2
+Generating buffers
+Vytvářím model bludiste2
+Vytvářím materiál tilefloor2
+Property texture...
+createValue()
+str_type
+Finding texture
+Found it!...hotovo
+Vytvářím materiál tilefloor1
+Property texture...
+createValue()
+str_type
+Finding texture
+Found it!...hotovo
+Vytvářím materiál wall3
+Property texture...
+createValue()
+str_type
+Finding texture
+Found it!...hotovo
+...model finished (00acd6f8)
+Generating buffers
+Vytvářím model generator1
+Vytvářím materiál generator1
+Property texture...
+createValue()
+str_type
+Finding texture
+Found it!...hotovo
+...model finished (00acd8f0)
+Generating buffers
+Vytvářím model button3_on
+Vytvářím materiál button3_on
+Property texture...
+createValue()
+str_type
+Finding texture
+Found it!...hotovo
+...model finished (00acdb90)
+Generating buffers
+Vytvářím model button3_off
+Vytvářím materiál button3_off
+Property texture...
+createValue()
+str_type
+Finding texture
+Found it!...hotovo
+...model finished (00acd7a0)
+Generating buffers
+Vytvářím model forcefield_frame1
+Vytvářím materiál forcefield_frame1
+Property texture...
+createValue()
+str_type
+Finding texture
+Found it!...hotovo
+...model finished (00ace370)
+Generating buffers
+Vytvářím model forcefield_inside1
+Vytvářím materiál forcefield_inside1
+Property offset...
+createValue()
+array_type
+createValue()
+obj_type
+Modifier sine
+Modifier property: cyclesPerSec
+createValue()
+int_type
+Modifier property: max
+createValue()
+real_type
+Modifier property: min
+createValue()
+real_type
+createValue()
+int_type
+Property texture...
+createValue()
+str_type
+Property transparent...
+createValue()
+bool_type
+Finding texture
+Found it!...hotovo
+...model finished (00ace220)
+Generating buffers
+Vytvářím model door1
+Vytvářím materiál door1
+Property texture...
+createValue()
+str_type
+Finding texture
+Found it!...hotovo
+...model finished (00ace0d0)
+Generating buffers
+Vytvářím model sign_exit1
+Vytvářím materiál sign_exit1
+Property texture...
+createValue()
+str_type
+Finding texture
+Found it!...hotovo
+...model finished (00acded8)
+Generating buffers
+Vytvářím model barrel
+Vytvářím materiál barrel
+Property texture...
+createValue()
+str_type
+Finding texture
+Found it!...hotovo
+...model finished (00acd5a8)
+Generating buffers
+Generating buffers
+Generating buffers
+Generating buffers
+Generating buffers
+Creating relations...
+Spawning entities
+Adding label
+CFuncButton spawned
+Uploading model data to GPU
+uploadData();
+Uploading single model data
+Uploading single model data
+Uploading single model data
+Uploading single model data
+Uploading single model data
+Uploading single model data
+Uploading single model data
+Uploading single model data
+Uploading single model data...finished
+Map loaded
+Unloading map
+Deleting handles
+Deleting static models
+deleting m_physModel
+deleting m_parts
+deleting m_physModel
+deleting m_parts
+deleting m_physModel
+deleting m_parts
+deleting m_physModel
+deleting m_parts
+deleting m_physModel
+deleting m_parts
+deleting m_physModel
+deleting m_parts
+deleting m_physModel
+deleting m_parts
+deleting m_physModel
+deleting m_parts
+deleting m_physModel
+deleting m_parts
+Deleting buffers
+Map bludiste2 unloaded
+Loading map bludiste2
+Generating buffers
+Vytvářím model bludiste2
+Vytvářím materiál tilefloor2
+Property texture...
+createValue()
+str_type
+Finding texture
+Found it!...hotovo
+Vytvářím materiál tilefloor1
+Property texture...
+createValue()
+str_type
+Finding texture
+Found it!...hotovo
+Vytvářím materiál wall3
+Property texture...
+createValue()
+str_type
+Finding texture
+Found it!...hotovo
+...model finished (00ace2c8)
+Generating buffers
+Vytvářím model generator1
+Vytvářím materiál generator1
+Property texture...
+createValue()
+str_type
+Finding texture
+Found it!...hotovo
+...model finished (00ace418)
+Generating buffers
+Vytvářím model button3_on
+Vytvářím materiál button3_on
+Property texture...
+createValue()
+str_type
+Finding texture
+Found it!...hotovo
+...model finished (00acde30)
+Generating buffers
+Vytvářím model button3_off
+Vytvářím materiál button3_off
+Property texture...
+createValue()
+str_type
+Finding texture
+Found it!...hotovo
+...model finished (00acdf80)
+Generating buffers
+Vytvářím model forcefield_frame1
+Vytvářím materiál forcefield_frame1
+Property texture...
+createValue()
+str_type
+Finding texture
+Found it!...hotovo
+...model finished (00acdc38)
+Generating buffers
+Vytvářím model forcefield_inside1
+Vytvářím materiál forcefield_inside1
+Property offset...
+createValue()
+array_type
+createValue()
+obj_type
+Modifier sine
+Modifier property: cyclesPerSec
+createValue()
+int_type
+Modifier property: max
+createValue()
+real_type
+Modifier property: min
+createValue()
+real_type
+createValue()
+int_type
+Property texture...
+createValue()
+str_type
+Property transparent...
+createValue()
+bool_type
+Finding texture
+Found it!...hotovo
+...model finished (00acd998)
+Generating buffers
+Vytvářím model door1
+Vytvářím materiál door1
+Property texture...
+createValue()
+str_type
+Finding texture
+Found it!...hotovo
+...model finished (00acd5a8)
+Generating buffers
+Vytvářím model sign_exit1
+Vytvářím materiál sign_exit1
+Property texture...
+createValue()
+str_type
+Finding texture
+Found it!...hotovo
+...model finished (00ace0d0)
+Generating buffers
+Vytvářím model barrel
+Vytvářím materiál barrel
+Property texture...
+createValue()
+str_type
+Finding texture
+Found it!...hotovo
+...model finished (00ace220)
+Generating buffers
+Generating buffers
+Generating buffers
+Generating buffers
+Generating buffers
+Creating relations...
+Spawning entities
+Adding label
+CFuncButton spawned
+Uploading model data to GPU
+uploadData();
+Uploading single model data
+Uploading single model data
+Uploading single model data
+Uploading single model data
+Uploading single model data
+Uploading single model data
+Uploading single model data
+Uploading single model data
+Uploading single model data...finished
+Map loaded

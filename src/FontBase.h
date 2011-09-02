@@ -3,8 +3,9 @@
 
 #include <string>
 #include "glew/glew.h"
-#include "datatypes.h"
 #include "typedefs.h"
+#include "rgba.h"
+#include "vec2d.h"
 
 class FontBase{
   public:
@@ -13,6 +14,7 @@ class FontBase{
     void            render(const String& text, const double size);
     void            render(const String& text, const double size, const vec2d& pos);
                     FontBase(const double size);
+    void            reset(const double size);
         virtual     ~FontBase(){};
   protected:
     virtual void    renderImpl(const String& text)=0;

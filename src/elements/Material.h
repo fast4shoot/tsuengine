@@ -3,10 +3,11 @@
 
 #include "glew/glew.h"
 #include "typedefs.h"
-
+#include "modifiers/Modifier.h"
 class Material{
   public:
     void bind();
+    void unbind();
     bool isPersistent();
     void setPersistent(bool persistent);
     bool getTransparent();
@@ -19,13 +20,13 @@ class Material{
     bool m_persistent;
     bool m_transparent;
 
+    modifiers::Value m_offset;
+    modifiers::Value m_rotationCenter;
+    modifiers::Value m_rotation;
+    modifiers::Value m_scale;
   friend class CMaterialMgr;
 
 };
-
-inline void Material::bind(){
-  glBindTexture(GL_TEXTURE_2D,_glName);
-}
 
 inline bool Material::isPersistent(){
   return m_persistent;

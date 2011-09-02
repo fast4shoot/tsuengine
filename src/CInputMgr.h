@@ -6,6 +6,8 @@
 #include "datatypes.h"
 #include "macros.h"
 #include "typedefs.h"
+#include "vec2d.h"
+
 class CInputMgr{
   public:
                     CInputMgr();

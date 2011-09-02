@@ -1,0 +1,8 @@
+{
+  "vertex":[
+    "g_buffer_fill.vs"
+  ],
+  "fragment":[
+    "g_buffer_fill.fs"
+  ]
+}

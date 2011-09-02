@@ -1,0 +1,8 @@
+{
+  "vertex":[
+    "final_composition.vs"
+  ],
+  "fragment":[
+    "final_composition.fs"
+  ]
+}

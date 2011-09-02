@@ -1,4 +1,6 @@
 #include "CPropToggle.h"
+#include "elements/Model.h"
+
 
 #include "DescriptorList.h"
 

@@ -1,36 +1,6 @@
 #ifndef DATATYPES_H
 #define DATATYPES_H
 
-#include <string>
-#include "vec2d.h"
-#include "vec3d.h"
-
-typedef std::wstring Str;
-
-struct rgb{
-  float r;
-  float g;
-  float b;
-};
-
-class rgba{
-  public:
-    float r;
-    float g;
-    float b;
-    float a;
-
-    rgba();
-    rgba(float r, float g, float b, float a);
-    void set(float r, float g, float b, float a);
-    rgba operator*(float rhs);
-    static rgba white;
-};
-
-
-
-
-
 enum MouseButton{
   LMB =0,
   RMB,

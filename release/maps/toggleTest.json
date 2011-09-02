@@ -1,0 +1,52 @@
+{
+  "entities":[
+    {
+      "classname": "world",
+      "model": "static"
+    },
+    {
+      "classname": "player",
+      "position": [1,1,1]
+    },
+    {
+      "classname": "game_control"
+    },
+    {
+      "classname": "func_door_rotating",
+      "speed": 0.19,
+      "model": "box2",
+      "position": [-2, 0,-4]
+    },
+    {
+      "classname": "prop_toggle",
+      "position": [-3, 0, 6],
+      "model": "generator1"  
+    },
+    {
+      "classname": "trigger_sphere",
+      "radius": 3.0,
+      "position": [-3, 0.5, 6]
+    },
+    {
+      "classname": "func_button",
+      "position": [0, 0.5, 0.1],
+      "modelOn": "button3_off",
+      "modelOff": "button3_on"
+
+    }
+  ],
+  "relations":[
+    {
+      "caller": 2,
+      "callee": 3,
+      "output": "onGameStart",
+      "input": "open"
+    },
+    {
+      "caller": 3,
+      "callee": 2,
+      "output": "onOpen",
+      "input": "endGameSuccess"
+    }
+  ]
+}

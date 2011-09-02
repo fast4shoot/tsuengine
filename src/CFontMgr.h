@@ -2,7 +2,7 @@
 #define CFONTMGR_H
 
 #include <map>
-#include "FTGL/FTGL/ftgl.h"
+#include <FTGL/ftgl.h>
 #include "typedefs.h"
 
 class Font;

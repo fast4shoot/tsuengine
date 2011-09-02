@@ -5,6 +5,8 @@
 #include "glew/glew.h"
 #include "elements/Model.h"
 #include "elements/StaticModel.h"
+#include "CShaderMgr.h"
+#include "elements/Program.h"
 
 CModelMgr::CModelMgr(){
   modelTypeMap["static"]=M_STATIC;
@@ -24,6 +26,7 @@ Model* CModelMgr::getModel(const String& name){
   }
 
   engine->log("Vytvářím model "+name);
+  engine->checkGl();
   std::ifstream file(("models/"+name+".json").c_str());
   if(file.good()){
     json::mValue value;
@@ -38,6 +41,7 @@ Model* CModelMgr::getModel(const String& name){
       }
       modelHandles.push_back(mdl);
       engine->log(sformat("...model finished (%p)",mdl));
+      engine->checkGl();
       return mdl;
 
     }else{
@@ -66,6 +70,7 @@ StaticModelImpl* CModelMgr::loadStaticModel(const String& name, const json::mVal
 
 void CModelMgr::uploadData(){
   engine->log("Uploading model data to GPU");
+  engine->checkGl();
   int staticVertexCount=0;
   int staticIndexCount=0;
   int dynamicVertexCount=0;
@@ -76,9 +81,8 @@ void CModelMgr::uploadData(){
     staticIndexCount += it->second->getIndexCount();
   }
 
-  //engine->log("uploadData()");
+  engine->log("uploadData();");
   engine->checkGl();
-
   glBindBufferARB(GL_ARRAY_BUFFER_ARB, staticVbo);
   glBindBufferARB(GL_ELEMENT_ARRAY_BUFFER, staticIndexVbo);
   //engine->log(sformat("Vertex count: %d, index count: %d", staticVertexCount, staticIndexCount));
@@ -86,12 +90,10 @@ void CModelMgr::uploadData(){
 
   glBufferDataARB(GL_ARRAY_BUFFER_ARB, sizeof(StaticVertexData)*staticVertexCount, NULL, GL_STATIC_DRAW);
   glBufferDataARB(GL_ELEMENT_ARRAY_BUFFER_ARB, sizeof(unsigned int)*staticIndexCount, NULL, GL_STATIC_DRAW);
-
-  //engine->log("uploadData()");
   engine->checkGl();
 
   for(StaticModelList::iterator it = staticModels.begin(); it != staticModels.end(); it++){
-    engine->log("Uploading data");
+    engine->log("Uploading single model data");
     it->second->uploadData();
   }
 
@@ -119,16 +121,17 @@ void CModelMgr::draw(){
 
   glEnable(GL_TEXTURE_2D);
 
+
   for(ModelHandleList::iterator it = modelHandles.begin(); it != modelHandles.end(); it++){
     if((*it)->getType() == M_STATIC){
       (*it)->draw(1);
     }
   }
-  for(ModelHandleList::iterator it = modelHandles.begin(); it != modelHandles.end(); it++){
+  /*for(ModelHandleList::iterator it = modelHandles.begin(); it != modelHandles.end(); it++){
     if((*it)->getType() == M_STATIC){
       (*it)->draw(2);
     }
-  }
+  }*/
 
   glDisableClientState(GL_VERTEX_ARRAY);            // deactivate vertex array
   glDisableClientState(GL_NORMAL_ARRAY);
@@ -143,6 +146,7 @@ void CModelMgr::draw(){
 
 void CModelMgr::removeAll(){
   engine->log("Deleting handles");
+  engine->checkGl();
   for(ModelHandleList::iterator it = modelHandles.begin(); it != modelHandles.end(); ++it){
     delete (*it);
   }
@@ -160,8 +164,9 @@ void CModelMgr::removeAll(){
 
 void CModelMgr::generateBuffers(){
   if(m_buffersGenerated) return;
-
+  engine->log("Generating buffers");
   glGenBuffersARB(4, m_buffers);
+  engine->checkGl();
   staticVbo = m_buffers[0];
   staticIndexVbo = m_buffers[1];
   dynamicVbo = m_buffers[2];
@@ -171,5 +176,6 @@ void CModelMgr::generateBuffers(){
 void CModelMgr::deleteBuffers(){
   if(m_buffersGenerated){
     glDeleteBuffersARB(4, m_buffers);
+    engine->checkGl();
   }
 }

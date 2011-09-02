@@ -85,6 +85,7 @@ void StaticModelPart::draw(int pass){
     m_material->bind();
     //engine->log(sformat("draw(): m_vboOffset=%d, m_indexVboOffset=%d, getVertexCount()=%d, getIndexCount()=%d", m_vboOffset, m_indexVboOffset, getVertexCount(), getIndexCount()));
     glDrawRangeElements(GL_TRIANGLES, m_vboOffset, m_vboOffset+getVertexCount()-1, getIndexCount(), GL_UNSIGNED_INT, BUFFER_OFFSET(m_indexVboOffset*sizeof(GLuint)));
+    m_material->unbind();
   }
 }
 

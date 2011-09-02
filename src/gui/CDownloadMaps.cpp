@@ -35,11 +35,8 @@ CDownloadMaps::CDownloadMaps():
   try{
 
 
-    net::http::client::request request(engine->getConfig<String>("contentServer")+"/getMapList.php");
-    request << net::header("Connection", "close");
-    net::http::client::response rsp = net::http::client().get(request);
-    if(status(rsp) != 200) throw 1;
-    std::string s = body(rsp);
+    m_downloader.download(engine->getConfig<String>("contentServer")+"/getMapList.php");
+    std::stringstream& s = m_downloader.get();
     //engine->log(s);
     json::read(s, mapList);
   }catch(std::exception& e){
@@ -107,9 +104,7 @@ void CDownloadMaps::doDownload(int){
   try{
     if(m_dataDownloadStatus == DDS_NONE){
       m_dataDownloadStatus = DDS_FILELIST;
-      AsyncClient::request request(engine->getConfig<String>("contentServer")+"/data/dataLists/"+m_list->getSelectedString());
-      request << net::header("Connection", "close");
-      m_response = m_client.get(request);
+      m_downloader.download(engine->getConfig<String>("contentServer")+"/data/dataLists/"+m_list->getSelectedString());
       m_overlay->setVisible(true);
       m_statusMessage->setText("Stahuji seznam souborů");
       m_fileList.clear();
@@ -127,27 +122,25 @@ void CDownloadMaps::doDownload(int){
 void CDownloadMaps::think(){
   try{
     if(m_dataDownloadStatus != DDS_NONE){
-      if(ready(m_response)){
-        if(status(m_response) == 200){
-          String data = body(m_response);
-          if(m_dataDownloadStatus == DDS_FILELIST){
-            json::mValue val;
-            json::read(data, val);
-            const json::mArray& files = val.get_obj().find("files")->second.get_array();
-            m_fileList.reserve(files.size());
-            BOOST_FOREACH(const json::mValue& file, files){
-              if(!boost::filesystem::exists(file.get_str())){
-                m_fileList.push_back(file.get_str());
-              }
+      if(m_downloader.isReady()){
+        std::stringstream& data = m_downloader.get();
+        if(m_dataDownloadStatus == DDS_FILELIST){
+          json::mValue val;
+          json::read(data, val);
+          const json::mArray& files = val.get_obj().find("files")->second.get_array();
+          m_fileList.reserve(files.size());
+          BOOST_FOREACH(const json::mValue& file, files){
+            if(!boost::filesystem::exists(file.get_str())){
+              m_fileList.push_back(file.get_str());
             }
-            m_lastFile = -1;
-            downloadNextFile();
-          }else if(m_dataDownloadStatus == DDS_FILES){
-            boost::filesystem::ofstream file(m_fileList[m_lastFile], std::fstream::out | std::fstream::binary);
-            file<<data;
-            file.close();
-            downloadNextFile();
           }
+          m_lastFile = -1;
+          downloadNextFile();
+        }else if(m_dataDownloadStatus == DDS_FILES){
+          boost::filesystem::ofstream file(m_fileList[m_lastFile], std::fstream::out | std::fstream::binary);
+          file<<data.rdbuf();
+          file.close();
+          downloadNextFile();
         }
       }
     }
@@ -168,9 +161,7 @@ void CDownloadMaps::downloadNextFile(){
     engine->gui->getMainMenu()->newGame->reloadList();
   }else{
     m_dataDownloadStatus = DDS_FILES;
-    AsyncClient::request request(engine->getConfig<String>("contentServer")+"/data/"+m_fileList[m_lastFile]);
-    request << net::header("Connection", "close");
-    m_response = m_client.get(request);
+    m_downloader.download(engine->getConfig<String>("contentServer")+"/data/"+m_fileList[m_lastFile]);
     m_statusMessage->setText("Stahuji soubor "+m_fileList[m_lastFile]+sformat("(%d/%d)", m_lastFile+1, m_fileList.size()));
   }
 }
