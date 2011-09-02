@@ -1,9 +1,12 @@
 #ifndef CMODELMGR_H
 #define CMODELMGR_H
 
+#include "typedefs.h"
 #include "datatypes.h"
 #include "glew/glew.h"
-
+#include <map>
+#include <vector>
+#include "json/json.h"
 
 class Model;
 class StaticModel;

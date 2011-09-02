@@ -1,0 +1,8 @@
+{
+  "vertex":[
+    "ambient_light.vs"
+  ],
+  "fragment":[
+    "ambient_light.fs"
+  ]
+}

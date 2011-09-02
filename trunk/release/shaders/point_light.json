@@ -1,0 +1,8 @@
+{
+  "vertex":[
+    "point_light.vs"
+  ],
+  "fragment":[
+    "point_light.fs"
+  ]
+}

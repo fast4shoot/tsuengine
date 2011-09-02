@@ -20,11 +20,13 @@
 #include "CMapMgr.h"
 #include "CEntMgr.h"
 #include "CNetwork.h"
-#include "elements/Material.h"
 #include "utils/Thinker.h"
 
 
+class Material;
 class CText;
+class CShaderMgr;
+class CGraphicsMgr;
 
 class CBaseEngine{
   private:
@@ -58,6 +60,8 @@ class CBaseEngine{
     CModelMgr*      models;
     CEntMgr*        ents;
     CMapMgr*        map;
+    CShaderMgr*     shaders;
+    CGraphicsMgr*   graphics;
 
     CText*          _consoleOutput;
     CText*          m_tempConsoleOutput;
@@ -78,8 +82,6 @@ class CBaseEngine{
     double          getTimeScale();
 
     void            think();
-    void            initWorldView();
-    void            initGuiView();
     void            drawScene();
 
     void            registerThinker(Thinker* thinker);
@@ -97,7 +99,7 @@ class CBaseEngine{
     void            warning(const format& text);
     void            debug(const format& text);
 
-    void            checkGl();
+    void            checkGl(const String& text = "");
 
     void            quit();
 

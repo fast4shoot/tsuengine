@@ -2,10 +2,9 @@
 #define FONT_H
 
 #include <string>
-#include "glew/glew.h"
 #include "vec2d.h"
 #include "datatypes.h"
-#include "FTGL/FTGL/ftgl.h"
+#include <FTGL/ftgl.h>
 #include "FontBase.h"
 #include "typedefs.h"
 
@@ -15,6 +14,7 @@ class Font : public FontBase{
     protected:
       virtual void      renderImpl(const String& text);
                         Font(FTGLTextureFont* font, const String& name, const double size);
+      void              reset(FTGLTextureFont* font, const String& name, const double size);
                         ~Font();
       FTGLTextureFont*  _font;
       String      _name;
@@ -22,10 +22,6 @@ class Font : public FontBase{
     friend class CFontMgr;
     friend class FontWrapped;
 };
-
-inline double Font::width(const String& text, double size){
-  return (size/_size)*_font->Advance(text.c_str());
-}
 
 
 #endif // FONT_H

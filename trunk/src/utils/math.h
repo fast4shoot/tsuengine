@@ -2,6 +2,7 @@
 #define MATH_H
 
 #include <algorithm>
+#include <cmath>
 
 extern const double PI;
 

@@ -4,9 +4,11 @@
 #include <map>
 #include <list>
 #include <set>
-#include "datatypes.h"
-#include "elements/Model.h"
+#include "typedefs.h"
+#include "json/json.h"
+//#include "elements/Model.h"
 
+class Model;
 class CBaseEntity;
 
 class EntityRelation{

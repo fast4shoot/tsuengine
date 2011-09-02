@@ -1,6 +1,7 @@
 #include "CDoorRotating.h"
 #include "DescriptorList.h"
 #include "utils/math.h"
+#include "elements/Model.h"
 
 CDoorRotating::CDoorRotating():
   CDoorBase()

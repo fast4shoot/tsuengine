@@ -4,6 +4,7 @@
 #include "json/json.h"
 #include "CBaseEngine.h"
 #include "CGuiPanel.h"
+#include "CShaderMgr.h"
 
 CMapMgr::CMapMgr():
   m_isLoaded(false),
@@ -17,12 +18,15 @@ void CMapMgr::load(const String& name){
 
 void CMapMgr::unload(){
   if(!m_isLoaded) return;
+  engine->log("Unloading map");
+  engine->checkGl();
   engine->camera->removeAll();
   engine->ents->removeAll();
   engine->physics->removeAll();
   engine->models->removeAll();
   engine->materials->removeAll();
-
+  engine->shaders->cleanup();
+  engine->checkGl();
 
   engine->log("Map "+m_mapName+" unloaded");
   m_isLoaded = false;
@@ -30,7 +34,6 @@ void CMapMgr::unload(){
 }
 
 void CMapMgr::update(){
-
 
   try{
     if(!m_shouldLoad) return;
@@ -47,6 +50,8 @@ void CMapMgr::update(){
     for(json::mArray::const_iterator it = ents.begin(); it != ents.end(); ++it){
       tempEntList.push_back(engine->ents->create(*it));
     }
+
+    engine->checkGl();
 
     engine->log("Creating relations...");
     if(value.get_obj().find("relations") != value.get_obj().end()){
@@ -70,6 +75,7 @@ void CMapMgr::update(){
     m_background = true;
     engine->log("Spawning entities");
     engine->ents->doSpawn();
+    engine->checkGl();
 
     m_menuOpen = m_background;
     engine->gui->showMainMenu(m_menuOpen);

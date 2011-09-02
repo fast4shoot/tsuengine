@@ -6,6 +6,7 @@
 #include "CButton.h"
 #include "CBaseEngine.h"
 #include "md5/md5.hh"
+#include "utils/AsyncDownloader.h"
 
 CSubmitScore::CSubmitScore():
   CCenteredWindow( vec2d(320, 250), "", 65., false )
@@ -35,46 +36,27 @@ void CSubmitScore::submitAction(int id){
     m_statusText->setText("Komunikuji se serverem...");
     //m_status = STATUS_KEY;
 
-    String body;
+    AsyncDownloader downloader;
+    downloader.download(engine->getConfig<String>("contentServer")+"/generateKey.php?map="+urlencode(engine->map->getMapName())+"&player="+urlencode(m_name));
 
     {
-      String query = engine->getConfig<String>("contentServer")+"/generateKey.php?map="+urlencode(engine->map->getMapName())+"&player="+urlencode(m_name);
-      net::http::client::request request_( query );
-      engine->log(query);
-      request_ << net::header("Connection", "close");
-      net::http::client client_;
-      net::http::client::response response_ = client_.get(request_);
-      body = net::http::body(response_);
-      engine->log(body);
-    }
-
-    String key, hash;
-    {
+      String key, hash;
       json::mValue data;
-      json::read(body, data);
+      json::read(downloader.get(), data);
+
       key = data.get_obj().find("key")->second.get_str();
       hash = (format("%1%%2%%3%") % data.get_obj().find("player")->second.get_int() % data.get_obj().find("map")->second.get_int() % key).str();
+      hash = MD5(hash).hex_digest();
 
-      MD5 hasher = MD5(hash);
-      hash = hasher.hex_digest();
+      downloader.download((format( engine->getConfig<String>("contentServer")+"/submitTime.php?hash=%s&key=%s&time=%f") % hash % key % engine->map->getMapTime() ).str());
     }
 
-    {
-      String query = (format( engine->getConfig<String>("contentServer")+"/submitTime.php?hash=%s&key=%s&time=%f") % hash % key % engine->map->getMapTime() ).str();
-      engine->log(query);
-      net::http::client::request request_(query);
-      request_ << net::header("Connection", "close");
-      net::http::client client_;
-      net::http::client::response response_ = client_.get(request_);
-      body = net::http::body(response_);
-      engine->log(body);
-    }
     {
       double h = engine->getScreenHeight();
       double w = engine->getScreenWidth();
       double part = std::min(h/9., w/13.);
       json::mValue data;
-      json::read(body, data);
+      json::read(downloader.get(), data);
 
       setVisible(false);
 

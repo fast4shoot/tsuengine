@@ -3,6 +3,8 @@
 
 #include "CBaseEntity.h"
 #include "DescriptorList.h"
+#include "btBulletDynamicsCommon.h"
+#include "vec3d.h"
 
 class CWorldEntity : public CBaseEntity{
   public:

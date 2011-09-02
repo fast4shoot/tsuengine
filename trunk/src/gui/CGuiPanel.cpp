@@ -189,6 +189,16 @@ void CGuiPanel::handleMouseMove(const vec2d& newPosition, const bool mouseOver){
   }
 }
 
+/*void CGuiPanel::handleMouseMove(const vec2d& newPosition, const bool mouseOver){
+  vec2d positionOnChild;
+  CGuiPanel* topLevel = NULL;
+  for(ChildrenList::reverse_iterator it = children.rbegin(); it != children.rend(); ++it){
+    if(*it->isPointInside( newPosition - child->getPosition() )){
+      topLevel = *it;
+    }
+  }
+}*/
+
 void CGuiPanel::addListener(CListener* al){
   listeners.push_back(al);
 }

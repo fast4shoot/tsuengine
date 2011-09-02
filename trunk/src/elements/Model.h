@@ -1,9 +1,10 @@
 #ifndef MODEL_H
 #define MODEL_H
 
-#include "datatypes.h"
 #include "elements/ModelBase.h"
 #include "btBulletDynamicsCommon.h"
+#include "vec3d.h"
+#include "datatypes.h"
 
 class CBaseEntity;
 class CWorldEntity;

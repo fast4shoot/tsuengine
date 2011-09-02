@@ -1,0 +1,8 @@
+{
+  "vertex":[
+    "light_prepass.vs"
+  ],
+  "fragment":[
+    "light_prepass.fs"
+  ]
+}

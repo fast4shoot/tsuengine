@@ -8,6 +8,7 @@
 #include "CListBox.h"
 #include "CText.h"
 #include "utils/Thinker.h"
+#include "utils/AsyncDownloader.h"
 
 
 
@@ -49,8 +50,7 @@ class CDownloadMaps: public CCenteredWindow, Thinker{
       DDS_FILES
     } m_dataDownloadStatus;
 
-    AsyncClient m_client;
-    AsyncClient::response m_response;
+    AsyncDownloader m_downloader;
 
 
 };

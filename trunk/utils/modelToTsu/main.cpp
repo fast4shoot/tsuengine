@@ -1,6 +1,9 @@
 #include <iostream>
 #include <fstream>
-#include "json/json.h"
+
+#define UTIL
+
+#include "../../libs/json/json.h"
 
 using namespace std;
 

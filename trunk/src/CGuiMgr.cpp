@@ -70,6 +70,7 @@ void CGuiMgr::drawElements(){
       glTexCoord2d(0,1);
       glVertex2f(x+0.0, y+0.0);
     glEnd();
+    cursorMat->unbind();
     glDisable(GL_TEXTURE_2D);
   }
 
