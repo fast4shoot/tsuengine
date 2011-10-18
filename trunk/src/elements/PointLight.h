@@ -3,7 +3,7 @@
 
 #include "rgb.h"
 #include "vec3d.h"
-#include "glew/glew.h"
+#include "GL/glew.h"
 #include "utils/math.h"
 #include "Program.h"
 

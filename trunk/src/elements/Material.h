@@ -1,7 +1,7 @@
 #ifndef MATERIAL_H
 #define MATERIAL_H
 
-#include "glew/glew.h"
+#include "GL/glew.h"
 #include "typedefs.h"
 #include "modifiers/Modifier.h"
 class Material{

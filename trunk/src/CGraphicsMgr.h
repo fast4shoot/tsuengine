@@ -1,7 +1,7 @@
 #ifndef CGRAPHICSMGR_H
 #define CGRAPHICSMGR_H
 
-#include "glew/glew.h"
+#include "GL/glew.h"
 #include "elements/Program.h"
 #include "elements/PointLight.h"
 #include <list>

@@ -7,7 +7,7 @@
 #include "datatypes.h"
 #include "rgba.h"
 #include "CGuiMgr.h"
-#include "glew/glew.h"
+#include "GL/glew.h"
 #include "utils/math.h"
 
 class CListener;

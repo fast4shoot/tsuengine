@@ -18,11 +18,12 @@ void CGraphicsMgr::init(){
     fourth contains composed lights in the lighting pass
     fifth contains the depth and stencil buffers (24 + 8 bits)
   */
-  glGenTextures(6, m_g_textures);
+  glGenTextures(5, m_g_textures);
   glBindTexture(GL_TEXTURE_2D, m_g_textures[4]);
   glTexImage2D(GL_TEXTURE_2D, 0, GL_DEPTH24_STENCIL8, m_width, m_height, 0, GL_DEPTH_STENCIL, GL_UNSIGNED_INT_24_8, NULL);
   glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+
 	glBindTexture(GL_TEXTURE_2D, m_g_textures[5]);
   glTexImage2D(GL_TEXTURE_2D, 0, GL_DEPTH24_STENCIL8, m_width, m_height, 0, GL_DEPTH_STENCIL, GL_UNSIGNED_INT_24_8, NULL);
   glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
@@ -53,8 +54,6 @@ void CGraphicsMgr::init(){
   m_lightPrePassProgram = engine->shaders->getProgram("light_prepass");
 
   m_pointLightProgram = engine->shaders->getProgram("point_light");
-  //m_pointLightProgram -> findUniform("color");
-  //m_pointLightProgram -> findUniform("size");
   m_pointLightProgram -> findUniform("depthMap");
   m_pointLightProgram -> findUniform("normalMap");
   m_pointLightProgram -> findUniform("specularMap");
@@ -62,11 +61,6 @@ void CGraphicsMgr::init(){
   m_pointLightProgram -> findUniform("ProjectionB");
   m_pointLightProgram -> findUniform("lightPositionIn");
   m_pointLightProgram -> findUniform("lightSize");
-
-  //m_pointLightProgram -> findUniform("scrSize");
-
-
-
 
   m_finalProgram = engine->shaders->getProgram("final_composition");
   m_finalProgram -> findUniform("diffuseMap");
@@ -81,6 +75,10 @@ void CGraphicsMgr::init(){
 
   engine->checkGl("End of graphics initialization");
   engine->log("Renderer successfully initiated");
+
+
+
+
   glBindFramebuffer(GL_FRAMEBUFFER, 0);
 }
 
@@ -93,13 +91,17 @@ void CGraphicsMgr::draw(){
 
   engine->checkGl("CGraphicsMgr::draw()");
 
-  glBindFramebuffer(GL_FRAMEBUFFER, m_fbo[0]);
-  //we dont need the light texture right now
-  for(int i = 0; i < 3; i++){
-    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0 + i, GL_TEXTURE_2D, m_g_textures[i], 0);
-  }
-  glFramebufferTexture2D(GL_FRAMEBUFFER, GL_DEPTH_STENCIL_ATTACHMENT, GL_TEXTURE_2D, m_g_textures[4], 0);
+  /*{
+    vec3d pozice = (*(m_pointLights.begin()++))->getPosition();
+    pozice.y += sin(engine->getTime()*0.5);
+  }*/
 
+  glBindFramebuffer(GL_DRAW_FRAMEBUFFER, m_fbo[0]);
+
+  glFramebufferTexture2D(GL_DRAW_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, m_g_textures[0], 0);
+  glFramebufferTexture2D(GL_DRAW_FRAMEBUFFER, GL_COLOR_ATTACHMENT1, GL_TEXTURE_2D, m_g_textures[1], 0);
+  glFramebufferTexture2D(GL_DRAW_FRAMEBUFFER, GL_COLOR_ATTACHMENT2, GL_TEXTURE_2D, m_g_textures[2], 0);
+  glFramebufferTexture2D(GL_DRAW_FRAMEBUFFER, GL_DEPTH_STENCIL_ATTACHMENT, GL_TEXTURE_2D, m_g_textures[4], 0);
 
   {
     GLenum mrt[] = { GL_COLOR_ATTACHMENT0, GL_COLOR_ATTACHMENT1, GL_COLOR_ATTACHMENT2 };
@@ -132,62 +134,54 @@ void CGraphicsMgr::draw(){
   glBindTexture(GL_TEXTURE_2D, m_g_textures[3]);
   glActiveTexture(GL_TEXTURE4);
   glBindTexture(GL_TEXTURE_2D, m_g_textures[4]);*/
-  glActiveTexture(GL_TEXTURE0);
+  //glActiveTexture(GL_TEXTURE0);
 
-  initWorldView();
-  glDisable(GL_DEPTH_TEST);
-  glDepthMask(GL_FALSE);
+  //initWorldView();
+  //glDisable(GL_DEPTH_TEST);
+  //glDepthMask(GL_FALSE);
 
-  glBindFramebuffer(GL_READ_FRAMEBUFFER, m_fbo[0]);
+  glBindFramebuffer(GL_DRAW_FRAMEBUFFER, m_fbo[0]);
 
-  glFramebufferTexture2D(GL_READ_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, m_g_textures[3], 0);
-  glFramebufferTexture2D(GL_READ_FRAMEBUFFER, GL_COLOR_ATTACHMENT1, GL_TEXTURE_2D, 0, 0);
-  glFramebufferTexture2D(GL_READ_FRAMEBUFFER, GL_COLOR_ATTACHMENT2, GL_TEXTURE_2D, 0, 0);
+  glFramebufferTexture2D(GL_DRAW_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, m_g_textures[3], 0);
+  glFramebufferTexture2D(GL_DRAW_FRAMEBUFFER, GL_COLOR_ATTACHMENT1, GL_TEXTURE_2D, 0, 0);
+  glFramebufferTexture2D(GL_DRAW_FRAMEBUFFER, GL_COLOR_ATTACHMENT2, GL_TEXTURE_2D, 0, 0);
+  glFramebufferTexture2D(GL_DRAW_FRAMEBUFFER, GL_DEPTH_STENCIL_ATTACHMENT, GL_TEXTURE_2D, m_g_textures[5], 0);
+
+  glDrawBuffer(GL_COLOR_ATTACHMENT0);
+
+
+  glBindFramebuffer(GL_READ_FRAMEBUFFER, m_fbo[1]);
+
   glFramebufferTexture2D(GL_READ_FRAMEBUFFER, GL_DEPTH_STENCIL_ATTACHMENT, GL_TEXTURE_2D, m_g_textures[4], 0);
+  glFramebufferTexture2D(GL_READ_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, m_g_textures[0], 0);
 
-  {
-    GLenum mrt[] = { GL_COLOR_ATTACHMENT0 };
-    glDrawBuffers(1, mrt);
-  }
-  checkFbo(GL_READ_FRAMEBUFFER);
-  glBindFramebuffer(GL_DRAW_FRAMEBUFFER, m_fbo[1]);
-
-  glFramebufferTexture2D(GL_DRAW_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, m_g_textures[0], 0);
-  glFramebufferTexture2D(GL_DRAW_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_TEXTURE_2D, m_g_textures[5], 0);
 
   glDepthMask(GL_TRUE);
   glClearDepth(1.);
   glClear(GL_DEPTH_BUFFER_BIT);
 
-  engine->checkGl("FBO2 setup");
 
-  {
-    GLenum mrt[] = { GL_COLOR_ATTACHMENT0 };
-    glDrawBuffers(1, mrt);
-  }
-  checkFbo(GL_DRAW_FRAMEBUFFER);
-  checkFbo(GL_READ_FRAMEBUFFER);
   glColorMask( GL_TRUE, GL_TRUE, GL_TRUE, GL_TRUE );
+  //engine->checkGl("glColorMask");
 
   glBlendFunc(GL_ONE, GL_ONE);
-
+  //engine->checkGl("glBlendFunc");
+  checkFbo(GL_READ_FRAMEBUFFER);
+  checkFbo(GL_DRAW_FRAMEBUFFER);
+  engine->checkGl("before blit");
   glBlitFramebuffer(0, 0, m_width, m_height, 0, 0, m_width, m_height, GL_DEPTH_BUFFER_BIT, GL_NEAREST);
-  glBindFramebuffer(GL_FRAMEBUFFER, m_fbo[0]);
-  //glFramebufferTexture2D(GL_READ_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, m_g_textures[3], 0);
-  //glFramebufferTexture2D(GL_READ_FRAMEBUFFER, GL_DEPTH_STENCIL_ATTACHMENT, GL_TEXTURE_2D, m_g_textures[4], 0);
+  engine->checkGl("glBlitFramebuffer");
 
   glClearColor(0., 0., 0., 0.);
+  //engine->checkGl("glClearColor");
   glClear(GL_COLOR_BUFFER_BIT);
+  //engine->checkGl("glClear");
 
-  engine->checkGl("FBO blitting");
-  {
-    GLenum mrt[] = { GL_COLOR_ATTACHMENT0 };
-    glDrawBuffers(1, mrt);
-  }
+
 
   glDepthMask(GL_FALSE);
 
- // glBindFramebuffer(GL_READ_FRAMEBUFFER, 0);
+
 
 
   checkFbo();
@@ -282,19 +276,6 @@ void CGraphicsMgr::draw(){
   m_finalProgram -> setUniformi("lightMap",3);
   drawQuad();
   m_finalProgram -> unuse();
-
-  /*glDepthFunc(GL_GREATER);
-  glCullFace(GL_FRONT);
-  glColor4f(1., 1., .1, 1.);
-  //m_pointLightProgram -> use();
-
-  BOOST_FOREACH(PointLight* light, m_pointLights){
-    glPushMatrix();
-    light -> transform();
-    light -> drawVolume();
-    glPopMatrix();
-  }*/
-//m_pointLightProgram -> unuse();
 
   engine->checkGl("World render ended");
   initGuiView();

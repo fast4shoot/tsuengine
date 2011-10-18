@@ -3,7 +3,7 @@
 
 #include <string>
 #include <fstream>
-#include "glew/glew.h"
+#include "GL/glew.h"
 #include <ctime>
 #include "globals.h"
 #include "const.h"

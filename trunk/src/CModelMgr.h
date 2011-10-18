@@ -3,7 +3,7 @@
 
 #include "typedefs.h"
 #include "datatypes.h"
-#include "glew/glew.h"
+#include "GL/glew.h"
 #include <map>
 #include <vector>
 #include "json/json.h"

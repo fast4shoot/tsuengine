@@ -1,7 +1,7 @@
 #ifndef CSCROLLABLE_H
 #define CSCROLLABLE_H
 
-#include "glew/glew.h"
+#include "GL/glew.h"
 #include "listeners/CListenerMemberFn.h"
 #include "CGuiPanel.h"
 #include "CStencilPanel.h"
