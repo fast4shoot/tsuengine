@@ -3,6 +3,8 @@
 #include "utils/math.h"
 #include "entities/CWorldEntity.h"
 
+#include "GL/glew.h"
+
 void Model::draw(int pass){
   if(getVisible()){
     glPushMatrix();

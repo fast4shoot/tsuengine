@@ -4,43 +4,73 @@
 	<File name="..\libs\json\json_spirit_value.h" open="0" top="0" tabpos="9">
 		<Cursor position="402" topLine="0" />
 	</File>
-	<File name="CBaseEngine.cpp" open="1" top="0" tabpos="4">
-		<Cursor position="2766" topLine="163" />
+	<File name="CBaseEngine.cpp" open="1" top="0" tabpos="6">
+		<Cursor position="74" topLine="160" />
 	</File>
-	<File name="CFontMgr.h" open="1" top="0" tabpos="9">
+	<File name="CBaseEngine.h" open="0" top="0" tabpos="12">
+		<Cursor position="99" topLine="0" />
+	</File>
+	<File name="CFontMgr.h" open="0" top="0" tabpos="9">
 		<Cursor position="58" topLine="0" />
 	</File>
-	<File name="CGraphicsMgr.cpp" open="1" top="1" tabpos="2">
-		<Cursor position="7404" topLine="200" />
+	<File name="CGraphicsMgr.cpp" open="1" top="1" tabpos="1">
+		<Cursor position="5201" topLine="148" />
 	</File>
-	<File name="CGraphicsMgr.h" open="1" top="0" tabpos="3">
-		<Cursor position="412" topLine="10" />
+	<File name="CGraphicsMgr.h" open="1" top="0" tabpos="2">
+		<Cursor position="67" topLine="0" />
 	</File>
-	<File name="CPhysicsMgr.h" open="1" top="0" tabpos="10">
+	<File name="CModelMgr.cpp" open="0" top="0" tabpos="19">
+		<Cursor position="92" topLine="0" />
+	</File>
+	<File name="CModelMgr.h" open="0" top="0" tabpos="14">
+		<Cursor position="168" topLine="0" />
+	</File>
+	<File name="CPhysicsMgr.h" open="0" top="0" tabpos="10">
 		<Cursor position="64" topLine="0" />
 	</File>
 	<File name="CShaderMgr.cpp" open="0" top="0" tabpos="3">
 		<Cursor position="1361" topLine="15" />
 	</File>
-	<File name="CShaderMgr.h" open="0" top="0" tabpos="6">
-		<Cursor position="0" topLine="0" />
+	<File name="CShaderMgr.h" open="0" top="0" tabpos="18">
+		<Cursor position="105" topLine="0" />
 	</File>
-	<File name="elements\PointLight.cpp" open="1" top="0" tabpos="5">
+	<File name="FontBase.h" open="0" top="0" tabpos="16">
+		<Cursor position="73" topLine="0" />
+	</File>
+	<File name="elements\Material.h" open="0" top="0" tabpos="13">
+		<Cursor position="54" topLine="0" />
+	</File>
+	<File name="elements\Model.cpp" open="0" top="0" tabpos="20">
+		<Cursor position="105" topLine="0" />
+	</File>
+	<File name="elements\ModelBase.h" open="0" top="0" tabpos="15">
+		<Cursor position="44" topLine="0" />
+	</File>
+	<File name="elements\PointLight.cpp" open="0" top="0" tabpos="5">
 		<Cursor position="128" topLine="0" />
 	</File>
-	<File name="elements\PointLight.h" open="1" top="0" tabpos="6">
-		<Cursor position="1187" topLine="33" />
+	<File name="elements\PointLight.h" open="1" top="0" tabpos="3">
+		<Cursor position="104" topLine="0" />
 	</File>
-	<File name="elements\Program.cpp" open="1" top="0" tabpos="7">
+	<File name="elements\Program.cpp" open="0" top="0" tabpos="7">
 		<Cursor position="330" topLine="0" />
 	</File>
-	<File name="elements\Program.h" open="1" top="0" tabpos="8">
-		<Cursor position="1236" topLine="23" />
+	<File name="elements\Program.h" open="0" top="0" tabpos="8">
+		<Cursor position="52" topLine="0" />
 	</File>
-	<File name="main.cpp" open="1" top="0" tabpos="1">
-		<Cursor position="2194" topLine="1" />
+	<File name="gui\CGuiPanel.h" open="0" top="0" tabpos="17">
+		<Cursor position="195" topLine="0" />
 	</File>
-	<File name="utils\AsyncDownloader.cpp" open="1" top="0" tabpos="11">
+	<File name="gui\CLabel.cpp" open="0" top="0" tabpos="22">
+		<Cursor position="151" topLine="0" />
+	</File>
+	<File name="gui\CScrollable.h" open="0" top="0" tabpos="21">
+		<Cursor position="68" topLine="0" />
+	</File>
+	<File name="main.cpp" open="0" top="0" tabpos="1">
+		<Cursor position="59" topLine="0" />
+	</File>
+	<File name="utils\AsyncDownloader.cpp" open="0" top="0" tabpos="11">
 		<Cursor position="634" topLine="0" />
 	</File>
 </CodeBlocks_layout_file>

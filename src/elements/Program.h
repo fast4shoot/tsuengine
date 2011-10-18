@@ -1,7 +1,7 @@
 #ifndef PROGRAM_H
 #define PROGRAM_H
 
-#include "glew/glew.h"
+#include "GL/glew.h"
 #include "utils/gl.h"
 #include "typedefs.h"
 #include <map>

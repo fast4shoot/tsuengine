@@ -67,7 +67,6 @@
 			<Add directory="..\libs\bullet" />
 		</Compiler>
 		<Linker>
-			<Add option="-static-libgcc" />
 			<Add library="freetype" />
 			<Add library="ftgl.dll" />
 			<Add library="uuid" />
@@ -83,17 +82,15 @@
 			<Add library="BulletCollision" />
 			<Add library="LinearMath" />
 			<Add library="ws2_32" />
-			<Add library="boost_thread-mgw45-mt-1_47" />
-			<Add library="boost_system-mgw45-mt-1_47" />
-			<Add library="boost_filesystem-mgw45-mt-1_47" />
-			<Add library="boost_regex-mgw45-mt-1_47" />
-			<Add library="boost_date_time-mgw45-mt-1_47" />
+			<Add library="boost_thread-mgw46-mt-1_47" />
+			<Add library="boost_system-mgw46-mt-1_47" />
+			<Add library="boost_filesystem-mgw46-mt-1_47" />
+			<Add library="boost_regex-mgw46-mt-1_47" />
+			<Add library="boost_date_time-mgw46-mt-1_47" />
 			<Add library="curlpp" />
 			<Add library="curl" />
 			<Add library="WSock32" />
 			<Add library="WLdap32" />
-			<Add library="mingw32" />
-			<Add library="gcc" />
 			<Add directory="..\libs" />
 		</Linker>
 		<Unit filename="..\libs\json\json.h" />

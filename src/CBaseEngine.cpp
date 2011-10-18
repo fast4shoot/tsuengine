@@ -2,7 +2,7 @@
 #include <windows.h>
 #include <fstream>
 
-#include "glew/glew.h"
+#include "GL/glew.h"
 
 #include "CBaseEngine.h"
 #include "entities/CBaseEntity.h"

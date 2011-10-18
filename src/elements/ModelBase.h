@@ -1,7 +1,7 @@
 #ifndef MODELBASE_H
 #define MODELBASE_H
 
-#include "glew/glew.h"
+
 
 /*
 class ModelBase{

@@ -4,7 +4,7 @@
 #include "CGuiPanel.h"
 #include "macros.h"
 #include "CBaseEngine.h"
-#include "glew/glew.h"
+#include "GL/glew.h"
 #include "typedefs.h"
 
 CLabel::CLabel(const vec2d& position, const vec2d& size, const String& text, bool shaded, ALIGN align):

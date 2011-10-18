@@ -2,7 +2,7 @@
 
 #include <fstream>
 #include "CBaseEngine.h"
-#include "glew/glew.h"
+#include "GL/glew.h"
 #include "elements/Model.h"
 #include "elements/StaticModel.h"
 #include "CShaderMgr.h"
